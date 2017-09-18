@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>MacPlay (Posts about reST)</title><link>https://macplay.github.io/</link><description></description><atom:link href="https://macplay.github.io/categories/rest.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2017 &lt;a href="mailto:ashfinal@sina.cn"&gt;ashfinal&lt;/a&gt; </copyright><lastBuildDate>Mon, 18 Sep 2017 03:31:37 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Pygal charts get started</title><link>https://macplay.github.io/posts/pygal-charts-get-started/</link><dc:creator>ashfinal</dc:creator><description>&lt;div&gt;&lt;p&gt;If you are using reStructuredText and install pygal, Nikola has support for rather nice charts
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>MacPlay (Posts about pygal)</title><link>https://macplay.github.io/</link><description></description><atom:link href="https://macplay.github.io/categories/pygal.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2017 &lt;a href="mailto:ashfinal@sina.cn"&gt;ashfinal&lt;/a&gt; </copyright><lastBuildDate>Mon, 18 Sep 2017 03:31:37 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Pygal charts get started</title><link>https://macplay.github.io/posts/pygal-charts-get-started/</link><dc:creator>ashfinal</dc:creator><description>&lt;div&gt;&lt;p&gt;If you are using reStructuredText and install pygal, Nikola has support for rather nice charts
 with little effort, and i's even semi-interactive (hover your pointer over the legend!):&lt;/p&gt;
 &lt;pre class="code rest"&gt;&lt;a name="rest_code_7c0ff02eb74b431189dbd37bb5498239-1"&gt;&lt;/a&gt;&lt;span class="p"&gt;..&lt;/span&gt; &lt;span class="ow"&gt;chart&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt; StackedLine
 &lt;a name="rest_code_7c0ff02eb74b431189dbd37bb5498239-2"&gt;&lt;/a&gt;   &lt;span class="nc"&gt;:title:&lt;/span&gt; &lt;span class="nf"&gt;'Browser usage evolution (in %)'&lt;/span&gt;
@@ -26,41 +26,4 @@ the value is just like in the pygal examples.&lt;/li&gt;
 is the label, then comes the data.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Easy, right? Please explore &lt;a class="reference external" href="http://pygal.org"&gt;the pygal site&lt;/a&gt; for more information, and just
-take this example and tweak stuff.&lt;/p&gt;&lt;/div&gt;</description><category>chart</category><category>pygal</category><category>python</category><category>reST</category><guid>https://macplay.github.io/posts/pygal-charts-get-started/</guid><pubDate>Mon, 18 Sep 2017 03:09:34 GMT</pubDate></item><item><title>A reStructuredText Primer</title><link>https://macplay.github.io/posts/quickstart/</link><dc:creator>ashfinal</dc:creator><description>&lt;div&gt;&lt;table class="docinfo" frame="void" rules="none"&gt;
-&lt;col class="docinfo-name"&gt;
-&lt;col class="docinfo-content"&gt;
-&lt;tbody valign="top"&gt;
-&lt;tr&gt;&lt;th class="docinfo-name"&gt;Author:&lt;/th&gt;
-&lt;td&gt;Richard Jones&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th class="docinfo-name"&gt;Version:&lt;/th&gt;
-&lt;td&gt;5801&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th class="docinfo-name"&gt;Copyright:&lt;/th&gt;
-&lt;td&gt;This document has been placed in the public domain.&lt;/td&gt;&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;div class="contents topic" id="contents"&gt;
-&lt;p class="topic-title first"&gt;Contents&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference internal" href="https://macplay.github.io/posts/quickstart/#structure" id="id16"&gt;Structure&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference internal" href="https://macplay.github.io/posts/quickstart/#text-styles" id="id17"&gt;Text styles&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference internal" href="https://macplay.github.io/posts/quickstart/#lists" id="id18"&gt;Lists&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference internal" href="https://macplay.github.io/posts/quickstart/#preformatting-code-samples" id="id19"&gt;Preformatting (code samples)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference internal" href="https://macplay.github.io/posts/quickstart/#sections" id="id20"&gt;Sections&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a class="reference internal" href="https://macplay.github.io/posts/quickstart/#document-title-subtitle" id="id21"&gt;Document Title / Subtitle&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference internal" href="https://macplay.github.io/posts/quickstart/#images" id="id22"&gt;Images&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference internal" href="https://macplay.github.io/posts/quickstart/#what-next" id="id23"&gt;What Next?&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;p&gt;The text below contains links that look like "(&lt;a class="reference external" href="https://macplay.github.io/posts/quickstart/quickref.html"&gt;quickref&lt;/a&gt;)".  These
-are relative links that point to the &lt;a class="reference external" href="https://macplay.github.io/posts/quickstart/quickref.html"&gt;Quick reStructuredText&lt;/a&gt; user
-reference.  If these links don't work, please refer to the &lt;a class="reference external" href="http://docutils.sourceforge.net/docs/user/rst/quickref.html"&gt;master
-quick reference&lt;/a&gt; document.&lt;/p&gt;
-&lt;div class="admonition note"&gt;
-&lt;p class="first admonition-title"&gt;Note&lt;/p&gt;
-&lt;p class="last"&gt;This document is an informal introduction to
-reStructuredText.  The &lt;a class="reference internal" href="https://macplay.github.io/posts/quickstart/#what-next"&gt;What Next?&lt;/a&gt; section below has links to
-further resources, including a formal reference.&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;a href="https://macplay.github.io/posts/quickstart/"&gt;Read more…&lt;/a&gt; (7 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>reference</category><category>reST</category><guid>https://macplay.github.io/posts/quickstart/</guid><pubDate>Sat, 31 Mar 2012 02:00:00 GMT</pubDate></item></channel></rss>
+take this example and tweak stuff.&lt;/p&gt;&lt;/div&gt;</description><category>chart</category><category>pygal</category><category>python</category><category>reST</category><guid>https://macplay.github.io/posts/pygal-charts-get-started/</guid><pubDate>Mon, 18 Sep 2017 03:09:34 GMT</pubDate></item></channel></rss>

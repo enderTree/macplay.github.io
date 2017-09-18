@@ -6,43 +6,67 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
-  <loc>http://macplay.github.io/</loc>
-  <lastmod>2017-09-18T03:00:00Z</lastmod>
+  <loc>https://macplay.github.io/</loc>
+  <lastmod>2017-09-18T03:31:00Z</lastmod>
  </url>
  <url>
-  <loc>http://macplay.github.io/2012/</loc>
-  <lastmod>2017-09-18T03:00:00Z</lastmod>
+  <loc>https://macplay.github.io/2012/</loc>
+  <lastmod>2017-09-18T03:31:00Z</lastmod>
  </url>
  <url>
-  <loc>http://macplay.github.io/archive.html</loc>
-  <lastmod>2017-09-18T03:00:00Z</lastmod>
+  <loc>https://macplay.github.io/2017/</loc>
+  <lastmod>2017-09-18T03:31:00Z</lastmod>
  </url>
  <url>
-  <loc>http://macplay.github.io/categories/</loc>
-  <lastmod>2017-09-18T03:00:00Z</lastmod>
+  <loc>https://macplay.github.io/archive.html</loc>
+  <lastmod>2017-09-18T03:31:00Z</lastmod>
  </url>
  <url>
-  <loc>http://macplay.github.io/categories/reference/</loc>
-  <lastmod>2017-09-18T03:00:00Z</lastmod>
+  <loc>https://macplay.github.io/categories/</loc>
+  <lastmod>2017-09-18T03:31:00Z</lastmod>
  </url>
  <url>
-  <loc>http://macplay.github.io/categories/rest/</loc>
-  <lastmod>2017-09-18T03:00:00Z</lastmod>
+  <loc>https://macplay.github.io/categories/cat_markdown/</loc>
+  <lastmod>2017-09-18T03:31:00Z</lastmod>
  </url>
  <url>
-  <loc>http://macplay.github.io/galleries/</loc>
-  <lastmod>2017-09-18T03:00:00Z</lastmod>
+  <loc>https://macplay.github.io/categories/chart/</loc>
+  <lastmod>2017-09-18T03:31:00Z</lastmod>
  </url>
  <url>
-  <loc>http://macplay.github.io/listings/</loc>
-  <lastmod>2017-09-18T03:00:00Z</lastmod>
+  <loc>https://macplay.github.io/categories/pygal/</loc>
+  <lastmod>2017-09-18T03:31:00Z</lastmod>
  </url>
  <url>
-  <loc>http://macplay.github.io/listings/weibo_util.py.html</loc>
-  <lastmod>2017-09-18T03:00:00Z</lastmod>
+  <loc>https://macplay.github.io/categories/python/</loc>
+  <lastmod>2017-09-18T03:31:00Z</lastmod>
  </url>
  <url>
-  <loc>http://macplay.github.io/posts/quickstart/</loc>
-  <lastmod>2017-09-18T03:00:00Z</lastmod>
+  <loc>https://macplay.github.io/categories/reference/</loc>
+  <lastmod>2017-09-18T03:31:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://macplay.github.io/categories/rest/</loc>
+  <lastmod>2017-09-18T03:31:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://macplay.github.io/galleries/</loc>
+  <lastmod>2017-09-18T03:31:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://macplay.github.io/listings/</loc>
+  <lastmod>2017-09-18T03:31:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://macplay.github.io/listings/weibo_util.py.html</loc>
+  <lastmod>2017-09-18T03:31:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://macplay.github.io/posts/pygal-charts-get-started/</loc>
+  <lastmod>2017-09-18T03:31:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://macplay.github.io/posts/quickstart/</loc>
+  <lastmod>2017-09-18T03:31:00Z</lastmod>
  </url>
 </urlset>

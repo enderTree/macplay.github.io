@@ -6,23 +6,39 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
-  <loc>http://macplay.github.io/categories/reference.xml</loc>
-  <lastmod>2017-09-18T03:00:00Z</lastmod>
+  <loc>https://macplay.github.io/categories/cat_markdown.xml</loc>
+  <lastmod>2017-09-18T03:31:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://macplay.github.io/categories/rest.xml</loc>
-  <lastmod>2017-09-18T03:00:00Z</lastmod>
+  <loc>https://macplay.github.io/categories/chart.xml</loc>
+  <lastmod>2017-09-18T03:31:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://macplay.github.io/galleries/rss.xml</loc>
-  <lastmod>2017-09-18T03:00:00Z</lastmod>
+  <loc>https://macplay.github.io/categories/pygal.xml</loc>
+  <lastmod>2017-09-18T03:31:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://macplay.github.io/rss.xml</loc>
-  <lastmod>2017-09-18T03:00:00Z</lastmod>
+  <loc>https://macplay.github.io/categories/python.xml</loc>
+  <lastmod>2017-09-18T03:31:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://macplay.github.io/sitemap.xml</loc>
-  <lastmod>2017-09-18T03:00:00Z</lastmod>
+  <loc>https://macplay.github.io/categories/reference.xml</loc>
+  <lastmod>2017-09-18T03:31:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://macplay.github.io/categories/rest.xml</loc>
+  <lastmod>2017-09-18T03:31:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://macplay.github.io/galleries/rss.xml</loc>
+  <lastmod>2017-09-18T03:31:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://macplay.github.io/rss.xml</loc>
+  <lastmod>2017-09-18T03:31:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://macplay.github.io/sitemap.xml</loc>
+  <lastmod>2017-09-18T03:31:00Z</lastmod>
  </sitemap>
 </sitemapindex>
