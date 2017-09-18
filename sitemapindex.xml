@@ -6,11 +6,19 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
+  <loc>http://macplay.github.io/categories/reference.xml</loc>
+  <lastmod>2017-09-18T02:49:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://macplay.github.io/categories/rest.xml</loc>
+  <lastmod>2017-09-18T02:49:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>http://macplay.github.io/rss.xml</loc>
-  <lastmod>2017-09-18T02:16:00Z</lastmod>
+  <lastmod>2017-09-18T02:49:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://macplay.github.io/sitemap.xml</loc>
-  <lastmod>2017-09-18T02:16:00Z</lastmod>
+  <lastmod>2017-09-18T02:49:00Z</lastmod>
  </sitemap>
 </sitemapindex>
