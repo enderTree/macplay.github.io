@@ -11,7 +11,7 @@
 <link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <link rel="canonical" href="https://macplay.github.io/">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
-<link rel="prefetch" href="posts/nikola-internals/" type="text/html">
+<link rel="prefetch" href="posts/jing-tai-bo-ke-nikola-zhi-xie-zuo-shi-jian/" type="text/html">
 </head>
 <body>
             <header id="header"><div class="ui grid">
@@ -62,6 +62,47 @@
     <div class="postindex page-body">
     <div class="post-entry post-text">
         <div class="entry-title">
+            <a href="posts/jing-tai-bo-ke-nikola-zhi-xie-zuo-shi-jian/">静态博客 Nikola 之写作实践</a>
+        </div>
+        <div class="post-meta">
+            <span class="post-meta-item-icon">
+                <i class="user icon"></i>
+            </span>
+            <span class="post-meta-item-text" itemprop="author">
+                <a href="authors/macplay/">macplay</a>
+            </span>
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+                <i class="calendar icon"></i>
+            </span>
+            <span class="post-meta-item-text">
+                <a href="archive.html">
+                    <time datetime="2017-09-20T11:32:34+08:00" itemprop="datePublished" title="2017-09-20 11:32">2017-09-20 11:32
+                    </time></a>
+            </span>
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                    <i class="tags icon"></i>
+                </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/markdown/">markdown</a>
+                            </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/nikola/">nikola</a>
+                            </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/rest/">reST</a>
+                            </span>
+        </div>
+        <div class="post-summary">
+                <div>
+<p>本文分享 <a class="reference external" href="https://getnikola.com">Nikola</a> 博客的写作流程及注意事项，方便读者对最基础的操作--「更新文章」有直观了解。得益于 <a class="reference external" href="https://getnikola.com">Nikola</a> 和 <a class="reference external" href="https://travis-ci.org">TravisCI</a> 的紧密协同，「更新文章」只需把源文件放到指定目录，提交到 GitHub 即可。甚至在没有安装 <a class="reference external" href="https://getnikola.com">Nikola</a> 程序的电脑或者手机上也可以随时更新你的文章。</p>
+<p class="more"><a href="posts/jing-tai-bo-ke-nikola-zhi-xie-zuo-shi-jian/">Read more…</a></p>
+</div>
+        </div>
+    </div>
+    <div class="post-entry post-text">
+        <div class="entry-title">
             <a href="posts/nikola-internals/">Nikola Internals</a>
         </div>
         <div class="post-meta">
@@ -69,7 +110,7 @@
                 <i class="user icon"></i>
             </span>
             <span class="post-meta-item-text" itemprop="author">
-                ashfinal
+                <a href="authors/ashfinal/">ashfinal</a>
             </span>
             <span class="post-meta-divider">|</span>
             <span class="post-meta-item-icon">
@@ -149,7 +190,7 @@ function decrypt() {
                 <i class="user icon"></i>
             </span>
             <span class="post-meta-item-text" itemprop="author">
-                ashfinal
+                <a href="authors/ashfinal/">ashfinal</a>
             </span>
             <span class="post-meta-divider">|</span>
             <span class="post-meta-item-icon">
@@ -351,7 +392,7 @@ function decrypt() {
                 <i class="user icon"></i>
             </span>
             <span class="post-meta-item-text" itemprop="author">
-                ashfinal
+                <a href="authors/ashfinal/">ashfinal</a>
             </span>
             <span class="post-meta-divider">|</span>
             <span class="post-meta-item-icon">
@@ -392,7 +433,7 @@ function decrypt() {
                 <i class="user icon"></i>
             </span>
             <span class="post-meta-item-text" itemprop="author">
-                ashfinal
+                <a href="authors/ashfinal/">ashfinal</a>
             </span>
             <span class="post-meta-divider">|</span>
             <span class="post-meta-item-icon">
@@ -424,102 +465,21 @@ function decrypt() {
                 <div>
 <p>If you are using reStructuredText and install pygal, Nikola has support for rather nice charts
 with little effort, and i's even semi-interactive (hover your pointer over the legend!):</p>
-<pre class="code rest"><a name="rest_code_9e7c6e44073243c1a1cd2a855cd73ead-1"></a><span class="p">..</span> <span class="ow">chart</span><span class="p">::</span> StackedLine
-<a name="rest_code_9e7c6e44073243c1a1cd2a855cd73ead-2"></a>   <span class="nc">:title:</span> <span class="nf">'Browser usage evolution (in %)'</span>
-<a name="rest_code_9e7c6e44073243c1a1cd2a855cd73ead-3"></a>   <span class="nc">:fill:</span> <span class="nf">True</span>
-<a name="rest_code_9e7c6e44073243c1a1cd2a855cd73ead-4"></a>   <span class="nc">:x_labels:</span> <span class="nf">['2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012']</span>
-<a name="rest_code_9e7c6e44073243c1a1cd2a855cd73ead-5"></a>   <span class="nc">:width:</span> <span class="nf">600</span>
-<a name="rest_code_9e7c6e44073243c1a1cd2a855cd73ead-6"></a>   <span class="nc">:height:</span> <span class="nf">400</span>
-<a name="rest_code_9e7c6e44073243c1a1cd2a855cd73ead-7"></a>   <span class="nc">:explicit_size:</span> <span class="nf">True</span>
-<a name="rest_code_9e7c6e44073243c1a1cd2a855cd73ead-8"></a>   <span class="nc">:style:</span> <span class="nf">BlueStyle</span>
-<a name="rest_code_9e7c6e44073243c1a1cd2a855cd73ead-9"></a>
-<a name="rest_code_9e7c6e44073243c1a1cd2a855cd73ead-10"></a>   ('Others',  [14.2, 15.4, 15.3,  8.9,    9, 10.4,  8.9,  5.8,  6.7,  6.8,  7.5])
-<a name="rest_code_9e7c6e44073243c1a1cd2a855cd73ead-11"></a>   ('IE',      [85.8, 84.6, 84.7, 74.5,   66, 58.6, 54.7, 44.8, 36.2, 26.6, 20.1])
-<a name="rest_code_9e7c6e44073243c1a1cd2a855cd73ead-12"></a>   ('Firefox', [None, None, None, 16.6,   25,   31, 36.4, 45.5, 46.3, 42.8, 37.1])
-<a name="rest_code_9e7c6e44073243c1a1cd2a855cd73ead-13"></a>   ('Chrome',  [None, None, None, None, None, None,    0,  3.9, 10.8, 23.8, 35.3])
+<pre class="code rest"><a name="rest_code_b7ed0ffcaf334bd8bdf545a9edab2175-1"></a><span class="p">..</span> <span class="ow">chart</span><span class="p">::</span> StackedLine
+<a name="rest_code_b7ed0ffcaf334bd8bdf545a9edab2175-2"></a>   <span class="nc">:title:</span> <span class="nf">'Browser usage evolution (in %)'</span>
+<a name="rest_code_b7ed0ffcaf334bd8bdf545a9edab2175-3"></a>   <span class="nc">:fill:</span> <span class="nf">True</span>
+<a name="rest_code_b7ed0ffcaf334bd8bdf545a9edab2175-4"></a>   <span class="nc">:x_labels:</span> <span class="nf">['2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012']</span>
+<a name="rest_code_b7ed0ffcaf334bd8bdf545a9edab2175-5"></a>   <span class="nc">:width:</span> <span class="nf">600</span>
+<a name="rest_code_b7ed0ffcaf334bd8bdf545a9edab2175-6"></a>   <span class="nc">:height:</span> <span class="nf">400</span>
+<a name="rest_code_b7ed0ffcaf334bd8bdf545a9edab2175-7"></a>   <span class="nc">:explicit_size:</span> <span class="nf">True</span>
+<a name="rest_code_b7ed0ffcaf334bd8bdf545a9edab2175-8"></a>   <span class="nc">:style:</span> <span class="nf">BlueStyle</span>
+<a name="rest_code_b7ed0ffcaf334bd8bdf545a9edab2175-9"></a>
+<a name="rest_code_b7ed0ffcaf334bd8bdf545a9edab2175-10"></a>   ('Others',  [14.2, 15.4, 15.3,  8.9,    9, 10.4,  8.9,  5.8,  6.7,  6.8,  7.5])
+<a name="rest_code_b7ed0ffcaf334bd8bdf545a9edab2175-11"></a>   ('IE',      [85.8, 84.6, 84.7, 74.5,   66, 58.6, 54.7, 44.8, 36.2, 26.6, 20.1])
+<a name="rest_code_b7ed0ffcaf334bd8bdf545a9edab2175-12"></a>   ('Firefox', [None, None, None, 16.6,   25,   31, 36.4, 45.5, 46.3, 42.8, 37.1])
+<a name="rest_code_b7ed0ffcaf334bd8bdf545a9edab2175-13"></a>   ('Chrome',  [None, None, None, None, None, None,    0,  3.9, 10.8, 23.8, 35.3])
 </pre>
 <p class="more"><a href="posts/pygal-charts-get-started/">Read more…</a></p>
-</div>
-        </div>
-    </div>
-    <div class="post-entry post-text">
-        <div class="entry-title">
-            <a href="posts/quickstart/">A reStructuredText Primer</a>
-        </div>
-        <div class="post-meta">
-            <span class="post-meta-item-icon">
-                <i class="user icon"></i>
-            </span>
-            <span class="post-meta-item-text" itemprop="author">
-                ashfinal
-            </span>
-            <span class="post-meta-divider">|</span>
-            <span class="post-meta-item-icon">
-                <i class="calendar icon"></i>
-            </span>
-            <span class="post-meta-item-text">
-                <a href="archive.html">
-                    <time datetime="2012-03-30T23:00:00-03:00" itemprop="datePublished" title="2012-03-30 23:00">2012-03-30 23:00
-                    </time></a>
-            </span>
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                    <i class="tags icon"></i>
-                </span>
-                            <span class="post-meta-tag-item">
-                                <a href="categories/reference/">reference</a>
-                            </span>
-                            <span class="post-meta-tag-item">
-                                <a href="categories/rest/">reST</a>
-                            </span>
-        </div>
-        <div class="post-summary">
-                <div>
-<table class="docinfo" frame="void" rules="none">
-<col class="docinfo-name">
-<col class="docinfo-content">
-<tbody valign="top">
-<tr>
-<th class="docinfo-name">Author:</th>
-<td>Richard Jones</td>
-</tr>
-<tr>
-<th class="docinfo-name">Version:</th>
-<td>5801</td>
-</tr>
-<tr>
-<th class="docinfo-name">Copyright:</th>
-<td>This document has been placed in the public domain.</td>
-</tr>
-</tbody>
-</table>
-<div class="contents topic" id="contents">
-<p class="topic-title first">Contents</p>
-<ul class="simple">
-<li><a class="reference internal" href="posts/quickstart/#structure" id="id16">Structure</a></li>
-<li><a class="reference internal" href="posts/quickstart/#text-styles" id="id17">Text styles</a></li>
-<li><a class="reference internal" href="posts/quickstart/#lists" id="id18">Lists</a></li>
-<li><a class="reference internal" href="posts/quickstart/#preformatting-code-samples" id="id19">Preformatting (code samples)</a></li>
-<li>
-<a class="reference internal" href="posts/quickstart/#sections" id="id20">Sections</a><ul>
-<li><a class="reference internal" href="posts/quickstart/#document-title-subtitle" id="id21">Document Title / Subtitle</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="posts/quickstart/#images" id="id22">Images</a></li>
-<li><a class="reference internal" href="posts/quickstart/#what-next" id="id23">What Next?</a></li>
-</ul>
-</div>
-<p>The text below contains links that look like "(<a class="reference external" href="posts/quickstart/quickref.html">quickref</a>)".  These
-are relative links that point to the <a class="reference external" href="posts/quickstart/quickref.html">Quick reStructuredText</a> user
-reference.  If these links don't work, please refer to the <a class="reference external" href="http://docutils.sourceforge.net/docs/user/rst/quickref.html">master
-quick reference</a> document.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">This document is an informal introduction to
-reStructuredText.  The <a class="reference internal" href="posts/quickstart/#what-next">What Next?</a> section below has links to
-further resources, including a formal reference.</p>
-</div>
-<p class="more"><a href="posts/quickstart/">Read more…</a></p>
 </div>
         </div>
     </div>
