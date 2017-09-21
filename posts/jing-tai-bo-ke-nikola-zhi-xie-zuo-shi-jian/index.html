@@ -177,12 +177,12 @@ Hint
     <div class="disabled step">提交 GitHub</div>
 </div>
 <p>添加完 meta 信息后就可以提交最终 markup 文档了。如本文的 meta 信息为（ reStructuredText 文件类型）：</p>
-<pre class="code rst"><a name="rest_code_7fcb2e58c2a142a897b97f1e2b8ee5a5-1"></a><span class="cp">.. title: 静态博客 Nikola 之写作实践</span>
-<a name="rest_code_7fcb2e58c2a142a897b97f1e2b8ee5a5-2"></a><span class="cp">.. slug: jing-tai-bo-ke-nikola-zhi-xie-zuo-shi-jian</span>
-<a name="rest_code_7fcb2e58c2a142a897b97f1e2b8ee5a5-3"></a><span class="cp">.. date: 2017-09-20 11:32:34 UTC+08:00</span>
-<a name="rest_code_7fcb2e58c2a142a897b97f1e2b8ee5a5-4"></a><span class="cp">.. tags: nikola, reST, markdown</span>
-<a name="rest_code_7fcb2e58c2a142a897b97f1e2b8ee5a5-5"></a><span class="cp">.. category: markdown</span>
-<a name="rest_code_7fcb2e58c2a142a897b97f1e2b8ee5a5-6"></a><span class="cp">.. author: macplay</span>
+<pre class="code rst"><a name="rest_code_e87c5f6ff51e47fcaf644de07bfbfc99-1"></a><span class="cp">.. title: 静态博客 Nikola 之写作实践</span>
+<a name="rest_code_e87c5f6ff51e47fcaf644de07bfbfc99-2"></a><span class="cp">.. slug: jing-tai-bo-ke-nikola-zhi-xie-zuo-shi-jian</span>
+<a name="rest_code_e87c5f6ff51e47fcaf644de07bfbfc99-3"></a><span class="cp">.. date: 2017-09-20 11:32:34 UTC+08:00</span>
+<a name="rest_code_e87c5f6ff51e47fcaf644de07bfbfc99-4"></a><span class="cp">.. tags: nikola, reST, markdown</span>
+<a name="rest_code_e87c5f6ff51e47fcaf644de07bfbfc99-5"></a><span class="cp">.. category: markdown</span>
+<a name="rest_code_e87c5f6ff51e47fcaf644de07bfbfc99-6"></a><span class="cp">.. author: macplay</span>
 </pre>
 <p>Nikola 支持提交 reStructuredText 、Markdown、Jupyter Notebook 等文件来生成博客文章，不同文件类型的 meta 头略有不同（因为注释语法不同）。推荐使用 <cite>nikola new_post -f rest/markdown/ipynb</cite> 命令来新建文件，其中 <cite>-f arg</cite> 用来指定要创建的文档格式。新创建的文件已经包含必要的 meta 信息，只需略作修改就可以了。</p>
 <p>Jupyter Notebook 的情况则比较特殊，meta 信息不在文件开头。而且其文件类型（扩展名 <cite>.ipynb</cite> ）其实是 JSON，如果不想使用文本编辑器来编辑 meta 头的话，可以依次点击 Jupyter Notebook 菜单 <cite>Edit</cite> - <cite>Edit Notebook Metadata</cite> 。</p>
