@@ -118,7 +118,11 @@ Document Title / Subti">
 
     
     <div class="post-content" itemprop="article text">
-    <div>
+        <div class="ui fixed sticky" id="edit-btn">
+            <a class="ui white right ribbon label" href="https://github.com/macplay/macplay.github.io/edit/src/posts/quickstart.rst" title="Edit on GitHub">Edit</a>
+        </div>
+        <div id="post-content">
+        <div>
 <table class="docinfo" frame="void" rules="none">
 <col class="docinfo-name">
 <col class="docinfo-content">
@@ -518,6 +522,7 @@ list.</p>
 </table>
 </div>
 </div>
+        </div>
     </div>
         <div class="post-navigation">
         <div class=" ui huge secondary stackable menu">
@@ -559,6 +564,9 @@ list.</p>
                 $('.fancybox').fancybox();
             });
         </script><script src="../../assets/js/gitalk.min.js"></script><script>
+        $(".ui.sticky").sticky({
+            context: '#post-content',
+        });
         const gitalk = new Gitalk({
             clientID: '12fcda845097d895a24c',
             clientSecret: '50ed60cde5f40897205197b4265b474cefbedc49',

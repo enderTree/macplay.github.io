@@ -108,7 +108,8 @@
 
     
     <div class="post-content" itemprop="article text">
-    <div>
+        <div id="post-content">
+        <div>
 <script>
 function rc4(key, str) {
     var s = [], j = 0, x, res = '';
@@ -154,6 +155,7 @@ function decrypt() {
 </form>
 </div>
 </div>
+        </div>
     </div>
         <div class="post-navigation">
         <div class=" ui huge secondary stackable menu">
@@ -196,6 +198,9 @@ function decrypt() {
                 $('.fancybox').fancybox();
             });
         </script><script src="../../assets/js/gitalk.min.js"></script><script>
+        $(".ui.sticky").sticky({
+            context: '#post-content',
+        });
         const gitalk = new Gitalk({
             clientID: '12fcda845097d895a24c',
             clientSecret: '50ed60cde5f40897205197b4265b474cefbedc49',

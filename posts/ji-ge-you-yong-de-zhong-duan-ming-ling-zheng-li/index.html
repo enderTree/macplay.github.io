@@ -91,7 +91,11 @@
 
     
     <div class="post-content" itemprop="article text">
-    <div>
+        <div class="ui fixed sticky" id="edit-btn">
+            <a class="ui white right ribbon label" href="https://github.com/macplay/macplay.github.io/edit/src/posts/ji-ge-you-yong-de-zhong-duan-ming-ling-zheng-li.rst" title="Edit on GitHub">Edit</a>
+        </div>
+        <div id="post-content">
+        <div>
 <p>使用 zsh 之后，就养成了不整理终端命令的“坏”习惯。可能当时遇到问题折腾好半天才解决，但却从没有写个日志（哪怕片段）记录下来的想法。因为 zsh 默认保存上万条历史记录让这一想法显得没有必要，要再次调用的话直接 fzf 搜索，简单修改下回车执行就行。</p>
 <p>最近两天抹盘安装了 High Sierra 系统，装完后把之前的 <cite>.zsh_history</cite> 文件拷贝回 home 目录，保持“坏”习惯继续接着用就成。不过还是有点不放心，一方面担心使用频率超低（但有用）的命令可能会被冲掉，另一方面万一某一天 history 文件损坏就悲剧了，另外有时也会有到别的电脑上执行命令的需求。所以，还是整理下为好，该命令列表应该会不定期更新。</p>
 <!-- TEASER_END -->
@@ -171,6 +175,7 @@
 </li>
 </ol>
 </div>
+        </div>
     </div>
         <div class="post-navigation">
         <div class=" ui huge secondary stackable menu">
@@ -210,6 +215,9 @@
                 $('.fancybox').fancybox();
             });
         </script><script src="../../assets/js/gitalk.min.js"></script><script>
+        $(".ui.sticky").sticky({
+            context: '#post-content',
+        });
         const gitalk = new Gitalk({
             clientID: '12fcda845097d895a24c',
             clientSecret: '50ed60cde5f40897205197b4265b474cefbedc49',

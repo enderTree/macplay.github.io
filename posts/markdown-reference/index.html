@@ -104,7 +104,11 @@ Markdown is created by Daring Fireball, the original guideline is here. Its synt
 
     
     <div class="post-content" itemprop="article text">
-    <div>
+        <div class="ui fixed sticky" id="edit-btn">
+            <a class="ui white right ribbon label" href="https://github.com/macplay/macplay.github.io/edit/src/posts/markdown-reference.md" title="Edit on GitHub">Edit</a>
+        </div>
+        <div id="post-content">
+        <div>
 <h2 id="markdown-for-typora">Markdown For Typora</h2>
 <h3 id="overview">Overview</h3>
 <p><strong>Markdown</strong> is created by <a href="http://daringfireball.net/">Daring Fireball</a>, the original guideline is <a href="http://daringfireball.net/projects/markdown/syntax">here</a>. Its syntax, however, varies between different parsers or editors. <strong>Typora</strong> is using <a href="https://help.github.com/articles/github-flavored-markdown/">GitHub Flavored Markdown</a>.</p>
@@ -434,6 +438,7 @@ __double underscores__
 </ol>
 </div>
 </div>
+        </div>
     </div>
         <div class="post-navigation">
         <div class=" ui huge secondary stackable menu">
@@ -476,6 +481,9 @@ __double underscores__
                 $('.fancybox').fancybox();
             });
         </script><script src="../../assets/js/gitalk.min.js"></script><script>
+        $(".ui.sticky").sticky({
+            context: '#post-content',
+        });
         const gitalk = new Gitalk({
             clientID: '12fcda845097d895a24c',
             clientSecret: '50ed60cde5f40897205197b4265b474cefbedc49',

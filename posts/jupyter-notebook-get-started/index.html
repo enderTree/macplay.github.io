@@ -145,7 +145,11 @@ In addition to the regular plot method, th">
 
     
     <div class="post-content" itemprop="article text">
-    <div tabindex="-1" id="notebook" class="border-box-sizing">
+        <div class="ui fixed sticky" id="edit-btn">
+            <a class="ui white right ribbon label" href="https://github.com/macplay/macplay.github.io/edit/src/posts/jupyter-notebook-get-started.ipynb" title="Edit on GitHub">Edit</a>
+        </div>
+        <div id="post-content">
+        <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
 <div class="cell border-box-sizing code_cell rendered">
@@ -304,6 +308,7 @@ In addition to the regular plot method, th">
     </div>
   </div>
 
+        </div>
     </div>
         <div class="post-navigation">
         <div class=" ui huge secondary stackable menu">
@@ -348,6 +353,9 @@ In addition to the regular plot method, th">
         </script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha256-SDRP1VVYu+tgAGKhddBSl5+ezofHKZeI+OzxakbIe/Y=" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
             MathJax.Hub.Config({tex2jax: {inlineMath: [['$latex ','$'], ['\\(','\\)']]}});
         </script><script src="../../assets/js/gitalk.min.js"></script><script>
+        $(".ui.sticky").sticky({
+            context: '#post-content',
+        });
         const gitalk = new Gitalk({
             clientID: '12fcda845097d895a24c',
             clientSecret: '50ed60cde5f40897205197b4265b474cefbedc49',
