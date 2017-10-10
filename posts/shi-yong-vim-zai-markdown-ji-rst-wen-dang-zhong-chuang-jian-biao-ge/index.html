@@ -4,25 +4,25 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="generator" content="Nikola (getnikola.com)">
-<title>At Home Outdoors - MacPlay</title>
+<title>使用 Vim 在 Markdown 及 rst 文档中创建表格 - MacPlay</title>
 <link href="../../assets/css/semantic.min.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
-<link rel="canonical" href="https://macplay.github.io/posts/at-home-outdoors/">
+<link rel="canonical" href="https://macplay.github.io/posts/shi-yong-vim-zai-markdown-ji-rst-wen-dang-zhong-chuang-jian-biao-ge/">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
 <meta name="author" content="ashfinal">
 <meta property="og:site_name" content="MacPlay">
-<meta property="og:title" content="At Home Outdoors">
-<meta property="og:url" content="https://macplay.github.io/posts/at-home-outdoors/">
-<meta property="og:description" content="发现 fancyBox 能自动识别嵌入的媒体，比如 Youtube、Vimeo、Google Map、Instagram 等。
-尝试了一下 Vimeo ，体验非常好。这样静态博客的内容就可以更加丰富多彩。
-（点击封面加载视频）
+<meta property="og:title" content="使用 Vim 在 Markdown 及 rst 文档中创建表格">
+<meta property="og:url" content="https://macplay.github.io/posts/shi-yong-vim-zai-markdown-ji-rst-wen-dang-zhong-chuang-jian-biao-ge/">
+<meta property="og:description" content="之前提到过 reStructuredText 的表格类型 Grid Tables 书写困难，普通编辑器难以胜任，可能有人好奇笔者是如何做的。对于 Vim、Emacs 两大编辑器来说，表格创建任务非常简单：
 
-写作语法上和插入一张图片没有什么区别：
-.. image:: https://i.vimeocdn.com/video/658454374_1040x584.jpg
-  ">
+Your browser does not support the video tag.
+笔者平时使用较多的是 Vim 编辑器，借助强大的 vim-table-mode 插件，只需正常输入表格">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2017-10-05T23:57:38+08:00">
+<meta property="article:published_time" content="2017-10-10T21:15:21+08:00">
+<meta property="article:tag" content="markdown">
+<meta property="article:tag" content="reST">
+<meta property="article:tag" content="vim">
 <link rel="stylesheet" href="../../assets/css/gitalk.css">
 </head>
 <body>
@@ -73,7 +73,7 @@
                         <div id="main-content">
 <div class="postpage post-text page-body" itemscope="itemscope" itemtype="http://schema.org/Article">
             <h1 class="post-title" itemprop="headline">
-        <a href=".">At Home Outdoors</a>
+        <a href=".">使用 Vim 在 Markdown 及 rst 文档中创建表格</a>
     </h1>
 
     <div class="post-meta">
@@ -89,36 +89,43 @@
         </span>
         <span class="post-meta-item-text">
             <a href="../../archive.html">
-                <time datetime="2017-10-05T23:57:38+08:00" itemprop="datePublished" title="2017-10-05 23:57">2017-10-05 23:57
+                <time datetime="2017-10-10T21:15:21+08:00" itemprop="datePublished" title="2017-10-10 21:15">2017-10-10 21:15
                 </time></a>
         </span>
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+                <i class="tags icon"></i>
+            </span>
+                        <span class="post-meta-tag-item">
+                            <a href="../../categories/markdown/">markdown</a>
+                        </span>
+                        <span class="post-meta-tag-item">
+                            <a href="../../categories/rest/">reST</a>
+                        </span>
+                        <span class="post-meta-tag-item">
+                            <a href="../../categories/vim/">vim</a>
+                        </span>
     </div>
 
     
     <div class="post-content" itemprop="article text">
         <div class="ui sticky" id="edit-btn">
-            <a class="ui white right ribbon label" href="https://github.com/macplay/macplay.github.io/edit/src/posts/at-home-outdoors.rst" title="Edit on GitHub">Edit</a>
+            <a class="ui white right ribbon label" href="https://github.com/macplay/macplay.github.io/edit/src/posts/shi-yong-vim-zai-markdown-ji-rst-wen-dang-zhong-chuang-jian-biao-ge.rst" title="Edit on GitHub">Edit</a>
         </div>
         <div id="post-content">
         <div>
-<p>发现 <a class="reference external" href="http://fancyapps.com/fancybox/3/docs/#embedding">fancyBox</a> 能自动识别嵌入的媒体，比如 Youtube、Vimeo、Google Map、Instagram 等。</p>
-<p>尝试了一下 Vimeo ，体验非常好。这样静态博客的内容就可以更加丰富多彩。</p>
-<p>（点击封面加载视频）</p>
-<a class="reference external image-reference" href="https://vimeo.com/channels/staffpicks/236370796"><img alt="https://i.vimeocdn.com/video/658454374_1040x584.jpg" class="align-center" src="https://i.vimeocdn.com/video/658454374_1040x584.jpg"></a>
-<p>写作语法上和插入一张图片没有什么区别：</p>
-<pre class="code rst"><a name="rest_code_58b6fefab3b842eaab185430a941e326-1"></a><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> https://i.vimeocdn.com/video/658454374_1040x584.jpg
-<a name="rest_code_58b6fefab3b842eaab185430a941e326-2"></a>   <span class="nc">:align:</span> <span class="nf">center</span>
-<a name="rest_code_58b6fefab3b842eaab185430a941e326-3"></a>   <span class="nc">:target:</span> <span class="nf">https://vimeo.com/channels/staffpicks/236370796</span>
-</pre>
+<p>之前提到过 reStructuredText 的表格类型 <a class="reference external" href="../cong-markdown-dao-restructuredtext/#table">Grid Tables</a> 书写困难，普通编辑器难以胜任，可能有人好奇笔者是如何做的。对于 Vim、Emacs 两大编辑器来说，表格创建任务非常简单：</p>
+<video src="https://github.com/ashfinal/bindata/raw/master/videos/vim_table.mp4" loop autoplay>
+Your browser does not support the video tag.
+</video><p>笔者平时使用较多的是 Vim 编辑器，借助强大的 <a class="reference external" href="https://github.com/dhruvasagar/vim-table-mode">vim-table-mode</a> 插件，只需正常输入表格内容和竖线符号 <tt class="docutils literal">|</tt> 就可以，其它事情如填充和对齐等等插件会自动处理。笔者针对 <a class="reference external" href="https://github.com/dhruvasagar/vim-table-mode">vim-table-mode</a> 插件做了几行配置，使其支持 Markdown、rst、org 表格的创建（org 表格在上图中没有展示），如果有人感兴趣的话，可以看一下个人 <a class="reference external" href="https://github.com/ashfinal/vimrc-config/blob/0cba64e3a384fc78483a431b45b65a50daba34dd/.vimrc#L750">vimrc 配置</a> 的相应部分。</p>
+<p>PS：发现录屏如果使用 GIF 格式，无论怎样压缩都达不到理想的画质和文件大小。最后使用 MP4 格式，1 分 53 秒时长的 720P 视频，压缩后仅仅 836 KB！感觉以后文章中插入动图可以抛弃 GIF 格式了。</p>
+<p>读者们注意到上面录屏其实是视频而不是图片吗？ :)</p>
 </div>
         </div>
     </div>
         <div class="post-navigation">
         <div class=" ui huge secondary stackable menu">
-            <a class="post-nav-item post-nav-previous item" href="../cong-markdown-dao-restructuredtext/" title="Previous post"><i class="angle double left icon"></i> 从 Markdown 到 reStructuredText</a>
-        <div class="right menu">
-            <a class="post-nav-item post-nav-next item" href="../cong-markdown-dao-restructuredtexter/" title="Next post">从 Markdown 到 reStructuredText（二） <i class="angle double right icon"></i></a>
-        </div>
+            <a class="post-nav-item post-nav-previous item" href="../cong-markdown-dao-restructuredtexter/" title="Previous post"><i class="angle double left icon"></i> 从 Markdown 到 reStructuredText（二）</a>
         </div>
     </div>
 

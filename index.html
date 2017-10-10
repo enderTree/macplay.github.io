@@ -11,7 +11,7 @@
 <link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <link rel="canonical" href="https://macplay.github.io/">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
-<link rel="prefetch" href="posts/cong-markdown-dao-restructuredtexter/" type="text/html">
+<link rel="prefetch" href="posts/shi-yong-vim-zai-markdown-ji-rst-wen-dang-zhong-chuang-jian-biao-ge/" type="text/html">
 </head>
 <body>
             <header id="header"><div class="ui grid">
@@ -60,6 +60,51 @@
                     <div class="mobile only sixteen wide column">
                         <div id="main-content">
     <div class="postindex page-body">
+    <div class="post-entry post-text">
+        <div class="entry-title">
+            <a href="posts/shi-yong-vim-zai-markdown-ji-rst-wen-dang-zhong-chuang-jian-biao-ge/">使用 Vim 在 Markdown 及 rst 文档中创建表格</a>
+        </div>
+        <div class="post-meta">
+            <span class="post-meta-item-icon">
+                <i class="user icon"></i>
+            </span>
+            <span class="post-meta-item-text" itemprop="author">
+                <a href="authors/ashfinal/">ashfinal</a>
+            </span>
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+                <i class="calendar icon"></i>
+            </span>
+            <span class="post-meta-item-text">
+                <a href="archive.html">
+                    <time datetime="2017-10-10T21:15:21+08:00" itemprop="datePublished" title="2017-10-10 21:15">2017-10-10 21:15
+                    </time></a>
+            </span>
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                    <i class="tags icon"></i>
+                </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/markdown/">markdown</a>
+                            </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/rest/">reST</a>
+                            </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/vim/">vim</a>
+                            </span>
+        </div>
+        <div class="post-summary">
+                <div>
+<p>之前提到过 reStructuredText 的表格类型 <a class="reference external" href="posts/cong-markdown-dao-restructuredtext/#table">Grid Tables</a> 书写困难，普通编辑器难以胜任，可能有人好奇笔者是如何做的。对于 Vim、Emacs 两大编辑器来说，表格创建任务非常简单：</p>
+<video src="https://github.com/ashfinal/bindata/raw/master/videos/vim_table.mp4" loop autoplay>
+Your browser does not support the video tag.
+</video><p>笔者平时使用较多的是 Vim 编辑器，借助强大的 <a class="reference external" href="https://github.com/dhruvasagar/vim-table-mode">vim-table-mode</a> 插件，只需正常输入表格内容和竖线符号 <tt class="docutils literal">|</tt> 就可以，其它事情如填充和对齐等等插件会自动处理。笔者针对 <a class="reference external" href="https://github.com/dhruvasagar/vim-table-mode">vim-table-mode</a> 插件做了几行配置，使其支持 Markdown、rst、org 表格的创建（org 表格在上图中没有展示），如果有人感兴趣的话，可以看一下个人 <a class="reference external" href="https://github.com/ashfinal/vimrc-config/blob/0cba64e3a384fc78483a431b45b65a50daba34dd/.vimrc#L750">vimrc 配置</a> 的相应部分。</p>
+<p>PS：发现录屏如果使用 GIF 格式，无论怎样压缩都达不到理想的画质和文件大小。最后使用 MP4 格式，1 分 53 秒时长的 720P 视频，压缩后仅仅 836 KB！感觉以后文章中插入动图可以抛弃 GIF 格式了。</p>
+<p>读者们注意到上面录屏其实是视频而不是图片吗？ :)</p>
+</div>
+        </div>
+    </div>
     <div class="post-entry post-text">
         <div class="entry-title">
             <a href="posts/cong-markdown-dao-restructuredtexter/">从 Markdown 到 reStructuredText（二）</a>
@@ -152,9 +197,9 @@
 <p>（点击封面加载视频）</p>
 <a class="reference external image-reference" href="https://vimeo.com/channels/staffpicks/236370796"><img alt="https://i.vimeocdn.com/video/658454374_1040x584.jpg" class="align-center" src="https://i.vimeocdn.com/video/658454374_1040x584.jpg"></a>
 <p>写作语法上和插入一张图片没有什么区别：</p>
-<pre class="code rst"><a name="rest_code_80eac57c26d24e98a722ce4c70e78c42-1"></a><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> https://i.vimeocdn.com/video/658454374_1040x584.jpg
-<a name="rest_code_80eac57c26d24e98a722ce4c70e78c42-2"></a>   <span class="nc">:align:</span> <span class="nf">center</span>
-<a name="rest_code_80eac57c26d24e98a722ce4c70e78c42-3"></a>   <span class="nc">:target:</span> <span class="nf">https://vimeo.com/channels/staffpicks/236370796</span>
+<pre class="code rst"><a name="rest_code_58b6fefab3b842eaab185430a941e326-1"></a><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> https://i.vimeocdn.com/video/658454374_1040x584.jpg
+<a name="rest_code_58b6fefab3b842eaab185430a941e326-2"></a>   <span class="nc">:align:</span> <span class="nf">center</span>
+<a name="rest_code_58b6fefab3b842eaab185430a941e326-3"></a>   <span class="nc">:target:</span> <span class="nf">https://vimeo.com/channels/staffpicks/236370796</span>
 </pre>
 </div>
         </div>
@@ -233,33 +278,6 @@
 <p>使用 zsh 之后，就养成了不整理终端命令的“坏”习惯。可能当时遇到问题折腾好半天才解决，但却从没有写个日志（哪怕片段）记录下来的想法。因为 zsh 默认保存上万条历史让这一做法显得没有必要，要再次调用的话直接 fzf 搜索，简单修改下回车执行就行。</p>
 <p>最近两天抹盘安装了 High Sierra 系统，装完后把之前的 <cite>.zsh_history</cite> 文件拷贝回 home 目录，继续老习惯接着用就成。不过还是有点不放心，一方面担心使用频率超低（但有用）的命令可能会被冲掉，另一方面万一某一天 history 文件损坏就悲剧了，更重要的是有时会到别的电脑上执行命令。所以，还是整理下为好，该命令列表应该会不定期更新。</p>
 <p class="more"><a href="posts/ji-ge-you-yong-de-zhong-duan-ming-ling-zheng-li/">Read more…</a></p>
-</div>
-        </div>
-    </div>
-    <div class="post-entry post-text">
-        <div class="entry-title">
-            <a href="posts/old-man-smoked-his-pipe/">Old Man Smoked His Pipe</a>
-        </div>
-        <div class="post-meta">
-            <span class="post-meta-item-icon">
-                <i class="user icon"></i>
-            </span>
-            <span class="post-meta-item-text" itemprop="author">
-                <a href="authors/ashfinal/">ashfinal</a>
-            </span>
-            <span class="post-meta-divider">|</span>
-            <span class="post-meta-item-icon">
-                <i class="calendar icon"></i>
-            </span>
-            <span class="post-meta-item-text">
-                <a href="archive.html">
-                    <time datetime="2017-09-24T22:18:36+08:00" itemprop="datePublished" title="2017-09-24 22:18">2017-09-24 22:18
-                    </time></a>
-            </span>
-        </div>
-        <div class="post-summary">
-                <div class="figure align-center">
-<a class="reference external image-reference" href="https://github.com/ashfinal/bindata/raw/master/System76-Old_Man_Smoked_His_Pipe-by_Ian_Hex_of_LightSweep-f45c6abe65.jpg"><img alt="Old_Man_Smoked_His_Pipe" src="https://github.com/ashfinal/bindata/raw/master/System76-Old_Man_Smoked_His_Pipe-by_Ian_Hex_of_LightSweep-f45c6abe65.thumb.jpg"></a>
 </div>
         </div>
     </div>
