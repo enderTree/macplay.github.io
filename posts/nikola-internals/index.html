@@ -28,7 +28,7 @@
 <link rel="stylesheet" href="../../assets/css/gitalk.css">
 </head>
 <body>
-            <header id="header"><div class="ui grid">
+            <header id="header"><div class="ui grid no-print">
             <div class="computer only tablet only three wide column">
             </div>
             <div class="computer only tablet only ten wide column">
@@ -66,7 +66,7 @@
         </div>
 
     </header><main id="main"><div class="ui grid">
-                <div class="three wide computer three wide tablet column">
+                <div class="three wide computer three wide tablet column no-print">
                     <div id="left-side">
                     </div>
                 </div>
@@ -157,8 +157,8 @@ function decrypt() {
 </div>
         </div>
     </div>
-        <div class="post-navigation">
-        <div class=" ui huge secondary stackable menu">
+        <div class="post-navigation no-print">
+        <div class="ui huge secondary stackable menu">
             <a class="post-nav-item post-nav-previous item" href="../jupyter-notebook-get-started/" title="Previous post"><i class="angle double left icon"></i> Jupyter-notebook get started</a>
         <div class="right menu">
             <a class="post-nav-item post-nav-next item" href="../jing-tai-bo-ke-nikola-zhi-xie-zuo-shi-jian/" title="Next post">静态博客 Nikola 之写作实践 <i class="angle double right icon"></i></a>
@@ -166,17 +166,17 @@ function decrypt() {
         </div>
     </div>
 
-        <div id="gitalk-container" class="comments-block"></div>
+        <div id="gitalk-container" class="comments-block no-print"></div>
 </div>
                         </div>
                     </div>
                 </div>
-                <div class="three wide computer three wide tablet column">
+                <div class="three wide computer three wide tablet column no-print">
                     <div id="right-side">
                     </div>
                 </div>
             </div>
-        </main><div class="ui grid">
+        </main><div class="ui grid no-print">
         <div class="computer only tablet only three wide column">
         </div>
         <div class="computer only tablet only ten wide column">
@@ -198,9 +198,6 @@ function decrypt() {
                 $('.image-reference').fancybox();
             });
         </script><script src="../../assets/js/gitalk.min.js"></script><script>
-        $(".ui.sticky").sticky({
-            context: '#main',
-        });
         const gitalk = new Gitalk({
             clientID: '12fcda845097d895a24c',
             clientSecret: '50ed60cde5f40897205197b4265b474cefbedc49',

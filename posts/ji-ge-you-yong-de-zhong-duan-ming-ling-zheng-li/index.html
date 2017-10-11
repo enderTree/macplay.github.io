@@ -23,7 +23,7 @@
 <link rel="stylesheet" href="../../assets/css/gitalk.css">
 </head>
 <body>
-            <header id="header"><div class="ui grid">
+            <header id="header"><div class="ui grid no-print">
             <div class="computer only tablet only three wide column">
             </div>
             <div class="computer only tablet only ten wide column">
@@ -61,7 +61,7 @@
         </div>
 
     </header><main id="main"><div class="ui grid">
-                <div class="three wide computer three wide tablet column">
+                <div class="three wide computer three wide tablet column no-print">
                     <div id="left-side">
                     </div>
                 </div>
@@ -80,6 +80,13 @@
         <span class="post-meta-item-text" itemprop="author">
             <a href="../../authors/ashfinal/">ashfinal</a>
         </span>
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+                <i class="github icon"></i>
+            </span>
+            <span class="post-meta-item-text">
+                <a href="https://github.com/macplay/macplay.github.io/edit/src/posts/ji-ge-you-yong-de-zhong-duan-ming-ling-zheng-li.rst" title="Edit on GitHub">edit</a>
+            </span>
         <span class="post-meta-divider">|</span>
         <span class="post-meta-item-icon">
             <i class="calendar icon"></i>
@@ -103,9 +110,6 @@
 
     
     <div class="post-content" itemprop="article text">
-        <div class="ui sticky" id="edit-btn">
-            <a class="ui white right ribbon label" href="https://github.com/macplay/macplay.github.io/edit/src/posts/ji-ge-you-yong-de-zhong-duan-ming-ling-zheng-li.rst" title="Edit on GitHub">Edit</a>
-        </div>
         <div id="post-content">
         <div>
 <p>使用 zsh 之后，就养成了不整理终端命令的“坏”习惯。可能当时遇到问题折腾好半天才解决，但却从没有写个日志（哪怕片段）记录下来的想法。因为 zsh 默认保存上万条历史让这一做法显得没有必要，要再次调用的话直接 fzf 搜索，简单修改下回车执行就行。</p>
@@ -334,10 +338,10 @@
 </li>
 <li>
 <p class="first">macOS 计算机名相关</p>
-<pre class="code shell"><a name="rest_code_bb2b49889b7041c58c6fb0183e946e40-1"></a>sudo scutil --set HostName <span class="s2">"iMBP"</span>
-<a name="rest_code_bb2b49889b7041c58c6fb0183e946e40-2"></a>sudo scutil --set ComputerName <span class="s2">"iMBP"</span>
-<a name="rest_code_bb2b49889b7041c58c6fb0183e946e40-3"></a>sudo scutil --set LocalHostName <span class="s2">"iMBP"</span>
-<a name="rest_code_bb2b49889b7041c58c6fb0183e946e40-4"></a>sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string <span class="s2">"iMBP"</span>
+<pre class="code shell"><a name="rest_code_3d6865fd48604bab972c738a6ebffedb-1"></a>sudo scutil --set HostName <span class="s2">"iMBP"</span>
+<a name="rest_code_3d6865fd48604bab972c738a6ebffedb-2"></a>sudo scutil --set ComputerName <span class="s2">"iMBP"</span>
+<a name="rest_code_3d6865fd48604bab972c738a6ebffedb-3"></a>sudo scutil --set LocalHostName <span class="s2">"iMBP"</span>
+<a name="rest_code_3d6865fd48604bab972c738a6ebffedb-4"></a>sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string <span class="s2">"iMBP"</span>
 </pre>
 </li>
 <li>
@@ -358,11 +362,11 @@
 </li>
 <li>
 <p class="first">命令行版的 gist</p>
-<pre class="code shell"><a name="rest_code_f23bd53bfb584fbda1b6f081d37b12cb-1"></a>gist --login
-<a name="rest_code_f23bd53bfb584fbda1b6f081d37b12cb-2"></a>gist
-<a name="rest_code_f23bd53bfb584fbda1b6f081d37b12cb-3"></a>gist selenium0.py
-<a name="rest_code_f23bd53bfb584fbda1b6f081d37b12cb-4"></a>gist -l ashfinal
-<a name="rest_code_f23bd53bfb584fbda1b6f081d37b12cb-5"></a>gist -d <span class="s2">"aria2 launchagent for macOS"</span> com.github.aria2.plist
+<pre class="code shell"><a name="rest_code_aaa26aa75bff42b4b3f93ebab4c9ca64-1"></a>gist --login
+<a name="rest_code_aaa26aa75bff42b4b3f93ebab4c9ca64-2"></a>gist
+<a name="rest_code_aaa26aa75bff42b4b3f93ebab4c9ca64-3"></a>gist selenium0.py
+<a name="rest_code_aaa26aa75bff42b4b3f93ebab4c9ca64-4"></a>gist -l ashfinal
+<a name="rest_code_aaa26aa75bff42b4b3f93ebab4c9ca64-5"></a>gist -d <span class="s2">"aria2 launchagent for macOS"</span> com.github.aria2.plist
 </pre>
 </li>
 <li>
@@ -387,14 +391,14 @@
 </li>
 <li>
 <p class="first">从 git 历史中删除二进制文件</p>
-<pre class="code shell"><a name="rest_code_8c88ca4ee45a48f7a60e173b5fc9d49d-1"></a>git filter-branch --force --index-filter <span class="se">\\</span>
-<a name="rest_code_8c88ca4ee45a48f7a60e173b5fc9d49d-2"></a><span class="s1">'git rm --cached --ignore-unmatch resources/watchbg.png'</span> <span class="se">\\</span>
-<a name="rest_code_8c88ca4ee45a48f7a60e173b5fc9d49d-3"></a>--prune-empty --tag-name-filter cat -- --all
+<pre class="code shell"><a name="rest_code_310904185bf24235b558800ce1c90d18-1"></a>git filter-branch --force --index-filter <span class="se">\\</span>
+<a name="rest_code_310904185bf24235b558800ce1c90d18-2"></a><span class="s1">'git rm --cached --ignore-unmatch resources/watchbg.png'</span> <span class="se">\\</span>
+<a name="rest_code_310904185bf24235b558800ce1c90d18-3"></a>--prune-empty --tag-name-filter cat -- --all
 </pre>
 <p>后面还需要三个命令：</p>
-<pre class="code shell"><a name="rest_code_89ea4edc1e1145e3874792c6db174e9f-1"></a>git reflog expire --expire<span class="o">=</span>now --all
-<a name="rest_code_89ea4edc1e1145e3874792c6db174e9f-2"></a>git gc --prune<span class="o">=</span>now
-<a name="rest_code_89ea4edc1e1145e3874792c6db174e9f-3"></a>git gc --aggressive --prune<span class="o">=</span>now
+<pre class="code shell"><a name="rest_code_a5f0882b6bdc4bf0a9e0bd1e2d0314ac-1"></a>git reflog expire --expire<span class="o">=</span>now --all
+<a name="rest_code_a5f0882b6bdc4bf0a9e0bd1e2d0314ac-2"></a>git gc --prune<span class="o">=</span>now
+<a name="rest_code_a5f0882b6bdc4bf0a9e0bd1e2d0314ac-3"></a>git gc --aggressive --prune<span class="o">=</span>now
 </pre>
 </li>
 <li>
@@ -417,8 +421,8 @@
 </div>
         </div>
     </div>
-        <div class="post-navigation">
-        <div class=" ui huge secondary stackable menu">
+        <div class="post-navigation no-print">
+        <div class="ui huge secondary stackable menu">
             <a class="post-nav-item post-nav-previous item" href="../old-man-smoked-his-pipe/" title="Previous post"><i class="angle double left icon"></i> Old Man Smoked His Pipe</a>
         <div class="right menu">
             <a class="post-nav-item post-nav-next item" href="../cong-markdown-dao-restructuredtext/" title="Next post">从 Markdown 到 reStructuredText <i class="angle double right icon"></i></a>
@@ -426,17 +430,17 @@
         </div>
     </div>
 
-        <div id="gitalk-container" class="comments-block"></div>
+        <div id="gitalk-container" class="comments-block no-print"></div>
 </div>
                         </div>
                     </div>
                 </div>
-                <div class="three wide computer three wide tablet column">
+                <div class="three wide computer three wide tablet column no-print">
                     <div id="right-side">
                     </div>
                 </div>
             </div>
-        </main><div class="ui grid">
+        </main><div class="ui grid no-print">
         <div class="computer only tablet only three wide column">
         </div>
         <div class="computer only tablet only ten wide column">
@@ -458,9 +462,6 @@
                 $('.image-reference').fancybox();
             });
         </script><script src="../../assets/js/gitalk.min.js"></script><script>
-        $(".ui.sticky").sticky({
-            context: '#main',
-        });
         const gitalk = new Gitalk({
             clientID: '12fcda845097d895a24c',
             clientSecret: '50ed60cde5f40897205197b4265b474cefbedc49',

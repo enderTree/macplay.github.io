@@ -38,7 +38,7 @@ Document Title / Subti">
 <link rel="stylesheet" href="../../assets/css/gitalk.css">
 </head>
 <body>
-            <header id="header"><div class="ui grid">
+            <header id="header"><div class="ui grid no-print">
             <div class="computer only tablet only three wide column">
             </div>
             <div class="computer only tablet only ten wide column">
@@ -76,7 +76,7 @@ Document Title / Subti">
         </div>
 
     </header><main id="main"><div class="ui grid">
-                <div class="three wide computer three wide tablet column">
+                <div class="three wide computer three wide tablet column no-print">
                     <div id="left-side">
                     </div>
                 </div>
@@ -95,6 +95,13 @@ Document Title / Subti">
         <span class="post-meta-item-text" itemprop="author">
             <a href="../../authors/ashfinal/">ashfinal</a>
         </span>
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+                <i class="github icon"></i>
+            </span>
+            <span class="post-meta-item-text">
+                <a href="https://github.com/macplay/macplay.github.io/edit/src/posts/quickstart.rst" title="Edit on GitHub">edit</a>
+            </span>
         <span class="post-meta-divider">|</span>
         <span class="post-meta-item-icon">
             <i class="calendar icon"></i>
@@ -118,9 +125,6 @@ Document Title / Subti">
 
     
     <div class="post-content" itemprop="article text">
-        <div class="ui sticky" id="edit-btn">
-            <a class="ui white right ribbon label" href="https://github.com/macplay/macplay.github.io/edit/src/posts/quickstart.rst" title="Edit on GitHub">Edit</a>
-        </div>
         <div id="post-content">
         <div>
 <table class="docinfo" frame="void" rules="none">
@@ -524,25 +528,25 @@ list.</p>
 </div>
         </div>
     </div>
-        <div class="post-navigation">
-        <div class=" ui huge secondary stackable menu">
+        <div class="post-navigation no-print">
+        <div class="ui huge secondary stackable menu">
         <div class="right menu">
             <a class="post-nav-item post-nav-next item" href="../pygal-charts-get-started/" title="Next post">Pygal charts get started <i class="angle double right icon"></i></a>
         </div>
         </div>
     </div>
 
-        <div id="gitalk-container" class="comments-block"></div>
+        <div id="gitalk-container" class="comments-block no-print"></div>
 </div>
                         </div>
                     </div>
                 </div>
-                <div class="three wide computer three wide tablet column">
+                <div class="three wide computer three wide tablet column no-print">
                     <div id="right-side">
                     </div>
                 </div>
             </div>
-        </main><div class="ui grid">
+        </main><div class="ui grid no-print">
         <div class="computer only tablet only three wide column">
         </div>
         <div class="computer only tablet only ten wide column">
@@ -564,9 +568,6 @@ list.</p>
                 $('.image-reference').fancybox();
             });
         </script><script src="../../assets/js/gitalk.min.js"></script><script>
-        $(".ui.sticky").sticky({
-            context: '#main',
-        });
         const gitalk = new Gitalk({
             clientID: '12fcda845097d895a24c',
             clientSecret: '50ed60cde5f40897205197b4265b474cefbedc49',
