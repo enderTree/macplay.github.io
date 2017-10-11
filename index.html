@@ -11,7 +11,7 @@
 <link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <link rel="canonical" href="https://macplay.github.io/">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
-<link rel="prefetch" href="posts/gei-bo-ke-wen-zhang-tian-jia-da-yin-gong-neng-zhi-chi/" type="text/html">
+<link rel="prefetch" href="posts/cong-markdown-dao-restructuredtextsan/" type="text/html">
 </head>
 <body>
             <header id="header"><div class="ui grid no-print">
@@ -60,6 +60,56 @@
                     <div class="mobile only sixteen wide column">
                         <div id="main-content">
     <div class="postindex page-body">
+    <div class="post-entry post-text">
+        <div class="entry-title">
+            <a href="posts/cong-markdown-dao-restructuredtextsan/">从 Markdown 到 reStructuredText（三）</a>
+        </div>
+        <div class="post-meta">
+            <span class="post-meta-item-icon">
+                <i class="user icon"></i>
+            </span>
+            <span class="post-meta-item-text" itemprop="author">
+                <a href="authors/ashfinal/">ashfinal</a>
+            </span>
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+                <i class="calendar icon"></i>
+            </span>
+            <span class="post-meta-item-text">
+                <a href="archive.html">
+                    <time datetime="2017-10-11T15:26:32+08:00" itemprop="datePublished" title="2017-10-11 15:26">2017-10-11 15:26
+                    </time></a>
+            </span>
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                    <i class="tags icon"></i>
+                </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/markup/">markup</a>
+                            </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/rest/">reST</a>
+                            </span>
+        </div>
+        <div class="post-summary">
+                <div>
+<p>本文是《从 Markdown 到 reStructuredText》系列文章的第三篇。和 Markdown 一样，reStructuredText 也是一种易读易写的纯文本标记语言，不过功能上更加强大（而且标准统一）。如果想了解其对应于 Markdown 的基本语法，请阅读 <a class="reference external" href="posts/cong-markdown-dao-restructuredtext/">第一篇文章</a> 。本文继续 <a class="reference external" href="posts/cong-markdown-dao-restructuredtexter/">上一篇文章</a> 的话题，聊一聊标记语言的样式问题，确切的说是 reStructuredText 在静态博客 Nikola 中的样式写法。</p>
+<p>“样式？标记语言还需要考虑样式？”估计不少人心里会犯嘀咕。然而，标记语言一直强调的是 <strong>易读易写</strong> ，无需专门的商业版权软件来编辑， <strong>同时，纯文本可被转换为其它格式的文档</strong>  <a class="footnote-reference" href="posts/cong-markdown-dao-restructuredtextsan/#id4" id="id3">[1]</a> 。转换为其它格式多半少不了样式，样式本身有助于读者对文档内容的理解，传递赏心悦目的文档对读者本人也是一种尊重。标记语言宣称的“毋需关注样式”更多的是谴责 <strong>过分关注样式</strong> ，以至于丢掉了文档之魂——内容。</p>
+<p>个人以为，标记语言自始至终贯彻的原则只有一点： <strong>内容与样式分离</strong> 。摆脱束缚用最简单的纯文本书写，而必要时又可以套用现成样式模板，导出或专业或活波……不同风格的文档方便分发。</p>
+<table class="docutils footnote" frame="void" id="id4" rules="none">
+<colgroup>
+<col class="label">
+<col>
+</colgroup>
+<tbody valign="top"><tr>
+<td class="label"><a class="fn-backref" href="posts/cong-markdown-dao-restructuredtextsan/#id3">[1]</a></td>
+<td>见 <a class="reference external" href="posts/cong-markdown-dao-restructuredtext/">第一篇文章</a> 宗旨 -&gt; reStructuredText 的预期目标</td>
+</tr></tbody>
+</table>
+<p class="more"><a href="posts/cong-markdown-dao-restructuredtextsan/">Read more…</a></p>
+</div>
+        </div>
+    </div>
     <div class="post-entry post-text">
         <div class="entry-title">
             <a href="posts/gei-bo-ke-wen-zhang-tian-jia-da-yin-gong-neng-zhi-chi/">给博客文章添加打印功能支持</a>
@@ -235,48 +285,10 @@ Your browser does not support the video tag.
 <p>（点击封面加载视频）</p>
 <a class="reference external image-reference" href="https://vimeo.com/channels/staffpicks/236370796"><img alt="https://i.vimeocdn.com/video/658454374_1040x584.jpg" class="align-center" src="https://i.vimeocdn.com/video/658454374_1040x584.jpg"></a>
 <p>写作语法上和插入一张图片没有什么区别：</p>
-<pre class="code rst"><a name="rest_code_50cc07658e8d44ed9e5a7d846713ae9a-1"></a><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> https://i.vimeocdn.com/video/658454374_1040x584.jpg
-<a name="rest_code_50cc07658e8d44ed9e5a7d846713ae9a-2"></a>   <span class="nc">:align:</span> <span class="nf">center</span>
-<a name="rest_code_50cc07658e8d44ed9e5a7d846713ae9a-3"></a>   <span class="nc">:target:</span> <span class="nf">https://vimeo.com/channels/staffpicks/236370796</span>
+<pre class="code rst"><a name="rest_code_4879928eeffb4e9a9bf2b42d4609ab37-1"></a><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> https://i.vimeocdn.com/video/658454374_1040x584.jpg
+<a name="rest_code_4879928eeffb4e9a9bf2b42d4609ab37-2"></a>   <span class="nc">:align:</span> <span class="nf">center</span>
+<a name="rest_code_4879928eeffb4e9a9bf2b42d4609ab37-3"></a>   <span class="nc">:target:</span> <span class="nf">https://vimeo.com/channels/staffpicks/236370796</span>
 </pre>
-</div>
-        </div>
-    </div>
-    <div class="post-entry post-text">
-        <div class="entry-title">
-            <a href="posts/cong-markdown-dao-restructuredtext/">从 Markdown 到 reStructuredText</a>
-        </div>
-        <div class="post-meta">
-            <span class="post-meta-item-icon">
-                <i class="user icon"></i>
-            </span>
-            <span class="post-meta-item-text" itemprop="author">
-                <a href="authors/ashfinal/">ashfinal</a>
-            </span>
-            <span class="post-meta-divider">|</span>
-            <span class="post-meta-item-icon">
-                <i class="calendar icon"></i>
-            </span>
-            <span class="post-meta-item-text">
-                <a href="archive.html">
-                    <time datetime="2017-10-04T16:20:05+08:00" itemprop="datePublished" title="2017-10-04 16:20">2017-10-04 16:20
-                    </time></a>
-            </span>
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                    <i class="tags icon"></i>
-                </span>
-                            <span class="post-meta-tag-item">
-                                <a href="categories/markup/">markup</a>
-                            </span>
-                            <span class="post-meta-tag-item">
-                                <a href="categories/rest/">reST</a>
-                            </span>
-        </div>
-        <div class="post-summary">
-                <div>
-<p>如果你正在使用 Markdown 尚嫌其功能不足，本文提供了平滑过渡到 reStructuredText 的语法指导。从来没有接触过任何标记语言的读者，以及正在使用其它标记语言的读者，也可以通过阅读本文了解到 reStructuredText 的基本用法。文章结构基本上借鉴 <a class="reference external" href="http://wowubuntu.com/markdown/">Markdown 语法说明</a> ，相对 Markdown 的超集部分仅会简单提及——这些部分将会在其它文章中着重讲解。</p>
-<p class="more"><a href="posts/cong-markdown-dao-restructuredtext/">Read more…</a></p>
 </div>
         </div>
     </div>
@@ -321,8 +333,6 @@ Your browser does not support the video tag.
                 $('.ui.nag').nag();
                 $('.image-reference').fancybox();
             });
-        </script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha256-SDRP1VVYu+tgAGKhddBSl5+ezofHKZeI+OzxakbIe/Y=" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
-            MathJax.Hub.Config({tex2jax: {inlineMath: [['$latex ','$'], ['\\(','\\)']]}});
         </script>
 </body>
 </html>
