@@ -128,18 +128,18 @@
 <p class="first admonition-title">Attention!</p>
 <p class="last">本文接下来将以“ashfinal”为例说明，请注意将相应处替换为自己的账户！</p>
 </div>
-<pre class="code shell"><a name="rest_code_b5118ebcea954746b6662fe21cbd0a4c-1"></a>mkdir newsite <span class="o">&amp;&amp;</span> <span class="nb">cd</span> newsite
-<a name="rest_code_b5118ebcea954746b6662fe21cbd0a4c-2"></a>git init
-<a name="rest_code_b5118ebcea954746b6662fe21cbd0a4c-3"></a><span class="c1"># 新建 .nojekyll 文件</span>
-<a name="rest_code_b5118ebcea954746b6662fe21cbd0a4c-4"></a>touch .nojekyll
-<a name="rest_code_b5118ebcea954746b6662fe21cbd0a4c-5"></a>git add .
-<a name="rest_code_b5118ebcea954746b6662fe21cbd0a4c-6"></a>git commit -m <span class="s2">"first commit"</span>
-<a name="rest_code_b5118ebcea954746b6662fe21cbd0a4c-7"></a>git remote add origin git@github.com:ashfinal/ashfinal.github.io.git
-<a name="rest_code_b5118ebcea954746b6662fe21cbd0a4c-8"></a><span class="c1"># 提交 master 分支</span>
-<a name="rest_code_b5118ebcea954746b6662fe21cbd0a4c-9"></a>git push -u origin master
-<a name="rest_code_b5118ebcea954746b6662fe21cbd0a4c-10"></a><span class="c1"># 新建 src 分支</span>
-<a name="rest_code_b5118ebcea954746b6662fe21cbd0a4c-11"></a>git checkout --orphan src
-<a name="rest_code_b5118ebcea954746b6662fe21cbd0a4c-12"></a>git rm -f .nojekyll
+<pre class="code shell"><a name="rest_code_ed67c4aec7be4186979b58f87c0dd488-1"></a>mkdir newsite <span class="o">&amp;&amp;</span> <span class="nb">cd</span> newsite
+<a name="rest_code_ed67c4aec7be4186979b58f87c0dd488-2"></a>git init
+<a name="rest_code_ed67c4aec7be4186979b58f87c0dd488-3"></a><span class="c1"># 新建 .nojekyll 文件</span>
+<a name="rest_code_ed67c4aec7be4186979b58f87c0dd488-4"></a>touch .nojekyll
+<a name="rest_code_ed67c4aec7be4186979b58f87c0dd488-5"></a>git add .
+<a name="rest_code_ed67c4aec7be4186979b58f87c0dd488-6"></a>git commit -m <span class="s2">"first commit"</span>
+<a name="rest_code_ed67c4aec7be4186979b58f87c0dd488-7"></a>git remote add origin git@github.com:ashfinal/ashfinal.github.io.git
+<a name="rest_code_ed67c4aec7be4186979b58f87c0dd488-8"></a><span class="c1"># 提交 master 分支</span>
+<a name="rest_code_ed67c4aec7be4186979b58f87c0dd488-9"></a>git push -u origin master
+<a name="rest_code_ed67c4aec7be4186979b58f87c0dd488-10"></a><span class="c1"># 新建 src 分支</span>
+<a name="rest_code_ed67c4aec7be4186979b58f87c0dd488-11"></a>git checkout --orphan src
+<a name="rest_code_ed67c4aec7be4186979b58f87c0dd488-12"></a>git rm -f .nojekyll
 </pre>
 </div>
 <div class="section" id="id2">
@@ -180,11 +180,11 @@
 <div class="section" id="id3">
 <h2><a class="toc-backref" href="#id19">配置博客信息</a></h2>
 <p>打开 <cite>conf.py</cite> 配置网站相关信息（第 19 行起），</p>
-<pre class="code python"><a name="rest_code_74d61661ce2d4451929bd92b8ec5b221-1"></a><span class="n">BLOG_AUTHOR</span> <span class="o">=</span> <span class="s2">"ashfinal"</span>  <span class="c1"># (网站作者)</span>
-<a name="rest_code_74d61661ce2d4451929bd92b8ec5b221-2"></a><span class="n">BLOG_TITLE</span> <span class="o">=</span> <span class="s2">"Nikola 博客"</span> <span class="c1"># (博客名称)</span>
-<a name="rest_code_74d61661ce2d4451929bd92b8ec5b221-3"></a><span class="n">SITE_URL</span> <span class="o">=</span> <span class="s2">"https://ashfinal.github.io/"</span> <span class="c1"># 网站地址</span>
-<a name="rest_code_74d61661ce2d4451929bd92b8ec5b221-4"></a><span class="n">BLOG_EMAIL</span> <span class="o">=</span> <span class="s2">"ashfinal@invalid.org"</span> <span class="c1"># 邮件地址</span>
-<a name="rest_code_74d61661ce2d4451929bd92b8ec5b221-5"></a><span class="n">BLOG_DESCRIPTION</span> <span class="o">=</span> <span class="s2">"随便写点什么"</span> <span class="c1"># 网站描述</span>
+<pre class="code python"><a name="rest_code_8409414998554fad952bff5bda8c7c6d-1"></a><span class="n">BLOG_AUTHOR</span> <span class="o">=</span> <span class="s2">"ashfinal"</span>  <span class="c1"># (网站作者)</span>
+<a name="rest_code_8409414998554fad952bff5bda8c7c6d-2"></a><span class="n">BLOG_TITLE</span> <span class="o">=</span> <span class="s2">"Nikola 博客"</span> <span class="c1"># (博客名称)</span>
+<a name="rest_code_8409414998554fad952bff5bda8c7c6d-3"></a><span class="n">SITE_URL</span> <span class="o">=</span> <span class="s2">"https://ashfinal.github.io/"</span> <span class="c1"># 网站地址</span>
+<a name="rest_code_8409414998554fad952bff5bda8c7c6d-4"></a><span class="n">BLOG_EMAIL</span> <span class="o">=</span> <span class="s2">"ashfinal@invalid.org"</span> <span class="c1"># 邮件地址</span>
+<a name="rest_code_8409414998554fad952bff5bda8c7c6d-5"></a><span class="n">BLOG_DESCRIPTION</span> <span class="o">=</span> <span class="s2">"随便写点什么"</span> <span class="c1"># 网站描述</span>
 </pre>
 </div>
 <div class="section" id="travisci">
@@ -204,43 +204,43 @@
 <p>接下来打开 <cite>.travis.yml</cite> 进行相应修改：</p>
 <p>删除 16, 17 行</p>
 <p>配置用户名、邮件地址以及代码仓库：</p>
-<pre class="code python"><a name="rest_code_cafc40f0b2a147b5a4ff10fd52dd9d85-1"></a><span class="o">-</span> <span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">name</span> <span class="s1">'ashfinal'</span>
-<a name="rest_code_cafc40f0b2a147b5a4ff10fd52dd9d85-2"></a><span class="o">-</span> <span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">email</span> <span class="s1">'ashfinal@invalid.org'</span>
-<a name="rest_code_cafc40f0b2a147b5a4ff10fd52dd9d85-3"></a><span class="c1"># ...</span>
-<a name="rest_code_cafc40f0b2a147b5a4ff10fd52dd9d85-4"></a><span class="o">-</span> <span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">origin</span> <span class="n">git</span><span class="nd">@github.com</span><span class="p">:</span><span class="n">ashfinal</span><span class="o">/</span><span class="n">ashfinal</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">git</span>
+<pre class="code python"><a name="rest_code_7eb4ea86bb2c4d069b1c09b9bc6bd86a-1"></a><span class="o">-</span> <span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">name</span> <span class="s1">'ashfinal'</span>
+<a name="rest_code_7eb4ea86bb2c4d069b1c09b9bc6bd86a-2"></a><span class="o">-</span> <span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">email</span> <span class="s1">'ashfinal@invalid.org'</span>
+<a name="rest_code_7eb4ea86bb2c4d069b1c09b9bc6bd86a-3"></a><span class="c1"># ...</span>
+<a name="rest_code_7eb4ea86bb2c4d069b1c09b9bc6bd86a-4"></a><span class="o">-</span> <span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">origin</span> <span class="n">git</span><span class="nd">@github.com</span><span class="p">:</span><span class="n">ashfinal</span><span class="o">/</span><span class="n">ashfinal</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">git</span>
 </pre>
 </div>
 <div class="section" id="id5">
 <h3><a class="toc-backref" href="#id27">添加部署密钥</a></h3>
 <p>为 TravisCI 产生 SSH 密钥：</p>
-<pre class="code shell"><a name="rest_code_deea35c2bb8044e2a4ad07aace421731-1"></a>ssh-keygen -C TravisCI -f id_rsa -N <span class="s1">''</span>
+<pre class="code shell"><a name="rest_code_96cebb2c20714d758a8b3d75504640e2-1"></a>ssh-keygen -C TravisCI -f id_rsa -N <span class="s1">''</span>
 </pre>
 <p>打开 GitHub 上 <cite>ashfinal.github.io</cite> 代码仓库的设置标签页 -&gt; Deploy keys -&gt; Add deploy key，拷贝 <cite>id_rsa.pub</cite> 文件的内容并粘贴，确定勾选 <cite>Allow write access</cite> 。</p>
 <p>接下来安装 travis 命令行：</p>
-<pre class="code shell"><a name="rest_code_d6b1dbf9beaf41b19223d5a5c090acf7-1"></a>gem install travis
+<pre class="code shell"><a name="rest_code_cef76456a2b44b9a844acba4529de3dd-1"></a>gem install travis
 </pre>
 <p>然后运行 <cite>travis login</cite> 并提供你的 GitHub 账号密码，登陆成功会提示：</p>
-<pre class="code shell"><a name="rest_code_1c89603fab154c54b4d89f00c07c93ce-1"></a>Successfully logged in as ashfinal!
+<pre class="code shell"><a name="rest_code_18c2b7d5d288445e80de93d4eb45acb8-1"></a>Successfully logged in as ashfinal!
 </pre>
 <p>运行 <cite>travis enable</cite> ，这将授予 TravisCI 对该代码仓库的相应权限。正确的话会提示：</p>
-<pre class="code shell"><a name="rest_code_8d75c87860f44ef499333e2c521b9577-1"></a>Detected repository as ashfinal/ashfinal.github.io, is this correct? <span class="p">|</span>yes<span class="p">|</span> y
-<a name="rest_code_8d75c87860f44ef499333e2c521b9577-2"></a>ashfinal/ashfinal.github.io: enabled :<span class="o">)</span>
+<pre class="code shell"><a name="rest_code_1e9205bfd4e5413a866a79c43e0c2330-1"></a>Detected repository as ashfinal/ashfinal.github.io, is this correct? <span class="p">|</span>yes<span class="p">|</span> y
+<a name="rest_code_1e9205bfd4e5413a866a79c43e0c2330-2"></a>ashfinal/ashfinal.github.io: enabled :<span class="o">)</span>
 </pre>
 </div>
 <div class="section" id="id6">
 <h3><a class="toc-backref" href="#id28">加密部署密钥</a></h3>
 <p>加密刚才生成的密钥，确定覆盖之前的文件：</p>
-<pre class="code shell"><a name="rest_code_887e4b9ca4ac4f27a115e6e72f5a381a-1"></a>travis encrypt-file id_rsa --add
+<pre class="code shell"><a name="rest_code_e0dfb1786c5c4a9ca2a9e432307c1fd9-1"></a>travis encrypt-file id_rsa --add
 </pre>
 <p>正确的话会输出：</p>
-<pre class="code shell"><a name="rest_code_e57cc39cfa8f4c52abdd442afefb02e4-1"></a>encrypting id_rsa <span class="k">for</span> ashfinal/ashfinal.github.io
-<a name="rest_code_e57cc39cfa8f4c52abdd442afefb02e4-2"></a>storing result as id_rsa.enc
-<a name="rest_code_e57cc39cfa8f4c52abdd442afefb02e4-3"></a>DANGER ZONE: Override existing id_rsa.enc? <span class="p">|</span>no<span class="p">|</span> yes
-<a name="rest_code_e57cc39cfa8f4c52abdd442afefb02e4-4"></a>storing secure env variables <span class="k">for</span> decryption
-<a name="rest_code_e57cc39cfa8f4c52abdd442afefb02e4-5"></a>
-<a name="rest_code_e57cc39cfa8f4c52abdd442afefb02e4-6"></a>Make sure to add id_rsa.enc to the git repository.
-<a name="rest_code_e57cc39cfa8f4c52abdd442afefb02e4-7"></a>Make sure not to add id_rsa to the git repository.
-<a name="rest_code_e57cc39cfa8f4c52abdd442afefb02e4-8"></a>Commit all changes to your .travis.yml.
+<pre class="code shell"><a name="rest_code_352b368c96a14adaabccb668b6bf581d-1"></a>encrypting id_rsa <span class="k">for</span> ashfinal/ashfinal.github.io
+<a name="rest_code_352b368c96a14adaabccb668b6bf581d-2"></a>storing result as id_rsa.enc
+<a name="rest_code_352b368c96a14adaabccb668b6bf581d-3"></a>DANGER ZONE: Override existing id_rsa.enc? <span class="p">|</span>no<span class="p">|</span> yes
+<a name="rest_code_352b368c96a14adaabccb668b6bf581d-4"></a>storing secure env variables <span class="k">for</span> decryption
+<a name="rest_code_352b368c96a14adaabccb668b6bf581d-5"></a>
+<a name="rest_code_352b368c96a14adaabccb668b6bf581d-6"></a>Make sure to add id_rsa.enc to the git repository.
+<a name="rest_code_352b368c96a14adaabccb668b6bf581d-7"></a>Make sure not to add id_rsa to the git repository.
+<a name="rest_code_352b368c96a14adaabccb668b6bf581d-8"></a>Commit all changes to your .travis.yml.
 </pre>
 <p>提示千万小心不要把未加密的密钥提交到 GitHub，这个之前 macplay 已经替我们做过了（将 <cite>id_rsa</cite> 添加到 <cite>.gitignore</cite> ），不放心的话再行确认一遍。</p>
 </div>
@@ -249,20 +249,20 @@
 <h2><a class="toc-backref" href="#id21">配置 gitalk 评论</a></h2>
 <p>基本上到这里我们就差不多完工了。不过因为该博客主题 <cite>Dawning</cite> 中使用了 <a class="reference external" href="https://github.com/gitalk/gitalk">gitalk</a> 来做评论组件，我们需要注册自己的评论管理账号。点击 <a class="reference external" href="https://github.com/settings/applications/new">此处</a> 申请一个 GitHub 新应用，依次填写应用名称、主页地址和回调地址，点击申请，成功的话自动跳转，会看到 <cite>Client ID</cite> 以及 <cite>Client Secret</cite> 。</p>
 <p>打开主题的模版文件，路径为 <cite>~/newsite/themes/Dawning/templates/post.tmpl</cite> ，将 51 行开始的内容分别替换为自己的。</p>
-<pre class="code javascript"><a name="rest_code_44e53e6590f24b03be5d31f62cd42b39-1"></a><span class="nx">clientID</span><span class="o">:</span> <span class="s1">'待填'</span><span class="p">,</span>
-<a name="rest_code_44e53e6590f24b03be5d31f62cd42b39-2"></a><span class="nx">clientSecret</span><span class="o">:</span> <span class="s1">'待填'</span><span class="p">,</span>
-<a name="rest_code_44e53e6590f24b03be5d31f62cd42b39-3"></a><span class="nx">repo</span><span class="o">:</span> <span class="s1">'ashfinal.github.io'</span><span class="p">,</span>
-<a name="rest_code_44e53e6590f24b03be5d31f62cd42b39-4"></a><span class="nx">owner</span><span class="o">:</span> <span class="s1">'ashfinal'</span><span class="p">,</span>
-<a name="rest_code_44e53e6590f24b03be5d31f62cd42b39-5"></a><span class="c1">// 包含该仓库所有者和合作者</span>
-<a name="rest_code_44e53e6590f24b03be5d31f62cd42b39-6"></a><span class="nx">admin</span><span class="o">:</span> <span class="p">[</span><span class="s1">'ashfinal'</span><span class="p">,</span> <span class="s1">'macplay'</span><span class="p">],</span>
+<pre class="code javascript"><a name="rest_code_f842729cc34d49d9b536b4a3391cf62e-1"></a><span class="nx">clientID</span><span class="o">:</span> <span class="s1">'待填'</span><span class="p">,</span>
+<a name="rest_code_f842729cc34d49d9b536b4a3391cf62e-2"></a><span class="nx">clientSecret</span><span class="o">:</span> <span class="s1">'待填'</span><span class="p">,</span>
+<a name="rest_code_f842729cc34d49d9b536b4a3391cf62e-3"></a><span class="nx">repo</span><span class="o">:</span> <span class="s1">'ashfinal.github.io'</span><span class="p">,</span>
+<a name="rest_code_f842729cc34d49d9b536b4a3391cf62e-4"></a><span class="nx">owner</span><span class="o">:</span> <span class="s1">'ashfinal'</span><span class="p">,</span>
+<a name="rest_code_f842729cc34d49d9b536b4a3391cf62e-5"></a><span class="c1">// 包含该仓库所有者和合作者</span>
+<a name="rest_code_f842729cc34d49d9b536b4a3391cf62e-6"></a><span class="nx">admin</span><span class="o">:</span> <span class="p">[</span><span class="s1">'ashfinal'</span><span class="p">,</span> <span class="s1">'macplay'</span><span class="p">],</span>
 </pre>
 </div>
 <div class="section" id="src">
 <h2><a class="toc-backref" href="#id22">提交 src 分支</a></h2>
 <p>所有修改自定义工作已经完成。至此，我们就可以提交所有文件到 GitHub 了。</p>
-<pre class="code shell"><a name="rest_code_40e33a317e1c4c55baa322668004b88b-1"></a>git add .
-<a name="rest_code_40e33a317e1c4c55baa322668004b88b-2"></a>git commit -am <span class="s2">"Automate builds with Travis CI"</span>
-<a name="rest_code_40e33a317e1c4c55baa322668004b88b-3"></a>git push --set-upstream origin src
+<pre class="code shell"><a name="rest_code_3987eee7c3114c299aa6f4af17a1f4c5-1"></a>git add .
+<a name="rest_code_3987eee7c3114c299aa6f4af17a1f4c5-2"></a>git commit -am <span class="s2">"Automate builds with Travis CI"</span>
+<a name="rest_code_3987eee7c3114c299aa6f4af17a1f4c5-3"></a>git push --set-upstream origin src
 </pre>
 </div>
 <div class="section" id="id7">
@@ -273,20 +273,20 @@
 <div class="section" id="id8">
 <h2><a class="toc-backref" href="#id24">添加第一篇博客</a></h2>
 <p>复制以下内容，保存为 <cite>my_first_blog.md</cite> 。注意文件名小写和下划线，文件保存路径为 <cite>~/newsite/posts/</cite> 。</p>
-<pre class="code md"><a name="rest_code_5790a479c2e343198c4e3a320dd6fcf5-1"></a>---
-<a name="rest_code_5790a479c2e343198c4e3a320dd6fcf5-2"></a>
-<a name="rest_code_5790a479c2e343198c4e3a320dd6fcf5-3"></a>title: 我的第一篇文章
-<a name="rest_code_5790a479c2e343198c4e3a320dd6fcf5-4"></a>slug: first_blood
-<a name="rest_code_5790a479c2e343198c4e3a320dd6fcf5-5"></a>date: 2017-09-20 11:32:34 UTC+08:00
-<a name="rest_code_5790a479c2e343198c4e3a320dd6fcf5-6"></a>tags: nikola, markdown
-<a name="rest_code_5790a479c2e343198c4e3a320dd6fcf5-7"></a>category: markdown
-<a name="rest_code_5790a479c2e343198c4e3a320dd6fcf5-8"></a>author: ashfinal
-<a name="rest_code_5790a479c2e343198c4e3a320dd6fcf5-9"></a>
-<a name="rest_code_5790a479c2e343198c4e3a320dd6fcf5-10"></a>---
-<a name="rest_code_5790a479c2e343198c4e3a320dd6fcf5-11"></a>
-<a name="rest_code_5790a479c2e343198c4e3a320dd6fcf5-12"></a><span class="gu">##</span> 第一篇文章！
-<a name="rest_code_5790a479c2e343198c4e3a320dd6fcf5-13"></a>
-<a name="rest_code_5790a479c2e343198c4e3a320dd6fcf5-14"></a>随便写点什么。
+<pre class="code md"><a name="rest_code_b431be4ad2e64e31b76c46b7ccb17fcc-1"></a>---
+<a name="rest_code_b431be4ad2e64e31b76c46b7ccb17fcc-2"></a>
+<a name="rest_code_b431be4ad2e64e31b76c46b7ccb17fcc-3"></a>title: 我的第一篇文章
+<a name="rest_code_b431be4ad2e64e31b76c46b7ccb17fcc-4"></a>slug: first_blood
+<a name="rest_code_b431be4ad2e64e31b76c46b7ccb17fcc-5"></a>date: 2017-09-20 11:32:34 UTC+08:00
+<a name="rest_code_b431be4ad2e64e31b76c46b7ccb17fcc-6"></a>tags: nikola, markdown
+<a name="rest_code_b431be4ad2e64e31b76c46b7ccb17fcc-7"></a>category: markdown
+<a name="rest_code_b431be4ad2e64e31b76c46b7ccb17fcc-8"></a>author: ashfinal
+<a name="rest_code_b431be4ad2e64e31b76c46b7ccb17fcc-9"></a>
+<a name="rest_code_b431be4ad2e64e31b76c46b7ccb17fcc-10"></a>---
+<a name="rest_code_b431be4ad2e64e31b76c46b7ccb17fcc-11"></a>
+<a name="rest_code_b431be4ad2e64e31b76c46b7ccb17fcc-12"></a><span class="gu">##</span> 第一篇文章！
+<a name="rest_code_b431be4ad2e64e31b76c46b7ccb17fcc-13"></a>
+<a name="rest_code_b431be4ad2e64e31b76c46b7ccb17fcc-14"></a>随便写点什么。
 </pre>
 <p><cite>git add/commit/push</cite> 命令三连击，将其推送到 GitHub。稍等几十秒钟，刷新博客首页就能看到添加的文章了。关于文章写作和博客维护的更多信息，可以查看 <a class="reference external" href="../jing-tai-bo-ke-nikola-zhi-xie-zuo-shi-jian/">之前的文章</a> 。</p>
 </div>
