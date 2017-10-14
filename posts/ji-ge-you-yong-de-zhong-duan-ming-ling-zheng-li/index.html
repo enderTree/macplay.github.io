@@ -338,10 +338,10 @@
 </li>
 <li>
 <p class="first">macOS 计算机名相关</p>
-<pre class="code shell"><a name="rest_code_2b8584205de544e3aa023ed90630c20f-1"></a>sudo scutil --set HostName <span class="s2">"iMBP"</span>
-<a name="rest_code_2b8584205de544e3aa023ed90630c20f-2"></a>sudo scutil --set ComputerName <span class="s2">"iMBP"</span>
-<a name="rest_code_2b8584205de544e3aa023ed90630c20f-3"></a>sudo scutil --set LocalHostName <span class="s2">"iMBP"</span>
-<a name="rest_code_2b8584205de544e3aa023ed90630c20f-4"></a>sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string <span class="s2">"iMBP"</span>
+<pre class="code shell"><a name="rest_code_9e43df787ad344bb856c2c42d37e0c6e-1"></a>sudo scutil --set HostName <span class="s2">"iMBP"</span>
+<a name="rest_code_9e43df787ad344bb856c2c42d37e0c6e-2"></a>sudo scutil --set ComputerName <span class="s2">"iMBP"</span>
+<a name="rest_code_9e43df787ad344bb856c2c42d37e0c6e-3"></a>sudo scutil --set LocalHostName <span class="s2">"iMBP"</span>
+<a name="rest_code_9e43df787ad344bb856c2c42d37e0c6e-4"></a>sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string <span class="s2">"iMBP"</span>
 </pre>
 </li>
 <li>
@@ -362,11 +362,11 @@
 </li>
 <li>
 <p class="first">命令行版的 gist</p>
-<pre class="code shell"><a name="rest_code_884c19d8703e48a59ca00c2bec45c302-1"></a>gist --login
-<a name="rest_code_884c19d8703e48a59ca00c2bec45c302-2"></a>gist
-<a name="rest_code_884c19d8703e48a59ca00c2bec45c302-3"></a>gist selenium0.py
-<a name="rest_code_884c19d8703e48a59ca00c2bec45c302-4"></a>gist -l ashfinal
-<a name="rest_code_884c19d8703e48a59ca00c2bec45c302-5"></a>gist -d <span class="s2">"aria2 launchagent for macOS"</span> com.github.aria2.plist
+<pre class="code shell"><a name="rest_code_23403ca7e3ca426ebd8e382902a5188a-1"></a>gist --login
+<a name="rest_code_23403ca7e3ca426ebd8e382902a5188a-2"></a>gist
+<a name="rest_code_23403ca7e3ca426ebd8e382902a5188a-3"></a>gist selenium0.py
+<a name="rest_code_23403ca7e3ca426ebd8e382902a5188a-4"></a>gist -l ashfinal
+<a name="rest_code_23403ca7e3ca426ebd8e382902a5188a-5"></a>gist -d <span class="s2">"aria2 launchagent for macOS"</span> com.github.aria2.plist
 </pre>
 </li>
 <li>
@@ -391,14 +391,14 @@
 </li>
 <li>
 <p class="first">从 git 历史中删除二进制文件</p>
-<pre class="code shell"><a name="rest_code_32b2b77f49284c83aff0df644ea443ab-1"></a>git filter-branch --force --index-filter <span class="se">\\</span>
-<a name="rest_code_32b2b77f49284c83aff0df644ea443ab-2"></a><span class="s1">'git rm --cached --ignore-unmatch resources/watchbg.png'</span> <span class="se">\\</span>
-<a name="rest_code_32b2b77f49284c83aff0df644ea443ab-3"></a>--prune-empty --tag-name-filter cat -- --all
+<pre class="code shell"><a name="rest_code_3e7bb8be7daf4d6c8a400ee7118aeee2-1"></a>git filter-branch --force --index-filter <span class="se">\\</span>
+<a name="rest_code_3e7bb8be7daf4d6c8a400ee7118aeee2-2"></a><span class="s1">'git rm --cached --ignore-unmatch resources/watchbg.png'</span> <span class="se">\\</span>
+<a name="rest_code_3e7bb8be7daf4d6c8a400ee7118aeee2-3"></a>--prune-empty --tag-name-filter cat -- --all
 </pre>
 <p>后面还需要三个命令：</p>
-<pre class="code shell"><a name="rest_code_c1b6b5496e884beaaffa19e05f4e187c-1"></a>git reflog expire --expire<span class="o">=</span>now --all
-<a name="rest_code_c1b6b5496e884beaaffa19e05f4e187c-2"></a>git gc --prune<span class="o">=</span>now
-<a name="rest_code_c1b6b5496e884beaaffa19e05f4e187c-3"></a>git gc --aggressive --prune<span class="o">=</span>now
+<pre class="code shell"><a name="rest_code_1738cadb82c3421aa42de8d461586d2a-1"></a>git reflog expire --expire<span class="o">=</span>now --all
+<a name="rest_code_1738cadb82c3421aa42de8d461586d2a-2"></a>git gc --prune<span class="o">=</span>now
+<a name="rest_code_1738cadb82c3421aa42de8d461586d2a-3"></a>git gc --aggressive --prune<span class="o">=</span>now
 </pre>
 </li>
 <li>
