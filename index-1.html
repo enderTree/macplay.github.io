@@ -61,6 +61,89 @@
     <div class="postindex page-body">
     <div class="post-entry post-text">
         <div class="entry-title">
+            <a href="posts/gei-bo-ke-wen-zhang-tian-jia-da-yin-gong-neng-zhi-chi/">给博客文章添加打印功能支持</a>
+        </div>
+        <div class="post-meta">
+            <span class="post-meta-item-icon">
+                <i class="user icon"></i>
+            </span>
+            <span class="post-meta-item-text" itemprop="author">
+                <a href="authors/ashfinal/">ashfinal</a>
+            </span>
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+                <i class="calendar icon"></i>
+            </span>
+            <span class="post-meta-item-text">
+                <a href="archive.html">
+                    <time datetime="2017-10-11T14:55:31+08:00" itemprop="datePublished" title="2017-10-11 14:55">2017-10-11 14:55
+                    </time></a>
+            </span>
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                    <i class="tags icon"></i>
+                </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/pdf/">pdf</a>
+                            </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/static-site/">static site</a>
+                            </span>
+        </div>
+        <div class="post-summary">
+                <div>
+<p>刚刚给博客粗略添加了打印功能支持，利用 CSS 的媒体查询特性，非常简短的几行代码。效果是浏览文章页面的时候，点击 Safari <cite>打印</cite> 或 <cite>导出为 PDF</cite> 菜单，其它无关紧要的导航栏、侧边栏、评论框等会自动隐藏，只留下文章主体部分。</p>
+<img alt="/images/blog_print.png" class="align-center" src="images/blog_print.png"><p>Chrome 浏览器上应该也可以工作。考虑到“无纸化”理念如此普及的今天，该功能最常用的场景应该是导出 PDF 文档，也许文章标题叫“添加 PDF 导出功能”更好一些？ :)</p>
+</div>
+        </div>
+    </div>
+    <div class="post-entry post-text">
+        <div class="entry-title">
+            <a href="posts/shi-yong-vim-zai-markdown-ji-rst-wen-dang-zhong-chuang-jian-biao-ge/">使用 Vim 在 Markdown 及 rst 文档中创建表格</a>
+        </div>
+        <div class="post-meta">
+            <span class="post-meta-item-icon">
+                <i class="user icon"></i>
+            </span>
+            <span class="post-meta-item-text" itemprop="author">
+                <a href="authors/ashfinal/">ashfinal</a>
+            </span>
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+                <i class="calendar icon"></i>
+            </span>
+            <span class="post-meta-item-text">
+                <a href="archive.html">
+                    <time datetime="2017-10-10T21:15:21+08:00" itemprop="datePublished" title="2017-10-10 21:15">2017-10-10 21:15
+                    </time></a>
+            </span>
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                    <i class="tags icon"></i>
+                </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/markdown/">markdown</a>
+                            </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/rest/">reST</a>
+                            </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/vim/">vim</a>
+                            </span>
+        </div>
+        <div class="post-summary">
+                <div>
+<p>之前提到过 reStructuredText 的表格类型 <a class="reference external" href="posts/cong-markdown-dao-restructuredtext/#table">Grid Tables</a> 书写困难，普通编辑器难以胜任，可能有人好奇笔者是如何做的。对于 Vim、Emacs 两大编辑器来说，表格创建任务非常简单：</p>
+<video src="videos/vim_table.mp4" loop autoplay>
+Your browser does not support the video tag.
+</video><p>笔者平时使用较多的是 Vim 编辑器，借助强大的 <a class="reference external" href="https://github.com/dhruvasagar/vim-table-mode">vim-table-mode</a> 插件，只需正常输入表格内容和竖线符号 <tt class="docutils literal">|</tt> 就可以，其它事情如填充和对齐等等插件会自动处理。笔者针对 <a class="reference external" href="https://github.com/dhruvasagar/vim-table-mode">vim-table-mode</a> 插件做了几行配置，使其支持 Markdown、rst、org 表格的创建（org 表格在上图中没有展示），如果有人感兴趣的话，可以看一下个人 <a class="reference external" href="https://github.com/ashfinal/vimrc-config/blob/0cba64e3a384fc78483a431b45b65a50daba34dd/.vimrc#L750">vimrc 配置</a> 的相应部分。</p>
+<p>PS：发现录屏如果使用 GIF 格式，无论怎样压缩都达不到理想的画质和文件大小。最后使用 MP4 格式，1 分 53 秒时长的 720P 视频，压缩后仅仅 836 KB！感觉以后文章中插入动图可以抛弃 GIF 格式了。</p>
+<p>读者们注意到上面录屏其实是视频而不是图片吗？ :)</p>
+</div>
+        </div>
+    </div>
+    <div class="post-entry post-text">
+        <div class="entry-title">
             <a href="posts/cong-markdown-dao-restructuredtexter/">从 Markdown 到 reStructuredText（二）</a>
         </div>
         <div class="post-meta">
@@ -151,9 +234,9 @@
 <p>（点击封面加载视频）</p>
 <a class="reference external image-reference" href="https://vimeo.com/channels/staffpicks/236370796"><img alt="https://i.vimeocdn.com/video/658454374_1040x584.jpg" class="align-center" src="https://i.vimeocdn.com/video/658454374_1040x584.jpg"></a>
 <p>写作语法上和插入一张图片没有什么区别：</p>
-<pre class="code rst"><a name="rest_code_5475682df0f6477c953f37d32cf2dfeb-1"></a><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> https://i.vimeocdn.com/video/658454374_1040x584.jpg
-<a name="rest_code_5475682df0f6477c953f37d32cf2dfeb-2"></a>   <span class="nc">:align:</span> <span class="nf">center</span>
-<a name="rest_code_5475682df0f6477c953f37d32cf2dfeb-3"></a>   <span class="nc">:target:</span> <span class="nf">https://vimeo.com/channels/staffpicks/236370796</span>
+<pre class="code rst"><a name="rest_code_6f8a1f86062f4e1abfdbd6e56afed800-1"></a><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> https://i.vimeocdn.com/video/658454374_1040x584.jpg
+<a name="rest_code_6f8a1f86062f4e1abfdbd6e56afed800-2"></a>   <span class="nc">:align:</span> <span class="nf">center</span>
+<a name="rest_code_6f8a1f86062f4e1abfdbd6e56afed800-3"></a>   <span class="nc">:target:</span> <span class="nf">https://vimeo.com/channels/staffpicks/236370796</span>
 </pre>
 </div>
         </div>
@@ -193,72 +276,6 @@
                 <div>
 <p>如果你正在使用 Markdown 尚嫌其功能不足，本文提供了平滑过渡到 reStructuredText 的语法指导。从来没有接触过任何标记语言的读者，以及正在使用其它标记语言的读者，也可以通过阅读本文了解到 reStructuredText 的基本用法。文章结构基本上借鉴 <a class="reference external" href="http://wowubuntu.com/markdown/">Markdown 语法说明</a> ，相对 Markdown 的超集部分仅会简单提及——这些部分将会在其它文章中着重讲解。</p>
 <p class="more"><a href="posts/cong-markdown-dao-restructuredtext/">Read more…</a></p>
-</div>
-        </div>
-    </div>
-    <div class="post-entry post-text">
-        <div class="entry-title">
-            <a href="posts/ji-ge-you-yong-de-zhong-duan-ming-ling-zheng-li/">有用的终端命令整理</a>
-        </div>
-        <div class="post-meta">
-            <span class="post-meta-item-icon">
-                <i class="user icon"></i>
-            </span>
-            <span class="post-meta-item-text" itemprop="author">
-                <a href="authors/ashfinal/">ashfinal</a>
-            </span>
-            <span class="post-meta-divider">|</span>
-            <span class="post-meta-item-icon">
-                <i class="calendar icon"></i>
-            </span>
-            <span class="post-meta-item-text">
-                <a href="archive.html">
-                    <time datetime="2017-09-28T21:47:01+08:00" itemprop="datePublished" title="2017-09-28 21:47">2017-09-28 21:47
-                    </time></a>
-            </span>
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                    <i class="tags icon"></i>
-                </span>
-                            <span class="post-meta-tag-item">
-                                <a href="categories/shell/">shell</a>
-                            </span>
-                            <span class="post-meta-tag-item">
-                                <a href="categories/terminal/">terminal</a>
-                            </span>
-        </div>
-        <div class="post-summary">
-                <div>
-<p>使用 zsh 之后，就养成了不整理终端命令的“坏”习惯。可能当时遇到问题折腾好半天才解决，但却从没有写个日志（哪怕片段）记录下来的想法。因为 zsh 默认保存上万条历史让这一做法显得没有必要，要再次调用的话直接 fzf 搜索，简单修改下回车执行就行。</p>
-<p>最近两天抹盘安装了 High Sierra 系统，装完后把之前的 <cite>.zsh_history</cite> 文件拷贝回 home 目录，继续老习惯接着用就成。不过还是有点不放心，一方面担心使用频率超低（但有用）的命令可能会被冲掉，另一方面万一某一天 history 文件损坏就悲剧了，更重要的是有时会到别的电脑上执行命令。所以，还是整理下为好，该命令列表应该会不定期更新。</p>
-<p class="more"><a href="posts/ji-ge-you-yong-de-zhong-duan-ming-ling-zheng-li/">Read more…</a></p>
-</div>
-        </div>
-    </div>
-    <div class="post-entry post-text">
-        <div class="entry-title">
-            <a href="posts/old-man-smoked-his-pipe/">Old Man Smoked His Pipe</a>
-        </div>
-        <div class="post-meta">
-            <span class="post-meta-item-icon">
-                <i class="user icon"></i>
-            </span>
-            <span class="post-meta-item-text" itemprop="author">
-                <a href="authors/ashfinal/">ashfinal</a>
-            </span>
-            <span class="post-meta-divider">|</span>
-            <span class="post-meta-item-icon">
-                <i class="calendar icon"></i>
-            </span>
-            <span class="post-meta-item-text">
-                <a href="archive.html">
-                    <time datetime="2017-09-24T22:18:36+08:00" itemprop="datePublished" title="2017-09-24 22:18">2017-09-24 22:18
-                    </time></a>
-            </span>
-        </div>
-        <div class="post-summary">
-                <div class="figure align-center">
-<a class="reference external image-reference" href="images/Old_Man_Smoked_His_Pipe-by_Ian_Hex_of_LightSweep.jpg"><img alt="Old_Man_Smoked_His_Pipe" src="images/Old_Man_Smoked_His_Pipe-by_Ian_Hex_of_LightSweep.thumbnail.jpg"></a>
 </div>
         </div>
     </div>
