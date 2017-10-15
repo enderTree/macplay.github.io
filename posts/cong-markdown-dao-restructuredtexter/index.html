@@ -174,15 +174,15 @@ CC BY-NC-SA 3.0
 </div>
 <div class="section" id="line-blocks">
 <h2><a class="toc-backref" href="#id10">Line Blocks（行区块）</a></h2>
-<pre class="code rst"><a name="rest_code_e463c95ba74e43b9895e6f3832d1fdba-1"></a><span class="o">|</span> 这是第一个段落。
-<a name="rest_code_e463c95ba74e43b9895e6f3832d1fdba-2"></a><span class="o">|</span> 这是一个长段落，没有续行。除了行首的竖线与空格外，与 reStructuredText 最常用的基础语法——以空行分割的段落没有任何区别。继续随便写点什么，填满屏幕保证软换行。继续随便写点什么，填满屏幕保证软换行。
-<a name="rest_code_e463c95ba74e43b9895e6f3832d1fdba-3"></a><span class="o">|</span> 这是第三个段落，使用了续行。
-<a name="rest_code_e463c95ba74e43b9895e6f3832d1fdba-4"></a>  这行也属于第三段。这个续行应保持与上一行相同的缩进水平。
-<a name="rest_code_e463c95ba74e43b9895e6f3832d1fdba-5"></a>|
-<a name="rest_code_e463c95ba74e43b9895e6f3832d1fdba-6"></a>|
-<a name="rest_code_e463c95ba74e43b9895e6f3832d1fdba-7"></a><span class="o">|</span> 以上是两个空白段落。
-<a name="rest_code_e463c95ba74e43b9895e6f3832d1fdba-8"></a><span class="o">|</span>     可以继续缩进段落和解析 <span class="gs">**行内标记**</span> 。
-<a name="rest_code_e463c95ba74e43b9895e6f3832d1fdba-9"></a><span class="o">|</span> 然后反缩进。
+<pre class="code rst"><a name="rest_code_67f38d1d5eb34fcaaa5fe577e03de8b1-1"></a><span class="o">|</span> 这是第一个段落。
+<a name="rest_code_67f38d1d5eb34fcaaa5fe577e03de8b1-2"></a><span class="o">|</span> 这是一个长段落，没有续行。除了行首的竖线与空格外，与 reStructuredText 最常用的基础语法——以空行分割的段落没有任何区别。继续随便写点什么，填满屏幕保证软换行。继续随便写点什么，填满屏幕保证软换行。
+<a name="rest_code_67f38d1d5eb34fcaaa5fe577e03de8b1-3"></a><span class="o">|</span> 这是第三个段落，使用了续行。
+<a name="rest_code_67f38d1d5eb34fcaaa5fe577e03de8b1-4"></a>  这行也属于第三段。这个续行应保持与上一行相同的缩进水平。
+<a name="rest_code_67f38d1d5eb34fcaaa5fe577e03de8b1-5"></a>|
+<a name="rest_code_67f38d1d5eb34fcaaa5fe577e03de8b1-6"></a>|
+<a name="rest_code_67f38d1d5eb34fcaaa5fe577e03de8b1-7"></a><span class="o">|</span> 以上是两个空白段落。
+<a name="rest_code_67f38d1d5eb34fcaaa5fe577e03de8b1-8"></a><span class="o">|</span>     可以继续缩进段落和解析 <span class="gs">**行内标记**</span> 。
+<a name="rest_code_67f38d1d5eb34fcaaa5fe577e03de8b1-9"></a><span class="o">|</span> 然后反缩进。
 </pre>
 <p>渲染结果：</p>
 <div class="line-block">
@@ -203,23 +203,23 @@ CC BY-NC-SA 3.0
 <div class="section" id="literal-blocks">
 <h2><a class="toc-backref" href="#id11">Literal Blocks（原样区块）</a></h2>
 <p>至于 <cite>Literal Blocks（原样区块）</cite> ，初看用来显示代码区块不错。不过代码区块已经有 <cite>code</cite> 指令实现。那么 <cite>Literal Blocks</cite> 因其默认启用等宽字体，则用来实现“分列”效果：</p>
-<pre class="code rst"><a name="rest_code_8ec71c441ca3459aa1586aedd1c1686d-1"></a><span class="se">::</span>
-<a name="rest_code_8ec71c441ca3459aa1586aedd1c1686d-2"></a>
-<a name="rest_code_8ec71c441ca3459aa1586aedd1c1686d-3"></a><span class="s">    Turkey has suspended all visa services          "Recent events have forced the Turkish</span>
-<a name="rest_code_8ec71c441ca3459aa1586aedd1c1686d-4"></a><span class="s">    at its diplomatic facilities in the             Government to reassess the commitment</span>
-<a name="rest_code_8ec71c441ca3459aa1586aedd1c1686d-5"></a><span class="s">    United States, the Turkish Embassy in           of the Government of the U.S. to the</span>
-<a name="rest_code_8ec71c441ca3459aa1586aedd1c1686d-6"></a><span class="s">    Washington announced late Sunday, shortly       security of Turkish Mission facilities</span>
-<a name="rest_code_8ec71c441ca3459aa1586aedd1c1686d-7"></a><span class="s">    after a similar U.S. move.                      and personnel," the Turkish Embassy in</span>
-<a name="rest_code_8ec71c441ca3459aa1586aedd1c1686d-8"></a><span class="s">                                                    Washington said in a statement issued</span>
-<a name="rest_code_8ec71c441ca3459aa1586aedd1c1686d-9"></a><span class="s">    The tit-for-tat travel services suspensions     late Sunday. "In order to minimize the</span>
-<a name="rest_code_8ec71c441ca3459aa1586aedd1c1686d-10"></a><span class="s">    between the two NATO partners exposed a         number of visitors to our diplomatic</span>
-<a name="rest_code_8ec71c441ca3459aa1586aedd1c1686d-11"></a><span class="s">    deepening diplomatic rift inflamed by the       and consular missions in the U.S.</span>
-<a name="rest_code_8ec71c441ca3459aa1586aedd1c1686d-12"></a><span class="s">    arrest of a Turkish employee at the U.S.        while this assessment proceeds,</span>
-<a name="rest_code_8ec71c441ca3459aa1586aedd1c1686d-13"></a><span class="s">    consulate in Istanbul.                          effective immediately we have</span>
-<a name="rest_code_8ec71c441ca3459aa1586aedd1c1686d-14"></a><span class="s">                                                    suspended all visa services regarding</span>
-<a name="rest_code_8ec71c441ca3459aa1586aedd1c1686d-15"></a><span class="s">                                                    the U.S. citizens at our diplomatic</span>
-<a name="rest_code_8ec71c441ca3459aa1586aedd1c1686d-16"></a><span class="s">                                                    and consular missions in the U.S.,"</span>
-<a name="rest_code_8ec71c441ca3459aa1586aedd1c1686d-17"></a><span class="s">                                                    read the statement.</span>
+<pre class="code rst"><a name="rest_code_6582503269ba4c42884d1e0982e8215d-1"></a><span class="se">::</span>
+<a name="rest_code_6582503269ba4c42884d1e0982e8215d-2"></a>
+<a name="rest_code_6582503269ba4c42884d1e0982e8215d-3"></a><span class="s">    Turkey has suspended all visa services          "Recent events have forced the Turkish</span>
+<a name="rest_code_6582503269ba4c42884d1e0982e8215d-4"></a><span class="s">    at its diplomatic facilities in the             Government to reassess the commitment</span>
+<a name="rest_code_6582503269ba4c42884d1e0982e8215d-5"></a><span class="s">    United States, the Turkish Embassy in           of the Government of the U.S. to the</span>
+<a name="rest_code_6582503269ba4c42884d1e0982e8215d-6"></a><span class="s">    Washington announced late Sunday, shortly       security of Turkish Mission facilities</span>
+<a name="rest_code_6582503269ba4c42884d1e0982e8215d-7"></a><span class="s">    after a similar U.S. move.                      and personnel," the Turkish Embassy in</span>
+<a name="rest_code_6582503269ba4c42884d1e0982e8215d-8"></a><span class="s">                                                    Washington said in a statement issued</span>
+<a name="rest_code_6582503269ba4c42884d1e0982e8215d-9"></a><span class="s">    The tit-for-tat travel services suspensions     late Sunday. "In order to minimize the</span>
+<a name="rest_code_6582503269ba4c42884d1e0982e8215d-10"></a><span class="s">    between the two NATO partners exposed a         number of visitors to our diplomatic</span>
+<a name="rest_code_6582503269ba4c42884d1e0982e8215d-11"></a><span class="s">    deepening diplomatic rift inflamed by the       and consular missions in the U.S.</span>
+<a name="rest_code_6582503269ba4c42884d1e0982e8215d-12"></a><span class="s">    arrest of a Turkish employee at the U.S.        while this assessment proceeds,</span>
+<a name="rest_code_6582503269ba4c42884d1e0982e8215d-13"></a><span class="s">    consulate in Istanbul.                          effective immediately we have</span>
+<a name="rest_code_6582503269ba4c42884d1e0982e8215d-14"></a><span class="s">                                                    suspended all visa services regarding</span>
+<a name="rest_code_6582503269ba4c42884d1e0982e8215d-15"></a><span class="s">                                                    the U.S. citizens at our diplomatic</span>
+<a name="rest_code_6582503269ba4c42884d1e0982e8215d-16"></a><span class="s">                                                    and consular missions in the U.S.,"</span>
+<a name="rest_code_6582503269ba4c42884d1e0982e8215d-17"></a><span class="s">                                                    read the statement.</span>
 </pre>
 <p>渲染结果：</p>
 <pre class="literal-block">
@@ -240,10 +240,10 @@ consulate in Istanbul.                          effective immediately we have
                                                 read the statement.
 </pre>
 <p>如果前面有段落，该语法可以简写：</p>
-<pre class="code rst"><a name="rest_code_1620170de83549da86ef0f39cd6a7d83-1"></a>在前一段落末尾直接写： <span class="se">::</span>
-<a name="rest_code_1620170de83549da86ef0f39cd6a7d83-2"></a>
-<a name="rest_code_1620170de83549da86ef0f39cd6a7d83-3"></a><span class="s">    “分列”效果在网页排版中用处不大，</span>
-<a name="rest_code_1620170de83549da86ef0f39cd6a7d83-4"></a><span class="s">    不过在书籍、PDF 格式等中有应用场景。</span>
+<pre class="code rst"><a name="rest_code_0076d4b5209b454ea67e140fca4daeae-1"></a>在前一段落末尾直接写： <span class="se">::</span>
+<a name="rest_code_0076d4b5209b454ea67e140fca4daeae-2"></a>
+<a name="rest_code_0076d4b5209b454ea67e140fca4daeae-3"></a><span class="s">    “分列”效果在网页排版中用处不大，</span>
+<a name="rest_code_0076d4b5209b454ea67e140fca4daeae-4"></a><span class="s">    不过在书籍、PDF 格式等中有应用场景。</span>
 </pre>
 <p>渲染结果：</p>
 <p>在前一段落末尾直接写：</p>
@@ -255,13 +255,13 @@ consulate in Istanbul.                          effective immediately we have
 <div class="section" id="doctest-blocks">
 <h2><a class="toc-backref" href="#id12">Doctest Blocks</a></h2>
 <p>最后既然提到代码区块，顺便补充一种语法： <cite>Doctest Blocks</cite> 。</p>
-<pre class="code rst"><a name="rest_code_872308b27d894877a4fe7abb9f8c3853-1"></a>&gt;&gt;&gt; ls -al
-<a name="rest_code_872308b27d894877a4fe7abb9f8c3853-2"></a>    total 35592
-<a name="rest_code_872308b27d894877a4fe7abb9f8c3853-3"></a>    drwxr-xr-x+ 64 ashfinal  staff      2048 Oct  9 00:16 .
-<a name="rest_code_872308b27d894877a4fe7abb9f8c3853-4"></a>    drwxr-xr-x   6 root      admin       192 Sep 26 04:36 ..
-<a name="rest_code_872308b27d894877a4fe7abb9f8c3853-5"></a>    drwx------+  6 ashfinal  staff       192 Oct  8 23:43 Desktop
-<a name="rest_code_872308b27d894877a4fe7abb9f8c3853-6"></a>    drwx------+  3 ashfinal  staff        96 Sep 26 04:29 Documents
-<a name="rest_code_872308b27d894877a4fe7abb9f8c3853-7"></a>    drwx------+ 12 ashfinal  staff       384 Oct  8 22:08 Downloads
+<pre class="code rst"><a name="rest_code_27150a13bfd845ada27c172e0406b90d-1"></a>&gt;&gt;&gt; ls -al
+<a name="rest_code_27150a13bfd845ada27c172e0406b90d-2"></a>    total 35592
+<a name="rest_code_27150a13bfd845ada27c172e0406b90d-3"></a>    drwxr-xr-x+ 64 ashfinal  staff      2048 Oct  9 00:16 .
+<a name="rest_code_27150a13bfd845ada27c172e0406b90d-4"></a>    drwxr-xr-x   6 root      admin       192 Sep 26 04:36 ..
+<a name="rest_code_27150a13bfd845ada27c172e0406b90d-5"></a>    drwx------+  6 ashfinal  staff       192 Oct  8 23:43 Desktop
+<a name="rest_code_27150a13bfd845ada27c172e0406b90d-6"></a>    drwx------+  3 ashfinal  staff        96 Sep 26 04:29 Documents
+<a name="rest_code_27150a13bfd845ada27c172e0406b90d-7"></a>    drwx------+ 12 ashfinal  staff       384 Oct  8 22:08 Downloads
 </pre>
 <p>渲染结果：</p>
 <pre class="doctest-block">
@@ -278,11 +278,11 @@ consulate in Istanbul.                          effective immediately we have
 <div class="section" id="field-lists">
 <h2><a class="toc-backref" href="#id13">Field Lists（字段列表）</a></h2>
 <p><cite>Field Lists（字段列表）</cite> 其行为表现是用两列的数据来呈现字段及其对应值：</p>
-<pre class="code rst"><a name="rest_code_144ef2e4389d420bbc0e1ed4331fce99-1"></a><span class="nc">:Author:</span> <span class="nf">ashfinal</span>
-<a name="rest_code_144ef2e4389d420bbc0e1ed4331fce99-2"></a><span class="nc">:Contact:</span> <span class="nf">ashfinal@sina.cn</span>
-<a name="rest_code_144ef2e4389d420bbc0e1ed4331fce99-3"></a><span class="nc">:Revision:</span> <span class="nf">1008</span>
-<a name="rest_code_144ef2e4389d420bbc0e1ed4331fce99-4"></a><span class="nc">:Date:</span> <span class="nf">2017-10-08</span>
-<a name="rest_code_144ef2e4389d420bbc0e1ed4331fce99-5"></a><span class="nc">:Copyright:</span> <span class="nf">`CC BY-NC-SA 3.0`_</span>
+<pre class="code rst"><a name="rest_code_2e224fc9aacb46d5915e8decefc934a8-1"></a><span class="nc">:Author:</span> <span class="nf">ashfinal</span>
+<a name="rest_code_2e224fc9aacb46d5915e8decefc934a8-2"></a><span class="nc">:Contact:</span> <span class="nf">ashfinal@sina.cn</span>
+<a name="rest_code_2e224fc9aacb46d5915e8decefc934a8-3"></a><span class="nc">:Revision:</span> <span class="nf">1008</span>
+<a name="rest_code_2e224fc9aacb46d5915e8decefc934a8-4"></a><span class="nc">:Date:</span> <span class="nf">2017-10-08</span>
+<a name="rest_code_2e224fc9aacb46d5915e8decefc934a8-5"></a><span class="nc">:Copyright:</span> <span class="nf">`CC BY-NC-SA 3.0`_</span>
 </pre>
 <p>渲染结果见文章开头。</p>
 <p>如果 <cite>Field Lists</cite> 是文档中出现的第一个元素，则其中的某些字段会被识别为 <cite>bibliographic data</cite> ，比如作者、地址、联系方式、组织机构、文章摘要等等。这些数据可能会引起文档结构的小变动，比如被重新排版到出版物的扉页位置。 <cite>Bibliographic data</cite> 对网页排版基本没有影响。</p>
@@ -293,14 +293,14 @@ consulate in Istanbul.                          effective immediately we have
 <div class="section" id="specific-admonition">
 <h3><a class="toc-backref" href="#id15">Specific Admonition（特定告诫）</a></h3>
 <p>仅仅是关键词不同而已，可供选择的有 9 种： <cite>attention</cite> ， <cite>caution</cite> ， <cite>danger</cite> ， <cite>error</cite> ， <cite>hint</cite> ， <cite>important</cite> ， <cite>note</cite> ， <cite>tip</cite> ， <cite>warning</cite> 。</p>
-<pre class="code rst"><a name="rest_code_185da26809134dab939d696b0ada2c47-1"></a><span class="p">..</span> <span class="ow">hint</span><span class="p">::</span>
-<a name="rest_code_185da26809134dab939d696b0ada2c47-2"></a>   还记得 <span class="nv">`Directives（指令）`</span> 的一般格式？ <span class="se">::</span>
-<a name="rest_code_185da26809134dab939d696b0ada2c47-3"></a>
-<a name="rest_code_185da26809134dab939d696b0ada2c47-4"></a><span class="s">       +-------+-------------------------------+</span>
-<a name="rest_code_185da26809134dab939d696b0ada2c47-5"></a><span class="s">       | ".. " | directive type "::" directive |</span>
-<a name="rest_code_185da26809134dab939d696b0ada2c47-6"></a><span class="s">       +-------+ block                         |</span>
-<a name="rest_code_185da26809134dab939d696b0ada2c47-7"></a><span class="s">               |                               |</span>
-<a name="rest_code_185da26809134dab939d696b0ada2c47-8"></a><span class="s">               +-------------------------------+</span>
+<pre class="code rst"><a name="rest_code_890f3ac2ee354a3ea979d0d02e0e377e-1"></a><span class="p">..</span> <span class="ow">hint</span><span class="p">::</span>
+<a name="rest_code_890f3ac2ee354a3ea979d0d02e0e377e-2"></a>   还记得 <span class="nv">`Directives（指令）`</span> 的一般格式？ <span class="se">::</span>
+<a name="rest_code_890f3ac2ee354a3ea979d0d02e0e377e-3"></a>
+<a name="rest_code_890f3ac2ee354a3ea979d0d02e0e377e-4"></a><span class="s">       +-------+-------------------------------+</span>
+<a name="rest_code_890f3ac2ee354a3ea979d0d02e0e377e-5"></a><span class="s">       | ".. " | directive type "::" directive |</span>
+<a name="rest_code_890f3ac2ee354a3ea979d0d02e0e377e-6"></a><span class="s">       +-------+ block                         |</span>
+<a name="rest_code_890f3ac2ee354a3ea979d0d02e0e377e-7"></a><span class="s">               |                               |</span>
+<a name="rest_code_890f3ac2ee354a3ea979d0d02e0e377e-8"></a><span class="s">               +-------------------------------+</span>
 </pre>
 <p>渲染结果：</p>
 <div class="admonition hint">
@@ -318,9 +318,9 @@ consulate in Istanbul.                          effective immediately we have
 <div class="section" id="generic-admonition">
 <h3><a class="toc-backref" href="#id16">Generic Admonition（通用告诫）</a></h3>
 <p><cite>Generic Admonition</cite> 的关键词为 <cite>admonition</cite> ，与 <cite>Specific Admonition</cite> 相比，可以有自定义的标题：</p>
-<pre class="code rst"><a name="rest_code_ee9668e7e0934628b4295e8e35f73923-1"></a><span class="p">..</span> <span class="ow">admonition</span><span class="p">::</span> 喔，顺便提醒一下：
-<a name="rest_code_ee9668e7e0934628b4295e8e35f73923-2"></a>
-<a name="rest_code_ee9668e7e0934628b4295e8e35f73923-3"></a>   你应该使用 CSS 自定义颜色，以区分告诫的严重程度。
+<pre class="code rst"><a name="rest_code_1ae63bb7436e43b89f4f382a476d9fd0-1"></a><span class="p">..</span> <span class="ow">admonition</span><span class="p">::</span> 喔，顺便提醒一下：
+<a name="rest_code_1ae63bb7436e43b89f4f382a476d9fd0-2"></a>
+<a name="rest_code_1ae63bb7436e43b89f4f382a476d9fd0-3"></a>   你应该使用 CSS 自定义颜色，以区分告诫的严重程度。
 </pre>
 <p>渲染结果：</p>
 <div class="admonition admonition-">
@@ -332,14 +332,14 @@ consulate in Istanbul.                          effective immediately we have
 <div class="section" id="csv-table-csv">
 <h2><a class="toc-backref" href="#id17">CSV Table（CSV 表格）</a></h2>
 <p>上一篇文章曾经提到，除了 <cite>Grid Tables</cite> 和 <cite>Simple Tables</cite> 外，还有两种以 <cite>Directives（指令）</cite> 方式存在的创建表格的方式： <cite>list-table</cite> 和 <cite>csv-table</cite> 。对于大多数人来说，如果不借助 Vim/Emacs 等神级编辑器，创建 <cite>Grid Tables</cite> 异常地困难，我们需要一种既有较好可读性又方便纯手工书写的表格创建方式。对笔者来说，这种方式就是 <cite>csv-table</cite> 指令。</p>
-<pre class="code rst"><a name="rest_code_a568e659ed5045b686bd3683fd0fc77c-1"></a><span class="p">..</span> <span class="ow">csv-table</span><span class="p">::</span> 学习成绩统计
-<a name="rest_code_a568e659ed5045b686bd3683fd0fc77c-2"></a>   <span class="nc">:header:</span> <span class="nf">"姓名", "学号", "得分", "描述"</span>
-<a name="rest_code_a568e659ed5045b686bd3683fd0fc77c-3"></a>   <span class="nc">:widths:</span> <span class="nf">15, 10, 10, 30</span>
-<a name="rest_code_a568e659ed5045b686bd3683fd0fc77c-4"></a>
-<a name="rest_code_a568e659ed5045b686bd3683fd0fc77c-5"></a>   "张三", 1234, 60, "On a stick!"
-<a name="rest_code_a568e659ed5045b686bd3683fd0fc77c-6"></a>   "李四", 1235, 75, "If we took the bones out, it wouldn't be
-<a name="rest_code_a568e659ed5045b686bd3683fd0fc77c-7"></a>   crunchy, now would it?"
-<a name="rest_code_a568e659ed5045b686bd3683fd0fc77c-8"></a>   "王武", 1245, 90, "On a stick!"
+<pre class="code rst"><a name="rest_code_5fae8e755ba6490e957bee05423d005a-1"></a><span class="p">..</span> <span class="ow">csv-table</span><span class="p">::</span> 学习成绩统计
+<a name="rest_code_5fae8e755ba6490e957bee05423d005a-2"></a>   <span class="nc">:header:</span> <span class="nf">"姓名", "学号", "得分", "描述"</span>
+<a name="rest_code_5fae8e755ba6490e957bee05423d005a-3"></a>   <span class="nc">:widths:</span> <span class="nf">15, 10, 10, 30</span>
+<a name="rest_code_5fae8e755ba6490e957bee05423d005a-4"></a>
+<a name="rest_code_5fae8e755ba6490e957bee05423d005a-5"></a>   "张三", 1234, 60, "On a stick!"
+<a name="rest_code_5fae8e755ba6490e957bee05423d005a-6"></a>   "李四", 1235, 75, "If we took the bones out, it wouldn't be
+<a name="rest_code_5fae8e755ba6490e957bee05423d005a-7"></a>   crunchy, now would it?"
+<a name="rest_code_5fae8e755ba6490e957bee05423d005a-8"></a>   "王武", 1245, 90, "On a stick!"
 </pre>
 <p>渲染结果：</p>
 <table border="1" class="colwidths-given docutils">
@@ -383,20 +383,20 @@ crunchy, now would it?</td>
 <div class="section" id="substitution-definitions">
 <h2><a class="toc-backref" href="#id18">Substitution Definitions（替换定义）</a></h2>
 <p><cite>Substitution Definitions（替换定义）</cite> 允许将某些元素“替换”到段落行内，使得较复杂的结构脱离文档主体，保持文档清晰可读的前提下不丧失功能强大性。最常用的是“文本替换”：</p>
-<pre class="code rst"><a name="rest_code_d8bd0b287ecb4596830fd6b52120678e-1"></a>你竟然没有听说过 |rst| ？
-<a name="rest_code_d8bd0b287ecb4596830fd6b52120678e-2"></a>
-<a name="rest_code_d8bd0b287ecb4596830fd6b52120678e-3"></a><span class="p">..</span> <span class="nt">|rst|</span> <span class="ow">replace</span><span class="p">::</span> reStructuredText 结构化文本标记语言
+<pre class="code rst"><a name="rest_code_e2f30a077ff64801814a15edd7b6061c-1"></a>你竟然没有听说过 |rst| ？
+<a name="rest_code_e2f30a077ff64801814a15edd7b6061c-2"></a>
+<a name="rest_code_e2f30a077ff64801814a15edd7b6061c-3"></a><span class="p">..</span> <span class="nt">|rst|</span> <span class="ow">replace</span><span class="p">::</span> reStructuredText 结构化文本标记语言
 </pre>
 <p>渲染结果：</p>
 <p>你竟然没有听说过 reStructuredText 结构化文本标记语言 ？</p>
 <p><cite>Substitution Definitions</cite> 还可以与 <cite>image</cite> 指令结合实现“行内图片”功能：</p>
-<pre class="code rst"><a name="rest_code_68d301b0738149749fb44101ad76d9c3-1"></a>点击 |nikola| 图标进入下一步。
-<a name="rest_code_68d301b0738149749fb44101ad76d9c3-2"></a>
-<a name="rest_code_68d301b0738149749fb44101ad76d9c3-3"></a><span class="p">..</span> <span class="nt">|nikola|</span> <span class="ow">image</span><span class="p">::</span> /images/nikola.png
-<a name="rest_code_68d301b0738149749fb44101ad76d9c3-4"></a>   <span class="nc">:align:</span> <span class="nf">middle</span>
-<a name="rest_code_68d301b0738149749fb44101ad76d9c3-5"></a>   <span class="nc">:width:</span> <span class="nf">118px</span>
-<a name="rest_code_68d301b0738149749fb44101ad76d9c3-6"></a>   <span class="nc">:height:</span> <span class="nf">50px</span>
-<a name="rest_code_68d301b0738149749fb44101ad76d9c3-7"></a>   <span class="nc">:target:</span> <span class="nf">https://getnikola.com/</span>
+<pre class="code rst"><a name="rest_code_1317ef78ac9b48baa6a306f4383f24c8-1"></a>点击 |nikola| 图标进入下一步。
+<a name="rest_code_1317ef78ac9b48baa6a306f4383f24c8-2"></a>
+<a name="rest_code_1317ef78ac9b48baa6a306f4383f24c8-3"></a><span class="p">..</span> <span class="nt">|nikola|</span> <span class="ow">image</span><span class="p">::</span> /images/nikola.png
+<a name="rest_code_1317ef78ac9b48baa6a306f4383f24c8-4"></a>   <span class="nc">:align:</span> <span class="nf">middle</span>
+<a name="rest_code_1317ef78ac9b48baa6a306f4383f24c8-5"></a>   <span class="nc">:width:</span> <span class="nf">118px</span>
+<a name="rest_code_1317ef78ac9b48baa6a306f4383f24c8-6"></a>   <span class="nc">:height:</span> <span class="nf">50px</span>
+<a name="rest_code_1317ef78ac9b48baa6a306f4383f24c8-7"></a>   <span class="nc">:target:</span> <span class="nf">https://getnikola.com/</span>
 </pre>
 <p>渲染结果：</p>
 <p>点击 <a class="reference external" href="https://getnikola.com/"><img alt="nikola" class="align-middle" src="../../images/nikola.png" style="width: 118px; height: 50px;"></a> 图标进入下一步。</p>
@@ -404,25 +404,25 @@ crunchy, now would it?</td>
 <div class="section" id="date">
 <h2><a class="toc-backref" href="#id19">Date（日期）</a></h2>
 <p><cite>Date（日期）</cite> 指令用于产生当前日期/时间，需与 <cite>Substitution Definitions</cite> 配合使用。</p>
-<pre class="code rst"><a name="rest_code_fa47bb535ca64f6ea6843edd5ee3c27d-1"></a><span class="p">..</span> <span class="nt">|date|</span> <span class="ow">date</span><span class="p">::</span>
-<a name="rest_code_fa47bb535ca64f6ea6843edd5ee3c27d-2"></a><span class="p">..</span> <span class="nt">|time|</span> <span class="ow">date</span><span class="p">::</span> %H:%M
-<a name="rest_code_fa47bb535ca64f6ea6843edd5ee3c27d-3"></a><span class="p">..</span> <span class="nt">|localt|</span> <span class="ow">date</span><span class="p">::</span> %c %z
-<a name="rest_code_fa47bb535ca64f6ea6843edd5ee3c27d-4"></a>
-<a name="rest_code_fa47bb535ca64f6ea6843edd5ee3c27d-5"></a>当地时间是 |localt| 。
-<a name="rest_code_fa47bb535ca64f6ea6843edd5ee3c27d-6"></a>
-<a name="rest_code_fa47bb535ca64f6ea6843edd5ee3c27d-7"></a>本文档最后重建于 |date| |time| 。
+<pre class="code rst"><a name="rest_code_34b1d981d6824d269df327a78f269160-1"></a><span class="p">..</span> <span class="nt">|date|</span> <span class="ow">date</span><span class="p">::</span>
+<a name="rest_code_34b1d981d6824d269df327a78f269160-2"></a><span class="p">..</span> <span class="nt">|time|</span> <span class="ow">date</span><span class="p">::</span> %H:%M
+<a name="rest_code_34b1d981d6824d269df327a78f269160-3"></a><span class="p">..</span> <span class="nt">|localt|</span> <span class="ow">date</span><span class="p">::</span> %c %z
+<a name="rest_code_34b1d981d6824d269df327a78f269160-4"></a>
+<a name="rest_code_34b1d981d6824d269df327a78f269160-5"></a>当地时间是 |localt| 。
+<a name="rest_code_34b1d981d6824d269df327a78f269160-6"></a>
+<a name="rest_code_34b1d981d6824d269df327a78f269160-7"></a>本文档最后重建于 |date| |time| 。
 </pre>
 <p>渲染结果：</p>
-<p>当地时间是 Sat 14 Oct 2017 04:09:30 PM UTC +0000 。</p>
-<p>本文档最后重建于 2017-10-14 16:09 。</p>
+<p>当地时间是 Sun 15 Oct 2017 04:02:53 AM UTC +0000 。</p>
+<p>本文档最后重建于 2017-10-15 04:02 。</p>
 <p><cite>Date</cite> 指令的时间格式与 Python 的 <tt class="docutils literal">time.strftime</tt> 函数参数一致，如果需要更个性化的格式，可以查阅该函数。</p>
 </div>
 <div class="section" id="include">
 <h2><a class="toc-backref" href="#id20">Include</a></h2>
 <p><cite>Include</cite> 指令用来引入外部文档片段。默认是包含整个文件，但是你也可以用 <cite>start-line</cite> 和 <cite>end-line</cite> 指定仅包含部分区域。默认是以解析后的文档载入，但是你也可以用 <cite>literal</cite> 或 <cite>code</cite> 让其原样载入或以代码片段载入。 <cite>Include</cite> 指令与 LaTeX 差不多，支持将超长文档按章节拆分为小文件。但是相对 LaTeX 其超强之处在于：可以载入小文件的部分行。比如我们来载入该系列教程 <a class="reference external" href="../cong-markdown-dao-restructuredtext/">第一篇文章</a> 的 <cite>宗旨</cite> 部分：</p>
-<pre class="code rst"><a name="rest_code_cf268b619ddc4008a9907a152f87cb32-1"></a><span class="p">..</span> <span class="ow">include</span><span class="p">::</span> posts/cong-markdown-dao-restructuredtext.rst
-<a name="rest_code_cf268b619ddc4008a9907a152f87cb32-2"></a>   <span class="nc">:start-line:</span> <span class="nf">26</span>
-<a name="rest_code_cf268b619ddc4008a9907a152f87cb32-3"></a>   <span class="nc">:end-line:</span> <span class="nf">32</span>
+<pre class="code rst"><a name="rest_code_e45bebbbb99e4c25a60101b76df6ed07-1"></a><span class="p">..</span> <span class="ow">include</span><span class="p">::</span> posts/cong-markdown-dao-restructuredtext.rst
+<a name="rest_code_e45bebbbb99e4c25a60101b76df6ed07-2"></a>   <span class="nc">:start-line:</span> <span class="nf">26</span>
+<a name="rest_code_e45bebbbb99e4c25a60101b76df6ed07-3"></a>   <span class="nc">:end-line:</span> <span class="nf">32</span>
 </pre>
 <p>渲染结果：</p>
 <blockquote>
@@ -452,11 +452,11 @@ reStructuredText 是一种易于阅读、所见即所得的纯文本标记语言
 <div class="section" id="comments">
 <h2><a class="toc-backref" href="#id21">Comments（注释）</a></h2>
 <p>reStructuredText 的 <cite>Comments（注释）</cite> 语法非常简单：</p>
-<pre class="code rst"><a name="rest_code_94ea43c9d1934f97aad2f183b400c966-1"></a><span class="cp">.. 这是注释，不会在文档中出现。</span>
+<pre class="code rst"><a name="rest_code_aa2623a76b4b4949ac131b4712b063a6-1"></a><span class="cp">.. 这是注释，不会在文档中出现。</span>
 </pre>
 <p>有没有发现注释语法与之前介绍过的链接、指令等等非常像？为了避免与这些语法混淆，使用手册推荐想要注释以下元素：替换定义、指令、脚注、引文、超链接等的时候，让其单独成行。就像下面这样：</p>
-<pre class="code rst"><a name="rest_code_26817434c63245b6b90e169f777e0f4a-1"></a><span class="p">..</span>
-<a name="rest_code_26817434c63245b6b90e169f777e0f4a-2"></a>   <span class="nt">_link:</span> https://www.invalid.org/
+<pre class="code rst"><a name="rest_code_510f6edb4eb04fd5b063a575a502dc54-1"></a><span class="p">..</span>
+<a name="rest_code_510f6edb4eb04fd5b063a575a502dc54-2"></a>   <span class="nt">_link:</span> https://www.invalid.org/
 </pre>
 <p>注意本来应存在于超链接前面的两个点号被“合并”到上一行。</p>
 <p><cite>Comments</cite> 还被静态博客程序 <a class="reference external" href="https://getnikola.com/">Nikola</a> 用来生成文章标签、创建日期等。对比之下 Markdown 则引入了额外的语法 <a class="reference external" href="https://jekyllrb.com/docs/frontmatter/">YAML front matter</a> 。</p>
