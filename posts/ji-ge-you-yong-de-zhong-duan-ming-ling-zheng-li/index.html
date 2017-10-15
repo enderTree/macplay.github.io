@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="generator" content="Nikola (getnikola.com)">
 <title>有用的终端命令整理 - MacPlay</title>
+<link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+<link rel="mask-icon" href="../../safari-pinned-tab.svg" color="#5bbad5">
 <link href="../../assets/css/semantic.min.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
@@ -338,10 +342,10 @@
 </li>
 <li>
 <p class="first">macOS 计算机名相关</p>
-<pre class="code shell"><a name="rest_code_b6a756a311c34fa6af434050d3f1bf45-1"></a>sudo scutil --set HostName <span class="s2">"iMBP"</span>
-<a name="rest_code_b6a756a311c34fa6af434050d3f1bf45-2"></a>sudo scutil --set ComputerName <span class="s2">"iMBP"</span>
-<a name="rest_code_b6a756a311c34fa6af434050d3f1bf45-3"></a>sudo scutil --set LocalHostName <span class="s2">"iMBP"</span>
-<a name="rest_code_b6a756a311c34fa6af434050d3f1bf45-4"></a>sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string <span class="s2">"iMBP"</span>
+<pre class="code shell"><a name="rest_code_852005b2f92a48ba94b6c7f4c909162c-1"></a>sudo scutil --set HostName <span class="s2">"iMBP"</span>
+<a name="rest_code_852005b2f92a48ba94b6c7f4c909162c-2"></a>sudo scutil --set ComputerName <span class="s2">"iMBP"</span>
+<a name="rest_code_852005b2f92a48ba94b6c7f4c909162c-3"></a>sudo scutil --set LocalHostName <span class="s2">"iMBP"</span>
+<a name="rest_code_852005b2f92a48ba94b6c7f4c909162c-4"></a>sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string <span class="s2">"iMBP"</span>
 </pre>
 </li>
 <li>
@@ -362,11 +366,11 @@
 </li>
 <li>
 <p class="first">命令行版的 gist</p>
-<pre class="code shell"><a name="rest_code_e8434cde74c640cfa0b424638ab7d91b-1"></a>gist --login
-<a name="rest_code_e8434cde74c640cfa0b424638ab7d91b-2"></a>gist
-<a name="rest_code_e8434cde74c640cfa0b424638ab7d91b-3"></a>gist selenium0.py
-<a name="rest_code_e8434cde74c640cfa0b424638ab7d91b-4"></a>gist -l ashfinal
-<a name="rest_code_e8434cde74c640cfa0b424638ab7d91b-5"></a>gist -d <span class="s2">"aria2 launchagent for macOS"</span> com.github.aria2.plist
+<pre class="code shell"><a name="rest_code_c92d459be66b42539525eca3be848f3a-1"></a>gist --login
+<a name="rest_code_c92d459be66b42539525eca3be848f3a-2"></a>gist
+<a name="rest_code_c92d459be66b42539525eca3be848f3a-3"></a>gist selenium0.py
+<a name="rest_code_c92d459be66b42539525eca3be848f3a-4"></a>gist -l ashfinal
+<a name="rest_code_c92d459be66b42539525eca3be848f3a-5"></a>gist -d <span class="s2">"aria2 launchagent for macOS"</span> com.github.aria2.plist
 </pre>
 </li>
 <li>
@@ -391,14 +395,14 @@
 </li>
 <li>
 <p class="first">从 git 历史中删除二进制文件</p>
-<pre class="code shell"><a name="rest_code_929cdfc10f344a17b72b36fcf6bb7ded-1"></a>git filter-branch --force --index-filter <span class="se">\\</span>
-<a name="rest_code_929cdfc10f344a17b72b36fcf6bb7ded-2"></a><span class="s1">'git rm --cached --ignore-unmatch resources/watchbg.png'</span> <span class="se">\\</span>
-<a name="rest_code_929cdfc10f344a17b72b36fcf6bb7ded-3"></a>--prune-empty --tag-name-filter cat -- --all
+<pre class="code shell"><a name="rest_code_9f5fedac658c475a8f7ae5eb6450aa1c-1"></a>git filter-branch --force --index-filter <span class="se">\\</span>
+<a name="rest_code_9f5fedac658c475a8f7ae5eb6450aa1c-2"></a><span class="s1">'git rm --cached --ignore-unmatch resources/watchbg.png'</span> <span class="se">\\</span>
+<a name="rest_code_9f5fedac658c475a8f7ae5eb6450aa1c-3"></a>--prune-empty --tag-name-filter cat -- --all
 </pre>
 <p>后面还需要三个命令：</p>
-<pre class="code shell"><a name="rest_code_fd47f158a62b4973ba0327c608c4eb7e-1"></a>git reflog expire --expire<span class="o">=</span>now --all
-<a name="rest_code_fd47f158a62b4973ba0327c608c4eb7e-2"></a>git gc --prune<span class="o">=</span>now
-<a name="rest_code_fd47f158a62b4973ba0327c608c4eb7e-3"></a>git gc --aggressive --prune<span class="o">=</span>now
+<pre class="code shell"><a name="rest_code_293437275ac94219a69ade01a8d5b418-1"></a>git reflog expire --expire<span class="o">=</span>now --all
+<a name="rest_code_293437275ac94219a69ade01a8d5b418-2"></a>git gc --prune<span class="o">=</span>now
+<a name="rest_code_293437275ac94219a69ade01a8d5b418-3"></a>git gc --aggressive --prune<span class="o">=</span>now
 </pre>
 </li>
 <li>
