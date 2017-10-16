@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="generator" content="Nikola (getnikola.com)">
-<title>At Home Outdoors - MacPlay</title>
+<title>XeTeX 的中文化设置 - MacPlay</title>
 <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
@@ -12,21 +12,33 @@
 <link href="../../assets/css/semantic.min.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
-<link rel="canonical" href="https://macplay.github.io/posts/at-home-outdoors/">
+<link rel="canonical" href="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
 <meta name="author" content="ashfinal">
 <meta property="og:site_name" content="MacPlay">
-<meta property="og:title" content="At Home Outdoors">
-<meta property="og:url" content="https://macplay.github.io/posts/at-home-outdoors/">
-<meta property="og:description" content="发现 fancyBox 能自动识别嵌入的媒体，比如 Youtube、Vimeo、Google Map、Instagram 等。
-尝试了一下 Vimeo ，体验非常好。这样静态博客的内容就可以更加丰富多彩。
-（点击封面加载视频）
+<meta property="og:title" content="XeTeX 的中文化设置">
+<meta property="og:url" content="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/">
+<meta property="og:description" content="看过一些文章得出结论：即使用 XeTeX 编译中文，也需要额外添加 xeCJK 包设置下字体。笔者也一直是这么做的。
+刚尝试了下，这一步其实是不必要的。直接用 fontspec 设置中文字体，不必引入额外的包：
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12%! TEX program = xelatex
 
-写作语法上和插入一张图片没有什么区别：
-.. image:: https://i.vimeocdn.com/video/658454374_1040x584.jpg
-  ">
+\usepackage{fontspec}
+\setmainfon">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2017-10-05T23:57:38+08:00">
+<meta property="article:published_time" content="2017-10-16T17:07:37+08:00">
+<meta property="article:tag" content="reST">
+<meta property="article:tag" content="xetex">
 <link rel="stylesheet" href="../../assets/css/gitalk.css">
 </head>
 <body>
@@ -77,7 +89,7 @@
                         <div id="main-content">
 <div class="postpage post-text page-body" itemscope="itemscope" itemtype="http://schema.org/Article">
             <h1 class="post-title" itemprop="headline">
-        <a href=".">At Home Outdoors</a>
+        <a href=".">XeTeX 的中文化设置</a>
     </h1>
 
     <div class="post-meta">
@@ -92,7 +104,7 @@
                 <i class="github icon"></i>
             </span>
             <span class="post-meta-item-text">
-                <a href="https://github.com/macplay/macplay.github.io/edit/src/posts/at-home-outdoors.rst" title="Edit on GitHub">edit</a>
+                <a href="https://github.com/macplay/macplay.github.io/edit/src/posts/xetex-de-zhong-wen-hua-she-zhi.rst" title="Edit on GitHub">edit</a>
             </span>
         <span class="post-meta-divider">|</span>
         <span class="post-meta-item-icon">
@@ -100,33 +112,66 @@
         </span>
         <span class="post-meta-item-text">
             <a href="../../archive.html">
-                <time datetime="2017-10-05T23:57:38+08:00" itemprop="datePublished" title="2017-10-05 23:57">2017-10-05 23:57
+                <time datetime="2017-10-16T17:07:37+08:00" itemprop="datePublished" title="2017-10-16 17:07">2017-10-16 17:07
                 </time></a>
         </span>
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+                <i class="tags icon"></i>
+            </span>
+                        <span class="post-meta-tag-item">
+                            <a href="../../categories/rest/">reST</a>
+                        </span>
+                        <span class="post-meta-tag-item">
+                            <a href="../../categories/xetex/">xetex</a>
+                        </span>
     </div>
 
     
     <div class="post-content" itemprop="article text">
         <div id="post-content">
         <div>
-<p>发现 <a class="reference external" href="http://fancyapps.com/fancybox/3/docs/#embedding">fancyBox</a> 能自动识别嵌入的媒体，比如 Youtube、Vimeo、Google Map、Instagram 等。</p>
-<p>尝试了一下 Vimeo ，体验非常好。这样静态博客的内容就可以更加丰富多彩。</p>
-<p>（点击封面加载视频）</p>
-<a class="reference external image-reference" href="https://vimeo.com/channels/staffpicks/236370796"><img alt="https://i.vimeocdn.com/video/658454374_1040x584.jpg" class="align-center" src="https://i.vimeocdn.com/video/658454374_1040x584.jpg"></a>
-<p>写作语法上和插入一张图片没有什么区别：</p>
-<pre class="code rst"><a name="rest_code_d73edc4b242940ffb2756bb6d4d8f66e-1"></a><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> https://i.vimeocdn.com/video/658454374_1040x584.jpg
-<a name="rest_code_d73edc4b242940ffb2756bb6d4d8f66e-2"></a>   <span class="nc">:align:</span> <span class="nf">center</span>
-<a name="rest_code_d73edc4b242940ffb2756bb6d4d8f66e-3"></a>   <span class="nc">:target:</span> <span class="nf">https://vimeo.com/channels/staffpicks/236370796</span>
-</pre>
+<p>看过一些文章得出结论：即使用 XeTeX 编译中文，也需要额外添加 <cite>xeCJK</cite> 包设置下字体。笔者也一直是这么做的。</p>
+<p>刚尝试了下，这一步其实是不必要的。直接用 <cite>fontspec</cite> 设置中文字体，不必引入额外的包：</p>
+<table class="codetable"><tr>
+<td class="linenos"><div class="linenodiv"><pre><a href="#rest_code_43c43d191fb444fa846695dd8dfce9dc-1"> 1</a>
+<a href="#rest_code_43c43d191fb444fa846695dd8dfce9dc-2"> 2</a>
+<a href="#rest_code_43c43d191fb444fa846695dd8dfce9dc-3"> 3</a>
+<a href="#rest_code_43c43d191fb444fa846695dd8dfce9dc-4"> 4</a>
+<a href="#rest_code_43c43d191fb444fa846695dd8dfce9dc-5"> 5</a>
+<a href="#rest_code_43c43d191fb444fa846695dd8dfce9dc-6"> 6</a>
+<a href="#rest_code_43c43d191fb444fa846695dd8dfce9dc-7"> 7</a>
+<a href="#rest_code_43c43d191fb444fa846695dd8dfce9dc-8"> 8</a>
+<a href="#rest_code_43c43d191fb444fa846695dd8dfce9dc-9"> 9</a>
+<a href="#rest_code_43c43d191fb444fa846695dd8dfce9dc-10">10</a>
+<a href="#rest_code_43c43d191fb444fa846695dd8dfce9dc-11">11</a>
+<a href="#rest_code_43c43d191fb444fa846695dd8dfce9dc-12">12</a></pre></div></td>
+<td class="code"><pre class="code latex"><a name="rest_code_43c43d191fb444fa846695dd8dfce9dc-1"></a><span class="c">%! TEX program = xelatex</span>
+<a name="rest_code_43c43d191fb444fa846695dd8dfce9dc-2"></a>
+<a name="rest_code_43c43d191fb444fa846695dd8dfce9dc-3"></a><span class="k">\usepackage</span><span class="nb">{</span>fontspec<span class="nb">}</span>
+<a name="rest_code_43c43d191fb444fa846695dd8dfce9dc-4"></a><span class="k">\setmainfont</span><span class="nb">{</span>PingFang SC<span class="nb">}</span>
+<a name="rest_code_43c43d191fb444fa846695dd8dfce9dc-5"></a><span class="k">\setsansfont</span><span class="nb">{</span>Hiragino Sans GB<span class="nb">}</span>
+<a name="rest_code_43c43d191fb444fa846695dd8dfce9dc-6"></a><span class="k">\setmonofont</span><span class="na">[Scale=0.9]</span><span class="nb">{</span>PingFang SC<span class="nb">}</span>
+<a name="rest_code_43c43d191fb444fa846695dd8dfce9dc-7"></a>
+<a name="rest_code_43c43d191fb444fa846695dd8dfce9dc-8"></a><span class="k">\usepackage</span><span class="nb">{</span>indentfirst<span class="nb">}</span>
+<a name="rest_code_43c43d191fb444fa846695dd8dfce9dc-9"></a><span class="k">\setlength</span><span class="nb">{</span><span class="k">\parindent</span><span class="nb">}{</span>2em<span class="nb">}</span>
+<a name="rest_code_43c43d191fb444fa846695dd8dfce9dc-10"></a>
+<a name="rest_code_43c43d191fb444fa846695dd8dfce9dc-11"></a><span class="k">\XeTeXlinebreaklocale</span> "zh"
+<a name="rest_code_43c43d191fb444fa846695dd8dfce9dc-12"></a><span class="k">\XeTeXlinebreakskip</span> = 0pt plus 1pt minus 0.1pt
+</pre></td>
+</tr></table>
+<p>第 1 行指定编译引擎 <cite>xelatex</cite> 。不成文的规范，LaTeX 客户端或编辑器插件不一定会遵守。</p>
+<p>第 3-6 行使用苹方和冬青黑体，macOS 上的默认字体。</p>
+<p>第 8-9 行分别设置首行缩进和缩进间隔。</p>
+<p>第 11 行使用中文断行方式，否则段落会合并成一行。</p>
+<p>第 12 行还不清楚啥意思，不过好多文章都有，暂时不删除。</p>
+<p>这几行精简的配置，足以应付 macOS 上绝大部分编译场景。如果是其它操作系统，注意替换中文字体。通过 <cite>rst2xetex.py</cite> 命令转换过来的 tex 文件，添加以上几行，就能顺利编译。</p>
 </div>
         </div>
     </div>
         <div class="post-navigation no-print">
         <div class="ui huge secondary stackable menu">
-            <a class="post-nav-item post-nav-previous item" href="../cong-markdown-dao-restructuredtext/" title="Previous post"><i class="angle double left icon"></i> 从 Markdown 到 reStructuredText</a>
-        <div class="right menu">
-            <a class="post-nav-item post-nav-next item" href="../cong-markdown-dao-restructuredtexter/" title="Next post">从 Markdown 到 reStructuredText（二） <i class="angle double right icon"></i></a>
-        </div>
+            <a class="post-nav-item post-nav-previous item" href="../cong-markdown-dao-restructuredtextsi/" title="Previous post"><i class="angle double left icon"></i> 从 Markdown 到 reStructuredText（四）</a>
         </div>
     </div>
 
