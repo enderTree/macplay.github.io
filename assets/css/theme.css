@@ -15,7 +15,13 @@
 
 .entry-title a {
     font-size: 1.5rem;
-    color: #555;;
+    display: block;
+    color: #555;
+    padding-bottom: 0.5rem;
+}
+
+.entry-title a:hover {
+    color: #4183C4;
 }
 
 .post-entry .post-meta, .postpage .post-meta {
@@ -181,6 +187,27 @@
 
 .page-navigation {
     text-align: center;
+}
+
+.postpage .post-info {
+    border: 1px dashed #6fe087;
+    padding: 0 1em 1em 1em;
+    background-color: rgba(207, 247, 207, 0.1);
+}
+
+.addthis_inline_share_toolbox {
+    padding: 1em 0;
+}
+
+.author-postlist time,
+.tag-postlist time,
+.list-postlist time {
+    float: right;
+}
+
+.footer.social-link {
+    text-align: center;
+    margin-bottom: -1.5em;
 }
 
 @media print {

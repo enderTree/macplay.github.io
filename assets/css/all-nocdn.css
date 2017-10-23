@@ -1,26 +1,38 @@
 h1 {
-    font-size: 2rem;
-    font-weight: bold;
+    font-size: 1.5rem;
 }
 
 h2 {
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 1.35rem;
 }
 
 h3 {
-    font-size: 1.25rem;
-    font-weight: bold;
+    font-size: 1.2rem;
 }
 
 h4 {
-    font-size: 1rem;
-    font-weight: bold;
+    font-size: 1.05rem;
 }
 
 h5 {
-    font-size: 0.875rem;
-    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a {
+    color: #555;
+    font-weight: normal;
+    display: block;
+}
+
+h2 a:after,
+h3 a:after,
+h4 a:after,
+h5 a:after {
+    content: " ¶";
 }
 
 h2:first-child, 
@@ -61,6 +73,7 @@ code, cite, tt.docutils.literal {
     padding: 1px 4px;
     font-size: 0.9rem;
     font-family: monospace;
+    font-style: normal;
 }
 
 td, th {
@@ -234,7 +247,6 @@ td.linenos, td.code {
 pre.doctest-block {
     font-size: 0.9em;
     background-color: #f5f5f5;
-    color: rgb(189, 123, 0);
     border: solid 1px transparent;
     padding: 1px 4px;
 }
@@ -427,7 +439,13 @@ table.codetable { width: 100%;} td.linenos {text-align: right; width: 4em;}
 
 .entry-title a {
     font-size: 1.5rem;
-    color: #555;;
+    display: block;
+    color: #555;
+    padding-bottom: 0.5rem;
+}
+
+.entry-title a:hover {
+    color: #4183C4;
 }
 
 .post-entry .post-meta, .postpage .post-meta {
@@ -593,6 +611,27 @@ table.codetable { width: 100%;} td.linenos {text-align: right; width: 4em;}
 
 .page-navigation {
     text-align: center;
+}
+
+.postpage .post-info {
+    border: 1px dashed #6fe087;
+    padding: 0 1em 1em 1em;
+    background-color: rgba(207, 247, 207, 0.1);
+}
+
+.addthis_inline_share_toolbox {
+    padding: 1em 0;
+}
+
+.author-postlist time,
+.tag-postlist time,
+.list-postlist time {
+    float: right;
+}
+
+.footer.social-link {
+    text-align: center;
+    margin-bottom: -1.5em;
 }
 
 @media print {
