@@ -1,3 +1,7 @@
+header#header {
+    margin-bottom: 1em;
+}
+
 .page-body {
     padding: 0px 1rem;
 }
@@ -208,6 +212,21 @@
 .footer.social-link {
     text-align: center;
     margin-bottom: -1.5em;
+}
+
+.footer.extra-block {
+    text-align: center;
+    margin: 1em;
+}
+
+.footer.extra-block a{
+    cursor: pointer;
+    color: #555;
+    text-decoration: underline;
+}
+
+.extra-drawer .siteitem {
+    margin-bottom: 0.5em;
 }
 
 @media print {

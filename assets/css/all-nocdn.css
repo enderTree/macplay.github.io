@@ -422,6 +422,10 @@ pre.code .vm { color: #19177C } /* Name.Variable.Magic */
 pre.code .il { color: #666666 } /* Literal.Number.Integer.Long */
 table.codetable { width: 100%;} td.linenos {text-align: right; width: 4em;}
 
+header#header {
+    margin-bottom: 1em;
+}
+
 .page-body {
     padding: 0px 1rem;
 }
@@ -632,6 +636,21 @@ table.codetable { width: 100%;} td.linenos {text-align: right; width: 4em;}
 .footer.social-link {
     text-align: center;
     margin-bottom: -1.5em;
+}
+
+.footer.extra-block {
+    text-align: center;
+    margin: 1em;
+}
+
+.footer.extra-block a{
+    cursor: pointer;
+    color: #555;
+    text-decoration: underline;
+}
+
+.extra-drawer .siteitem {
+    margin-bottom: 0.5em;
 }
 
 @media print {
