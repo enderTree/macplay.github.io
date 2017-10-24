@@ -36,27 +36,17 @@ Hint
 <link rel="stylesheet" href="../../assets/css/gitalk.css">
 </head>
 <body>
-        <div class="ui bottom sidebar ui segment">
-            <div class="ui center aligned grid">
-                <div class="one column row">
-                    <div class="sixteen wide column">
-                        <h3 class="ui header">友情链接</h3>
-                    </div>
-                </div>
-                <div class="ten wide column extra-drawer">
-                        <a href="http://macplay.coding.me/aria2/" class="ui basic small violet button siteitem" data-tooltip="漂亮的 aria2 网页管理端" data-position="top center">AriaNg</a>
-                        <a href="https://github.com/ashfinal/awesome-hammerspoon" class="ui basic small violet button siteitem" data-tooltip="用于 macOS 自动化软件 Hammerspoon 的配置" data-position="top center">awesome-hammerspoon</a>
+        <div class="ui grid">
+            <div class="computer only three wide column no-print">
+                <div id="left-side">
                 </div>
             </div>
+            <div class="ten wide computer sixteen wide tablet sixteen wide mobile column">
+                        <div class="ui inline cookie nag no-print">
+            <span class="title">从现在开始，博客可以支持站点通告了。 O(∩_∩)O~~</span>
+            <i class="close icon"></i>
         </div>
-        <div class="pusher">
-            <div class="ui grid">
-                <div class="computer only three wide column no-print">
-                    <div id="left-side">
-                    </div>
-                </div>
-                <div class="ten wide computer sixteen wide tablet sixteen wide mobile column">
-                        <header id="header" class="no-print"><div class="ui grid">
+    <header id="header" class="no-print"><div class="ui grid">
         <div class="computer only tablet only sixteen wide column">
             <div class="ui large secondary stackable menu">
                 <a class="header item brand-logo" href="https://macplay.github.io/">
@@ -208,12 +198,12 @@ Hint
     <div class="disabled step">提交 GitHub</div>
 </div>
 <p>添加完 meta 信息后就可以提交最终 markup 文档了。如本文的 meta 信息为（ reStructuredText 文件类型）：</p>
-<pre class="code rst"><a name="rest_code_9a2eb888a941442a97f69a6ad9356ea7-1"></a><span class="cp">.. title: 静态博客 Nikola 之写作实践</span>
-<a name="rest_code_9a2eb888a941442a97f69a6ad9356ea7-2"></a><span class="cp">.. slug: jing-tai-bo-ke-nikola-zhi-xie-zuo-shi-jian</span>
-<a name="rest_code_9a2eb888a941442a97f69a6ad9356ea7-3"></a><span class="cp">.. date: 2017-09-20 11:32:34 UTC+08:00</span>
-<a name="rest_code_9a2eb888a941442a97f69a6ad9356ea7-4"></a><span class="cp">.. tags: nikola, reST, markdown</span>
-<a name="rest_code_9a2eb888a941442a97f69a6ad9356ea7-5"></a><span class="cp">.. category: markdown</span>
-<a name="rest_code_9a2eb888a941442a97f69a6ad9356ea7-6"></a><span class="cp">.. author: macplay</span>
+<pre class="code rst"><a name="rest_code_f4c4d50610e7413899836df3dc44db25-1"></a><span class="cp">.. title: 静态博客 Nikola 之写作实践</span>
+<a name="rest_code_f4c4d50610e7413899836df3dc44db25-2"></a><span class="cp">.. slug: jing-tai-bo-ke-nikola-zhi-xie-zuo-shi-jian</span>
+<a name="rest_code_f4c4d50610e7413899836df3dc44db25-3"></a><span class="cp">.. date: 2017-09-20 11:32:34 UTC+08:00</span>
+<a name="rest_code_f4c4d50610e7413899836df3dc44db25-4"></a><span class="cp">.. tags: nikola, reST, markdown</span>
+<a name="rest_code_f4c4d50610e7413899836df3dc44db25-5"></a><span class="cp">.. category: markdown</span>
+<a name="rest_code_f4c4d50610e7413899836df3dc44db25-6"></a><span class="cp">.. author: macplay</span>
 </pre>
 <p>Nikola 支持提交 reStructuredText 、Markdown、Jupyter Notebook 等文件来生成博客文章，不同文件类型的 meta 头略有不同（因为注释语法不同）。推荐使用 <cite>nikola new_post -f rest/markdown/ipynb</cite> 命令来新建文件，其中 <cite>-f arg</cite> 用来指定要创建的文档格式。新创建的文件已经包含必要的 meta 信息，只需略作修改就可以了。</p>
 <p>Jupyter Notebook 的情况则比较特殊，meta 信息不在文件开头。而且其文件类型（扩展名 <cite>.ipynb</cite> ）其实是 JSON，如果不想使用文本编辑器来编辑 meta 头的话，可以依次点击 Jupyter Notebook 菜单 <cite>Edit</cite> - <cite>Edit Notebook Metadata</cite> 。</p>
@@ -230,38 +220,38 @@ Hint
 <p>补充一下 markdown 和 Jupyter Notebook 的 meta 头，方便电脑上没有安装 Nikola 的读者直接粘贴使用：</p>
 <div class="section" id="jupyter-notebook">
 <h3><a class="toc-backref" href="#id12">Jupyter Notebook</a></h3>
-<pre class="code json"><a name="rest_code_814ee82028c24c89a861f10c418ee73a-1"></a><span class="s2">"nikola"</span><span class="err">:</span> <span class="p">{</span>
-<a name="rest_code_814ee82028c24c89a861f10c418ee73a-2"></a>  <span class="nt">"title"</span><span class="p">:</span> <span class="s2">"静态博客 Nikola 之写作实践"</span><span class="p">,</span>
-<a name="rest_code_814ee82028c24c89a861f10c418ee73a-3"></a>  <span class="nt">"slug"</span><span class="p">:</span> <span class="s2">"jing-tai-bo-ke-nikola-zhi-xie-zuo-shi-jian"</span><span class="p">,</span>
-<a name="rest_code_814ee82028c24c89a861f10c418ee73a-4"></a>  <span class="nt">"date"</span><span class="p">:</span> <span class="s2">"2017-09-20 11:32:34 UTC+08:00"</span><span class="p">,</span>
-<a name="rest_code_814ee82028c24c89a861f10c418ee73a-5"></a>  <span class="nt">"tags"</span><span class="p">:</span> <span class="s2">"nikola, reST, markdown"</span><span class="p">,</span>
-<a name="rest_code_814ee82028c24c89a861f10c418ee73a-6"></a>  <span class="nt">"category"</span><span class="p">:</span> <span class="s2">"markdown"</span><span class="p">,</span>
-<a name="rest_code_814ee82028c24c89a861f10c418ee73a-7"></a>  <span class="nt">"author"</span><span class="p">:</span> <span class="s2">"macplay"</span>
-<a name="rest_code_814ee82028c24c89a861f10c418ee73a-8"></a><span class="p">}</span><span class="err">,</span>
+<pre class="code json"><a name="rest_code_7456dc8701344d89adb1bf0bd373e2bb-1"></a><span class="s2">"nikola"</span><span class="err">:</span> <span class="p">{</span>
+<a name="rest_code_7456dc8701344d89adb1bf0bd373e2bb-2"></a>  <span class="nt">"title"</span><span class="p">:</span> <span class="s2">"静态博客 Nikola 之写作实践"</span><span class="p">,</span>
+<a name="rest_code_7456dc8701344d89adb1bf0bd373e2bb-3"></a>  <span class="nt">"slug"</span><span class="p">:</span> <span class="s2">"jing-tai-bo-ke-nikola-zhi-xie-zuo-shi-jian"</span><span class="p">,</span>
+<a name="rest_code_7456dc8701344d89adb1bf0bd373e2bb-4"></a>  <span class="nt">"date"</span><span class="p">:</span> <span class="s2">"2017-09-20 11:32:34 UTC+08:00"</span><span class="p">,</span>
+<a name="rest_code_7456dc8701344d89adb1bf0bd373e2bb-5"></a>  <span class="nt">"tags"</span><span class="p">:</span> <span class="s2">"nikola, reST, markdown"</span><span class="p">,</span>
+<a name="rest_code_7456dc8701344d89adb1bf0bd373e2bb-6"></a>  <span class="nt">"category"</span><span class="p">:</span> <span class="s2">"markdown"</span><span class="p">,</span>
+<a name="rest_code_7456dc8701344d89adb1bf0bd373e2bb-7"></a>  <span class="nt">"author"</span><span class="p">:</span> <span class="s2">"macplay"</span>
+<a name="rest_code_7456dc8701344d89adb1bf0bd373e2bb-8"></a><span class="p">}</span><span class="err">,</span>
 </pre>
 </div>
 <div class="section" id="markdown">
 <h3><a class="toc-backref" href="#id13">Markdown</a></h3>
-<pre class="code html"><a name="rest_code_d4f6b0b25f2b4802b456f7119fdd6622-1"></a><span class="c">&lt;!--</span>
-<a name="rest_code_d4f6b0b25f2b4802b456f7119fdd6622-2"></a><span class="c">.. title: 静态博客 Nikola 之写作实践</span>
-<a name="rest_code_d4f6b0b25f2b4802b456f7119fdd6622-3"></a><span class="c">.. slug: jing-tai-bo-ke-nikola-zhi-xie-zuo-shi-jian</span>
-<a name="rest_code_d4f6b0b25f2b4802b456f7119fdd6622-4"></a><span class="c">.. date: 2017-09-20 11:32:34 UTC+08:00</span>
-<a name="rest_code_d4f6b0b25f2b4802b456f7119fdd6622-5"></a><span class="c">.. tags: nikola, reST, markdown</span>
-<a name="rest_code_d4f6b0b25f2b4802b456f7119fdd6622-6"></a><span class="c">.. category: markdown</span>
-<a name="rest_code_d4f6b0b25f2b4802b456f7119fdd6622-7"></a><span class="c">.. author: macplay</span>
-<a name="rest_code_d4f6b0b25f2b4802b456f7119fdd6622-8"></a><span class="c">--&gt;</span>
+<pre class="code html"><a name="rest_code_8d4ab09ba7d743a69f65d3c2515d7ef2-1"></a><span class="c">&lt;!--</span>
+<a name="rest_code_8d4ab09ba7d743a69f65d3c2515d7ef2-2"></a><span class="c">.. title: 静态博客 Nikola 之写作实践</span>
+<a name="rest_code_8d4ab09ba7d743a69f65d3c2515d7ef2-3"></a><span class="c">.. slug: jing-tai-bo-ke-nikola-zhi-xie-zuo-shi-jian</span>
+<a name="rest_code_8d4ab09ba7d743a69f65d3c2515d7ef2-4"></a><span class="c">.. date: 2017-09-20 11:32:34 UTC+08:00</span>
+<a name="rest_code_8d4ab09ba7d743a69f65d3c2515d7ef2-5"></a><span class="c">.. tags: nikola, reST, markdown</span>
+<a name="rest_code_8d4ab09ba7d743a69f65d3c2515d7ef2-6"></a><span class="c">.. category: markdown</span>
+<a name="rest_code_8d4ab09ba7d743a69f65d3c2515d7ef2-7"></a><span class="c">.. author: macplay</span>
+<a name="rest_code_8d4ab09ba7d743a69f65d3c2515d7ef2-8"></a><span class="c">--&gt;</span>
 </pre>
 <p>Markdown 常用的 <a class="reference external" href="https://jekyllrb.com/docs/frontmatter/">YAML front matter</a> 也是支持的，毋需任何设置。</p>
-<pre class="code yaml"><a name="rest_code_f88f86eb0f914f6198a06dab19f9fbec-1"></a><span class="nn">---</span>
-<a name="rest_code_f88f86eb0f914f6198a06dab19f9fbec-2"></a>
-<a name="rest_code_f88f86eb0f914f6198a06dab19f9fbec-3"></a><span class="l l-Scalar l-Scalar-Plain">title</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">静态博客 Nikola 之写作实践</span>
-<a name="rest_code_f88f86eb0f914f6198a06dab19f9fbec-4"></a><span class="l l-Scalar l-Scalar-Plain">slug</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">jing-tai-bo-ke-nikola-zhi-xie-zuo-shi-jian</span>
-<a name="rest_code_f88f86eb0f914f6198a06dab19f9fbec-5"></a><span class="l l-Scalar l-Scalar-Plain">date</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">2017-09-20 11:32:34 UTC+08:00</span>
-<a name="rest_code_f88f86eb0f914f6198a06dab19f9fbec-6"></a><span class="l l-Scalar l-Scalar-Plain">tags</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">nikola, reST, markdown</span>
-<a name="rest_code_f88f86eb0f914f6198a06dab19f9fbec-7"></a><span class="l l-Scalar l-Scalar-Plain">category</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">markdown</span>
-<a name="rest_code_f88f86eb0f914f6198a06dab19f9fbec-8"></a><span class="l l-Scalar l-Scalar-Plain">author</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">macplay</span>
-<a name="rest_code_f88f86eb0f914f6198a06dab19f9fbec-9"></a>
-<a name="rest_code_f88f86eb0f914f6198a06dab19f9fbec-10"></a><span class="nn">---</span>
+<pre class="code yaml"><a name="rest_code_fa18879d1d20485387549ac03a0896cf-1"></a><span class="nn">---</span>
+<a name="rest_code_fa18879d1d20485387549ac03a0896cf-2"></a>
+<a name="rest_code_fa18879d1d20485387549ac03a0896cf-3"></a><span class="l l-Scalar l-Scalar-Plain">title</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">静态博客 Nikola 之写作实践</span>
+<a name="rest_code_fa18879d1d20485387549ac03a0896cf-4"></a><span class="l l-Scalar l-Scalar-Plain">slug</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">jing-tai-bo-ke-nikola-zhi-xie-zuo-shi-jian</span>
+<a name="rest_code_fa18879d1d20485387549ac03a0896cf-5"></a><span class="l l-Scalar l-Scalar-Plain">date</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">2017-09-20 11:32:34 UTC+08:00</span>
+<a name="rest_code_fa18879d1d20485387549ac03a0896cf-6"></a><span class="l l-Scalar l-Scalar-Plain">tags</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">nikola, reST, markdown</span>
+<a name="rest_code_fa18879d1d20485387549ac03a0896cf-7"></a><span class="l l-Scalar l-Scalar-Plain">category</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">markdown</span>
+<a name="rest_code_fa18879d1d20485387549ac03a0896cf-8"></a><span class="l l-Scalar l-Scalar-Plain">author</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">macplay</span>
+<a name="rest_code_fa18879d1d20485387549ac03a0896cf-9"></a>
+<a name="rest_code_fa18879d1d20485387549ac03a0896cf-10"></a><span class="nn">---</span>
 </pre>
 <table class="docutils footnote" frame="void" id="id5" rules="none">
 <colgroup>
@@ -298,29 +288,42 @@ Hint
         <div id="gitalk-container" class="comments-block no-print"></div>
 </div>
                     </div>
-                    </main><div class="footer extra-block no-print">
-        <a onclick="$('.ui.sidebar').sidebar('setting', 'transition', 'push').sidebar('show');">友情链接</a>
+                </main><div class="footer extra-block no-print">
+        <a onclick="$('.ui.modal.blogroll').modal('show');">友情链接</a>
     </div>
-        <div class="footer social-link no-print">
-        <a href="https://github.com/ashfinal" target="_blank"><i class="grey large github icon"></i></a>
-        <a href="http://weibo.com/ashfinal/" target="_blank"><i class="grey large weibo icon"></i></a>
-        <a href="mailto://ashfinal@sina.cn" target="_blank"><i class="grey large mail icon"></i></a>
-        </div>
+            <div class="footer social-link no-print">
+            <a href="https://github.com/ashfinal" target="_blank"><i class="grey large github icon"></i></a>
+            <a href="http://weibo.com/ashfinal/" target="_blank"><i class="grey large weibo icon"></i></a>
+            <a href="mailto://ashfinal@sina.cn" target="_blank"><i class="grey large mail icon"></i></a>
+            </div>
         <div class="ui basic center aligned segment no-print">Contents © 2017         <a href="mailto:ashfinal@sina.cn">ashfinal</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </div>
 
-                </div>
-                <div class="computer only three wide column no-print">
-                    <div id="right-side">
-                    </div>
+            </div>
+            <div class="computer only three wide column no-print">
+                <div id="right-side">
                 </div>
             </div>
         </div>
 
-        <script type="text/javascript" src="../../assets/js/jquery-3.2.1.min.js"></script><script type="text/javascript" src="../../assets/js/semantic.min.js"></script><script type="text/javascript" src="../../assets/js/jquery.fancybox.min.js"></script><script>
+        <div class="ui modal blogroll">
+            <div class="ui center aligned header">友情链接</div>
+            <div class="ui center aligned container">
+                    <a href="http://macplay.coding.me/aria2/" class="ui basic small violet button siteitem" data-tooltip="漂亮的 aria2 网页管理前端" data-position="top center">AriaNg</a>
+                    <a href="https://github.com/ashfinal/awesome-hammerspoon" class="ui basic small violet button siteitem" data-tooltip="macOS 自动化软件 Hammerspoon 的必备配置" data-position="top center">awesome-hammerspoon</a>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="../../assets/js/jquery-3.2.1.min.js"></script><script type="text/javascript" src="../../assets/js/semantic.min.js"></script><script type="text/javascript" src="../../assets/js/jquery.fancybox.min.js"></script><script type="text/javascript" src="../../assets/js/cookie.min.js"></script><script>
             $(document).ready(function(){
                 $(".ui.dropdown").dropdown();
                 $('.ui.accordion').accordion();
-                $('.ui.nag').nag();
+                var newstr = $('.cookie.nag').text();
+                $('.cookie.nag')
+                  .nag({
+                    key      : 'globalnotice',
+                    value    : newstr
+                  })
+                ;
                 $('.image-reference').fancybox();
             });
         </script><script async type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59ecbed442c8595a"></script><script src="../../assets/js/gitalk.min.js"></script><script>
