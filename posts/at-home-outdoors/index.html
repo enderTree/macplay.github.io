@@ -117,9 +117,9 @@
 <p>（点击封面加载视频）</p>
 <a class="reference external image-reference" href="https://vimeo.com/channels/staffpicks/236370796"><img alt="https://i.vimeocdn.com/video/658454374_1040x584.jpg" class="align-center" src="https://i.vimeocdn.com/video/658454374_1040x584.jpg"></a>
 <p>写作语法上和插入一张图片没有什么区别：</p>
-<pre class="code rst"><a name="rest_code_9bfa4c0548154308ba8457c08a65ec0f-1"></a><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> https://i.vimeocdn.com/video/658454374_1040x584.jpg
-<a name="rest_code_9bfa4c0548154308ba8457c08a65ec0f-2"></a>   <span class="nc">:align:</span> <span class="nf">center</span>
-<a name="rest_code_9bfa4c0548154308ba8457c08a65ec0f-3"></a>   <span class="nc">:target:</span> <span class="nf">https://vimeo.com/channels/staffpicks/236370796</span>
+<pre class="code rst"><a name="rest_code_3624b1de8bb549ecb3648b0093587dcc-1"></a><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> https://i.vimeocdn.com/video/658454374_1040x584.jpg
+<a name="rest_code_3624b1de8bb549ecb3648b0093587dcc-2"></a>   <span class="nc">:align:</span> <span class="nf">center</span>
+<a name="rest_code_3624b1de8bb549ecb3648b0093587dcc-3"></a>   <span class="nc">:target:</span> <span class="nf">https://vimeo.com/channels/staffpicks/236370796</span>
 </pre>
 </div>
         </div>
@@ -145,7 +145,7 @@
 </div>
                     </div>
                 </main><div class="footer extra-block no-print">
-        <a onclick="$('.ui.modal.blogroll').modal('show');">友情链接</a>
+        <a href="../../pages/you-qing-lian-jie/">友情链接</a>
     </div>
             <div class="footer social-link no-print">
             <a href="https://github.com/ashfinal" target="_blank"><i class="grey large github icon"></i></a>
@@ -161,25 +161,15 @@
             </div>
         </div>
 
-        <div class="ui modal blogroll">
-            <div class="ui center aligned header">友情链接</div>
-            <div class="ui center aligned container">
-                    <a href="http://macplay.coding.me/aria2/" class="ui basic small violet button siteitem" data-tooltip="漂亮的 aria2 网页管理前端" data-position="top center">AriaNg</a>
-                    <a href="https://github.com/ashfinal/awesome-hammerspoon" class="ui basic small violet button siteitem" data-tooltip="macOS 自动化软件 Hammerspoon 的必备配置" data-position="top center">awesome-hammerspoon</a>
-            </div>
-        </div>
-
         <script type="text/javascript" src="../../assets/js/jquery-3.2.1.min.js"></script><script type="text/javascript" src="../../assets/js/semantic.min.js"></script><script type="text/javascript" src="../../assets/js/jquery.fancybox.min.js"></script><script type="text/javascript" src="../../assets/js/cookie.min.js"></script><script>
             $(document).ready(function(){
                 $(".ui.dropdown").dropdown();
                 $('.ui.accordion').accordion();
                 var newstr = $('.cookie.nag').text();
-                $('.cookie.nag')
-                  .nag({
-                    key      : 'globalnotice',
-                    value    : newstr
-                  })
-                ;
+                $('.cookie.nag').nag({
+                    key: 'globalnotice',
+                    value: newstr
+                  });
                 $('.image-reference').fancybox();
             });
         </script><script async type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59ecbed442c8595a"></script><script src="../../assets/js/gitalk.min.js"></script><script>

@@ -137,30 +137,30 @@
 <p>看过一些文章得出结论：即使用 XeTeX 编译中文，也需要额外添加 <cite>xeCJK</cite> 包设置下字体。笔者也一直是这么做的。</p>
 <p>刚尝试了下，这一步其实是不必要的。直接用 <cite>fontspec</cite> 设置中文字体，不必引入额外的包：</p>
 <table class="codetable"><tr>
-<td class="linenos"><div class="linenodiv"><pre><a href="#rest_code_715b1af4542e4b91972829c8d1c348ac-1"> 1</a>
-<a href="#rest_code_715b1af4542e4b91972829c8d1c348ac-2"> 2</a>
-<a href="#rest_code_715b1af4542e4b91972829c8d1c348ac-3"> 3</a>
-<a href="#rest_code_715b1af4542e4b91972829c8d1c348ac-4"> 4</a>
-<a href="#rest_code_715b1af4542e4b91972829c8d1c348ac-5"> 5</a>
-<a href="#rest_code_715b1af4542e4b91972829c8d1c348ac-6"> 6</a>
-<a href="#rest_code_715b1af4542e4b91972829c8d1c348ac-7"> 7</a>
-<a href="#rest_code_715b1af4542e4b91972829c8d1c348ac-8"> 8</a>
-<a href="#rest_code_715b1af4542e4b91972829c8d1c348ac-9"> 9</a>
-<a href="#rest_code_715b1af4542e4b91972829c8d1c348ac-10">10</a>
-<a href="#rest_code_715b1af4542e4b91972829c8d1c348ac-11">11</a>
-<a href="#rest_code_715b1af4542e4b91972829c8d1c348ac-12">12</a></pre></div></td>
-<td class="code"><pre class="code latex"><a name="rest_code_715b1af4542e4b91972829c8d1c348ac-1"></a><span class="c">%! TEX program = xelatex</span>
-<a name="rest_code_715b1af4542e4b91972829c8d1c348ac-2"></a>
-<a name="rest_code_715b1af4542e4b91972829c8d1c348ac-3"></a><span class="k">\usepackage</span><span class="nb">{</span>fontspec<span class="nb">}</span>
-<a name="rest_code_715b1af4542e4b91972829c8d1c348ac-4"></a><span class="k">\setmainfont</span><span class="nb">{</span>PingFang SC<span class="nb">}</span>
-<a name="rest_code_715b1af4542e4b91972829c8d1c348ac-5"></a><span class="k">\setsansfont</span><span class="nb">{</span>Hiragino Sans GB<span class="nb">}</span>
-<a name="rest_code_715b1af4542e4b91972829c8d1c348ac-6"></a><span class="k">\setmonofont</span><span class="na">[Scale=0.9]</span><span class="nb">{</span>PingFang SC<span class="nb">}</span>
-<a name="rest_code_715b1af4542e4b91972829c8d1c348ac-7"></a>
-<a name="rest_code_715b1af4542e4b91972829c8d1c348ac-8"></a><span class="k">\usepackage</span><span class="nb">{</span>indentfirst<span class="nb">}</span>
-<a name="rest_code_715b1af4542e4b91972829c8d1c348ac-9"></a><span class="k">\setlength</span><span class="nb">{</span><span class="k">\parindent</span><span class="nb">}{</span>2em<span class="nb">}</span>
-<a name="rest_code_715b1af4542e4b91972829c8d1c348ac-10"></a>
-<a name="rest_code_715b1af4542e4b91972829c8d1c348ac-11"></a><span class="k">\XeTeXlinebreaklocale</span> "zh"
-<a name="rest_code_715b1af4542e4b91972829c8d1c348ac-12"></a><span class="k">\XeTeXlinebreakskip</span> = 0pt plus 1pt minus 0.1pt
+<td class="linenos"><div class="linenodiv"><pre><a href="#rest_code_f707701ecfc74b50bfc3f23370dae1ac-1"> 1</a>
+<a href="#rest_code_f707701ecfc74b50bfc3f23370dae1ac-2"> 2</a>
+<a href="#rest_code_f707701ecfc74b50bfc3f23370dae1ac-3"> 3</a>
+<a href="#rest_code_f707701ecfc74b50bfc3f23370dae1ac-4"> 4</a>
+<a href="#rest_code_f707701ecfc74b50bfc3f23370dae1ac-5"> 5</a>
+<a href="#rest_code_f707701ecfc74b50bfc3f23370dae1ac-6"> 6</a>
+<a href="#rest_code_f707701ecfc74b50bfc3f23370dae1ac-7"> 7</a>
+<a href="#rest_code_f707701ecfc74b50bfc3f23370dae1ac-8"> 8</a>
+<a href="#rest_code_f707701ecfc74b50bfc3f23370dae1ac-9"> 9</a>
+<a href="#rest_code_f707701ecfc74b50bfc3f23370dae1ac-10">10</a>
+<a href="#rest_code_f707701ecfc74b50bfc3f23370dae1ac-11">11</a>
+<a href="#rest_code_f707701ecfc74b50bfc3f23370dae1ac-12">12</a></pre></div></td>
+<td class="code"><pre class="code latex"><a name="rest_code_f707701ecfc74b50bfc3f23370dae1ac-1"></a><span class="c">%! TEX program = xelatex</span>
+<a name="rest_code_f707701ecfc74b50bfc3f23370dae1ac-2"></a>
+<a name="rest_code_f707701ecfc74b50bfc3f23370dae1ac-3"></a><span class="k">\usepackage</span><span class="nb">{</span>fontspec<span class="nb">}</span>
+<a name="rest_code_f707701ecfc74b50bfc3f23370dae1ac-4"></a><span class="k">\setmainfont</span><span class="nb">{</span>PingFang SC<span class="nb">}</span>
+<a name="rest_code_f707701ecfc74b50bfc3f23370dae1ac-5"></a><span class="k">\setsansfont</span><span class="nb">{</span>Hiragino Sans GB<span class="nb">}</span>
+<a name="rest_code_f707701ecfc74b50bfc3f23370dae1ac-6"></a><span class="k">\setmonofont</span><span class="na">[Scale=0.9]</span><span class="nb">{</span>PingFang SC<span class="nb">}</span>
+<a name="rest_code_f707701ecfc74b50bfc3f23370dae1ac-7"></a>
+<a name="rest_code_f707701ecfc74b50bfc3f23370dae1ac-8"></a><span class="k">\usepackage</span><span class="nb">{</span>indentfirst<span class="nb">}</span>
+<a name="rest_code_f707701ecfc74b50bfc3f23370dae1ac-9"></a><span class="k">\setlength</span><span class="nb">{</span><span class="k">\parindent</span><span class="nb">}{</span>2em<span class="nb">}</span>
+<a name="rest_code_f707701ecfc74b50bfc3f23370dae1ac-10"></a>
+<a name="rest_code_f707701ecfc74b50bfc3f23370dae1ac-11"></a><span class="k">\XeTeXlinebreaklocale</span> "zh"
+<a name="rest_code_f707701ecfc74b50bfc3f23370dae1ac-12"></a><span class="k">\XeTeXlinebreakskip</span> = 0pt plus 1pt minus 0.1pt
 </pre></td>
 </tr></table>
 <p>第 1 行指定编译引擎 <cite>xelatex</cite> 。不成文的规范，LaTeX 客户端或编辑器插件不一定会遵守。</p>
@@ -193,7 +193,7 @@
 </div>
                     </div>
                 </main><div class="footer extra-block no-print">
-        <a onclick="$('.ui.modal.blogroll').modal('show');">友情链接</a>
+        <a href="../../pages/you-qing-lian-jie/">友情链接</a>
     </div>
             <div class="footer social-link no-print">
             <a href="https://github.com/ashfinal" target="_blank"><i class="grey large github icon"></i></a>
@@ -209,25 +209,15 @@
             </div>
         </div>
 
-        <div class="ui modal blogroll">
-            <div class="ui center aligned header">友情链接</div>
-            <div class="ui center aligned container">
-                    <a href="http://macplay.coding.me/aria2/" class="ui basic small violet button siteitem" data-tooltip="漂亮的 aria2 网页管理前端" data-position="top center">AriaNg</a>
-                    <a href="https://github.com/ashfinal/awesome-hammerspoon" class="ui basic small violet button siteitem" data-tooltip="macOS 自动化软件 Hammerspoon 的必备配置" data-position="top center">awesome-hammerspoon</a>
-            </div>
-        </div>
-
         <script type="text/javascript" src="../../assets/js/jquery-3.2.1.min.js"></script><script type="text/javascript" src="../../assets/js/semantic.min.js"></script><script type="text/javascript" src="../../assets/js/jquery.fancybox.min.js"></script><script type="text/javascript" src="../../assets/js/cookie.min.js"></script><script>
             $(document).ready(function(){
                 $(".ui.dropdown").dropdown();
                 $('.ui.accordion').accordion();
                 var newstr = $('.cookie.nag').text();
-                $('.cookie.nag')
-                  .nag({
-                    key      : 'globalnotice',
-                    value    : newstr
-                  })
-                ;
+                $('.cookie.nag').nag({
+                    key: 'globalnotice',
+                    value: newstr
+                  });
                 $('.image-reference').fancybox();
             });
         </script><script async type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59ecbed442c8595a"></script><script src="../../assets/js/gitalk.min.js"></script><script>
