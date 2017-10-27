@@ -137,30 +137,30 @@
 <p>看过一些文章得出结论：即使用 XeTeX 编译中文，也需要额外添加 <cite>xeCJK</cite> 包设置下字体。笔者也一直是这么做的。</p>
 <p>刚尝试了下，这一步其实是不必要的。直接用 <cite>fontspec</cite> 设置中文字体，不必引入额外的包：</p>
 <table class="codetable"><tr>
-<td class="linenos"><div class="linenodiv"><pre><a href="#rest_code_fb7c864490c64ce4b411e2272a2ea276-1"> 1</a>
-<a href="#rest_code_fb7c864490c64ce4b411e2272a2ea276-2"> 2</a>
-<a href="#rest_code_fb7c864490c64ce4b411e2272a2ea276-3"> 3</a>
-<a href="#rest_code_fb7c864490c64ce4b411e2272a2ea276-4"> 4</a>
-<a href="#rest_code_fb7c864490c64ce4b411e2272a2ea276-5"> 5</a>
-<a href="#rest_code_fb7c864490c64ce4b411e2272a2ea276-6"> 6</a>
-<a href="#rest_code_fb7c864490c64ce4b411e2272a2ea276-7"> 7</a>
-<a href="#rest_code_fb7c864490c64ce4b411e2272a2ea276-8"> 8</a>
-<a href="#rest_code_fb7c864490c64ce4b411e2272a2ea276-9"> 9</a>
-<a href="#rest_code_fb7c864490c64ce4b411e2272a2ea276-10">10</a>
-<a href="#rest_code_fb7c864490c64ce4b411e2272a2ea276-11">11</a>
-<a href="#rest_code_fb7c864490c64ce4b411e2272a2ea276-12">12</a></pre></div></td>
-<td class="code"><pre class="code latex"><a name="rest_code_fb7c864490c64ce4b411e2272a2ea276-1"></a><span class="c">%! TEX program = xelatex</span>
-<a name="rest_code_fb7c864490c64ce4b411e2272a2ea276-2"></a>
-<a name="rest_code_fb7c864490c64ce4b411e2272a2ea276-3"></a><span class="k">\usepackage</span><span class="nb">{</span>fontspec<span class="nb">}</span>
-<a name="rest_code_fb7c864490c64ce4b411e2272a2ea276-4"></a><span class="k">\setmainfont</span><span class="nb">{</span>PingFang SC<span class="nb">}</span>
-<a name="rest_code_fb7c864490c64ce4b411e2272a2ea276-5"></a><span class="k">\setsansfont</span><span class="nb">{</span>Hiragino Sans GB<span class="nb">}</span>
-<a name="rest_code_fb7c864490c64ce4b411e2272a2ea276-6"></a><span class="k">\setmonofont</span><span class="na">[Scale=0.9]</span><span class="nb">{</span>PingFang SC<span class="nb">}</span>
-<a name="rest_code_fb7c864490c64ce4b411e2272a2ea276-7"></a>
-<a name="rest_code_fb7c864490c64ce4b411e2272a2ea276-8"></a><span class="k">\usepackage</span><span class="nb">{</span>indentfirst<span class="nb">}</span>
-<a name="rest_code_fb7c864490c64ce4b411e2272a2ea276-9"></a><span class="k">\setlength</span><span class="nb">{</span><span class="k">\parindent</span><span class="nb">}{</span>2em<span class="nb">}</span>
-<a name="rest_code_fb7c864490c64ce4b411e2272a2ea276-10"></a>
-<a name="rest_code_fb7c864490c64ce4b411e2272a2ea276-11"></a><span class="k">\XeTeXlinebreaklocale</span> "zh"
-<a name="rest_code_fb7c864490c64ce4b411e2272a2ea276-12"></a><span class="k">\XeTeXlinebreakskip</span> = 0pt plus 1pt minus 0.1pt
+<td class="linenos"><div class="linenodiv"><pre><a href="#rest_code_88d23b7b23fe46acb41228ca06186c2f-1"> 1</a>
+<a href="#rest_code_88d23b7b23fe46acb41228ca06186c2f-2"> 2</a>
+<a href="#rest_code_88d23b7b23fe46acb41228ca06186c2f-3"> 3</a>
+<a href="#rest_code_88d23b7b23fe46acb41228ca06186c2f-4"> 4</a>
+<a href="#rest_code_88d23b7b23fe46acb41228ca06186c2f-5"> 5</a>
+<a href="#rest_code_88d23b7b23fe46acb41228ca06186c2f-6"> 6</a>
+<a href="#rest_code_88d23b7b23fe46acb41228ca06186c2f-7"> 7</a>
+<a href="#rest_code_88d23b7b23fe46acb41228ca06186c2f-8"> 8</a>
+<a href="#rest_code_88d23b7b23fe46acb41228ca06186c2f-9"> 9</a>
+<a href="#rest_code_88d23b7b23fe46acb41228ca06186c2f-10">10</a>
+<a href="#rest_code_88d23b7b23fe46acb41228ca06186c2f-11">11</a>
+<a href="#rest_code_88d23b7b23fe46acb41228ca06186c2f-12">12</a></pre></div></td>
+<td class="code"><pre class="code latex"><a name="rest_code_88d23b7b23fe46acb41228ca06186c2f-1"></a><span class="c">%! TEX program = xelatex</span>
+<a name="rest_code_88d23b7b23fe46acb41228ca06186c2f-2"></a>
+<a name="rest_code_88d23b7b23fe46acb41228ca06186c2f-3"></a><span class="k">\usepackage</span><span class="nb">{</span>fontspec<span class="nb">}</span>
+<a name="rest_code_88d23b7b23fe46acb41228ca06186c2f-4"></a><span class="k">\setmainfont</span><span class="nb">{</span>PingFang SC<span class="nb">}</span>
+<a name="rest_code_88d23b7b23fe46acb41228ca06186c2f-5"></a><span class="k">\setsansfont</span><span class="nb">{</span>Hiragino Sans GB<span class="nb">}</span>
+<a name="rest_code_88d23b7b23fe46acb41228ca06186c2f-6"></a><span class="k">\setmonofont</span><span class="na">[Scale=0.9]</span><span class="nb">{</span>PingFang SC<span class="nb">}</span>
+<a name="rest_code_88d23b7b23fe46acb41228ca06186c2f-7"></a>
+<a name="rest_code_88d23b7b23fe46acb41228ca06186c2f-8"></a><span class="k">\usepackage</span><span class="nb">{</span>indentfirst<span class="nb">}</span>
+<a name="rest_code_88d23b7b23fe46acb41228ca06186c2f-9"></a><span class="k">\setlength</span><span class="nb">{</span><span class="k">\parindent</span><span class="nb">}{</span>2em<span class="nb">}</span>
+<a name="rest_code_88d23b7b23fe46acb41228ca06186c2f-10"></a>
+<a name="rest_code_88d23b7b23fe46acb41228ca06186c2f-11"></a><span class="k">\XeTeXlinebreaklocale</span> "zh"
+<a name="rest_code_88d23b7b23fe46acb41228ca06186c2f-12"></a><span class="k">\XeTeXlinebreakskip</span> = 0pt plus 1pt minus 0.1pt
 </pre></td>
 </tr></table>
 <p>第 1 行指定编译引擎 <cite>xelatex</cite> 。不成文的规范，LaTeX 客户端或编辑器插件不一定会遵守。</p>
@@ -179,7 +179,6 @@
             </time></p>
         <p>版权声明：如无特别说明，本站文章均遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a> 协议，转载请注明作者及出处。</p>
     </div>
-    <div class="addthis_inline_share_toolbox"></div>
         <div class="post-navigation no-print">
         <div class="ui huge secondary stackable menu">
             <a class="post-nav-item post-nav-previous item" href="../cong-markdown-dao-restructuredtextsi/" title="Previous post"><i class="angle double left icon"></i> 从 Markdown 到 reStructuredText（四）</a>
@@ -220,7 +219,7 @@
                   });
                 $('.image-reference').fancybox();
             });
-        </script><script async type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59ecbed442c8595a"></script><script src="../../assets/js/gitalk.min.js"></script><script>
+        </script><script src="../../assets/js/gitalk.min.js"></script><script>
         const gitalk = new Gitalk({
             clientID: '12fcda845097d895a24c',
             clientSecret: '50ed60cde5f40897205197b4265b474cefbedc49',

@@ -345,10 +345,10 @@
 </li>
 <li>
 <p class="first">macOS 计算机名相关</p>
-<pre class="code shell"><a name="rest_code_4962bf363b7442df8c57d9c68f0a8d3e-1"></a>sudo scutil --set HostName <span class="s2">"iMBP"</span>
-<a name="rest_code_4962bf363b7442df8c57d9c68f0a8d3e-2"></a>sudo scutil --set ComputerName <span class="s2">"iMBP"</span>
-<a name="rest_code_4962bf363b7442df8c57d9c68f0a8d3e-3"></a>sudo scutil --set LocalHostName <span class="s2">"iMBP"</span>
-<a name="rest_code_4962bf363b7442df8c57d9c68f0a8d3e-4"></a>sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string <span class="s2">"iMBP"</span>
+<pre class="code shell"><a name="rest_code_6fb80c5c11b9496a8335e1440e3d56ab-1"></a>sudo scutil --set HostName <span class="s2">"iMBP"</span>
+<a name="rest_code_6fb80c5c11b9496a8335e1440e3d56ab-2"></a>sudo scutil --set ComputerName <span class="s2">"iMBP"</span>
+<a name="rest_code_6fb80c5c11b9496a8335e1440e3d56ab-3"></a>sudo scutil --set LocalHostName <span class="s2">"iMBP"</span>
+<a name="rest_code_6fb80c5c11b9496a8335e1440e3d56ab-4"></a>sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string <span class="s2">"iMBP"</span>
 </pre>
 </li>
 <li>
@@ -369,11 +369,11 @@
 </li>
 <li>
 <p class="first">命令行版的 gist</p>
-<pre class="code shell"><a name="rest_code_975f735db00c4f378ebaad429eafcdce-1"></a>gist --login
-<a name="rest_code_975f735db00c4f378ebaad429eafcdce-2"></a>gist
-<a name="rest_code_975f735db00c4f378ebaad429eafcdce-3"></a>gist selenium0.py
-<a name="rest_code_975f735db00c4f378ebaad429eafcdce-4"></a>gist -l ashfinal
-<a name="rest_code_975f735db00c4f378ebaad429eafcdce-5"></a>gist -d <span class="s2">"aria2 launchagent for macOS"</span> com.github.aria2.plist
+<pre class="code shell"><a name="rest_code_8bb15f041f764ee1a7df62e3aa9e1945-1"></a>gist --login
+<a name="rest_code_8bb15f041f764ee1a7df62e3aa9e1945-2"></a>gist
+<a name="rest_code_8bb15f041f764ee1a7df62e3aa9e1945-3"></a>gist selenium0.py
+<a name="rest_code_8bb15f041f764ee1a7df62e3aa9e1945-4"></a>gist -l ashfinal
+<a name="rest_code_8bb15f041f764ee1a7df62e3aa9e1945-5"></a>gist -d <span class="s2">"aria2 launchagent for macOS"</span> com.github.aria2.plist
 </pre>
 </li>
 <li>
@@ -398,14 +398,14 @@
 </li>
 <li>
 <p class="first">从 git 历史中删除二进制文件</p>
-<pre class="code shell"><a name="rest_code_92217c04371544be978a0e350aff79be-1"></a>git filter-branch --force --index-filter <span class="se">\\</span>
-<a name="rest_code_92217c04371544be978a0e350aff79be-2"></a><span class="s1">'git rm --cached --ignore-unmatch resources/watchbg.png'</span> <span class="se">\\</span>
-<a name="rest_code_92217c04371544be978a0e350aff79be-3"></a>--prune-empty --tag-name-filter cat -- --all
+<pre class="code shell"><a name="rest_code_954ae98aa7874b7e969b64e4877880dc-1"></a>git filter-branch --force --index-filter <span class="se">\\</span>
+<a name="rest_code_954ae98aa7874b7e969b64e4877880dc-2"></a><span class="s1">'git rm --cached --ignore-unmatch resources/watchbg.png'</span> <span class="se">\\</span>
+<a name="rest_code_954ae98aa7874b7e969b64e4877880dc-3"></a>--prune-empty --tag-name-filter cat -- --all
 </pre>
 <p>后面还需要三个命令：</p>
-<pre class="code shell"><a name="rest_code_b161fd62735a4aa6a0b28afd9d2ccd6d-1"></a>git reflog expire --expire<span class="o">=</span>now --all
-<a name="rest_code_b161fd62735a4aa6a0b28afd9d2ccd6d-2"></a>git gc --prune<span class="o">=</span>now
-<a name="rest_code_b161fd62735a4aa6a0b28afd9d2ccd6d-3"></a>git gc --aggressive --prune<span class="o">=</span>now
+<pre class="code shell"><a name="rest_code_38186678b3074c64b687188249114719-1"></a>git reflog expire --expire<span class="o">=</span>now --all
+<a name="rest_code_38186678b3074c64b687188249114719-2"></a>git gc --prune<span class="o">=</span>now
+<a name="rest_code_38186678b3074c64b687188249114719-3"></a>git gc --aggressive --prune<span class="o">=</span>now
 </pre>
 </li>
 <li>
@@ -439,7 +439,6 @@
             </time></p>
         <p>版权声明：如无特别说明，本站文章均遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a> 协议，转载请注明作者及出处。</p>
     </div>
-    <div class="addthis_inline_share_toolbox"></div>
         <div class="post-navigation no-print">
         <div class="ui huge secondary stackable menu">
             <a class="post-nav-item post-nav-previous item" href="../old-man-smoked-his-pipe/" title="Previous post"><i class="angle double left icon"></i> Old Man Smoked His Pipe</a>
@@ -480,7 +479,7 @@
                   });
                 $('.image-reference').fancybox();
             });
-        </script><script async type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59ecbed442c8595a"></script><script src="../../assets/js/gitalk.min.js"></script><script>
+        </script><script src="../../assets/js/gitalk.min.js"></script><script>
         const gitalk = new Gitalk({
             clientID: '12fcda845097d895a24c',
             clientSecret: '50ed60cde5f40897205197b4265b474cefbedc49',
