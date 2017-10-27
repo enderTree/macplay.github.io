@@ -345,10 +345,10 @@
 </li>
 <li>
 <p class="first">macOS 计算机名相关</p>
-<pre class="code shell"><a name="rest_code_872c0a5ba923417c9b502135fce6b5f6-1"></a>sudo scutil --set HostName <span class="s2">"iMBP"</span>
-<a name="rest_code_872c0a5ba923417c9b502135fce6b5f6-2"></a>sudo scutil --set ComputerName <span class="s2">"iMBP"</span>
-<a name="rest_code_872c0a5ba923417c9b502135fce6b5f6-3"></a>sudo scutil --set LocalHostName <span class="s2">"iMBP"</span>
-<a name="rest_code_872c0a5ba923417c9b502135fce6b5f6-4"></a>sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string <span class="s2">"iMBP"</span>
+<pre class="code shell"><a name="rest_code_77c9215b9553491ab199c0097657e064-1"></a>sudo scutil --set HostName <span class="s2">"iMBP"</span>
+<a name="rest_code_77c9215b9553491ab199c0097657e064-2"></a>sudo scutil --set ComputerName <span class="s2">"iMBP"</span>
+<a name="rest_code_77c9215b9553491ab199c0097657e064-3"></a>sudo scutil --set LocalHostName <span class="s2">"iMBP"</span>
+<a name="rest_code_77c9215b9553491ab199c0097657e064-4"></a>sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string <span class="s2">"iMBP"</span>
 </pre>
 </li>
 <li>
@@ -369,11 +369,11 @@
 </li>
 <li>
 <p class="first">命令行版的 gist</p>
-<pre class="code shell"><a name="rest_code_7df1df2cfeef46b7a53741f17a74bf2d-1"></a>gist --login
-<a name="rest_code_7df1df2cfeef46b7a53741f17a74bf2d-2"></a>gist
-<a name="rest_code_7df1df2cfeef46b7a53741f17a74bf2d-3"></a>gist selenium0.py
-<a name="rest_code_7df1df2cfeef46b7a53741f17a74bf2d-4"></a>gist -l ashfinal
-<a name="rest_code_7df1df2cfeef46b7a53741f17a74bf2d-5"></a>gist -d <span class="s2">"aria2 launchagent for macOS"</span> com.github.aria2.plist
+<pre class="code shell"><a name="rest_code_5f1916258af44a66b4ee2d644df38a03-1"></a>gist --login
+<a name="rest_code_5f1916258af44a66b4ee2d644df38a03-2"></a>gist
+<a name="rest_code_5f1916258af44a66b4ee2d644df38a03-3"></a>gist selenium0.py
+<a name="rest_code_5f1916258af44a66b4ee2d644df38a03-4"></a>gist -l ashfinal
+<a name="rest_code_5f1916258af44a66b4ee2d644df38a03-5"></a>gist -d <span class="s2">"aria2 launchagent for macOS"</span> com.github.aria2.plist
 </pre>
 </li>
 <li>
@@ -398,14 +398,14 @@
 </li>
 <li>
 <p class="first">从 git 历史中删除二进制文件</p>
-<pre class="code shell"><a name="rest_code_4a75ceb8675748b9a34ea36d3d03d83f-1"></a>git filter-branch --force --index-filter <span class="se">\\</span>
-<a name="rest_code_4a75ceb8675748b9a34ea36d3d03d83f-2"></a><span class="s1">'git rm --cached --ignore-unmatch resources/watchbg.png'</span> <span class="se">\\</span>
-<a name="rest_code_4a75ceb8675748b9a34ea36d3d03d83f-3"></a>--prune-empty --tag-name-filter cat -- --all
+<pre class="code shell"><a name="rest_code_d864fef063234f30a3b5e96afccc6a1d-1"></a>git filter-branch --force --index-filter <span class="se">\\</span>
+<a name="rest_code_d864fef063234f30a3b5e96afccc6a1d-2"></a><span class="s1">'git rm --cached --ignore-unmatch resources/watchbg.png'</span> <span class="se">\\</span>
+<a name="rest_code_d864fef063234f30a3b5e96afccc6a1d-3"></a>--prune-empty --tag-name-filter cat -- --all
 </pre>
 <p>后面还需要三个命令：</p>
-<pre class="code shell"><a name="rest_code_88168b4e3e8247f3bc02886be65b1a55-1"></a>git reflog expire --expire<span class="o">=</span>now --all
-<a name="rest_code_88168b4e3e8247f3bc02886be65b1a55-2"></a>git gc --prune<span class="o">=</span>now
-<a name="rest_code_88168b4e3e8247f3bc02886be65b1a55-3"></a>git gc --aggressive --prune<span class="o">=</span>now
+<pre class="code shell"><a name="rest_code_f8f48908d0fb4ec6bb1cfdbff68c5fe1-1"></a>git reflog expire --expire<span class="o">=</span>now --all
+<a name="rest_code_f8f48908d0fb4ec6bb1cfdbff68c5fe1-2"></a>git gc --prune<span class="o">=</span>now
+<a name="rest_code_f8f48908d0fb4ec6bb1cfdbff68c5fe1-3"></a>git gc --aggressive --prune<span class="o">=</span>now
 </pre>
 </li>
 <li>
@@ -467,6 +467,10 @@
                 </div>
             </div>
         </div>
+
+        <!-- GoStats Simple HTML Based Code -->
+        <a target="_blank" title="web site traffic statistics" href="http://www.gostats.org"><img alt="web site traffic statistics" src="//www.gostats.org/0.png?a=100479892&amp;ct=5&amp;ci=1" style="border-width:0"></a>
+        <!-- End GoStats Simple HTML Based Code -->
 
         <script type="text/javascript" src="../../assets/js/jquery-3.2.1.min.js"></script><script type="text/javascript" src="../../assets/js/semantic.min.js"></script><script type="text/javascript" src="../../assets/js/jquery.fancybox.min.js"></script><script type="text/javascript" src="../../assets/js/cookie.min.js"></script><script>
             $(document).ready(function(){
