@@ -68,6 +68,65 @@
     <div class="postindex page-body">
     <div class="post-entry post-text">
         <div class="entry-title">
+            <a href="posts/pygal-charts-get-started/">Pygal charts get started</a>
+        </div>
+        <div class="post-meta">
+            <span class="post-meta-item-icon">
+                <i class="user icon"></i>
+            </span>
+            <span class="post-meta-item-text" itemprop="author">
+                <a href="authors/ashfinal/">ashfinal</a>
+            </span>
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+                <i class="calendar icon"></i>
+            </span>
+            <span class="post-meta-item-text">
+                <a href="archive.html">
+                    <time datetime="2017-09-18T11:09:34+08:00" itemprop="datePublished" title="2017-09-18 11:09">2017-09-18 11:09
+                    </time></a>
+            </span>
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                    <i class="tags icon"></i>
+                </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/charts/">charts</a>
+                            </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/pygal/">pygal</a>
+                            </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/python/">python</a>
+                            </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/rest/">reST</a>
+                            </span>
+        </div>
+        <div class="post-summary">
+                <div>
+<p>If you are using reStructuredText and install pygal, Nikola has support for rather nice charts
+with little effort, and i's even semi-interactive (hover your pointer over the legend!):</p>
+<pre class="code rest"><a name="rest_code_bfa7e621ed514ef79064c68fca861e48-1"></a><span class="p">..</span> <span class="ow">chart</span><span class="p">::</span> StackedLine
+<a name="rest_code_bfa7e621ed514ef79064c68fca861e48-2"></a>   <span class="nc">:title:</span> <span class="nf">'Browser usage evolution (in %)'</span>
+<a name="rest_code_bfa7e621ed514ef79064c68fca861e48-3"></a>   <span class="nc">:fill:</span> <span class="nf">True</span>
+<a name="rest_code_bfa7e621ed514ef79064c68fca861e48-4"></a>   <span class="nc">:x_labels:</span> <span class="nf">['2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012']</span>
+<a name="rest_code_bfa7e621ed514ef79064c68fca861e48-5"></a>   <span class="nc">:width:</span> <span class="nf">600</span>
+<a name="rest_code_bfa7e621ed514ef79064c68fca861e48-6"></a>   <span class="nc">:height:</span> <span class="nf">400</span>
+<a name="rest_code_bfa7e621ed514ef79064c68fca861e48-7"></a>   <span class="nc">:explicit_size:</span> <span class="nf">True</span>
+<a name="rest_code_bfa7e621ed514ef79064c68fca861e48-8"></a>   <span class="nc">:style:</span> <span class="nf">BlueStyle</span>
+<a name="rest_code_bfa7e621ed514ef79064c68fca861e48-9"></a>
+<a name="rest_code_bfa7e621ed514ef79064c68fca861e48-10"></a>   ('Others',  [14.2, 15.4, 15.3,  8.9,    9, 10.4,  8.9,  5.8,  6.7,  6.8,  7.5])
+<a name="rest_code_bfa7e621ed514ef79064c68fca861e48-11"></a>   ('IE',      [85.8, 84.6, 84.7, 74.5,   66, 58.6, 54.7, 44.8, 36.2, 26.6, 20.1])
+<a name="rest_code_bfa7e621ed514ef79064c68fca861e48-12"></a>   ('Firefox', [None, None, None, 16.6,   25,   31, 36.4, 45.5, 46.3, 42.8, 37.1])
+<a name="rest_code_bfa7e621ed514ef79064c68fca861e48-13"></a>   ('Chrome',  [None, None, None, None, None, None,    0,  3.9, 10.8, 23.8, 35.3])
+</pre>
+<p class="more"><a href="posts/pygal-charts-get-started/">Read more…</a></p>
+</div>
+        </div>
+    </div>
+    <div class="post-entry post-text">
+        <div class="entry-title">
             <a href="posts/jian-ji-chun-cui-de-foxit-mobilepdf-yue-du-qi/">简洁纯粹的 Foxit MobilePDF 阅读器</a>
         </div>
         <div class="post-meta">
@@ -225,45 +284,6 @@
 <p>众所周知，Mac OS X 系统自带截图功能已经足够强大。默认情况下按下 <code>⌘ + ⇧ + 4</code> 快捷键即可对屏幕截图，还可使用辅助键进行模式切换、锁定高宽比、输出到剪贴板 …… 等操作。然而如果你想额外进行一些简单调整，比如改变默认存储位置、修改格式等等，则会发现困难好多：需要打开终端输入 <code>defaults write …</code> 等类似的命令。而实际上只要你稍微简单了解下 AppleScript ，即可轻松高度定制截图设置。</p>
 <p>具体到笔者的情况，个人并不喜欢默认的文件命名方式，希望所有的截图能单独归类到某文件夹，而不是全部散落在桌面，希望截图完毕后立刻检视是否有瑕疵，并根据需要进行加字、标记等简单操作，使用 markdown 语法插入图片时能更流畅自然些，而不必中途切出去再复制一遍截图文件名 …… 等等。于是趁空使用 AppleScript 实现了以上功能，近两天则将其配置选项独立出来，方便更多人根据需求来定制。其最终结果就是大家现在所看到的 <code>Capture Screen with Extended Features.workflow</code>。</p>
 <p class="more"><a href="posts/jie-tu-zhe-jian-xiao-shi-shi-yong-applescript-zeng-qiang-xi-tong-jie-tu-gong-neng/">Read more…</a></p>
-</div>
-        </div>
-    </div>
-    <div class="post-entry post-text">
-        <div class="entry-title">
-            <a href="posts/shi-yong-pages-zhi-zuo-epub-ge-shi-de-dian-zi-shu/">使用 Pages 制作 ePub 格式的电子书</a>
-        </div>
-        <div class="post-meta">
-            <span class="post-meta-item-icon">
-                <i class="user icon"></i>
-            </span>
-            <span class="post-meta-item-text" itemprop="author">
-                <a href="authors/ashfinal/">ashfinal</a>
-            </span>
-            <span class="post-meta-divider">|</span>
-            <span class="post-meta-item-icon">
-                <i class="calendar icon"></i>
-            </span>
-            <span class="post-meta-item-text">
-                <a href="archive.html">
-                    <time datetime="2015-04-07T15:09:14+08:00" itemprop="datePublished" title="2015-04-07 15:09">2015-04-07 15:09
-                    </time></a>
-            </span>
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                    <i class="tags icon"></i>
-                </span>
-                            <span class="post-meta-tag-item">
-                                <a href="categories/ebook/">ebook</a>
-                            </span>
-                            <span class="post-meta-tag-item">
-                                <a href="categories/office/">office</a>
-                            </span>
-        </div>
-        <div class="post-summary">
-                <div>
-<h3 id="_1">缘起</h3>
-<p>最近没事就使用 iPhone 上的 iBooks 来阅读点东西，渐渐喜欢上了该应用。相较于波澜不惊的 Mac 版，iPhone 内置的 iBooks 应用翻页效果堪称惊艳，而其它功能如书签、标注、跳转等用户体验也相当不错。无奈书籍资源实在太少，遂产生制作/修改 ePub 格式电子书的念头。作为「原生党」，自然而然就想到使用 Pages 来尝试制作啦。完成以后感觉整体效果还不错，于是把制作过程记录一下，希望于读者朋友们能够有所参考。</p>
-<p class="more"><a href="posts/shi-yong-pages-zhi-zuo-epub-ge-shi-de-dian-zi-shu/">Read more…</a></p>
 </div>
         </div>
     </div>

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="generator" content="Nikola (getnikola.com)">
-<title>XeTeX 的中文化设置 - MacPlay</title>
+<title>给 Nikola 博客添加 mermaid 支持 - MacPlay</title>
 <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
@@ -12,33 +12,22 @@
 <link href="../../assets/css/semantic.min.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
-<link rel="canonical" href="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/">
+<link rel="canonical" href="https://macplay.github.io/posts/gei-nikola-bo-ke-tian-jia-mermaid-zhi-chi/">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
 <meta name="author" content="ashfinal">
 <meta property="og:site_name" content="MacPlay">
-<meta property="og:title" content="XeTeX 的中文化设置">
-<meta property="og:url" content="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/">
-<meta property="og:description" content="看过一些文章得出结论：即使用 XeTeX 编译中文，也需要额外添加 xeCJK 包设置下字体。笔者也一直是这么做的。
-刚尝试了下，这一步其实是不必要的。直接用 fontspec 设置中文字体，不必引入额外的包：
- 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12%! TEX program = xelatex
+<meta property="og:title" content="给 Nikola 博客添加 mermaid 支持">
+<meta property="og:url" content="https://macplay.github.io/posts/gei-nikola-bo-ke-tian-jia-mermaid-zhi-chi/">
+<meta property="og:description" content="还是给博客集成了 mermaid [1] 图表功能，尽管目前用的很少……与 mathjax 一样，使用的时候给文章添加 mermaid 标签，然后在文章中给描述文本指定 mermaid class 即可。就像这样：
+.. container:: mermaid
 
-\usepackage{fontspec}
-\setmainfon">
+   graph TD
+   A[Christmas] --&gt;|Get money| B(Go shopping)
+   B --&gt; C">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2017-10-16T17:07:37+08:00">
-<meta property="article:tag" content="reST">
-<meta property="article:tag" content="xetex">
+<meta property="article:published_time" content="2017-10-27T14:29:49+08:00">
+<meta property="article:tag" content="chart">
+<meta property="article:tag" content="mermaid">
 <link rel="stylesheet" href="../../assets/css/gitalk.css">
 </head>
 <body>
@@ -92,7 +81,7 @@
     </header><main id="main"><div id="main-content">
 <div class="postpage post-text page-body" itemscope="itemscope" itemtype="http://schema.org/Article">
             <h1 class="post-title" itemprop="headline">
-        <a href=".">XeTeX 的中文化设置</a>
+        <a href=".">给 Nikola 博客添加 mermaid 支持</a>
     </h1>
 
     <div class="post-meta">
@@ -107,7 +96,7 @@
                 <i class="github icon"></i>
             </span>
             <span class="post-meta-item-text">
-                <a href="https://github.com/macplay/macplay.github.io/edit/src/posts/xetex-de-zhong-wen-hua-she-zhi.rst" title="Edit on GitHub">edit</a>
+                <a href="https://github.com/macplay/macplay.github.io/edit/src/posts/gei-nikola-bo-ke-tian-jia-mermaid-zhi-chi.rst" title="Edit on GitHub">edit</a>
             </span>
         <span class="post-meta-divider">|</span>
         <span class="post-meta-item-icon">
@@ -115,7 +104,7 @@
         </span>
         <span class="post-meta-item-text">
             <a href="../../archive.html">
-                <time datetime="2017-10-16T17:07:37+08:00" itemprop="datePublished" title="2017-10-16 17:07">2017-10-16 17:07
+                <time datetime="2017-10-27T14:29:49+08:00" itemprop="datePublished" title="2017-10-27 14:29">2017-10-27 14:29
                 </time></a>
         </span>
             <span class="post-meta-divider">|</span>
@@ -123,10 +112,10 @@
                 <i class="tags icon"></i>
             </span>
                         <span class="post-meta-tag-item">
-                            <a href="../../categories/rest/">reST</a>
+                            <a href="../../categories/chart/">chart</a>
                         </span>
                         <span class="post-meta-tag-item">
-                            <a href="../../categories/xetex/">xetex</a>
+                            <a href="../../categories/mermaid/">mermaid</a>
                         </span>
     </div>
 
@@ -134,58 +123,94 @@
     <div class="post-content" itemprop="article text">
         <div id="post-content">
         <div>
-<p>看过一些文章得出结论：即使用 XeTeX 编译中文，也需要额外添加 <cite>xeCJK</cite> 包设置下字体。笔者也一直是这么做的。</p>
-<p>刚尝试了下，这一步其实是不必要的。直接用 <cite>fontspec</cite> 设置中文字体，不必引入额外的包：</p>
-<table class="codetable"><tr>
-<td class="linenos"><div class="linenodiv"><pre><a href="#rest_code_fb7c864490c64ce4b411e2272a2ea276-1"> 1</a>
-<a href="#rest_code_fb7c864490c64ce4b411e2272a2ea276-2"> 2</a>
-<a href="#rest_code_fb7c864490c64ce4b411e2272a2ea276-3"> 3</a>
-<a href="#rest_code_fb7c864490c64ce4b411e2272a2ea276-4"> 4</a>
-<a href="#rest_code_fb7c864490c64ce4b411e2272a2ea276-5"> 5</a>
-<a href="#rest_code_fb7c864490c64ce4b411e2272a2ea276-6"> 6</a>
-<a href="#rest_code_fb7c864490c64ce4b411e2272a2ea276-7"> 7</a>
-<a href="#rest_code_fb7c864490c64ce4b411e2272a2ea276-8"> 8</a>
-<a href="#rest_code_fb7c864490c64ce4b411e2272a2ea276-9"> 9</a>
-<a href="#rest_code_fb7c864490c64ce4b411e2272a2ea276-10">10</a>
-<a href="#rest_code_fb7c864490c64ce4b411e2272a2ea276-11">11</a>
-<a href="#rest_code_fb7c864490c64ce4b411e2272a2ea276-12">12</a></pre></div></td>
-<td class="code"><pre class="code latex"><a name="rest_code_fb7c864490c64ce4b411e2272a2ea276-1"></a><span class="c">%! TEX program = xelatex</span>
-<a name="rest_code_fb7c864490c64ce4b411e2272a2ea276-2"></a>
-<a name="rest_code_fb7c864490c64ce4b411e2272a2ea276-3"></a><span class="k">\usepackage</span><span class="nb">{</span>fontspec<span class="nb">}</span>
-<a name="rest_code_fb7c864490c64ce4b411e2272a2ea276-4"></a><span class="k">\setmainfont</span><span class="nb">{</span>PingFang SC<span class="nb">}</span>
-<a name="rest_code_fb7c864490c64ce4b411e2272a2ea276-5"></a><span class="k">\setsansfont</span><span class="nb">{</span>Hiragino Sans GB<span class="nb">}</span>
-<a name="rest_code_fb7c864490c64ce4b411e2272a2ea276-6"></a><span class="k">\setmonofont</span><span class="na">[Scale=0.9]</span><span class="nb">{</span>PingFang SC<span class="nb">}</span>
-<a name="rest_code_fb7c864490c64ce4b411e2272a2ea276-7"></a>
-<a name="rest_code_fb7c864490c64ce4b411e2272a2ea276-8"></a><span class="k">\usepackage</span><span class="nb">{</span>indentfirst<span class="nb">}</span>
-<a name="rest_code_fb7c864490c64ce4b411e2272a2ea276-9"></a><span class="k">\setlength</span><span class="nb">{</span><span class="k">\parindent</span><span class="nb">}{</span>2em<span class="nb">}</span>
-<a name="rest_code_fb7c864490c64ce4b411e2272a2ea276-10"></a>
-<a name="rest_code_fb7c864490c64ce4b411e2272a2ea276-11"></a><span class="k">\XeTeXlinebreaklocale</span> "zh"
-<a name="rest_code_fb7c864490c64ce4b411e2272a2ea276-12"></a><span class="k">\XeTeXlinebreakskip</span> = 0pt plus 1pt minus 0.1pt
-</pre></td>
-</tr></table>
-<p>第 1 行指定编译引擎 <cite>xelatex</cite> 。不成文的规范，LaTeX 客户端或编辑器插件不一定会遵守。</p>
-<p>第 3-6 行使用苹方和冬青黑体，macOS 上的默认字体。</p>
-<p>第 8-9 行分别设置首行缩进和缩进间隔。</p>
-<p>第 11 行使用中文断行方式，否则段落会合并成一行。</p>
-<p>第 12 行还不清楚啥意思，不过好多文章都有，暂时不删除。</p>
-<p>这几行精简的配置，足以应付 macOS 上绝大部分编译场景。如果是其它操作系统，注意替换中文字体。通过 <cite>rst2xetex.py</cite> 命令转换过来的 tex 文件，添加以上几行，就能顺利编译。</p>
+<p>还是给博客集成了 <a class="reference external" href="https://mermaidjs.github.io">mermaid</a> <a class="footnote-reference" href="#id2" id="id1">[1]</a> 图表功能，尽管目前用的很少……与 mathjax 一样，使用的时候给文章添加 <cite>mermaid</cite> 标签，然后在文章中给描述文本指定 <cite>mermaid</cite> class 即可。就像这样：</p>
+<pre class="code rst"><a name="rest_code_b44e3d45cd9142a2baf78291bb6694ed-1"></a><span class="p">..</span> <span class="ow">container</span><span class="p">::</span> mermaid
+<a name="rest_code_b44e3d45cd9142a2baf78291bb6694ed-2"></a>
+<a name="rest_code_b44e3d45cd9142a2baf78291bb6694ed-3"></a>   graph TD
+<a name="rest_code_b44e3d45cd9142a2baf78291bb6694ed-4"></a>   A[Christmas] --&gt;|Get money| B(Go shopping)
+<a name="rest_code_b44e3d45cd9142a2baf78291bb6694ed-5"></a>   B --&gt; C{Let me think}
+<a name="rest_code_b44e3d45cd9142a2baf78291bb6694ed-6"></a>   C --&gt;|One| D[Laptop]
+<a name="rest_code_b44e3d45cd9142a2baf78291bb6694ed-7"></a>   C --&gt;|Two| E[iPhone]
+<a name="rest_code_b44e3d45cd9142a2baf78291bb6694ed-8"></a>   C --&gt;|Three| F[Car]
+</pre>
+<table class="docutils footnote" frame="void" id="id2" rules="none">
+<colgroup>
+<col class="label">
+<col>
+</colgroup>
+<tbody valign="top"><tr>
+<td class="label"><a class="fn-backref" href="#id1">[1]</a></td>
+<td>
+<a class="reference external" href="https://mermaidjs.github.io">mermaid</a> 使用 javascript 从纯文本描述产生流程图、序列图、甘特图等图表类型。</td>
+</tr></tbody>
+</table>
+<!-- TEASER_END --><p>渲染结果：</p>
+<div class="ui center aligned mermaid docutils container">
+graph TD
+A[Christmas] --&gt;|Get money| B(Go shopping)
+B --&gt; C{Let me think}
+C --&gt;|One| D[Laptop]
+C --&gt;|Two| E[iPhone]
+C --&gt;|Three| F[Car]</div>
+<p>Markdown 文档写作应该也可以用。整个 <a class="reference external" href="https://mermaidjs.github.io">mermaid</a> 功能的集成只需在博客模板里添加 4 行：</p>
+<pre class="code html+jinja"><a name="rest_code_70ef48cd66594c3fa07cc2f64f88827c-1"></a><span class="cp">{%</span> <span class="k">if</span> <span class="s2">"mermaid"</span> <span class="k">in</span> <span class="nv">post.tags</span> <span class="cp">%}</span>
+<a name="rest_code_70ef48cd66594c3fa07cc2f64f88827c-2"></a>    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">"text/javascript"</span> <span class="na">src</span><span class="o">=</span><span class="s">"/assets/js/mermaid.min.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<a name="rest_code_70ef48cd66594c3fa07cc2f64f88827c-3"></a>    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="nx">mermaid</span><span class="p">.</span><span class="nx">initialize</span><span class="p">({</span><span class="nx">startOnLoad</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nx">theme</span><span class="o">:</span> <span class="s1">'forest'</span><span class="p">});&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<a name="rest_code_70ef48cd66594c3fa07cc2f64f88827c-4"></a><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
+</pre>
+<p>使用 if 条件判断是为了仅在必要时才加载 <cite>mermaid</cite> js 文件，因为其即使压缩后也有 825 KB 的体积，可能会拖慢页面打开速度。mathjax 的情况与此类似，使用频率较低，但据说其完整加载要达到 200 MB 以上。</p>
+<p>序列图：</p>
+<div class="mermaid docutils container">
+sequenceDiagram
+participant Alice
+participant Bob
+Alice-&gt;John: Hello John, how are you?
+Note right of John: Rational thoughts &lt;br/&gt;prevail...
+John--&gt;Alice: Great!
+John-&gt;Bob: How about you?
+Bob--&gt;John: Jolly good!</div>
+<p>甘特图：</p>
+<div class="mermaid docutils container">
+gantt
+dateFormat  YYYY-MM-DD
+title Adding GANTT diagram functionality to mermaid
+section A section
+Completed task            :done,    des1, 2014-01-06,2014-01-08
+Active task               :active,  des2, 2014-01-09, 3d
+Future task               :         des3, after des2, 5d
+Future task2               :         des4, after des3, 5d
+section Critical tasks
+Completed task in the critical line :crit, done, 2014-01-06,24h
+Implement parser and jison          :crit, done, after des1, 2d
+Create tests for parser             :crit, active, 3d
+Future task in critical line        :crit, 5d
+Create tests for renderer           :2d
+Add to mermaid                      :1d</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">很奇怪序列图的 loop 语法不工作，但是使用 <cite>raw</cite> 指令却可以显示……有空再看看。</p>
+</div>
+<div class="mermaid">
+sequenceDiagram
+loop every day
+    Alice-&gt;&gt;John: Hello John, how are you?
+    John--&gt;&gt;Alice: Great!
+end
+</div>
 </div>
         </div>
     </div>
     <div class="post-info">
-        <p>文章链接：<a href="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/" target="_blank">https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/</a></p>
+        <p>文章链接：<a href="https://macplay.github.io/posts/gei-nikola-bo-ke-tian-jia-mermaid-zhi-chi/" target="_blank">https://macplay.github.io/posts/gei-nikola-bo-ke-tian-jia-mermaid-zhi-chi/</a></p>
         <p>发布/更新于：
-            <time datetime="2017-10-16 17:07:37 UTC+08:00" itemprop="dateModified" title="2017-10-16 17:07">2017-10-16 17:07
+            <time datetime="2017-10-27 14:29:49 UTC+08:00" itemprop="dateModified" title="2017-10-27 14:29">2017-10-27 14:29
             </time></p>
         <p>版权声明：如无特别说明，本站文章均遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a> 协议，转载请注明作者及出处。</p>
     </div>
     <div class="addthis_inline_share_toolbox"></div>
         <div class="post-navigation no-print">
         <div class="ui huge secondary stackable menu">
-            <a class="post-nav-item post-nav-previous item" href="../cong-markdown-dao-restructuredtextsi/" title="Previous post"><i class="angle double left icon"></i> 从 Markdown 到 reStructuredText（四）</a>
-        <div class="right menu">
-            <a class="post-nav-item post-nav-next item" href="../nikola-bo-ke-zi-yuan-lian-jie-wen-ti/" title="Next post">Nikola 博客资源链接问题 <i class="angle double right icon"></i></a>
-        </div>
+            <a class="post-nav-item post-nav-previous item" href="../nikola-bo-ke-zi-yuan-lian-jie-wen-ti/" title="Previous post"><i class="angle double left icon"></i> Nikola 博客资源链接问题</a>
         </div>
     </div>
 
@@ -231,6 +256,6 @@
             distractionFreeMode: false
         })
         gitalk.render('gitalk-container')
-    </script>
+    </script><script type="text/javascript" src="../../assets/js/mermaid.min.js"></script><script>mermaid.initialize({startOnLoad: true, theme: 'forest'});</script>
 </body>
 </html>
