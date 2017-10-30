@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>MacPlay (Posts about xetex)</title><link>https://macplay.github.io/</link><description></description><atom:link href="https://macplay.github.io/categories/xetex.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2017 &lt;a href="mailto:ashfinal@sina.cn"&gt;ashfinal&lt;/a&gt; </copyright><lastBuildDate>Mon, 30 Oct 2017 01:03:16 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>XeTeX 的中文化设置</title><link>https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/</link><dc:creator>ashfinal</dc:creator><description>&lt;div&gt;&lt;p&gt;看过一些文章得出结论：即使用 XeTeX 编译中文，也需要额外添加 &lt;cite&gt;xeCJK&lt;/cite&gt; 包设置下字体。笔者也一直是这么做的。&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>MacPlay (Posts about xetex)</title><link>https://macplay.github.io/</link><description></description><atom:link href="https://macplay.github.io/categories/xetex.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2017 &lt;a href="mailto:ashfinal@sina.cn"&gt;ashfinal&lt;/a&gt; </copyright><lastBuildDate>Mon, 30 Oct 2017 08:01:38 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>XeTeX 的中文化设置</title><link>https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/</link><dc:creator>ashfinal</dc:creator><description>&lt;div&gt;&lt;p&gt;看过一些文章得出结论：即使用 XeTeX 编译中文，也需要额外添加 &lt;cite&gt;xeCJK&lt;/cite&gt; 包设置下字体。笔者也一直是这么做的。&lt;/p&gt;
 &lt;p&gt;刚尝试了下，这一步其实是不必要的。直接用 &lt;cite&gt;fontspec&lt;/cite&gt; 设置中文字体，不必引入额外的包：&lt;/p&gt;
-&lt;table class="codetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;a href="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_d1bd43a12912427e89c65dd7530591fe-1"&gt; 1&lt;/a&gt;
-&lt;a href="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_d1bd43a12912427e89c65dd7530591fe-2"&gt; 2&lt;/a&gt;
-&lt;a href="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_d1bd43a12912427e89c65dd7530591fe-3"&gt; 3&lt;/a&gt;
-&lt;a href="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_d1bd43a12912427e89c65dd7530591fe-4"&gt; 4&lt;/a&gt;
-&lt;a href="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_d1bd43a12912427e89c65dd7530591fe-5"&gt; 5&lt;/a&gt;
-&lt;a href="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_d1bd43a12912427e89c65dd7530591fe-6"&gt; 6&lt;/a&gt;
-&lt;a href="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_d1bd43a12912427e89c65dd7530591fe-7"&gt; 7&lt;/a&gt;
-&lt;a href="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_d1bd43a12912427e89c65dd7530591fe-8"&gt; 8&lt;/a&gt;
-&lt;a href="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_d1bd43a12912427e89c65dd7530591fe-9"&gt; 9&lt;/a&gt;
-&lt;a href="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_d1bd43a12912427e89c65dd7530591fe-10"&gt;10&lt;/a&gt;
-&lt;a href="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_d1bd43a12912427e89c65dd7530591fe-11"&gt;11&lt;/a&gt;
-&lt;a href="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_d1bd43a12912427e89c65dd7530591fe-12"&gt;12&lt;/a&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;pre class="code latex"&gt;&lt;a name="rest_code_d1bd43a12912427e89c65dd7530591fe-1"&gt;&lt;/a&gt;&lt;span class="c"&gt;%! TEX program = xelatex&lt;/span&gt;
-&lt;a name="rest_code_d1bd43a12912427e89c65dd7530591fe-2"&gt;&lt;/a&gt;
-&lt;a name="rest_code_d1bd43a12912427e89c65dd7530591fe-3"&gt;&lt;/a&gt;&lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;fontspec&lt;span class="nb"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_d1bd43a12912427e89c65dd7530591fe-4"&gt;&lt;/a&gt;&lt;span class="k"&gt;\setmainfont&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;PingFang SC&lt;span class="nb"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_d1bd43a12912427e89c65dd7530591fe-5"&gt;&lt;/a&gt;&lt;span class="k"&gt;\setsansfont&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;Hiragino Sans GB&lt;span class="nb"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_d1bd43a12912427e89c65dd7530591fe-6"&gt;&lt;/a&gt;&lt;span class="k"&gt;\setmonofont&lt;/span&gt;&lt;span class="na"&gt;[Scale=0.9]&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;PingFang SC&lt;span class="nb"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_d1bd43a12912427e89c65dd7530591fe-7"&gt;&lt;/a&gt;
-&lt;a name="rest_code_d1bd43a12912427e89c65dd7530591fe-8"&gt;&lt;/a&gt;&lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;indentfirst&lt;span class="nb"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_d1bd43a12912427e89c65dd7530591fe-9"&gt;&lt;/a&gt;&lt;span class="k"&gt;\setlength&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;&lt;span class="k"&gt;\parindent&lt;/span&gt;&lt;span class="nb"&gt;}{&lt;/span&gt;2em&lt;span class="nb"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_d1bd43a12912427e89c65dd7530591fe-10"&gt;&lt;/a&gt;
-&lt;a name="rest_code_d1bd43a12912427e89c65dd7530591fe-11"&gt;&lt;/a&gt;&lt;span class="k"&gt;\XeTeXlinebreaklocale&lt;/span&gt; "zh"
-&lt;a name="rest_code_d1bd43a12912427e89c65dd7530591fe-12"&gt;&lt;/a&gt;&lt;span class="k"&gt;\XeTeXlinebreakskip&lt;/span&gt; = 0pt plus 1pt minus 0.1pt
+&lt;table class="codetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;a href="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_b2830140e2b74df0ab93460f407238b9-1"&gt; 1&lt;/a&gt;
+&lt;a href="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_b2830140e2b74df0ab93460f407238b9-2"&gt; 2&lt;/a&gt;
+&lt;a href="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_b2830140e2b74df0ab93460f407238b9-3"&gt; 3&lt;/a&gt;
+&lt;a href="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_b2830140e2b74df0ab93460f407238b9-4"&gt; 4&lt;/a&gt;
+&lt;a href="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_b2830140e2b74df0ab93460f407238b9-5"&gt; 5&lt;/a&gt;
+&lt;a href="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_b2830140e2b74df0ab93460f407238b9-6"&gt; 6&lt;/a&gt;
+&lt;a href="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_b2830140e2b74df0ab93460f407238b9-7"&gt; 7&lt;/a&gt;
+&lt;a href="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_b2830140e2b74df0ab93460f407238b9-8"&gt; 8&lt;/a&gt;
+&lt;a href="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_b2830140e2b74df0ab93460f407238b9-9"&gt; 9&lt;/a&gt;
+&lt;a href="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_b2830140e2b74df0ab93460f407238b9-10"&gt;10&lt;/a&gt;
+&lt;a href="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_b2830140e2b74df0ab93460f407238b9-11"&gt;11&lt;/a&gt;
+&lt;a href="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_b2830140e2b74df0ab93460f407238b9-12"&gt;12&lt;/a&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;pre class="code latex"&gt;&lt;a name="rest_code_b2830140e2b74df0ab93460f407238b9-1"&gt;&lt;/a&gt;&lt;span class="c"&gt;%! TEX program = xelatex&lt;/span&gt;
+&lt;a name="rest_code_b2830140e2b74df0ab93460f407238b9-2"&gt;&lt;/a&gt;
+&lt;a name="rest_code_b2830140e2b74df0ab93460f407238b9-3"&gt;&lt;/a&gt;&lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;fontspec&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_b2830140e2b74df0ab93460f407238b9-4"&gt;&lt;/a&gt;&lt;span class="k"&gt;\setmainfont&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;PingFang SC&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_b2830140e2b74df0ab93460f407238b9-5"&gt;&lt;/a&gt;&lt;span class="k"&gt;\setsansfont&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;Hiragino Sans GB&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_b2830140e2b74df0ab93460f407238b9-6"&gt;&lt;/a&gt;&lt;span class="k"&gt;\setmonofont&lt;/span&gt;&lt;span class="na"&gt;[Scale=0.9]&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;PingFang SC&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_b2830140e2b74df0ab93460f407238b9-7"&gt;&lt;/a&gt;
+&lt;a name="rest_code_b2830140e2b74df0ab93460f407238b9-8"&gt;&lt;/a&gt;&lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;indentfirst&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_b2830140e2b74df0ab93460f407238b9-9"&gt;&lt;/a&gt;&lt;span class="k"&gt;\setlength&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;&lt;span class="k"&gt;\parindent&lt;/span&gt;&lt;span class="nb"&gt;}{&lt;/span&gt;2em&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_b2830140e2b74df0ab93460f407238b9-10"&gt;&lt;/a&gt;
+&lt;a name="rest_code_b2830140e2b74df0ab93460f407238b9-11"&gt;&lt;/a&gt;&lt;span class="k"&gt;\XeTeXlinebreaklocale&lt;/span&gt; "zh"
+&lt;a name="rest_code_b2830140e2b74df0ab93460f407238b9-12"&gt;&lt;/a&gt;&lt;span class="k"&gt;\XeTeXlinebreakskip&lt;/span&gt; = 0pt plus 1pt minus 0.1pt
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;第 1 行指定编译引擎 &lt;cite&gt;xelatex&lt;/cite&gt; 。不成文的规范，LaTeX 客户端或编辑器插件不一定会遵守。&lt;/p&gt;
 &lt;p&gt;第 3-6 行使用苹方和冬青黑体，macOS 上的默认字体。&lt;/p&gt;
 &lt;p&gt;第 8-9 行分别设置首行缩进和缩进间隔。&lt;/p&gt;
