@@ -68,6 +68,58 @@
     <div class="postindex page-body">
     <div class="post-entry post-text">
         <div class="entry-title">
+            <a href="posts/cong-markdown-dao-restructuredtextsi/">从 Markdown 到 reStructuredText（四）</a>
+        </div>
+        <div class="post-meta">
+            <span class="post-meta-item-icon">
+                <i class="user icon"></i>
+            </span>
+            <span class="post-meta-item-text" itemprop="author">
+                <a href="authors/ashfinal/">ashfinal</a>
+            </span>
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+                <i class="calendar icon"></i>
+            </span>
+            <span class="post-meta-item-text">
+                <a href="archive.html">
+                    <time datetime="2017-10-14T18:37:28+08:00" itemprop="datePublished" title="2017-10-14 18:37">2017-10-14 18:37
+                    </time></a>
+            </span>
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                    <i class="tags icon"></i>
+                </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/markup/">markup</a>
+                            </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/pdf/">pdf</a>
+                            </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/rest/">reST</a>
+                            </span>
+        </div>
+        <div class="post-summary">
+                <div>
+<p>本文是《从 Markdown 到 reStructuredText》系列文章的第四篇。和 Markdown 一样，reStructuredText 也是一种易读易写的纯文本标记语言，不过功能上更加强大（而且标准统一）。如果想了解其对应于 Markdown 的基本语法，请阅读 <a class="reference external" href="posts/cong-markdown-dao-restructuredtext/">第一篇文章</a> 。本文继续 <a class="reference external" href="posts/cong-markdown-dao-restructuredtextsan/">上一篇文章</a> 的话题，试用和探索一下 reStructuredText 导出为其它格式的功能。</p>
+<p>reStructuredText 安装包 <a class="reference external" href="http://docutils.sourceforge.net">docutils</a> <a class="footnote-reference" href="posts/cong-markdown-dao-restructuredtextsi/#id5" id="id3">[1]</a> 额外包含了一些 Python 脚本，以支持导出到其它格式。这里只谈一谈比较关心的 HTML、S5 Slides、Office 文档、PDF 等格式的支持情况。</p>
+<div class="contents topic" id="id4">
+<p class="topic-title first">文档目录</p>
+<ul class="simple">
+<li><a class="reference internal" href="posts/cong-markdown-dao-restructuredtextsi/#html" id="id11">HTML 导出</a></li>
+<li><a class="reference internal" href="posts/cong-markdown-dao-restructuredtextsi/#s5-slides" id="id12">S5 Slides</a></li>
+<li><a class="reference internal" href="posts/cong-markdown-dao-restructuredtextsi/#office" id="id13">Office 文档导出</a></li>
+<li><a class="reference internal" href="posts/cong-markdown-dao-restructuredtextsi/#pdf" id="id14">PDF 格式导出</a></li>
+<li><a class="reference internal" href="posts/cong-markdown-dao-restructuredtextsi/#id10" id="id15">总结</a></li>
+</ul>
+</div>
+<p class="more"><a href="posts/cong-markdown-dao-restructuredtextsi/">Read more…</a></p>
+</div>
+        </div>
+    </div>
+    <div class="post-entry post-text">
+        <div class="entry-title">
             <a href="posts/ru-he-jia-zhuang-vim-gao-shou/">如何假装 Vim 高手 :)</a>
         </div>
         <div class="post-meta">
@@ -251,44 +303,6 @@
 </tr></tbody>
 </table>
 <p class="more"><a href="posts/cong-markdown-dao-restructuredtextsan/">Read more…</a></p>
-</div>
-        </div>
-    </div>
-    <div class="post-entry post-text">
-        <div class="entry-title">
-            <a href="posts/gei-bo-ke-wen-zhang-tian-jia-da-yin-gong-neng-zhi-chi/">给博客文章添加打印功能支持</a>
-        </div>
-        <div class="post-meta">
-            <span class="post-meta-item-icon">
-                <i class="user icon"></i>
-            </span>
-            <span class="post-meta-item-text" itemprop="author">
-                <a href="authors/ashfinal/">ashfinal</a>
-            </span>
-            <span class="post-meta-divider">|</span>
-            <span class="post-meta-item-icon">
-                <i class="calendar icon"></i>
-            </span>
-            <span class="post-meta-item-text">
-                <a href="archive.html">
-                    <time datetime="2017-10-11T14:55:31+08:00" itemprop="datePublished" title="2017-10-11 14:55">2017-10-11 14:55
-                    </time></a>
-            </span>
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                    <i class="tags icon"></i>
-                </span>
-                            <span class="post-meta-tag-item">
-                                <a href="categories/pdf/">pdf</a>
-                            </span>
-                            <span class="post-meta-tag-item">
-                                <a href="categories/static-site/">static site</a>
-                            </span>
-        </div>
-        <div class="post-summary">
-                <div>
-<p>刚刚给博客粗略添加了打印功能支持，利用 CSS 的媒体查询特性，非常简短的几行代码。效果是浏览文章页面的时候，点击 Safari <cite>打印</cite> 或 <cite>导出为 PDF</cite> 菜单，其它无关紧要的导航栏、侧边栏、评论框等会自动隐藏，只留下文章主体部分。</p>
-<img alt="/images/blog_print.png" class="align-center" src="images/blog_print.png"><p>Chrome 浏览器上应该也可以工作。考虑到“无纸化”理念如此普及的今天，该功能最常用的场景应该是导出 PDF 文档，也许文章标题叫“添加 PDF 导出功能”更好一些？ :)</p>
 </div>
         </div>
     </div>
