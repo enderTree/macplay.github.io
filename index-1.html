@@ -68,6 +68,77 @@
     <div class="postindex page-body">
     <div class="post-entry post-text">
         <div class="entry-title">
+            <a href="posts/xetex-de-zhong-wen-hua-she-zhi/">XeTeX 的中文化设置</a>
+        </div>
+        <div class="post-meta">
+            <span class="post-meta-item-icon">
+                <i class="user icon"></i>
+            </span>
+            <span class="post-meta-item-text" itemprop="author">
+                <a href="authors/ashfinal/">ashfinal</a>
+            </span>
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+                <i class="calendar icon"></i>
+            </span>
+            <span class="post-meta-item-text">
+                <a href="archive.html">
+                    <time datetime="2017-10-16T17:07:37+08:00" itemprop="datePublished" title="2017-10-16 17:07">2017-10-16 17:07
+                    </time></a>
+            </span>
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                    <i class="tags icon"></i>
+                </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/rest/">reST</a>
+                            </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/xetex/">xetex</a>
+                            </span>
+        </div>
+        <div class="post-summary">
+                <div>
+<p>看过一些文章得出结论：即使用 XeTeX 编译中文，也需要额外添加 <cite>xeCJK</cite> 包设置下字体。笔者也一直是这么做的。</p>
+<p>刚尝试了下，这一步其实是不必要的。直接用 <cite>fontspec</cite> 设置中文字体，不必引入额外的包：</p>
+<table class="codetable"><tr>
+<td class="linenos"><div class="linenodiv"><pre><a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_fb9aafdfca5a470c817f7912118fef2a-1"> 1</a>
+<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_fb9aafdfca5a470c817f7912118fef2a-2"> 2</a>
+<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_fb9aafdfca5a470c817f7912118fef2a-3"> 3</a>
+<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_fb9aafdfca5a470c817f7912118fef2a-4"> 4</a>
+<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_fb9aafdfca5a470c817f7912118fef2a-5"> 5</a>
+<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_fb9aafdfca5a470c817f7912118fef2a-6"> 6</a>
+<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_fb9aafdfca5a470c817f7912118fef2a-7"> 7</a>
+<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_fb9aafdfca5a470c817f7912118fef2a-8"> 8</a>
+<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_fb9aafdfca5a470c817f7912118fef2a-9"> 9</a>
+<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_fb9aafdfca5a470c817f7912118fef2a-10">10</a>
+<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_fb9aafdfca5a470c817f7912118fef2a-11">11</a>
+<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_fb9aafdfca5a470c817f7912118fef2a-12">12</a></pre></div></td>
+<td class="code"><pre class="code latex"><a name="rest_code_fb9aafdfca5a470c817f7912118fef2a-1"></a><span class="c">%! TEX program = xelatex</span>
+<a name="rest_code_fb9aafdfca5a470c817f7912118fef2a-2"></a>
+<a name="rest_code_fb9aafdfca5a470c817f7912118fef2a-3"></a><span class="k">\usepackage</span><span class="nb">{</span>fontspec<span class="nb">}</span>
+<a name="rest_code_fb9aafdfca5a470c817f7912118fef2a-4"></a><span class="k">\setmainfont</span><span class="nb">{</span>PingFang SC<span class="nb">}</span>
+<a name="rest_code_fb9aafdfca5a470c817f7912118fef2a-5"></a><span class="k">\setsansfont</span><span class="nb">{</span>Hiragino Sans GB<span class="nb">}</span>
+<a name="rest_code_fb9aafdfca5a470c817f7912118fef2a-6"></a><span class="k">\setmonofont</span><span class="na">[Scale=0.9]</span><span class="nb">{</span>PingFang SC<span class="nb">}</span>
+<a name="rest_code_fb9aafdfca5a470c817f7912118fef2a-7"></a>
+<a name="rest_code_fb9aafdfca5a470c817f7912118fef2a-8"></a><span class="k">\usepackage</span><span class="nb">{</span>indentfirst<span class="nb">}</span>
+<a name="rest_code_fb9aafdfca5a470c817f7912118fef2a-9"></a><span class="k">\setlength</span><span class="nb">{</span><span class="k">\parindent</span><span class="nb">}{</span>2em<span class="nb">}</span>
+<a name="rest_code_fb9aafdfca5a470c817f7912118fef2a-10"></a>
+<a name="rest_code_fb9aafdfca5a470c817f7912118fef2a-11"></a><span class="k">\XeTeXlinebreaklocale</span> "zh"
+<a name="rest_code_fb9aafdfca5a470c817f7912118fef2a-12"></a><span class="k">\XeTeXlinebreakskip</span> = 0pt plus 1pt minus 0.1pt
+</pre></td>
+</tr></table>
+<p>第 1 行指定编译引擎 <cite>xelatex</cite> 。不成文的规范，LaTeX 客户端或编辑器插件不一定会遵守。</p>
+<p>第 3-6 行使用苹方和冬青黑体，macOS 上的默认字体。</p>
+<p>第 8-9 行分别设置首行缩进和缩进间隔。</p>
+<p>第 11 行使用中文断行方式，否则段落会合并成一行。</p>
+<p>第 12 行还不清楚啥意思，不过好多文章都有，暂时不删除。</p>
+<p>这几行精简的配置，足以应付 macOS 上绝大部分编译场景。如果是其它操作系统，注意替换中文字体。通过 <cite>rst2xetex.py</cite> 命令转换过来的 tex 文件，添加以上几行，就能顺利编译。</p>
+</div>
+        </div>
+    </div>
+    <div class="post-entry post-text">
+        <div class="entry-title">
             <a href="posts/cong-markdown-dao-restructuredtextsi/">从 Markdown 到 reStructuredText（四）</a>
         </div>
         <div class="post-meta">
@@ -253,56 +324,6 @@
 </tr></tbody>
 </table>
 <p class="more"><a href="posts/zai-markdown-ji-rst-wen-dang-zhong-shi-yong-dai-ma-bu-quan-gong-neng/">Read more…</a></p>
-</div>
-        </div>
-    </div>
-    <div class="post-entry post-text">
-        <div class="entry-title">
-            <a href="posts/cong-markdown-dao-restructuredtextsan/">从 Markdown 到 reStructuredText（三）</a>
-        </div>
-        <div class="post-meta">
-            <span class="post-meta-item-icon">
-                <i class="user icon"></i>
-            </span>
-            <span class="post-meta-item-text" itemprop="author">
-                <a href="authors/ashfinal/">ashfinal</a>
-            </span>
-            <span class="post-meta-divider">|</span>
-            <span class="post-meta-item-icon">
-                <i class="calendar icon"></i>
-            </span>
-            <span class="post-meta-item-text">
-                <a href="archive.html">
-                    <time datetime="2017-10-11T15:26:32+08:00" itemprop="datePublished" title="2017-10-11 15:26">2017-10-11 15:26
-                    </time></a>
-            </span>
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                    <i class="tags icon"></i>
-                </span>
-                            <span class="post-meta-tag-item">
-                                <a href="categories/markup/">markup</a>
-                            </span>
-                            <span class="post-meta-tag-item">
-                                <a href="categories/rest/">reST</a>
-                            </span>
-        </div>
-        <div class="post-summary">
-                <div>
-<p>本文是《从 Markdown 到 reStructuredText》系列文章的第三篇。和 Markdown 一样，reStructuredText 也是一种易读易写的纯文本标记语言，不过功能上更加强大（而且标准统一）。如果想了解其对应于 Markdown 的基本语法，请阅读 <a class="reference external" href="posts/cong-markdown-dao-restructuredtext/">第一篇文章</a> 。本文继续 <a class="reference external" href="posts/cong-markdown-dao-restructuredtexter/">上一篇文章</a> 的话题，聊一聊标记语言的样式问题，确切的说是 reStructuredText 在静态博客 Nikola 中的样式写法。</p>
-<p>“样式？标记语言还需要考虑样式？”估计不少人心里会犯嘀咕。然而，标记语言一直强调的是 <strong>易读易写</strong> ，无需专门的商业版权软件来编辑， <strong>同时，纯文本可被转换为其它格式的文档</strong>  <a class="footnote-reference" href="posts/cong-markdown-dao-restructuredtextsan/#id4" id="id3">[1]</a> 。转换为其它格式多半少不了样式，样式本身有助于读者对文档内容的理解，传递赏心悦目的文档对读者本人也是一种尊重。标记语言宣称的“毋需关注样式”更多的是谴责 <strong>过分关注样式</strong> ，以至于丢掉了文档之魂——内容。</p>
-<p>个人以为，标记语言自始至终贯彻的原则只有一点： <strong>内容与样式分离</strong> 。摆脱束缚用最简单的纯文本书写，而必要时又可以套用现成样式模板，导出或专业或活波……不同风格的文档方便分发。</p>
-<table class="docutils footnote" frame="void" id="id4" rules="none">
-<colgroup>
-<col class="label">
-<col>
-</colgroup>
-<tbody valign="top"><tr>
-<td class="label"><a class="fn-backref" href="posts/cong-markdown-dao-restructuredtextsan/#id3">[1]</a></td>
-<td>见 <a class="reference external" href="posts/cong-markdown-dao-restructuredtext/">第一篇文章</a> 宗旨 -&gt; reStructuredText 的预期目标</td>
-</tr></tbody>
-</table>
-<p class="more"><a href="posts/cong-markdown-dao-restructuredtextsan/">Read more…</a></p>
 </div>
         </div>
     </div>
