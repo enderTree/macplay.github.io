@@ -68,6 +68,44 @@
     <div class="postindex page-body">
     <div class="post-entry post-text">
         <div class="entry-title">
+            <a href="posts/nikola-bo-ke-zi-yuan-lian-jie-wen-ti/">Nikola 博客资源链接问题</a>
+        </div>
+        <div class="post-meta">
+            <span class="post-meta-item-icon">
+                <i class="user icon"></i>
+            </span>
+            <span class="post-meta-item-text" itemprop="author">
+                <a href="authors/ashfinal/">ashfinal</a>
+            </span>
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+                <i class="calendar icon"></i>
+            </span>
+            <span class="post-meta-item-text">
+                <a href="archive.html">
+                    <time datetime="2017-10-19T17:41:40+08:00" itemprop="datePublished" title="2017-10-19 17:41">2017-10-19 17:41
+                    </time></a>
+            </span>
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                    <i class="tags icon"></i>
+                </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/nikola/">nikola</a>
+                            </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/static-site/">static site</a>
+                            </span>
+        </div>
+        <div class="post-summary">
+                <div>
+<p>写博客的时候，经常会插入各种超链接。外部链接不必理会，正常插入即可。但是博客内部链接（譬如，请参阅上一篇文章： <a class="reference external" href="posts/30-fen-zhong-jian-li-yi-ge-nikola-bo-ke/">30 分钟搭建一个 Nikola 博客</a> ）却是需要额外关注，规范做法应该是这样： <cite>/posts/30-fen-zhong-jian-li-yi-ge-nikola-bo-ke/</cite> ，而不是这样： <cite>https://macplay.github.com/posts/30-fen-zhong-jian-li-yi-ge-nikola-bo-ke/</cite> 。从最终效果来看貌似没有区别，但是如果发布到其它站点或者将来更换域名，第二种做法的缺陷就暴露出来了：届时需要将成百上千篇文章中的链接进行相应替换。因此，及早规范博客内部链接还是比较重要的。</p>
+<p class="more"><a href="posts/nikola-bo-ke-zi-yuan-lian-jie-wen-ti/">Read more…</a></p>
+</div>
+        </div>
+    </div>
+    <div class="post-entry post-text">
+        <div class="entry-title">
             <a href="posts/xetex-de-zhong-wen-hua-she-zhi/">XeTeX 的中文化设置</a>
         </div>
         <div class="post-meta">
@@ -102,30 +140,30 @@
 <p>看过一些文章得出结论：即使用 XeTeX 编译中文，也需要额外添加 <cite>xeCJK</cite> 包设置下字体。笔者也一直是这么做的。</p>
 <p>刚尝试了下，这一步其实是不必要的。直接用 <cite>fontspec</cite> 设置中文字体，不必引入额外的包：</p>
 <table class="codetable"><tr>
-<td class="linenos"><div class="linenodiv"><pre><a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_f9cea1b7f90f4958b7d2a39e1284297c-1"> 1</a>
-<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_f9cea1b7f90f4958b7d2a39e1284297c-2"> 2</a>
-<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_f9cea1b7f90f4958b7d2a39e1284297c-3"> 3</a>
-<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_f9cea1b7f90f4958b7d2a39e1284297c-4"> 4</a>
-<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_f9cea1b7f90f4958b7d2a39e1284297c-5"> 5</a>
-<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_f9cea1b7f90f4958b7d2a39e1284297c-6"> 6</a>
-<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_f9cea1b7f90f4958b7d2a39e1284297c-7"> 7</a>
-<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_f9cea1b7f90f4958b7d2a39e1284297c-8"> 8</a>
-<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_f9cea1b7f90f4958b7d2a39e1284297c-9"> 9</a>
-<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_f9cea1b7f90f4958b7d2a39e1284297c-10">10</a>
-<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_f9cea1b7f90f4958b7d2a39e1284297c-11">11</a>
-<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_f9cea1b7f90f4958b7d2a39e1284297c-12">12</a></pre></div></td>
-<td class="code"><pre class="code latex"><a name="rest_code_f9cea1b7f90f4958b7d2a39e1284297c-1"></a><span class="c">%! TEX program = xelatex</span>
-<a name="rest_code_f9cea1b7f90f4958b7d2a39e1284297c-2"></a>
-<a name="rest_code_f9cea1b7f90f4958b7d2a39e1284297c-3"></a><span class="k">\usepackage</span><span class="nb">{</span>fontspec<span class="nb">}</span>
-<a name="rest_code_f9cea1b7f90f4958b7d2a39e1284297c-4"></a><span class="k">\setmainfont</span><span class="nb">{</span>PingFang SC<span class="nb">}</span>
-<a name="rest_code_f9cea1b7f90f4958b7d2a39e1284297c-5"></a><span class="k">\setsansfont</span><span class="nb">{</span>Hiragino Sans GB<span class="nb">}</span>
-<a name="rest_code_f9cea1b7f90f4958b7d2a39e1284297c-6"></a><span class="k">\setmonofont</span><span class="na">[Scale=0.9]</span><span class="nb">{</span>PingFang SC<span class="nb">}</span>
-<a name="rest_code_f9cea1b7f90f4958b7d2a39e1284297c-7"></a>
-<a name="rest_code_f9cea1b7f90f4958b7d2a39e1284297c-8"></a><span class="k">\usepackage</span><span class="nb">{</span>indentfirst<span class="nb">}</span>
-<a name="rest_code_f9cea1b7f90f4958b7d2a39e1284297c-9"></a><span class="k">\setlength</span><span class="nb">{</span><span class="k">\parindent</span><span class="nb">}{</span>2em<span class="nb">}</span>
-<a name="rest_code_f9cea1b7f90f4958b7d2a39e1284297c-10"></a>
-<a name="rest_code_f9cea1b7f90f4958b7d2a39e1284297c-11"></a><span class="k">\XeTeXlinebreaklocale</span> "zh"
-<a name="rest_code_f9cea1b7f90f4958b7d2a39e1284297c-12"></a><span class="k">\XeTeXlinebreakskip</span> = 0pt plus 1pt minus 0.1pt
+<td class="linenos"><div class="linenodiv"><pre><a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_347d43ef67e145e6ab105636ff04831e-1"> 1</a>
+<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_347d43ef67e145e6ab105636ff04831e-2"> 2</a>
+<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_347d43ef67e145e6ab105636ff04831e-3"> 3</a>
+<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_347d43ef67e145e6ab105636ff04831e-4"> 4</a>
+<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_347d43ef67e145e6ab105636ff04831e-5"> 5</a>
+<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_347d43ef67e145e6ab105636ff04831e-6"> 6</a>
+<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_347d43ef67e145e6ab105636ff04831e-7"> 7</a>
+<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_347d43ef67e145e6ab105636ff04831e-8"> 8</a>
+<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_347d43ef67e145e6ab105636ff04831e-9"> 9</a>
+<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_347d43ef67e145e6ab105636ff04831e-10">10</a>
+<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_347d43ef67e145e6ab105636ff04831e-11">11</a>
+<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_347d43ef67e145e6ab105636ff04831e-12">12</a></pre></div></td>
+<td class="code"><pre class="code latex"><a name="rest_code_347d43ef67e145e6ab105636ff04831e-1"></a><span class="c">%! TEX program = xelatex</span>
+<a name="rest_code_347d43ef67e145e6ab105636ff04831e-2"></a>
+<a name="rest_code_347d43ef67e145e6ab105636ff04831e-3"></a><span class="k">\usepackage</span><span class="nb">{</span>fontspec<span class="nb">}</span>
+<a name="rest_code_347d43ef67e145e6ab105636ff04831e-4"></a><span class="k">\setmainfont</span><span class="nb">{</span>PingFang SC<span class="nb">}</span>
+<a name="rest_code_347d43ef67e145e6ab105636ff04831e-5"></a><span class="k">\setsansfont</span><span class="nb">{</span>Hiragino Sans GB<span class="nb">}</span>
+<a name="rest_code_347d43ef67e145e6ab105636ff04831e-6"></a><span class="k">\setmonofont</span><span class="na">[Scale=0.9]</span><span class="nb">{</span>PingFang SC<span class="nb">}</span>
+<a name="rest_code_347d43ef67e145e6ab105636ff04831e-7"></a>
+<a name="rest_code_347d43ef67e145e6ab105636ff04831e-8"></a><span class="k">\usepackage</span><span class="nb">{</span>indentfirst<span class="nb">}</span>
+<a name="rest_code_347d43ef67e145e6ab105636ff04831e-9"></a><span class="k">\setlength</span><span class="nb">{</span><span class="k">\parindent</span><span class="nb">}{</span>2em<span class="nb">}</span>
+<a name="rest_code_347d43ef67e145e6ab105636ff04831e-10"></a>
+<a name="rest_code_347d43ef67e145e6ab105636ff04831e-11"></a><span class="k">\XeTeXlinebreaklocale</span> "zh"
+<a name="rest_code_347d43ef67e145e6ab105636ff04831e-12"></a><span class="k">\XeTeXlinebreakskip</span> = 0pt plus 1pt minus 0.1pt
 </pre></td>
 </tr></table>
 <p>第 1 行指定编译引擎 <cite>xelatex</cite> 。不成文的规范，LaTeX 客户端或编辑器插件不一定会遵守。</p>
@@ -275,55 +313,6 @@
 <strong>深度整合</strong> ：支持选择笔记本和添加标签，支持从印象笔记跳转编辑，轻松管理。</li>
 </ul>
 <p class="more"><a href="posts/huan-ying-shi-yong-ma-ke-fei-xiang-wang-ye-ban/">Read more…</a></p>
-</div>
-        </div>
-    </div>
-    <div class="post-entry post-text">
-        <div class="entry-title">
-            <a href="posts/zai-markdown-ji-rst-wen-dang-zhong-shi-yong-dai-ma-bu-quan-gong-neng/">在 Markdown 及 rst 文档中使用代码补全功能</a>
-        </div>
-        <div class="post-meta">
-            <span class="post-meta-item-icon">
-                <i class="user icon"></i>
-            </span>
-            <span class="post-meta-item-text" itemprop="author">
-                <a href="authors/ashfinal/">ashfinal</a>
-            </span>
-            <span class="post-meta-divider">|</span>
-            <span class="post-meta-item-icon">
-                <i class="calendar icon"></i>
-            </span>
-            <span class="post-meta-item-text">
-                <a href="archive.html">
-                    <time datetime="2017-10-12T15:45:30+08:00" itemprop="datePublished" title="2017-10-12 15:45">2017-10-12 15:45
-                    </time></a>
-            </span>
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                    <i class="tags icon"></i>
-                </span>
-                            <span class="post-meta-tag-item">
-                                <a href="categories/markup/">markup</a>
-                            </span>
-                            <span class="post-meta-tag-item">
-                                <a href="categories/vim/">vim</a>
-                            </span>
-        </div>
-        <div class="post-summary">
-                <div>
-<p>大家都知道，写 Markdown 文档时可以使用代码区块（Code Blocks)。给代码片段指定语言类型，就有漂亮的语法高亮效果。那有没有想过，直接在代码区块中写 Python 代码呢？</p>
-<p>这个事情还真可以做到，方法是使用 Neovim + ncm。<a class="reference external" href="https://github.com/roxma/nvim-completion-manager">ncm</a> 全称 “nvim-completion-manager”，是针对 <a class="reference external" href="https://github.com/neovim/neovim">Neovim</a> 编辑器的一款异步补全框架（插件）。笔者从 <a class="reference external" href="https://www.vim.org">Vim</a> 转到 <a class="reference external" href="https://github.com/neovim/neovim">Neovim</a> ，重新搜寻补全插件的过程中，经过与 <a class="reference external" href="https://github.com/Shougo/deoplete.nvim">deoplete</a> <a class="footnote-reference" href="posts/zai-markdown-ji-rst-wen-dang-zhong-shi-yong-dai-ma-bu-quan-gong-neng/#id2" id="id1">[1]</a> 的比较，迅速入了 <a class="reference external" href="https://github.com/roxma/nvim-completion-manager">ncm</a> 的坑。;-)</p>
-<table class="docutils footnote" frame="void" id="id2" rules="none">
-<colgroup>
-<col class="label">
-<col>
-</colgroup>
-<tbody valign="top"><tr>
-<td class="label"><a class="fn-backref" href="posts/zai-markdown-ji-rst-wen-dang-zhong-shi-yong-dai-ma-bu-quan-gong-neng/#id1">[1]</a></td>
-<td>另一款异步补全插件，由 Vim 大神 <a class="reference external" href="https://github.com/Shougo">Shougo</a> 开发。</td>
-</tr></tbody>
-</table>
-<p class="more"><a href="posts/zai-markdown-ji-rst-wen-dang-zhong-shi-yong-dai-ma-bu-quan-gong-neng/">Read more…</a></p>
 </div>
         </div>
     </div>
