@@ -68,6 +68,7 @@ header#header {
 
 .post-content ul>li,.post-summary ul>li{
     list-style-type: disc;
+    line-height: 1.7em;
 }
 
 .pagination li.active {
@@ -90,6 +91,7 @@ header#header {
     font-size: 1.5rem;
     padding-top: 1rem;
     color: #777777;
+    text-align: center;;
 }
 
 .cate-cloud-items ul {
@@ -116,12 +118,19 @@ header#header {
 .authorindex ul {
     list-style-type: circle;
     margin-left: -1em;
+    line-height: 1.7em;;
 }
 
 .tag-rssfeed .feedlink,
 .author-rssfeed .feedlink {
     margin-top: 1em;
     margin-left: 2em;
+    text-align: center;
+}
+
+.tag-rssfeed .feedlink a,
+.author-rssfeed .feedlink a {
+    color: #777777;
 }
 
 .gallerypage ul,

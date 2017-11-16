@@ -1,26 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>MacPlay (Posts by ashfinal)</title><link>https://macplay.github.io/</link><description></description><atom:link href="https://macplay.github.io/authors/ashfinal.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2017 &lt;a href="mailto:ashfinal@sina.cn"&gt;ashfinal&lt;/a&gt; </copyright><lastBuildDate>Mon, 13 Nov 2017 10:24:34 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>【译】在 Vim 中使用 undo branches</title><link>https://macplay.github.io/posts/zai-vim-zhong-shi-yong-undo-branches/</link><dc:creator>ashfinal</dc:creator><description>&lt;div&gt;&lt;p&gt;Vim 支持标准的 &lt;a class="reference external" href="http://vim.wikia.com/wiki/Undo_and_Redo"&gt;撤销和重做&lt;/a&gt; ，同时还支持 &lt;cite&gt;undo branches&lt;/cite&gt; 。这允许你撤销一些更改，然后再做新的更改，而在此过程中 &lt;strong&gt;所有&lt;/strong&gt; 的更改都在 &lt;cite&gt;undo tree&lt;/cite&gt; 中得到保留。你甚至还能把撤销（undo）记录保存到文件中，下次编辑同一文件时恢复这些记录。本文将向你初步展示如何在 Vim 中使用 &lt;cite&gt;undo branches&lt;/cite&gt; 。&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>MacPlay (Posts by ashfinal)</title><link>https://macplay.github.io/</link><description></description><atom:link href="https://macplay.github.io/authors/ashfinal.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2017 &lt;a href="mailto:ashfinal@sina.cn"&gt;ashfinal&lt;/a&gt; </copyright><lastBuildDate>Thu, 16 Nov 2017 06:53:54 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Vim 弄丢了我的数据！</title><link>https://macplay.github.io/posts/vim-nong-diu-liao-wo-de-shu-ju/</link><dc:creator>ashfinal</dc:creator><description>&lt;div class="section" id="id1"&gt;
+&lt;h2&gt;悲剧&lt;/h2&gt;
+&lt;p&gt;昨天（啊不， &lt;span class="strike"&gt;前天&lt;/span&gt; &lt;span class="amend"&gt;大前天&lt;/span&gt; ）在写 &lt;a class="reference external" href="https://macplay.github.io/posts/zai-vim-zhong-shi-yong-undo-branches/"&gt;undo branches&lt;/a&gt; 那篇文章的时候，&lt;a class="reference external" href="https://github.com/qvacua/vimr"&gt;VimR&lt;/a&gt; 编辑器突然毫无征兆的崩溃退出，导致花费好半天翻译过来的几段文字全部丢失。颇具有讽刺意味的是，当时写的文章正是关于在 Vim 编辑器中如何使用 undo branches，避免丢失你宝贵的资料。事情发生时笔者从浏览器中复制了一段文字，然后直接按下 &lt;cite&gt;CMD + V&lt;/cite&gt; 粘贴，可能是其中含有一些特殊字符……悲剧就这样发生了。&lt;/p&gt;
+&lt;p&gt;第一反应是去查看 undo 历史，很不幸那几段文字并没有保存其中。于是悲哀地意识到它们是永远也找不回来了：因为 undo branches 其实是保存文件撤销记录，而不是用来应对这种意外灾难的。&lt;strong&gt;真正的灾难应对机制已经被我关闭。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://macplay.github.io/posts/vim-nong-diu-liao-wo-de-shu-ju/"&gt;Read more…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>recovery</category><category>vim</category><category>vimrc</category><guid>https://macplay.github.io/posts/vim-nong-diu-liao-wo-de-shu-ju/</guid><pubDate>Mon, 13 Nov 2017 11:57:10 GMT</pubDate></item><item><title>【译】在 Vim 中使用 undo branches</title><link>https://macplay.github.io/posts/zai-vim-zhong-shi-yong-undo-branches/</link><dc:creator>ashfinal</dc:creator><description>&lt;div&gt;&lt;p&gt;Vim 支持标准的 &lt;a class="reference external" href="http://vim.wikia.com/wiki/Undo_and_Redo"&gt;撤销和重做&lt;/a&gt; ，同时还支持 &lt;cite&gt;undo branches&lt;/cite&gt; 。这允许你撤销一些更改，然后再做新的更改，而在此过程中 &lt;strong&gt;所有&lt;/strong&gt; 的更改都在 &lt;cite&gt;undo tree&lt;/cite&gt; 中得到保留。你甚至还能把撤销（undo）记录保存到文件中，下次编辑同一文件时恢复这些记录。本文将向你初步展示如何在 Vim 中使用 &lt;cite&gt;undo branches&lt;/cite&gt; 。&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://macplay.github.io/posts/zai-vim-zhong-shi-yong-undo-branches/"&gt;Read more…&lt;/a&gt; (3 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>translation</category><category>vim</category><guid>https://macplay.github.io/posts/zai-vim-zhong-shi-yong-undo-branches/</guid><pubDate>Mon, 13 Nov 2017 03:14:24 GMT</pubDate></item><item><title>不一样的 Git 客户端——GitUp</title><link>https://macplay.github.io/posts/bu-yi-yang-de-git-ke-hu-duan-gitup/</link><dc:creator>ashfinal</dc:creator><description>&lt;div&gt;&lt;p&gt;尽管平时基本不使用 Git 客户端（偶尔用用 &lt;a class="reference external" href="https://jonas.github.io/tig/"&gt;Tig&lt;/a&gt; ），不过看到 &lt;a class="reference external" href="http://gitup.co"&gt;GitUp&lt;/a&gt; 的特性介绍，笔者还是产生了浓厚的兴趣。下载下来尝试了一下，感觉与其它 Git 客户端的确有些不一样。官方宣传声称 &lt;a class="reference external" href="http://gitup.co"&gt;GitUp&lt;/a&gt; 就是“你朝思暮想的 Git 客户端”（The Git interface you've been missing）；使用 &lt;a class="reference external" href="http://gitup.co"&gt;GitUp&lt;/a&gt; 以后，再也“不必头痛 Git 版本管理”（without headaches）。那么， &lt;a class="reference external" href="http://gitup.co"&gt;GitUp&lt;/a&gt; 究竟表现如何？接下来，随笔者一起来看看这个不一样的 Git 客户端吧。&lt;/p&gt;
 &lt;div class="figure align-center"&gt;
 &lt;a class="reference external image-reference" href="https://macplay.github.io/images/gitup_overview.png"&gt;&lt;img alt="/images/gitup_overview.thumbnail.png" src="https://macplay.github.io/images/gitup_overview.thumbnail.png"&gt;&lt;/a&gt;
 &lt;/div&gt;
 &lt;p&gt;&lt;a href="https://macplay.github.io/posts/bu-yi-yang-de-git-ke-hu-duan-gitup/"&gt;Read more…&lt;/a&gt; (3 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>git</category><category>macos</category><category>vc</category><guid>https://macplay.github.io/posts/bu-yi-yang-de-git-ke-hu-duan-gitup/</guid><pubDate>Wed, 08 Nov 2017 08:54:09 GMT</pubDate></item><item><title>Vim 技巧：匹配数字递增</title><link>https://macplay.github.io/posts/vim-ji-qiao-pi-pei-shu-zi-di-zeng/</link><dc:creator>ashfinal</dc:creator><description>&lt;div&gt;&lt;p&gt;有时候会有将代码中的数字递增/递减的需求，一直没有找到相对简单优雅的做法。今天通过网络搜索加上幸运值暴增，感觉终于比较完善地解决了这个问题，遂作此文记录一下。&lt;/p&gt;
 &lt;p&gt;如果我们想将以下代码块中的所有数字，在原有基础上均递增两次：&lt;/p&gt;
-&lt;pre class="code text"&gt;&lt;a name="rest_code_5162f52ce11f418c9f967a4162105754-1"&gt;&lt;/a&gt;my_array[1] = 0;
-&lt;a name="rest_code_5162f52ce11f418c9f967a4162105754-2"&gt;&lt;/a&gt;my_array[2] = 0;
-&lt;a name="rest_code_5162f52ce11f418c9f967a4162105754-3"&gt;&lt;/a&gt;my_array[3] = 0;
-&lt;a name="rest_code_5162f52ce11f418c9f967a4162105754-4"&gt;&lt;/a&gt;my_array[4] = 0;
-&lt;a name="rest_code_5162f52ce11f418c9f967a4162105754-5"&gt;&lt;/a&gt;my_array[5] = 0;
-&lt;a name="rest_code_5162f52ce11f418c9f967a4162105754-6"&gt;&lt;/a&gt;my_array[6] = 0;
-&lt;a name="rest_code_5162f52ce11f418c9f967a4162105754-7"&gt;&lt;/a&gt;my_array[7] = 0;
+&lt;pre class="code text"&gt;&lt;a name="rest_code_dd12a20f2b60443bb0d3ce6cc90ce431-1"&gt;&lt;/a&gt;my_array[1] = 0;
+&lt;a name="rest_code_dd12a20f2b60443bb0d3ce6cc90ce431-2"&gt;&lt;/a&gt;my_array[2] = 0;
+&lt;a name="rest_code_dd12a20f2b60443bb0d3ce6cc90ce431-3"&gt;&lt;/a&gt;my_array[3] = 0;
+&lt;a name="rest_code_dd12a20f2b60443bb0d3ce6cc90ce431-4"&gt;&lt;/a&gt;my_array[4] = 0;
+&lt;a name="rest_code_dd12a20f2b60443bb0d3ce6cc90ce431-5"&gt;&lt;/a&gt;my_array[5] = 0;
+&lt;a name="rest_code_dd12a20f2b60443bb0d3ce6cc90ce431-6"&gt;&lt;/a&gt;my_array[6] = 0;
+&lt;a name="rest_code_dd12a20f2b60443bb0d3ce6cc90ce431-7"&gt;&lt;/a&gt;my_array[7] = 0;
 &lt;/pre&gt;&lt;p&gt;即变成以下这样：&lt;/p&gt;
-&lt;pre class="code text"&gt;&lt;a name="rest_code_9b5ac5a90cde4286893b35201db6edff-1"&gt;&lt;/a&gt;my_array[3] = 2;
-&lt;a name="rest_code_9b5ac5a90cde4286893b35201db6edff-2"&gt;&lt;/a&gt;my_array[4] = 2;
-&lt;a name="rest_code_9b5ac5a90cde4286893b35201db6edff-3"&gt;&lt;/a&gt;my_array[5] = 2;
-&lt;a name="rest_code_9b5ac5a90cde4286893b35201db6edff-4"&gt;&lt;/a&gt;my_array[6] = 2;
-&lt;a name="rest_code_9b5ac5a90cde4286893b35201db6edff-5"&gt;&lt;/a&gt;my_array[7] = 2;
-&lt;a name="rest_code_9b5ac5a90cde4286893b35201db6edff-6"&gt;&lt;/a&gt;my_array[8] = 2;
-&lt;a name="rest_code_9b5ac5a90cde4286893b35201db6edff-7"&gt;&lt;/a&gt;my_array[9] = 2;
+&lt;pre class="code text"&gt;&lt;a name="rest_code_a99a9c32536844d2be821acfc60a387a-1"&gt;&lt;/a&gt;my_array[3] = 2;
+&lt;a name="rest_code_a99a9c32536844d2be821acfc60a387a-2"&gt;&lt;/a&gt;my_array[4] = 2;
+&lt;a name="rest_code_a99a9c32536844d2be821acfc60a387a-3"&gt;&lt;/a&gt;my_array[5] = 2;
+&lt;a name="rest_code_a99a9c32536844d2be821acfc60a387a-4"&gt;&lt;/a&gt;my_array[6] = 2;
+&lt;a name="rest_code_a99a9c32536844d2be821acfc60a387a-5"&gt;&lt;/a&gt;my_array[7] = 2;
+&lt;a name="rest_code_a99a9c32536844d2be821acfc60a387a-6"&gt;&lt;/a&gt;my_array[8] = 2;
+&lt;a name="rest_code_a99a9c32536844d2be821acfc60a387a-7"&gt;&lt;/a&gt;my_array[9] = 2;
 &lt;/pre&gt;&lt;p&gt;&lt;a href="https://macplay.github.io/posts/vim-ji-qiao-pi-pei-shu-zi-di-zeng/"&gt;Read more…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>regex</category><category>vim</category><guid>https://macplay.github.io/posts/vim-ji-qiao-pi-pei-shu-zi-di-zeng/</guid><pubDate>Sun, 05 Nov 2017 12:09:47 GMT</pubDate></item><item><title>【译】8 个 Vim 技巧让你成为专家级用户</title><link>https://macplay.github.io/posts/8-ge-vim-ji-qiao-rang-ni-cheng-wei-zhuan-jia-ji-yong-hu/</link><dc:creator>ashfinal</dc:creator><description>&lt;figure&gt;&lt;img src="https://macplay.github.io/images/vim-tips-tricks.jpg"&gt;&lt;/figure&gt; &lt;div&gt;&lt;p&gt;&lt;strong&gt;提要&lt;/strong&gt; ：在这篇文章里，我将用实际例子向你展示一些我最喜爱的 &lt;strong&gt;Vim 技巧&lt;/strong&gt; 。如果你不使用 Vim，这些技巧并不会给你多少理由让你想使用它。但是，如果你已经在使用，那本文无疑会让你成为更专业的 Vim 用户。&lt;/p&gt;
 &lt;p&gt;即便最近开始，我越来越多地使用 &lt;a class="reference external" href="https://atom.io/"&gt;Atom&lt;/a&gt; ，然而不使用 &lt;a class="reference external" href="http://www.vim.org/"&gt;Vim&lt;/a&gt; 却让我一天也过不下去。并不是因为我不得不使用它，而是这样做让我感到很舒适。&lt;/p&gt;
 &lt;p&gt;是的，舒适。当谈及 Vi 编辑器或任何它的变种时，这是个太奇怪的词语，对不对？的确，我承认，Vi 不是那个最符合直觉的文本编辑器。&lt;/p&gt;
@@ -35,14 +39,14 @@
 &lt;p&gt;&lt;a href="https://macplay.github.io/posts/wei-he-wo-huan-zai-shi-yong-vim-bian-ji-qi/"&gt;Read more…&lt;/a&gt; (2 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>benchmark</category><category>translation</category><category>vim</category><guid>https://macplay.github.io/posts/wei-he-wo-huan-zai-shi-yong-vim-bian-ji-qi/</guid><pubDate>Tue, 31 Oct 2017 12:45:28 GMT</pubDate></item><item><title>再谈 Markdown 及其扩展</title><link>https://macplay.github.io/posts/zai-tan-markdown-ji-qi-kuo-zhan/</link><dc:creator>ashfinal</dc:creator><description>&lt;div&gt;&lt;p&gt;尽管笔者专门写了一个文章系列 &lt;a href="https://macplay.github.io/posts/cong-markdown-dao-restructuredtext/" title="/posts/cong-markdown-dao-restructuredtext/"&gt;《从 Markdown 到 reStructuredText》&lt;/a&gt;，推荐在日常文档写作中更多地使用 reStructuredText。不过平心而论，Markdown 标记语言其实还是不错的，再加上一堆漂亮好用的客户端，使其作为博客写作语言相当合适。静态博客 Nikola 本身也对 Markdown 开箱提供了完整支持，Markdown 与 reStructuredText 一样都是“一等公民”。&lt;/p&gt;
 &lt;p&gt;Nikola 中使用的语法与主流 Markdown 语法，可以说是一模一样的。同时，还以扩展的形式 &lt;sup id="fnref-1"&gt;&lt;a class="footnote-ref" href="https://macplay.github.io/posts/zai-tan-markdown-ji-qi-kuo-zhan/#fn-1"&gt;1&lt;/a&gt;&lt;/sup&gt; 额外提供了一些：&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://macplay.github.io/posts/zai-tan-markdown-ji-qi-kuo-zhan/"&gt;Read more…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>markdown</category><category>mermaid</category><category>python</category><guid>https://macplay.github.io/posts/zai-tan-markdown-ji-qi-kuo-zhan/</guid><pubDate>Fri, 27 Oct 2017 14:36:07 GMT</pubDate></item><item><title>给 Nikola 博客添加 mermaid 支持</title><link>https://macplay.github.io/posts/gei-nikola-bo-ke-tian-jia-mermaid-zhi-chi/</link><dc:creator>ashfinal</dc:creator><description>&lt;div&gt;&lt;p&gt;还是给博客集成了 &lt;a class="reference external" href="https://mermaidjs.github.io"&gt;mermaid&lt;/a&gt; &lt;a class="footnote-reference" href="https://macplay.github.io/posts/gei-nikola-bo-ke-tian-jia-mermaid-zhi-chi/#id2" id="id1"&gt;[1]&lt;/a&gt; 图表功能，尽管目前用的很少……与 mathjax 一样，使用的时候给文章添加 &lt;cite&gt;mermaid&lt;/cite&gt; 标签，然后在文章中给描述文本指定 &lt;cite&gt;mermaid&lt;/cite&gt; class 即可。就像这样：&lt;/p&gt;
-&lt;pre class="code rst"&gt;&lt;a name="rest_code_b4e80cd98a014430b68f980c40ee2367-1"&gt;&lt;/a&gt;&lt;span class="p"&gt;..&lt;/span&gt; &lt;span class="ow"&gt;container&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt; mermaid
-&lt;a name="rest_code_b4e80cd98a014430b68f980c40ee2367-2"&gt;&lt;/a&gt;
-&lt;a name="rest_code_b4e80cd98a014430b68f980c40ee2367-3"&gt;&lt;/a&gt;   graph TD
-&lt;a name="rest_code_b4e80cd98a014430b68f980c40ee2367-4"&gt;&lt;/a&gt;   A[Christmas] --&amp;gt;|Get money| B(Go shopping)
-&lt;a name="rest_code_b4e80cd98a014430b68f980c40ee2367-5"&gt;&lt;/a&gt;   B --&amp;gt; C{Let me think}
-&lt;a name="rest_code_b4e80cd98a014430b68f980c40ee2367-6"&gt;&lt;/a&gt;   C --&amp;gt;|One| D[Laptop]
-&lt;a name="rest_code_b4e80cd98a014430b68f980c40ee2367-7"&gt;&lt;/a&gt;   C --&amp;gt;|Two| E[iPhone]
-&lt;a name="rest_code_b4e80cd98a014430b68f980c40ee2367-8"&gt;&lt;/a&gt;   C --&amp;gt;|Three| F[Car]
+&lt;pre class="code rst"&gt;&lt;a name="rest_code_1a3e0126855544a0b37204289c432739-1"&gt;&lt;/a&gt;&lt;span class="p"&gt;..&lt;/span&gt; &lt;span class="ow"&gt;container&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt; mermaid
+&lt;a name="rest_code_1a3e0126855544a0b37204289c432739-2"&gt;&lt;/a&gt;
+&lt;a name="rest_code_1a3e0126855544a0b37204289c432739-3"&gt;&lt;/a&gt;   graph TD
+&lt;a name="rest_code_1a3e0126855544a0b37204289c432739-4"&gt;&lt;/a&gt;   A[Christmas] --&amp;gt;|Get money| B(Go shopping)
+&lt;a name="rest_code_1a3e0126855544a0b37204289c432739-5"&gt;&lt;/a&gt;   B --&amp;gt; C{Let me think}
+&lt;a name="rest_code_1a3e0126855544a0b37204289c432739-6"&gt;&lt;/a&gt;   C --&amp;gt;|One| D[Laptop]
+&lt;a name="rest_code_1a3e0126855544a0b37204289c432739-7"&gt;&lt;/a&gt;   C --&amp;gt;|Two| E[iPhone]
+&lt;a name="rest_code_1a3e0126855544a0b37204289c432739-8"&gt;&lt;/a&gt;   C --&amp;gt;|Three| F[Car]
 &lt;/pre&gt;&lt;table class="docutils footnote" frame="void" id="id2" rules="none"&gt;
 &lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
 &lt;tbody valign="top"&gt;
@@ -52,44 +56,32 @@
 &lt;p&gt;&lt;a href="https://macplay.github.io/posts/gei-nikola-bo-ke-tian-jia-mermaid-zhi-chi/"&gt;Read more…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>chart</category><category>mermaid</category><guid>https://macplay.github.io/posts/gei-nikola-bo-ke-tian-jia-mermaid-zhi-chi/</guid><pubDate>Fri, 27 Oct 2017 06:29:49 GMT</pubDate></item><item><title>Nikola 博客资源链接问题</title><link>https://macplay.github.io/posts/nikola-bo-ke-zi-yuan-lian-jie-wen-ti/</link><dc:creator>ashfinal</dc:creator><description>&lt;div&gt;&lt;p&gt;写博客的时候，经常会插入各种超链接。外部链接不必理会，正常插入即可。但是博客内部链接（譬如，请参阅上一篇文章： &lt;a class="reference external" href="https://macplay.github.io/posts/30-fen-zhong-jian-li-yi-ge-nikola-bo-ke/"&gt;30 分钟搭建一个 Nikola 博客&lt;/a&gt; ）却是需要额外关注，规范做法应该是这样： &lt;cite&gt;/posts/30-fen-zhong-jian-li-yi-ge-nikola-bo-ke/&lt;/cite&gt; ，而不是这样： &lt;cite&gt;https://macplay.github.com/posts/30-fen-zhong-jian-li-yi-ge-nikola-bo-ke/&lt;/cite&gt; 。从最终效果来看貌似没有区别，但是如果发布到其它站点或者将来更换域名，第二种做法的缺陷就暴露出来了：届时需要将成百上千篇文章中的链接进行相应替换。因此，及早规范博客内部链接还是比较重要的。&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://macplay.github.io/posts/nikola-bo-ke-zi-yuan-lian-jie-wen-ti/"&gt;Read more…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>nikola</category><category>static site</category><guid>https://macplay.github.io/posts/nikola-bo-ke-zi-yuan-lian-jie-wen-ti/</guid><pubDate>Thu, 19 Oct 2017 09:41:40 GMT</pubDate></item><item><title>XeTeX 的中文化设置</title><link>https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/</link><dc:creator>ashfinal</dc:creator><description>&lt;div&gt;&lt;p&gt;看过一些文章得出结论：即使用 XeTeX 编译中文，也需要额外添加 &lt;cite&gt;xeCJK&lt;/cite&gt; 包设置下字体。笔者也一直是这么做的。&lt;/p&gt;
 &lt;p&gt;刚尝试了下，这一步其实是不必要的。直接用 &lt;cite&gt;fontspec&lt;/cite&gt; 设置中文字体，不必引入额外的包：&lt;/p&gt;
-&lt;table class="codetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;a href="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_f940dd61e05e4310b712ee8610f8e54b-1"&gt; 1&lt;/a&gt;
-&lt;a href="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_f940dd61e05e4310b712ee8610f8e54b-2"&gt; 2&lt;/a&gt;
-&lt;a href="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_f940dd61e05e4310b712ee8610f8e54b-3"&gt; 3&lt;/a&gt;
-&lt;a href="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_f940dd61e05e4310b712ee8610f8e54b-4"&gt; 4&lt;/a&gt;
-&lt;a href="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_f940dd61e05e4310b712ee8610f8e54b-5"&gt; 5&lt;/a&gt;
-&lt;a href="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_f940dd61e05e4310b712ee8610f8e54b-6"&gt; 6&lt;/a&gt;
-&lt;a href="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_f940dd61e05e4310b712ee8610f8e54b-7"&gt; 7&lt;/a&gt;
-&lt;a href="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_f940dd61e05e4310b712ee8610f8e54b-8"&gt; 8&lt;/a&gt;
-&lt;a href="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_f940dd61e05e4310b712ee8610f8e54b-9"&gt; 9&lt;/a&gt;
-&lt;a href="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_f940dd61e05e4310b712ee8610f8e54b-10"&gt;10&lt;/a&gt;
-&lt;a href="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_f940dd61e05e4310b712ee8610f8e54b-11"&gt;11&lt;/a&gt;
-&lt;a href="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_f940dd61e05e4310b712ee8610f8e54b-12"&gt;12&lt;/a&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;pre class="code latex"&gt;&lt;a name="rest_code_f940dd61e05e4310b712ee8610f8e54b-1"&gt;&lt;/a&gt;&lt;span class="c"&gt;%! TEX program = xelatex&lt;/span&gt;
-&lt;a name="rest_code_f940dd61e05e4310b712ee8610f8e54b-2"&gt;&lt;/a&gt;
-&lt;a name="rest_code_f940dd61e05e4310b712ee8610f8e54b-3"&gt;&lt;/a&gt;&lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;fontspec&lt;span class="nb"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_f940dd61e05e4310b712ee8610f8e54b-4"&gt;&lt;/a&gt;&lt;span class="k"&gt;\setmainfont&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;PingFang SC&lt;span class="nb"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_f940dd61e05e4310b712ee8610f8e54b-5"&gt;&lt;/a&gt;&lt;span class="k"&gt;\setsansfont&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;Hiragino Sans GB&lt;span class="nb"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_f940dd61e05e4310b712ee8610f8e54b-6"&gt;&lt;/a&gt;&lt;span class="k"&gt;\setmonofont&lt;/span&gt;&lt;span class="na"&gt;[Scale=0.9]&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;PingFang SC&lt;span class="nb"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_f940dd61e05e4310b712ee8610f8e54b-7"&gt;&lt;/a&gt;
-&lt;a name="rest_code_f940dd61e05e4310b712ee8610f8e54b-8"&gt;&lt;/a&gt;&lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;indentfirst&lt;span class="nb"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_f940dd61e05e4310b712ee8610f8e54b-9"&gt;&lt;/a&gt;&lt;span class="k"&gt;\setlength&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;&lt;span class="k"&gt;\parindent&lt;/span&gt;&lt;span class="nb"&gt;}{&lt;/span&gt;2em&lt;span class="nb"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_f940dd61e05e4310b712ee8610f8e54b-10"&gt;&lt;/a&gt;
-&lt;a name="rest_code_f940dd61e05e4310b712ee8610f8e54b-11"&gt;&lt;/a&gt;&lt;span class="k"&gt;\XeTeXlinebreaklocale&lt;/span&gt; "zh"
-&lt;a name="rest_code_f940dd61e05e4310b712ee8610f8e54b-12"&gt;&lt;/a&gt;&lt;span class="k"&gt;\XeTeXlinebreakskip&lt;/span&gt; = 0pt plus 1pt minus 0.1pt
+&lt;table class="codetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;a href="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_32d28d20fc0d42da85fc0fcf9c7201c9-1"&gt; 1&lt;/a&gt;
+&lt;a href="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_32d28d20fc0d42da85fc0fcf9c7201c9-2"&gt; 2&lt;/a&gt;
+&lt;a href="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_32d28d20fc0d42da85fc0fcf9c7201c9-3"&gt; 3&lt;/a&gt;
+&lt;a href="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_32d28d20fc0d42da85fc0fcf9c7201c9-4"&gt; 4&lt;/a&gt;
+&lt;a href="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_32d28d20fc0d42da85fc0fcf9c7201c9-5"&gt; 5&lt;/a&gt;
+&lt;a href="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_32d28d20fc0d42da85fc0fcf9c7201c9-6"&gt; 6&lt;/a&gt;
+&lt;a href="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_32d28d20fc0d42da85fc0fcf9c7201c9-7"&gt; 7&lt;/a&gt;
+&lt;a href="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_32d28d20fc0d42da85fc0fcf9c7201c9-8"&gt; 8&lt;/a&gt;
+&lt;a href="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_32d28d20fc0d42da85fc0fcf9c7201c9-9"&gt; 9&lt;/a&gt;
+&lt;a href="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_32d28d20fc0d42da85fc0fcf9c7201c9-10"&gt;10&lt;/a&gt;
+&lt;a href="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_32d28d20fc0d42da85fc0fcf9c7201c9-11"&gt;11&lt;/a&gt;
+&lt;a href="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_32d28d20fc0d42da85fc0fcf9c7201c9-12"&gt;12&lt;/a&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;pre class="code latex"&gt;&lt;a name="rest_code_32d28d20fc0d42da85fc0fcf9c7201c9-1"&gt;&lt;/a&gt;&lt;span class="c"&gt;%! TEX program = xelatex&lt;/span&gt;
+&lt;a name="rest_code_32d28d20fc0d42da85fc0fcf9c7201c9-2"&gt;&lt;/a&gt;
+&lt;a name="rest_code_32d28d20fc0d42da85fc0fcf9c7201c9-3"&gt;&lt;/a&gt;&lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;fontspec&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_32d28d20fc0d42da85fc0fcf9c7201c9-4"&gt;&lt;/a&gt;&lt;span class="k"&gt;\setmainfont&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;PingFang SC&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_32d28d20fc0d42da85fc0fcf9c7201c9-5"&gt;&lt;/a&gt;&lt;span class="k"&gt;\setsansfont&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;Hiragino Sans GB&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_32d28d20fc0d42da85fc0fcf9c7201c9-6"&gt;&lt;/a&gt;&lt;span class="k"&gt;\setmonofont&lt;/span&gt;&lt;span class="na"&gt;[Scale=0.9]&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;PingFang SC&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_32d28d20fc0d42da85fc0fcf9c7201c9-7"&gt;&lt;/a&gt;
+&lt;a name="rest_code_32d28d20fc0d42da85fc0fcf9c7201c9-8"&gt;&lt;/a&gt;&lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;indentfirst&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_32d28d20fc0d42da85fc0fcf9c7201c9-9"&gt;&lt;/a&gt;&lt;span class="k"&gt;\setlength&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;&lt;span class="k"&gt;\parindent&lt;/span&gt;&lt;span class="nb"&gt;}{&lt;/span&gt;2em&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_32d28d20fc0d42da85fc0fcf9c7201c9-10"&gt;&lt;/a&gt;
+&lt;a name="rest_code_32d28d20fc0d42da85fc0fcf9c7201c9-11"&gt;&lt;/a&gt;&lt;span class="k"&gt;\XeTeXlinebreaklocale&lt;/span&gt; "zh"
+&lt;a name="rest_code_32d28d20fc0d42da85fc0fcf9c7201c9-12"&gt;&lt;/a&gt;&lt;span class="k"&gt;\XeTeXlinebreakskip&lt;/span&gt; = 0pt plus 1pt minus 0.1pt
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;第 1 行指定编译引擎 &lt;cite&gt;xelatex&lt;/cite&gt; 。不成文的规范，LaTeX 客户端或编辑器插件不一定会遵守。&lt;/p&gt;
 &lt;p&gt;第 3-6 行使用苹方和冬青黑体，macOS 上的默认字体。&lt;/p&gt;
 &lt;p&gt;第 8-9 行分别设置首行缩进和缩进间隔。&lt;/p&gt;
 &lt;p&gt;第 11 行使用中文断行方式，否则段落会合并成一行。&lt;/p&gt;
 &lt;p&gt;第 12 行还不清楚啥意思，不过好多文章都有，暂时不删除。&lt;/p&gt;
-&lt;p&gt;这几行精简的配置，足以应付 macOS 上绝大部分编译场景。如果是其它操作系统，注意替换中文字体。通过 &lt;cite&gt;rst2xetex.py&lt;/cite&gt; 命令转换过来的 tex 文件，添加以上几行，就能顺利编译。&lt;/p&gt;&lt;/div&gt;</description><category>reST</category><category>xetex</category><guid>https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/</guid><pubDate>Mon, 16 Oct 2017 09:07:37 GMT</pubDate></item><item><title>从 Markdown 到 reStructuredText（四）</title><link>https://macplay.github.io/posts/cong-markdown-dao-restructuredtextsi/</link><dc:creator>ashfinal</dc:creator><description>&lt;div&gt;&lt;p&gt;本文是《从 Markdown 到 reStructuredText》系列文章的第四篇。和 Markdown 一样，reStructuredText 也是一种易读易写的纯文本标记语言，不过功能上更加强大（而且标准统一）。如果想了解其对应于 Markdown 的基本语法，请阅读 &lt;a class="reference external" href="https://macplay.github.io/posts/cong-markdown-dao-restructuredtext/"&gt;第一篇文章&lt;/a&gt; 。本文继续 &lt;a class="reference external" href="https://macplay.github.io/posts/cong-markdown-dao-restructuredtextsan/"&gt;上一篇文章&lt;/a&gt; 的话题，试用和探索一下 reStructuredText 导出为其它格式的功能。&lt;/p&gt;
-&lt;p&gt;reStructuredText 安装包 &lt;a class="reference external" href="http://docutils.sourceforge.net"&gt;docutils&lt;/a&gt; &lt;a class="footnote-reference" href="https://macplay.github.io/posts/cong-markdown-dao-restructuredtextsi/#id5" id="id3"&gt;[1]&lt;/a&gt; 额外包含了一些 Python 脚本，以支持导出到其它格式。这里只谈一谈比较关心的 HTML、S5 Slides、Office 文档、PDF 等格式的支持情况。&lt;/p&gt;
-&lt;div class="contents topic" id="id4"&gt;
-&lt;p class="topic-title first"&gt;文档目录&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference internal" href="https://macplay.github.io/posts/cong-markdown-dao-restructuredtextsi/#html" id="id11"&gt;HTML 导出&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference internal" href="https://macplay.github.io/posts/cong-markdown-dao-restructuredtextsi/#s5-slides" id="id12"&gt;S5 Slides&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference internal" href="https://macplay.github.io/posts/cong-markdown-dao-restructuredtextsi/#office" id="id13"&gt;Office 文档导出&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference internal" href="https://macplay.github.io/posts/cong-markdown-dao-restructuredtextsi/#pdf" id="id14"&gt;PDF 格式导出&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference internal" href="https://macplay.github.io/posts/cong-markdown-dao-restructuredtextsi/#id10" id="id15"&gt;总结&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;a href="https://macplay.github.io/posts/cong-markdown-dao-restructuredtextsi/"&gt;Read more…&lt;/a&gt; (2 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>markup</category><category>pdf</category><category>reST</category><guid>https://macplay.github.io/posts/cong-markdown-dao-restructuredtextsi/</guid><pubDate>Sat, 14 Oct 2017 10:37:28 GMT</pubDate></item></channel></rss>
+&lt;p&gt;这几行精简的配置，足以应付 macOS 上绝大部分编译场景。如果是其它操作系统，注意替换中文字体。通过 &lt;cite&gt;rst2xetex.py&lt;/cite&gt; 命令转换过来的 tex 文件，添加以上几行，就能顺利编译。&lt;/p&gt;&lt;/div&gt;</description><category>reST</category><category>xetex</category><guid>https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/</guid><pubDate>Mon, 16 Oct 2017 09:07:37 GMT</pubDate></item></channel></rss>
