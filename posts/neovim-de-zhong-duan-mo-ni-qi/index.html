@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="generator" content="Nikola (getnikola.com)">
-<title>XeTeX 的中文化设置 - MacPlay</title>
+<title>Neovim 的终端模拟器 - MacPlay</title>
 <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
@@ -12,33 +12,26 @@
 <link href="../../assets/css/semantic.min.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
-<link rel="canonical" href="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/">
+<link rel="canonical" href="https://macplay.github.io/posts/neovim-de-zhong-duan-mo-ni-qi/">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
 <meta name="author" content="ashfinal">
+<meta name="robots" content="noindex">
 <meta property="og:site_name" content="MacPlay">
-<meta property="og:title" content="XeTeX 的中文化设置">
-<meta property="og:url" content="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/">
-<meta property="og:description" content="看过一些文章得出结论：即使用 XeTeX 编译中文，也需要额外添加 xeCJK 包设置下字体。笔者也一直是这么做的。
-刚尝试了下，这一步其实是不必要的。直接用 fontspec 设置中文字体，不必引入额外的包：
- 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12%! TEX program = xelatex
+<meta property="og:title" content="Neovim 的终端模拟器">
+<meta property="og:url" content="https://macplay.github.io/posts/neovim-de-zhong-duan-mo-ni-qi/">
+<meta property="og:description" content="Neovim 编辑器中内嵌了一个终端模拟器（terminal emulator）。根据文档描述（ :h emulator ），这是个基于 libvterm 实现的 VT220/xterm 模拟器。
 
-\usepackage{fontspec}
-\setmainfon">
+环境
+乱码
+256 色
+交互
+性能">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2017-10-16T17:07:37+08:00">
-<meta property="article:tag" content="reST">
-<meta property="article:tag" content="xetex">
+<meta property="article:published_time" content="2017-11-16T18:47:11+08:00">
+<meta property="article:tag" content="emulator">
+<meta property="article:tag" content="neovim">
+<meta property="article:tag" content="terminal">
+<meta property="article:tag" content="vim">
 <link rel="stylesheet" href="../../assets/css/gitalk.css">
 </head>
 <body>
@@ -92,7 +85,7 @@
     </header><main id="main"><div id="main-content">
 <div class="postpage post-text page-body" itemscope="itemscope" itemtype="http://schema.org/Article">
             <h1 class="post-title" itemprop="headline">
-        <a href=".">XeTeX 的中文化设置</a>
+        <a href=".">Neovim 的终端模拟器</a>
     </h1>
 
     <div class="post-meta">
@@ -107,7 +100,7 @@
                 <i class="github icon"></i>
             </span>
             <span class="post-meta-item-text">
-                <a href="https://github.com/macplay/macplay.github.io/edit/src/posts/xetex-de-zhong-wen-hua-she-zhi.rst" title="Edit on GitHub">edit</a>
+                <a href="https://github.com/macplay/macplay.github.io/edit/src/posts/neovim-de-zhong-duan-mo-ni-qi.rst" title="Edit on GitHub">edit</a>
             </span>
         <span class="post-meta-divider">|</span>
         <span class="post-meta-item-icon">
@@ -115,7 +108,7 @@
         </span>
         <span class="post-meta-item-text">
             <a href="../../archive.html">
-                <time datetime="2017-10-16T17:07:37+08:00" itemprop="datePublished" title="2017-10-16 17:07">2017-10-16 17:07
+                <time datetime="2017-11-16T18:47:11+08:00" itemprop="datePublished" title="2017-11-16 18:47">2017-11-16 18:47
                 </time></a>
         </span>
             <span class="post-meta-divider">|</span>
@@ -123,10 +116,16 @@
                 <i class="tags icon"></i>
             </span>
                         <span class="post-meta-tag-item">
-                            <a href="../../categories/rest/">reST</a>
+                            <a href="../../categories/emulator/">emulator</a>
                         </span>
                         <span class="post-meta-tag-item">
-                            <a href="../../categories/xetex/">xetex</a>
+                            <a href="../../categories/neovim/">neovim</a>
+                        </span>
+                        <span class="post-meta-tag-item">
+                            <a href="../../categories/terminal/">terminal</a>
+                        </span>
+                        <span class="post-meta-tag-item">
+                            <a href="../../categories/vim/">vim</a>
                         </span>
     </div>
 
@@ -134,60 +133,25 @@
     <div class="post-content" itemprop="article text">
         <div id="post-content">
         <div>
-<p>看过一些文章得出结论：即使用 XeTeX 编译中文，也需要额外添加 <cite>xeCJK</cite> 包设置下字体。笔者也一直是这么做的。</p>
-<p>刚尝试了下，这一步其实是不必要的。直接用 <cite>fontspec</cite> 设置中文字体，不必引入额外的包：</p>
-<table class="codetable"><tr>
-<td class="linenos"><div class="linenodiv"><pre><a href="#rest_code_ac34d23b666f488584a3c0de23d783d4-1"> 1</a>
-<a href="#rest_code_ac34d23b666f488584a3c0de23d783d4-2"> 2</a>
-<a href="#rest_code_ac34d23b666f488584a3c0de23d783d4-3"> 3</a>
-<a href="#rest_code_ac34d23b666f488584a3c0de23d783d4-4"> 4</a>
-<a href="#rest_code_ac34d23b666f488584a3c0de23d783d4-5"> 5</a>
-<a href="#rest_code_ac34d23b666f488584a3c0de23d783d4-6"> 6</a>
-<a href="#rest_code_ac34d23b666f488584a3c0de23d783d4-7"> 7</a>
-<a href="#rest_code_ac34d23b666f488584a3c0de23d783d4-8"> 8</a>
-<a href="#rest_code_ac34d23b666f488584a3c0de23d783d4-9"> 9</a>
-<a href="#rest_code_ac34d23b666f488584a3c0de23d783d4-10">10</a>
-<a href="#rest_code_ac34d23b666f488584a3c0de23d783d4-11">11</a>
-<a href="#rest_code_ac34d23b666f488584a3c0de23d783d4-12">12</a></pre></div></td>
-<td class="code"><pre class="code latex"><a name="rest_code_ac34d23b666f488584a3c0de23d783d4-1"></a><span class="c">%! TEX program = xelatex</span>
-<a name="rest_code_ac34d23b666f488584a3c0de23d783d4-2"></a>
-<a name="rest_code_ac34d23b666f488584a3c0de23d783d4-3"></a><span class="k">\usepackage</span><span class="nb">{</span>fontspec<span class="nb">}</span>
-<a name="rest_code_ac34d23b666f488584a3c0de23d783d4-4"></a><span class="k">\setmainfont</span><span class="nb">{</span>PingFang SC<span class="nb">}</span>
-<a name="rest_code_ac34d23b666f488584a3c0de23d783d4-5"></a><span class="k">\setsansfont</span><span class="nb">{</span>Hiragino Sans GB<span class="nb">}</span>
-<a name="rest_code_ac34d23b666f488584a3c0de23d783d4-6"></a><span class="k">\setmonofont</span><span class="na">[Scale=0.9]</span><span class="nb">{</span>PingFang SC<span class="nb">}</span>
-<a name="rest_code_ac34d23b666f488584a3c0de23d783d4-7"></a>
-<a name="rest_code_ac34d23b666f488584a3c0de23d783d4-8"></a><span class="k">\usepackage</span><span class="nb">{</span>indentfirst<span class="nb">}</span>
-<a name="rest_code_ac34d23b666f488584a3c0de23d783d4-9"></a><span class="k">\setlength</span><span class="nb">{</span><span class="k">\parindent</span><span class="nb">}{</span>2em<span class="nb">}</span>
-<a name="rest_code_ac34d23b666f488584a3c0de23d783d4-10"></a>
-<a name="rest_code_ac34d23b666f488584a3c0de23d783d4-11"></a><span class="k">\XeTeXlinebreaklocale</span> "zh"
-<a name="rest_code_ac34d23b666f488584a3c0de23d783d4-12"></a><span class="k">\XeTeXlinebreakskip</span> = 0pt plus 1pt minus 0.1pt
-</pre></td>
-</tr></table>
-<p>第 1 行指定编译引擎 <cite>xelatex</cite> 。不成文的规范，LaTeX 客户端或编辑器插件不一定会遵守。</p>
-<p>第 3-6 行使用苹方和冬青黑体，macOS 上的默认字体。</p>
-<p>第 8-9 行分别设置首行缩进和缩进间隔。</p>
-<p>第 11 行使用中文断行方式，否则段落会合并成一行。</p>
-<p>第 12 行还不清楚啥意思，不过好多文章都有，暂时不删除。</p>
-<p>这几行精简的配置，足以应付 macOS 上绝大部分编译场景。如果是其它操作系统，注意替换中文字体。通过 <cite>rst2xetex.py</cite> 命令转换过来的 tex 文件，添加以上几行，就能顺利编译。</p>
+<p>Neovim 编辑器中内嵌了一个终端模拟器（terminal emulator）。根据文档描述（ <cite>:h emulator</cite> ），这是个基于 libvterm 实现的 VT220/xterm 模拟器。</p>
+<ul class="simple">
+<li>环境</li>
+<li>乱码</li>
+<li>256 色</li>
+<li>交互</li>
+<li>性能</li>
+</ul>
 </div>
         </div>
     </div>
     <div class="post-info">
-        <p>文章链接：<a href="https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/" target="_blank">https://macplay.github.io/posts/xetex-de-zhong-wen-hua-she-zhi/</a></p>
+        <p>文章链接：<a href="https://macplay.github.io/posts/neovim-de-zhong-duan-mo-ni-qi/" target="_blank">https://macplay.github.io/posts/neovim-de-zhong-duan-mo-ni-qi/</a></p>
         <p>发布/更新于：
-            <time datetime="2017-10-16 17:07:37 UTC+08:00" itemprop="dateModified" title="2017-10-16 17:07">2017-10-16 17:07
+            <time datetime="2017-11-16 18:47:11 UTC+08:00" itemprop="dateModified" title="2017-11-16 18:47">2017-11-16 18:47
             </time></p>
         <p>版权声明：如无特别说明，本站文章均遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a> 协议，转载请注明作者及出处。</p>
     </div>
-        <div class="post-navigation no-print">
-        <div class="ui huge secondary stackable menu">
-            <a class="post-nav-item post-nav-previous item" href="../cong-markdown-dao-restructuredtextsi/" title="Previous post"><i class="angle double left icon"></i> 从 Markdown 到 reStructuredText（四）</a>
-        <div class="right menu">
-            <a class="post-nav-item post-nav-next item" href="../nikola-bo-ke-zi-yuan-lian-jie-wen-ti/" title="Next post">Nikola 博客资源链接问题 <i class="angle double right icon"></i></a>
-        </div>
-        </div>
-    </div>
-
+    
         <div id="gitalk-container" class="comments-block no-print"></div>
 </div>
                     </div>

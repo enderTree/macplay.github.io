@@ -127,74 +127,74 @@ my_a">
         <div>
 <p>有时候会有将代码中的数字递增/递减的需求，一直没有找到相对简单优雅的做法。今天通过网络搜索加上幸运值暴增，感觉终于比较完善地解决了这个问题，遂作此文记录一下。</p>
 <p>如果我们想将以下代码块中的所有数字，在原有基础上均递增两次：</p>
-<pre class="code text"><a name="rest_code_6c8ef4a3e0154dc8a6eac8c5a8592f0e-1"></a>my_array[1] = 0;
-<a name="rest_code_6c8ef4a3e0154dc8a6eac8c5a8592f0e-2"></a>my_array[2] = 0;
-<a name="rest_code_6c8ef4a3e0154dc8a6eac8c5a8592f0e-3"></a>my_array[3] = 0;
-<a name="rest_code_6c8ef4a3e0154dc8a6eac8c5a8592f0e-4"></a>my_array[4] = 0;
-<a name="rest_code_6c8ef4a3e0154dc8a6eac8c5a8592f0e-5"></a>my_array[5] = 0;
-<a name="rest_code_6c8ef4a3e0154dc8a6eac8c5a8592f0e-6"></a>my_array[6] = 0;
-<a name="rest_code_6c8ef4a3e0154dc8a6eac8c5a8592f0e-7"></a>my_array[7] = 0;
+<pre class="code text"><a name="rest_code_b9f5be2b4c3544b896c39015b90ca885-1"></a>my_array[1] = 0;
+<a name="rest_code_b9f5be2b4c3544b896c39015b90ca885-2"></a>my_array[2] = 0;
+<a name="rest_code_b9f5be2b4c3544b896c39015b90ca885-3"></a>my_array[3] = 0;
+<a name="rest_code_b9f5be2b4c3544b896c39015b90ca885-4"></a>my_array[4] = 0;
+<a name="rest_code_b9f5be2b4c3544b896c39015b90ca885-5"></a>my_array[5] = 0;
+<a name="rest_code_b9f5be2b4c3544b896c39015b90ca885-6"></a>my_array[6] = 0;
+<a name="rest_code_b9f5be2b4c3544b896c39015b90ca885-7"></a>my_array[7] = 0;
 </pre>
 <p>即变成以下这样：</p>
-<pre class="code text"><a name="rest_code_b4046745682f4934a27a57ca0739c2fd-1"></a>my_array[3] = 2;
-<a name="rest_code_b4046745682f4934a27a57ca0739c2fd-2"></a>my_array[4] = 2;
-<a name="rest_code_b4046745682f4934a27a57ca0739c2fd-3"></a>my_array[5] = 2;
-<a name="rest_code_b4046745682f4934a27a57ca0739c2fd-4"></a>my_array[6] = 2;
-<a name="rest_code_b4046745682f4934a27a57ca0739c2fd-5"></a>my_array[7] = 2;
-<a name="rest_code_b4046745682f4934a27a57ca0739c2fd-6"></a>my_array[8] = 2;
-<a name="rest_code_b4046745682f4934a27a57ca0739c2fd-7"></a>my_array[9] = 2;
+<pre class="code text"><a name="rest_code_d3145ced13bd4bd9b5e8a6665d03cf76-1"></a>my_array[3] = 2;
+<a name="rest_code_d3145ced13bd4bd9b5e8a6665d03cf76-2"></a>my_array[4] = 2;
+<a name="rest_code_d3145ced13bd4bd9b5e8a6665d03cf76-3"></a>my_array[5] = 2;
+<a name="rest_code_d3145ced13bd4bd9b5e8a6665d03cf76-4"></a>my_array[6] = 2;
+<a name="rest_code_d3145ced13bd4bd9b5e8a6665d03cf76-5"></a>my_array[7] = 2;
+<a name="rest_code_d3145ced13bd4bd9b5e8a6665d03cf76-6"></a>my_array[8] = 2;
+<a name="rest_code_d3145ced13bd4bd9b5e8a6665d03cf76-7"></a>my_array[9] = 2;
 </pre>
 <!-- TEASER_END -->
 <p>笔者以前的做法：如果仅有几处需要修改，那就直接跳转到数字处，按 <cite>Ctrl + a</cite> 或 <cite>Ctrl + x</cite> 完事。如果修改之处较多而且数据格式比较规整，那就录制一个宏然后执行。不过格式规整的情况太少了，所以大部分情况下还是用第一种方法，有时候就得跳转多次并重复按 <cite>Ctrl + a</cite> ，觉得有点烦。</p>
 <p>搜索之后得出的 <strong>第一个解决方案</strong> <a class="footnote-reference" href="#id2" id="id1">[1]</a> ：</p>
 <p>将光标移到第一行的 <cite>1</cite> 处，按 <cite>Ctrl + v</cite> 进入 <cite>Visual Block</cite> 列模式，然后选择接下来的几行，最后按 <cite>Ctrl + a</cite> 。哈哈，变成了 <cite>2 3 4 …8</cite> 这样的。耶！一次性完工。（汗！还是平时遇到规整格式的情况太少，竟然不知道 <cite>Ctrl + a</cite> 可以和列模式混合使用。）接下来就好办了， <cite>gv</cite> 重复上一选区，再按一次 <cite>Ctrl + a</cite> 就 OK 了。不过这事还有更简单的方法——直接按 <cite>.</cite> 重复上一次操作，都不用进入选择模式。简直不要太方便！再将后面的 <cite>0</cite> 列如法炮制，即可打完收功。</p>
 <p>还可以在按 <cite>Ctrl + a</cite> 之前，按个 <cite>g</cite> 键，这样递增数就与其所在行数相关了。比如上面的 <cite>0</cite> 列这样操作以后，就变成了 <cite>1 2 3 …7</cite> 的递增数列。</p>
-<pre class="code text"><a name="rest_code_5dd0fcec209640ac989d280149324374-1"></a>my_array[3] = 1;
-<a name="rest_code_5dd0fcec209640ac989d280149324374-2"></a>my_array[4] = 2;
-<a name="rest_code_5dd0fcec209640ac989d280149324374-3"></a>my_array[5] = 3;
-<a name="rest_code_5dd0fcec209640ac989d280149324374-4"></a>my_array[6] = 4;
-<a name="rest_code_5dd0fcec209640ac989d280149324374-5"></a>my_array[7] = 5;
-<a name="rest_code_5dd0fcec209640ac989d280149324374-6"></a>my_array[8] = 6;
-<a name="rest_code_5dd0fcec209640ac989d280149324374-7"></a>my_array[9] = 7;
+<pre class="code text"><a name="rest_code_c2b29144ec4e466fba0b67cc8d48188b-1"></a>my_array[3] = 1;
+<a name="rest_code_c2b29144ec4e466fba0b67cc8d48188b-2"></a>my_array[4] = 2;
+<a name="rest_code_c2b29144ec4e466fba0b67cc8d48188b-3"></a>my_array[5] = 3;
+<a name="rest_code_c2b29144ec4e466fba0b67cc8d48188b-4"></a>my_array[6] = 4;
+<a name="rest_code_c2b29144ec4e466fba0b67cc8d48188b-5"></a>my_array[7] = 5;
+<a name="rest_code_c2b29144ec4e466fba0b67cc8d48188b-6"></a>my_array[8] = 6;
+<a name="rest_code_c2b29144ec4e466fba0b67cc8d48188b-7"></a>my_array[9] = 7;
 </pre>
 <p>这就很强悍了，不必像有些教程里说的那样，需要 <tt class="docutils literal">let i=1</tt> 定义有点长的函数才能产生递增数列。貌似可以用这种方法给代码增加行号了？</p>
 <p>不过该方法还是有不少限制的——仍然面临数字格式规整的问题。如果上面的数字出现两位数甚至浮点数，这时就无法用列模式选中，自然也就无法按预想进行递增。</p>
-<pre class="code text"><a name="rest_code_dc85a0330b344eb88aed279c2e566edf-1"></a>my_array[1] = 0;
-<a name="rest_code_dc85a0330b344eb88aed279c2e566edf-2"></a>my_array[2] = 0;
-<a name="rest_code_dc85a0330b344eb88aed279c2e566edf-3"></a>my_array[3] = 0;
-<a name="rest_code_dc85a0330b344eb88aed279c2e566edf-4"></a>my_array[41] = 0;
-<a name="rest_code_dc85a0330b344eb88aed279c2e566edf-5"></a>my_array[51] = 0;
-<a name="rest_code_dc85a0330b344eb88aed279c2e566edf-6"></a>my_array[61] = 0;
-<a name="rest_code_dc85a0330b344eb88aed279c2e566edf-7"></a>my_array[71] = 0;
+<pre class="code text"><a name="rest_code_28c135a5b9e5449facb047081d4b8cde-1"></a>my_array[1] = 0;
+<a name="rest_code_28c135a5b9e5449facb047081d4b8cde-2"></a>my_array[2] = 0;
+<a name="rest_code_28c135a5b9e5449facb047081d4b8cde-3"></a>my_array[3] = 0;
+<a name="rest_code_28c135a5b9e5449facb047081d4b8cde-4"></a>my_array[41] = 0;
+<a name="rest_code_28c135a5b9e5449facb047081d4b8cde-5"></a>my_array[51] = 0;
+<a name="rest_code_28c135a5b9e5449facb047081d4b8cde-6"></a>my_array[61] = 0;
+<a name="rest_code_28c135a5b9e5449facb047081d4b8cde-7"></a>my_array[71] = 0;
 </pre>
 <p>按照以上方法操作后变成：</p>
-<pre class="code text"><a name="rest_code_502035757e4d4cc68e4d772d9b3d0a0b-1"></a>my_array[3] = 2;
-<a name="rest_code_502035757e4d4cc68e4d772d9b3d0a0b-2"></a>my_array[4] = 2;
-<a name="rest_code_502035757e4d4cc68e4d772d9b3d0a0b-3"></a>my_array[5] = 2;
-<a name="rest_code_502035757e4d4cc68e4d772d9b3d0a0b-4"></a>my_array[61] = 2;
-<a name="rest_code_502035757e4d4cc68e4d772d9b3d0a0b-5"></a>my_array[71] = 2;
-<a name="rest_code_502035757e4d4cc68e4d772d9b3d0a0b-6"></a>my_array[81] = 2;
-<a name="rest_code_502035757e4d4cc68e4d772d9b3d0a0b-7"></a>my_array[91] = 2;
+<pre class="code text"><a name="rest_code_a9e133e5b769496bac51544ef2e71ab1-1"></a>my_array[3] = 2;
+<a name="rest_code_a9e133e5b769496bac51544ef2e71ab1-2"></a>my_array[4] = 2;
+<a name="rest_code_a9e133e5b769496bac51544ef2e71ab1-3"></a>my_array[5] = 2;
+<a name="rest_code_a9e133e5b769496bac51544ef2e71ab1-4"></a>my_array[61] = 2;
+<a name="rest_code_a9e133e5b769496bac51544ef2e71ab1-5"></a>my_array[71] = 2;
+<a name="rest_code_a9e133e5b769496bac51544ef2e71ab1-6"></a>my_array[81] = 2;
+<a name="rest_code_a9e133e5b769496bac51544ef2e71ab1-7"></a>my_array[91] = 2;
 </pre>
 <p>显然与最初预想的“自增两次”是不一致的。如果想用列模式操作，则需要将上面的代码在个位数上对齐：</p>
-<pre class="code text"><a name="rest_code_ed7a8362c1fe45da8502b416805d0839-1"></a> my_array[1] = 0;
-<a name="rest_code_ed7a8362c1fe45da8502b416805d0839-2"></a> my_array[2] = 0;
-<a name="rest_code_ed7a8362c1fe45da8502b416805d0839-3"></a> my_array[3] = 0;
-<a name="rest_code_ed7a8362c1fe45da8502b416805d0839-4"></a>my_array[41] = 0;
-<a name="rest_code_ed7a8362c1fe45da8502b416805d0839-5"></a>my_array[51] = 0;
-<a name="rest_code_ed7a8362c1fe45da8502b416805d0839-6"></a>my_array[61] = 0;
-<a name="rest_code_ed7a8362c1fe45da8502b416805d0839-7"></a>my_array[71] = 0;
+<pre class="code text"><a name="rest_code_220c127948fe4ebdb7be7c9319cbab57-1"></a> my_array[1] = 0;
+<a name="rest_code_220c127948fe4ebdb7be7c9319cbab57-2"></a> my_array[2] = 0;
+<a name="rest_code_220c127948fe4ebdb7be7c9319cbab57-3"></a> my_array[3] = 0;
+<a name="rest_code_220c127948fe4ebdb7be7c9319cbab57-4"></a>my_array[41] = 0;
+<a name="rest_code_220c127948fe4ebdb7be7c9319cbab57-5"></a>my_array[51] = 0;
+<a name="rest_code_220c127948fe4ebdb7be7c9319cbab57-6"></a>my_array[61] = 0;
+<a name="rest_code_220c127948fe4ebdb7be7c9319cbab57-7"></a>my_array[71] = 0;
 </pre>
 <p>然后就可以继续使用上面描述的方法了。不过递增完最好把 1~3 行前面的空格去掉，有些语言可能会报错。</p>
 <p><strong>第二种方法</strong> 是使用 Vim 的正则替换功能。实际上笔者之前曾尝试过该方法，不过以失败告终。当时写的替换语句是这样的： <tt class="docutils literal"><span class="pre">:%s/\d\+/\0+2/g</span></tt> 。按我的料想， <tt class="docutils literal">\0</tt> 是匹配的分组，在它上面直接 <tt class="docutils literal">+2</tt> 不就好了？然而经实际测试并不行。事情的解决是发呆时抱着寻宝的想法打开 <a class="reference external" href="http://zzapper.co.uk/vimtips.html">Best of Vim Tips</a> ，一眼瞥见了那一行：</p>
-<pre class="code vim"><a name="rest_code_080807e968c24b9a9ed5f34a9d09a98b-1"></a><span class="c">" decrement numbers by 3</span>
-<a name="rest_code_080807e968c24b9a9ed5f34a9d09a98b-2"></a><span class="p">:</span>%s<span class="sr">/\d\+/</span>\<span class="p">=(</span>submatch<span class="p">(</span><span class="m">0</span><span class="p">)</span><span class="m">-3</span><span class="p">)</span>/
+<pre class="code vim"><a name="rest_code_281611b5f7fd45d2979b95b86b79d034-1"></a><span class="c">" decrement numbers by 3</span>
+<a name="rest_code_281611b5f7fd45d2979b95b86b79d034-2"></a><span class="p">:</span>%s<span class="sr">/\d\+/</span>\<span class="p">=(</span>submatch<span class="p">(</span><span class="m">0</span><span class="p">)</span><span class="m">-3</span><span class="p">)</span>/
 </pre>
 <p>再仔细一看，可不正是我想要的正则替换？大喜过望，经实际试验果然如此！第一种方法所说的步骤，实际上只需选中代码块然后执行一条正则替换语句：</p>
-<pre class="code vim"><a name="rest_code_c01953be66f948eabdb77ae00c69293e-1"></a><span class="p">:</span><span class="s1">'&lt;,&gt;'</span>s<span class="sr">/\d\+/</span>\<span class="p">=(</span>submatch<span class="p">(</span><span class="m">0</span><span class="p">)+</span><span class="m">2</span><span class="p">)</span>/<span class="k">g</span>
+<pre class="code vim"><a name="rest_code_325fc33a25794dccbbdf97100ceabb8c-1"></a><span class="p">:</span><span class="s1">'&lt;,&gt;'</span>s<span class="sr">/\d\+/</span>\<span class="p">=(</span>submatch<span class="p">(</span><span class="m">0</span><span class="p">)+</span><span class="m">2</span><span class="p">)</span>/<span class="k">g</span>
 </pre>
 <p>以前正则替换失败的症结在于并不知道 <tt class="docutils literal">submatch()</tt> 这个内置函数。通过 <tt class="docutils literal">:h submatch()</tt> 查看，该函数用来返回替换操作中第 n 个匹配字符串，而且以上命令中 <cite>submatch</cite> 的外层括号其实可以去掉。于是最终变成这样：</p>
-<pre class="code vim"><a name="rest_code_7748fb1642e946ebb84a292de867e13c-1"></a><span class="p">:</span><span class="s1">'&lt;,&gt;'</span>s<span class="sr">/\d\+/</span>\<span class="p">=</span>submatch<span class="p">(</span><span class="m">0</span><span class="p">)+</span><span class="m">2</span>/<span class="k">g</span>
+<pre class="code vim"><a name="rest_code_93f25b9983284584b271fe6029eda632-1"></a><span class="p">:</span><span class="s1">'&lt;,&gt;'</span>s<span class="sr">/\d\+/</span>\<span class="p">=</span>submatch<span class="p">(</span><span class="m">0</span><span class="p">)+</span><span class="m">2</span>/<span class="k">g</span>
 </pre>
 <p>命令的其它部分则比较容易理解： <tt class="docutils literal"><span class="pre">'&lt;,&gt;'</span></tt> 代表选区范围， <tt class="docutils literal">\d\+</tt> 匹配一个或多个数字， <tt class="docutils literal">\=</tt> 表示接下来的是一个函数/表达式。</p>
 <p>这种方法的优势在于没有格式规整的要求，且操作灵活性特别高，可充分利用正则表达式匹配功能。而且它已经不仅局限于数字递增了，可以用于字符串拼接等。</p>
