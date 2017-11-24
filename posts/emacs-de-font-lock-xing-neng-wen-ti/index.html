@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="generator" content="Nikola (getnikola.com)">
-<title>给 Nikola 博客添加 mermaid 支持 - MacPlay</title>
+<title>Emacs 的 Font Lock 性能问题 - MacPlay</title>
 <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
@@ -12,22 +12,21 @@
 <link href="../../assets/css/semantic.min.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
-<link rel="canonical" href="https://macplay.github.io/posts/gei-nikola-bo-ke-tian-jia-mermaid-zhi-chi/">
+<link rel="canonical" href="https://macplay.github.io/posts/emacs-de-font-lock-xing-neng-wen-ti/">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
 <meta name="author" content="ashfinal">
 <meta property="og:site_name" content="MacPlay">
-<meta property="og:title" content="给 Nikola 博客添加 mermaid 支持">
-<meta property="og:url" content="https://macplay.github.io/posts/gei-nikola-bo-ke-tian-jia-mermaid-zhi-chi/">
-<meta property="og:description" content="还是给博客集成了 mermaid [1] 图表功能，尽管目前用的很少……与 mathjax 一样，使用的时候给文章添加 mermaid 标签，然后在文章中给描述文本指定 mermaid class 即可。就像这样：
-.. container:: mermaid
+<meta property="og:title" content="Emacs 的 Font Lock 性能问题">
+<meta property="og:url" content="https://macplay.github.io/posts/emacs-de-font-lock-xing-neng-wen-ti/">
+<meta property="og:description" content="之前使用 Emacs 总是有点慢，没有 Vim 那种爽冽干脆的感觉。但多半是归咎于臃肿的 spacemacs 配置，不会轻易怀疑 Emacs 本身有什么问题。最近基本上是接近裸状态使用 Emacs 了，不安装第三方插件，也不搞乱七八糟的配置。不过两天前我又遇到了状况，翻来覆去尝试半天，感觉很有可能是 Emacs 的 Font Lock 性能有问题。
 
-   graph TD
-   A[Christmas] --&gt;|Get money| B(Go shopping)
-   B --&gt; C">
+
+Your browser does not ">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2017-10-27T14:29:49+08:00">
-<meta property="article:tag" content="chart">
-<meta property="article:tag" content="mermaid">
+<meta property="article:published_time" content="2017-11-24T11:53:52+08:00">
+<meta property="article:tag" content="emacs">
+<meta property="article:tag" content="regex">
+<meta property="article:tag" content="vim">
 <link rel="stylesheet" href="../../assets/css/gitalk.css">
 </head>
 <body>
@@ -81,7 +80,7 @@
     </header><main id="main"><div id="main-content">
 <div class="postpage post-text page-body" itemscope="itemscope" itemtype="http://schema.org/Article">
             <h1 class="post-title" itemprop="headline">
-        <a href=".">给 Nikola 博客添加 mermaid 支持</a>
+        <a href=".">Emacs 的 Font Lock 性能问题</a>
     </h1>
 
     <div class="post-meta">
@@ -96,7 +95,7 @@
                 <i class="github icon"></i>
             </span>
             <span class="post-meta-item-text">
-                <a href="https://github.com/macplay/macplay.github.io/edit/src/posts/gei-nikola-bo-ke-tian-jia-mermaid-zhi-chi.rst" title="Edit on GitHub">edit</a>
+                <a href="https://github.com/macplay/macplay.github.io/edit/src/posts/emacs-de-font-lock-xing-neng-wen-ti.rst" title="Edit on GitHub">edit</a>
             </span>
         <span class="post-meta-divider">|</span>
         <span class="post-meta-item-icon">
@@ -104,7 +103,7 @@
         </span>
         <span class="post-meta-item-text">
             <a href="../../archive.html">
-                <time datetime="2017-10-27T14:29:49+08:00" itemprop="datePublished" title="2017-10-27 14:29">2017-10-27 14:29
+                <time datetime="2017-11-24T11:53:52+08:00" itemprop="datePublished" title="2017-11-24 11:53">2017-11-24 11:53
                 </time></a>
         </span>
             <span class="post-meta-divider">|</span>
@@ -112,10 +111,13 @@
                 <i class="tags icon"></i>
             </span>
                         <span class="post-meta-tag-item">
-                            <a href="../../categories/chart/">chart</a>
+                            <a href="../../categories/emacs/">emacs</a>
                         </span>
                         <span class="post-meta-tag-item">
-                            <a href="../../categories/mermaid/">mermaid</a>
+                            <a href="../../categories/regex/">regex</a>
+                        </span>
+                        <span class="post-meta-tag-item">
+                            <a href="../../categories/vim/">vim</a>
                         </span>
     </div>
 
@@ -123,96 +125,29 @@
     <div class="post-content" itemprop="article text">
         <div id="post-content">
         <div>
-<p>还是给博客集成了 <a class="reference external" href="https://mermaidjs.github.io">mermaid</a> <a class="footnote-reference" href="#id2" id="id1">[1]</a> 图表功能，尽管目前用的很少……与 mathjax 一样，使用的时候给文章添加 <cite>mermaid</cite> 标签，然后在文章中给描述文本指定 <cite>mermaid</cite> class 即可。就像这样：</p>
-<pre class="code rst"><a name="rest_code_165d2f7a39744fdeac16f5461cb8c7be-1"></a><span class="p">..</span> <span class="ow">container</span><span class="p">::</span> mermaid
-<a name="rest_code_165d2f7a39744fdeac16f5461cb8c7be-2"></a>
-<a name="rest_code_165d2f7a39744fdeac16f5461cb8c7be-3"></a>   graph TD
-<a name="rest_code_165d2f7a39744fdeac16f5461cb8c7be-4"></a>   A[Christmas] --&gt;|Get money| B(Go shopping)
-<a name="rest_code_165d2f7a39744fdeac16f5461cb8c7be-5"></a>   B --&gt; C{Let me think}
-<a name="rest_code_165d2f7a39744fdeac16f5461cb8c7be-6"></a>   C --&gt;|One| D[Laptop]
-<a name="rest_code_165d2f7a39744fdeac16f5461cb8c7be-7"></a>   C --&gt;|Two| E[iPhone]
-<a name="rest_code_165d2f7a39744fdeac16f5461cb8c7be-8"></a>   C --&gt;|Three| F[Car]
+<p>之前使用 Emacs 总是有点慢，没有 Vim 那种爽冽干脆的感觉。但多半是归咎于臃肿的 spacemacs 配置，不会轻易怀疑 Emacs 本身有什么问题。最近基本上是接近裸状态使用 Emacs 了，不安装第三方插件，也不搞乱七八糟的配置。不过两天前我又遇到了状况，翻来覆去尝试半天，感觉很有可能是 Emacs 的 Font Lock 性能有问题。</p>
+<!-- TEASER_END -->
+<video src="../../videos/font_lock.mp4" loop autoplay>
+Your browser does not support the video tag.
+</video><p>以上截图是我使用正则搜索 <cite>.</cite> （即匹配所有字符）的情况，未经任何后期处理， <strong>肉眼可见</strong> 匹配项有个逐渐的着色过程。有人可能会说：是不是你文件太大，匹配项太多以至于 Emacs <strong>肉眼可见的慢</strong> ？还真不是，这个文件正如截图中呈现的那样，就是那么短，就只有那么多字符。</p>
+<pre class="code text"><a name="rest_code_414af2737b114a2887692e5632be5e82-1"></a>Col 1 of 115; Line 2 of 22; Word 1 of 116; Char 2 of 1001; Byte 2 of 1003
 </pre>
-<table class="docutils footnote" frame="void" id="id2" rules="none">
-<colgroup>
-<col class="label">
-<col>
-</colgroup>
-<tbody valign="top"><tr>
-<td class="label"><a class="fn-backref" href="#id1">[1]</a></td>
-<td>
-<a class="reference external" href="https://mermaidjs.github.io">mermaid</a> 使用 javascript 从纯文本描述产生流程图、序列图、甘特图等图表类型。</td>
-</tr></tbody>
-</table>
-<!-- TEASER_END --><p>渲染结果：</p>
-<div class="ui center aligned mermaid docutils container">
-graph TD
-A[Christmas] --&gt;|Get money| B(Go shopping)
-B --&gt; C{Let me think}
-C --&gt;|One| D[Laptop]
-C --&gt;|Two| E[iPhone]
-C --&gt;|Three| F[Car]</div>
-<p>Markdown 文档写作应该也可以用。整个 <a class="reference external" href="https://mermaidjs.github.io">mermaid</a> 功能的集成只需在博客模板里添加 4 行：</p>
-<pre class="code html+jinja"><a name="rest_code_5ef0bc76e19a4809ac60d0b2ab9cdbee-1"></a><span class="cp">{%</span> <span class="k">if</span> <span class="s2">"mermaid"</span> <span class="k">in</span> <span class="nv">post.tags</span> <span class="cp">%}</span>
-<a name="rest_code_5ef0bc76e19a4809ac60d0b2ab9cdbee-2"></a>    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">"text/javascript"</span> <span class="na">src</span><span class="o">=</span><span class="s">"/assets/js/mermaid.min.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<a name="rest_code_5ef0bc76e19a4809ac60d0b2ab9cdbee-3"></a>    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="nx">mermaid</span><span class="p">.</span><span class="nx">initialize</span><span class="p">({</span><span class="nx">startOnLoad</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nx">theme</span><span class="o">:</span> <span class="s1">'forest'</span><span class="p">});&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<a name="rest_code_5ef0bc76e19a4809ac60d0b2ab9cdbee-4"></a><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
-</pre>
-<p>使用 if 条件判断是为了仅在必要时才加载 <cite>mermaid</cite> js 文件，因为其即使压缩后也有 825 KB 的体积，可能会拖慢页面打开速度。mathjax 的情况与此类似，使用频率较低，但据说其完整加载要达到 200 MB 以上。</p>
-<p>序列图：</p>
-<div class="mermaid docutils container">
-sequenceDiagram
-participant Alice
-participant Bob
-Alice-&gt;John: Hello John, how are you?
-Note right of John: Rational thoughts &lt;br/&gt;prevail...
-John--&gt;Alice: Great!
-John-&gt;Bob: How about you?
-Bob--&gt;John: Jolly good!</div>
-<p>甘特图：</p>
-<div class="mermaid docutils container">
-gantt
-dateFormat  YYYY-MM-DD
-title Adding GANTT diagram functionality to mermaid
-section A section
-Completed task            :done,    des1, 2014-01-06,2014-01-08
-Active task               :active,  des2, 2014-01-09, 3d
-Future task               :         des3, after des2, 5d
-Future task2               :         des4, after des3, 5d
-section Critical tasks
-Completed task in the critical line :crit, done, 2014-01-06,24h
-Implement parser and jison          :crit, done, after des1, 2d
-Create tests for parser             :crit, active, 3d
-Future task in critical line        :crit, 5d
-Create tests for renderer           :2d
-Add to mermaid                      :1d</div>
-<div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">很奇怪序列图的 loop 语法不工作，但是使用 <cite>raw</cite> 指令却可以显示……有空再看看。</p>
-</div>
-<div class="mermaid">
-sequenceDiagram
-loop every day
-    Alice-&gt;&gt;John: Hello John, how are you?
-    John--&gt;&gt;Alice: Great!
-end
-</div>
+<p>仅仅 1001 个字符的着色就已经如此之慢！真是有点跌破了我对 Emacs 的认知。要知道 Font Lock 机制被广泛应用于 Emacs 主题、语法高亮、字体样式等等，而且这些样式随着文本编辑、语法检查等操作是时时更新的，如果 1001 个字符着色就能导致 <strong>肉眼可见的慢</strong> ，那同时打开多个文件，后台再跑一些导致 buffer 时不时刷新的任务，那么感觉 Emacs 运行慢也就是必然的结果了。</p>
+<p>这个简单的测试录屏时，就只打开了这一个文件。Emacs 安装的插件就只有 5 个： <cite>org which-key undo-tree atom-one-dark-theme magit</cite> 。如果感兴趣的话，可以到 <a class="reference external" href="https://github.com/ashfinal/spacemacs-private/blob/master/.emacs">这里</a> 看我的 <cite>.emacs</cite> 配置文件。</p>
+<p>这么来看的话，Emacs 支持花样繁多的样式，带来的性能问题还真不小。目前我并没有深入了解 Emacs 的 Font Lock 机制以及正则匹配，以对该问题做专业测试和剖析。如果你对此有了解的话，欢迎在评论区予以指教。</p>
 </div>
         </div>
     </div>
     <div class="post-info">
-        <p>文章链接：<a href="https://macplay.github.io/posts/gei-nikola-bo-ke-tian-jia-mermaid-zhi-chi/" target="_blank">https://macplay.github.io/posts/gei-nikola-bo-ke-tian-jia-mermaid-zhi-chi/</a></p>
+        <p>文章链接：<a href="https://macplay.github.io/posts/emacs-de-font-lock-xing-neng-wen-ti/" target="_blank">https://macplay.github.io/posts/emacs-de-font-lock-xing-neng-wen-ti/</a></p>
         <p>发布/更新于：
-            <time datetime="2017-10-27 14:29:49 UTC+08:00" itemprop="dateModified" title="2017-10-27 14:29">2017-10-27 14:29
+            <time datetime="2017-11-24 11:53:52 UTC+08:00" itemprop="dateModified" title="2017-11-24 11:53">2017-11-24 11:53
             </time></p>
         <p>版权声明：如无特别说明，本站文章均遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a> 协议，转载请注明作者及出处。</p>
     </div>
         <div class="post-navigation no-print">
         <div class="ui huge secondary stackable menu">
-            <a class="post-nav-item post-nav-previous item" href="../nikola-bo-ke-zi-yuan-lian-jie-wen-ti/" title="Previous post"><i class="angle double left icon"></i> Nikola 博客资源链接问题</a>
-        <div class="right menu">
-            <a class="post-nav-item post-nav-next item" href="../zai-tan-markdown-ji-qi-kuo-zhan/" title="Next post">再谈 Markdown 及其扩展 <i class="angle double right icon"></i></a>
-        </div>
+            <a class="post-nav-item post-nav-previous item" href="../vim-bu-xu-yao-duo-guang-biao-bian-ji-gong-neng/" title="Previous post"><i class="angle double left icon"></i> 【译】Vim 不需要多光标编辑功能</a>
         </div>
     </div>
 
@@ -264,6 +199,6 @@ end
             distractionFreeMode: false
         })
         gitalk.render('gitalk-container')
-    </script><script type="text/javascript" src="../../assets/js/mermaid.min.js"></script><script>mermaid.initialize({startOnLoad: true, theme: 'forest'});</script>
+    </script>
 </body>
 </html>
