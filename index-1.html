@@ -68,6 +68,44 @@
     <div class="postindex page-body">
     <div class="post-entry post-text">
         <div class="entry-title">
+            <a href="posts/zai-vim-zhong-shi-yong-undo-branches/">【译】在 Vim 中使用 undo branches</a>
+        </div>
+        <div class="post-meta">
+            <span class="post-meta-item-icon">
+                <i class="user icon"></i>
+            </span>
+            <span class="post-meta-item-text" itemprop="author">
+                <a href="authors/ashfinal/">ashfinal</a>
+            </span>
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+                <i class="calendar icon"></i>
+            </span>
+            <span class="post-meta-item-text">
+                <a href="archive.html">
+                    <time datetime="2017-11-13T11:14:24+08:00" itemprop="datePublished" title="2017-11-13 11:14">2017-11-13 11:14
+                    </time></a>
+            </span>
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                    <i class="tags icon"></i>
+                </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/translation/">translation</a>
+                            </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/vim/">vim</a>
+                            </span>
+        </div>
+        <div class="post-summary">
+                <div>
+<p>Vim 支持标准的 <a class="reference external" href="http://vim.wikia.com/wiki/Undo_and_Redo">撤销和重做</a> ，同时还支持 <cite>undo branches</cite> 。这允许你撤销一些更改，然后再做新的更改，而在此过程中 <strong>所有</strong> 的更改都在 <cite>undo tree</cite> 中得到保留。你甚至还能把撤销（undo）记录保存到文件中，下次编辑同一文件时恢复这些记录。本文将向你初步展示如何在 Vim 中使用 <cite>undo branches</cite> 。</p>
+<p class="more"><a href="posts/zai-vim-zhong-shi-yong-undo-branches/">Read more…</a></p>
+</div>
+        </div>
+    </div>
+    <div class="post-entry post-text">
+        <div class="entry-title">
             <a href="posts/bu-yi-yang-de-git-ke-hu-duan-gitup/">不一样的 Git 客户端——GitUp</a>
         </div>
         <div class="post-meta">
@@ -145,22 +183,22 @@
                 <div>
 <p>有时候会有将代码中的数字递增/递减的需求，一直没有找到相对简单优雅的做法。今天通过网络搜索加上幸运值暴增，感觉终于比较完善地解决了这个问题，遂作此文记录一下。</p>
 <p>如果我们想将以下代码块中的所有数字，在原有基础上均递增两次：</p>
-<pre class="code text"><a name="rest_code_2aa64f6f50c04af2ad5e907ee991a06d-1"></a>my_array[1] = 0;
-<a name="rest_code_2aa64f6f50c04af2ad5e907ee991a06d-2"></a>my_array[2] = 0;
-<a name="rest_code_2aa64f6f50c04af2ad5e907ee991a06d-3"></a>my_array[3] = 0;
-<a name="rest_code_2aa64f6f50c04af2ad5e907ee991a06d-4"></a>my_array[4] = 0;
-<a name="rest_code_2aa64f6f50c04af2ad5e907ee991a06d-5"></a>my_array[5] = 0;
-<a name="rest_code_2aa64f6f50c04af2ad5e907ee991a06d-6"></a>my_array[6] = 0;
-<a name="rest_code_2aa64f6f50c04af2ad5e907ee991a06d-7"></a>my_array[7] = 0;
+<pre class="code text"><a name="rest_code_e3b016ea4b8c42b1b7025a14934c4ce6-1"></a>my_array[1] = 0;
+<a name="rest_code_e3b016ea4b8c42b1b7025a14934c4ce6-2"></a>my_array[2] = 0;
+<a name="rest_code_e3b016ea4b8c42b1b7025a14934c4ce6-3"></a>my_array[3] = 0;
+<a name="rest_code_e3b016ea4b8c42b1b7025a14934c4ce6-4"></a>my_array[4] = 0;
+<a name="rest_code_e3b016ea4b8c42b1b7025a14934c4ce6-5"></a>my_array[5] = 0;
+<a name="rest_code_e3b016ea4b8c42b1b7025a14934c4ce6-6"></a>my_array[6] = 0;
+<a name="rest_code_e3b016ea4b8c42b1b7025a14934c4ce6-7"></a>my_array[7] = 0;
 </pre>
 <p>即变成以下这样：</p>
-<pre class="code text"><a name="rest_code_05c45718dc4a4546bbdd2670e85dbc19-1"></a>my_array[3] = 2;
-<a name="rest_code_05c45718dc4a4546bbdd2670e85dbc19-2"></a>my_array[4] = 2;
-<a name="rest_code_05c45718dc4a4546bbdd2670e85dbc19-3"></a>my_array[5] = 2;
-<a name="rest_code_05c45718dc4a4546bbdd2670e85dbc19-4"></a>my_array[6] = 2;
-<a name="rest_code_05c45718dc4a4546bbdd2670e85dbc19-5"></a>my_array[7] = 2;
-<a name="rest_code_05c45718dc4a4546bbdd2670e85dbc19-6"></a>my_array[8] = 2;
-<a name="rest_code_05c45718dc4a4546bbdd2670e85dbc19-7"></a>my_array[9] = 2;
+<pre class="code text"><a name="rest_code_910e5ae78b034e33babbc1d29642657b-1"></a>my_array[3] = 2;
+<a name="rest_code_910e5ae78b034e33babbc1d29642657b-2"></a>my_array[4] = 2;
+<a name="rest_code_910e5ae78b034e33babbc1d29642657b-3"></a>my_array[5] = 2;
+<a name="rest_code_910e5ae78b034e33babbc1d29642657b-4"></a>my_array[6] = 2;
+<a name="rest_code_910e5ae78b034e33babbc1d29642657b-5"></a>my_array[7] = 2;
+<a name="rest_code_910e5ae78b034e33babbc1d29642657b-6"></a>my_array[8] = 2;
+<a name="rest_code_910e5ae78b034e33babbc1d29642657b-7"></a>my_array[9] = 2;
 </pre>
 <p class="more"><a href="posts/vim-ji-qiao-pi-pei-shu-zi-di-zeng/">Read more…</a></p>
 </div>
@@ -258,48 +296,6 @@
 </div>
         </div>
     </div>
-    <div class="post-entry post-text">
-        <div class="entry-title">
-            <a href="posts/zai-tan-markdown-ji-qi-kuo-zhan/">再谈 Markdown 及其扩展</a>
-        </div>
-        <div class="post-meta">
-            <span class="post-meta-item-icon">
-                <i class="user icon"></i>
-            </span>
-            <span class="post-meta-item-text" itemprop="author">
-                <a href="authors/ashfinal/">ashfinal</a>
-            </span>
-            <span class="post-meta-divider">|</span>
-            <span class="post-meta-item-icon">
-                <i class="calendar icon"></i>
-            </span>
-            <span class="post-meta-item-text">
-                <a href="archive.html">
-                    <time datetime="2017-10-27T22:36:07+08:00" itemprop="datePublished" title="2017-10-27 22:36">2017-10-27 22:36
-                    </time></a>
-            </span>
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                    <i class="tags icon"></i>
-                </span>
-                            <span class="post-meta-tag-item">
-                                <a href="categories/markdown/">markdown</a>
-                            </span>
-                            <span class="post-meta-tag-item">
-                                <a href="categories/mermaid/">mermaid</a>
-                            </span>
-                            <span class="post-meta-tag-item">
-                                <a href="categories/python/">python</a>
-                            </span>
-        </div>
-        <div class="post-summary">
-                <div>
-<p>尽管笔者专门写了一个文章系列 <a href="posts/cong-markdown-dao-restructuredtext/" title="/posts/cong-markdown-dao-restructuredtext/">《从 Markdown 到 reStructuredText》</a>，推荐在日常文档写作中更多地使用 reStructuredText。不过平心而论，Markdown 标记语言其实还是不错的，再加上一堆漂亮好用的客户端，使其作为博客写作语言相当合适。静态博客 Nikola 本身也对 Markdown 开箱提供了完整支持，Markdown 与 reStructuredText 一样都是“一等公民”。</p>
-<p>Nikola 中使用的语法与主流 Markdown 语法，可以说是一模一样的。同时，还以扩展的形式 <sup id="fnref-1"><a class="footnote-ref" href="posts/zai-tan-markdown-ji-qi-kuo-zhan/#fn-1">1</a></sup> 额外提供了一些：</p>
-<p class="more"><a href="posts/zai-tan-markdown-ji-qi-kuo-zhan/">Read more…</a></p>
-</div>
-        </div>
-    </div>
     </div>
 
         <div class="page-navigation">
@@ -313,7 +309,7 @@
                 <a class="item" href="index-5.html">6</a>
                 <a class="item" href="index-6.html">7</a>
             <a class="item">…</a>
-                <a class="item" href="index-8.html">9</a>
+                <a class="item" href="index-9.html">10</a>
     <a class="item" href="index-2.html"><i class="angle right icon"></i></a>
     </div>
 </div>

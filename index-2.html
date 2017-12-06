@@ -68,6 +68,48 @@
     <div class="postindex page-body">
     <div class="post-entry post-text">
         <div class="entry-title">
+            <a href="posts/zai-tan-markdown-ji-qi-kuo-zhan/">再谈 Markdown 及其扩展</a>
+        </div>
+        <div class="post-meta">
+            <span class="post-meta-item-icon">
+                <i class="user icon"></i>
+            </span>
+            <span class="post-meta-item-text" itemprop="author">
+                <a href="authors/ashfinal/">ashfinal</a>
+            </span>
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+                <i class="calendar icon"></i>
+            </span>
+            <span class="post-meta-item-text">
+                <a href="archive.html">
+                    <time datetime="2017-10-27T22:36:07+08:00" itemprop="datePublished" title="2017-10-27 22:36">2017-10-27 22:36
+                    </time></a>
+            </span>
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                    <i class="tags icon"></i>
+                </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/markdown/">markdown</a>
+                            </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/mermaid/">mermaid</a>
+                            </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/python/">python</a>
+                            </span>
+        </div>
+        <div class="post-summary">
+                <div>
+<p>尽管笔者专门写了一个文章系列 <a href="posts/cong-markdown-dao-restructuredtext/" title="/posts/cong-markdown-dao-restructuredtext/">《从 Markdown 到 reStructuredText》</a>，推荐在日常文档写作中更多地使用 reStructuredText。不过平心而论，Markdown 标记语言其实还是不错的，再加上一堆漂亮好用的客户端，使其作为博客写作语言相当合适。静态博客 Nikola 本身也对 Markdown 开箱提供了完整支持，Markdown 与 reStructuredText 一样都是“一等公民”。</p>
+<p>Nikola 中使用的语法与主流 Markdown 语法，可以说是一模一样的。同时，还以扩展的形式 <sup id="fnref-1"><a class="footnote-ref" href="posts/zai-tan-markdown-ji-qi-kuo-zhan/#fn-1">1</a></sup> 额外提供了一些：</p>
+<p class="more"><a href="posts/zai-tan-markdown-ji-qi-kuo-zhan/">Read more…</a></p>
+</div>
+        </div>
+    </div>
+    <div class="post-entry post-text">
+        <div class="entry-title">
             <a href="posts/gei-nikola-bo-ke-tian-jia-mermaid-zhi-chi/">给 Nikola 博客添加 mermaid 支持</a>
         </div>
         <div class="post-meta">
@@ -100,14 +142,14 @@
         <div class="post-summary">
                 <div>
 <p>还是给博客集成了 <a class="reference external" href="https://mermaidjs.github.io">mermaid</a> <a class="footnote-reference" href="posts/gei-nikola-bo-ke-tian-jia-mermaid-zhi-chi/#id2" id="id1">[1]</a> 图表功能，尽管目前用的很少……与 mathjax 一样，使用的时候给文章添加 <cite>mermaid</cite> 标签，然后在文章中给描述文本指定 <cite>mermaid</cite> class 即可。就像这样：</p>
-<pre class="code rst"><a name="rest_code_8877c5c34c124592a1e2f13dd94d0292-1"></a><span class="p">..</span> <span class="ow">container</span><span class="p">::</span> mermaid
-<a name="rest_code_8877c5c34c124592a1e2f13dd94d0292-2"></a>
-<a name="rest_code_8877c5c34c124592a1e2f13dd94d0292-3"></a>   graph TD
-<a name="rest_code_8877c5c34c124592a1e2f13dd94d0292-4"></a>   A[Christmas] --&gt;|Get money| B(Go shopping)
-<a name="rest_code_8877c5c34c124592a1e2f13dd94d0292-5"></a>   B --&gt; C{Let me think}
-<a name="rest_code_8877c5c34c124592a1e2f13dd94d0292-6"></a>   C --&gt;|One| D[Laptop]
-<a name="rest_code_8877c5c34c124592a1e2f13dd94d0292-7"></a>   C --&gt;|Two| E[iPhone]
-<a name="rest_code_8877c5c34c124592a1e2f13dd94d0292-8"></a>   C --&gt;|Three| F[Car]
+<pre class="code rst"><a name="rest_code_fd5771b25edb454cbdb4d3e494c6a247-1"></a><span class="p">..</span> <span class="ow">container</span><span class="p">::</span> mermaid
+<a name="rest_code_fd5771b25edb454cbdb4d3e494c6a247-2"></a>
+<a name="rest_code_fd5771b25edb454cbdb4d3e494c6a247-3"></a>   graph TD
+<a name="rest_code_fd5771b25edb454cbdb4d3e494c6a247-4"></a>   A[Christmas] --&gt;|Get money| B(Go shopping)
+<a name="rest_code_fd5771b25edb454cbdb4d3e494c6a247-5"></a>   B --&gt; C{Let me think}
+<a name="rest_code_fd5771b25edb454cbdb4d3e494c6a247-6"></a>   C --&gt;|One| D[Laptop]
+<a name="rest_code_fd5771b25edb454cbdb4d3e494c6a247-7"></a>   C --&gt;|Two| E[iPhone]
+<a name="rest_code_fd5771b25edb454cbdb4d3e494c6a247-8"></a>   C --&gt;|Three| F[Car]
 </pre>
 <table class="docutils footnote" frame="void" id="id2" rules="none">
 <colgroup>
@@ -198,30 +240,30 @@
 <p>看过一些文章得出结论：即使用 XeTeX 编译中文，也需要额外添加 <cite>xeCJK</cite> 包设置下字体。笔者也一直是这么做的。</p>
 <p>刚尝试了下，这一步其实是不必要的。直接用 <cite>fontspec</cite> 设置中文字体，不必引入额外的包：</p>
 <table class="codetable"><tr>
-<td class="linenos"><div class="linenodiv"><pre><a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_0cc8e827bfbd4a839018f26ad43bd0eb-1"> 1</a>
-<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_0cc8e827bfbd4a839018f26ad43bd0eb-2"> 2</a>
-<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_0cc8e827bfbd4a839018f26ad43bd0eb-3"> 3</a>
-<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_0cc8e827bfbd4a839018f26ad43bd0eb-4"> 4</a>
-<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_0cc8e827bfbd4a839018f26ad43bd0eb-5"> 5</a>
-<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_0cc8e827bfbd4a839018f26ad43bd0eb-6"> 6</a>
-<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_0cc8e827bfbd4a839018f26ad43bd0eb-7"> 7</a>
-<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_0cc8e827bfbd4a839018f26ad43bd0eb-8"> 8</a>
-<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_0cc8e827bfbd4a839018f26ad43bd0eb-9"> 9</a>
-<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_0cc8e827bfbd4a839018f26ad43bd0eb-10">10</a>
-<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_0cc8e827bfbd4a839018f26ad43bd0eb-11">11</a>
-<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_0cc8e827bfbd4a839018f26ad43bd0eb-12">12</a></pre></div></td>
-<td class="code"><pre class="code latex"><a name="rest_code_0cc8e827bfbd4a839018f26ad43bd0eb-1"></a><span class="c">%! TEX program = xelatex</span>
-<a name="rest_code_0cc8e827bfbd4a839018f26ad43bd0eb-2"></a>
-<a name="rest_code_0cc8e827bfbd4a839018f26ad43bd0eb-3"></a><span class="k">\usepackage</span><span class="nb">{</span>fontspec<span class="nb">}</span>
-<a name="rest_code_0cc8e827bfbd4a839018f26ad43bd0eb-4"></a><span class="k">\setmainfont</span><span class="nb">{</span>PingFang SC<span class="nb">}</span>
-<a name="rest_code_0cc8e827bfbd4a839018f26ad43bd0eb-5"></a><span class="k">\setsansfont</span><span class="nb">{</span>Hiragino Sans GB<span class="nb">}</span>
-<a name="rest_code_0cc8e827bfbd4a839018f26ad43bd0eb-6"></a><span class="k">\setmonofont</span><span class="na">[Scale=0.9]</span><span class="nb">{</span>PingFang SC<span class="nb">}</span>
-<a name="rest_code_0cc8e827bfbd4a839018f26ad43bd0eb-7"></a>
-<a name="rest_code_0cc8e827bfbd4a839018f26ad43bd0eb-8"></a><span class="k">\usepackage</span><span class="nb">{</span>indentfirst<span class="nb">}</span>
-<a name="rest_code_0cc8e827bfbd4a839018f26ad43bd0eb-9"></a><span class="k">\setlength</span><span class="nb">{</span><span class="k">\parindent</span><span class="nb">}{</span>2em<span class="nb">}</span>
-<a name="rest_code_0cc8e827bfbd4a839018f26ad43bd0eb-10"></a>
-<a name="rest_code_0cc8e827bfbd4a839018f26ad43bd0eb-11"></a><span class="k">\XeTeXlinebreaklocale</span> "zh"
-<a name="rest_code_0cc8e827bfbd4a839018f26ad43bd0eb-12"></a><span class="k">\XeTeXlinebreakskip</span> = 0pt plus 1pt minus 0.1pt
+<td class="linenos"><div class="linenodiv"><pre><a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_c010f95526434ce885caee0743e132ae-1"> 1</a>
+<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_c010f95526434ce885caee0743e132ae-2"> 2</a>
+<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_c010f95526434ce885caee0743e132ae-3"> 3</a>
+<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_c010f95526434ce885caee0743e132ae-4"> 4</a>
+<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_c010f95526434ce885caee0743e132ae-5"> 5</a>
+<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_c010f95526434ce885caee0743e132ae-6"> 6</a>
+<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_c010f95526434ce885caee0743e132ae-7"> 7</a>
+<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_c010f95526434ce885caee0743e132ae-8"> 8</a>
+<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_c010f95526434ce885caee0743e132ae-9"> 9</a>
+<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_c010f95526434ce885caee0743e132ae-10">10</a>
+<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_c010f95526434ce885caee0743e132ae-11">11</a>
+<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_c010f95526434ce885caee0743e132ae-12">12</a></pre></div></td>
+<td class="code"><pre class="code latex"><a name="rest_code_c010f95526434ce885caee0743e132ae-1"></a><span class="c">%! TEX program = xelatex</span>
+<a name="rest_code_c010f95526434ce885caee0743e132ae-2"></a>
+<a name="rest_code_c010f95526434ce885caee0743e132ae-3"></a><span class="k">\usepackage</span><span class="nb">{</span>fontspec<span class="nb">}</span>
+<a name="rest_code_c010f95526434ce885caee0743e132ae-4"></a><span class="k">\setmainfont</span><span class="nb">{</span>PingFang SC<span class="nb">}</span>
+<a name="rest_code_c010f95526434ce885caee0743e132ae-5"></a><span class="k">\setsansfont</span><span class="nb">{</span>Hiragino Sans GB<span class="nb">}</span>
+<a name="rest_code_c010f95526434ce885caee0743e132ae-6"></a><span class="k">\setmonofont</span><span class="na">[Scale=0.9]</span><span class="nb">{</span>PingFang SC<span class="nb">}</span>
+<a name="rest_code_c010f95526434ce885caee0743e132ae-7"></a>
+<a name="rest_code_c010f95526434ce885caee0743e132ae-8"></a><span class="k">\usepackage</span><span class="nb">{</span>indentfirst<span class="nb">}</span>
+<a name="rest_code_c010f95526434ce885caee0743e132ae-9"></a><span class="k">\setlength</span><span class="nb">{</span><span class="k">\parindent</span><span class="nb">}{</span>2em<span class="nb">}</span>
+<a name="rest_code_c010f95526434ce885caee0743e132ae-10"></a>
+<a name="rest_code_c010f95526434ce885caee0743e132ae-11"></a><span class="k">\XeTeXlinebreaklocale</span> "zh"
+<a name="rest_code_c010f95526434ce885caee0743e132ae-12"></a><span class="k">\XeTeXlinebreakskip</span> = 0pt plus 1pt minus 0.1pt
 </pre></td>
 </tr></table>
 <p>第 1 行指定编译引擎 <cite>xelatex</cite> 。不成文的规范，LaTeX 客户端或编辑器插件不一定会遵守。</p>
@@ -285,46 +327,6 @@
 </div>
         </div>
     </div>
-    <div class="post-entry post-text">
-        <div class="entry-title">
-            <a href="posts/ru-he-jia-zhuang-vim-gao-shou/">如何假装 Vim 高手 :)</a>
-        </div>
-        <div class="post-meta">
-            <span class="post-meta-item-icon">
-                <i class="user icon"></i>
-            </span>
-            <span class="post-meta-item-text" itemprop="author">
-                <a href="authors/ashfinal/">ashfinal</a>
-            </span>
-            <span class="post-meta-divider">|</span>
-            <span class="post-meta-item-icon">
-                <i class="calendar icon"></i>
-            </span>
-            <span class="post-meta-item-text">
-                <a href="archive.html">
-                    <time datetime="2017-10-14T18:28:11+08:00" itemprop="datePublished" title="2017-10-14 18:28">2017-10-14 18:28
-                    </time></a>
-            </span>
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                    <i class="tags icon"></i>
-                </span>
-                            <span class="post-meta-tag-item">
-                                <a href="categories/neovim/">neovim</a>
-                            </span>
-                            <span class="post-meta-tag-item">
-                                <a href="categories/terminal/">terminal</a>
-                            </span>
-                            <span class="post-meta-tag-item">
-                                <a href="categories/vim/">vim</a>
-                            </span>
-        </div>
-        <div class="post-summary">
-                <div class="figure align-center">
-<a class="reference external image-reference" href="images/neovim_terminal.png"><img alt="/images/neovim_terminal.thumbnail.png" src="images/neovim_terminal.thumbnail.png"></a>
-</div>
-        </div>
-    </div>
     </div>
 
         <div class="page-navigation">
@@ -338,7 +340,8 @@
                 <a class="item" href="index-5.html">6</a>
                 <a class="item" href="index-6.html">7</a>
                 <a class="item" href="index-7.html">8</a>
-                <a class="item" href="index-8.html">9</a>
+            <a class="item">…</a>
+                <a class="item" href="index-9.html">10</a>
     <a class="item" href="index-3.html"><i class="angle right icon"></i></a>
     </div>
 </div>
