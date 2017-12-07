@@ -130,7 +130,7 @@ Your browser does not ">
 <video src="../../videos/font_lock.mp4" loop autoplay>
 Your browser does not support the video tag.
 </video><p>以上截图是我使用正则搜索 <cite>.</cite> （即匹配所有字符）的情况，未经任何后期处理， <strong>肉眼可见</strong> 匹配项有个逐渐的着色过程。有人可能会说：是不是你文件太大，匹配项太多以至于 Emacs <strong>肉眼可见的慢</strong> ？还真不是，这个文件正如截图中呈现的那样，就是那么短，就只有那么多字符。</p>
-<pre class="code text"><a name="rest_code_b446dcf730ad4ab8af863ef86fa8bfb0-1"></a>Col 1 of 115; Line 2 of 22; Word 1 of 116; Char 2 of 1001; Byte 2 of 1003
+<pre class="code text"><a name="rest_code_664511e0f58a4bcba5b7b93d17d1390d-1"></a>Col 1 of 115; Line 2 of 22; Word 1 of 116; Char 2 of 1001; Byte 2 of 1003
 </pre>
 <p>仅仅 1001 个字符的着色就已经如此之慢！真是有点跌破了我对 Emacs 的认知。要知道 Font Lock 机制被广泛应用于 Emacs 主题、语法高亮、字体样式等等，而且这些样式随着文本编辑、语法检查等操作是时时更新的，如果 1001 个字符着色就能导致 <strong>肉眼可见的慢</strong> ，那同时打开多个文件，后台再跑一些导致 buffer 时不时刷新的任务，那么感觉 Emacs 运行慢也就是必然的结果了。</p>
 <p>这个简单的测试录屏时，就只打开了这一个文件。Emacs 安装的插件就只有 5 个： <cite>org which-key undo-tree atom-one-dark-theme magit</cite> 。如果感兴趣的话，可以到 <a class="reference external" href="https://github.com/ashfinal/spacemacs-private/blob/master/.emacs">这里</a> 看我的 <cite>.emacs</cite> 配置文件。</p>
