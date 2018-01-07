@@ -142,14 +142,14 @@
         <div class="post-summary">
                 <div>
 <p>还是给博客集成了 <a class="reference external" href="https://mermaidjs.github.io">mermaid</a> <a class="footnote-reference" href="posts/gei-nikola-bo-ke-tian-jia-mermaid-zhi-chi/#id2" id="id1">[1]</a> 图表功能，尽管目前用的很少……与 mathjax 一样，使用的时候给文章添加 <cite>mermaid</cite> 标签，然后在文章中给描述文本指定 <cite>mermaid</cite> class 即可。就像这样：</p>
-<pre class="code rst"><a name="rest_code_8886e2aa2c5b4f1c8f8f03306511556b-1"></a><span class="p">..</span> <span class="ow">container</span><span class="p">::</span> mermaid
-<a name="rest_code_8886e2aa2c5b4f1c8f8f03306511556b-2"></a>
-<a name="rest_code_8886e2aa2c5b4f1c8f8f03306511556b-3"></a>   graph TD
-<a name="rest_code_8886e2aa2c5b4f1c8f8f03306511556b-4"></a>   A[Christmas] --&gt;|Get money| B(Go shopping)
-<a name="rest_code_8886e2aa2c5b4f1c8f8f03306511556b-5"></a>   B --&gt; C{Let me think}
-<a name="rest_code_8886e2aa2c5b4f1c8f8f03306511556b-6"></a>   C --&gt;|One| D[Laptop]
-<a name="rest_code_8886e2aa2c5b4f1c8f8f03306511556b-7"></a>   C --&gt;|Two| E[iPhone]
-<a name="rest_code_8886e2aa2c5b4f1c8f8f03306511556b-8"></a>   C --&gt;|Three| F[Car]
+<pre class="code rst"><a name="rest_code_6dd9915deb23487f837de42e47c97e26-1"></a><span class="p">..</span> <span class="ow">container</span><span class="p">::</span> mermaid
+<a name="rest_code_6dd9915deb23487f837de42e47c97e26-2"></a>
+<a name="rest_code_6dd9915deb23487f837de42e47c97e26-3"></a>   graph TD
+<a name="rest_code_6dd9915deb23487f837de42e47c97e26-4"></a>   A[Christmas] --&gt;|Get money| B(Go shopping)
+<a name="rest_code_6dd9915deb23487f837de42e47c97e26-5"></a>   B --&gt; C{Let me think}
+<a name="rest_code_6dd9915deb23487f837de42e47c97e26-6"></a>   C --&gt;|One| D[Laptop]
+<a name="rest_code_6dd9915deb23487f837de42e47c97e26-7"></a>   C --&gt;|Two| E[iPhone]
+<a name="rest_code_6dd9915deb23487f837de42e47c97e26-8"></a>   C --&gt;|Three| F[Car]
 </pre>
 <table class="docutils footnote" frame="void" id="id2" rules="none">
 <colgroup>
@@ -240,30 +240,30 @@
 <p>看过一些文章得出结论：即使用 XeTeX 编译中文，也需要额外添加 <cite>xeCJK</cite> 包设置下字体。笔者也一直是这么做的。</p>
 <p>刚尝试了下，这一步其实是不必要的。直接用 <cite>fontspec</cite> 设置中文字体，不必引入额外的包：</p>
 <table class="codetable"><tr>
-<td class="linenos"><div class="linenodiv"><pre><a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_291f1653e0bb47c7b187d658a8653cf2-1"> 1</a>
-<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_291f1653e0bb47c7b187d658a8653cf2-2"> 2</a>
-<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_291f1653e0bb47c7b187d658a8653cf2-3"> 3</a>
-<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_291f1653e0bb47c7b187d658a8653cf2-4"> 4</a>
-<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_291f1653e0bb47c7b187d658a8653cf2-5"> 5</a>
-<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_291f1653e0bb47c7b187d658a8653cf2-6"> 6</a>
-<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_291f1653e0bb47c7b187d658a8653cf2-7"> 7</a>
-<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_291f1653e0bb47c7b187d658a8653cf2-8"> 8</a>
-<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_291f1653e0bb47c7b187d658a8653cf2-9"> 9</a>
-<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_291f1653e0bb47c7b187d658a8653cf2-10">10</a>
-<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_291f1653e0bb47c7b187d658a8653cf2-11">11</a>
-<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_291f1653e0bb47c7b187d658a8653cf2-12">12</a></pre></div></td>
-<td class="code"><pre class="code latex"><a name="rest_code_291f1653e0bb47c7b187d658a8653cf2-1"></a><span class="c">%! TEX program = xelatex</span>
-<a name="rest_code_291f1653e0bb47c7b187d658a8653cf2-2"></a>
-<a name="rest_code_291f1653e0bb47c7b187d658a8653cf2-3"></a><span class="k">\usepackage</span><span class="nb">{</span>fontspec<span class="nb">}</span>
-<a name="rest_code_291f1653e0bb47c7b187d658a8653cf2-4"></a><span class="k">\setmainfont</span><span class="nb">{</span>PingFang SC<span class="nb">}</span>
-<a name="rest_code_291f1653e0bb47c7b187d658a8653cf2-5"></a><span class="k">\setsansfont</span><span class="nb">{</span>Hiragino Sans GB<span class="nb">}</span>
-<a name="rest_code_291f1653e0bb47c7b187d658a8653cf2-6"></a><span class="k">\setmonofont</span><span class="na">[Scale=0.9]</span><span class="nb">{</span>PingFang SC<span class="nb">}</span>
-<a name="rest_code_291f1653e0bb47c7b187d658a8653cf2-7"></a>
-<a name="rest_code_291f1653e0bb47c7b187d658a8653cf2-8"></a><span class="k">\usepackage</span><span class="nb">{</span>indentfirst<span class="nb">}</span>
-<a name="rest_code_291f1653e0bb47c7b187d658a8653cf2-9"></a><span class="k">\setlength</span><span class="nb">{</span><span class="k">\parindent</span><span class="nb">}{</span>2em<span class="nb">}</span>
-<a name="rest_code_291f1653e0bb47c7b187d658a8653cf2-10"></a>
-<a name="rest_code_291f1653e0bb47c7b187d658a8653cf2-11"></a><span class="k">\XeTeXlinebreaklocale</span> "zh"
-<a name="rest_code_291f1653e0bb47c7b187d658a8653cf2-12"></a><span class="k">\XeTeXlinebreakskip</span> = 0pt plus 1pt minus 0.1pt
+<td class="linenos"><div class="linenodiv"><pre><a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_256debc688ca40fc9bd7488d0cb1d976-1"> 1</a>
+<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_256debc688ca40fc9bd7488d0cb1d976-2"> 2</a>
+<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_256debc688ca40fc9bd7488d0cb1d976-3"> 3</a>
+<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_256debc688ca40fc9bd7488d0cb1d976-4"> 4</a>
+<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_256debc688ca40fc9bd7488d0cb1d976-5"> 5</a>
+<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_256debc688ca40fc9bd7488d0cb1d976-6"> 6</a>
+<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_256debc688ca40fc9bd7488d0cb1d976-7"> 7</a>
+<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_256debc688ca40fc9bd7488d0cb1d976-8"> 8</a>
+<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_256debc688ca40fc9bd7488d0cb1d976-9"> 9</a>
+<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_256debc688ca40fc9bd7488d0cb1d976-10">10</a>
+<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_256debc688ca40fc9bd7488d0cb1d976-11">11</a>
+<a href="posts/xetex-de-zhong-wen-hua-she-zhi/#rest_code_256debc688ca40fc9bd7488d0cb1d976-12">12</a></pre></div></td>
+<td class="code"><pre class="code latex"><a name="rest_code_256debc688ca40fc9bd7488d0cb1d976-1"></a><span class="c">%! TEX program = xelatex</span>
+<a name="rest_code_256debc688ca40fc9bd7488d0cb1d976-2"></a>
+<a name="rest_code_256debc688ca40fc9bd7488d0cb1d976-3"></a><span class="k">\usepackage</span><span class="nb">{</span>fontspec<span class="nb">}</span>
+<a name="rest_code_256debc688ca40fc9bd7488d0cb1d976-4"></a><span class="k">\setmainfont</span><span class="nb">{</span>PingFang SC<span class="nb">}</span>
+<a name="rest_code_256debc688ca40fc9bd7488d0cb1d976-5"></a><span class="k">\setsansfont</span><span class="nb">{</span>Hiragino Sans GB<span class="nb">}</span>
+<a name="rest_code_256debc688ca40fc9bd7488d0cb1d976-6"></a><span class="k">\setmonofont</span><span class="na">[Scale=0.9]</span><span class="nb">{</span>PingFang SC<span class="nb">}</span>
+<a name="rest_code_256debc688ca40fc9bd7488d0cb1d976-7"></a>
+<a name="rest_code_256debc688ca40fc9bd7488d0cb1d976-8"></a><span class="k">\usepackage</span><span class="nb">{</span>indentfirst<span class="nb">}</span>
+<a name="rest_code_256debc688ca40fc9bd7488d0cb1d976-9"></a><span class="k">\setlength</span><span class="nb">{</span><span class="k">\parindent</span><span class="nb">}{</span>2em<span class="nb">}</span>
+<a name="rest_code_256debc688ca40fc9bd7488d0cb1d976-10"></a>
+<a name="rest_code_256debc688ca40fc9bd7488d0cb1d976-11"></a><span class="k">\XeTeXlinebreaklocale</span> "zh"
+<a name="rest_code_256debc688ca40fc9bd7488d0cb1d976-12"></a><span class="k">\XeTeXlinebreakskip</span> = 0pt plus 1pt minus 0.1pt
 </pre></td>
 </tr></table>
 <p>第 1 行指定编译引擎 <cite>xelatex</cite> 。不成文的规范，LaTeX 客户端或编辑器插件不一定会遵守。</p>
@@ -355,7 +355,7 @@
             <a href="http://weibo.com/ashfinal/" target="_blank"><i class="grey large weibo icon"></i></a>
             <a href="mailto://ashfinal@sina.cn" target="_blank"><i class="grey large mail icon"></i></a>
             </div>
-        <div class="ui basic center aligned segment no-print">Contents © 2017         <a href="mailto:ashfinal@sina.cn">ashfinal</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </div>
+        <div class="ui basic center aligned segment no-print">Contents © 2018         <a href="mailto:ashfinal@sina.cn">ashfinal</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </div>
 
             </div>
             <div class="computer only three wide column no-print">
