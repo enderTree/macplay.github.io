@@ -161,7 +161,7 @@
    └── vim_table.mp4
 </pre>
 <p>链接语法则像这样：</p>
-<pre class="code rst"><a name="rest_code_f8e436e2e0404209be56ad15b87927d6-1"></a><span class="p">..</span> <span class="nt">_`30 分钟搭建一个 Nikola 博客`:</span> /posts/30-fen-zhong-jian-li-yi-ge-nikola-bo-ke/
+<pre class="code rst"><a name="rest_code_4f2925af8f7c43989f44e6c5651ec65e-1"></a><span class="p">..</span> <span class="nt">_`30 分钟搭建一个 Nikola 博客`:</span> /posts/30-fen-zhong-jian-li-yi-ge-nikola-bo-ke/
 </pre>
 <p>其中 <cite>posts</cite> 是所有文章的输出目录，而紧跟其后的则是文章的 URL 字符串，由文章的 meta 信息 <cite>slug</cite> 自动生成。如果使用 <cite>nikola new_post</cite> 命令新建文章，则文件名称和 <cite>slug</cite> 是默认一致的。</p>
 <div class="admonition warning">
@@ -169,7 +169,7 @@
 <p class="last">你当然可以自定义文章 <cite>slug</cite> ，但最好还是不要做任何改动。这样引用文章就可以直接输入文件名，而不必打开文件去查看文章的 <cite>slug</cite> 。</p>
 </div>
 <p>除此之外，Nikola 博客其实提供了专门的 <a class="reference external" href="https://getnikola.com/handbook.html#id98">doc 指令</a> ，用来链接内部文档，语法如下：</p>
-<pre class="code rst"><a name="rest_code_5acf3dd8cb5f48f3b8e67002b6b0a875-1"></a>Take a look at <span class="na">:doc:</span><span class="nv">`my other post &lt;creating-a-theme&gt;`</span> about theme creating.
+<pre class="code rst"><a name="rest_code_fc58f9fb06ae4519b5f18490a9810cb6-1"></a>Take a look at <span class="na">:doc:</span><span class="nv">`my other post &lt;creating-a-theme&gt;`</span> about theme creating.
 </pre>
 <p>个人觉得相对链接的方式已经足够，就没有使用该指令。</p>
 <p>既然说到资源链接，那就再顺便说一下 Nikola 博客中插入图片及其它资源的问题。</p>
@@ -198,13 +198,13 @@
 <div class="section" id="id4">
 <h3><a class="toc-backref" href="#id12">插入本地图片</a></h3>
 <p>只需将图片放入网站源文件的 <cite>images</cite> 目录，就可以使用相对链接的方式在文章中随处引用。Nikola 默认会将 <cite>images</cite> 目录里的所有图片压缩，将其缩放到 1080p 尺寸，并且为其生成 400 像素的缩略图，文件名形如： <cite>myimage.thumbnail.jpg</cite> ，如果有必要的话可充分利用这一点——文章页面仅加载缩略图，点击再加载高清大图，提升博客网页的加载速度及在移动设备上的访问体验。</p>
-<pre class="code rst"><a name="rest_code_e01ce3279ed9429594edff9a980c78ab-1"></a><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> /images/avatar.thumbnail.png
-<a name="rest_code_e01ce3279ed9429594edff9a980c78ab-2"></a>   <span class="nc">:target:</span> <span class="nf">/images/avatar.png</span>
-<a name="rest_code_e01ce3279ed9429594edff9a980c78ab-3"></a>   <span class="nc">:align:</span> <span class="nf">center</span>
+<pre class="code rst"><a name="rest_code_2773896cffe645469aa0aae1e3ce0a55-1"></a><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> /images/avatar.thumbnail.png
+<a name="rest_code_2773896cffe645469aa0aae1e3ce0a55-2"></a>   <span class="nc">:target:</span> <span class="nf">/images/avatar.png</span>
+<a name="rest_code_2773896cffe645469aa0aae1e3ce0a55-3"></a>   <span class="nc">:align:</span> <span class="nf">center</span>
 </pre>
 <a class="reference external image-reference" href="../../images/avatar.png"><img alt="/images/avatar.thumbnail.png" class="align-center" src="../../images/avatar.thumbnail.png"></a>
 <p>已放入 <cite>相册（galleries）</cite> 中的图片也会生成缩略图，也可以在文章中引用。</p>
-<pre class="code rst"><a name="rest_code_cd1b782c98a84a64a8cf890ae80852d0-1"></a><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> /galleries/liuthangdeheliutupian-014.jpg
+<pre class="code rst"><a name="rest_code_c059b0d2bee547fd924c88f7f607ac11-1"></a><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> /galleries/liuthangdeheliutupian-014.jpg
 </pre>
 </div>
 <div class="section" id="id5">
@@ -228,9 +228,9 @@
 <div class="section" id="id8">
 <h2><a class="toc-backref" href="#id14">其它资源链接</a></h2>
 <p>如果想在博客上展示 PDF、音乐、短视频等等其它二进制文件，也是可以的——将其放到网站源文件的 <cite>files</cite> 目录即可。建议根据文件类型单独建立子文件夹，比如“pdfs”、“music”等。Nikola 博客在进行静态页面渲染的时候，会将 <cite>files</cite> 目录下的所有文件（夹）都复制到网站根目录下。所以其引用链接如下：</p>
-<pre class="code rst"><a name="rest_code_00f2a90fb242461d9ac2dba676205add-1"></a>查看 <span class="s">`pdf 样张`_</span> 。
-<a name="rest_code_00f2a90fb242461d9ac2dba676205add-2"></a>
-<a name="rest_code_00f2a90fb242461d9ac2dba676205add-3"></a><span class="p">..</span> <span class="nt">_`pdf 样张`:</span> /pdfs/myfile.pdf
+<pre class="code rst"><a name="rest_code_11336f1ce90b435bbea55a424c980fdf-1"></a>查看 <span class="s">`pdf 样张`_</span> 。
+<a name="rest_code_11336f1ce90b435bbea55a424c980fdf-2"></a>
+<a name="rest_code_11336f1ce90b435bbea55a424c980fdf-3"></a><span class="p">..</span> <span class="nt">_`pdf 样张`:</span> /pdfs/myfile.pdf
 </pre>
 <p>此外，如果你有一些图片并不希望 Nikola 对其进行处理，也可以建立子文件夹存放到 <cite>files</cite> 目录。</p>
 </div>
