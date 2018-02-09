@@ -137,7 +137,7 @@
 <p>这个邪恶的让我后悔半天的配置，只有一句话： <tt class="docutils literal">set noswapfile</tt> 。事实上，Vim 默认是开启灾难恢复机制的（但是被我用上面的命令关闭掉了！）。如果遇到应用冻结、崩溃退出甚至电脑断电等意外情况，重新打开 Vim 编辑器它会询问你是否恢复文件，选择 OK 则你的宝贝文字就可以回来了。</p>
 <p>那这么重要的功能，我为何会傻乎乎地将其关闭？事实上，直到现在，几乎所有流行的 Vim 配置（包括 <a class="reference external" href="https://github.com/spf13/spf13-vim">spf13-vim</a> ）都是将该功能关闭的。笔者刚开始学习使用 Vim 时，自然而然地选择了跟随大流。现在看来，隐患不小。</p>
 <p>输入 <cite>:h crash</cite> 命令查看 <cite>灾难恢复（crash-recovery）</cite> 小节，里面用大写字母写着：</p>
-<pre class="code text"><a name="rest_code_0982fee226f144c9a655b3070bceda57-1"></a>DON'T PANIC!
+<pre class="code text"><a name="rest_code_e0d6c0bbfca746a0afdf3fd71855ae49-1"></a>DON'T PANIC!
 </pre>
 <p>不要惊慌！即使外星人入侵地球，也不要惊慌！Vim 编辑器会自动将你的文件恢复的。但是！这是建立在你尊重默认设置的基础上的。很显然，我，以及很大一部分使用者，并没有这么做……</p>
 <p>难怪你会丢失数据！:(</p>
@@ -147,20 +147,20 @@
 <p>Vim 编辑器的灾难恢复是通过 <cite>swap-file</cite> 发挥作用的。简单的说，当你编辑文件时，它会间隔性地将你的输入自动保存到一个缓冲文件中。这个间隔默认为 200 个字符，如果 4000 毫秒内没有任何输入也会自动保存（均可以配置）。这样，当意外情况发生时，就可以从该缓冲文件里恢复。而如果是正常关闭的话，则对应的缓冲文件会自我删除。</p>
 <p>那么，这个缓冲文件到底存放于何处呢？默认的，与打开的文件处在同一目录。电脑性能过剩的时代，大多数人恐怕是打开几十个甚至上百个 buffer 的，而且平时也不关闭 Vim 编辑器。这就使得这个缓存文件，很容易“污染”你的目录，将其弄的乱糟糟的。我猜这也是为何相当一部分人选择关闭该灾难恢复机制——相较于越来越低的灾难发生概率，貌似乱糟糟的目录更影响人的心情？</p>
 <p>当我查看著名 Vim 配置 <a class="reference external" href="https://github.com/amix/vimrc">amix/vimrc</a> 时，作者给出关闭该机制的原因是：</p>
-<pre class="code vim"><a name="rest_code_806ca1f18cb641aeacaa75e968b4e8a7-1"></a><span class="c">" Turn backup off, since most stuff is in SVN, git et.c anyway...</span>
-<a name="rest_code_806ca1f18cb641aeacaa75e968b4e8a7-2"></a><span class="k">set</span> <span class="nb">nobackup</span>
-<a name="rest_code_806ca1f18cb641aeacaa75e968b4e8a7-3"></a><span class="k">set</span> <span class="nb">nowb</span>
-<a name="rest_code_806ca1f18cb641aeacaa75e968b4e8a7-4"></a><span class="k">set</span> <span class="nb">noswapfile</span>
+<pre class="code vim"><a name="rest_code_5de146e91b1f434a875f179eb678014c-1"></a><span class="c">" Turn backup off, since most stuff is in SVN, git et.c anyway...</span>
+<a name="rest_code_5de146e91b1f434a875f179eb678014c-2"></a><span class="k">set</span> <span class="nb">nobackup</span>
+<a name="rest_code_5de146e91b1f434a875f179eb678014c-3"></a><span class="k">set</span> <span class="nb">nowb</span>
+<a name="rest_code_5de146e91b1f434a875f179eb678014c-4"></a><span class="k">set</span> <span class="nb">noswapfile</span>
 </pre>
 <p>显然，这个理由细想一下是站不住脚的。 SVN、git 等版本管理软件与上面描述的灾难恢复机制考虑的场景是完全不同的： <cite>swap-file</cite> 是针对电脑崩溃，而你的 <strong>文件没有保存</strong> 的情况；而版本管理则是 <strong>文件已经保存</strong> ，并提交给版本管理系统，然后发生意外丢失了这些文件的情况。大多数人撞见前一种情况的几率更高， 而且 <cite>swap-file</cite> 处理的文件粒度更小更精细。</p>
 </div>
 <div class="section" id="id3">
 <h2>重新调整</h2>
 <p>Anyway，尽管现在硬盘损坏、系统崩溃、突然断电等情况几乎是见不到，但应用冻结/崩溃的情况（就像刚刚发生在我身上的那样）还是挺常见的。考虑到这一情况，笔者决定将这一错误配置纠正过来。操作很简单，只需将 <cite>set noswapfile</cite> 这一行删除掉即可。同时，我也不希望这些缓存文件散落各处，而是希望它们统一存放到一个文件夹。阅读使用手册及一些 <a class="reference external" href="http://vim.wikia.com/wiki/Remove_swap_and_backup_files_from_your_working_directory">网络</a> <a class="reference external" href="https://coderwall.com/p/sdhfug/vim-swap-backup-and-undo-files">搜索</a> 之后，笔者认为以下几行即可满足要求：</p>
-<pre class="code vim"><a name="rest_code_293966bddee645319323924fcbd13efc-1"></a><span class="k">if</span> <span class="p">!</span>isdirectory<span class="p">(</span>expand<span class="p">(</span><span class="s2">"~/.vim/swapfiles"</span><span class="p">))</span>
-<a name="rest_code_293966bddee645319323924fcbd13efc-2"></a>    <span class="k">call</span> mkdir<span class="p">(</span>$HOME . <span class="s2">"/.vim/swapfiles"</span><span class="p">,</span> <span class="s2">"p"</span><span class="p">)</span>
-<a name="rest_code_293966bddee645319323924fcbd13efc-3"></a><span class="k">endif</span>
-<a name="rest_code_293966bddee645319323924fcbd13efc-4"></a><span class="k">set</span> <span class="k">dir</span><span class="p">=~</span><span class="sr">/.vim/</span>swapfiles<span class="sr">//</span>
+<pre class="code vim"><a name="rest_code_151a1311c9d246fca4c2df0c790ced4b-1"></a><span class="k">if</span> <span class="p">!</span>isdirectory<span class="p">(</span>expand<span class="p">(</span><span class="s2">"~/.vim/swapfiles"</span><span class="p">))</span>
+<a name="rest_code_151a1311c9d246fca4c2df0c790ced4b-2"></a>    <span class="k">call</span> mkdir<span class="p">(</span>$HOME . <span class="s2">"/.vim/swapfiles"</span><span class="p">,</span> <span class="s2">"p"</span><span class="p">)</span>
+<a name="rest_code_151a1311c9d246fca4c2df0c790ced4b-3"></a><span class="k">endif</span>
+<a name="rest_code_151a1311c9d246fca4c2df0c790ced4b-4"></a><span class="k">set</span> <span class="k">dir</span><span class="p">=~</span><span class="sr">/.vim/</span>swapfiles<span class="sr">//</span>
 </pre>
 <p>前面三行当文件夹不存在时，创建之。 <cite>mkdir</cite> 是 Vim 的内置函数，避免直接调用 <cite>!mkdir</cite> 外部命令在 Windows 上无法工作。最后一行，将缓存文件目录设置为刚创建的文件夹。最后面的 <tt class="docutils literal">//</tt> 是让缓存文件名称包含完整路径，避免编辑相同名称的文件时造成冲突。</p>
 </div>
