@@ -101,22 +101,22 @@
                 <div>
 <p>有时候会有将代码中的数字递增/递减的需求，一直没有找到相对简单优雅的做法。今天通过网络搜索加上幸运值暴增，感觉终于比较完善地解决了这个问题，遂作此文记录一下。</p>
 <p>如果我们想将以下代码块中的所有数字，在原有基础上均递增两次：</p>
-<pre class="code text"><a name="rest_code_e73f149ffa724e0da3d1b9b79ebe43fc-1"></a>my_array[1] = 0;
-<a name="rest_code_e73f149ffa724e0da3d1b9b79ebe43fc-2"></a>my_array[2] = 0;
-<a name="rest_code_e73f149ffa724e0da3d1b9b79ebe43fc-3"></a>my_array[3] = 0;
-<a name="rest_code_e73f149ffa724e0da3d1b9b79ebe43fc-4"></a>my_array[4] = 0;
-<a name="rest_code_e73f149ffa724e0da3d1b9b79ebe43fc-5"></a>my_array[5] = 0;
-<a name="rest_code_e73f149ffa724e0da3d1b9b79ebe43fc-6"></a>my_array[6] = 0;
-<a name="rest_code_e73f149ffa724e0da3d1b9b79ebe43fc-7"></a>my_array[7] = 0;
+<pre class="code text"><a name="rest_code_0b73314e585f4074a702ae3aaf928b0f-1"></a>my_array[1] = 0;
+<a name="rest_code_0b73314e585f4074a702ae3aaf928b0f-2"></a>my_array[2] = 0;
+<a name="rest_code_0b73314e585f4074a702ae3aaf928b0f-3"></a>my_array[3] = 0;
+<a name="rest_code_0b73314e585f4074a702ae3aaf928b0f-4"></a>my_array[4] = 0;
+<a name="rest_code_0b73314e585f4074a702ae3aaf928b0f-5"></a>my_array[5] = 0;
+<a name="rest_code_0b73314e585f4074a702ae3aaf928b0f-6"></a>my_array[6] = 0;
+<a name="rest_code_0b73314e585f4074a702ae3aaf928b0f-7"></a>my_array[7] = 0;
 </pre>
 <p>即变成以下这样：</p>
-<pre class="code text"><a name="rest_code_0cc24edd384440bb8cab6bb7c1216436-1"></a>my_array[3] = 2;
-<a name="rest_code_0cc24edd384440bb8cab6bb7c1216436-2"></a>my_array[4] = 2;
-<a name="rest_code_0cc24edd384440bb8cab6bb7c1216436-3"></a>my_array[5] = 2;
-<a name="rest_code_0cc24edd384440bb8cab6bb7c1216436-4"></a>my_array[6] = 2;
-<a name="rest_code_0cc24edd384440bb8cab6bb7c1216436-5"></a>my_array[7] = 2;
-<a name="rest_code_0cc24edd384440bb8cab6bb7c1216436-6"></a>my_array[8] = 2;
-<a name="rest_code_0cc24edd384440bb8cab6bb7c1216436-7"></a>my_array[9] = 2;
+<pre class="code text"><a name="rest_code_e1fc04d0aa964de48f1c257d8161cda6-1"></a>my_array[3] = 2;
+<a name="rest_code_e1fc04d0aa964de48f1c257d8161cda6-2"></a>my_array[4] = 2;
+<a name="rest_code_e1fc04d0aa964de48f1c257d8161cda6-3"></a>my_array[5] = 2;
+<a name="rest_code_e1fc04d0aa964de48f1c257d8161cda6-4"></a>my_array[6] = 2;
+<a name="rest_code_e1fc04d0aa964de48f1c257d8161cda6-5"></a>my_array[7] = 2;
+<a name="rest_code_e1fc04d0aa964de48f1c257d8161cda6-6"></a>my_array[8] = 2;
+<a name="rest_code_e1fc04d0aa964de48f1c257d8161cda6-7"></a>my_array[9] = 2;
 </pre>
 <p class="more"><a href="posts/vim-ji-qiao-pi-pei-shu-zi-di-zeng/">Read more…</a></p>
 </div>
@@ -290,14 +290,14 @@
         <div class="post-summary">
                 <div>
 <p>还是给博客集成了 <a class="reference external" href="https://mermaidjs.github.io">mermaid</a> <a class="footnote-reference" href="posts/gei-nikola-bo-ke-tian-jia-mermaid-zhi-chi/#id2" id="id1">[1]</a> 图表功能，尽管目前用的很少……与 mathjax 一样，使用的时候给文章添加 <cite>mermaid</cite> 标签，然后在文章中给描述文本指定 <cite>mermaid</cite> class 即可。就像这样：</p>
-<pre class="code rst"><a name="rest_code_9e2f40a1db73425b8f2d207419202026-1"></a><span class="p">..</span> <span class="ow">container</span><span class="p">::</span> mermaid
-<a name="rest_code_9e2f40a1db73425b8f2d207419202026-2"></a>
-<a name="rest_code_9e2f40a1db73425b8f2d207419202026-3"></a>   graph TD
-<a name="rest_code_9e2f40a1db73425b8f2d207419202026-4"></a>   A[Christmas] --&gt;|Get money| B(Go shopping)
-<a name="rest_code_9e2f40a1db73425b8f2d207419202026-5"></a>   B --&gt; C{Let me think}
-<a name="rest_code_9e2f40a1db73425b8f2d207419202026-6"></a>   C --&gt;|One| D[Laptop]
-<a name="rest_code_9e2f40a1db73425b8f2d207419202026-7"></a>   C --&gt;|Two| E[iPhone]
-<a name="rest_code_9e2f40a1db73425b8f2d207419202026-8"></a>   C --&gt;|Three| F[Car]
+<pre class="code rst"><a name="rest_code_01e1c10006184fe0a71322bde0af25d1-1"></a><span class="p">..</span> <span class="ow">container</span><span class="p">::</span> mermaid
+<a name="rest_code_01e1c10006184fe0a71322bde0af25d1-2"></a>
+<a name="rest_code_01e1c10006184fe0a71322bde0af25d1-3"></a>   graph TD
+<a name="rest_code_01e1c10006184fe0a71322bde0af25d1-4"></a>   A[Christmas] --&gt;|Get money| B(Go shopping)
+<a name="rest_code_01e1c10006184fe0a71322bde0af25d1-5"></a>   B --&gt; C{Let me think}
+<a name="rest_code_01e1c10006184fe0a71322bde0af25d1-6"></a>   C --&gt;|One| D[Laptop]
+<a name="rest_code_01e1c10006184fe0a71322bde0af25d1-7"></a>   C --&gt;|Two| E[iPhone]
+<a name="rest_code_01e1c10006184fe0a71322bde0af25d1-8"></a>   C --&gt;|Three| F[Car]
 </pre>
 <table class="docutils footnote" frame="void" id="id2" rules="none">
 <colgroup>
