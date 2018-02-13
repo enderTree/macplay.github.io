@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="generator" content="Nikola (getnikola.com)">
-<title>在 reStructuredText 中实现引用链接的统一管理 - MacPlay</title>
+<title>在 reStructuredText 中统一管理引用链接 - MacPlay</title>
 <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
@@ -12,12 +12,12 @@
 <link href="../../assets/css/semantic.min.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
-<link rel="canonical" href="https://macplay.github.io/posts/zai-restructuredtext-zhong-shi-xian-yin-yong-lian-jie-de-tong-yi-guan-li/">
+<link rel="canonical" href="https://macplay.github.io/posts/zai-restructuredtext-zhong-tong-yi-guan-li-yin-yong-lian-jie/">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
 <meta name="author" content="ashfinal">
 <meta property="og:site_name" content="MacPlay">
-<meta property="og:title" content="在 reStructuredText 中实现引用链接的统一管理">
-<meta property="og:url" content="https://macplay.github.io/posts/zai-restructuredtext-zhong-shi-xian-yin-yong-lian-jie-de-tong-yi-guan-li/">
+<meta property="og:title" content="在 reStructuredText 中统一管理引用链接">
+<meta property="og:url" content="https://macplay.github.io/posts/zai-restructuredtext-zhong-tong-yi-guan-li-yin-yong-lian-jie/">
 <meta property="og:description" content="最近几天又尝试了下 latex, 发现 Bibliography 的理念很好。它将文档中所有资料引用统一保存到 .bib 文件中，然后在正文中以别名的形式插入。如果有需要的话，还可以自定义引用的显示格式。这大大简化了参考文献的管理和使用：平时统一维护所有的参考文献，甚至你一生中只需维护一份 .bib 文件；而写作时不必麻烦地复制粘贴，用别名就可以方便地插入参考文献。
 
 LibreOffice 的「">
@@ -79,7 +79,7 @@ LibreOffice 的「">
     </header><main id="main"><div id="main-content">
 <div class="postpage post-text page-body" itemscope="itemscope" itemtype="http://schema.org/Article">
             <h1 class="post-title" itemprop="headline">
-        <a href=".">在 reStructuredText 中实现引用链接的统一管理</a>
+        <a href=".">在 reStructuredText 中统一管理引用链接</a>
     </h1>
 
     <div class="post-meta">
@@ -94,7 +94,7 @@ LibreOffice 的「">
                 <i class="github icon"></i>
             </span>
             <span class="post-meta-item-text">
-                <a href="https://github.com/macplay/macplay.github.io/edit/src/posts/zai-restructuredtext-zhong-shi-xian-yin-yong-lian-jie-de-tong-yi-guan-li.rst" title="Edit on GitHub">edit</a>
+                <a href="https://github.com/macplay/macplay.github.io/edit/src/posts/zai-restructuredtext-zhong-tong-yi-guan-li-yin-yong-lian-jie.rst" title="Edit on GitHub">edit</a>
             </span>
         <span class="post-meta-divider">|</span>
         <span class="post-meta-item-icon">
@@ -138,7 +138,7 @@ LibreOffice 的「">
 </div>
 <p>如果要在「现代」文档处理软件中寻找对应的话，大约相当于 LibreOffice 的「Navigator」功能或者其它软件的「媒体库」功能。不同之处在于 Bibliography 针对纯文本文件而优化，不止针对单份文档还能在所有文档中依需要载入。</p>
 <p>尽管笔者平时写博客时并不用参考资料，但插入链接是很常见的操作。而该操作还是挺麻烦的——通常需要在浏览器中输入网址，等待其打开，然后分两次粘贴网址以及网页标题到 <a class="reference external" href="https://github.com/qvacua/vimr">VimR</a> 编辑器中。如果能够使用 Bibliography 的方式管理引用链接，则插入链接会方便许多——仅需麻烦一次，则全站博客均可以别名方式引用，毋需再次打开浏览器。显然这种统一管理有利于写作时的思维连贯性。而且今后如果有额外需求，比如想知道某链接在全站被引用了多少次，直接使用 <cite>ag</cite> 或 <cite>grep</cite> 命令搜索一下即可。</p>
-<p>另外一个麻烦点在于：博客的站内链接显然有利于读者快速寻找相关内容并跳转浏览，比如 tags 就是站内链接优化很好的一个点。然而插入 tags 也是个比较麻烦、容易打断思路的事情，。完全可以将博客内的 tags 「封装」一下，在任何文章中都可以随时快速地插入 tag。实际上，也可以不局限于 tags，一些相对固定的链接均可用相同的手法操作。</p>
+<p>另外一个麻烦点在于：博客的站内链接显然有利于读者快速寻找相关内容并跳转浏览，比如 tags 就是站内链接优化很好的一个点。然而插入 tags 也是个比较麻烦、容易打断思路的事情。完全可以将博客内的 tags 「封装」一下，在任何文章中都可以随时快速地插入 tag。实际上，也可以不局限于 tags，一些相对固定的链接均可用相同的手法操作。</p>
 <p>于是笔者花费了半天的时间试验了一下，发现完全可以使用 reStructuredText 的 <cite>include</cite> 指令实现类似 Bibliography 的功能，对全站所有的链接引用进行统一管理。以下将简单的介绍一下我的做法。</p>
 <!-- TEASER_END -->
 <div class="contents topic" id="id3">
@@ -165,32 +165,32 @@ LibreOffice 的「">
 <div class="section" id="links-ref-interps-ref">
 <h2><a class="toc-backref" href="#id7">links.ref 和 interps.ref</a></h2>
 <p>这两份文件是外部链接。 <cite>links.ref</cite> 里面是网址，而 <cite>interps.ref</cite> 则是对应网址的标题。 <cite>links.ref</cite> 的文件内容：</p>
-<pre class="code rst"><a name="rest_code_e87c8db516c243eab5a6881478d3df27-1"></a><span class="p">..</span> <span class="nt">_l_rstintro:</span> http://docutils.sourceforge.net/docs/ref/rst/introduction.html
-<a name="rest_code_e87c8db516c243eab5a6881478d3df27-2"></a><span class="p">..</span> <span class="nt">_l_rstspecs:</span> http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html
-<a name="rest_code_e87c8db516c243eab5a6881478d3df27-3"></a><span class="p">..</span> <span class="nt">_l_spacemacs:</span> https://github.com/syl20bnr/spacemacs
+<pre class="code rst"><a name="rest_code_9a1bf2328afe42f0aba37989d161170c-1"></a><span class="p">..</span> <span class="nt">_l_rstintro:</span> http://docutils.sourceforge.net/docs/ref/rst/introduction.html
+<a name="rest_code_9a1bf2328afe42f0aba37989d161170c-2"></a><span class="p">..</span> <span class="nt">_l_rstspecs:</span> http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html
+<a name="rest_code_9a1bf2328afe42f0aba37989d161170c-3"></a><span class="p">..</span> <span class="nt">_l_spacemacs:</span> https://github.com/syl20bnr/spacemacs
 </pre>
 <p>而 <cite>interps.ref</cite> 的文件内容：</p>
-<pre class="code rst"><a name="rest_code_69ec103b953e423e9816ce1cc2450c44-1"></a><span class="p">..</span> <span class="nt">|l_rstintro|</span> <span class="ow">replace</span><span class="p">::</span> An Introduction to reStructuredText
-<a name="rest_code_69ec103b953e423e9816ce1cc2450c44-2"></a><span class="p">..</span> <span class="nt">|l_rstspecs|</span> <span class="ow">replace</span><span class="p">::</span> reStructuredText Markup Specification
-<a name="rest_code_69ec103b953e423e9816ce1cc2450c44-3"></a><span class="p">..</span> <span class="nt">|l_spacemacs|</span> <span class="ow">replace</span><span class="p">::</span> Spacemacs
+<pre class="code rst"><a name="rest_code_f68ca0f1c3184f9589d465cf56ef97b8-1"></a><span class="p">..</span> <span class="nt">|l_rstintro|</span> <span class="ow">replace</span><span class="p">::</span> An Introduction to reStructuredText
+<a name="rest_code_f68ca0f1c3184f9589d465cf56ef97b8-2"></a><span class="p">..</span> <span class="nt">|l_rstspecs|</span> <span class="ow">replace</span><span class="p">::</span> reStructuredText Markup Specification
+<a name="rest_code_f68ca0f1c3184f9589d465cf56ef97b8-3"></a><span class="p">..</span> <span class="nt">|l_spacemacs|</span> <span class="ow">replace</span><span class="p">::</span> Spacemacs
 </pre>
 <p>使用时在文档开头引入这两个文件，就可以在文章里随处用别名插入链接：</p>
-<pre class="code rst"><a name="rest_code_2c53705bb40343d4954c6bb54f7b8361-1"></a><span class="p">..</span> <span class="ow">include</span><span class="p">::</span> posts/links.ref
-<a name="rest_code_2c53705bb40343d4954c6bb54f7b8361-2"></a><span class="p">..</span> <span class="ow">include</span><span class="p">::</span> posts/interps.ref
-<a name="rest_code_2c53705bb40343d4954c6bb54f7b8361-3"></a>
-<a name="rest_code_2c53705bb40343d4954c6bb54f7b8361-4"></a><span class="cp">...</span>
-<a name="rest_code_2c53705bb40343d4954c6bb54f7b8361-5"></a>
-<a name="rest_code_2c53705bb40343d4954c6bb54f7b8361-6"></a>引用网址： |l_rstintro|_
+<pre class="code rst"><a name="rest_code_a54bd7660269430abd156dec32b01e15-1"></a><span class="p">..</span> <span class="ow">include</span><span class="p">::</span> posts/links.ref
+<a name="rest_code_a54bd7660269430abd156dec32b01e15-2"></a><span class="p">..</span> <span class="ow">include</span><span class="p">::</span> posts/interps.ref
+<a name="rest_code_a54bd7660269430abd156dec32b01e15-3"></a>
+<a name="rest_code_a54bd7660269430abd156dec32b01e15-4"></a><span class="cp">...</span>
+<a name="rest_code_a54bd7660269430abd156dec32b01e15-5"></a>
+<a name="rest_code_a54bd7660269430abd156dec32b01e15-6"></a>引用网址： |l_rstintro|_
 </pre>
 <p>渲染结果：</p>
 <p>引用网址： <a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/introduction.html">An Introduction to reStructuredText</a></p>
 <p>有时候我们不喜欢预定的网址标题，而想自定义标题显示。那就不必引入 <cite>interps.ref</cite> 文件，而在主文档里用类似语法替换一下：</p>
-<pre class="code rst"><a name="rest_code_26973e02d243400396a4a3f8ef464420-1"></a><span class="p">..</span> <span class="ow">include</span><span class="p">::</span> posts/links.ref
-<a name="rest_code_26973e02d243400396a4a3f8ef464420-2"></a>
-<a name="rest_code_26973e02d243400396a4a3f8ef464420-3"></a><span class="cp">...</span>
-<a name="rest_code_26973e02d243400396a4a3f8ef464420-4"></a>
-<a name="rest_code_26973e02d243400396a4a3f8ef464420-5"></a><span class="p">..</span> <span class="nt">|l_rstintro|</span> <span class="ow">replace</span><span class="p">::</span> 这里
-<a name="rest_code_26973e02d243400396a4a3f8ef464420-6"></a>点击 |l_rstintro|_ 访问 reStructuredText 手册。
+<pre class="code rst"><a name="rest_code_369706f7a39549258f7504c4db87817b-1"></a><span class="p">..</span> <span class="ow">include</span><span class="p">::</span> posts/links.ref
+<a name="rest_code_369706f7a39549258f7504c4db87817b-2"></a>
+<a name="rest_code_369706f7a39549258f7504c4db87817b-3"></a><span class="cp">...</span>
+<a name="rest_code_369706f7a39549258f7504c4db87817b-4"></a>
+<a name="rest_code_369706f7a39549258f7504c4db87817b-5"></a><span class="p">..</span> <span class="nt">|l_rstintro|</span> <span class="ow">replace</span><span class="p">::</span> 这里
+<a name="rest_code_369706f7a39549258f7504c4db87817b-6"></a>点击 |l_rstintro|_ 访问 reStructuredText 手册。
 </pre>
 <p>渲染结果：</p>
 <p>点击 <a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/introduction.html">这里</a> 访问 reStructuredText 手册。</p>
@@ -198,17 +198,17 @@ LibreOffice 的「">
 <div class="section" id="tags-ref">
 <h2><a class="toc-backref" href="#id8">tags.ref</a></h2>
 <p>博客 tags 其实也是引用链接，不过是内部相对链接罢了。而且没有自定义网址标题的需求，那自然没必要分成两个文件。其内容大体如下：</p>
-<pre class="code rst"><a name="rest_code_fe952bc323b04f40b59d6ebc2d258af5-1"></a><span class="p">..</span> <span class="nt">_vim:</span> /categories/vim/
-<a name="rest_code_fe952bc323b04f40b59d6ebc2d258af5-2"></a><span class="p">..</span> <span class="nt">|t_vim|</span> <span class="ow">replace</span><span class="p">::</span> vim_
-<a name="rest_code_fe952bc323b04f40b59d6ebc2d258af5-3"></a>
-<a name="rest_code_fe952bc323b04f40b59d6ebc2d258af5-4"></a><span class="p">..</span> <span class="nt">_`sublime text`:</span> /categories/sublime-text/
-<a name="rest_code_fe952bc323b04f40b59d6ebc2d258af5-5"></a><span class="p">..</span> <span class="nt">|t_sublime_text|</span> <span class="ow">replace</span><span class="p">::</span> <span class="s">`sublime text`_</span>
-<a name="rest_code_fe952bc323b04f40b59d6ebc2d258af5-6"></a>
-<a name="rest_code_fe952bc323b04f40b59d6ebc2d258af5-7"></a><span class="p">..</span> <span class="nt">_`马克飞象`:</span> /categories/ma-ke-fei-xiang/
-<a name="rest_code_fe952bc323b04f40b59d6ebc2d258af5-8"></a><span class="p">..</span> <span class="nt">|t_马克飞象|</span> <span class="ow">replace</span><span class="p">::</span> <span class="s">`马克飞象`_</span>
+<pre class="code rst"><a name="rest_code_df173b985ce44ae499446f34420a458f-1"></a><span class="p">..</span> <span class="nt">_vim:</span> /categories/vim/
+<a name="rest_code_df173b985ce44ae499446f34420a458f-2"></a><span class="p">..</span> <span class="nt">|t_vim|</span> <span class="ow">replace</span><span class="p">::</span> vim_
+<a name="rest_code_df173b985ce44ae499446f34420a458f-3"></a>
+<a name="rest_code_df173b985ce44ae499446f34420a458f-4"></a><span class="p">..</span> <span class="nt">_`sublime text`:</span> /categories/sublime-text/
+<a name="rest_code_df173b985ce44ae499446f34420a458f-5"></a><span class="p">..</span> <span class="nt">|t_sublime_text|</span> <span class="ow">replace</span><span class="p">::</span> <span class="s">`sublime text`_</span>
+<a name="rest_code_df173b985ce44ae499446f34420a458f-6"></a>
+<a name="rest_code_df173b985ce44ae499446f34420a458f-7"></a><span class="p">..</span> <span class="nt">_`马克飞象`:</span> /categories/ma-ke-fei-xiang/
+<a name="rest_code_df173b985ce44ae499446f34420a458f-8"></a><span class="p">..</span> <span class="nt">|t_马克飞象|</span> <span class="ow">replace</span><span class="p">::</span> <span class="s">`马克飞象`_</span>
 </pre>
 <p>使用时同样也是在文档开头引入，然后用别名访问。</p>
-<pre class="code rst"><a name="rest_code_da23bd01aafb4ae28b45e6124be2c22e-1"></a>以下是两个标签： |t_sublime_text| 和 |t_马克飞象|
+<pre class="code rst"><a name="rest_code_7a17aa06fd004de4ad4364f1aab40868-1"></a>以下是两个标签： |t_sublime_text| 和 |t_马克飞象|
 </pre>
 <p>渲染结果：</p>
 <p>以下是两个标签： <a class="reference external" href="../../categories/sublime-text/">sublime text</a> 和 <a class="reference external" href="../../categories/ma-ke-fei-xiang/">马克飞象</a></p>
@@ -216,10 +216,10 @@ LibreOffice 的「">
 <div class="section" id="abbrs-ref">
 <h2><a class="toc-backref" href="#id9">abbrs.ref</a></h2>
 <p>至于 <cite>abbrs.ref</cite> 则并非链接引用，而是统一的缩略词管理。使用的是 <cite>a</cite> 前缀：</p>
-<pre class="code rst"><a name="rest_code_b36203d88a2440a99a35348f0bdfccab-1"></a><span class="p">..</span> <span class="nt">|a_rst|</span> <span class="ow">replace</span><span class="p">::</span> reStructuredText
+<pre class="code rst"><a name="rest_code_86acf63d74894031a0f300ed88a842ac-1"></a><span class="p">..</span> <span class="nt">|a_rst|</span> <span class="ow">replace</span><span class="p">::</span> reStructuredText
 </pre>
 <p>使用效果：</p>
-<pre class="code rst"><a name="rest_code_1c31b8ff603c4c708dc17fed050b0d9f-1"></a>|a_rst| 是易读易写的纯文本标记语言。
+<pre class="code rst"><a name="rest_code_e5f51576aaf0499a9f60cf840563a2ef-1"></a>|a_rst| 是易读易写的纯文本标记语言。
 </pre>
 <p>渲染结果：</p>
 <p>reStructuredText 是易读易写的纯文本标记语言。</p>
@@ -236,7 +236,7 @@ Your browser does not support the video tag.
         </div>
     </div>
     <div class="post-info">
-        <p>文章链接：<a href="https://macplay.github.io/posts/zai-restructuredtext-zhong-shi-xian-yin-yong-lian-jie-de-tong-yi-guan-li/" target="_blank">https://macplay.github.io/posts/zai-restructuredtext-zhong-shi-xian-yin-yong-lian-jie-de-tong-yi-guan-li/</a></p>
+        <p>文章链接：<a href="https://macplay.github.io/posts/zai-restructuredtext-zhong-tong-yi-guan-li-yin-yong-lian-jie/" target="_blank">https://macplay.github.io/posts/zai-restructuredtext-zhong-tong-yi-guan-li-yin-yong-lian-jie/</a></p>
         <p>发布/更新于：
             <time datetime="2018-02-13 10:47:00 UTC+08:00" itemprop="dateModified" title="2018-02-13 10:47">2018-02-13 10:47
             </time></p>
