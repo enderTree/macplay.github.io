@@ -47,8 +47,6 @@
                         <a class="item" href="../../">Posts</a>
                         <a class="item" href="../../listings/">Code</a>
                         <a class="item" href="../../galleries/">Gallery</a>
-                        <a class="item" href="../../pages/ge-ren-dong-tai/">Timeline</a>
-                        <a class="item" href="../../pages/liu-yan-ban/">Messager</a>
                         <a class="item" href="../../categories/">Tags</a>
                         <a class="item" href="../../archive.html">Archive</a>
                 <div class="right menu">
@@ -64,8 +62,6 @@
                                 <a class="item" href="../../">Posts</a>
                                 <a class="item" href="../../listings/">Code</a>
                                 <a class="item" href="../../galleries/">Gallery</a>
-                                <a class="item" href="../../pages/ge-ren-dong-tai/">Timeline</a>
-                                <a class="item" href="../../pages/liu-yan-ban/">Messager</a>
                                 <a class="item" href="../../categories/">Tags</a>
                                 <a class="item" href="../../archive.html">Archive</a>
                         <a class="item" href="../../rss.xml"><i class="rss icon"></i>RSS</a>
@@ -349,10 +345,10 @@
 </li>
 <li>
 <p class="first">macOS 计算机名相关</p>
-<pre class="code shell"><a name="rest_code_5687d1c0bd0447bc99a48078967bd899-1"></a>sudo scutil --set HostName <span class="s2">"iMBP"</span>
-<a name="rest_code_5687d1c0bd0447bc99a48078967bd899-2"></a>sudo scutil --set ComputerName <span class="s2">"iMBP"</span>
-<a name="rest_code_5687d1c0bd0447bc99a48078967bd899-3"></a>sudo scutil --set LocalHostName <span class="s2">"iMBP"</span>
-<a name="rest_code_5687d1c0bd0447bc99a48078967bd899-4"></a>sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string <span class="s2">"iMBP"</span>
+<pre class="code shell"><a name="rest_code_e20d9b71cbed4ef685f2326b64c3307d-1"></a>sudo scutil --set HostName <span class="s2">"iMBP"</span>
+<a name="rest_code_e20d9b71cbed4ef685f2326b64c3307d-2"></a>sudo scutil --set ComputerName <span class="s2">"iMBP"</span>
+<a name="rest_code_e20d9b71cbed4ef685f2326b64c3307d-3"></a>sudo scutil --set LocalHostName <span class="s2">"iMBP"</span>
+<a name="rest_code_e20d9b71cbed4ef685f2326b64c3307d-4"></a>sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string <span class="s2">"iMBP"</span>
 </pre>
 </li>
 <li>
@@ -373,11 +369,11 @@
 </li>
 <li>
 <p class="first">命令行版的 gist</p>
-<pre class="code shell"><a name="rest_code_c3b9b3dfd4984a5dad30db2e0d67a6d2-1"></a>gist --login
-<a name="rest_code_c3b9b3dfd4984a5dad30db2e0d67a6d2-2"></a>gist
-<a name="rest_code_c3b9b3dfd4984a5dad30db2e0d67a6d2-3"></a>gist selenium0.py
-<a name="rest_code_c3b9b3dfd4984a5dad30db2e0d67a6d2-4"></a>gist -l ashfinal
-<a name="rest_code_c3b9b3dfd4984a5dad30db2e0d67a6d2-5"></a>gist -d <span class="s2">"aria2 launchagent for macOS"</span> com.github.aria2.plist
+<pre class="code shell"><a name="rest_code_8ca85ea275bc4b0b963490f97fe95f3f-1"></a>gist --login
+<a name="rest_code_8ca85ea275bc4b0b963490f97fe95f3f-2"></a>gist
+<a name="rest_code_8ca85ea275bc4b0b963490f97fe95f3f-3"></a>gist selenium0.py
+<a name="rest_code_8ca85ea275bc4b0b963490f97fe95f3f-4"></a>gist -l ashfinal
+<a name="rest_code_8ca85ea275bc4b0b963490f97fe95f3f-5"></a>gist -d <span class="s2">"aria2 launchagent for macOS"</span> com.github.aria2.plist
 </pre>
 </li>
 <li>
@@ -402,14 +398,14 @@
 </li>
 <li>
 <p class="first">从 git 历史中删除二进制文件</p>
-<pre class="code shell"><a name="rest_code_e25b01febbb64a8f9ecf59f0862550cc-1"></a>git filter-branch --force --index-filter <span class="se">\\</span>
-<a name="rest_code_e25b01febbb64a8f9ecf59f0862550cc-2"></a><span class="s1">'git rm --cached --ignore-unmatch resources/watchbg.png'</span> <span class="se">\\</span>
-<a name="rest_code_e25b01febbb64a8f9ecf59f0862550cc-3"></a>--prune-empty --tag-name-filter cat -- --all
+<pre class="code shell"><a name="rest_code_d5119f6af19e4b20bc276046fff746b0-1"></a>git filter-branch --force --index-filter <span class="se">\\</span>
+<a name="rest_code_d5119f6af19e4b20bc276046fff746b0-2"></a><span class="s1">'git rm --cached --ignore-unmatch resources/watchbg.png'</span> <span class="se">\\</span>
+<a name="rest_code_d5119f6af19e4b20bc276046fff746b0-3"></a>--prune-empty --tag-name-filter cat -- --all
 </pre>
 <p>后面还需要三个命令：</p>
-<pre class="code shell"><a name="rest_code_b4dae30a2b574b7e8acbe848fdb9d2b1-1"></a>git reflog expire --expire<span class="o">=</span>now --all
-<a name="rest_code_b4dae30a2b574b7e8acbe848fdb9d2b1-2"></a>git gc --prune<span class="o">=</span>now
-<a name="rest_code_b4dae30a2b574b7e8acbe848fdb9d2b1-3"></a>git gc --aggressive --prune<span class="o">=</span>now
+<pre class="code shell"><a name="rest_code_96f15908fb074bc5ba56e0b9677db693-1"></a>git reflog expire --expire<span class="o">=</span>now --all
+<a name="rest_code_96f15908fb074bc5ba56e0b9677db693-2"></a>git gc --prune<span class="o">=</span>now
+<a name="rest_code_96f15908fb074bc5ba56e0b9677db693-3"></a>git gc --aggressive --prune<span class="o">=</span>now
 </pre>
 </li>
 <li>
@@ -456,7 +452,15 @@
 </div>
                     </div>
                 </main><div class="footer extra-block no-print">
+    <span class="footer_item">
         <a href="../../pages/you-qing-lian-jie/">友情链接</a>
+    </span>
+    <span class="footer_item">
+        <a href="../../pages/liu-yan-ban/">留言板</a>
+    </span>
+    <span class="footer_item">
+        <a href="../../pages/ge-ren-dong-tai/">碎碎念</a>
+    </span>
     </div>
             <div class="footer social-link no-print">
             <a href="https://github.com/ashfinal" target="_blank"><i class="grey large github icon"></i></a>
