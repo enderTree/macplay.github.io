@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>MacPlay (Posts about chart)</title><link>https://macplay.github.io/</link><description></description><atom:link href="https://macplay.github.io/categories/chart.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2018 &lt;a href="mailto:ashfinal@sina.cn"&gt;ashfinal&lt;/a&gt; </copyright><lastBuildDate>Mon, 26 Feb 2018 10:55:13 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>数据可视化--Seaborn</title><link>https://macplay.github.io/posts/shu-ju-ke-shi-hua-seaborn/</link><dc:creator>ashfinal</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>MacPlay (Posts about chart)</title><link>https://macplay.github.io/</link><description></description><atom:link href="https://macplay.github.io/categories/chart.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2018 &lt;a href="mailto:ashfinal@sina.cn"&gt;ashfinal&lt;/a&gt; </copyright><lastBuildDate>Sun, 04 Mar 2018 06:42:30 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>数据可视化--Seaborn</title><link>https://macplay.github.io/posts/shu-ju-ke-shi-hua-seaborn/</link><dc:creator>ashfinal</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
     &lt;div class="container" id="notebook-container"&gt;
 
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
@@ -1837,14 +1837,14 @@
 </description><category>chart</category><category>jupyter</category><category>matplotlib</category><category>python</category><guid>https://macplay.github.io/posts/shu-ju-ke-shi-hua-seaborn/</guid><pubDate>Fri, 09 Feb 2018 14:25:04 GMT</pubDate></item><item><title>Vim Cheat Sheet</title><link>https://macplay.github.io/posts/vim-cheat-sheet/</link><dc:creator>ashfinal</dc:creator><description>&lt;div class="figure align-center"&gt;
 &lt;a class="reference external image-reference" href="https://macplay.github.io/images/vim-cheat-sheet-full.png"&gt;&lt;img alt="/images/vim-cheat-sheet-full.thumbnail.png" src="https://macplay.github.io/images/vim-cheat-sheet-full.thumbnail.png"&gt;&lt;/a&gt;
 &lt;/div&gt;</description><category>chart</category><category>vim</category><guid>https://macplay.github.io/posts/vim-cheat-sheet/</guid><pubDate>Wed, 06 Dec 2017 11:19:24 GMT</pubDate></item><item><title>给 Nikola 博客添加 mermaid 支持</title><link>https://macplay.github.io/posts/gei-nikola-bo-ke-tian-jia-mermaid-zhi-chi/</link><dc:creator>ashfinal</dc:creator><description>&lt;div&gt;&lt;p&gt;还是给博客集成了 &lt;a class="reference external" href="https://mermaidjs.github.io"&gt;mermaid&lt;/a&gt; &lt;a class="footnote-reference" href="https://macplay.github.io/posts/gei-nikola-bo-ke-tian-jia-mermaid-zhi-chi/#id2" id="id1"&gt;[1]&lt;/a&gt; 图表功能，尽管目前用的很少……与 mathjax 一样，使用的时候给文章添加 &lt;cite&gt;mermaid&lt;/cite&gt; 标签，然后在文章中给描述文本指定 &lt;cite&gt;mermaid&lt;/cite&gt; class 即可。就像这样：&lt;/p&gt;
-&lt;pre class="code rst"&gt;&lt;a name="rest_code_900bc598f7404b9ab5c146d3f6c1739f-1"&gt;&lt;/a&gt;&lt;span class="p"&gt;..&lt;/span&gt; &lt;span class="ow"&gt;container&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt; mermaid
-&lt;a name="rest_code_900bc598f7404b9ab5c146d3f6c1739f-2"&gt;&lt;/a&gt;
-&lt;a name="rest_code_900bc598f7404b9ab5c146d3f6c1739f-3"&gt;&lt;/a&gt;   graph TD
-&lt;a name="rest_code_900bc598f7404b9ab5c146d3f6c1739f-4"&gt;&lt;/a&gt;   A[Christmas] --&amp;gt;|Get money| B(Go shopping)
-&lt;a name="rest_code_900bc598f7404b9ab5c146d3f6c1739f-5"&gt;&lt;/a&gt;   B --&amp;gt; C{Let me think}
-&lt;a name="rest_code_900bc598f7404b9ab5c146d3f6c1739f-6"&gt;&lt;/a&gt;   C --&amp;gt;|One| D[Laptop]
-&lt;a name="rest_code_900bc598f7404b9ab5c146d3f6c1739f-7"&gt;&lt;/a&gt;   C --&amp;gt;|Two| E[iPhone]
-&lt;a name="rest_code_900bc598f7404b9ab5c146d3f6c1739f-8"&gt;&lt;/a&gt;   C --&amp;gt;|Three| F[Car]
+&lt;pre class="code rst"&gt;&lt;a name="rest_code_347286f80fc54c7b9dd1074d62b5f2c4-1"&gt;&lt;/a&gt;&lt;span class="p"&gt;..&lt;/span&gt; &lt;span class="ow"&gt;container&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt; mermaid
+&lt;a name="rest_code_347286f80fc54c7b9dd1074d62b5f2c4-2"&gt;&lt;/a&gt;
+&lt;a name="rest_code_347286f80fc54c7b9dd1074d62b5f2c4-3"&gt;&lt;/a&gt;   graph TD
+&lt;a name="rest_code_347286f80fc54c7b9dd1074d62b5f2c4-4"&gt;&lt;/a&gt;   A[Christmas] --&amp;gt;|Get money| B(Go shopping)
+&lt;a name="rest_code_347286f80fc54c7b9dd1074d62b5f2c4-5"&gt;&lt;/a&gt;   B --&amp;gt; C{Let me think}
+&lt;a name="rest_code_347286f80fc54c7b9dd1074d62b5f2c4-6"&gt;&lt;/a&gt;   C --&amp;gt;|One| D[Laptop]
+&lt;a name="rest_code_347286f80fc54c7b9dd1074d62b5f2c4-7"&gt;&lt;/a&gt;   C --&amp;gt;|Two| E[iPhone]
+&lt;a name="rest_code_347286f80fc54c7b9dd1074d62b5f2c4-8"&gt;&lt;/a&gt;   C --&amp;gt;|Three| F[Car]
 &lt;/pre&gt;&lt;table class="docutils footnote" frame="void" id="id2" rules="none"&gt;
 &lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
 &lt;tbody valign="top"&gt;
@@ -2010,17 +2010,17 @@
   &lt;/div&gt;
 </description><category>chart</category><category>jupyter</category><category>matplotlib</category><category>python</category><guid>https://macplay.github.io/posts/jupyter-notebook-get-started/</guid><pubDate>Mon, 18 Sep 2017 10:08:08 GMT</pubDate></item><item><title>Pygal charts get started</title><link>https://macplay.github.io/posts/pygal-charts-get-started/</link><dc:creator>ashfinal</dc:creator><description>&lt;div&gt;&lt;p&gt;If you are using reStructuredText and install pygal, Nikola has support for rather nice charts
 with little effort, and i's even semi-interactive (hover your pointer over the legend!):&lt;/p&gt;
-&lt;pre class="code rest"&gt;&lt;a name="rest_code_326467867109450e8af9bd6c970a984c-1"&gt;&lt;/a&gt;&lt;span class="p"&gt;..&lt;/span&gt; &lt;span class="ow"&gt;chart&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt; StackedLine
-&lt;a name="rest_code_326467867109450e8af9bd6c970a984c-2"&gt;&lt;/a&gt;   &lt;span class="nc"&gt;:title:&lt;/span&gt; &lt;span class="nf"&gt;'Browser usage evolution (in %)'&lt;/span&gt;
-&lt;a name="rest_code_326467867109450e8af9bd6c970a984c-3"&gt;&lt;/a&gt;   &lt;span class="nc"&gt;:fill:&lt;/span&gt; &lt;span class="nf"&gt;True&lt;/span&gt;
-&lt;a name="rest_code_326467867109450e8af9bd6c970a984c-4"&gt;&lt;/a&gt;   &lt;span class="nc"&gt;:x_labels:&lt;/span&gt; &lt;span class="nf"&gt;['2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012']&lt;/span&gt;
-&lt;a name="rest_code_326467867109450e8af9bd6c970a984c-5"&gt;&lt;/a&gt;   &lt;span class="nc"&gt;:width:&lt;/span&gt; &lt;span class="nf"&gt;600&lt;/span&gt;
-&lt;a name="rest_code_326467867109450e8af9bd6c970a984c-6"&gt;&lt;/a&gt;   &lt;span class="nc"&gt;:height:&lt;/span&gt; &lt;span class="nf"&gt;400&lt;/span&gt;
-&lt;a name="rest_code_326467867109450e8af9bd6c970a984c-7"&gt;&lt;/a&gt;   &lt;span class="nc"&gt;:explicit_size:&lt;/span&gt; &lt;span class="nf"&gt;True&lt;/span&gt;
-&lt;a name="rest_code_326467867109450e8af9bd6c970a984c-8"&gt;&lt;/a&gt;   &lt;span class="nc"&gt;:style:&lt;/span&gt; &lt;span class="nf"&gt;DefaultStyle&lt;/span&gt;
-&lt;a name="rest_code_326467867109450e8af9bd6c970a984c-9"&gt;&lt;/a&gt;
-&lt;a name="rest_code_326467867109450e8af9bd6c970a984c-10"&gt;&lt;/a&gt;   ('Others',  [14.2, 15.4, 15.3,  8.9,    9, 10.4,  8.9,  5.8,  6.7,  6.8,  7.5])
-&lt;a name="rest_code_326467867109450e8af9bd6c970a984c-11"&gt;&lt;/a&gt;   ('IE',      [85.8, 84.6, 84.7, 74.5,   66, 58.6, 54.7, 44.8, 36.2, 26.6, 20.1])
-&lt;a name="rest_code_326467867109450e8af9bd6c970a984c-12"&gt;&lt;/a&gt;   ('Firefox', [None, None, None, 16.6,   25,   31, 36.4, 45.5, 46.3, 42.8, 37.1])
-&lt;a name="rest_code_326467867109450e8af9bd6c970a984c-13"&gt;&lt;/a&gt;   ('Chrome',  [None, None, None, None, None, None,    0,  3.9, 10.8, 23.8, 35.3])
+&lt;pre class="code rest"&gt;&lt;a name="rest_code_afcc0e6e80e3421792258a8e0bb53565-1"&gt;&lt;/a&gt;&lt;span class="p"&gt;..&lt;/span&gt; &lt;span class="ow"&gt;chart&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt; StackedLine
+&lt;a name="rest_code_afcc0e6e80e3421792258a8e0bb53565-2"&gt;&lt;/a&gt;   &lt;span class="nc"&gt;:title:&lt;/span&gt; &lt;span class="nf"&gt;'Browser usage evolution (in %)'&lt;/span&gt;
+&lt;a name="rest_code_afcc0e6e80e3421792258a8e0bb53565-3"&gt;&lt;/a&gt;   &lt;span class="nc"&gt;:fill:&lt;/span&gt; &lt;span class="nf"&gt;True&lt;/span&gt;
+&lt;a name="rest_code_afcc0e6e80e3421792258a8e0bb53565-4"&gt;&lt;/a&gt;   &lt;span class="nc"&gt;:x_labels:&lt;/span&gt; &lt;span class="nf"&gt;['2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012']&lt;/span&gt;
+&lt;a name="rest_code_afcc0e6e80e3421792258a8e0bb53565-5"&gt;&lt;/a&gt;   &lt;span class="nc"&gt;:width:&lt;/span&gt; &lt;span class="nf"&gt;600&lt;/span&gt;
+&lt;a name="rest_code_afcc0e6e80e3421792258a8e0bb53565-6"&gt;&lt;/a&gt;   &lt;span class="nc"&gt;:height:&lt;/span&gt; &lt;span class="nf"&gt;400&lt;/span&gt;
+&lt;a name="rest_code_afcc0e6e80e3421792258a8e0bb53565-7"&gt;&lt;/a&gt;   &lt;span class="nc"&gt;:explicit_size:&lt;/span&gt; &lt;span class="nf"&gt;True&lt;/span&gt;
+&lt;a name="rest_code_afcc0e6e80e3421792258a8e0bb53565-8"&gt;&lt;/a&gt;   &lt;span class="nc"&gt;:style:&lt;/span&gt; &lt;span class="nf"&gt;DefaultStyle&lt;/span&gt;
+&lt;a name="rest_code_afcc0e6e80e3421792258a8e0bb53565-9"&gt;&lt;/a&gt;
+&lt;a name="rest_code_afcc0e6e80e3421792258a8e0bb53565-10"&gt;&lt;/a&gt;   ('Others',  [14.2, 15.4, 15.3,  8.9,    9, 10.4,  8.9,  5.8,  6.7,  6.8,  7.5])
+&lt;a name="rest_code_afcc0e6e80e3421792258a8e0bb53565-11"&gt;&lt;/a&gt;   ('IE',      [85.8, 84.6, 84.7, 74.5,   66, 58.6, 54.7, 44.8, 36.2, 26.6, 20.1])
+&lt;a name="rest_code_afcc0e6e80e3421792258a8e0bb53565-12"&gt;&lt;/a&gt;   ('Firefox', [None, None, None, 16.6,   25,   31, 36.4, 45.5, 46.3, 42.8, 37.1])
+&lt;a name="rest_code_afcc0e6e80e3421792258a8e0bb53565-13"&gt;&lt;/a&gt;   ('Chrome',  [None, None, None, None, None, None,    0,  3.9, 10.8, 23.8, 35.3])
 &lt;/pre&gt;&lt;p&gt;&lt;a href="https://macplay.github.io/posts/pygal-charts-get-started/"&gt;Read more…&lt;/a&gt; (3 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>chart</category><category>pygal</category><category>python</category><category>reST</category><guid>https://macplay.github.io/posts/pygal-charts-get-started/</guid><pubDate>Mon, 18 Sep 2017 03:09:34 GMT</pubDate></item></channel></rss>

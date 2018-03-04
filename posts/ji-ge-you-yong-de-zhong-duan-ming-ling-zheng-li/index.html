@@ -345,10 +345,10 @@
 </li>
 <li>
 <p class="first">macOS 计算机名相关</p>
-<pre class="code shell"><a name="rest_code_779cc1175aa74a39b71b0a7d93e7f8ca-1"></a>sudo scutil --set HostName <span class="s2">"iMBP"</span>
-<a name="rest_code_779cc1175aa74a39b71b0a7d93e7f8ca-2"></a>sudo scutil --set ComputerName <span class="s2">"iMBP"</span>
-<a name="rest_code_779cc1175aa74a39b71b0a7d93e7f8ca-3"></a>sudo scutil --set LocalHostName <span class="s2">"iMBP"</span>
-<a name="rest_code_779cc1175aa74a39b71b0a7d93e7f8ca-4"></a>sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string <span class="s2">"iMBP"</span>
+<pre class="code shell"><a name="rest_code_f4c8db4169d249e8b94fe95c64a41e1e-1"></a>sudo scutil --set HostName <span class="s2">"iMBP"</span>
+<a name="rest_code_f4c8db4169d249e8b94fe95c64a41e1e-2"></a>sudo scutil --set ComputerName <span class="s2">"iMBP"</span>
+<a name="rest_code_f4c8db4169d249e8b94fe95c64a41e1e-3"></a>sudo scutil --set LocalHostName <span class="s2">"iMBP"</span>
+<a name="rest_code_f4c8db4169d249e8b94fe95c64a41e1e-4"></a>sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string <span class="s2">"iMBP"</span>
 </pre>
 </li>
 <li>
@@ -369,11 +369,11 @@
 </li>
 <li>
 <p class="first">命令行版的 gist</p>
-<pre class="code shell"><a name="rest_code_b7312f9805d3415f9b23c0ab5a11d65f-1"></a>gist --login
-<a name="rest_code_b7312f9805d3415f9b23c0ab5a11d65f-2"></a>gist
-<a name="rest_code_b7312f9805d3415f9b23c0ab5a11d65f-3"></a>gist selenium0.py
-<a name="rest_code_b7312f9805d3415f9b23c0ab5a11d65f-4"></a>gist -l ashfinal
-<a name="rest_code_b7312f9805d3415f9b23c0ab5a11d65f-5"></a>gist -d <span class="s2">"aria2 launchagent for macOS"</span> com.github.aria2.plist
+<pre class="code shell"><a name="rest_code_a7f6867c81614fe1b305db17a26a1757-1"></a>gist --login
+<a name="rest_code_a7f6867c81614fe1b305db17a26a1757-2"></a>gist
+<a name="rest_code_a7f6867c81614fe1b305db17a26a1757-3"></a>gist selenium0.py
+<a name="rest_code_a7f6867c81614fe1b305db17a26a1757-4"></a>gist -l ashfinal
+<a name="rest_code_a7f6867c81614fe1b305db17a26a1757-5"></a>gist -d <span class="s2">"aria2 launchagent for macOS"</span> com.github.aria2.plist
 </pre>
 </li>
 <li>
@@ -398,14 +398,14 @@
 </li>
 <li>
 <p class="first">从 git 历史中删除二进制文件</p>
-<pre class="code shell"><a name="rest_code_4244b2c8b1fe4fda89719f4b647fc4af-1"></a>git filter-branch --force --index-filter <span class="se">\\</span>
-<a name="rest_code_4244b2c8b1fe4fda89719f4b647fc4af-2"></a><span class="s1">'git rm --cached --ignore-unmatch resources/watchbg.png'</span> <span class="se">\\</span>
-<a name="rest_code_4244b2c8b1fe4fda89719f4b647fc4af-3"></a>--prune-empty --tag-name-filter cat -- --all
+<pre class="code shell"><a name="rest_code_792d0687486e4623916de45c46ed348f-1"></a>git filter-branch --force --index-filter <span class="se">\\</span>
+<a name="rest_code_792d0687486e4623916de45c46ed348f-2"></a><span class="s1">'git rm --cached --ignore-unmatch resources/watchbg.png'</span> <span class="se">\\</span>
+<a name="rest_code_792d0687486e4623916de45c46ed348f-3"></a>--prune-empty --tag-name-filter cat -- --all
 </pre>
 <p>后面还需要三个命令：</p>
-<pre class="code shell"><a name="rest_code_a29a2f1f67d941678db1d6398e299e62-1"></a>git reflog expire --expire<span class="o">=</span>now --all
-<a name="rest_code_a29a2f1f67d941678db1d6398e299e62-2"></a>git gc --prune<span class="o">=</span>now
-<a name="rest_code_a29a2f1f67d941678db1d6398e299e62-3"></a>git gc --aggressive --prune<span class="o">=</span>now
+<pre class="code shell"><a name="rest_code_92c68c7048d94374967d266eea21b21a-1"></a>git reflog expire --expire<span class="o">=</span>now --all
+<a name="rest_code_92c68c7048d94374967d266eea21b21a-2"></a>git gc --prune<span class="o">=</span>now
+<a name="rest_code_92c68c7048d94374967d266eea21b21a-3"></a>git gc --aggressive --prune<span class="o">=</span>now
 </pre>
 </li>
 <li>
@@ -427,6 +427,10 @@
 <li>
 <p class="first">生成简短的中文字体列表</p>
 <p><tt class="docutils literal"><span class="pre">fc-list</span> <span class="pre">-f</span> <span class="pre">"%{family}\n"</span> :lang=zh  &gt; zhfont.txt</tt></p>
+</li>
+<li>
+<p class="first">ffmpeg 视频极限压缩（替代 GIF）</p>
+<p><tt class="docutils literal">ffmpeg <span class="pre">-i</span> in.mp4 <span class="pre">-vf</span> <span class="pre">scale=-2:240</span> <span class="pre">-c:v</span> libx264 <span class="pre">-an</span> <span class="pre">-crf</span> 35 <span class="pre">-b:v</span> 100k <span class="pre">-r</span> 10 <span class="pre">-preset</span> slow out.mp4</tt></p>
 </li>
 </ol>
 </div>
