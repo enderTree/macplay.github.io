@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="generator" content="Nikola (getnikola.com)">
-<title>At Home Outdoors - MacPlay</title>
+<title>ffmpeg 命令行参数调优 - MacPlay</title>
 <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
@@ -12,21 +12,22 @@
 <link href="../../assets/css/semantic.min.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
-<link rel="canonical" href="https://macplay.github.io/posts/at-home-outdoors/">
+<link rel="canonical" href="https://macplay.github.io/posts/ffmpeg-ming-ling-xing-can-shu-diao-you/">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
 <meta name="author" content="ashfinal">
 <meta property="og:site_name" content="MacPlay">
-<meta property="og:title" content="At Home Outdoors">
-<meta property="og:url" content="https://macplay.github.io/posts/at-home-outdoors/">
-<meta property="og:description" content="发现 fancyBox 能自动识别嵌入的媒体，比如 Youtube、Vimeo、Google Map、Instagram 等。
-尝试了一下 Vimeo ，体验非常好。这样静态博客的内容就可以更加丰富多彩。
-（点击封面加载视频）
-
-写作语法上和插入一张图片没有什么区别：
-.. image:: https://i.vimeocdn.com/video/658454374_1040x584.jpg
-  ">
+<meta property="og:title" content="ffmpeg 命令行参数调优">
+<meta property="og:url" content="https://macplay.github.io/posts/ffmpeg-ming-ling-xing-can-shu-diao-you/">
+<meta property="og:description" content="Your browser does not support the video tag.
+文件大小 325 KB。
+完整命令：
+ffmpeg -y -i mv.mp4 -ss 00:02:24.000 -to 00:02:29.000 -c:v libx264 -an -crf 35 -b:v 100k -r 10 -preset slow out.mp4
+如果加上音轨 -b:a 11k ，则体积">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2017-10-05T23:57:38+08:00">
+<meta property="article:published_time" content="2018-03-04T17:44:20+08:00">
+<meta property="article:tag" content="ffmpeg">
+<meta property="article:tag" content="shell">
+<meta property="article:tag" content="terminal">
 <link rel="stylesheet" href="../../assets/css/gitalk.css">
 </head>
 <body>
@@ -76,7 +77,7 @@
     </header><main id="main"><div id="main-content">
 <div class="postpage post-text page-body" itemscope="itemscope" itemtype="http://schema.org/Article">
             <h1 class="post-title" itemprop="headline">
-        <a href=".">At Home Outdoors</a>
+        <a href=".">ffmpeg 命令行参数调优</a>
     </h1>
 
     <div class="post-meta">
@@ -91,7 +92,7 @@
                 <i class="github icon"></i>
             </span>
             <span class="post-meta-item-text">
-                <a href="https://github.com/macplay/macplay.github.io/edit/src/posts/at-home-outdoors.rst" title="Edit on GitHub">edit</a>
+                <a href="https://github.com/macplay/macplay.github.io/edit/src/posts/ffmpeg-ming-ling-xing-can-shu-diao-you.rst" title="Edit on GitHub">edit</a>
             </span>
         <span class="post-meta-divider">|</span>
         <span class="post-meta-item-icon">
@@ -99,40 +100,49 @@
         </span>
         <span class="post-meta-item-text">
             <a href="../../archive.html">
-                <time datetime="2017-10-05T23:57:38+08:00" itemprop="datePublished" title="2017-10-05 23:57">2017-10-05 23:57
+                <time datetime="2018-03-04T17:44:20+08:00" itemprop="datePublished" title="2018-03-04 17:44">2018-03-04 17:44
                 </time></a>
         </span>
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+                <i class="tags icon"></i>
+            </span>
+                        <span class="post-meta-tag-item">
+                            <a href="../../categories/ffmpeg/">ffmpeg</a>
+                        </span>
+                        <span class="post-meta-tag-item">
+                            <a href="../../categories/shell/">shell</a>
+                        </span>
+                        <span class="post-meta-tag-item">
+                            <a href="../../categories/terminal/">terminal</a>
+                        </span>
     </div>
 
     
     <div class="post-content" itemprop="article text">
         <div id="post-content">
         <div>
-<p>发现 <a class="reference external" href="http://fancyapps.com/fancybox/3/docs/#embedding">fancyBox</a> 能自动识别嵌入的媒体，比如 Youtube、Vimeo、Google Map、Instagram 等。</p>
-<p>尝试了一下 Vimeo ，体验非常好。这样静态博客的内容就可以更加丰富多彩。</p>
-<p>（点击封面加载视频）</p>
-<a class="reference external image-reference" href="https://vimeo.com/channels/staffpicks/236370796"><img alt="https://i.vimeocdn.com/video/658454374_1040x584.jpg" class="align-center" src="https://i.vimeocdn.com/video/658454374_1040x584.jpg"></a>
-<p>写作语法上和插入一张图片没有什么区别：</p>
-<pre class="code rst"><a name="rest_code_115f007493074e98ae535e5ca004c46c-1"></a><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> https://i.vimeocdn.com/video/658454374_1040x584.jpg
-<a name="rest_code_115f007493074e98ae535e5ca004c46c-2"></a>   <span class="nc">:align:</span> <span class="nf">center</span>
-<a name="rest_code_115f007493074e98ae535e5ca004c46c-3"></a>   <span class="nc">:target:</span> <span class="nf">https://vimeo.com/channels/staffpicks/236370796</span>
+<video src="../../videos/time_machine.mp4" loop autoplay>
+    Your browser does not support the video tag.
+</video><p>文件大小 325 KB。</p>
+<p>完整命令：</p>
+<pre class="code console"><a name="rest_code_9654c9e6ccde40c08b0142ee580d80d6-1"></a><span class="go">ffmpeg -y -i mv.mp4 -ss 00:02:24.000 -to 00:02:29.000 -c:v libx264 -an -crf 35 -b:v 100k -r 10 -preset slow out.mp4</span>
 </pre>
+<p>如果加上音轨 <cite>-b:a 11k</cite> ，则体积上升到 350 KB。</p>
+<p>很理想了。</p>
 </div>
         </div>
     </div>
     <div class="post-info">
-        <p>文章链接：<a href="https://macplay.github.io/posts/at-home-outdoors/" target="_blank">https://macplay.github.io/posts/at-home-outdoors/</a></p>
+        <p>文章链接：<a href="https://macplay.github.io/posts/ffmpeg-ming-ling-xing-can-shu-diao-you/" target="_blank">https://macplay.github.io/posts/ffmpeg-ming-ling-xing-can-shu-diao-you/</a></p>
         <p>发布/更新于：
-            <time datetime="2017-10-05 23:57:38 UTC+08:00" itemprop="dateModified" title="2017-10-05 23:57">2017-10-05 23:57
+            <time datetime="2018-03-04 17:44:20 UTC+08:00" itemprop="dateModified" title="2018-03-04 17:44">2018-03-04 17:44
             </time></p>
         <p>版权声明：如无特别说明，本站文章均遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a> 协议，转载请注明作者及出处。</p>
     </div>
         <div class="post-navigation no-print">
         <div class="ui huge secondary stackable menu">
-            <a class="post-nav-item post-nav-previous item" href="../cong-markdown-dao-restructuredtext/" title="Previous post"><i class="angle double left icon"></i> 从 Markdown 到 reStructuredText</a>
-        <div class="right menu">
-            <a class="post-nav-item post-nav-next item" href="../cong-markdown-dao-restructuredtexter/" title="Next post">从 Markdown 到 reStructuredText（二） <i class="angle double right icon"></i></a>
-        </div>
+            <a class="post-nav-item post-nav-previous item" href="../mian-fei-zi-dian-terminology-for-macos/" title="Previous post"><i class="angle double left icon"></i> 免费辞典 Terminology for macOS</a>
         </div>
     </div>
 
