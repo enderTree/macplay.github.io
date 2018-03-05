@@ -194,12 +194,12 @@ Hint
     <div class="disabled step">提交 GitHub</div>
 </div>
 <p>添加完 meta 信息后就可以提交最终 markup 文档了。如本文的 meta 信息为（ reStructuredText 文件类型）：</p>
-<pre class="code rst"><a name="rest_code_3c770a770c4948f29be06ea2b1910f84-1"></a><span class="cp">.. title: 静态博客 Nikola 之写作实践</span>
-<a name="rest_code_3c770a770c4948f29be06ea2b1910f84-2"></a><span class="cp">.. slug: jing-tai-bo-ke-nikola-zhi-xie-zuo-shi-jian</span>
-<a name="rest_code_3c770a770c4948f29be06ea2b1910f84-3"></a><span class="cp">.. date: 2017-09-20 11:32:34 UTC+08:00</span>
-<a name="rest_code_3c770a770c4948f29be06ea2b1910f84-4"></a><span class="cp">.. tags: nikola, reST, markdown</span>
-<a name="rest_code_3c770a770c4948f29be06ea2b1910f84-5"></a><span class="cp">.. category: markdown</span>
-<a name="rest_code_3c770a770c4948f29be06ea2b1910f84-6"></a><span class="cp">.. author: macplay</span>
+<pre class="code rst"><a name="rest_code_78c4313df5e64175a8288339957430b7-1"></a><span class="cp">.. title: 静态博客 Nikola 之写作实践</span>
+<a name="rest_code_78c4313df5e64175a8288339957430b7-2"></a><span class="cp">.. slug: jing-tai-bo-ke-nikola-zhi-xie-zuo-shi-jian</span>
+<a name="rest_code_78c4313df5e64175a8288339957430b7-3"></a><span class="cp">.. date: 2017-09-20 11:32:34 UTC+08:00</span>
+<a name="rest_code_78c4313df5e64175a8288339957430b7-4"></a><span class="cp">.. tags: nikola, reST, markdown</span>
+<a name="rest_code_78c4313df5e64175a8288339957430b7-5"></a><span class="cp">.. category: markdown</span>
+<a name="rest_code_78c4313df5e64175a8288339957430b7-6"></a><span class="cp">.. author: macplay</span>
 </pre>
 <p>Nikola 支持提交 reStructuredText 、Markdown、Jupyter Notebook 等文件来生成博客文章，不同文件类型的 meta 头略有不同（因为注释语法不同）。推荐使用 <cite>nikola new_post -f rest/markdown/ipynb</cite> 命令来新建文件，其中 <cite>-f arg</cite> 用来指定要创建的文档格式。新创建的文件已经包含必要的 meta 信息，只需略作修改就可以了。</p>
 <p>Jupyter Notebook 的情况则比较特殊，meta 信息不在文件开头。而且其文件类型（扩展名 <cite>.ipynb</cite> ）其实是 JSON，如果不想使用文本编辑器来编辑 meta 头的话，可以依次点击 Jupyter Notebook 菜单 <cite>Edit</cite> - <cite>Edit Notebook Metadata</cite> 。</p>
@@ -216,38 +216,38 @@ Hint
 <p>补充一下 markdown 和 Jupyter Notebook 的 meta 头，方便电脑上没有安装 Nikola 的读者直接粘贴使用：</p>
 <div class="section" id="jupyter-notebook">
 <h3><a class="toc-backref" href="#id12">Jupyter Notebook</a></h3>
-<pre class="code json"><a name="rest_code_852b8eb444f54f3e815d3e292519192a-1"></a><span class="s2">"nikola"</span><span class="err">:</span> <span class="p">{</span>
-<a name="rest_code_852b8eb444f54f3e815d3e292519192a-2"></a>  <span class="nt">"title"</span><span class="p">:</span> <span class="s2">"静态博客 Nikola 之写作实践"</span><span class="p">,</span>
-<a name="rest_code_852b8eb444f54f3e815d3e292519192a-3"></a>  <span class="nt">"slug"</span><span class="p">:</span> <span class="s2">"jing-tai-bo-ke-nikola-zhi-xie-zuo-shi-jian"</span><span class="p">,</span>
-<a name="rest_code_852b8eb444f54f3e815d3e292519192a-4"></a>  <span class="nt">"date"</span><span class="p">:</span> <span class="s2">"2017-09-20 11:32:34 UTC+08:00"</span><span class="p">,</span>
-<a name="rest_code_852b8eb444f54f3e815d3e292519192a-5"></a>  <span class="nt">"tags"</span><span class="p">:</span> <span class="s2">"nikola, reST, markdown"</span><span class="p">,</span>
-<a name="rest_code_852b8eb444f54f3e815d3e292519192a-6"></a>  <span class="nt">"category"</span><span class="p">:</span> <span class="s2">"markdown"</span><span class="p">,</span>
-<a name="rest_code_852b8eb444f54f3e815d3e292519192a-7"></a>  <span class="nt">"author"</span><span class="p">:</span> <span class="s2">"macplay"</span>
-<a name="rest_code_852b8eb444f54f3e815d3e292519192a-8"></a><span class="p">}</span><span class="err">,</span>
+<pre class="code json"><a name="rest_code_504ddb891488450b9ccce0dc1d9a3a13-1"></a><span class="s2">"nikola"</span><span class="err">:</span> <span class="p">{</span>
+<a name="rest_code_504ddb891488450b9ccce0dc1d9a3a13-2"></a>  <span class="nt">"title"</span><span class="p">:</span> <span class="s2">"静态博客 Nikola 之写作实践"</span><span class="p">,</span>
+<a name="rest_code_504ddb891488450b9ccce0dc1d9a3a13-3"></a>  <span class="nt">"slug"</span><span class="p">:</span> <span class="s2">"jing-tai-bo-ke-nikola-zhi-xie-zuo-shi-jian"</span><span class="p">,</span>
+<a name="rest_code_504ddb891488450b9ccce0dc1d9a3a13-4"></a>  <span class="nt">"date"</span><span class="p">:</span> <span class="s2">"2017-09-20 11:32:34 UTC+08:00"</span><span class="p">,</span>
+<a name="rest_code_504ddb891488450b9ccce0dc1d9a3a13-5"></a>  <span class="nt">"tags"</span><span class="p">:</span> <span class="s2">"nikola, reST, markdown"</span><span class="p">,</span>
+<a name="rest_code_504ddb891488450b9ccce0dc1d9a3a13-6"></a>  <span class="nt">"category"</span><span class="p">:</span> <span class="s2">"markdown"</span><span class="p">,</span>
+<a name="rest_code_504ddb891488450b9ccce0dc1d9a3a13-7"></a>  <span class="nt">"author"</span><span class="p">:</span> <span class="s2">"macplay"</span>
+<a name="rest_code_504ddb891488450b9ccce0dc1d9a3a13-8"></a><span class="p">}</span><span class="err">,</span>
 </pre>
 </div>
 <div class="section" id="markdown">
 <h3><a class="toc-backref" href="#id13">Markdown</a></h3>
-<pre class="code html"><a name="rest_code_931a6c812a274d5db751a014a3ff1b1b-1"></a><span class="c">&lt;!--</span>
-<a name="rest_code_931a6c812a274d5db751a014a3ff1b1b-2"></a><span class="c">.. title: 静态博客 Nikola 之写作实践</span>
-<a name="rest_code_931a6c812a274d5db751a014a3ff1b1b-3"></a><span class="c">.. slug: jing-tai-bo-ke-nikola-zhi-xie-zuo-shi-jian</span>
-<a name="rest_code_931a6c812a274d5db751a014a3ff1b1b-4"></a><span class="c">.. date: 2017-09-20 11:32:34 UTC+08:00</span>
-<a name="rest_code_931a6c812a274d5db751a014a3ff1b1b-5"></a><span class="c">.. tags: nikola, reST, markdown</span>
-<a name="rest_code_931a6c812a274d5db751a014a3ff1b1b-6"></a><span class="c">.. category: markdown</span>
-<a name="rest_code_931a6c812a274d5db751a014a3ff1b1b-7"></a><span class="c">.. author: macplay</span>
-<a name="rest_code_931a6c812a274d5db751a014a3ff1b1b-8"></a><span class="c">--&gt;</span>
+<pre class="code html"><a name="rest_code_e5bc35981e8c43a4a0d2181b1d5b06d5-1"></a><span class="c">&lt;!--</span>
+<a name="rest_code_e5bc35981e8c43a4a0d2181b1d5b06d5-2"></a><span class="c">.. title: 静态博客 Nikola 之写作实践</span>
+<a name="rest_code_e5bc35981e8c43a4a0d2181b1d5b06d5-3"></a><span class="c">.. slug: jing-tai-bo-ke-nikola-zhi-xie-zuo-shi-jian</span>
+<a name="rest_code_e5bc35981e8c43a4a0d2181b1d5b06d5-4"></a><span class="c">.. date: 2017-09-20 11:32:34 UTC+08:00</span>
+<a name="rest_code_e5bc35981e8c43a4a0d2181b1d5b06d5-5"></a><span class="c">.. tags: nikola, reST, markdown</span>
+<a name="rest_code_e5bc35981e8c43a4a0d2181b1d5b06d5-6"></a><span class="c">.. category: markdown</span>
+<a name="rest_code_e5bc35981e8c43a4a0d2181b1d5b06d5-7"></a><span class="c">.. author: macplay</span>
+<a name="rest_code_e5bc35981e8c43a4a0d2181b1d5b06d5-8"></a><span class="c">--&gt;</span>
 </pre>
 <p>Markdown 常用的 <a class="reference external" href="https://jekyllrb.com/docs/frontmatter/">YAML front matter</a> 也是支持的，毋需任何设置。</p>
-<pre class="code yaml"><a name="rest_code_e11983e8b2c7466fab5ddc425fd9b4f1-1"></a><span class="nn">---</span>
-<a name="rest_code_e11983e8b2c7466fab5ddc425fd9b4f1-2"></a>
-<a name="rest_code_e11983e8b2c7466fab5ddc425fd9b4f1-3"></a><span class="l l-Scalar l-Scalar-Plain">title</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">静态博客 Nikola 之写作实践</span>
-<a name="rest_code_e11983e8b2c7466fab5ddc425fd9b4f1-4"></a><span class="l l-Scalar l-Scalar-Plain">slug</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">jing-tai-bo-ke-nikola-zhi-xie-zuo-shi-jian</span>
-<a name="rest_code_e11983e8b2c7466fab5ddc425fd9b4f1-5"></a><span class="l l-Scalar l-Scalar-Plain">date</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">2017-09-20 11:32:34 UTC+08:00</span>
-<a name="rest_code_e11983e8b2c7466fab5ddc425fd9b4f1-6"></a><span class="l l-Scalar l-Scalar-Plain">tags</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">nikola, reST, markdown</span>
-<a name="rest_code_e11983e8b2c7466fab5ddc425fd9b4f1-7"></a><span class="l l-Scalar l-Scalar-Plain">category</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">markdown</span>
-<a name="rest_code_e11983e8b2c7466fab5ddc425fd9b4f1-8"></a><span class="l l-Scalar l-Scalar-Plain">author</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">macplay</span>
-<a name="rest_code_e11983e8b2c7466fab5ddc425fd9b4f1-9"></a>
-<a name="rest_code_e11983e8b2c7466fab5ddc425fd9b4f1-10"></a><span class="nn">---</span>
+<pre class="code yaml"><a name="rest_code_bff9d3367c33468e972a28ef3884114f-1"></a><span class="nn">---</span>
+<a name="rest_code_bff9d3367c33468e972a28ef3884114f-2"></a>
+<a name="rest_code_bff9d3367c33468e972a28ef3884114f-3"></a><span class="l l-Scalar l-Scalar-Plain">title</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">静态博客 Nikola 之写作实践</span>
+<a name="rest_code_bff9d3367c33468e972a28ef3884114f-4"></a><span class="l l-Scalar l-Scalar-Plain">slug</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">jing-tai-bo-ke-nikola-zhi-xie-zuo-shi-jian</span>
+<a name="rest_code_bff9d3367c33468e972a28ef3884114f-5"></a><span class="l l-Scalar l-Scalar-Plain">date</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">2017-09-20 11:32:34 UTC+08:00</span>
+<a name="rest_code_bff9d3367c33468e972a28ef3884114f-6"></a><span class="l l-Scalar l-Scalar-Plain">tags</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">nikola, reST, markdown</span>
+<a name="rest_code_bff9d3367c33468e972a28ef3884114f-7"></a><span class="l l-Scalar l-Scalar-Plain">category</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">markdown</span>
+<a name="rest_code_bff9d3367c33468e972a28ef3884114f-8"></a><span class="l l-Scalar l-Scalar-Plain">author</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">macplay</span>
+<a name="rest_code_bff9d3367c33468e972a28ef3884114f-9"></a>
+<a name="rest_code_bff9d3367c33468e972a28ef3884114f-10"></a><span class="nn">---</span>
 </pre>
 <table class="docutils footnote" frame="void" id="id5" rules="none">
 <colgroup>
