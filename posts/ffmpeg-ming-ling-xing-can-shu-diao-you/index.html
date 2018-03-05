@@ -28,7 +28,7 @@ ffmpeg -y -i mv.mp4 -ss 00:02:24.000 -to 00:02:29.000 -c:v libx264 -an -crf 35 -
 <meta property="article:tag" content="ffmpeg">
 <meta property="article:tag" content="shell">
 <meta property="article:tag" content="terminal">
-<link rel="stylesheet" href="../../assets/css/gitalk.css">
+<link rel="stylesheet" type="text/css" href="../../assets/css/gitalk.css">
 </head>
 <body>
         <div class="ui grid">
@@ -126,7 +126,7 @@ ffmpeg -y -i mv.mp4 -ss 00:02:24.000 -to 00:02:29.000 -c:v libx264 -an -crf 35 -
     Your browser does not support the video tag.
 </video><p>文件大小 325 KB。</p>
 <p>完整命令：</p>
-<pre class="code console"><a name="rest_code_745e27f7452c422dab0ca98debc7634e-1"></a><span class="go">ffmpeg -y -i mv.mp4 -ss 00:02:24.000 -to 00:02:29.000 -c:v libx264 -an -crf 35 -b:v 100k -r 10 -preset slow out.mp4</span>
+<pre class="code console"><a name="rest_code_bd99727932bc4304a4e3c6fb6aa8877e-1"></a><span class="go">ffmpeg -y -i mv.mp4 -ss 00:02:24.000 -to 00:02:29.000 -c:v libx264 -an -crf 35 -b:v 100k -r 10 -preset slow out.mp4</span>
 </pre>
 <p>如果加上音轨 <cite>-b:a 11k</cite> ，则体积上升到 350 KB。</p>
 <p>很理想了。</p>
