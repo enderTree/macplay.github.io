@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="description" content="manjaro">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="generator" content="Nikola (getnikola.com)">
-<title>ffmpeg 命令行参数调优 - MacPlay</title>
+<title>manjaro - MacPlay</title>
 <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
@@ -12,23 +13,8 @@
 <link href="../../assets/css/semantic.min.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
-<link rel="canonical" href="https://macplay.github.io/posts/ffmpeg-ming-ling-xing-can-shu-diao-you/">
+<link rel="canonical" href="https://macplay.github.io/listings/manjaro/">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
-<meta name="author" content="ashfinal">
-<meta property="og:site_name" content="MacPlay">
-<meta property="og:title" content="ffmpeg 命令行参数调优">
-<meta property="og:url" content="https://macplay.github.io/posts/ffmpeg-ming-ling-xing-can-shu-diao-you/">
-<meta property="og:description" content="Your browser does not support the video tag.
-文件大小 325 KB。
-完整命令：
-ffmpeg -y -i mv.mp4 -ss 00:02:24.000 -to 00:02:29.000 -c:v libx264 -an -crf 35 -b:v 100k -r 10 -preset slow out.mp4
-如果加上音轨 -b:a 11k ，则体积">
-<meta property="og:type" content="article">
-<meta property="article:published_time" content="2018-03-04T17:44:20+08:00">
-<meta property="article:tag" content="ffmpeg">
-<meta property="article:tag" content="shell">
-<meta property="article:tag" content="terminal">
-<link rel="stylesheet" type="text/css" href="../../assets/css/gitalk.css">
 </head>
 <body>
         <div class="ui grid">
@@ -48,7 +34,7 @@ ffmpeg -y -i mv.mp4 -ss 00:02:24.000 -to 00:02:29.000 -c:v libx264 -an -crf 35 -
                     MacPlay
                 </a>
                         <a class="item" href="../../">Posts</a>
-                        <a class="item" href="../../listings/">Code</a>
+                        <a class="item" href="../">Code</a>
                         <a class="item" href="../../galleries/">Gallery</a>
                         <a class="item" href="../../categories/">Tags</a>
                         <a class="item" href="../../archive.html">Archive</a>
@@ -63,7 +49,7 @@ ffmpeg -y -i mv.mp4 -ss 00:02:24.000 -to 00:02:29.000 -c:v libx264 -an -crf 35 -
                     <a class="title">MacPlay</a>
                     <div class="content">
                                 <a class="item" href="../../">Posts</a>
-                                <a class="item" href="../../listings/">Code</a>
+                                <a class="item" href="../">Code</a>
                                 <a class="item" href="../../galleries/">Gallery</a>
                                 <a class="item" href="../../categories/">Tags</a>
                                 <a class="item" href="../../archive.html">Archive</a>
@@ -75,78 +61,22 @@ ffmpeg -y -i mv.mp4 -ss 00:02:24.000 -to 00:02:29.000 -c:v libx264 -an -crf 35 -
     </div>
 
     </header><main id="main"><div id="main-content">
-<div class="postpage post-text page-body" itemscope="itemscope" itemtype="http://schema.org/Article">
-            <h1 class="post-title" itemprop="headline">
-        <a href=".">ffmpeg 命令行参数调优</a>
-    </h1>
-
-    <div class="post-meta">
-        <span class="post-meta-item-icon">
-            <i class="user icon"></i>
-        </span>
-        <span class="post-meta-item-text" itemprop="author">
-            <a href="../../authors/ashfinal/">ashfinal</a>
-        </span>
-            <span class="post-meta-divider">|</span>
-            <span class="post-meta-item-icon">
-                <i class="github icon"></i>
-            </span>
-            <span class="post-meta-item-text">
-                <a href="https://github.com/macplay/macplay.github.io/edit/src/posts/ffmpeg-ming-ling-xing-can-shu-diao-you.rst" title="Edit on GitHub">edit</a>
-            </span>
-        <span class="post-meta-divider">|</span>
-        <span class="post-meta-item-icon">
-            <i class="calendar icon"></i>
-        </span>
-        <span class="post-meta-item-text">
-            <a href="../../archive.html">
-                <time datetime="2018-03-04T17:44:20+08:00" itemprop="datePublished" title="2018-03-04 17:44">2018-03-04 17:44
-                </time></a>
-        </span>
-            <span class="post-meta-divider">|</span>
-            <span class="post-meta-item-icon">
-                <i class="tags icon"></i>
-            </span>
-                        <span class="post-meta-tag-item">
-                            <a href="../../categories/ffmpeg/">ffmpeg</a>
-                        </span>
-                        <span class="post-meta-tag-item">
-                            <a href="../../categories/shell/">shell</a>
-                        </span>
-                        <span class="post-meta-tag-item">
-                            <a href="../../categories/terminal/">terminal</a>
-                        </span>
+<div class="listingpage page-body" itemscope="itemscope" itemtype="http://schema.org/Article">
+    <div class="list-title">
+                <a href="../">listings /</a>
+                <a href=".">manjaro /</a>
     </div>
-
-    
-    <div class="post-content" itemprop="article text">
-        <div id="post-content">
-        <div>
-<video src="../../videos/time_machine.mp4" loop autoplay>
-    Your browser does not support the video tag.
-</video><p>文件大小 325 KB。</p>
-<p>完整命令：</p>
-<pre class="code console"><a name="rest_code_a011e16931084df399e2bcae8f95e9bd-1"></a><span class="go">ffmpeg -y -i mv.mp4 -ss 00:02:24.000 -to 00:02:29.000 -c:v libx264 -an -crf 35 -b:v 100k -r 10 -preset slow out.mp4</span>
-</pre>
-<p>如果加上音轨 <cite>-b:a 11k</cite> ，则体积上升到 350 KB。</p>
-<p>很理想了。</p>
-</div>
-        </div>
-    </div>
-    <div class="post-info">
-        <p>文章链接：<a href="https://macplay.github.io/posts/ffmpeg-ming-ling-xing-can-shu-diao-you/" target="_blank">https://macplay.github.io/posts/ffmpeg-ming-ling-xing-can-shu-diao-you/</a></p>
-        <p>发布/更新于：
-            <time datetime="2018-03-04 17:44:20 UTC+08:00" itemprop="dateModified" title="2018-03-04 17:44">2018-03-04 17:44
-            </time></p>
-        <p>版权声明：如无特别说明，本站文章均遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a> 协议，转载请注明作者及出处。</p>
-    </div>
-        <div class="post-navigation no-print">
-        <div class="ui huge secondary stackable menu">
-            <a class="post-nav-item post-nav-previous item" href="../mian-fei-zi-dian-terminology-for-macos/" title="Previous post"><i class="angle double left icon"></i> 免费辞典 Terminology for macOS</a>
-        </div>
-    </div>
-
-        <div id="gitalk-container" class="comments-block no-print"></div>
+    <ul>
+<li>
+            <a href="font_local.conf.html" class="listing-file"><i class="file outline icon"></i> font_local.conf</a>
+        </li>
+        <li>
+            <a href="i3wm.conf.html" class="listing-file"><i class="file outline icon"></i> i3wm.conf</a>
+        </li>
+        <li>
+            <a href="Xresources.conf.html" class="listing-file"><i class="file outline icon"></i> Xresources.conf</a>
+        </li>
+    </ul>
 </div>
                     </div>
                 </main><div class="footer extra-block no-print">
@@ -191,17 +121,6 @@ ffmpeg -y -i mv.mp4 -ss 00:02:24.000 -to 00:02:29.000 -c:v libx264 -an -crf 35 -
                   });
                 $('.image-reference').fancybox();
             });
-        </script><script src="../../assets/js/gitalk.min.js"></script><script>
-        const gitalk = new Gitalk({
-            clientID: '12fcda845097d895a24c',
-            clientSecret: '50ed60cde5f40897205197b4265b474cefbedc49',
-            repo: 'macplay.github.io',
-            owner: 'macplay',
-            admin: ['macplay', 'ashfinal'],
-            // facebook-like distraction free mode
-            distractionFreeMode: false
-        })
-        gitalk.render('gitalk-container')
-    </script>
+        </script>
 </body>
 </html>

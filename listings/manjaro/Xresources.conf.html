@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Xresources.conf">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="generator" content="Nikola (getnikola.com)">
+<title>Xresources.conf - MacPlay</title>
+<link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+<link rel="mask-icon" href="../../safari-pinned-tab.svg" color="#5bbad5">
+<link href="../../assets/css/semantic.min.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link rel="canonical" href="https://macplay.github.io/listings/manjaro/Xresources.conf.html">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+</head>
+<body>
+        <div class="ui grid">
+            <div class="computer only three wide column no-print">
+                <div id="left-side">
+                </div>
+            </div>
+            <div class="ten wide computer sixteen wide tablet sixteen wide mobile column">
+                        <div class="ui inline cookie nag no-print">
+            <span class="title">从现在开始，博客可以支持站点通告了。 O(∩_∩)O~~</span>
+            <i class="close icon"></i>
+        </div>
+    <header id="header" class="no-print"><div class="ui grid">
+        <div class="computer only tablet only sixteen wide column">
+            <div class="ui large secondary stackable menu">
+                <a class="header item brand-logo" href="https://macplay.github.io/">
+                    MacPlay
+                </a>
+                        <a class="item" href="../../">Posts</a>
+                        <a class="item" href="../">Code</a>
+                        <a class="item" href="../../galleries/">Gallery</a>
+                        <a class="item" href="../../categories/">Tags</a>
+                        <a class="item" href="../../archive.html">Archive</a>
+                <div class="right menu">
+                    <a class="item" href="../../rss.xml"><i class="rss icon"></i>RSS</a>
+                </div>
+            </div>
+        </div>
+        <div class="mobile only sixteen wide column">
+            <div class="ui fluid accordion vertical menu">
+                <div class="item">
+                    <a class="title">MacPlay</a>
+                    <div class="content">
+                                <a class="item" href="../../">Posts</a>
+                                <a class="item" href="../">Code</a>
+                                <a class="item" href="../../galleries/">Gallery</a>
+                                <a class="item" href="../../categories/">Tags</a>
+                                <a class="item" href="../../archive.html">Archive</a>
+                        <a class="item" href="../../rss.xml"><i class="rss icon"></i>RSS</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </header><main id="main"><div id="main-content">
+<div class="listingpage page-body" itemscope="itemscope" itemtype="http://schema.org/Article">
+    <div class="list-title">
+                <a href="../">listings /</a>
+                <a href=".">manjaro /</a>
+                Xresources.conf
+    </div>
+        <p class="downloadlink">
+            <i class="cloud download alternate icon"></i><a href="Xresources.conf">Download</a>
+        </p>
+        <table class="codetable"><tr>
+<td class="linenos"><div class="linenodiv"><pre><a href="#listingsmanjaroxresourcesconf-1">  1</a>
+<a href="#listingsmanjaroxresourcesconf-2">  2</a>
+<a href="#listingsmanjaroxresourcesconf-3">  3</a>
+<a href="#listingsmanjaroxresourcesconf-4">  4</a>
+<a href="#listingsmanjaroxresourcesconf-5">  5</a>
+<a href="#listingsmanjaroxresourcesconf-6">  6</a>
+<a href="#listingsmanjaroxresourcesconf-7">  7</a>
+<a href="#listingsmanjaroxresourcesconf-8">  8</a>
+<a href="#listingsmanjaroxresourcesconf-9">  9</a>
+<a href="#listingsmanjaroxresourcesconf-10"> 10</a>
+<a href="#listingsmanjaroxresourcesconf-11"> 11</a>
+<a href="#listingsmanjaroxresourcesconf-12"> 12</a>
+<a href="#listingsmanjaroxresourcesconf-13"> 13</a>
+<a href="#listingsmanjaroxresourcesconf-14"> 14</a>
+<a href="#listingsmanjaroxresourcesconf-15"> 15</a>
+<a href="#listingsmanjaroxresourcesconf-16"> 16</a>
+<a href="#listingsmanjaroxresourcesconf-17"> 17</a>
+<a href="#listingsmanjaroxresourcesconf-18"> 18</a>
+<a href="#listingsmanjaroxresourcesconf-19"> 19</a>
+<a href="#listingsmanjaroxresourcesconf-20"> 20</a>
+<a href="#listingsmanjaroxresourcesconf-21"> 21</a>
+<a href="#listingsmanjaroxresourcesconf-22"> 22</a>
+<a href="#listingsmanjaroxresourcesconf-23"> 23</a>
+<a href="#listingsmanjaroxresourcesconf-24"> 24</a>
+<a href="#listingsmanjaroxresourcesconf-25"> 25</a>
+<a href="#listingsmanjaroxresourcesconf-26"> 26</a>
+<a href="#listingsmanjaroxresourcesconf-27"> 27</a>
+<a href="#listingsmanjaroxresourcesconf-28"> 28</a>
+<a href="#listingsmanjaroxresourcesconf-29"> 29</a>
+<a href="#listingsmanjaroxresourcesconf-30"> 30</a>
+<a href="#listingsmanjaroxresourcesconf-31"> 31</a>
+<a href="#listingsmanjaroxresourcesconf-32"> 32</a>
+<a href="#listingsmanjaroxresourcesconf-33"> 33</a>
+<a href="#listingsmanjaroxresourcesconf-34"> 34</a>
+<a href="#listingsmanjaroxresourcesconf-35"> 35</a>
+<a href="#listingsmanjaroxresourcesconf-36"> 36</a>
+<a href="#listingsmanjaroxresourcesconf-37"> 37</a>
+<a href="#listingsmanjaroxresourcesconf-38"> 38</a>
+<a href="#listingsmanjaroxresourcesconf-39"> 39</a>
+<a href="#listingsmanjaroxresourcesconf-40"> 40</a>
+<a href="#listingsmanjaroxresourcesconf-41"> 41</a>
+<a href="#listingsmanjaroxresourcesconf-42"> 42</a>
+<a href="#listingsmanjaroxresourcesconf-43"> 43</a>
+<a href="#listingsmanjaroxresourcesconf-44"> 44</a>
+<a href="#listingsmanjaroxresourcesconf-45"> 45</a>
+<a href="#listingsmanjaroxresourcesconf-46"> 46</a>
+<a href="#listingsmanjaroxresourcesconf-47"> 47</a>
+<a href="#listingsmanjaroxresourcesconf-48"> 48</a>
+<a href="#listingsmanjaroxresourcesconf-49"> 49</a>
+<a href="#listingsmanjaroxresourcesconf-50"> 50</a>
+<a href="#listingsmanjaroxresourcesconf-51"> 51</a>
+<a href="#listingsmanjaroxresourcesconf-52"> 52</a>
+<a href="#listingsmanjaroxresourcesconf-53"> 53</a>
+<a href="#listingsmanjaroxresourcesconf-54"> 54</a>
+<a href="#listingsmanjaroxresourcesconf-55"> 55</a>
+<a href="#listingsmanjaroxresourcesconf-56"> 56</a>
+<a href="#listingsmanjaroxresourcesconf-57"> 57</a>
+<a href="#listingsmanjaroxresourcesconf-58"> 58</a>
+<a href="#listingsmanjaroxresourcesconf-59"> 59</a>
+<a href="#listingsmanjaroxresourcesconf-60"> 60</a>
+<a href="#listingsmanjaroxresourcesconf-61"> 61</a>
+<a href="#listingsmanjaroxresourcesconf-62"> 62</a>
+<a href="#listingsmanjaroxresourcesconf-63"> 63</a>
+<a href="#listingsmanjaroxresourcesconf-64"> 64</a>
+<a href="#listingsmanjaroxresourcesconf-65"> 65</a>
+<a href="#listingsmanjaroxresourcesconf-66"> 66</a>
+<a href="#listingsmanjaroxresourcesconf-67"> 67</a>
+<a href="#listingsmanjaroxresourcesconf-68"> 68</a>
+<a href="#listingsmanjaroxresourcesconf-69"> 69</a>
+<a href="#listingsmanjaroxresourcesconf-70"> 70</a>
+<a href="#listingsmanjaroxresourcesconf-71"> 71</a>
+<a href="#listingsmanjaroxresourcesconf-72"> 72</a>
+<a href="#listingsmanjaroxresourcesconf-73"> 73</a>
+<a href="#listingsmanjaroxresourcesconf-74"> 74</a>
+<a href="#listingsmanjaroxresourcesconf-75"> 75</a>
+<a href="#listingsmanjaroxresourcesconf-76"> 76</a>
+<a href="#listingsmanjaroxresourcesconf-77"> 77</a>
+<a href="#listingsmanjaroxresourcesconf-78"> 78</a>
+<a href="#listingsmanjaroxresourcesconf-79"> 79</a>
+<a href="#listingsmanjaroxresourcesconf-80"> 80</a>
+<a href="#listingsmanjaroxresourcesconf-81"> 81</a>
+<a href="#listingsmanjaroxresourcesconf-82"> 82</a>
+<a href="#listingsmanjaroxresourcesconf-83"> 83</a>
+<a href="#listingsmanjaroxresourcesconf-84"> 84</a>
+<a href="#listingsmanjaroxresourcesconf-85"> 85</a>
+<a href="#listingsmanjaroxresourcesconf-86"> 86</a>
+<a href="#listingsmanjaroxresourcesconf-87"> 87</a>
+<a href="#listingsmanjaroxresourcesconf-88"> 88</a>
+<a href="#listingsmanjaroxresourcesconf-89"> 89</a>
+<a href="#listingsmanjaroxresourcesconf-90"> 90</a>
+<a href="#listingsmanjaroxresourcesconf-91"> 91</a>
+<a href="#listingsmanjaroxresourcesconf-92"> 92</a>
+<a href="#listingsmanjaroxresourcesconf-93"> 93</a>
+<a href="#listingsmanjaroxresourcesconf-94"> 94</a>
+<a href="#listingsmanjaroxresourcesconf-95"> 95</a>
+<a href="#listingsmanjaroxresourcesconf-96"> 96</a>
+<a href="#listingsmanjaroxresourcesconf-97"> 97</a>
+<a href="#listingsmanjaroxresourcesconf-98"> 98</a>
+<a href="#listingsmanjaroxresourcesconf-99"> 99</a>
+<a href="#listingsmanjaroxresourcesconf-100">100</a>
+<a href="#listingsmanjaroxresourcesconf-101">101</a>
+<a href="#listingsmanjaroxresourcesconf-102">102</a>
+<a href="#listingsmanjaroxresourcesconf-103">103</a>
+<a href="#listingsmanjaroxresourcesconf-104">104</a>
+<a href="#listingsmanjaroxresourcesconf-105">105</a>
+<a href="#listingsmanjaroxresourcesconf-106">106</a>
+<a href="#listingsmanjaroxresourcesconf-107">107</a>
+<a href="#listingsmanjaroxresourcesconf-108">108</a>
+<a href="#listingsmanjaroxresourcesconf-109">109</a>
+<a href="#listingsmanjaroxresourcesconf-110">110</a>
+<a href="#listingsmanjaroxresourcesconf-111">111</a>
+<a href="#listingsmanjaroxresourcesconf-112">112</a>
+<a href="#listingsmanjaroxresourcesconf-113">113</a>
+<a href="#listingsmanjaroxresourcesconf-114">114</a>
+<a href="#listingsmanjaroxresourcesconf-115">115</a>
+<a href="#listingsmanjaroxresourcesconf-116">116</a>
+<a href="#listingsmanjaroxresourcesconf-117">117</a>
+<a href="#listingsmanjaroxresourcesconf-118">118</a>
+<a href="#listingsmanjaroxresourcesconf-119">119</a>
+<a href="#listingsmanjaroxresourcesconf-120">120</a>
+<a href="#listingsmanjaroxresourcesconf-121">121</a>
+<a href="#listingsmanjaroxresourcesconf-122">122</a>
+<a href="#listingsmanjaroxresourcesconf-123">123</a>
+<a href="#listingsmanjaroxresourcesconf-124">124</a>
+<a href="#listingsmanjaroxresourcesconf-125">125</a>
+<a href="#listingsmanjaroxresourcesconf-126">126</a>
+<a href="#listingsmanjaroxresourcesconf-127">127</a>
+<a href="#listingsmanjaroxresourcesconf-128">128</a>
+<a href="#listingsmanjaroxresourcesconf-129">129</a>
+<a href="#listingsmanjaroxresourcesconf-130">130</a>
+<a href="#listingsmanjaroxresourcesconf-131">131</a>
+<a href="#listingsmanjaroxresourcesconf-132">132</a>
+<a href="#listingsmanjaroxresourcesconf-133">133</a>
+<a href="#listingsmanjaroxresourcesconf-134">134</a>
+<a href="#listingsmanjaroxresourcesconf-135">135</a>
+<a href="#listingsmanjaroxresourcesconf-136">136</a>
+<a href="#listingsmanjaroxresourcesconf-137">137</a>
+<a href="#listingsmanjaroxresourcesconf-138">138</a>
+<a href="#listingsmanjaroxresourcesconf-139">139</a>
+<a href="#listingsmanjaroxresourcesconf-140">140</a>
+<a href="#listingsmanjaroxresourcesconf-141">141</a>
+<a href="#listingsmanjaroxresourcesconf-142">142</a>
+<a href="#listingsmanjaroxresourcesconf-143">143</a>
+<a href="#listingsmanjaroxresourcesconf-144">144</a>
+<a href="#listingsmanjaroxresourcesconf-145">145</a>
+<a href="#listingsmanjaroxresourcesconf-146">146</a>
+<a href="#listingsmanjaroxresourcesconf-147">147</a>
+<a href="#listingsmanjaroxresourcesconf-148">148</a>
+<a href="#listingsmanjaroxresourcesconf-149">149</a>
+<a href="#listingsmanjaroxresourcesconf-150">150</a>
+<a href="#listingsmanjaroxresourcesconf-151">151</a>
+<a href="#listingsmanjaroxresourcesconf-152">152</a>
+<a href="#listingsmanjaroxresourcesconf-153">153</a>
+<a href="#listingsmanjaroxresourcesconf-154">154</a>
+<a href="#listingsmanjaroxresourcesconf-155">155</a>
+<a href="#listingsmanjaroxresourcesconf-156">156</a>
+<a href="#listingsmanjaroxresourcesconf-157">157</a>
+<a href="#listingsmanjaroxresourcesconf-158">158</a>
+<a href="#listingsmanjaroxresourcesconf-159">159</a>
+<a href="#listingsmanjaroxresourcesconf-160">160</a>
+<a href="#listingsmanjaroxresourcesconf-161">161</a>
+<a href="#listingsmanjaroxresourcesconf-162">162</a>
+<a href="#listingsmanjaroxresourcesconf-163">163</a>
+<a href="#listingsmanjaroxresourcesconf-164">164</a>
+<a href="#listingsmanjaroxresourcesconf-165">165</a>
+<a href="#listingsmanjaroxresourcesconf-166">166</a>
+<a href="#listingsmanjaroxresourcesconf-167">167</a>
+<a href="#listingsmanjaroxresourcesconf-168">168</a>
+<a href="#listingsmanjaroxresourcesconf-169">169</a>
+<a href="#listingsmanjaroxresourcesconf-170">170</a>
+<a href="#listingsmanjaroxresourcesconf-171">171</a>
+<a href="#listingsmanjaroxresourcesconf-172">172</a>
+<a href="#listingsmanjaroxresourcesconf-173">173</a>
+<a href="#listingsmanjaroxresourcesconf-174">174</a>
+<a href="#listingsmanjaroxresourcesconf-175">175</a>
+<a href="#listingsmanjaroxresourcesconf-176">176</a>
+<a href="#listingsmanjaroxresourcesconf-177">177</a>
+<a href="#listingsmanjaroxresourcesconf-178">178</a>
+<a href="#listingsmanjaroxresourcesconf-179">179</a>
+<a href="#listingsmanjaroxresourcesconf-180">180</a>
+<a href="#listingsmanjaroxresourcesconf-181">181</a>
+<a href="#listingsmanjaroxresourcesconf-182">182</a>
+<a href="#listingsmanjaroxresourcesconf-183">183</a>
+<a href="#listingsmanjaroxresourcesconf-184">184</a>
+<a href="#listingsmanjaroxresourcesconf-185">185</a>
+<a href="#listingsmanjaroxresourcesconf-186">186</a>
+<a href="#listingsmanjaroxresourcesconf-187">187</a>
+<a href="#listingsmanjaroxresourcesconf-188">188</a>
+<a href="#listingsmanjaroxresourcesconf-189">189</a>
+<a href="#listingsmanjaroxresourcesconf-190">190</a>
+<a href="#listingsmanjaroxresourcesconf-191">191</a>
+<a href="#listingsmanjaroxresourcesconf-192">192</a>
+<a href="#listingsmanjaroxresourcesconf-193">193</a>
+<a href="#listingsmanjaroxresourcesconf-194">194</a>
+<a href="#listingsmanjaroxresourcesconf-195">195</a>
+<a href="#listingsmanjaroxresourcesconf-196">196</a>
+<a href="#listingsmanjaroxresourcesconf-197">197</a>
+<a href="#listingsmanjaroxresourcesconf-198">198</a>
+<a href="#listingsmanjaroxresourcesconf-199">199</a>
+<a href="#listingsmanjaroxresourcesconf-200">200</a>
+<a href="#listingsmanjaroxresourcesconf-201">201</a>
+<a href="#listingsmanjaroxresourcesconf-202">202</a>
+<a href="#listingsmanjaroxresourcesconf-203">203</a>
+<a href="#listingsmanjaroxresourcesconf-204">204</a>
+<a href="#listingsmanjaroxresourcesconf-205">205</a>
+<a href="#listingsmanjaroxresourcesconf-206">206</a>
+<a href="#listingsmanjaroxresourcesconf-207">207</a>
+<a href="#listingsmanjaroxresourcesconf-208">208</a>
+<a href="#listingsmanjaroxresourcesconf-209">209</a>
+<a href="#listingsmanjaroxresourcesconf-210">210</a>
+<a href="#listingsmanjaroxresourcesconf-211">211</a>
+<a href="#listingsmanjaroxresourcesconf-212">212</a>
+<a href="#listingsmanjaroxresourcesconf-213">213</a>
+<a href="#listingsmanjaroxresourcesconf-214">214</a>
+<a href="#listingsmanjaroxresourcesconf-215">215</a>
+<a href="#listingsmanjaroxresourcesconf-216">216</a>
+<a href="#listingsmanjaroxresourcesconf-217">217</a>
+<a href="#listingsmanjaroxresourcesconf-218">218</a>
+<a href="#listingsmanjaroxresourcesconf-219">219</a>
+<a href="#listingsmanjaroxresourcesconf-220">220</a>
+<a href="#listingsmanjaroxresourcesconf-221">221</a>
+<a href="#listingsmanjaroxresourcesconf-222">222</a>
+<a href="#listingsmanjaroxresourcesconf-223">223</a>
+<a href="#listingsmanjaroxresourcesconf-224">224</a>
+<a href="#listingsmanjaroxresourcesconf-225">225</a>
+<a href="#listingsmanjaroxresourcesconf-226">226</a>
+<a href="#listingsmanjaroxresourcesconf-227">227</a>
+<a href="#listingsmanjaroxresourcesconf-228">228</a>
+<a href="#listingsmanjaroxresourcesconf-229">229</a>
+<a href="#listingsmanjaroxresourcesconf-230">230</a>
+<a href="#listingsmanjaroxresourcesconf-231">231</a>
+<a href="#listingsmanjaroxresourcesconf-232">232</a>
+<a href="#listingsmanjaroxresourcesconf-233">233</a>
+<a href="#listingsmanjaroxresourcesconf-234">234</a>
+<a href="#listingsmanjaroxresourcesconf-235">235</a>
+<a href="#listingsmanjaroxresourcesconf-236">236</a>
+<a href="#listingsmanjaroxresourcesconf-237">237</a>
+<a href="#listingsmanjaroxresourcesconf-238">238</a>
+<a href="#listingsmanjaroxresourcesconf-239">239</a>
+<a href="#listingsmanjaroxresourcesconf-240">240</a>
+<a href="#listingsmanjaroxresourcesconf-241">241</a>
+<a href="#listingsmanjaroxresourcesconf-242">242</a>
+<a href="#listingsmanjaroxresourcesconf-243">243</a>
+<a href="#listingsmanjaroxresourcesconf-244">244</a>
+<a href="#listingsmanjaroxresourcesconf-245">245</a>
+<a href="#listingsmanjaroxresourcesconf-246">246</a>
+<a href="#listingsmanjaroxresourcesconf-247">247</a>
+<a href="#listingsmanjaroxresourcesconf-248">248</a>
+<a href="#listingsmanjaroxresourcesconf-249">249</a>
+<a href="#listingsmanjaroxresourcesconf-250">250</a>
+<a href="#listingsmanjaroxresourcesconf-251">251</a>
+<a href="#listingsmanjaroxresourcesconf-252">252</a>
+<a href="#listingsmanjaroxresourcesconf-253">253</a>
+<a href="#listingsmanjaroxresourcesconf-254">254</a>
+<a href="#listingsmanjaroxresourcesconf-255">255</a>
+<a href="#listingsmanjaroxresourcesconf-256">256</a>
+<a href="#listingsmanjaroxresourcesconf-257">257</a></pre></div></td>
+<td class="code"><pre class="code literal-block"><a name="listingsmanjaroxresourcesconf-1"></a>Xft.dpi: 147
+<a name="listingsmanjaroxresourcesconf-2"></a>Xft.antialias: true
+<a name="listingsmanjaroxresourcesconf-3"></a>Xft.hinting: true
+<a name="listingsmanjaroxresourcesconf-4"></a>Xft.rgba: rgb
+<a name="listingsmanjaroxresourcesconf-5"></a>Xft.autohint: false
+<a name="listingsmanjaroxresourcesconf-6"></a>Xft.hintstyle: hintslight
+<a name="listingsmanjaroxresourcesconf-7"></a>Xft.lcdfilter: lcddefault
+<a name="listingsmanjaroxresourcesconf-8"></a>
+<a name="listingsmanjaroxresourcesconf-9"></a>*background:                      #282C34
+<a name="listingsmanjaroxresourcesconf-10"></a>*foreground:                      #657b83
+<a name="listingsmanjaroxresourcesconf-11"></a>*fading:                          15
+<a name="listingsmanjaroxresourcesconf-12"></a>*fadeColor:                       black
+<a name="listingsmanjaroxresourcesconf-13"></a>*cursorColor:                     #16A085
+<a name="listingsmanjaroxresourcesconf-14"></a>*pointerColorBackground:          #2B2C2B
+<a name="listingsmanjaroxresourcesconf-15"></a>*pointerColorForeground:          #16A085
+<a name="listingsmanjaroxresourcesconf-16"></a>
+<a name="listingsmanjaroxresourcesconf-17"></a>!! black dark/light
+<a name="listingsmanjaroxresourcesconf-18"></a>! *color0:                          #232423
+<a name="listingsmanjaroxresourcesconf-19"></a>*color0:                          #282C34
+<a name="listingsmanjaroxresourcesconf-20"></a>! *color8:                          #282928
+<a name="listingsmanjaroxresourcesconf-21"></a>*color8:                          #283F39
+<a name="listingsmanjaroxresourcesconf-22"></a>
+<a name="listingsmanjaroxresourcesconf-23"></a>!! red dark/light
+<a name="listingsmanjaroxresourcesconf-24"></a>*color1:                          #BA2922
+<a name="listingsmanjaroxresourcesconf-25"></a>*color9:                          #CC372C
+<a name="listingsmanjaroxresourcesconf-26"></a>
+<a name="listingsmanjaroxresourcesconf-27"></a>!! green dark/light
+<a name="listingsmanjaroxresourcesconf-28"></a>*color2:                          #7E807E
+<a name="listingsmanjaroxresourcesconf-29"></a>*color10:                         #8D8F8D
+<a name="listingsmanjaroxresourcesconf-30"></a>
+<a name="listingsmanjaroxresourcesconf-31"></a>!! yellow dark/light
+<a name="listingsmanjaroxresourcesconf-32"></a>*color3:                          #4C4F4D
+<a name="listingsmanjaroxresourcesconf-33"></a>*color11:                         #4E524F
+<a name="listingsmanjaroxresourcesconf-34"></a>
+<a name="listingsmanjaroxresourcesconf-35"></a>!! blue dark/light
+<a name="listingsmanjaroxresourcesconf-36"></a>*color4:                          #16A085
+<a name="listingsmanjaroxresourcesconf-37"></a>*color12:                         #13BF9D
+<a name="listingsmanjaroxresourcesconf-38"></a>
+<a name="listingsmanjaroxresourcesconf-39"></a>!! magenta dark/light
+<a name="listingsmanjaroxresourcesconf-40"></a>*color5:                          #43746A
+<a name="listingsmanjaroxresourcesconf-41"></a>*color13:                         #487D72
+<a name="listingsmanjaroxresourcesconf-42"></a>
+<a name="listingsmanjaroxresourcesconf-43"></a>!! cyan dark/light
+<a name="listingsmanjaroxresourcesconf-44"></a>*color6:                          #00CCCC
+<a name="listingsmanjaroxresourcesconf-45"></a>*color14:                         #00D1D1
+<a name="listingsmanjaroxresourcesconf-46"></a>
+<a name="listingsmanjaroxresourcesconf-47"></a>!! white dark/light
+<a name="listingsmanjaroxresourcesconf-48"></a>! *color7:                          #E0E0E0
+<a name="listingsmanjaroxresourcesconf-49"></a>*color7:                          #E5EDF2
+<a name="listingsmanjaroxresourcesconf-50"></a>! *color15:                         #E8E8E8
+<a name="listingsmanjaroxresourcesconf-51"></a>*color15:                         #ECEDED
+<a name="listingsmanjaroxresourcesconf-52"></a>
+<a name="listingsmanjaroxresourcesconf-53"></a>Xcursor.theme: xcursor-breeze
+<a name="listingsmanjaroxresourcesconf-54"></a>Xcursor.size:                     0
+<a name="listingsmanjaroxresourcesconf-55"></a>
+<a name="listingsmanjaroxresourcesconf-56"></a>! XTerm*background: #2b2b2b
+<a name="listingsmanjaroxresourcesconf-57"></a>! XTerm*foreground: #e7e7e7
+<a name="listingsmanjaroxresourcesconf-58"></a>XTerm*pointerColor: #16A085
+<a name="listingsmanjaroxresourcesconf-59"></a>! XTerm*faceName: Fixed
+<a name="listingsmanjaroxresourcesconf-60"></a>! XTerm*faceSize: 11
+<a name="listingsmanjaroxresourcesconf-61"></a>
+<a name="listingsmanjaroxresourcesconf-62"></a>XTerm*background:                 #282C34
+<a name="listingsmanjaroxresourcesconf-63"></a>XTerm*foreground:                 #fdf6e3
+<a name="listingsmanjaroxresourcesconf-64"></a>XTerm*reverseVideo:               on
+<a name="listingsmanjaroxresourcesconf-65"></a>XTerm*faceName:                   Terminus:size=11:antialias=true
+<a name="listingsmanjaroxresourcesconf-66"></a>XTerm*faceNameDoublesize:         WenQuanYi Micro Hei:size=11:antialias=True
+<a name="listingsmanjaroxresourcesconf-67"></a>XTerm*selectToClipboard:          true
+<a name="listingsmanjaroxresourcesconf-68"></a>
+<a name="listingsmanjaroxresourcesconf-69"></a>! URxvt.font:                       10x20,xft:TerminessTTFNerdFontMono
+<a name="listingsmanjaroxresourcesconf-70"></a>URxvt.font:                       xft:Noto Sans Mono:size=10,xft:Noto Sans Mono CJK SC:size=10,xft:DejaVuSansMono Nerd Font Mono:size=10
+<a name="listingsmanjaroxresourcesconf-71"></a>! URxvt.font:                       xft:unifont:size=8,xft:DejaVuSansMono Nerd Font Mono:size=10
+<a name="listingsmanjaroxresourcesconf-72"></a>
+<a name="listingsmanjaroxresourcesconf-73"></a>urxvt.perl-ext-common: default,matcher,resize-font,clipboard,url-select
+<a name="listingsmanjaroxresourcesconf-74"></a>
+<a name="listingsmanjaroxresourcesconf-75"></a>! alternative font settings with 'terminus':
+<a name="listingsmanjaroxresourcesconf-76"></a>!URxvt.font:      -xos4-terminus-medium-r-normal--16-160-72-72-c-80-iso10646-1
+<a name="listingsmanjaroxresourcesconf-77"></a>!URxvt.bold.font: -xos4-terminus-bold-r-normal--16-160-72-72-c-80-iso10646-1
+<a name="listingsmanjaroxresourcesconf-78"></a>!! terminus names see end of file!
+<a name="listingsmanjaroxresourcesconf-79"></a>
+<a name="listingsmanjaroxresourcesconf-80"></a>URxvt.depth:                      32
+<a name="listingsmanjaroxresourcesconf-81"></a>URxvt.background:                 [80]#282C34
+<a name="listingsmanjaroxresourcesconf-82"></a>URxvt*scrollBar:                  false
+<a name="listingsmanjaroxresourcesconf-83"></a>URxvt*mouseWheelScrollPage:       false
+<a name="listingsmanjaroxresourcesconf-84"></a>URxvt*cursorBlink:                false
+<a name="listingsmanjaroxresourcesconf-85"></a>! URxvt*background:                 black
+<a name="listingsmanjaroxresourcesconf-86"></a>URxvt*foreground:                 grey
+<a name="listingsmanjaroxresourcesconf-87"></a>URxvt*saveLines:                  5000
+<a name="listingsmanjaroxresourcesconf-88"></a>
+<a name="listingsmanjaroxresourcesconf-89"></a>! for 'fake' transparency (without Compton) uncomment the following three lines
+<a name="listingsmanjaroxresourcesconf-90"></a>! URxvt*inheritPixmap:            true
+<a name="listingsmanjaroxresourcesconf-91"></a>! URxvt*transparent:              true
+<a name="listingsmanjaroxresourcesconf-92"></a>! URxvt*shading:                  138
+<a name="listingsmanjaroxresourcesconf-93"></a>
+<a name="listingsmanjaroxresourcesconf-94"></a>URxvt.keysym.C-minus:             resize-font:smaller
+<a name="listingsmanjaroxresourcesconf-95"></a>URxvt.keysym.C-plus:              resize-font:bigger
+<a name="listingsmanjaroxresourcesconf-96"></a>URxvt.keysym.C-equal:             resize-font:reset
+<a name="listingsmanjaroxresourcesconf-97"></a>URxvt.keysym.C-question:          resize-font:show
+<a name="listingsmanjaroxresourcesconf-98"></a>
+<a name="listingsmanjaroxresourcesconf-99"></a>URxvt.keysym.M-c:                 perl:clipboard:copy
+<a name="listingsmanjaroxresourcesconf-100"></a>URxvt.keysym.M-v:                 perl:clipboard:paste
+<a name="listingsmanjaroxresourcesconf-101"></a>URxvt.keysym.M-C-v:               perl:clipboard:paste_escaped
+<a name="listingsmanjaroxresourcesconf-102"></a>
+<a name="listingsmanjaroxresourcesconf-103"></a>URxvt.keysym.M-u:                 perl:url-select:select_next
+<a name="listingsmanjaroxresourcesconf-104"></a>URxvt.url-select.launcher:        /usr/bin/xdg-open
+<a name="listingsmanjaroxresourcesconf-105"></a>
+<a name="listingsmanjaroxresourcesconf-106"></a>! do not scroll with output
+<a name="listingsmanjaroxresourcesconf-107"></a>URxvt*scrollTtyOutput: false
+<a name="listingsmanjaroxresourcesconf-108"></a>! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+<a name="listingsmanjaroxresourcesconf-109"></a>URxvt*scrollWithBuffer: true
+<a name="listingsmanjaroxresourcesconf-110"></a>! scroll back to the bottom on keypress
+<a name="listingsmanjaroxresourcesconf-111"></a>URxvt*scrollTtyKeypress: true
+<a name="listingsmanjaroxresourcesconf-112"></a>
+<a name="listingsmanjaroxresourcesconf-113"></a>! other possible settings:
+<a name="listingsmanjaroxresourcesconf-114"></a>! Rxvt.perl-ext-common:            ...,clipboard
+<a name="listingsmanjaroxresourcesconf-115"></a>! URxvt.keysym.M-C-c:              perl:clipboard:copy
+<a name="listingsmanjaroxresourcesconf-116"></a>! URxvt.keysym.M-v:                perl:clipboard:paste
+<a name="listingsmanjaroxresourcesconf-117"></a>! URxvt.keysym.M-C-v:              perl:clipboard:paste_escaped
+<a name="listingsmanjaroxresourcesconf-118"></a>! URxvt*termName:                  string
+<a name="listingsmanjaroxresourcesconf-119"></a>! URxvt*geometry:                  geometry
+<a name="listingsmanjaroxresourcesconf-120"></a>! URxvt*chdir:                     string
+<a name="listingsmanjaroxresourcesconf-121"></a>! URxvt*reverseVideo:              boolean
+<a name="listingsmanjaroxresourcesconf-122"></a>! URxvt*loginShell:                boolean
+<a name="listingsmanjaroxresourcesconf-123"></a>! URxvt*multiClickTime:            number
+<a name="listingsmanjaroxresourcesconf-124"></a>! URxvt*jumpScroll:                boolean
+<a name="listingsmanjaroxresourcesconf-125"></a>! URxvt*skipScroll:                boolean
+<a name="listingsmanjaroxresourcesconf-126"></a>! URxvt*pastableTabs:              boolean
+<a name="listingsmanjaroxresourcesconf-127"></a>! URxvt*scrollstyle:               plain
+<a name="listingsmanjaroxresourcesconf-128"></a>! URxvt*scrollBar_right:           boolean
+<a name="listingsmanjaroxresourcesconf-129"></a>! URxvt*scrollBar_floating:        true
+<a name="listingsmanjaroxresourcesconf-130"></a>! URxvt*scrollBar_align:           mode
+<a name="listingsmanjaroxresourcesconf-131"></a>! URxvt*thickness:                 number
+<a name="listingsmanjaroxresourcesconf-132"></a>! URxvt*scrollTtyOutput:           boolean
+<a name="listingsmanjaroxresourcesconf-133"></a>! URxvt*scrollTtyKeypress:         boolean
+<a name="listingsmanjaroxresourcesconf-134"></a>! URxvt*scrollWithBuffer:          boolean
+<a name="listingsmanjaroxresourcesconf-135"></a>! URxvt*tintColor:                 !7DA55
+<a name="listingsmanjaroxresourcesconf-136"></a>! URxvt*blurRadius:                HxV
+<a name="listingsmanjaroxresourcesconf-137"></a>! URxvt*fading:                    number
+<a name="listingsmanjaroxresourcesconf-138"></a>! URxvt*fadeColor:                 color
+<a name="listingsmanjaroxresourcesconf-139"></a>! URxvt*utmpInhibit:               boolean
+<a name="listingsmanjaroxresourcesconf-140"></a>! URxvt*urgentOnBell:              boolean
+<a name="listingsmanjaroxresourcesconf-141"></a>! URxvt*visualBell:                boolean
+<a name="listingsmanjaroxresourcesconf-142"></a>! URxvt*mapAlert:                  boolean
+<a name="listingsmanjaroxresourcesconf-143"></a>! URxvt*meta8:                     boolean
+<a name="listingsmanjaroxresourcesconf-144"></a>! URxvt*tripleclickwords:          boolean
+<a name="listingsmanjaroxresourcesconf-145"></a>! URxvt*insecure:                  boolean
+<a name="listingsmanjaroxresourcesconf-146"></a>! URxvt*cursorUnderline:           boolean
+<a name="listingsmanjaroxresourcesconf-147"></a>! URxvt*pointerBlank:              boolean
+<a name="listingsmanjaroxresourcesconf-148"></a>! URxvt*color0:                    color
+<a name="listingsmanjaroxresourcesconf-149"></a>! URxvt*color1:                    color
+<a name="listingsmanjaroxresourcesconf-150"></a>! URxvt*color2:                    color
+<a name="listingsmanjaroxresourcesconf-151"></a>! URxvt*color3:                    color
+<a name="listingsmanjaroxresourcesconf-152"></a>! URxvt*color4:                    color
+<a name="listingsmanjaroxresourcesconf-153"></a>! URxvt*color5:                    color
+<a name="listingsmanjaroxresourcesconf-154"></a>! URxvt*color6:                    color
+<a name="listingsmanjaroxresourcesconf-155"></a>! URxvt*color7:                    color
+<a name="listingsmanjaroxresourcesconf-156"></a>! URxvt*color8:                    color
+<a name="listingsmanjaroxresourcesconf-157"></a>! URxvt*color9:                    color
+<a name="listingsmanjaroxresourcesconf-158"></a>! URxvt*color10:                   color
+<a name="listingsmanjaroxresourcesconf-159"></a>! URxvt*color11:                   color
+<a name="listingsmanjaroxresourcesconf-160"></a>! URxvt*color12:                   color
+<a name="listingsmanjaroxresourcesconf-161"></a>! URxvt*color13:                   color
+<a name="listingsmanjaroxresourcesconf-162"></a>! URxvt*color14:                   color
+<a name="listingsmanjaroxresourcesconf-163"></a>! URxvt*color15:                   color
+<a name="listingsmanjaroxresourcesconf-164"></a>! URxvt*colorBD:                   color
+<a name="listingsmanjaroxresourcesconf-165"></a>! URxvt*colorIT:                   color
+<a name="listingsmanjaroxresourcesconf-166"></a>! URxvt*colorUL:                   color
+<a name="listingsmanjaroxresourcesconf-167"></a>! URxvt*colorRV:                   color
+<a name="listingsmanjaroxresourcesconf-168"></a>! URxvt*underlineColor:            color
+<a name="listingsmanjaroxresourcesconf-169"></a>! URxvt*scrollColor:               color
+<a name="listingsmanjaroxresourcesconf-170"></a>! URxvt*troughColor:               color
+<a name="listingsmanjaroxresourcesconf-171"></a>! URxvt*highlightColor:            color
+<a name="listingsmanjaroxresourcesconf-172"></a>! URxvt*highlightTextColor:        color
+<a name="listingsmanjaroxresourcesconf-173"></a>! URxvt*cursorColor:               color
+<a name="listingsmanjaroxresourcesconf-174"></a>! URxvt*cursorColor2:              color
+<a name="listingsmanjaroxresourcesconf-175"></a>! URxvt*pointerColor:              color
+<a name="listingsmanjaroxresourcesconf-176"></a>! URxvt*pointerColor2:             color
+<a name="listingsmanjaroxresourcesconf-177"></a>! URxvt*borderColor:               color
+<a name="listingsmanjaroxresourcesconf-178"></a>! URxvt*iconFile:                  file
+<a name="listingsmanjaroxresourcesconf-179"></a>! URxvt*font:                      fontname
+<a name="listingsmanjaroxresourcesconf-180"></a>! URxvt*boldFont:                  fontname
+<a name="listingsmanjaroxresourcesconf-181"></a>! URxvt*italicFont:                fontname
+<a name="listingsmanjaroxresourcesconf-182"></a>! URxvt*boldItalicFont:            fontname
+<a name="listingsmanjaroxresourcesconf-183"></a>! URxvt*intensityStyles:           boolean
+<a name="listingsmanjaroxresourcesconf-184"></a>! URxvt*inputMethod:               name
+<a name="listingsmanjaroxresourcesconf-185"></a>! URxvt*preeditType:               style
+<a name="listingsmanjaroxresourcesconf-186"></a>! URxvt*imLocale:                  string
+<a name="listingsmanjaroxresourcesconf-187"></a>! URxvt*imFont:                    fontname
+<a name="listingsmanjaroxresourcesconf-188"></a>! URxvt*title:                     string
+<a name="listingsmanjaroxresourcesconf-189"></a>! URxvt*iconName:                  string
+<a name="listingsmanjaroxresourcesconf-190"></a>! URxvt*buffered:                  boolean
+<a name="listingsmanjaroxresourcesconf-191"></a>! URxvt*depth:                     number
+<a name="listingsmanjaroxresourcesconf-192"></a>! URxvt*visual:                    number
+<a name="listingsmanjaroxresourcesconf-193"></a>! URxvt*transient-for:             windowid
+<a name="listingsmanjaroxresourcesconf-194"></a>! URxvt*override-redirect:         boolean
+<a name="listingsmanjaroxresourcesconf-195"></a>! URxvt*hold:                      boolean
+<a name="listingsmanjaroxresourcesconf-196"></a>! URxvt*externalBorder:            number
+<a name="listingsmanjaroxresourcesconf-197"></a>! URxvt*internalBorder:            number
+<a name="listingsmanjaroxresourcesconf-198"></a>! URxvt*borderLess:                true
+<a name="listingsmanjaroxresourcesconf-199"></a>! URxvt*lineSpace:                 number
+<a name="listingsmanjaroxresourcesconf-200"></a>! URxvt*letterSpace:               number
+<a name="listingsmanjaroxresourcesconf-201"></a>! URxvt*skipBuiltinGlyphs:         boolean
+<a name="listingsmanjaroxresourcesconf-202"></a>! URxvt*pointerBlankDelay:         number
+<a name="listingsmanjaroxresourcesconf-203"></a>! URxvt*backspacekey:              string
+<a name="listingsmanjaroxresourcesconf-204"></a>! URxvt*deletekey:                 string
+<a name="listingsmanjaroxresourcesconf-205"></a>! URxvt*print-pipe:                string
+<a name="listingsmanjaroxresourcesconf-206"></a>! URxvt*modifier:                  modifier
+<a name="listingsmanjaroxresourcesconf-207"></a>! URxvt*cutchars:                  string
+<a name="listingsmanjaroxresourcesconf-208"></a>! URxvt*answerbackString:          string
+<a name="listingsmanjaroxresourcesconf-209"></a>! URxvt*secondaryScreen:           boolean
+<a name="listingsmanjaroxresourcesconf-210"></a>! URxvt*secondaryScroll:           boolean
+<a name="listingsmanjaroxresourcesconf-211"></a>! URxvt*perl-lib:                  string
+<a name="listingsmanjaroxresourcesconf-212"></a>! URxvt*perl-eval:                 perl-eval
+<a name="listingsmanjaroxresourcesconf-213"></a>! URxvt*perl-ext-common:           string
+<a name="listingsmanjaroxresourcesconf-214"></a>! URxvt*perl-ext:                  string
+<a name="listingsmanjaroxresourcesconf-215"></a>! URxvt*iso14755:                  boolean
+<a name="listingsmanjaroxresourcesconf-216"></a>! URxvt*iso14755_52:               boolean
+<a name="listingsmanjaroxresourcesconf-217"></a>! URxvt*xrm:                       string
+<a name="listingsmanjaroxresourcesconf-218"></a>! URxvt*keysym.sym:                keysym
+<a name="listingsmanjaroxresourcesconf-219"></a>! URxvt*background.border:         boolean
+<a name="listingsmanjaroxresourcesconf-220"></a>! URxvt*background.expr:           string
+<a name="listingsmanjaroxresourcesconf-221"></a>! URxvt*background.interval:       seconds
+<a name="listingsmanjaroxresourcesconf-222"></a>! URxvt*bell-command:              string
+<a name="listingsmanjaroxresourcesconf-223"></a>! URxvt*kuake.hotkey:              string
+<a name="listingsmanjaroxresourcesconf-224"></a>! URxvt*matcher.button:            string
+<a name="listingsmanjaroxresourcesconf-225"></a>! URxvt*matcher.launcher:          string
+<a name="listingsmanjaroxresourcesconf-226"></a>! URxvt*matcher.launcher.*:        string
+<a name="listingsmanjaroxresourcesconf-227"></a>! URxvt*matcher.pattern.*:         string
+<a name="listingsmanjaroxresourcesconf-228"></a>! URxvt*matcher.rend.*:            string
+<a name="listingsmanjaroxresourcesconf-229"></a>! URxvt*remote-clipboard.fetch:    string
+<a name="listingsmanjaroxresourcesconf-230"></a>! URxvt*remote-clipboard.store:    string
+<a name="listingsmanjaroxresourcesconf-231"></a>! URxvt*searchable-scrollback:     string
+<a name="listingsmanjaroxresourcesconf-232"></a>! URxvt*selection-autotransform.*: string
+<a name="listingsmanjaroxresourcesconf-233"></a>! URxvt*selection-pastebin.cmd:    string
+<a name="listingsmanjaroxresourcesconf-234"></a>! URxvt*selection-pastebin.url:    string
+<a name="listingsmanjaroxresourcesconf-235"></a>! URxvt*selection.pattern-0:       string
+<a name="listingsmanjaroxresourcesconf-236"></a>! URxvt*tab-bg:                    colour
+<a name="listingsmanjaroxresourcesconf-237"></a>! URxvt*tab-fg:                    colour
+<a name="listingsmanjaroxresourcesconf-238"></a>! URxvt*tabbar-bg:                 colour
+<a name="listingsmanjaroxresourcesconf-239"></a>! URxvt*tabbar-fg:                 colour
+<a name="listingsmanjaroxresourcesconf-240"></a>! URxvt*url-launcher:              string
+<a name="listingsmanjaroxresourcesconf-241"></a>
+<a name="listingsmanjaroxresourcesconf-242"></a>! The Terminus font uses the following X-names:
+<a name="listingsmanjaroxresourcesconf-243"></a>! -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
+<a name="listingsmanjaroxresourcesconf-244"></a>! -xos4-terminus-medium-r-normal--14-140-72-72-c-80-iso10646-1
+<a name="listingsmanjaroxresourcesconf-245"></a>! -xos4-terminus-medium-r-normal--16-160-72-72-c-80-iso10646-1
+<a name="listingsmanjaroxresourcesconf-246"></a>! -xos4-terminus-medium-r-normal--20-200-72-72-c-100-iso10646-1
+<a name="listingsmanjaroxresourcesconf-247"></a>! -xos4-terminus-medium-r-normal--22-220-72-72-c-110-iso10646-1
+<a name="listingsmanjaroxresourcesconf-248"></a>! -xos4-terminus-medium-r-normal--24-240-72-72-c-120-iso10646-1
+<a name="listingsmanjaroxresourcesconf-249"></a>! -xos4-terminus-medium-r-normal--28-280-72-72-c-140-iso10646-1
+<a name="listingsmanjaroxresourcesconf-250"></a>! -xos4-terminus-medium-r-normal--32-320-72-72-c-160-iso10646-1
+<a name="listingsmanjaroxresourcesconf-251"></a>! -xos4-terminus-bold-r-normal--12-120-72-72-c-60-iso10646-1
+<a name="listingsmanjaroxresourcesconf-252"></a>! -xos4-terminus-bold-r-normal--14-140-72-72-c-80-iso10646-1
+<a name="listingsmanjaroxresourcesconf-253"></a>! -xos4-terminus-bold-r-normal--16-160-72-72-c-80-iso10646-1
+<a name="listingsmanjaroxresourcesconf-254"></a>! -xos4-terminus-bold-r-normal--20-200-72-72-c-100-iso10646-1
+<a name="listingsmanjaroxresourcesconf-255"></a>! -xos4-terminus-bold-r-normal--24-240-72-72-c-120-iso10646-1
+<a name="listingsmanjaroxresourcesconf-256"></a>! -xos4-terminus-bold-r-normal--28-280-72-72-c-140-iso10646-1
+<a name="listingsmanjaroxresourcesconf-257"></a>! -xos4-terminus-bold-r-normal--32-320-72-72-c-160-iso10646-1
+</pre></td>
+</tr></table>
+</div>
+                    </div>
+                </main><div class="footer extra-block no-print">
+    <span class="footer_item">
+        <a href="../../pages/you-qing-lian-jie/">友情链接</a>
+    </span>
+    <span class="footer_item">
+        <a href="../../pages/liu-yan-ban/">留言板</a>
+    </span>
+    <span class="footer_item">
+        <a href="../../pages/ge-ren-dong-tai/">碎碎念</a>
+    </span>
+    </div>
+            <div class="footer social-link no-print">
+            <a href="https://github.com/ashfinal" target="_blank"><i class="grey large github icon"></i></a>
+            <a href="http://weibo.com/ashfinal/" target="_blank"><i class="grey large weibo icon"></i></a>
+            <a href="mailto://ashfinal@sina.cn" target="_blank"><i class="grey large mail icon"></i></a>
+            </div>
+        <div class="ui basic center aligned segment no-print">Contents © 2018         <a href="mailto:ashfinal@sina.cn">ashfinal</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </div>
+
+            </div>
+            <div class="computer only three wide column no-print">
+                <div id="right-side">
+                </div>
+            </div>
+        </div>
+
+        <!-- GoStats JavaScript Based Code -->
+        <script type="text/javascript">(function(c,o,m,p,u,t,e){
+        c['GoStatsObject']=u;c[u]=c[u]||function(){(c[u].q=c[u].q||[]).push(arguments)},
+        c[u].l=1*new Date();t=o.createElement(m);t.async=1;t.src=p;
+        e=o.getElementsByTagName(m)[0];e.parentNode.insertBefore(t,e);
+        })(window,document,'script','//www.gostats.org/5.js','go');
+        go('init',100479892,{'img_counter_type':5,'img_image_type':1});go('send');</script><!-- End GoStats JavaScript Based Code --><script type="text/javascript" src="../../assets/js/jquery-3.2.1.min.js"></script><script type="text/javascript" src="../../assets/js/semantic.min.js"></script><script type="text/javascript" src="../../assets/js/jquery.fancybox.min.js"></script><script type="text/javascript" src="../../assets/js/cookie.min.js"></script><script>
+            $(document).ready(function(){
+                $(".ui.dropdown").dropdown();
+                $('.ui.accordion').accordion();
+                var newstr = $('.cookie.nag').text();
+                $('.cookie.nag').nag({
+                    key: 'globalnotice',
+                    value: newstr
+                  });
+                $('.image-reference').fancybox();
+            });
+        </script>
+</body>
+</html>
