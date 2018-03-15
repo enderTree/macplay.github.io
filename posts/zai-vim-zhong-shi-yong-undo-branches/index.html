@@ -150,16 +150,16 @@ Und">
 <p>在 <cite>normal mode</cite> 下按 <cite>u</cite> 将会撤销你的最后一个更改，同时向上移动一个层级。相反的，重做（Ctrl-R）将会在这棵树上向下移动一个层级。这一点与 Vim 7.0 之前的版本是一样的，也与其它 Vi 克隆版是向下兼容的。</p>
 <p>但是，你也可以按 <strong>更改</strong> 创建的时间顺序来随意移动。比如， <cite>g-</cite> 命令会移动到前一个更改，而不用理会它究竟在 <cite>undo tree</cite> 的哪个位置。更进一步的说，使用 <cite>g-</cite> 会按时间顺序将你移动到上一个更改。 <cite>g-</cite> 在 <cite>undo tree</cite> 上向后移动，而 <cite>g+</cite> 则是向前移动，直到恢复到文本的初始状态。</p>
 <p>除了 <cite>g+</cite> 和 <cite>g-</cite> 命令外，你也可以使用 <cite>ex-command</cite> 命令： <cite>:earlier</cite> 和 <cite>:later</cite> 。这两个命令均可以选择性地接收一个数字或者你想移动到的时间。比如：</p>
-<pre class="code vim"><a name="rest_code_a8a793ce08054e4f90253746492fe004-1"></a><span class="p">:</span><span class="k">earlier</span> <span class="m">10</span>
+<pre class="code vim"><a name="rest_code_37aec79e41024513a3a8235755bcea84-1"></a><span class="p">:</span><span class="k">earlier</span> <span class="m">10</span>
 </pre>
 <p>将会在 <cite>undo tree</cite> 中向前移动 10 个更改。</p>
-<pre class="code vim"><a name="rest_code_dbf90b144589421d87a7a1d640d1ed49-1"></a><span class="p">:</span><span class="k">earlier</span> <span class="m">1</span>h
+<pre class="code vim"><a name="rest_code_a0cb9168f0d046bbb9addcdaf70fe7e6-1"></a><span class="p">:</span><span class="k">earlier</span> <span class="m">1</span>h
 </pre>
 <p>将会恢复到 1 小时前的文本状态（秒数则使用 <cite>s</cite> ，分钟 <cite>m</cite> ，小时 <cite>h</cite> ）。</p>
-<pre class="code vim"><a name="rest_code_a486c84c0a124f6994499a1cea09957a-1"></a><span class="p">:</span><span class="k">later</span> <span class="m">10</span>
+<pre class="code vim"><a name="rest_code_57abd86599294b4aabdcc7cc4a4fdac7-1"></a><span class="p">:</span><span class="k">later</span> <span class="m">10</span>
 </pre>
 <p>或者</p>
-<pre class="code vim"><a name="rest_code_89357440dd2e4ae59776df3f23cfc69f-1"></a><span class="p">:</span><span class="k">later</span> <span class="m">1</span>h
+<pre class="code vim"><a name="rest_code_17890c5186ef4183919f9aed5f553014-1"></a><span class="p">:</span><span class="k">later</span> <span class="m">1</span>h
 </pre>
 <p>将会向后移动直到恢复文本缓冲区到最新的状态。</p>
 <p>Vim 7.3 版本中添加了新的 <a class="reference internal" href="#persistent-undo">Persistent undo</a> ，以上的 <cite>ex-command</cite> 命令也相应提供了方便回滚到上一次保存状态（如 2 次保存前，3 次保存前）的能力。命令如下： <cite>:earlier 1f</cite> 。</p>
@@ -168,47 +168,47 @@ Und">
 <h2><a class="toc-backref" href="#id14">举例说明</a></h2>
 <p>假设你开始一次新的更改：</p>
 <p>进入 <cite>insert mode</cite> 并输入 <cite>1</cite> ，然后离开 <cite>insert mode</cite> 。现在再次进入 <cite>insert mode</cite> 输入 <cite>2</cite> ，离开 <cite>insert mode</cite> 。最后进入 <cite>insert mode</cite> 输入 <cite>3</cite> ，并再次离开。你的文本缓冲区现在看起来是这样：</p>
-<pre class="code text"><a name="rest_code_fe3f360d61d34437897ad8e0faf30687-1"></a>1 2 3
+<pre class="code text"><a name="rest_code_9fdbaf7e23e74ecb9c2bf1e447ce9615-1"></a>1 2 3
 </pre>
 <p>你可以随时使用以下命令检查最近更改数目：</p>
-<pre class="code vim"><a name="rest_code_e795d82863d04fe6ab5b4ca1c1c6d76a-1"></a><span class="p">:</span>echo changenr<span class="p">()</span>
+<pre class="code vim"><a name="rest_code_2d857a408578472aa9be13efbf3f34a5-1"></a><span class="p">:</span>echo changenr<span class="p">()</span>
 </pre>
 <p>这将会输出 <cite>3</cite> ，因为你做了三次更改（总共进入 <cite>insert mode</cite> 三次）。</p>
 <p>现在按 <cite>u</cite> 撤销一次更改，再次进入 <cite>insert mode</cite> 将缓冲区变更为以下这样：</p>
-<pre class="code text"><a name="rest_code_ad852b6814364f6ea7acab11efccf2d4-1"></a>1 2 4
+<pre class="code text"><a name="rest_code_6281f5b5531f400d936692f4c18389e2-1"></a>1 2 4
 </pre>
 <p>你现在已经从缓冲区的上一次状态分支出来，创建了一个新的 <cite>undo branches</cite> 。使用</p>
-<pre class="code vim"><a name="rest_code_5323f046600749c9b7e918382eb8150f-1"></a><span class="p">:</span>echo changenr<span class="p">()</span>
+<pre class="code vim"><a name="rest_code_4710be83025740bfb4393d2e67eaff2f-1"></a><span class="p">:</span>echo changenr<span class="p">()</span>
 </pre>
 <p>将会输出 <cite>4</cite> 。</p>
 <p>如果你在 <cite>normal mode</cite> 下按 <cite>u</cite> ，你将回退到</p>
-<pre class="code text"><a name="rest_code_2b4b12f3265f4968b7843928224a9abf-1"></a>1 2
+<pre class="code text"><a name="rest_code_9ded30dc480448129ce40cc4e556e7b5-1"></a>1 2
 </pre>
 <p>再次按下 <cite>u</cite> 缓冲区将会变为</p>
-<pre class="code text"><a name="rest_code_a8cad8733ae247d48780a29aa1e1acf7-1"></a>1
+<pre class="code text"><a name="rest_code_8c87a457cf8d4a99afc538070db5831d-1"></a>1
 </pre>
 <p>如果你最后再按一下 <cite>u</cite> ，你将获得一个空空如也的缓冲区，就像你刚开始输入时的那样。你现在已经回退到第一次更改前，这时</p>
-<pre class="code vim"><a name="rest_code_2884bb64ac484ecca4efeb52e5ae67ba-1"></a><span class="p">:</span>echo changenr<span class="p">()</span>
+<pre class="code vim"><a name="rest_code_465c6afcb00647849a48548a6f0a3c54-1"></a><span class="p">:</span>echo changenr<span class="p">()</span>
 </pre>
 <p>将会输出 <cite>0</cite> 。</p>
 <p>如果你使用 <cite>Ctrl-R</cite> 重做（redo）的话，你将回退到</p>
-<pre class="code text"><a name="rest_code_ef56e69ad49043b289fbd2c75b4182f8-1"></a>1
+<pre class="code text"><a name="rest_code_f32100f0f7cf439fb466e244b0d72c98-1"></a>1
 </pre>
 <p>然后</p>
-<pre class="code text"><a name="rest_code_badcc44a5a044101bd6f1f0f2db56837-1"></a>1 2
+<pre class="code text"><a name="rest_code_11aa80bca32b46a68c0b5df40cb4bbd8-1"></a>1 2
 </pre>
 <p>最终是</p>
-<pre class="code text"><a name="rest_code_51001f1cf913438d9977d96c53e141bf-1"></a>1 2 4
+<pre class="code text"><a name="rest_code_e0fa6e216b3f4f9683580084a522a941-1"></a>1 2 4
 </pre>
 <p>注意，你将永远不会回退到缓冲区包含 <cite>1 2 3</cite> 的第 3 次变更状态。但是，你可以使用 <cite>g-</cite> 和 <cite>:earlier</cite> 命令来移动到那次更改。所以，现在你按下 <cite>g-</cite> 或者 <cite>:earlier</cite> ，你的缓冲区将变成这样：</p>
-<pre class="code text"><a name="rest_code_3043f2f872c14575aaed1448048474c6-1"></a>1 2 3
+<pre class="code text"><a name="rest_code_7c20479d4415414a81229c45c46a7f99-1"></a>1 2 3
 </pre>
 <p>如果已经知道要跳转到的记录数目，你也可以使用 <cite>:undo</cite> 命令直接回滚到指定更改。</p>
 <p>输入</p>
-<pre class="code vim"><a name="rest_code_8cd5f881841e46c59588dfe3945d2351-1"></a><span class="p">:</span>undo <span class="m">1</span>
+<pre class="code vim"><a name="rest_code_1bd0412751674767a59da24a62e1a356-1"></a><span class="p">:</span>undo <span class="m">1</span>
 </pre>
 <p>会将你的缓冲区恢复到</p>
-<pre class="code text"><a name="rest_code_27978f6a5e924ce69f451a18f9f6b281-1"></a>1
+<pre class="code text"><a name="rest_code_2552ba582a8e4375a8d10d343d24387c-1"></a>1
 </pre>
 </div>
 <div class="section" id="undolevels">
@@ -249,7 +249,7 @@ Und">
 <h2><a class="toc-backref" href="#id20">Persistent undo</a></h2>
 <p>Persistent undo（持久化 undo）特性自 Vim 7.3 版本正式可用。Vim 7.3 版本之前（或没有编译 persistent undo 特性的 7.3 版本），当你退出 Vim（或者强制重载缓冲区）时，你将丢失所有的 undo 历史，因此可能会不小心丢失数据。Persistent undo 特性（以 normal、big 和 huge 方式编译的 Vim 应该都有）提供了将 undo 历史永久保存到文件中的可能性，无论何时当你编辑与 undo 历史相关联的文件时，将会从文件重载这些 undo 历史。</p>
 <p>要使用这一特性，你需要设置 <cite>undofile</cite> 选项：</p>
-<pre class="code vim"><a name="rest_code_14a60fccba484eb9aac2c700769fe2f4-1"></a><span class="p">:</span><span class="k">set</span> <span class="nb">undofile</span>
+<pre class="code vim"><a name="rest_code_ffd97fe3ab2441ecaf616f0ab1aa0f2c-1"></a><span class="p">:</span><span class="k">set</span> <span class="nb">undofile</span>
 </pre>
 <p>然后你就可以使用新命令 <cite>:wundo</cite> 将 undo 历史写入到文件之中，并使用 <cite>:rundo</cite> 来读取 undo 历史了。对于每一个编辑的文件， <cite>undo tree</cite> 都会被保存到同一目录下的单独文件中。文件名形如： <cite>.filename.un~</cite> ，就像 swap 文件一样。如果你想将所有 undo 文件统一保存到一个目录中，你可以设置 <cite>undodir</cite> 选项来指定包含所有 undo 文件的目录。开启 persistent undo 特性以后，当你编辑文件时，被保存的 undo 信息就会自动被读取出来。</p>
 <p>除此之外，Vim 7.3 还允许你跳转到文件的前几次保存状态。通过执行 <cite>:earlier &lt;nr&gt;f</cite> 和 <cite>:later &lt;nr&gt;f</cite> 可以做到这一点，此处的 <cite>&lt;nr&gt;</cite> 指的是文件保存数目。文件保存数目可以通过 <cite>:undolist</cite> 命令，在 <cite>saved</cite> 列里面看到。例如， <cite>:earlier 1f</cite> 将会回滚到文件最后一次被保存的状态，而 <cite>:later 1f</cite> 则将移动到 <cite>undo tree</cite> 的下一个更新的文件保存状态。</p>

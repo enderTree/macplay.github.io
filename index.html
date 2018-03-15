@@ -15,7 +15,7 @@
 <link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <link rel="canonical" href="https://macplay.github.io/">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
-<link rel="prefetch" href="posts/ffmpeg-ming-ling-xing-can-shu-diao-you/" type="text/html">
+<link rel="prefetch" href="posts/qian-yi-dao-onivim/" type="text/html">
 </head>
 <body>
         <div class="ui grid">
@@ -65,6 +65,61 @@
     <div class="postindex page-body">
     <div class="post-entry post-text">
         <div class="entry-title">
+            <a href="posts/qian-yi-dao-onivim/">迁移到 onivim</a>
+        </div>
+        <div class="post-meta">
+            <span class="post-meta-item-icon">
+                <i class="user icon"></i>
+            </span>
+            <span class="post-meta-item-text" itemprop="author">
+                <a href="authors/ashfinal/">ashfinal</a>
+            </span>
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+                <i class="calendar icon"></i>
+            </span>
+            <span class="post-meta-item-text">
+                <a href="archive.html">
+                    <time datetime="2018-03-15T18:08:03+08:00" itemprop="datePublished" title="2018-03-15 18:08">2018-03-15 18:08
+                    </time></a>
+            </span>
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                    <i class="tags icon"></i>
+                </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/linux/">linux</a>
+                            </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/macos/">macos</a>
+                            </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/manjaro/">manjaro</a>
+                            </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/onivim/">onivim</a>
+                            </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/vim/">vim</a>
+                            </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/vimrc/">vimrc</a>
+                            </span>
+        </div>
+        <div class="post-summary">
+                <div>
+<!-- vim:set et sw=4 ts=4 ft=rst: -->
+<!-- vim:set et sw=4 ts=4 ft=rst: -->
+<!-- This file interpreters the title of URL in links.ref -->
+<!-- vim:set et sw=4 ts=4 ft=rst: -->
+<p>关注 <a class="reference external" href="https://github.com/onivim/oni">Oni: Modern Modal Editing - powered by Neovim</a> 有一段时间了。根据主页描述，Oni 是个基于 Electron 技术实现的 Neovim 前端，对 <a class="reference external" href="https://langserver.org/">Language Server Protocol</a> 支持很全面。不过，之前使用 <a class="reference external" href="https://github.com/qvacua/vimr">VimR</a> 还算舒心，而 Oni 则起步较晚，一些功能还不完善。因此并没有动迁移的念头。</p>
+<p>不过最近几天在折腾 <a class="reference external" href="categories/manjaro/">manjaro</a> ，当寻找 Linux 下的 Neovim 前端时，试用了一圈竟然没有一个好用的！或多或少都存在一些问题。于是，无奈之下，我在 U 盘的 manjaro 操作系统上尝试了“臃肿”的 Electron 编辑器。其结果是出乎我意料之外的：Oni 已经达到了日常堪用的水平，而且与我之前的 vimrc 配置协作良好。</p>
+<p class="more"><a href="posts/qian-yi-dao-onivim/">Read more…</a></p>
+</div>
+        </div>
+    </div>
+    <div class="post-entry post-text">
+        <div class="entry-title">
             <a href="posts/ffmpeg-ming-ling-xing-can-shu-diao-you/">ffmpeg 命令行参数调优</a>
         </div>
         <div class="post-meta">
@@ -103,7 +158,7 @@
     Your browser does not support the video tag.
 </video><p>文件大小 325 KB。</p>
 <p>完整命令：</p>
-<pre class="code console"><a name="rest_code_74c8be27d1c445b49bde2fa44616af7d-1"></a><span class="go">ffmpeg -y -i mv.mp4 -ss 00:02:24.000 -to 00:02:29.000 -c:v libx264 -an -crf 35 -b:v 100k -r 10 -preset slow out.mp4</span>
+<pre class="code console"><a name="rest_code_a7632db5b1e64d1bb90900d3570e56ab-1"></a><span class="go">ffmpeg -y -i mv.mp4 -ss 00:02:24.000 -to 00:02:29.000 -c:v libx264 -an -crf 35 -b:v 100k -r 10 -preset slow out.mp4</span>
 </pre>
 <p>如果加上音轨 <cite>-b:a 11k</cite> ，则体积上升到 350 KB。</p>
 <p>很理想了。</p>
@@ -260,200 +315,6 @@
 </div>
         </div>
     </div>
-    <div class="post-entry post-text">
-        <div class="entry-title">
-            <a href="posts/shu-ju-ke-shi-hua-seaborn/">数据可视化--Seaborn</a>
-        </div>
-        <div class="post-meta">
-            <span class="post-meta-item-icon">
-                <i class="user icon"></i>
-            </span>
-            <span class="post-meta-item-text" itemprop="author">
-                <a href="authors/ashfinal/">ashfinal</a>
-            </span>
-            <span class="post-meta-divider">|</span>
-            <span class="post-meta-item-icon">
-                <i class="calendar icon"></i>
-            </span>
-            <span class="post-meta-item-text">
-                <a href="archive.html">
-                    <time datetime="2018-02-09T22:25:04+08:00" itemprop="datePublished" title="2018-02-09 22:25">2018-02-09 22:25
-                    </time></a>
-            </span>
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                    <i class="tags icon"></i>
-                </span>
-                            <span class="post-meta-tag-item">
-                                <a href="categories/chart/">chart</a>
-                            </span>
-                            <span class="post-meta-tag-item">
-                                <a href="categories/jupyter/">jupyter</a>
-                            </span>
-                            <span class="post-meta-tag-item">
-                                <a href="categories/matplotlib/">matplotlib</a>
-                            </span>
-                            <span class="post-meta-tag-item">
-                                <a href="categories/python/">python</a>
-                            </span>
-        </div>
-        <div class="post-summary">
-                <div tabindex="-1" id="notebook" class="border-box-sizing">
-    <div class="container" id="notebook-container">
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="No.1-Seaborn-和-Matplotlib-对比">No.1 Seaborn 和 Matplotlib 对比<a class="anchor-link" href="posts/shu-ju-ke-shi-hua-seaborn/#No.1-Seaborn-%E5%92%8C-Matplotlib-%E5%AF%B9%E6%AF%94">¶</a>
-</h3>
-<p>用经典的鸢尾花的数据为例子，来对比一下 seaborn 和 matplotlib</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [42]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-<span class="kn">from</span> <span class="nn">pandas</span> <span class="k">import</span> <span class="n">Series</span><span class="p">,</span> <span class="n">DataFrame</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [43]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">iris</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'https://raw.githubusercontent.com/pydata/pandas/master/pandas/tests/data/iris.csv'</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [44]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">iris</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[44]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-<thead><tr style="text-align: right;">
-<th></th>
-      <th>SepalLength</th>
-      <th>SepalWidth</th>
-      <th>PetalLength</th>
-      <th>PetalWidth</th>
-      <th>Name</th>
-    </tr></thead>
-<tbody>
-<tr>
-<th>0</th>
-      <td>5.1</td>
-      <td>3.5</td>
-      <td>1.4</td>
-      <td>0.2</td>
-      <td>Iris-setosa</td>
-    </tr>
-<tr>
-<th>1</th>
-      <td>4.9</td>
-      <td>3.0</td>
-      <td>1.4</td>
-      <td>0.2</td>
-      <td>Iris-setosa</td>
-    </tr>
-<tr>
-<th>2</th>
-      <td>4.7</td>
-      <td>3.2</td>
-      <td>1.3</td>
-      <td>0.2</td>
-      <td>Iris-setosa</td>
-    </tr>
-<tr>
-<th>3</th>
-      <td>4.6</td>
-      <td>3.1</td>
-      <td>1.5</td>
-      <td>0.2</td>
-      <td>Iris-setosa</td>
-    </tr>
-<tr>
-<th>4</th>
-      <td>5.0</td>
-      <td>3.6</td>
-      <td>1.4</td>
-      <td>0.2</td>
-      <td>Iris-setosa</td>
-    </tr>
-</tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p class="more"><a href="posts/shu-ju-ke-shi-hua-seaborn/">Read more…</a></p>
-</div>
-</div>
-</div>
-</div>
-</div>
-        </div>
-    </div>
     </div>
 
         <div class="page-navigation">
@@ -514,8 +375,6 @@
                   });
                 $('.image-reference').fancybox();
             });
-        </script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha256-SDRP1VVYu+tgAGKhddBSl5+ezofHKZeI+OzxakbIe/Y=" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
-            MathJax.Hub.Config({tex2jax: {inlineMath: [['$latex ','$'], ['\\(','\\)']]}});
         </script>
 </body>
 </html>

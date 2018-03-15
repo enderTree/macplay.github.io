@@ -64,6 +64,200 @@
     <div class="postindex page-body">
     <div class="post-entry post-text">
         <div class="entry-title">
+            <a href="posts/shu-ju-ke-shi-hua-seaborn/">数据可视化--Seaborn</a>
+        </div>
+        <div class="post-meta">
+            <span class="post-meta-item-icon">
+                <i class="user icon"></i>
+            </span>
+            <span class="post-meta-item-text" itemprop="author">
+                <a href="authors/ashfinal/">ashfinal</a>
+            </span>
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+                <i class="calendar icon"></i>
+            </span>
+            <span class="post-meta-item-text">
+                <a href="archive.html">
+                    <time datetime="2018-02-09T22:25:04+08:00" itemprop="datePublished" title="2018-02-09 22:25">2018-02-09 22:25
+                    </time></a>
+            </span>
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                    <i class="tags icon"></i>
+                </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/chart/">chart</a>
+                            </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/jupyter/">jupyter</a>
+                            </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/matplotlib/">matplotlib</a>
+                            </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/python/">python</a>
+                            </span>
+        </div>
+        <div class="post-summary">
+                <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="No.1-Seaborn-和-Matplotlib-对比">No.1 Seaborn 和 Matplotlib 对比<a class="anchor-link" href="posts/shu-ju-ke-shi-hua-seaborn/#No.1-Seaborn-%E5%92%8C-Matplotlib-%E5%AF%B9%E6%AF%94">¶</a>
+</h3>
+<p>用经典的鸢尾花的数据为例子，来对比一下 seaborn 和 matplotlib</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [42]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">from</span> <span class="nn">pandas</span> <span class="k">import</span> <span class="n">Series</span><span class="p">,</span> <span class="n">DataFrame</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [43]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">iris</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'https://raw.githubusercontent.com/pydata/pandas/master/pandas/tests/data/iris.csv'</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [44]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">iris</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[44]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead><tr style="text-align: right;">
+<th></th>
+      <th>SepalLength</th>
+      <th>SepalWidth</th>
+      <th>PetalLength</th>
+      <th>PetalWidth</th>
+      <th>Name</th>
+    </tr></thead>
+<tbody>
+<tr>
+<th>0</th>
+      <td>5.1</td>
+      <td>3.5</td>
+      <td>1.4</td>
+      <td>0.2</td>
+      <td>Iris-setosa</td>
+    </tr>
+<tr>
+<th>1</th>
+      <td>4.9</td>
+      <td>3.0</td>
+      <td>1.4</td>
+      <td>0.2</td>
+      <td>Iris-setosa</td>
+    </tr>
+<tr>
+<th>2</th>
+      <td>4.7</td>
+      <td>3.2</td>
+      <td>1.3</td>
+      <td>0.2</td>
+      <td>Iris-setosa</td>
+    </tr>
+<tr>
+<th>3</th>
+      <td>4.6</td>
+      <td>3.1</td>
+      <td>1.5</td>
+      <td>0.2</td>
+      <td>Iris-setosa</td>
+    </tr>
+<tr>
+<th>4</th>
+      <td>5.0</td>
+      <td>3.6</td>
+      <td>1.4</td>
+      <td>0.2</td>
+      <td>Iris-setosa</td>
+    </tr>
+</tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p class="more"><a href="posts/shu-ju-ke-shi-hua-seaborn/">Read more…</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+        </div>
+    </div>
+    <div class="post-entry post-text">
+        <div class="entry-title">
             <a href="posts/shi-yong-latexmk-bian-yi-tex-wen-jian/">使用 Latexmk 编译 tex 文件</a>
         </div>
         <div class="post-meta">
@@ -225,54 +419,6 @@
 </div>
         </div>
     </div>
-    <div class="post-entry post-text">
-        <div class="entry-title">
-            <a href="posts/vim-bu-xu-yao-duo-guang-biao-bian-ji-gong-neng/">【译】Vim 不需要多光标编辑功能</a>
-        </div>
-        <div class="post-meta">
-            <span class="post-meta-item-icon">
-                <i class="user icon"></i>
-            </span>
-            <span class="post-meta-item-text" itemprop="author">
-                <a href="authors/ashfinal/">ashfinal</a>
-            </span>
-            <span class="post-meta-divider">|</span>
-            <span class="post-meta-item-icon">
-                <i class="calendar icon"></i>
-            </span>
-            <span class="post-meta-item-text">
-                <a href="archive.html">
-                    <time datetime="2017-11-21T18:42:02+08:00" itemprop="datePublished" title="2017-11-21 18:42">2017-11-21 18:42
-                    </time></a>
-            </span>
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                    <i class="tags icon"></i>
-                </span>
-                            <span class="post-meta-tag-item">
-                                <a href="categories/translation/">translation</a>
-                            </span>
-                            <span class="post-meta-tag-item">
-                                <a href="categories/vim/">vim</a>
-                            </span>
-        </div>
-        <div class="post-summary">
-                <div>
-<p>Sublime text 首次引入了多光标编辑功能 <a class="footnote-reference" href="posts/vim-bu-xu-yao-duo-guang-biao-bian-ji-gong-neng/#id2" id="id1">[1]</a> （据我所知），这意味着可以在多个光标位置同时编辑代码。Vim 有个插件（<a class="reference external" href="https://github.com/terryma/vim-multiple-cursors">vim-multiple-cursors</a> ）模仿这一功能，但是存在一些问题。自动补全功能失效，撤销历史与我想象中的不一样，也无法把文本操作映射到某按键，以便在下次 Vim 会话中使用。还有，很难用眼睛跟踪所有光标，特别是当它们处于不同列的时候。使用该插件一段时间后，我得出结论：没有什么操作场景是 <strong>原生</strong> Vim 特性无法完成的（以个人观点来看，完成的甚至比插件还要好）。</p>
-<table class="docutils footnote" frame="void" id="id2" rules="none">
-<colgroup>
-<col class="label">
-<col>
-</colgroup>
-<tbody valign="top"><tr>
-<td class="label"><a class="fn-backref" href="posts/vim-bu-xu-yao-duo-guang-biao-bian-ji-gong-neng/#id1">[1]</a></td>
-<td>我首次使用多光标编辑，是在 <a class="reference external" href="http://www.scintilla.org/SciTE.html">SciTE</a> 中。与 Sublime Text 一样，都使用相同的组件 Scintilla。SciTE 出现时间比 Sublime Text 更早，因此作者这一说法不太准确。——译者注</td>
-</tr></tbody>
-</table>
-<p class="more"><a href="posts/vim-bu-xu-yao-duo-guang-biao-bian-ji-gong-neng/">Read more…</a></p>
-</div>
-        </div>
-    </div>
     </div>
 
         <div class="page-navigation">
@@ -334,6 +480,8 @@
                   });
                 $('.image-reference').fancybox();
             });
+        </script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha256-SDRP1VVYu+tgAGKhddBSl5+ezofHKZeI+OzxakbIe/Y=" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
+            MathJax.Hub.Config({tex2jax: {inlineMath: [['$latex ','$'], ['\\(','\\)']]}});
         </script>
 </body>
 </html>
