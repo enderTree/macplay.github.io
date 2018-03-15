@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>MacPlay (Posts about regex)</title><link>https://macplay.github.io/</link><description></description><atom:link href="https://macplay.github.io/categories/regex.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2018 &lt;a href="mailto:ashfinal@sina.cn"&gt;ashfinal&lt;/a&gt; </copyright><lastBuildDate>Thu, 15 Mar 2018 14:03:15 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Emacs 的 Font Lock 性能问题</title><link>https://macplay.github.io/posts/emacs-de-font-lock-xing-neng-wen-ti/</link><dc:creator>ashfinal</dc:creator><description>&lt;div&gt;&lt;p&gt;之前使用 Emacs 总是有点慢，没有 Vim 那种爽冽干脆的感觉。但多半是归咎于臃肿的 spacemacs 配置，不会轻易怀疑 Emacs 本身有什么问题。最近基本上是接近裸状态使用 Emacs 了，不安装第三方插件，也不搞乱七八糟的配置。不过两天前我又遇到了状况，翻来覆去尝试半天，感觉很有可能是 Emacs 的 Font Lock 性能有问题。&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>MacPlay (Posts about regex)</title><link>https://macplay.github.io/</link><description></description><atom:link href="https://macplay.github.io/categories/regex.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2018 &lt;a href="mailto:ashfinal@sina.cn"&gt;ashfinal&lt;/a&gt; </copyright><lastBuildDate>Thu, 15 Mar 2018 18:12:50 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Emacs 的 Font Lock 性能问题</title><link>https://macplay.github.io/posts/emacs-de-font-lock-xing-neng-wen-ti/</link><dc:creator>ashfinal</dc:creator><description>&lt;div&gt;&lt;p&gt;之前使用 Emacs 总是有点慢，没有 Vim 那种爽冽干脆的感觉。但多半是归咎于臃肿的 spacemacs 配置，不会轻易怀疑 Emacs 本身有什么问题。最近基本上是接近裸状态使用 Emacs 了，不安装第三方插件，也不搞乱七八糟的配置。不过两天前我又遇到了状况，翻来覆去尝试半天，感觉很有可能是 Emacs 的 Font Lock 性能有问题。&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://macplay.github.io/posts/emacs-de-font-lock-xing-neng-wen-ti/"&gt;Read more…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>emacs</category><category>regex</category><category>vim</category><guid>https://macplay.github.io/posts/emacs-de-font-lock-xing-neng-wen-ti/</guid><pubDate>Fri, 24 Nov 2017 03:53:52 GMT</pubDate></item><item><title>Vim 技巧：匹配数字递增</title><link>https://macplay.github.io/posts/vim-ji-qiao-pi-pei-shu-zi-di-zeng/</link><dc:creator>ashfinal</dc:creator><description>&lt;div&gt;&lt;p&gt;有时候会有将代码中的数字递增/递减的需求，一直没有找到相对简单优雅的做法。今天通过网络搜索加上幸运值暴增，感觉终于比较完善地解决了这个问题，遂作此文记录一下。&lt;/p&gt;
 &lt;p&gt;如果我们想将以下代码块中的所有数字，在原有基础上均递增两次：&lt;/p&gt;
-&lt;pre class="code text"&gt;&lt;a name="rest_code_3bc9fd6d2c2445669446549c80597bfb-1"&gt;&lt;/a&gt;my_array[1] = 0;
-&lt;a name="rest_code_3bc9fd6d2c2445669446549c80597bfb-2"&gt;&lt;/a&gt;my_array[2] = 0;
-&lt;a name="rest_code_3bc9fd6d2c2445669446549c80597bfb-3"&gt;&lt;/a&gt;my_array[3] = 0;
-&lt;a name="rest_code_3bc9fd6d2c2445669446549c80597bfb-4"&gt;&lt;/a&gt;my_array[4] = 0;
-&lt;a name="rest_code_3bc9fd6d2c2445669446549c80597bfb-5"&gt;&lt;/a&gt;my_array[5] = 0;
-&lt;a name="rest_code_3bc9fd6d2c2445669446549c80597bfb-6"&gt;&lt;/a&gt;my_array[6] = 0;
-&lt;a name="rest_code_3bc9fd6d2c2445669446549c80597bfb-7"&gt;&lt;/a&gt;my_array[7] = 0;
+&lt;pre class="code text"&gt;&lt;a name="rest_code_30119821d53648a58bc928f78dea763d-1"&gt;&lt;/a&gt;my_array[1] = 0;
+&lt;a name="rest_code_30119821d53648a58bc928f78dea763d-2"&gt;&lt;/a&gt;my_array[2] = 0;
+&lt;a name="rest_code_30119821d53648a58bc928f78dea763d-3"&gt;&lt;/a&gt;my_array[3] = 0;
+&lt;a name="rest_code_30119821d53648a58bc928f78dea763d-4"&gt;&lt;/a&gt;my_array[4] = 0;
+&lt;a name="rest_code_30119821d53648a58bc928f78dea763d-5"&gt;&lt;/a&gt;my_array[5] = 0;
+&lt;a name="rest_code_30119821d53648a58bc928f78dea763d-6"&gt;&lt;/a&gt;my_array[6] = 0;
+&lt;a name="rest_code_30119821d53648a58bc928f78dea763d-7"&gt;&lt;/a&gt;my_array[7] = 0;
 &lt;/pre&gt;&lt;p&gt;即变成以下这样：&lt;/p&gt;
-&lt;pre class="code text"&gt;&lt;a name="rest_code_929b815f822d4072b3ff8baefdea2aea-1"&gt;&lt;/a&gt;my_array[3] = 2;
-&lt;a name="rest_code_929b815f822d4072b3ff8baefdea2aea-2"&gt;&lt;/a&gt;my_array[4] = 2;
-&lt;a name="rest_code_929b815f822d4072b3ff8baefdea2aea-3"&gt;&lt;/a&gt;my_array[5] = 2;
-&lt;a name="rest_code_929b815f822d4072b3ff8baefdea2aea-4"&gt;&lt;/a&gt;my_array[6] = 2;
-&lt;a name="rest_code_929b815f822d4072b3ff8baefdea2aea-5"&gt;&lt;/a&gt;my_array[7] = 2;
-&lt;a name="rest_code_929b815f822d4072b3ff8baefdea2aea-6"&gt;&lt;/a&gt;my_array[8] = 2;
-&lt;a name="rest_code_929b815f822d4072b3ff8baefdea2aea-7"&gt;&lt;/a&gt;my_array[9] = 2;
+&lt;pre class="code text"&gt;&lt;a name="rest_code_5b8a2e779ab045428347e1168e7b2a52-1"&gt;&lt;/a&gt;my_array[3] = 2;
+&lt;a name="rest_code_5b8a2e779ab045428347e1168e7b2a52-2"&gt;&lt;/a&gt;my_array[4] = 2;
+&lt;a name="rest_code_5b8a2e779ab045428347e1168e7b2a52-3"&gt;&lt;/a&gt;my_array[5] = 2;
+&lt;a name="rest_code_5b8a2e779ab045428347e1168e7b2a52-4"&gt;&lt;/a&gt;my_array[6] = 2;
+&lt;a name="rest_code_5b8a2e779ab045428347e1168e7b2a52-5"&gt;&lt;/a&gt;my_array[7] = 2;
+&lt;a name="rest_code_5b8a2e779ab045428347e1168e7b2a52-6"&gt;&lt;/a&gt;my_array[8] = 2;
+&lt;a name="rest_code_5b8a2e779ab045428347e1168e7b2a52-7"&gt;&lt;/a&gt;my_array[9] = 2;
 &lt;/pre&gt;&lt;p&gt;&lt;a href="https://macplay.github.io/posts/vim-ji-qiao-pi-pei-shu-zi-di-zeng/"&gt;Read more…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>regex</category><category>vim</category><guid>https://macplay.github.io/posts/vim-ji-qiao-pi-pei-shu-zi-di-zeng/</guid><pubDate>Sun, 05 Nov 2017 12:09:47 GMT</pubDate></item></channel></rss>
