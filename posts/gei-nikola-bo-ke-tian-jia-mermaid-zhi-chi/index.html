@@ -120,14 +120,14 @@
         <div id="post-content">
         <div>
 <p>还是给博客集成了 <a class="reference external" href="https://mermaidjs.github.io">mermaid</a> <a class="footnote-reference" href="#id2" id="id1">[1]</a> 图表功能，尽管目前用的很少……与 mathjax 一样，使用的时候给文章添加 <cite>mermaid</cite> 标签，然后在文章中给描述文本指定 <cite>mermaid</cite> class 即可。就像这样：</p>
-<pre class="code rst"><a name="rest_code_6385cfc7f3e2493d9b6f0e7301c4b64e-1"></a><span class="p">..</span> <span class="ow">container</span><span class="p">::</span> mermaid
-<a name="rest_code_6385cfc7f3e2493d9b6f0e7301c4b64e-2"></a>
-<a name="rest_code_6385cfc7f3e2493d9b6f0e7301c4b64e-3"></a>   graph TD
-<a name="rest_code_6385cfc7f3e2493d9b6f0e7301c4b64e-4"></a>   A[Christmas] --&gt;|Get money| B(Go shopping)
-<a name="rest_code_6385cfc7f3e2493d9b6f0e7301c4b64e-5"></a>   B --&gt; C{Let me think}
-<a name="rest_code_6385cfc7f3e2493d9b6f0e7301c4b64e-6"></a>   C --&gt;|One| D[Laptop]
-<a name="rest_code_6385cfc7f3e2493d9b6f0e7301c4b64e-7"></a>   C --&gt;|Two| E[iPhone]
-<a name="rest_code_6385cfc7f3e2493d9b6f0e7301c4b64e-8"></a>   C --&gt;|Three| F[Car]
+<pre class="code rst"><a name="rest_code_b20f69c45d064ff9942021018a0076fc-1"></a><span class="p">..</span> <span class="ow">container</span><span class="p">::</span> mermaid
+<a name="rest_code_b20f69c45d064ff9942021018a0076fc-2"></a>
+<a name="rest_code_b20f69c45d064ff9942021018a0076fc-3"></a>   graph TD
+<a name="rest_code_b20f69c45d064ff9942021018a0076fc-4"></a>   A[Christmas] --&gt;|Get money| B(Go shopping)
+<a name="rest_code_b20f69c45d064ff9942021018a0076fc-5"></a>   B --&gt; C{Let me think}
+<a name="rest_code_b20f69c45d064ff9942021018a0076fc-6"></a>   C --&gt;|One| D[Laptop]
+<a name="rest_code_b20f69c45d064ff9942021018a0076fc-7"></a>   C --&gt;|Two| E[iPhone]
+<a name="rest_code_b20f69c45d064ff9942021018a0076fc-8"></a>   C --&gt;|Three| F[Car]
 </pre>
 <table class="docutils footnote" frame="void" id="id2" rules="none">
 <colgroup>
@@ -149,10 +149,10 @@ C --&gt;|One| D[Laptop]
 C --&gt;|Two| E[iPhone]
 C --&gt;|Three| F[Car]</div>
 <p>Markdown 文档写作应该也可以用。整个 <a class="reference external" href="https://mermaidjs.github.io">mermaid</a> 功能的集成只需在博客模板里添加 4 行：</p>
-<pre class="code html+jinja"><a name="rest_code_993b1c70dd0e4afda7c7138f92e791ca-1"></a><span class="cp">{%</span> <span class="k">if</span> <span class="s2">"mermaid"</span> <span class="k">in</span> <span class="nv">post.tags</span> <span class="cp">%}</span>
-<a name="rest_code_993b1c70dd0e4afda7c7138f92e791ca-2"></a>    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">"text/javascript"</span> <span class="na">src</span><span class="o">=</span><span class="s">"/assets/js/mermaid.min.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<a name="rest_code_993b1c70dd0e4afda7c7138f92e791ca-3"></a>    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="nx">mermaid</span><span class="p">.</span><span class="nx">initialize</span><span class="p">({</span><span class="nx">startOnLoad</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nx">theme</span><span class="o">:</span> <span class="s1">'forest'</span><span class="p">});&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<a name="rest_code_993b1c70dd0e4afda7c7138f92e791ca-4"></a><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
+<pre class="code html+jinja"><a name="rest_code_54d9de148b69418a85448ee52dff0c9a-1"></a><span class="cp">{%</span> <span class="k">if</span> <span class="s2">"mermaid"</span> <span class="k">in</span> <span class="nv">post.tags</span> <span class="cp">%}</span>
+<a name="rest_code_54d9de148b69418a85448ee52dff0c9a-2"></a>    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">"text/javascript"</span> <span class="na">src</span><span class="o">=</span><span class="s">"/assets/js/mermaid.min.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<a name="rest_code_54d9de148b69418a85448ee52dff0c9a-3"></a>    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="nx">mermaid</span><span class="p">.</span><span class="nx">initialize</span><span class="p">({</span><span class="nx">startOnLoad</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nx">theme</span><span class="o">:</span> <span class="s1">'forest'</span><span class="p">});&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<a name="rest_code_54d9de148b69418a85448ee52dff0c9a-4"></a><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
 </pre>
 <p>使用 if 条件判断是为了仅在必要时才加载 <cite>mermaid</cite> js 文件，因为其即使压缩后也有 825 KB 的体积，可能会拖慢页面打开速度。mathjax 的情况与此类似，使用频率较低，但据说其完整加载要达到 200 MB 以上。</p>
 <p>序列图：</p>
