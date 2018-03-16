@@ -161,32 +161,32 @@ LibreOffice 的「">
 <div class="section" id="links-ref-interps-ref">
 <h2><a class="toc-backref" href="#id7">links.ref 和 interps.ref</a></h2>
 <p>这两份文件是外部链接。 <cite>links.ref</cite> 里面是网址，而 <cite>interps.ref</cite> 则是对应网址的标题。 <cite>links.ref</cite> 的文件内容：</p>
-<pre class="code rst"><a name="rest_code_91f037d887e1441dab293b7cf2dfbd80-1"></a><span class="p">..</span> <span class="nt">_l_rstintro:</span> http://docutils.sourceforge.net/docs/ref/rst/introduction.html
-<a name="rest_code_91f037d887e1441dab293b7cf2dfbd80-2"></a><span class="p">..</span> <span class="nt">_l_rstspecs:</span> http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html
-<a name="rest_code_91f037d887e1441dab293b7cf2dfbd80-3"></a><span class="p">..</span> <span class="nt">_l_spacemacs:</span> https://github.com/syl20bnr/spacemacs
+<pre class="code rst"><a name="rest_code_8ecf9e5bbb2946eb8c8785d950c69abe-1"></a><span class="p">..</span> <span class="nt">_l_rstintro:</span> http://docutils.sourceforge.net/docs/ref/rst/introduction.html
+<a name="rest_code_8ecf9e5bbb2946eb8c8785d950c69abe-2"></a><span class="p">..</span> <span class="nt">_l_rstspecs:</span> http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html
+<a name="rest_code_8ecf9e5bbb2946eb8c8785d950c69abe-3"></a><span class="p">..</span> <span class="nt">_l_spacemacs:</span> https://github.com/syl20bnr/spacemacs
 </pre>
 <p>而 <cite>interps.ref</cite> 的文件内容：</p>
-<pre class="code rst"><a name="rest_code_5092a062f3b046ea81f9fa46671fa842-1"></a><span class="p">..</span> <span class="nt">|l_rstintro|</span> <span class="ow">replace</span><span class="p">::</span> An Introduction to reStructuredText
-<a name="rest_code_5092a062f3b046ea81f9fa46671fa842-2"></a><span class="p">..</span> <span class="nt">|l_rstspecs|</span> <span class="ow">replace</span><span class="p">::</span> reStructuredText Markup Specification
-<a name="rest_code_5092a062f3b046ea81f9fa46671fa842-3"></a><span class="p">..</span> <span class="nt">|l_spacemacs|</span> <span class="ow">replace</span><span class="p">::</span> Spacemacs
+<pre class="code rst"><a name="rest_code_7c32edfa42344a18a5d151c84ec1e346-1"></a><span class="p">..</span> <span class="nt">|l_rstintro|</span> <span class="ow">replace</span><span class="p">::</span> An Introduction to reStructuredText
+<a name="rest_code_7c32edfa42344a18a5d151c84ec1e346-2"></a><span class="p">..</span> <span class="nt">|l_rstspecs|</span> <span class="ow">replace</span><span class="p">::</span> reStructuredText Markup Specification
+<a name="rest_code_7c32edfa42344a18a5d151c84ec1e346-3"></a><span class="p">..</span> <span class="nt">|l_spacemacs|</span> <span class="ow">replace</span><span class="p">::</span> Spacemacs
 </pre>
 <p>使用时在文档开头引入这两个文件，就可以在文章里随处用别名插入链接：</p>
-<pre class="code rst"><a name="rest_code_b1edb3aa561041539eb038617d888477-1"></a><span class="p">..</span> <span class="ow">include</span><span class="p">::</span> posts/links.ref
-<a name="rest_code_b1edb3aa561041539eb038617d888477-2"></a><span class="p">..</span> <span class="ow">include</span><span class="p">::</span> posts/interps.ref
-<a name="rest_code_b1edb3aa561041539eb038617d888477-3"></a>
-<a name="rest_code_b1edb3aa561041539eb038617d888477-4"></a><span class="cp">...</span>
-<a name="rest_code_b1edb3aa561041539eb038617d888477-5"></a>
-<a name="rest_code_b1edb3aa561041539eb038617d888477-6"></a>引用网址： |l_rstintro|_
+<pre class="code rst"><a name="rest_code_3e0b0c1ba52c4cff9e366e127edde810-1"></a><span class="p">..</span> <span class="ow">include</span><span class="p">::</span> posts/links.ref
+<a name="rest_code_3e0b0c1ba52c4cff9e366e127edde810-2"></a><span class="p">..</span> <span class="ow">include</span><span class="p">::</span> posts/interps.ref
+<a name="rest_code_3e0b0c1ba52c4cff9e366e127edde810-3"></a>
+<a name="rest_code_3e0b0c1ba52c4cff9e366e127edde810-4"></a><span class="cp">...</span>
+<a name="rest_code_3e0b0c1ba52c4cff9e366e127edde810-5"></a>
+<a name="rest_code_3e0b0c1ba52c4cff9e366e127edde810-6"></a>引用网址： |l_rstintro|_
 </pre>
 <p>渲染结果：</p>
 <p>引用网址： <a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/introduction.html">An Introduction to reStructuredText</a></p>
 <p>有时候我们不喜欢预定的网址标题，而想自定义标题显示。那就不必引入 <cite>interps.ref</cite> 文件，而在主文档里用类似语法替换一下：</p>
-<pre class="code rst"><a name="rest_code_8f047dd0afe14720b2035231a2a76eea-1"></a><span class="p">..</span> <span class="ow">include</span><span class="p">::</span> posts/links.ref
-<a name="rest_code_8f047dd0afe14720b2035231a2a76eea-2"></a>
-<a name="rest_code_8f047dd0afe14720b2035231a2a76eea-3"></a><span class="cp">...</span>
-<a name="rest_code_8f047dd0afe14720b2035231a2a76eea-4"></a>
-<a name="rest_code_8f047dd0afe14720b2035231a2a76eea-5"></a><span class="p">..</span> <span class="nt">|l_rstintro|</span> <span class="ow">replace</span><span class="p">::</span> 这里
-<a name="rest_code_8f047dd0afe14720b2035231a2a76eea-6"></a>点击 |l_rstintro|_ 访问 reStructuredText 手册。
+<pre class="code rst"><a name="rest_code_26f8611421424a478132ac3a6210e34c-1"></a><span class="p">..</span> <span class="ow">include</span><span class="p">::</span> posts/links.ref
+<a name="rest_code_26f8611421424a478132ac3a6210e34c-2"></a>
+<a name="rest_code_26f8611421424a478132ac3a6210e34c-3"></a><span class="cp">...</span>
+<a name="rest_code_26f8611421424a478132ac3a6210e34c-4"></a>
+<a name="rest_code_26f8611421424a478132ac3a6210e34c-5"></a><span class="p">..</span> <span class="nt">|l_rstintro|</span> <span class="ow">replace</span><span class="p">::</span> 这里
+<a name="rest_code_26f8611421424a478132ac3a6210e34c-6"></a>点击 |l_rstintro|_ 访问 reStructuredText 手册。
 </pre>
 <p>渲染结果：</p>
 <p>点击 <a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/introduction.html">这里</a> 访问 reStructuredText 手册。</p>
@@ -194,17 +194,17 @@ LibreOffice 的「">
 <div class="section" id="tags-ref">
 <h2><a class="toc-backref" href="#id8">tags.ref</a></h2>
 <p>博客 tags 其实也是引用链接，不过是内部相对链接罢了。而且没有自定义网址标题的需求，那自然没必要分成两个文件。其内容大体如下：</p>
-<pre class="code rst"><a name="rest_code_a9222793b64a48e4a078f4a3dec65385-1"></a><span class="p">..</span> <span class="nt">_vim:</span> /categories/vim/
-<a name="rest_code_a9222793b64a48e4a078f4a3dec65385-2"></a><span class="p">..</span> <span class="nt">|t_vim|</span> <span class="ow">replace</span><span class="p">::</span> vim_
-<a name="rest_code_a9222793b64a48e4a078f4a3dec65385-3"></a>
-<a name="rest_code_a9222793b64a48e4a078f4a3dec65385-4"></a><span class="p">..</span> <span class="nt">_`sublime text`:</span> /categories/sublime-text/
-<a name="rest_code_a9222793b64a48e4a078f4a3dec65385-5"></a><span class="p">..</span> <span class="nt">|t_sublime_text|</span> <span class="ow">replace</span><span class="p">::</span> <span class="s">`sublime text`_</span>
-<a name="rest_code_a9222793b64a48e4a078f4a3dec65385-6"></a>
-<a name="rest_code_a9222793b64a48e4a078f4a3dec65385-7"></a><span class="p">..</span> <span class="nt">_`马克飞象`:</span> /categories/ma-ke-fei-xiang/
-<a name="rest_code_a9222793b64a48e4a078f4a3dec65385-8"></a><span class="p">..</span> <span class="nt">|t_马克飞象|</span> <span class="ow">replace</span><span class="p">::</span> <span class="s">`马克飞象`_</span>
+<pre class="code rst"><a name="rest_code_6117f5c0fcb046aea9acc05c297666dc-1"></a><span class="p">..</span> <span class="nt">_vim:</span> /categories/vim/
+<a name="rest_code_6117f5c0fcb046aea9acc05c297666dc-2"></a><span class="p">..</span> <span class="nt">|t_vim|</span> <span class="ow">replace</span><span class="p">::</span> vim_
+<a name="rest_code_6117f5c0fcb046aea9acc05c297666dc-3"></a>
+<a name="rest_code_6117f5c0fcb046aea9acc05c297666dc-4"></a><span class="p">..</span> <span class="nt">_`sublime text`:</span> /categories/sublime-text/
+<a name="rest_code_6117f5c0fcb046aea9acc05c297666dc-5"></a><span class="p">..</span> <span class="nt">|t_sublime_text|</span> <span class="ow">replace</span><span class="p">::</span> <span class="s">`sublime text`_</span>
+<a name="rest_code_6117f5c0fcb046aea9acc05c297666dc-6"></a>
+<a name="rest_code_6117f5c0fcb046aea9acc05c297666dc-7"></a><span class="p">..</span> <span class="nt">_`马克飞象`:</span> /categories/ma-ke-fei-xiang/
+<a name="rest_code_6117f5c0fcb046aea9acc05c297666dc-8"></a><span class="p">..</span> <span class="nt">|t_马克飞象|</span> <span class="ow">replace</span><span class="p">::</span> <span class="s">`马克飞象`_</span>
 </pre>
 <p>使用时同样也是在文档开头引入，然后用别名访问。</p>
-<pre class="code rst"><a name="rest_code_602d6231b0954a079e332dec2af40518-1"></a>以下是两个标签： |t_sublime_text| 和 |t_马克飞象|
+<pre class="code rst"><a name="rest_code_53c64b03bab04c278f0a197ee4a3a096-1"></a>以下是两个标签： |t_sublime_text| 和 |t_马克飞象|
 </pre>
 <p>渲染结果：</p>
 <p>以下是两个标签： <a class="reference external" href="../../categories/sublime-text/">sublime text</a> 和 <a class="reference external" href="../../categories/ma-ke-fei-xiang/">马克飞象</a></p>
@@ -212,10 +212,10 @@ LibreOffice 的「">
 <div class="section" id="abbrs-ref">
 <h2><a class="toc-backref" href="#id9">abbrs.ref</a></h2>
 <p>至于 <cite>abbrs.ref</cite> 则并非链接引用，而是统一的缩略词管理。使用的是 <cite>a</cite> 前缀：</p>
-<pre class="code rst"><a name="rest_code_81e506f86a36495683cc7b601e7c32bd-1"></a><span class="p">..</span> <span class="nt">|a_rst|</span> <span class="ow">replace</span><span class="p">::</span> reStructuredText
+<pre class="code rst"><a name="rest_code_3de39cb3550f4db28cdf6da855805d08-1"></a><span class="p">..</span> <span class="nt">|a_rst|</span> <span class="ow">replace</span><span class="p">::</span> reStructuredText
 </pre>
 <p>使用效果：</p>
-<pre class="code rst"><a name="rest_code_a96f77ede6bc428f84e96d07f08a8ac8-1"></a>|a_rst| 是易读易写的纯文本标记语言。
+<pre class="code rst"><a name="rest_code_0693e5818425410da2961b1982233a67-1"></a>|a_rst| 是易读易写的纯文本标记语言。
 </pre>
 <p>渲染结果：</p>
 <p>reStructuredText 是易读易写的纯文本标记语言。</p>
