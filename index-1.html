@@ -64,6 +64,62 @@
     <div class="postindex page-body">
     <div class="post-entry post-text">
         <div class="entry-title">
+            <a href="posts/zai-restructuredtext-zhong-tong-yi-guan-li-yin-yong-lian-jie/">在 reStructuredText 中统一管理引用链接</a>
+        </div>
+        <div class="post-meta">
+            <span class="post-meta-item-icon">
+                <i class="user icon"></i>
+            </span>
+            <span class="post-meta-item-text" itemprop="author">
+                <a href="authors/ashfinal/">ashfinal</a>
+            </span>
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+                <i class="calendar icon"></i>
+            </span>
+            <span class="post-meta-item-text">
+                <a href="archive.html">
+                    <time datetime="2018-02-13T10:47:00+08:00" itemprop="datePublished" title="2018-02-13 10:47">2018-02-13 10:47
+                    </time></a>
+            </span>
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                    <i class="tags icon"></i>
+                </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/markdown/">markdown</a>
+                            </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/nikola/">nikola</a>
+                            </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/rest/">reST</a>
+                            </span>
+        </div>
+        <div class="post-summary">
+                <div>
+<!-- vim:set et sw=4 ts=4 ft=rst: -->
+<!-- vim:set et sw=4 ts=4 ft=rst: -->
+<!-- This file interpreters the title of URL in links.ref -->
+<!-- vim:set et sw=4 ts=4 ft=rst: -->
+<!-- vim:set et sw=4 ts=4 ft=rst: -->
+<p>最近几天又尝试了下 <a class="reference external" href="categories/latex/">latex</a>, 发现 Bibliography 的理念很好。它将文档中所有资料引用统一保存到 <cite>.bib</cite> 文件中，然后在正文中以别名的形式插入。如果有需要的话，还可以自定义引用的显示格式。这大大简化了参考文献的管理和使用：平时统一维护所有的参考文献，甚至你一生中只需维护一份 <cite>.bib</cite> 文件；而写作时不必麻烦地复制粘贴，用别名就可以方便地插入参考文献。</p>
+<div class="sidebar">
+<p class="first sidebar-title">LibreOffice 的「Navigator」功能</p>
+<div class="last figure align-center">
+<a class="reference external image-reference" href="images/libreoffice_navigator.png"><img alt="/images/libreoffice_navigator.thumbnail.png" src="images/libreoffice_navigator.thumbnail.png"></a>
+</div>
+</div>
+<p>如果要在「现代」文档处理软件中寻找对应的话，大约相当于 LibreOffice 的「Navigator」功能或者其它软件的「媒体库」功能。不同之处在于 Bibliography 针对纯文本文件而优化，不止针对单份文档还能在所有文档中依需要载入。</p>
+<p>尽管笔者平时写博客时并不用参考资料，但插入链接是很常见的操作。而该操作还是挺麻烦的——通常需要在浏览器中输入网址，等待其打开，然后分两次粘贴网址以及网页标题到 <a class="reference external" href="https://github.com/qvacua/vimr">VimR</a> 编辑器中。如果能够使用 Bibliography 的方式管理引用链接，则插入链接会方便许多——仅需麻烦一次，则全站博客均可以别名方式引用，毋需再次打开浏览器。显然这种统一管理有利于写作时的思维连贯性。而且今后如果有额外需求，比如想知道某链接在全站被引用了多少次，直接使用 <cite>ag</cite> 或 <cite>grep</cite> 命令搜索一下即可。</p>
+<p>另外一个麻烦点在于：博客的站内链接显然有利于读者快速寻找相关内容并跳转浏览，比如 tags 就是站内链接优化很好的一个点。然而插入 tags 也是个比较麻烦、容易打断思路的事情。完全可以将博客内的 tags 「封装」一下，在任何文章中都可以随时快速地插入 tag。实际上，也可以不局限于 tags，一些相对固定的链接均可用相同的手法操作。</p>
+<p>于是笔者花费了半天的时间试验了一下，发现完全可以使用 reStructuredText 的 <cite>include</cite> 指令实现类似 Bibliography 的功能，对全站所有的链接引用进行统一管理。以下将简单的介绍一下我的做法。</p>
+<p class="more"><a href="posts/zai-restructuredtext-zhong-tong-yi-guan-li-yin-yong-lian-jie/">Read more…</a></p>
+</div>
+        </div>
+    </div>
+    <div class="post-entry post-text">
+        <div class="entry-title">
             <a href="posts/shu-ju-ke-shi-hua-seaborn/">数据可视化--Seaborn</a>
         </div>
         <div class="post-meta">
@@ -378,47 +434,6 @@
 </div>
         </div>
     </div>
-    <div class="post-entry post-text">
-        <div class="entry-title">
-            <a href="posts/emacs-de-font-lock-xing-neng-wen-ti/">Emacs 的 Font Lock 性能问题</a>
-        </div>
-        <div class="post-meta">
-            <span class="post-meta-item-icon">
-                <i class="user icon"></i>
-            </span>
-            <span class="post-meta-item-text" itemprop="author">
-                <a href="authors/ashfinal/">ashfinal</a>
-            </span>
-            <span class="post-meta-divider">|</span>
-            <span class="post-meta-item-icon">
-                <i class="calendar icon"></i>
-            </span>
-            <span class="post-meta-item-text">
-                <a href="archive.html">
-                    <time datetime="2017-11-24T11:53:52+08:00" itemprop="datePublished" title="2017-11-24 11:53">2017-11-24 11:53
-                    </time></a>
-            </span>
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                    <i class="tags icon"></i>
-                </span>
-                            <span class="post-meta-tag-item">
-                                <a href="categories/emacs/">emacs</a>
-                            </span>
-                            <span class="post-meta-tag-item">
-                                <a href="categories/regex/">regex</a>
-                            </span>
-                            <span class="post-meta-tag-item">
-                                <a href="categories/vim/">vim</a>
-                            </span>
-        </div>
-        <div class="post-summary">
-                <div>
-<p>之前使用 Emacs 总是有点慢，没有 Vim 那种爽冽干脆的感觉。但多半是归咎于臃肿的 spacemacs 配置，不会轻易怀疑 Emacs 本身有什么问题。最近基本上是接近裸状态使用 Emacs 了，不安装第三方插件，也不搞乱七八糟的配置。不过两天前我又遇到了状况，翻来覆去尝试半天，感觉很有可能是 Emacs 的 Font Lock 性能有问题。</p>
-<p class="more"><a href="posts/emacs-de-font-lock-xing-neng-wen-ti/">Read more…</a></p>
-</div>
-        </div>
-    </div>
     </div>
 
         <div class="page-navigation">
@@ -432,7 +447,7 @@
                 <a class="item" href="index-5.html">6</a>
                 <a class="item" href="index-6.html">7</a>
             <a class="item">…</a>
-                <a class="item" href="index-10.html">11</a>
+                <a class="item" href="index-11.html">12</a>
     <a class="item" href="index-2.html"><i class="angle right icon"></i></a>
     </div>
 </div>

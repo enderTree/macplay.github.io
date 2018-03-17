@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="generator" content="Nikola (getnikola.com)">
-<title>给 Nikola 博客添加 mermaid 支持 - MacPlay</title>
+<title>从 URL 构建行内链接 - MacPlay</title>
 <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
@@ -12,22 +12,18 @@
 <link href="../../assets/css/semantic.min.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
-<link rel="canonical" href="https://macplay.github.io/posts/gei-nikola-bo-ke-tian-jia-mermaid-zhi-chi/">
+<link rel="canonical" href="https://macplay.github.io/posts/cong-url-gou-jian-xing-nei-lian-jie/">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
 <meta name="author" content="ashfinal">
 <meta property="og:site_name" content="MacPlay">
-<meta property="og:title" content="给 Nikola 博客添加 mermaid 支持">
-<meta property="og:url" content="https://macplay.github.io/posts/gei-nikola-bo-ke-tian-jia-mermaid-zhi-chi/">
-<meta property="og:description" content="还是给博客集成了 mermaid [1] 图表功能，尽管目前用的很少……与 mathjax 一样，使用的时候给文章添加 mermaid 标签，然后在文章中给描述文本指定 mermaid class 即可。就像这样：
-.. container:: mermaid
-
-   graph TD
-   A[Christmas] --&gt;|Get money| B(Go shopping)
-   B --&gt; C">
+<meta property="og:title" content="从 URL 构建行内链接">
+<meta property="og:url" content="https://macplay.github.io/posts/cong-url-gou-jian-xing-nei-lian-jie/">
+<meta property="og:description" content="昨天看到论坛有人谈到 从 URL 构建 Markdown 行内链接 - Emacs-general - Emacs China 。其实，这个功能早就存在于 Emmet 插件中。之前个人写 Markdown 文档的时候就用到过，体验非常不错。具体就是：在文档内的链接处按下快捷键，将会自动提取网页标题，并插入 Markdown 风格的行内链接。这样你就不必再额外复制链接标题，甚至个别情况下还得提前在浏">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2017-10-27T14:29:49+08:00">
-<meta property="article:tag" content="chart">
-<meta property="article:tag" content="mermaid">
+<meta property="article:published_time" content="2018-03-17T19:57:58+08:00">
+<meta property="article:tag" content="markdown">
+<meta property="article:tag" content="reST">
+<meta property="article:tag" content="vim">
 <link rel="stylesheet" type="text/css" href="../../assets/css/gitalk.css">
 </head>
 <body>
@@ -77,7 +73,7 @@
     </header><main id="main"><div id="main-content">
 <div class="postpage post-text page-body" itemscope="itemscope" itemtype="http://schema.org/Article">
             <h1 class="post-title" itemprop="headline">
-        <a href=".">给 Nikola 博客添加 mermaid 支持</a>
+        <a href=".">从 URL 构建行内链接</a>
     </h1>
 
     <div class="post-meta">
@@ -92,7 +88,7 @@
                 <i class="github icon"></i>
             </span>
             <span class="post-meta-item-text">
-                <a href="https://github.com/macplay/macplay.github.io/edit/src/posts/gei-nikola-bo-ke-tian-jia-mermaid-zhi-chi.rst" title="Edit on GitHub">edit</a>
+                <a href="https://github.com/macplay/macplay.github.io/edit/src/posts/cong-url-gou-jian-xing-nei-lian-jie.rst" title="Edit on GitHub">edit</a>
             </span>
         <span class="post-meta-divider">|</span>
         <span class="post-meta-item-icon">
@@ -100,7 +96,7 @@
         </span>
         <span class="post-meta-item-text">
             <a href="../../archive.html">
-                <time datetime="2017-10-27T14:29:49+08:00" itemprop="datePublished" title="2017-10-27 14:29">2017-10-27 14:29
+                <time datetime="2018-03-17T19:57:58+08:00" itemprop="datePublished" title="2018-03-17 19:57">2018-03-17 19:57
                 </time></a>
         </span>
             <span class="post-meta-divider">|</span>
@@ -108,10 +104,13 @@
                 <i class="tags icon"></i>
             </span>
                         <span class="post-meta-tag-item">
-                            <a href="../../categories/chart/">chart</a>
+                            <a href="../../categories/markdown/">markdown</a>
                         </span>
                         <span class="post-meta-tag-item">
-                            <a href="../../categories/mermaid/">mermaid</a>
+                            <a href="../../categories/rest/">reST</a>
+                        </span>
+                        <span class="post-meta-tag-item">
+                            <a href="../../categories/vim/">vim</a>
                         </span>
     </div>
 
@@ -119,96 +118,35 @@
     <div class="post-content" itemprop="article text">
         <div id="post-content">
         <div>
-<p>还是给博客集成了 <a class="reference external" href="https://mermaidjs.github.io">mermaid</a> <a class="footnote-reference" href="#id2" id="id1">[1]</a> 图表功能，尽管目前用的很少……与 mathjax 一样，使用的时候给文章添加 <cite>mermaid</cite> 标签，然后在文章中给描述文本指定 <cite>mermaid</cite> class 即可。就像这样：</p>
-<pre class="code rst"><a name="rest_code_79bd859372e6483bb8b2311ae83a93f1-1"></a><span class="p">..</span> <span class="ow">container</span><span class="p">::</span> mermaid
-<a name="rest_code_79bd859372e6483bb8b2311ae83a93f1-2"></a>
-<a name="rest_code_79bd859372e6483bb8b2311ae83a93f1-3"></a>   graph TD
-<a name="rest_code_79bd859372e6483bb8b2311ae83a93f1-4"></a>   A[Christmas] --&gt;|Get money| B(Go shopping)
-<a name="rest_code_79bd859372e6483bb8b2311ae83a93f1-5"></a>   B --&gt; C{Let me think}
-<a name="rest_code_79bd859372e6483bb8b2311ae83a93f1-6"></a>   C --&gt;|One| D[Laptop]
-<a name="rest_code_79bd859372e6483bb8b2311ae83a93f1-7"></a>   C --&gt;|Two| E[iPhone]
-<a name="rest_code_79bd859372e6483bb8b2311ae83a93f1-8"></a>   C --&gt;|Three| F[Car]
-</pre>
-<table class="docutils footnote" frame="void" id="id2" rules="none">
-<colgroup>
-<col class="label">
-<col>
-</colgroup>
-<tbody valign="top"><tr>
-<td class="label"><a class="fn-backref" href="#id1">[1]</a></td>
-<td>
-<a class="reference external" href="https://mermaidjs.github.io">mermaid</a> 使用 javascript 从纯文本描述产生流程图、序列图、甘特图等图表类型。</td>
-</tr></tbody>
-</table>
-<!-- TEASER_END --><p>渲染结果：</p>
-<div class="ui center aligned mermaid docutils container">
-graph TD
-A[Christmas] --&gt;|Get money| B(Go shopping)
-B --&gt; C{Let me think}
-C --&gt;|One| D[Laptop]
-C --&gt;|Two| E[iPhone]
-C --&gt;|Three| F[Car]</div>
-<p>Markdown 文档写作应该也可以用。整个 <a class="reference external" href="https://mermaidjs.github.io">mermaid</a> 功能的集成只需在博客模板里添加 4 行：</p>
-<pre class="code html+jinja"><a name="rest_code_856c7864e72546e1ae402286de983b4f-1"></a><span class="cp">{%</span> <span class="k">if</span> <span class="s2">"mermaid"</span> <span class="k">in</span> <span class="nv">post.tags</span> <span class="cp">%}</span>
-<a name="rest_code_856c7864e72546e1ae402286de983b4f-2"></a>    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">"text/javascript"</span> <span class="na">src</span><span class="o">=</span><span class="s">"/assets/js/mermaid.min.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<a name="rest_code_856c7864e72546e1ae402286de983b4f-3"></a>    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="nx">mermaid</span><span class="p">.</span><span class="nx">initialize</span><span class="p">({</span><span class="nx">startOnLoad</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nx">theme</span><span class="o">:</span> <span class="s1">'forest'</span><span class="p">});&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<a name="rest_code_856c7864e72546e1ae402286de983b4f-4"></a><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
-</pre>
-<p>使用 if 条件判断是为了仅在必要时才加载 <cite>mermaid</cite> js 文件，因为其即使压缩后也有 825 KB 的体积，可能会拖慢页面打开速度。mathjax 的情况与此类似，使用频率较低，但据说其完整加载要达到 200 MB 以上。</p>
-<p>序列图：</p>
-<div class="mermaid docutils container">
-sequenceDiagram
-participant Alice
-participant Bob
-Alice-&gt;John: Hello John, how are you?
-Note right of John: Rational thoughts &lt;br/&gt;prevail...
-John--&gt;Alice: Great!
-John-&gt;Bob: How about you?
-Bob--&gt;John: Jolly good!</div>
-<p>甘特图：</p>
-<div class="mermaid docutils container">
-gantt
-dateFormat  YYYY-MM-DD
-title Adding GANTT diagram functionality to mermaid
-section A section
-Completed task            :done,    des1, 2014-01-06,2014-01-08
-Active task               :active,  des2, 2014-01-09, 3d
-Future task               :         des3, after des2, 5d
-Future task2               :         des4, after des3, 5d
-section Critical tasks
-Completed task in the critical line :crit, done, 2014-01-06,24h
-Implement parser and jison          :crit, done, after des1, 2d
-Create tests for parser             :crit, active, 3d
-Future task in critical line        :crit, 5d
-Create tests for renderer           :2d
-Add to mermaid                      :1d</div>
-<div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">很奇怪序列图的 loop 语法不工作，但是使用 <cite>raw</cite> 指令却可以显示……有空再看看。</p>
-</div>
-<div class="mermaid">
-sequenceDiagram
-loop every day
-    Alice-&gt;&gt;John: Hello John, how are you?
-    John--&gt;&gt;Alice: Great!
-end
-</div>
+<p>昨天看到论坛有人谈到 <a class="reference external" href="https://emacs-china.org/t/topic/5301">从 URL 构建 Markdown 行内链接 - Emacs-general - Emacs China</a> 。其实，这个功能早就存在于 Emmet 插件中。之前个人写 Markdown 文档的时候就用到过，体验非常不错。具体就是：在文档内的链接处按下快捷键，将会自动提取网页标题，并插入 Markdown 风格的行内链接。这样你就不必再额外复制链接标题，甚至个别情况下还得提前在浏览器中打开链接。</p>
+<p>实际上，该功能不仅能构建 Markdown 行内链接，还可以在网页文件中使用 <tt class="docutils literal">&lt;a&gt;</tt> 标签构建 HTML 风格的链接。在 Vim 编辑器中，文件类型是自动识别的，因此并不需要额外做什么设置。</p>
+<p>鉴于我个人 <a class="reference external" href="../cong-markdown-dao-restructuredtext/">从 Markdown 转向 reStructuredText</a> 已久，对该功能自然而然就用的不多起来。然而，当写 reStructuredText 文档时，当插入链接时不得不皱着眉，分两次分别复制网页链接和标题，再拼凑成 reStructuredText 风格的行内链接时。我总是不由地想起 Markdown 插入链接时的惬意顺畅。只不过，个人比较懒 - - 一直没采取任何行动，忍受着书写体验下降的情况。</p>
+<p>现在经网友这么一提，心思抖起，觉得是时候解决一下这个“小问题”了。</p>
+<!-- TEASER_END -->
+<p>仔细想来：既然 Emmet 插件支持构建 Markdown 风格的行内链接，那应该也可以支持 reStructuredText。至于在 HTML 和 Markdown 文档中表现不同，很可能只是做了下条件判断。那样的话，我们就只需在添加一处判断 reStructuredText 即可。果然，使用 <cite>rg</cite> 命令用 <cite>markdown</cite> 关键词搜索，马上就找到了对应处的代码。简单阅读一下，和之前想的一模一样。心内不由暗喜，然后看了下源码，是使用 <cite>printf</cite> 函数输出并且格式化字符串。我们只需依样画葫芦，把字符串改为 reStructuredText 风格即可。</p>
+<p>如此，只需增加两行。修改完毕，重启 Vim 编辑器测试一下。果然正常运行，没问题！其它功能也不受影响。于是，直接向 Emmet 提交 PR，希望尽快合并。前后花费时间不到 5 分钟！可以说解决这个“小问题”，是非常快了。</p>
+<p>剩下就简单了：修改下 vimrc 配置，让 Emmet 插件在 reStructuredText 文档中自动启用。前面已经说过，该插件在个人配置中针对 html、md 文件是默认开启的，只需添加 reStructuredText 文件类型 <cite>rst</cite> 即可。</p>
+<p>改善 reStructuredText 书写体验的过程，至此就结束了。需要说明的是，整个过程是针对 Vim 及其 Emmet 插件来进行的。但 Emacs 编辑器也有 Emmet 插件，两者的体验应该是差不多的。如果要增加 reStructuredText 文档的支持，则与本文的折腾过程也差不多的。</p>
+<p>最后，我一直坚信：文字的表达能力要差于图片、视频。所谓一图胜千言是也。文字阐述再详细，也依然有读者看不懂你遇到什么问题，怎样解决的？如果是对 Vim、Emacs 编辑器没有了解的读者，那则更是完全懵掉了。因此，只要个人有时间，一般都会更进一步：“额外”在文章中配上图片和短视频。</p>
+<p>针对 <cite>从 URL 构建行内链接</cite> 这个问题，我同样录制了以下视频片段：</p>
+<video src="../../videos/url_emmet.mp4" loop autoplay>
+Your browser does not support the video tag.
+</video><p><em>视频中的 `:set ft` 命令设置文件类型(filetype)。通常使用 Vim 打开文件时，它会自动识别文件类型，无需像演示视频中那样手动设置。</em></p>
+<p>欢迎同样爱好的读者一起交流进步！</p>
+<p>THE END.</p>
 </div>
         </div>
     </div>
     <div class="post-info">
-        <p>文章链接：<a href="https://macplay.github.io/posts/gei-nikola-bo-ke-tian-jia-mermaid-zhi-chi/" target="_blank">https://macplay.github.io/posts/gei-nikola-bo-ke-tian-jia-mermaid-zhi-chi/</a></p>
+        <p>文章链接：<a href="https://macplay.github.io/posts/cong-url-gou-jian-xing-nei-lian-jie/" target="_blank">https://macplay.github.io/posts/cong-url-gou-jian-xing-nei-lian-jie/</a></p>
         <p>发布/更新于：
-            <time datetime="2017-10-27 14:29:49 UTC+08:00" itemprop="dateModified" title="2017-10-27 14:29">2017-10-27 14:29
+            <time datetime="2018-03-17 19:57:58 UTC+08:00" itemprop="dateModified" title="2018-03-17 19:57">2018-03-17 19:57
             </time></p>
         <p>版权声明：如无特别说明，本站文章均遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a> 协议，转载请注明作者及出处。</p>
     </div>
         <div class="post-navigation no-print">
         <div class="ui huge secondary stackable menu">
-            <a class="post-nav-item post-nav-previous item" href="../nikola-bo-ke-zi-yuan-lian-jie-wen-ti/" title="Previous post"><i class="angle double left icon"></i> Nikola 博客资源链接问题</a>
-        <div class="right menu">
-            <a class="post-nav-item post-nav-next item" href="../zai-tan-markdown-ji-qi-kuo-zhan/" title="Next post">再谈 Markdown 及其扩展 <i class="angle double right icon"></i></a>
-        </div>
+            <a class="post-nav-item post-nav-previous item" href="../qian-yi-dao-onivim/" title="Previous post"><i class="angle double left icon"></i> 迁移到 onivim</a>
         </div>
     </div>
 
@@ -268,6 +206,6 @@ end
             distractionFreeMode: false
         })
         gitalk.render('gitalk-container')
-    </script><script type="text/javascript" src="../../assets/js/mermaid.min.js"></script><script>mermaid.initialize({startOnLoad: true, theme: 'forest'});</script>
+    </script>
 </body>
 </html>

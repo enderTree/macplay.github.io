@@ -15,7 +15,7 @@
 <link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <link rel="canonical" href="https://macplay.github.io/">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
-<link rel="prefetch" href="posts/qian-yi-dao-onivim/" type="text/html">
+<link rel="prefetch" href="posts/cong-url-gou-jian-xing-nei-lian-jie/" type="text/html">
 </head>
 <body>
         <div class="ui grid">
@@ -63,6 +63,50 @@
 
     </header><main id="main"><div id="main-content">
     <div class="postindex page-body">
+    <div class="post-entry post-text">
+        <div class="entry-title">
+            <a href="posts/cong-url-gou-jian-xing-nei-lian-jie/">从 URL 构建行内链接</a>
+        </div>
+        <div class="post-meta">
+            <span class="post-meta-item-icon">
+                <i class="user icon"></i>
+            </span>
+            <span class="post-meta-item-text" itemprop="author">
+                <a href="authors/ashfinal/">ashfinal</a>
+            </span>
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+                <i class="calendar icon"></i>
+            </span>
+            <span class="post-meta-item-text">
+                <a href="archive.html">
+                    <time datetime="2018-03-17T19:57:58+08:00" itemprop="datePublished" title="2018-03-17 19:57">2018-03-17 19:57
+                    </time></a>
+            </span>
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                    <i class="tags icon"></i>
+                </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/markdown/">markdown</a>
+                            </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/rest/">reST</a>
+                            </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/vim/">vim</a>
+                            </span>
+        </div>
+        <div class="post-summary">
+                <div>
+<p>昨天看到论坛有人谈到 <a class="reference external" href="https://emacs-china.org/t/topic/5301">从 URL 构建 Markdown 行内链接 - Emacs-general - Emacs China</a> 。其实，这个功能早就存在于 Emmet 插件中。之前个人写 Markdown 文档的时候就用到过，体验非常不错。具体就是：在文档内的链接处按下快捷键，将会自动提取网页标题，并插入 Markdown 风格的行内链接。这样你就不必再额外复制链接标题，甚至个别情况下还得提前在浏览器中打开链接。</p>
+<p>实际上，该功能不仅能构建 Markdown 行内链接，还可以在网页文件中使用 <tt class="docutils literal">&lt;a&gt;</tt> 标签构建 HTML 风格的链接。在 Vim 编辑器中，文件类型是自动识别的，因此并不需要额外做什么设置。</p>
+<p>鉴于我个人 <a class="reference external" href="posts/cong-markdown-dao-restructuredtext/">从 Markdown 转向 reStructuredText</a> 已久，对该功能自然而然就用的不多起来。然而，当写 reStructuredText 文档时，当插入链接时不得不皱着眉，分两次分别复制网页链接和标题，再拼凑成 reStructuredText 风格的行内链接时。我总是不由地想起 Markdown 插入链接时的惬意顺畅。只不过，个人比较懒 - - 一直没采取任何行动，忍受着书写体验下降的情况。</p>
+<p>现在经网友这么一提，心思抖起，觉得是时候解决一下这个“小问题”了。</p>
+<p class="more"><a href="posts/cong-url-gou-jian-xing-nei-lian-jie/">Read more…</a></p>
+</div>
+        </div>
+    </div>
     <div class="post-entry post-text">
         <div class="entry-title">
             <a href="posts/qian-yi-dao-onivim/">迁移到 onivim</a>
@@ -158,7 +202,7 @@
     Your browser does not support the video tag.
 </video><p>文件大小 325 KB。</p>
 <p>完整命令：</p>
-<pre class="code console"><a name="rest_code_b88ab6431fc543cbb0d541c01512d193-1"></a><span class="go">ffmpeg -y -i mv.mp4 -ss 00:02:24.000 -to 00:02:29.000 -c:v libx264 -an -crf 35 -b:v 100k -r 10 -preset slow out.mp4</span>
+<pre class="code console"><a name="rest_code_02f4be84cd69447083c9f27e64468e71-1"></a><span class="go">ffmpeg -y -i mv.mp4 -ss 00:02:24.000 -to 00:02:29.000 -c:v libx264 -an -crf 35 -b:v 100k -r 10 -preset slow out.mp4</span>
 </pre>
 <p>如果加上音轨 <cite>-b:a 11k</cite> ，则体积上升到 350 KB。</p>
 <p>很理想了。</p>
@@ -259,62 +303,6 @@
 </div>
         </div>
     </div>
-    <div class="post-entry post-text">
-        <div class="entry-title">
-            <a href="posts/zai-restructuredtext-zhong-tong-yi-guan-li-yin-yong-lian-jie/">在 reStructuredText 中统一管理引用链接</a>
-        </div>
-        <div class="post-meta">
-            <span class="post-meta-item-icon">
-                <i class="user icon"></i>
-            </span>
-            <span class="post-meta-item-text" itemprop="author">
-                <a href="authors/ashfinal/">ashfinal</a>
-            </span>
-            <span class="post-meta-divider">|</span>
-            <span class="post-meta-item-icon">
-                <i class="calendar icon"></i>
-            </span>
-            <span class="post-meta-item-text">
-                <a href="archive.html">
-                    <time datetime="2018-02-13T10:47:00+08:00" itemprop="datePublished" title="2018-02-13 10:47">2018-02-13 10:47
-                    </time></a>
-            </span>
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                    <i class="tags icon"></i>
-                </span>
-                            <span class="post-meta-tag-item">
-                                <a href="categories/markdown/">markdown</a>
-                            </span>
-                            <span class="post-meta-tag-item">
-                                <a href="categories/nikola/">nikola</a>
-                            </span>
-                            <span class="post-meta-tag-item">
-                                <a href="categories/rest/">reST</a>
-                            </span>
-        </div>
-        <div class="post-summary">
-                <div>
-<!-- vim:set et sw=4 ts=4 ft=rst: -->
-<!-- vim:set et sw=4 ts=4 ft=rst: -->
-<!-- This file interpreters the title of URL in links.ref -->
-<!-- vim:set et sw=4 ts=4 ft=rst: -->
-<!-- vim:set et sw=4 ts=4 ft=rst: -->
-<p>最近几天又尝试了下 <a class="reference external" href="categories/latex/">latex</a>, 发现 Bibliography 的理念很好。它将文档中所有资料引用统一保存到 <cite>.bib</cite> 文件中，然后在正文中以别名的形式插入。如果有需要的话，还可以自定义引用的显示格式。这大大简化了参考文献的管理和使用：平时统一维护所有的参考文献，甚至你一生中只需维护一份 <cite>.bib</cite> 文件；而写作时不必麻烦地复制粘贴，用别名就可以方便地插入参考文献。</p>
-<div class="sidebar">
-<p class="first sidebar-title">LibreOffice 的「Navigator」功能</p>
-<div class="last figure align-center">
-<a class="reference external image-reference" href="images/libreoffice_navigator.png"><img alt="/images/libreoffice_navigator.thumbnail.png" src="images/libreoffice_navigator.thumbnail.png"></a>
-</div>
-</div>
-<p>如果要在「现代」文档处理软件中寻找对应的话，大约相当于 LibreOffice 的「Navigator」功能或者其它软件的「媒体库」功能。不同之处在于 Bibliography 针对纯文本文件而优化，不止针对单份文档还能在所有文档中依需要载入。</p>
-<p>尽管笔者平时写博客时并不用参考资料，但插入链接是很常见的操作。而该操作还是挺麻烦的——通常需要在浏览器中输入网址，等待其打开，然后分两次粘贴网址以及网页标题到 <a class="reference external" href="https://github.com/qvacua/vimr">VimR</a> 编辑器中。如果能够使用 Bibliography 的方式管理引用链接，则插入链接会方便许多——仅需麻烦一次，则全站博客均可以别名方式引用，毋需再次打开浏览器。显然这种统一管理有利于写作时的思维连贯性。而且今后如果有额外需求，比如想知道某链接在全站被引用了多少次，直接使用 <cite>ag</cite> 或 <cite>grep</cite> 命令搜索一下即可。</p>
-<p>另外一个麻烦点在于：博客的站内链接显然有利于读者快速寻找相关内容并跳转浏览，比如 tags 就是站内链接优化很好的一个点。然而插入 tags 也是个比较麻烦、容易打断思路的事情。完全可以将博客内的 tags 「封装」一下，在任何文章中都可以随时快速地插入 tag。实际上，也可以不局限于 tags，一些相对固定的链接均可用相同的手法操作。</p>
-<p>于是笔者花费了半天的时间试验了一下，发现完全可以使用 reStructuredText 的 <cite>include</cite> 指令实现类似 Bibliography 的功能，对全站所有的链接引用进行统一管理。以下将简单的介绍一下我的做法。</p>
-<p class="more"><a href="posts/zai-restructuredtext-zhong-tong-yi-guan-li-yin-yong-lian-jie/">Read more…</a></p>
-</div>
-        </div>
-    </div>
     </div>
 
         <div class="page-navigation">
@@ -327,7 +315,7 @@
                 <a class="item" href="index-4.html">5</a>
                 <a class="item" href="index-5.html">6</a>
             <a class="item">…</a>
-                <a class="item" href="index-10.html">11</a>
+                <a class="item" href="index-11.html">12</a>
     <a class="item" href="index-1.html"><i class="angle right icon"></i></a>
     </div>
 </div>

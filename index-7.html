@@ -64,6 +64,47 @@
     <div class="postindex page-body">
     <div class="post-entry post-text">
         <div class="entry-title">
+            <a href="posts/jing-tai-bo-ke-nikola-zhi-xie-zuo-shi-jian/">静态博客 Nikola 之写作实践</a>
+        </div>
+        <div class="post-meta">
+            <span class="post-meta-item-icon">
+                <i class="user icon"></i>
+            </span>
+            <span class="post-meta-item-text" itemprop="author">
+                <a href="authors/macplay/">macplay</a>
+            </span>
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+                <i class="calendar icon"></i>
+            </span>
+            <span class="post-meta-item-text">
+                <a href="archive.html">
+                    <time datetime="2017-09-20T11:32:34+08:00" itemprop="datePublished" title="2017-09-20 11:32">2017-09-20 11:32
+                    </time></a>
+            </span>
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                    <i class="tags icon"></i>
+                </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/markdown/">markdown</a>
+                            </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/nikola/">nikola</a>
+                            </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/rest/">reST</a>
+                            </span>
+        </div>
+        <div class="post-summary">
+                <div>
+<p>本文分享 <a class="reference external" href="https://getnikola.com">Nikola</a> 博客的写作流程及注意事项，方便读者对最基础的操作--「更新文章」有直观了解。得益于 <a class="reference external" href="https://getnikola.com">Nikola</a> 和 <a class="reference external" href="https://travis-ci.org">TravisCI</a> 的紧密协同，「更新文章」只需把源文件放到指定目录，提交到 GitHub 即可。甚至在没有安装 <a class="reference external" href="https://getnikola.com">Nikola</a> 程序的电脑或者手机上也可以随时更新你的文章。</p>
+<p class="more"><a href="posts/jing-tai-bo-ke-nikola-zhi-xie-zuo-shi-jian/">Read more…</a></p>
+</div>
+        </div>
+    </div>
+    <div class="post-entry post-text">
+        <div class="entry-title">
             <a href="posts/nikola-internals/">Nikola Internals</a>
         </div>
         <div class="post-meta">
@@ -423,60 +464,21 @@ function decrypt() {
                 <div>
 <p>If you are using reStructuredText and install pygal, Nikola has support for rather nice charts
 with little effort, and i's even semi-interactive (hover your pointer over the legend!):</p>
-<pre class="code rest"><a name="rest_code_7d04580c8f34473ba93a4a6e6bdaf8f3-1"></a><span class="p">..</span> <span class="ow">chart</span><span class="p">::</span> StackedLine
-<a name="rest_code_7d04580c8f34473ba93a4a6e6bdaf8f3-2"></a>   <span class="nc">:title:</span> <span class="nf">'Browser usage evolution (in %)'</span>
-<a name="rest_code_7d04580c8f34473ba93a4a6e6bdaf8f3-3"></a>   <span class="nc">:fill:</span> <span class="nf">True</span>
-<a name="rest_code_7d04580c8f34473ba93a4a6e6bdaf8f3-4"></a>   <span class="nc">:x_labels:</span> <span class="nf">['2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012']</span>
-<a name="rest_code_7d04580c8f34473ba93a4a6e6bdaf8f3-5"></a>   <span class="nc">:width:</span> <span class="nf">600</span>
-<a name="rest_code_7d04580c8f34473ba93a4a6e6bdaf8f3-6"></a>   <span class="nc">:height:</span> <span class="nf">400</span>
-<a name="rest_code_7d04580c8f34473ba93a4a6e6bdaf8f3-7"></a>   <span class="nc">:explicit_size:</span> <span class="nf">True</span>
-<a name="rest_code_7d04580c8f34473ba93a4a6e6bdaf8f3-8"></a>   <span class="nc">:style:</span> <span class="nf">DefaultStyle</span>
-<a name="rest_code_7d04580c8f34473ba93a4a6e6bdaf8f3-9"></a>
-<a name="rest_code_7d04580c8f34473ba93a4a6e6bdaf8f3-10"></a>   ('Others',  [14.2, 15.4, 15.3,  8.9,    9, 10.4,  8.9,  5.8,  6.7,  6.8,  7.5])
-<a name="rest_code_7d04580c8f34473ba93a4a6e6bdaf8f3-11"></a>   ('IE',      [85.8, 84.6, 84.7, 74.5,   66, 58.6, 54.7, 44.8, 36.2, 26.6, 20.1])
-<a name="rest_code_7d04580c8f34473ba93a4a6e6bdaf8f3-12"></a>   ('Firefox', [None, None, None, 16.6,   25,   31, 36.4, 45.5, 46.3, 42.8, 37.1])
-<a name="rest_code_7d04580c8f34473ba93a4a6e6bdaf8f3-13"></a>   ('Chrome',  [None, None, None, None, None, None,    0,  3.9, 10.8, 23.8, 35.3])
+<pre class="code rest"><a name="rest_code_d4cc8bd35b6a4be1885a03f8431aeae7-1"></a><span class="p">..</span> <span class="ow">chart</span><span class="p">::</span> StackedLine
+<a name="rest_code_d4cc8bd35b6a4be1885a03f8431aeae7-2"></a>   <span class="nc">:title:</span> <span class="nf">'Browser usage evolution (in %)'</span>
+<a name="rest_code_d4cc8bd35b6a4be1885a03f8431aeae7-3"></a>   <span class="nc">:fill:</span> <span class="nf">True</span>
+<a name="rest_code_d4cc8bd35b6a4be1885a03f8431aeae7-4"></a>   <span class="nc">:x_labels:</span> <span class="nf">['2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012']</span>
+<a name="rest_code_d4cc8bd35b6a4be1885a03f8431aeae7-5"></a>   <span class="nc">:width:</span> <span class="nf">600</span>
+<a name="rest_code_d4cc8bd35b6a4be1885a03f8431aeae7-6"></a>   <span class="nc">:height:</span> <span class="nf">400</span>
+<a name="rest_code_d4cc8bd35b6a4be1885a03f8431aeae7-7"></a>   <span class="nc">:explicit_size:</span> <span class="nf">True</span>
+<a name="rest_code_d4cc8bd35b6a4be1885a03f8431aeae7-8"></a>   <span class="nc">:style:</span> <span class="nf">DefaultStyle</span>
+<a name="rest_code_d4cc8bd35b6a4be1885a03f8431aeae7-9"></a>
+<a name="rest_code_d4cc8bd35b6a4be1885a03f8431aeae7-10"></a>   ('Others',  [14.2, 15.4, 15.3,  8.9,    9, 10.4,  8.9,  5.8,  6.7,  6.8,  7.5])
+<a name="rest_code_d4cc8bd35b6a4be1885a03f8431aeae7-11"></a>   ('IE',      [85.8, 84.6, 84.7, 74.5,   66, 58.6, 54.7, 44.8, 36.2, 26.6, 20.1])
+<a name="rest_code_d4cc8bd35b6a4be1885a03f8431aeae7-12"></a>   ('Firefox', [None, None, None, 16.6,   25,   31, 36.4, 45.5, 46.3, 42.8, 37.1])
+<a name="rest_code_d4cc8bd35b6a4be1885a03f8431aeae7-13"></a>   ('Chrome',  [None, None, None, None, None, None,    0,  3.9, 10.8, 23.8, 35.3])
 </pre>
 <p class="more"><a href="posts/pygal-charts-get-started/">Read more…</a></p>
-</div>
-        </div>
-    </div>
-    <div class="post-entry post-text">
-        <div class="entry-title">
-            <a href="posts/jian-ji-chun-cui-de-foxit-mobilepdf-yue-du-qi/">简洁纯粹的 Foxit MobilePDF 阅读器</a>
-        </div>
-        <div class="post-meta">
-            <span class="post-meta-item-icon">
-                <i class="user icon"></i>
-            </span>
-            <span class="post-meta-item-text" itemprop="author">
-                <a href="authors/ashfinal/">ashfinal</a>
-            </span>
-            <span class="post-meta-divider">|</span>
-            <span class="post-meta-item-icon">
-                <i class="calendar icon"></i>
-            </span>
-            <span class="post-meta-item-text">
-                <a href="archive.html">
-                    <time datetime="2016-12-27T15:21:33+08:00" itemprop="datePublished" title="2016-12-27 15:21">2016-12-27 15:21
-                    </time></a>
-            </span>
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                    <i class="tags icon"></i>
-                </span>
-                            <span class="post-meta-tag-item">
-                                <a href="categories/ios/">ios</a>
-                            </span>
-                            <span class="post-meta-tag-item">
-                                <a href="categories/pdf/">pdf</a>
-                            </span>
-        </div>
-        <div class="post-summary">
-                <div>
-<p>最早接触 Foxit Reader(福昕阅读器) 还是在 Windows 平台上，相较于 Adobe Reader 动辄上百兆的臃肿体积，功能齐全、小巧好用(≤10MB)的 Foxit Reader 无疑给笔者留下了深刻印象。非要鸡蛋里挑骨头的话，唯一让人颇有微词的恐怕是：默认的图标感觉有点丑 …… 尽管如此，每当有人抱怨 Adobe Reader 时，笔者总是很嗨皮地推荐福昕阅读器(后来也开始推荐更小巧的 Sumatra PDF)。</p>
-<p>笔者全面转战 OS X/ iOS 平台以后，想要在 iPhone 上阅读 PDF 文档，App Store 上搜寻半天不满意之时，突然想起来曾经用过的 Foxit Reader。也许也对应开发了移动版本呢？仔细一找果然有：<a href="https://itunes.apple.com/cn/app/foxit-mobilepdf-pdf-reader/id507040546?l=en&amp;mt=8" title="https://itunes.apple.com/cn/app/foxit-mobilepdf-pdf-reader/id507040546?l=en&amp;mt=8">Foxit MobilePDF</a> ！而且是免费的，果断下载安装之，一如既往的好用，哈哈。后来又陆续接触到一些 PDF 阅读器，但半年多以来 Foxit MobilePDF 始终占据在手机里，使用频率相当高。那么，接下来向大家推荐一下笔者眼中的这款国产精品软件吧～</p>
-<p class="more"><a href="posts/jian-ji-chun-cui-de-foxit-mobilepdf-yue-du-qi/">Read more…</a></p>
 </div>
         </div>
     </div>
@@ -496,6 +498,7 @@ with little effort, and i's even semi-interactive (hover your pointer over the l
                 <a class="item" href="index-8.html">9</a>
                 <a class="item" href="index-9.html">10</a>
                 <a class="item" href="index-10.html">11</a>
+                <a class="item" href="index-11.html">12</a>
     <a class="item" href="index-8.html"><i class="angle right icon"></i></a>
     </div>
 </div>
