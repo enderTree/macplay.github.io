@@ -64,6 +64,65 @@
     <div class="postindex page-body">
     <div class="post-entry post-text">
         <div class="entry-title">
+            <a href="posts/pygal-charts-get-started/">Pygal charts get started</a>
+        </div>
+        <div class="post-meta">
+            <span class="post-meta-item-icon">
+                <i class="user icon"></i>
+            </span>
+            <span class="post-meta-item-text" itemprop="author">
+                <a href="authors/ashfinal/">ashfinal</a>
+            </span>
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+                <i class="calendar icon"></i>
+            </span>
+            <span class="post-meta-item-text">
+                <a href="archive.html">
+                    <time datetime="2017-09-18T11:09:34+08:00" itemprop="datePublished" title="2017-09-18 11:09">2017-09-18 11:09
+                    </time></a>
+            </span>
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                    <i class="tags icon"></i>
+                </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/chart/">chart</a>
+                            </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/pygal/">pygal</a>
+                            </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/python/">python</a>
+                            </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/rest/">reST</a>
+                            </span>
+        </div>
+        <div class="post-summary">
+                <div>
+<p>If you are using reStructuredText and install pygal, Nikola has support for rather nice charts
+with little effort, and i's even semi-interactive (hover your pointer over the legend!):</p>
+<pre class="code rest"><a name="rest_code_ed5308ed94d04de38a70c01d7f17a296-1"></a><span class="p">..</span> <span class="ow">chart</span><span class="p">::</span> StackedLine
+<a name="rest_code_ed5308ed94d04de38a70c01d7f17a296-2"></a>   <span class="nc">:title:</span> <span class="nf">'Browser usage evolution (in %)'</span>
+<a name="rest_code_ed5308ed94d04de38a70c01d7f17a296-3"></a>   <span class="nc">:fill:</span> <span class="nf">True</span>
+<a name="rest_code_ed5308ed94d04de38a70c01d7f17a296-4"></a>   <span class="nc">:x_labels:</span> <span class="nf">['2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012']</span>
+<a name="rest_code_ed5308ed94d04de38a70c01d7f17a296-5"></a>   <span class="nc">:width:</span> <span class="nf">600</span>
+<a name="rest_code_ed5308ed94d04de38a70c01d7f17a296-6"></a>   <span class="nc">:height:</span> <span class="nf">400</span>
+<a name="rest_code_ed5308ed94d04de38a70c01d7f17a296-7"></a>   <span class="nc">:explicit_size:</span> <span class="nf">True</span>
+<a name="rest_code_ed5308ed94d04de38a70c01d7f17a296-8"></a>   <span class="nc">:style:</span> <span class="nf">DefaultStyle</span>
+<a name="rest_code_ed5308ed94d04de38a70c01d7f17a296-9"></a>
+<a name="rest_code_ed5308ed94d04de38a70c01d7f17a296-10"></a>   ('Others',  [14.2, 15.4, 15.3,  8.9,    9, 10.4,  8.9,  5.8,  6.7,  6.8,  7.5])
+<a name="rest_code_ed5308ed94d04de38a70c01d7f17a296-11"></a>   ('IE',      [85.8, 84.6, 84.7, 74.5,   66, 58.6, 54.7, 44.8, 36.2, 26.6, 20.1])
+<a name="rest_code_ed5308ed94d04de38a70c01d7f17a296-12"></a>   ('Firefox', [None, None, None, 16.6,   25,   31, 36.4, 45.5, 46.3, 42.8, 37.1])
+<a name="rest_code_ed5308ed94d04de38a70c01d7f17a296-13"></a>   ('Chrome',  [None, None, None, None, None, None,    0,  3.9, 10.8, 23.8, 35.3])
+</pre>
+<p class="more"><a href="posts/pygal-charts-get-started/">Read more…</a></p>
+</div>
+        </div>
+    </div>
+    <div class="post-entry post-text">
+        <div class="entry-title">
             <a href="posts/jian-ji-chun-cui-de-foxit-mobilepdf-yue-du-qi/">简洁纯粹的 Foxit MobilePDF 阅读器</a>
         </div>
         <div class="post-meta">
@@ -231,46 +290,6 @@
 <p>基于文本的录屏工具，对终端输入输出进行捕捉，然后以文本的形式来记录和回放！这使其拥有非常炫酷的特性：在“播放”过程中你随时可以暂停，然后对“播放器”中的文本进行复制或者其它操作！实际效果可以点击下方的播放按钮查看。</p>
 <p>具体原理简单点说，就是把终端显示和时间戳记录成 <del>json</del> <strong>cast</strong> 格式，然后使用 JavaScript 脚本解析出来。配合官方提供的 CSS 样式，乍看起来以为是视频播放器，然而它却是不折不扣的文本。相比视频录屏或 GIF 动图的方式，文件体积小的不可思议（比如以下时长 2:49 的录屏仅为 325KB ），不需缓冲即可播放，可以更方便的分享给他人或者嵌入到网页中。</p>
 <p class="more"><a href="posts/asciinema-geng-xuan-ku-di-ji-lu-he-fen-xiang-zhong-duan-cao-zuo/">Read more…</a></p>
-</div>
-        </div>
-    </div>
-    <div class="post-entry post-text">
-        <div class="entry-title">
-            <a href="posts/ru-he-zhi-zuo-os-x-yosemite-xi-tong-an-zhuang-pan/">如何制作 OS X Yosemite 系统安装盘</a>
-        </div>
-        <div class="post-meta">
-            <span class="post-meta-item-icon">
-                <i class="user icon"></i>
-            </span>
-            <span class="post-meta-item-text" itemprop="author">
-                <a href="authors/ashfinal/">ashfinal</a>
-            </span>
-            <span class="post-meta-divider">|</span>
-            <span class="post-meta-item-icon">
-                <i class="calendar icon"></i>
-            </span>
-            <span class="post-meta-item-text">
-                <a href="archive.html">
-                    <time datetime="2015-12-28T15:03:41+08:00" itemprop="datePublished" title="2015-12-28 15:03">2015-12-28 15:03
-                    </time></a>
-            </span>
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                    <i class="tags icon"></i>
-                </span>
-                            <span class="post-meta-tag-item">
-                                <a href="categories/macos/">macos</a>
-                            </span>
-                            <span class="post-meta-tag-item">
-                                <a href="categories/terminal/">terminal</a>
-                            </span>
-        </div>
-        <div class="post-summary">
-                <div>
-<p>最近在等 Yosemite 10.10.2 正式版推出，然后给手头的小白来个抹盘纯净重装。当然前提是需要可启动的系统安装盘，趁有空整理一下之前搜集的网上资料。</p>
-<p>制作启动盘的方法主要参考 <a href="http://lifehacker.com/how-to-burn-os-x-yosemite-to-a-usb-flash-drive-1647137212" title="http://lifehacker.com/how-to-burn-os-x-yosemite-to-a-usb-flash-drive-1647137212">lifehacker</a> 和 <a href="http://www.pc6.com/edu/69791.html" title="http://www.pc6.com/edu/69791.html">pc6</a> 的两篇文章，加上个人折腾的一点心得。</p>
-<p>首先你需要准备Yosemite系统镜像，只要之前通过苹果应用商店升级的话，都能非常方便地在<code>已购</code>选项卡中找到镜像并下载。按以往的经验应用商店的下载速度还是比较快的，如果下载过程中无聊可以去忙点别的事情。下载完成后镜像会出现在 <code>Applications</code> 文件夹，注意千万不要点升级就行。接下来就是比较重要的制作过程：</p>
-<p class="more"><a href="posts/ru-he-zhi-zuo-os-x-yosemite-xi-tong-an-zhuang-pan/">Read more…</a></p>
 </div>
         </div>
     </div>
