@@ -345,10 +345,10 @@
 </li>
 <li>
 <p class="first">macOS 计算机名相关</p>
-<pre class="code shell"><a name="rest_code_18fcdb2732dc4605b354c2ca7255e702-1"></a>sudo scutil --set HostName <span class="s2">"iMBP"</span>
-<a name="rest_code_18fcdb2732dc4605b354c2ca7255e702-2"></a>sudo scutil --set ComputerName <span class="s2">"iMBP"</span>
-<a name="rest_code_18fcdb2732dc4605b354c2ca7255e702-3"></a>sudo scutil --set LocalHostName <span class="s2">"iMBP"</span>
-<a name="rest_code_18fcdb2732dc4605b354c2ca7255e702-4"></a>sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string <span class="s2">"iMBP"</span>
+<pre class="code shell"><a name="rest_code_8e09f63511114cb4a0190a2575e59b77-1"></a>sudo scutil --set HostName <span class="s2">"iMBP"</span>
+<a name="rest_code_8e09f63511114cb4a0190a2575e59b77-2"></a>sudo scutil --set ComputerName <span class="s2">"iMBP"</span>
+<a name="rest_code_8e09f63511114cb4a0190a2575e59b77-3"></a>sudo scutil --set LocalHostName <span class="s2">"iMBP"</span>
+<a name="rest_code_8e09f63511114cb4a0190a2575e59b77-4"></a>sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string <span class="s2">"iMBP"</span>
 </pre>
 </li>
 <li>
@@ -369,11 +369,11 @@
 </li>
 <li>
 <p class="first">命令行版的 gist</p>
-<pre class="code shell"><a name="rest_code_6e7b628b33bd426fb59f1e3e24f59808-1"></a>gist --login
-<a name="rest_code_6e7b628b33bd426fb59f1e3e24f59808-2"></a>gist
-<a name="rest_code_6e7b628b33bd426fb59f1e3e24f59808-3"></a>gist selenium0.py
-<a name="rest_code_6e7b628b33bd426fb59f1e3e24f59808-4"></a>gist -l ashfinal
-<a name="rest_code_6e7b628b33bd426fb59f1e3e24f59808-5"></a>gist -d <span class="s2">"aria2 launchagent for macOS"</span> com.github.aria2.plist
+<pre class="code shell"><a name="rest_code_4911788614ad4d50bd3aa54378163f92-1"></a>gist --login
+<a name="rest_code_4911788614ad4d50bd3aa54378163f92-2"></a>gist
+<a name="rest_code_4911788614ad4d50bd3aa54378163f92-3"></a>gist selenium0.py
+<a name="rest_code_4911788614ad4d50bd3aa54378163f92-4"></a>gist -l ashfinal
+<a name="rest_code_4911788614ad4d50bd3aa54378163f92-5"></a>gist -d <span class="s2">"aria2 launchagent for macOS"</span> com.github.aria2.plist
 </pre>
 </li>
 <li>
@@ -398,14 +398,14 @@
 </li>
 <li>
 <p class="first">从 git 历史中删除二进制文件</p>
-<pre class="code shell"><a name="rest_code_6c7eae2c9f26479f919f45b110073cf0-1"></a>git filter-branch --force --index-filter <span class="se">\\</span>
-<a name="rest_code_6c7eae2c9f26479f919f45b110073cf0-2"></a><span class="s1">'git rm --cached --ignore-unmatch resources/watchbg.png'</span> <span class="se">\\</span>
-<a name="rest_code_6c7eae2c9f26479f919f45b110073cf0-3"></a>--prune-empty --tag-name-filter cat -- --all
+<pre class="code shell"><a name="rest_code_7950f260d6a9483f8815a75eedbb9f8e-1"></a>git filter-branch --force --index-filter <span class="se">\\</span>
+<a name="rest_code_7950f260d6a9483f8815a75eedbb9f8e-2"></a><span class="s1">'git rm --cached --ignore-unmatch resources/watchbg.png'</span> <span class="se">\\</span>
+<a name="rest_code_7950f260d6a9483f8815a75eedbb9f8e-3"></a>--prune-empty --tag-name-filter cat -- --all
 </pre>
 <p>后面还需要三个命令：</p>
-<pre class="code shell"><a name="rest_code_bd7a051c8d39435ead521525c53f9691-1"></a>git reflog expire --expire<span class="o">=</span>now --all
-<a name="rest_code_bd7a051c8d39435ead521525c53f9691-2"></a>git gc --prune<span class="o">=</span>now
-<a name="rest_code_bd7a051c8d39435ead521525c53f9691-3"></a>git gc --aggressive --prune<span class="o">=</span>now
+<pre class="code shell"><a name="rest_code_55a352a038324139b9e6ad69b6fdcaaa-1"></a>git reflog expire --expire<span class="o">=</span>now --all
+<a name="rest_code_55a352a038324139b9e6ad69b6fdcaaa-2"></a>git gc --prune<span class="o">=</span>now
+<a name="rest_code_55a352a038324139b9e6ad69b6fdcaaa-3"></a>git gc --aggressive --prune<span class="o">=</span>now
 </pre>
 </li>
 <li>
@@ -445,9 +445,9 @@
     </div>
         <div class="post-navigation no-print">
         <div class="ui huge secondary stackable menu">
-            <a class="post-nav-item post-nav-previous item" href="../old-man-smoked-his-pipe/" title="Previous post"><i class="angle double left icon"></i> Old Man Smoked His Pipe</a>
+            <a class="post-nav-item post-nav-previous item" href="../cong-markdown-dao-restructuredtext/" title="Previous post"><i class="angle double left icon"></i> 从 Markdown 到 reStructuredText</a>
         <div class="right menu">
-            <a class="post-nav-item post-nav-next item" href="../cong-markdown-dao-restructuredtext/" title="Next post">从 Markdown 到 reStructuredText <i class="angle double right icon"></i></a>
+            <a class="post-nav-item post-nav-next item" href="../old-man-smoked-his-pipe/" title="Next post">Old Man Smoked His Pipe <i class="angle double right icon"></i></a>
         </div>
         </div>
     </div>
