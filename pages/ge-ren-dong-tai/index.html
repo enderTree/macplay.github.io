@@ -110,13 +110,14 @@
                   });
                 $('.image-reference').fancybox();
             });
-        </script><script src="../../assets/js/gitalk.min.js"></script><script>
+        </script><script src="../../assets/js/md5.min.js"></script><script src="../../assets/js/gitalk.min.js"></script><script>
         const gitalk = new Gitalk({
             clientID: '12fcda845097d895a24c',
             clientSecret: '50ed60cde5f40897205197b4265b474cefbedc49',
             repo: 'macplay.github.io',
             owner: 'macplay',
             admin: ['macplay', 'ashfinal'],
+            id: md5(window.location.pathname),
             // facebook-like distraction free mode
             distractionFreeMode: false
         })

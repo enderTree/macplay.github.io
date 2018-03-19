@@ -361,13 +361,14 @@ Bob--&gt;Alice: I am good thanks!
             });
         </script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha256-SDRP1VVYu+tgAGKhddBSl5+ezofHKZeI+OzxakbIe/Y=" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
             MathJax.Hub.Config({tex2jax: {inlineMath: [['$latex ','$'], ['\\(','\\)']]}});
-        </script><script src="../../assets/js/gitalk.min.js"></script><script>
+        </script><script src="../../assets/js/md5.min.js"></script><script src="../../assets/js/gitalk.min.js"></script><script>
         const gitalk = new Gitalk({
             clientID: '12fcda845097d895a24c',
             clientSecret: '50ed60cde5f40897205197b4265b474cefbedc49',
             repo: 'macplay.github.io',
             owner: 'macplay',
             admin: ['macplay', 'ashfinal'],
+            id: md5(window.location.pathname),
             // facebook-like distraction free mode
             distractionFreeMode: false
         })
