@@ -64,6 +64,43 @@
     <div class="postindex page-body">
     <div class="post-entry post-text">
         <div class="entry-title">
+            <a href="posts/vim-cheat-sheet/">Vim Cheat Sheet</a>
+        </div>
+        <div class="post-meta">
+            <span class="post-meta-item-icon">
+                <i class="user icon"></i>
+            </span>
+            <span class="post-meta-item-text" itemprop="author">
+                <a href="authors/ashfinal/">ashfinal</a>
+            </span>
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+                <i class="calendar icon"></i>
+            </span>
+            <span class="post-meta-item-text">
+                <a href="archive.html">
+                    <time datetime="2017-12-06T19:19:24+08:00" itemprop="datePublished" title="2017-12-06 19:19">2017-12-06 19:19
+                    </time></a>
+            </span>
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                    <i class="tags icon"></i>
+                </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/chart/">chart</a>
+                            </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/vim/">vim</a>
+                            </span>
+        </div>
+        <div class="post-summary">
+                <div class="figure align-center">
+<a class="reference external image-reference" href="images/vim-cheat-sheet-full.png"><img alt="/images/vim-cheat-sheet-full.thumbnail.png" src="images/vim-cheat-sheet-full.thumbnail.png"></a>
+</div>
+        </div>
+    </div>
+    <div class="post-entry post-text">
+        <div class="entry-title">
             <a href="posts/macos-de-wen-ben-ti-huan-gong-neng/">macOS 的文本替换功能</a>
         </div>
         <div class="post-meta">
@@ -230,44 +267,6 @@
 <p>昨天（啊不， <span class="strike">前天</span> <span class="amend">大前天</span> ）在写 <a class="reference external" href="posts/zai-vim-zhong-shi-yong-undo-branches/">undo branches</a> 那篇文章的时候，<a class="reference external" href="https://github.com/qvacua/vimr">VimR</a> 编辑器突然毫无征兆的崩溃退出，导致花费好半天翻译过来的几段文字全部丢失。颇具有讽刺意味的是，当时写的文章正是关于在 Vim 编辑器中如何使用 undo branches，避免丢失你宝贵的资料。事情发生时笔者从浏览器中复制了一段文字，然后直接按下 <cite>CMD + V</cite> 粘贴，可能是其中含有一些特殊字符……悲剧就这样发生了。</p>
 <p>第一反应是去查看 undo 历史，很不幸那几段文字并没有保存其中。于是悲哀地意识到它们是永远也找不回来了：因为 undo branches 其实是保存文件撤销记录，而不是用来应对这种意外灾难的。<strong>真正的灾难应对机制已经被我关闭。</strong></p>
 <p class="more"><a href="posts/vim-nong-diu-liao-wo-de-shu-ju/">Read more…</a></p>
-</div>
-        </div>
-    </div>
-    <div class="post-entry post-text">
-        <div class="entry-title">
-            <a href="posts/zai-vim-zhong-shi-yong-undo-branches/">【译】在 Vim 中使用 undo branches</a>
-        </div>
-        <div class="post-meta">
-            <span class="post-meta-item-icon">
-                <i class="user icon"></i>
-            </span>
-            <span class="post-meta-item-text" itemprop="author">
-                <a href="authors/ashfinal/">ashfinal</a>
-            </span>
-            <span class="post-meta-divider">|</span>
-            <span class="post-meta-item-icon">
-                <i class="calendar icon"></i>
-            </span>
-            <span class="post-meta-item-text">
-                <a href="archive.html">
-                    <time datetime="2017-11-13T11:14:24+08:00" itemprop="datePublished" title="2017-11-13 11:14">2017-11-13 11:14
-                    </time></a>
-            </span>
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                    <i class="tags icon"></i>
-                </span>
-                            <span class="post-meta-tag-item">
-                                <a href="categories/translation/">translation</a>
-                            </span>
-                            <span class="post-meta-tag-item">
-                                <a href="categories/vim/">vim</a>
-                            </span>
-        </div>
-        <div class="post-summary">
-                <div>
-<p>Vim 支持标准的 <a class="reference external" href="http://vim.wikia.com/wiki/Undo_and_Redo">撤销和重做</a> ，同时还支持 <cite>undo branches</cite> 。这允许你撤销一些更改，然后再做新的更改，而在此过程中 <strong>所有</strong> 的更改都在 <cite>undo tree</cite> 中得到保留。你甚至还能把撤销（undo）记录保存到文件中，下次编辑同一文件时恢复这些记录。本文将向你初步展示如何在 Vim 中使用 <cite>undo branches</cite> 。</p>
-<p class="more"><a href="posts/zai-vim-zhong-shi-yong-undo-branches/">Read more…</a></p>
 </div>
         </div>
     </div>

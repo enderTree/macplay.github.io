@@ -64,6 +64,46 @@
     <div class="postindex page-body">
     <div class="post-entry post-text">
         <div class="entry-title">
+            <a href="posts/ru-he-jia-zhuang-vim-gao-shou/">如何假装 Vim 高手 :)</a>
+        </div>
+        <div class="post-meta">
+            <span class="post-meta-item-icon">
+                <i class="user icon"></i>
+            </span>
+            <span class="post-meta-item-text" itemprop="author">
+                <a href="authors/ashfinal/">ashfinal</a>
+            </span>
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+                <i class="calendar icon"></i>
+            </span>
+            <span class="post-meta-item-text">
+                <a href="archive.html">
+                    <time datetime="2017-10-14T18:28:11+08:00" itemprop="datePublished" title="2017-10-14 18:28">2017-10-14 18:28
+                    </time></a>
+            </span>
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                    <i class="tags icon"></i>
+                </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/neovim/">neovim</a>
+                            </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/terminal/">terminal</a>
+                            </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/vim/">vim</a>
+                            </span>
+        </div>
+        <div class="post-summary">
+                <div class="figure align-center">
+<a class="reference external image-reference" href="images/neovim_terminal.png"><img alt="/images/neovim_terminal.thumbnail.png" src="images/neovim_terminal.thumbnail.png"></a>
+</div>
+        </div>
+    </div>
+    <div class="post-entry post-text">
+        <div class="entry-title">
             <a href="posts/huan-ying-shi-yong-ma-ke-fei-xiang-wang-ye-ban/">欢迎使用马克飞象网页版</a>
         </div>
         <div class="post-meta">
@@ -245,51 +285,6 @@
                 <div>
 <p>刚刚给博客粗略添加了打印功能支持，利用 CSS 的媒体查询特性，非常简短的几行代码。效果是浏览文章页面的时候，点击 Safari <cite>打印</cite> 或 <cite>导出为 PDF</cite> 菜单，其它无关紧要的导航栏、侧边栏、评论框等会自动隐藏，只留下文章主体部分。</p>
 <img alt="/images/blog_print.png" class="align-center" src="images/blog_print.png"><p>Chrome 浏览器上应该也可以工作。考虑到“无纸化”理念如此普及的今天，该功能最常用的场景应该是导出 PDF 文档，也许文章标题叫“添加 PDF 导出功能”更好一些？ :)</p>
-</div>
-        </div>
-    </div>
-    <div class="post-entry post-text">
-        <div class="entry-title">
-            <a href="posts/shi-yong-vim-zai-markdown-ji-rst-wen-dang-zhong-chuang-jian-biao-ge/">使用 Vim 在 Markdown 及 rst 文档中创建表格</a>
-        </div>
-        <div class="post-meta">
-            <span class="post-meta-item-icon">
-                <i class="user icon"></i>
-            </span>
-            <span class="post-meta-item-text" itemprop="author">
-                <a href="authors/ashfinal/">ashfinal</a>
-            </span>
-            <span class="post-meta-divider">|</span>
-            <span class="post-meta-item-icon">
-                <i class="calendar icon"></i>
-            </span>
-            <span class="post-meta-item-text">
-                <a href="archive.html">
-                    <time datetime="2017-10-10T21:15:21+08:00" itemprop="datePublished" title="2017-10-10 21:15">2017-10-10 21:15
-                    </time></a>
-            </span>
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                    <i class="tags icon"></i>
-                </span>
-                            <span class="post-meta-tag-item">
-                                <a href="categories/markdown/">markdown</a>
-                            </span>
-                            <span class="post-meta-tag-item">
-                                <a href="categories/rest/">reST</a>
-                            </span>
-                            <span class="post-meta-tag-item">
-                                <a href="categories/vim/">vim</a>
-                            </span>
-        </div>
-        <div class="post-summary">
-                <div>
-<p>之前提到过 reStructuredText 的表格类型 <a class="reference external" href="posts/cong-markdown-dao-restructuredtext/#table">Grid Tables</a> 书写困难，普通编辑器难以胜任，可能有人好奇笔者是如何做的。对于 Vim、Emacs 两大编辑器来说，表格创建任务非常简单：</p>
-<video src="videos/vim_table.mp4" loop autoplay>
-Your browser does not support the video tag.
-</video><p>笔者平时使用较多的是 Vim 编辑器，借助强大的 <a class="reference external" href="https://github.com/dhruvasagar/vim-table-mode">vim-table-mode</a> 插件，只需正常输入表格内容和竖线符号 <tt class="docutils literal">|</tt> 就可以，其它事情如填充和对齐等等插件会自动处理。笔者针对 <a class="reference external" href="https://github.com/dhruvasagar/vim-table-mode">vim-table-mode</a> 插件做了几行配置，使其支持 Markdown、rst、org 表格的创建（org 表格在上图中没有展示），如果有人感兴趣的话，可以看一下个人 <a class="reference external" href="https://github.com/ashfinal/vimrc-config/blob/0cba64e3a384fc78483a431b45b65a50daba34dd/.vimrc#L750">vimrc 配置</a> 的相应部分。</p>
-<p>PS：发现录屏如果使用 GIF 格式，无论怎样压缩都达不到理想的画质和文件大小。最后使用 MP4 格式，1 分 53 秒时长的 720P 视频，压缩后仅仅 836 KB！感觉以后文章中插入动图可以抛弃 GIF 格式了。</p>
-<p>读者们注意到上面录屏其实是视频而不是图片吗？ :)</p>
 </div>
         </div>
     </div>
