@@ -563,7 +563,8 @@
 <a href="#listingsmanjarovifmvifm_rcvim-489">489</a>
 <a href="#listingsmanjarovifmvifm_rcvim-490">490</a>
 <a href="#listingsmanjarovifmvifm_rcvim-491">491</a>
-<a href="#listingsmanjarovifmvifm_rcvim-492">492</a></pre></div></td>
+<a href="#listingsmanjarovifmvifm_rcvim-492">492</a>
+<a href="#listingsmanjarovifmvifm_rcvim-493">493</a></pre></div></td>
 <td class="code"><pre class="code literal-block"><a name="listingsmanjarovifmvifm_rcvim-1"></a><span class="c">" vim: filetype=vifm :</span>
 <a name="listingsmanjarovifmvifm_rcvim-2"></a><span class="c">" Sample configuration file for vifm (last updated: 21 January, 2018)</span>
 <a name="listingsmanjarovifmvifm_rcvim-3"></a><span class="c">" You can edit this file by hand.</span>
@@ -675,387 +676,388 @@
 <a name="listingsmanjarovifmvifm_rcvim-109"></a>
 <a name="listingsmanjarovifmvifm_rcvim-110"></a><span class="c">" Set custom status line look</span>
 <a name="listingsmanjarovifmvifm_rcvim-111"></a>
-<a name="listingsmanjarovifmvifm_rcvim-112"></a><span class="k">set</span> <span class="nb">statusline</span><span class="p">=</span><span class="s2">"  Hint: %z%= %A %10u:%-7g %15s %20d  "</span>
-<a name="listingsmanjarovifmvifm_rcvim-113"></a>
-<a name="listingsmanjarovifmvifm_rcvim-114"></a><span class="c">" Show number of entries in the directory, instead of size</span>
-<a name="listingsmanjarovifmvifm_rcvim-115"></a><span class="k">set</span> dirsize<span class="p">=</span>nitems
-<a name="listingsmanjarovifmvifm_rcvim-116"></a>
-<a name="listingsmanjarovifmvifm_rcvim-117"></a><span class="c">" ------------------------------------------------------------------------------</span>
-<a name="listingsmanjarovifmvifm_rcvim-118"></a>
-<a name="listingsmanjarovifmvifm_rcvim-119"></a><span class="c">" :mark mark /full/directory/path [filename]</span>
-<a name="listingsmanjarovifmvifm_rcvim-120"></a>
-<a name="listingsmanjarovifmvifm_rcvim-121"></a>mark <span class="k">b</span> <span class="p">~</span><span class="sr">/bin/</span>
-<a name="listingsmanjarovifmvifm_rcvim-122"></a>mark <span class="k">h</span> <span class="p">~</span>/
-<a name="listingsmanjarovifmvifm_rcvim-123"></a>
-<a name="listingsmanjarovifmvifm_rcvim-124"></a><span class="c">" ------------------------------------------------------------------------------</span>
-<a name="listingsmanjarovifmvifm_rcvim-125"></a>
-<a name="listingsmanjarovifmvifm_rcvim-126"></a><span class="c">" :com[mand][!] command_name action</span>
-<a name="listingsmanjarovifmvifm_rcvim-127"></a><span class="c">" The following macros can be used in a command</span>
-<a name="listingsmanjarovifmvifm_rcvim-128"></a><span class="c">" %a is replaced with the user arguments.</span>
-<a name="listingsmanjarovifmvifm_rcvim-129"></a><span class="c">" %c the current file under the cursor.</span>
-<a name="listingsmanjarovifmvifm_rcvim-130"></a><span class="c">" %C the current file under the cursor in the other directory.</span>
-<a name="listingsmanjarovifmvifm_rcvim-131"></a><span class="c">" %f the current selected file, or files.</span>
-<a name="listingsmanjarovifmvifm_rcvim-132"></a><span class="c">" %F the current selected file, or files in the other directory.</span>
-<a name="listingsmanjarovifmvifm_rcvim-133"></a><span class="c">" %b same as %f %F.</span>
-<a name="listingsmanjarovifmvifm_rcvim-134"></a><span class="c">" %d the current directory name.</span>
-<a name="listingsmanjarovifmvifm_rcvim-135"></a><span class="c">" %D the other window directory name.</span>
-<a name="listingsmanjarovifmvifm_rcvim-136"></a><span class="c">" %m run the command in a menu window</span>
-<a name="listingsmanjarovifmvifm_rcvim-137"></a>
-<a name="listingsmanjarovifmvifm_rcvim-138"></a>command<span class="p">!</span> df df <span class="p">-</span><span class="k">h</span> %<span class="k">m</span> <span class="m">2</span><span class="p">&gt;</span> <span class="sr">/dev/</span>null
-<a name="listingsmanjarovifmvifm_rcvim-139"></a>command<span class="p">!</span> <span class="nb">diff</span> <span class="k">vim</span> <span class="p">-</span><span class="k">d</span> %<span class="k">f</span> %F
-<a name="listingsmanjarovifmvifm_rcvim-140"></a>command<span class="p">!</span> zip zip <span class="p">-</span><span class="k">r</span> %<span class="k">f</span>.zip %<span class="k">f</span>
-<a name="listingsmanjarovifmvifm_rcvim-141"></a>command<span class="p">!</span> run <span class="p">!!</span> ./%<span class="k">f</span>
-<a name="listingsmanjarovifmvifm_rcvim-142"></a>command<span class="p">!</span> <span class="k">make</span> <span class="p">!!</span><span class="k">make</span> %<span class="k">a</span>
-<a name="listingsmanjarovifmvifm_rcvim-143"></a>command<span class="p">!</span> mkcd :mkdir %<span class="k">a</span> <span class="p">|</span> <span class="k">cd</span> %<span class="k">a</span>
-<a name="listingsmanjarovifmvifm_rcvim-144"></a>command<span class="p">!</span> vgrep <span class="k">vim</span> <span class="s2">"+grep %a"</span>
-<a name="listingsmanjarovifmvifm_rcvim-145"></a>command<span class="p">!</span> reload :<span class="nb">write</span> <span class="p">|</span> restart
-<a name="listingsmanjarovifmvifm_rcvim-146"></a>
-<a name="listingsmanjarovifmvifm_rcvim-147"></a><span class="c">" ------------------------------------------------------------------------------</span>
-<a name="listingsmanjarovifmvifm_rcvim-148"></a>
-<a name="listingsmanjarovifmvifm_rcvim-149"></a><span class="c">" The file type is for the default programs to be used with</span>
-<a name="listingsmanjarovifmvifm_rcvim-150"></a><span class="c">" a file extension.</span>
-<a name="listingsmanjarovifmvifm_rcvim-151"></a><span class="c">" :filetype pattern1,pattern2 defaultprogram,program2</span>
-<a name="listingsmanjarovifmvifm_rcvim-152"></a><span class="c">" :fileviewer pattern1,pattern2 consoleviewer</span>
-<a name="listingsmanjarovifmvifm_rcvim-153"></a><span class="c">" The other programs for the file type can be accessed with the :file command</span>
-<a name="listingsmanjarovifmvifm_rcvim-154"></a><span class="c">" The command macros %f, %F, %d, %F may be used in the commands.</span>
-<a name="listingsmanjarovifmvifm_rcvim-155"></a><span class="c">" The %a macro is ignored.  To use a % you must put %%.</span>
-<a name="listingsmanjarovifmvifm_rcvim-156"></a>
-<a name="listingsmanjarovifmvifm_rcvim-157"></a><span class="c">" For automated FUSE mounts, you must register an extension with :file[x]type</span>
-<a name="listingsmanjarovifmvifm_rcvim-158"></a><span class="c">" in one of following formats:</span>
-<a name="listingsmanjarovifmvifm_rcvim-159"></a><span class="c">"</span>
-<a name="listingsmanjarovifmvifm_rcvim-160"></a><span class="c">" :filetype extensions FUSE_MOUNT|some_mount_command using %SOURCE_FILE and %DESTINATION_DIR variables</span>
-<a name="listingsmanjarovifmvifm_rcvim-161"></a><span class="c">" %SOURCE_FILE and %DESTINATION_DIR are filled in by vifm at runtime.</span>
-<a name="listingsmanjarovifmvifm_rcvim-162"></a><span class="c">" A sample line might look like this:</span>
-<a name="listingsmanjarovifmvifm_rcvim-163"></a><span class="c">" :filetype *.zip,*.jar,*.war,*.ear FUSE_MOUNT|fuse-zip %SOURCE_FILE %DESTINATION_DIR</span>
-<a name="listingsmanjarovifmvifm_rcvim-164"></a><span class="c">"</span>
-<a name="listingsmanjarovifmvifm_rcvim-165"></a><span class="c">" :filetype extensions FUSE_MOUNT2|some_mount_command using %PARAM and %DESTINATION_DIR variables</span>
-<a name="listingsmanjarovifmvifm_rcvim-166"></a><span class="c">" %PARAM and %DESTINATION_DIR are filled in by vifm at runtime.</span>
-<a name="listingsmanjarovifmvifm_rcvim-167"></a><span class="c">" A sample line might look like this:</span>
-<a name="listingsmanjarovifmvifm_rcvim-168"></a><span class="c">" :filetype *.ssh FUSE_MOUNT2|sshfs %PARAM %DESTINATION_DIR</span>
-<a name="listingsmanjarovifmvifm_rcvim-169"></a><span class="c">" %PARAM value is filled from the first line of file (whole line).</span>
-<a name="listingsmanjarovifmvifm_rcvim-170"></a><span class="c">" Example first line for SshMount filetype: root@127.0.0.1:/</span>
-<a name="listingsmanjarovifmvifm_rcvim-171"></a><span class="c">"</span>
-<a name="listingsmanjarovifmvifm_rcvim-172"></a><span class="c">" You can also add %CLEAR if you want to clear screen before running FUSE</span>
-<a name="listingsmanjarovifmvifm_rcvim-173"></a><span class="c">" program.</span>
-<a name="listingsmanjarovifmvifm_rcvim-174"></a>
-<a name="listingsmanjarovifmvifm_rcvim-175"></a><span class="c">" Pdf</span>
-<a name="listingsmanjarovifmvifm_rcvim-176"></a>filextype *.pdf zathura %<span class="k">c</span> %<span class="k">i</span> &amp;<span class="p">,</span> apvlv %<span class="k">c</span><span class="p">,</span> xpdf %<span class="k">c</span>
-<a name="listingsmanjarovifmvifm_rcvim-177"></a>fileviewer *.pdf pdftotext <span class="p">-</span>nopgbrk %<span class="k">c</span> <span class="p">-</span>
-<a name="listingsmanjarovifmvifm_rcvim-178"></a>
-<a name="listingsmanjarovifmvifm_rcvim-179"></a><span class="c">" PostScript</span>
-<a name="listingsmanjarovifmvifm_rcvim-180"></a>filextype *.<span class="k">ps</span><span class="p">,</span>*.eps<span class="p">,</span>*.<span class="k">ps</span>.gz
-<a name="listingsmanjarovifmvifm_rcvim-181"></a>        \ {View <span class="k">in</span> zathura}
-<a name="listingsmanjarovifmvifm_rcvim-182"></a>        \ zathura %<span class="k">f</span><span class="p">,</span>
-<a name="listingsmanjarovifmvifm_rcvim-183"></a>        \ {View <span class="k">in</span> gv}
-<a name="listingsmanjarovifmvifm_rcvim-184"></a>        \ gv %<span class="k">c</span> %<span class="k">i</span> &amp;<span class="p">,</span>
-<a name="listingsmanjarovifmvifm_rcvim-185"></a>
-<a name="listingsmanjarovifmvifm_rcvim-186"></a><span class="c">" Djvu</span>
-<a name="listingsmanjarovifmvifm_rcvim-187"></a>filextype *.djvu
-<a name="listingsmanjarovifmvifm_rcvim-188"></a>        \ {View <span class="k">in</span> zathura}
-<a name="listingsmanjarovifmvifm_rcvim-189"></a>        \ zathura %<span class="k">f</span><span class="p">,</span>
-<a name="listingsmanjarovifmvifm_rcvim-190"></a>        \ {View <span class="k">in</span> apvlv}
-<a name="listingsmanjarovifmvifm_rcvim-191"></a>        \ apvlv %<span class="k">f</span><span class="p">,</span>
-<a name="listingsmanjarovifmvifm_rcvim-192"></a>
-<a name="listingsmanjarovifmvifm_rcvim-193"></a><span class="c">" Audio</span>
-<a name="listingsmanjarovifmvifm_rcvim-194"></a><span class="k">filetype</span> *.wav<span class="p">,</span>*.mp3<span class="p">,</span>*.flac<span class="p">,</span>*.m4a<span class="p">,</span>*.wma<span class="p">,</span>*.ape<span class="p">,</span>*.ac3<span class="p">,</span>*.og[agx]<span class="p">,</span>*.spx<span class="p">,</span>*.opus
-<a name="listingsmanjarovifmvifm_rcvim-195"></a>       \ {Play using ffplay}
-<a name="listingsmanjarovifmvifm_rcvim-196"></a>       \ ffplay <span class="p">-</span>nodisp %<span class="k">c</span><span class="p">,</span>
-<a name="listingsmanjarovifmvifm_rcvim-197"></a>       \ {Play using MPlayer}
-<a name="listingsmanjarovifmvifm_rcvim-198"></a>       \ mplayer %<span class="k">f</span><span class="p">,</span>
-<a name="listingsmanjarovifmvifm_rcvim-199"></a>fileviewer *.mp3 mp3info
-<a name="listingsmanjarovifmvifm_rcvim-200"></a>fileviewer *.flac soxi
-<a name="listingsmanjarovifmvifm_rcvim-201"></a>
-<a name="listingsmanjarovifmvifm_rcvim-202"></a><span class="c">" Video</span>
-<a name="listingsmanjarovifmvifm_rcvim-203"></a>filextype *.avi<span class="p">,</span>*.mp4<span class="p">,</span>*.wmv<span class="p">,</span>*.dat<span class="p">,</span>*.<span class="m">3</span>gp<span class="p">,</span>*.ogv<span class="p">,</span>*.<span class="k">mkv</span><span class="p">,</span>*.mpg<span class="p">,</span>*.mpeg<span class="p">,</span>*.vob<span class="p">,</span>
-<a name="listingsmanjarovifmvifm_rcvim-204"></a>         \*.fl[icv]<span class="p">,</span>*.m2v<span class="p">,</span>*.mov<span class="p">,</span>*.webm<span class="p">,</span>*.<span class="k">ts</span><span class="p">,</span>*.mts<span class="p">,</span>*.m4v<span class="p">,</span>*.<span class="k">r</span>[am]<span class="p">,</span>*.qt<span class="p">,</span>*.divx<span class="p">,</span>
-<a name="listingsmanjarovifmvifm_rcvim-205"></a>         \*.<span class="k">as</span>[fx]
-<a name="listingsmanjarovifmvifm_rcvim-206"></a>        \ {View using ffplay}
-<a name="listingsmanjarovifmvifm_rcvim-207"></a>        \ ffplay <span class="p">-</span><span class="nb">fs</span> %<span class="k">f</span><span class="p">,</span>
-<a name="listingsmanjarovifmvifm_rcvim-208"></a>        \ {View using Dragon}
-<a name="listingsmanjarovifmvifm_rcvim-209"></a>        \ dragon %<span class="k">f</span>:<span class="k">p</span><span class="p">,</span>
-<a name="listingsmanjarovifmvifm_rcvim-210"></a>        \ {View using mplayer}
-<a name="listingsmanjarovifmvifm_rcvim-211"></a>        \ mplayer %<span class="k">f</span><span class="p">,</span>
-<a name="listingsmanjarovifmvifm_rcvim-212"></a>fileviewer *.avi<span class="p">,</span>*.mp4<span class="p">,</span>*.wmv<span class="p">,</span>*.dat<span class="p">,</span>*.<span class="m">3</span>gp<span class="p">,</span>*.ogv<span class="p">,</span>*.<span class="k">mkv</span><span class="p">,</span>*.mpg<span class="p">,</span>*.mpeg<span class="p">,</span>*.vob<span class="p">,</span>
-<a name="listingsmanjarovifmvifm_rcvim-213"></a>          \*.fl[icv]<span class="p">,</span>*.m2v<span class="p">,</span>*.mov<span class="p">,</span>*.webm<span class="p">,</span>*.<span class="k">ts</span><span class="p">,</span>*.mts<span class="p">,</span>*.m4v<span class="p">,</span>*.<span class="k">r</span>[am]<span class="p">,</span>*.qt<span class="p">,</span>*.divx<span class="p">,</span>
-<a name="listingsmanjarovifmvifm_rcvim-214"></a>          \*.<span class="k">as</span>[fx]
-<a name="listingsmanjarovifmvifm_rcvim-215"></a>         \ ffprobe <span class="p">-</span>pretty %<span class="k">c</span> <span class="m">2</span><span class="p">&gt;</span>&amp;<span class="m">1</span>
-<a name="listingsmanjarovifmvifm_rcvim-216"></a>
-<a name="listingsmanjarovifmvifm_rcvim-217"></a><span class="c">" Web</span>
-<a name="listingsmanjarovifmvifm_rcvim-218"></a>filextype *.html<span class="p">,</span>*.htm
-<a name="listingsmanjarovifmvifm_rcvim-219"></a>        \ {Open with dwb}
-<a name="listingsmanjarovifmvifm_rcvim-220"></a>        \ dwb %<span class="k">f</span> %<span class="k">i</span> &amp;<span class="p">,</span>
-<a name="listingsmanjarovifmvifm_rcvim-221"></a>        \ {Open with firefox}
-<a name="listingsmanjarovifmvifm_rcvim-222"></a>        \ firefox %<span class="k">f</span> &amp;<span class="p">,</span>
-<a name="listingsmanjarovifmvifm_rcvim-223"></a>        \ {Open with uzbl}
-<a name="listingsmanjarovifmvifm_rcvim-224"></a>        \ uzbl<span class="p">-</span>browser %<span class="k">f</span> %<span class="k">i</span> &amp;<span class="p">,</span>
-<a name="listingsmanjarovifmvifm_rcvim-225"></a><span class="k">filetype</span> *.html<span class="p">,</span>*.htm links<span class="p">,</span> lynx
-<a name="listingsmanjarovifmvifm_rcvim-226"></a>
-<a name="listingsmanjarovifmvifm_rcvim-227"></a><span class="c">" Object</span>
-<a name="listingsmanjarovifmvifm_rcvim-228"></a><span class="k">filetype</span> *.<span class="k">o</span> nm %<span class="k">f</span> <span class="p">|</span> less
-<a name="listingsmanjarovifmvifm_rcvim-229"></a>
-<a name="listingsmanjarovifmvifm_rcvim-230"></a><span class="c">" Man page</span>
-<a name="listingsmanjarovifmvifm_rcvim-231"></a><span class="k">filetype</span> *.[<span class="m">1-8</span>] man ./%<span class="k">c</span>
-<a name="listingsmanjarovifmvifm_rcvim-232"></a>fileviewer *.[<span class="m">1-8</span>] man ./%<span class="k">c</span> <span class="p">|</span> <span class="k">col</span> <span class="p">-</span><span class="k">b</span>
-<a name="listingsmanjarovifmvifm_rcvim-233"></a>
-<a name="listingsmanjarovifmvifm_rcvim-234"></a><span class="c">" Images</span>
-<a name="listingsmanjarovifmvifm_rcvim-235"></a>filextype *.bmp<span class="p">,</span>*.jpg<span class="p">,</span>*.jpeg<span class="p">,</span>*.png<span class="p">,</span>*.gif<span class="p">,</span>*.xpm
-<a name="listingsmanjarovifmvifm_rcvim-236"></a>        \ {View <span class="k">in</span> sxiv}
-<a name="listingsmanjarovifmvifm_rcvim-237"></a>        \ sxiv %<span class="k">f</span><span class="p">,</span>
-<a name="listingsmanjarovifmvifm_rcvim-238"></a>        \ {View <span class="k">in</span> gpicview}
-<a name="listingsmanjarovifmvifm_rcvim-239"></a>        \ gpicview %<span class="k">c</span><span class="p">,</span>
-<a name="listingsmanjarovifmvifm_rcvim-240"></a>        \ {View <span class="k">in</span> shotwell}
-<a name="listingsmanjarovifmvifm_rcvim-241"></a>        \ shotwell<span class="p">,</span>
-<a name="listingsmanjarovifmvifm_rcvim-242"></a>fileviewer *.bmp<span class="p">,</span>*.jpg<span class="p">,</span>*.jpeg<span class="p">,</span>*.png<span class="p">,</span>*.gif<span class="p">,</span>*.xpm
-<a name="listingsmanjarovifmvifm_rcvim-243"></a>         \ convert <span class="p">-</span>identify %<span class="k">f</span> <span class="p">-</span><span class="k">verbose</span> <span class="sr">/dev/</span>null
-<a name="listingsmanjarovifmvifm_rcvim-244"></a>
-<a name="listingsmanjarovifmvifm_rcvim-245"></a><span class="c">" OpenRaster</span>
-<a name="listingsmanjarovifmvifm_rcvim-246"></a>filextype *.ora
-<a name="listingsmanjarovifmvifm_rcvim-247"></a>        \ {Edit <span class="k">in</span> MyPaint}
-<a name="listingsmanjarovifmvifm_rcvim-248"></a>        \ mypaint %<span class="k">f</span><span class="p">,</span>
-<a name="listingsmanjarovifmvifm_rcvim-249"></a>
-<a name="listingsmanjarovifmvifm_rcvim-250"></a><span class="c">" Mindmap</span>
-<a name="listingsmanjarovifmvifm_rcvim-251"></a>filextype *.vym
-<a name="listingsmanjarovifmvifm_rcvim-252"></a>        \ {Open with VYM}
-<a name="listingsmanjarovifmvifm_rcvim-253"></a>        \ vym %<span class="k">f</span> &amp;<span class="p">,</span>
-<a name="listingsmanjarovifmvifm_rcvim-254"></a>
-<a name="listingsmanjarovifmvifm_rcvim-255"></a><span class="c">" MD5</span>
-<a name="listingsmanjarovifmvifm_rcvim-256"></a><span class="k">filetype</span> *.md5
-<a name="listingsmanjarovifmvifm_rcvim-257"></a>       \ {Check MD5 hash sum}
-<a name="listingsmanjarovifmvifm_rcvim-258"></a>       \ md5sum <span class="p">-</span><span class="k">c</span> %<span class="k">f</span> %S<span class="p">,</span>
-<a name="listingsmanjarovifmvifm_rcvim-259"></a>
-<a name="listingsmanjarovifmvifm_rcvim-260"></a><span class="c">" SHA1</span>
-<a name="listingsmanjarovifmvifm_rcvim-261"></a><span class="k">filetype</span> *.sha1
-<a name="listingsmanjarovifmvifm_rcvim-262"></a>       \ {Check SHA1 hash sum}
-<a name="listingsmanjarovifmvifm_rcvim-263"></a>       \ sha1sum <span class="p">-</span><span class="k">c</span> %<span class="k">f</span> %S<span class="p">,</span>
-<a name="listingsmanjarovifmvifm_rcvim-264"></a>
-<a name="listingsmanjarovifmvifm_rcvim-265"></a><span class="c">" SHA256</span>
-<a name="listingsmanjarovifmvifm_rcvim-266"></a><span class="k">filetype</span> *.sha256
-<a name="listingsmanjarovifmvifm_rcvim-267"></a>       \ {Check SHA256 hash sum}
-<a name="listingsmanjarovifmvifm_rcvim-268"></a>       \ sha256sum <span class="p">-</span><span class="k">c</span> %<span class="k">f</span> %S<span class="p">,</span>
-<a name="listingsmanjarovifmvifm_rcvim-269"></a>
-<a name="listingsmanjarovifmvifm_rcvim-270"></a><span class="c">" SHA512</span>
-<a name="listingsmanjarovifmvifm_rcvim-271"></a><span class="k">filetype</span> *.sha512
-<a name="listingsmanjarovifmvifm_rcvim-272"></a>       \ {Check SHA512 hash sum}
-<a name="listingsmanjarovifmvifm_rcvim-273"></a>       \ sha512sum <span class="p">-</span><span class="k">c</span> %<span class="k">f</span> %S<span class="p">,</span>
-<a name="listingsmanjarovifmvifm_rcvim-274"></a>
-<a name="listingsmanjarovifmvifm_rcvim-275"></a><span class="c">" GPG signature</span>
-<a name="listingsmanjarovifmvifm_rcvim-276"></a><span class="k">filetype</span> *.<span class="k">asc</span>
-<a name="listingsmanjarovifmvifm_rcvim-277"></a>       \ {Check signature}
-<a name="listingsmanjarovifmvifm_rcvim-278"></a>       \ <span class="p">!!</span>gpg <span class="p">--</span>verify %<span class="k">c</span><span class="p">,</span>
-<a name="listingsmanjarovifmvifm_rcvim-279"></a>
-<a name="listingsmanjarovifmvifm_rcvim-280"></a><span class="c">" Torrent</span>
-<a name="listingsmanjarovifmvifm_rcvim-281"></a><span class="k">filetype</span> *.torrent ktorrent %<span class="k">f</span> &amp;
-<a name="listingsmanjarovifmvifm_rcvim-282"></a>fileviewer *.torrent dumptorrent <span class="p">-</span><span class="k">v</span> %<span class="k">c</span>
-<a name="listingsmanjarovifmvifm_rcvim-283"></a>
-<a name="listingsmanjarovifmvifm_rcvim-284"></a><span class="c">" FuseZipMount</span>
-<a name="listingsmanjarovifmvifm_rcvim-285"></a><span class="k">filetype</span> *.zip<span class="p">,</span>*.jar<span class="p">,</span>*.war<span class="p">,</span>*.ear<span class="p">,</span>*.oxt<span class="p">,</span>*.apkg
-<a name="listingsmanjarovifmvifm_rcvim-286"></a>       \ {Mount with fuse<span class="p">-</span>zip}
-<a name="listingsmanjarovifmvifm_rcvim-287"></a>       \ FUSE_MOUNT<span class="p">|</span>fuse<span class="p">-</span>zip %SOURCE_FILE %DESTINATION_DIR<span class="p">,</span>
-<a name="listingsmanjarovifmvifm_rcvim-288"></a>       \ {View contents}
-<a name="listingsmanjarovifmvifm_rcvim-289"></a>       \ zip <span class="p">-</span><span class="k">sf</span> %<span class="k">c</span> <span class="p">|</span> less<span class="p">,</span>
-<a name="listingsmanjarovifmvifm_rcvim-290"></a>       \ {Extract here}
-<a name="listingsmanjarovifmvifm_rcvim-291"></a>       \ tar <span class="p">-</span>xf %<span class="k">c</span><span class="p">,</span>
-<a name="listingsmanjarovifmvifm_rcvim-292"></a>fileviewer *.zip<span class="p">,</span>*.jar<span class="p">,</span>*.war<span class="p">,</span>*.ear<span class="p">,</span>*.oxt zip <span class="p">-</span><span class="k">sf</span> %<span class="k">c</span>
-<a name="listingsmanjarovifmvifm_rcvim-293"></a>
-<a name="listingsmanjarovifmvifm_rcvim-294"></a><span class="c">" ArchiveMount</span>
-<a name="listingsmanjarovifmvifm_rcvim-295"></a><span class="k">filetype</span> *.tar<span class="p">,</span>*.tar.bz2<span class="p">,</span>*.tbz2<span class="p">,</span>*.tgz<span class="p">,</span>*.tar.gz<span class="p">,</span>*.tar.xz<span class="p">,</span>*.txz
-<a name="listingsmanjarovifmvifm_rcvim-296"></a>       \ {Mount with archivemount}
-<a name="listingsmanjarovifmvifm_rcvim-297"></a>       \ FUSE_MOUNT<span class="p">|</span>archivemount %SOURCE_FILE %DESTINATION_DIR<span class="p">,</span>
-<a name="listingsmanjarovifmvifm_rcvim-298"></a>fileviewer *.tgz<span class="p">,</span>*.tar.gz tar <span class="p">-</span>tzf %<span class="k">c</span>
-<a name="listingsmanjarovifmvifm_rcvim-299"></a>fileviewer *.tar.bz2<span class="p">,</span>*.tbz2 tar <span class="p">-</span>tjf %<span class="k">c</span>
-<a name="listingsmanjarovifmvifm_rcvim-300"></a>fileviewer *.tar.txz<span class="p">,</span>*.txz xz <span class="p">--</span><span class="nb">list</span> %<span class="k">c</span>
-<a name="listingsmanjarovifmvifm_rcvim-301"></a>fileviewer *.tar tar <span class="p">-</span><span class="k">tf</span> %<span class="k">c</span>
-<a name="listingsmanjarovifmvifm_rcvim-302"></a>
-<a name="listingsmanjarovifmvifm_rcvim-303"></a><span class="c">" Rar2FsMount and rar archives</span>
-<a name="listingsmanjarovifmvifm_rcvim-304"></a><span class="k">filetype</span> *.rar
-<a name="listingsmanjarovifmvifm_rcvim-305"></a>       \ {Mount with rar2fs}
-<a name="listingsmanjarovifmvifm_rcvim-306"></a>       \ FUSE_MOUNT<span class="p">|</span>rar2fs %SOURCE_FILE %DESTINATION_DIR<span class="p">,</span>
-<a name="listingsmanjarovifmvifm_rcvim-307"></a>fileviewer *.rar unrar <span class="k">v</span> %<span class="k">c</span>
-<a name="listingsmanjarovifmvifm_rcvim-308"></a>
-<a name="listingsmanjarovifmvifm_rcvim-309"></a><span class="c">" IsoMount</span>
-<a name="listingsmanjarovifmvifm_rcvim-310"></a><span class="k">filetype</span> *.iso
-<a name="listingsmanjarovifmvifm_rcvim-311"></a>       \ {Mount with fuseiso}
-<a name="listingsmanjarovifmvifm_rcvim-312"></a>       \ FUSE_MOUNT<span class="p">|</span>fuseiso %SOURCE_FILE %DESTINATION_DIR<span class="p">,</span>
-<a name="listingsmanjarovifmvifm_rcvim-313"></a>
-<a name="listingsmanjarovifmvifm_rcvim-314"></a><span class="c">" SshMount</span>
-<a name="listingsmanjarovifmvifm_rcvim-315"></a><span class="k">filetype</span> *.ssh
-<a name="listingsmanjarovifmvifm_rcvim-316"></a>       \ {Mount with sshfs}
-<a name="listingsmanjarovifmvifm_rcvim-317"></a>       \ FUSE_MOUNT2<span class="p">|</span>sshfs %PARAM %DESTINATION_DIR %FOREGROUND<span class="p">,</span>
-<a name="listingsmanjarovifmvifm_rcvim-318"></a>
-<a name="listingsmanjarovifmvifm_rcvim-319"></a><span class="c">" FtpMount</span>
-<a name="listingsmanjarovifmvifm_rcvim-320"></a><span class="k">filetype</span> *.ftp
-<a name="listingsmanjarovifmvifm_rcvim-321"></a>       \ {Mount with curlftpfs}
-<a name="listingsmanjarovifmvifm_rcvim-322"></a>       \ FUSE_MOUNT2<span class="p">|</span>curlftpfs <span class="p">-</span><span class="k">o</span> ftp_port<span class="p">=-,,</span>disable_eprt %PARAM %DESTINATION_DIR %FOREGROUND<span class="p">,</span>
-<a name="listingsmanjarovifmvifm_rcvim-323"></a>
-<a name="listingsmanjarovifmvifm_rcvim-324"></a><span class="c">" Fuse7z and 7z archives</span>
-<a name="listingsmanjarovifmvifm_rcvim-325"></a><span class="k">filetype</span> *.<span class="m">7</span>z
-<a name="listingsmanjarovifmvifm_rcvim-326"></a>       \ {Mount with fuse<span class="m">-7</span>z}
-<a name="listingsmanjarovifmvifm_rcvim-327"></a>       \ FUSE_MOUNT<span class="p">|</span>fuse<span class="m">-7</span>z %SOURCE_FILE %DESTINATION_DIR<span class="p">,</span>
-<a name="listingsmanjarovifmvifm_rcvim-328"></a>fileviewer *.<span class="m">7</span>z <span class="m">7</span>z <span class="k">l</span> %<span class="k">c</span>
-<a name="listingsmanjarovifmvifm_rcvim-329"></a>
-<a name="listingsmanjarovifmvifm_rcvim-330"></a><span class="c">" Office files</span>
-<a name="listingsmanjarovifmvifm_rcvim-331"></a>filextype *.odt<span class="p">,</span>*.doc<span class="p">,</span>*.docx<span class="p">,</span>*.xls<span class="p">,</span>*.xlsx<span class="p">,</span>*.odp<span class="p">,</span>*.pptx libreoffice %<span class="k">f</span> &amp;
-<a name="listingsmanjarovifmvifm_rcvim-332"></a>fileviewer *.doc catdoc %<span class="k">c</span>
-<a name="listingsmanjarovifmvifm_rcvim-333"></a>fileviewer *.docx<span class="p">,</span> docx2txt.pl %<span class="k">f</span> <span class="p">-</span>
-<a name="listingsmanjarovifmvifm_rcvim-334"></a>
-<a name="listingsmanjarovifmvifm_rcvim-335"></a><span class="c">" TuDu files</span>
-<a name="listingsmanjarovifmvifm_rcvim-336"></a><span class="k">filetype</span> *.tudu tudu <span class="p">-</span><span class="k">f</span> %<span class="k">c</span>
-<a name="listingsmanjarovifmvifm_rcvim-337"></a>
-<a name="listingsmanjarovifmvifm_rcvim-338"></a><span class="c">" Qt projects</span>
-<a name="listingsmanjarovifmvifm_rcvim-339"></a>filextype *.<span class="k">pro</span> qtcreator %<span class="k">f</span> &amp;
-<a name="listingsmanjarovifmvifm_rcvim-340"></a>
-<a name="listingsmanjarovifmvifm_rcvim-341"></a><span class="c">" Directories</span>
-<a name="listingsmanjarovifmvifm_rcvim-342"></a>filextype */
-<a name="listingsmanjarovifmvifm_rcvim-343"></a>        \ {View <span class="k">in</span> thunar}
-<a name="listingsmanjarovifmvifm_rcvim-344"></a>        \ Thunar %<span class="k">f</span> &amp;<span class="p">,</span>
-<a name="listingsmanjarovifmvifm_rcvim-345"></a>
-<a name="listingsmanjarovifmvifm_rcvim-346"></a><span class="c">" Syntax highlighting in preview</span>
-<a name="listingsmanjarovifmvifm_rcvim-347"></a><span class="c">"</span>
-<a name="listingsmanjarovifmvifm_rcvim-348"></a><span class="c">" Explicitly set highlight type for some extensions</span>
-<a name="listingsmanjarovifmvifm_rcvim-349"></a><span class="c">"</span>
-<a name="listingsmanjarovifmvifm_rcvim-350"></a><span class="c">" 256-color terminal</span>
-<a name="listingsmanjarovifmvifm_rcvim-351"></a><span class="c">" fileviewer *.[ch],*.[ch]pp highlight -O xterm256 -s dante --syntax c %c</span>
-<a name="listingsmanjarovifmvifm_rcvim-352"></a><span class="c">" fileviewer Makefile,Makefile.* highlight -O xterm256 -s dante --syntax make %c</span>
-<a name="listingsmanjarovifmvifm_rcvim-353"></a><span class="c">"</span>
-<a name="listingsmanjarovifmvifm_rcvim-354"></a><span class="c">" 16-color terminal</span>
-<a name="listingsmanjarovifmvifm_rcvim-355"></a><span class="c">" fileviewer *.c,*.h highlight -O ansi -s dante %c</span>
-<a name="listingsmanjarovifmvifm_rcvim-356"></a><span class="c">"</span>
-<a name="listingsmanjarovifmvifm_rcvim-357"></a><span class="c">" Or leave it for automatic detection</span>
-<a name="listingsmanjarovifmvifm_rcvim-358"></a><span class="c">"</span>
-<a name="listingsmanjarovifmvifm_rcvim-359"></a>fileviewer *[^/] pygmentize <span class="p">-</span>O style<span class="p">=</span>monokai <span class="p">-</span><span class="k">f</span> console256 <span class="p">-</span><span class="k">g</span>
-<a name="listingsmanjarovifmvifm_rcvim-360"></a>
-<a name="listingsmanjarovifmvifm_rcvim-361"></a><span class="c">" Displaying pictures in terminal</span>
-<a name="listingsmanjarovifmvifm_rcvim-362"></a><span class="c">"</span>
-<a name="listingsmanjarovifmvifm_rcvim-363"></a><span class="c">" fileviewer *.jpg,*.png shellpic %c</span>
-<a name="listingsmanjarovifmvifm_rcvim-364"></a>
-<a name="listingsmanjarovifmvifm_rcvim-365"></a><span class="c">" Open all other files with default system programs (you can also remove all</span>
-<a name="listingsmanjarovifmvifm_rcvim-366"></a><span class="c">" :file[x]type commands above to ensure they don't interfere with system-wide</span>
-<a name="listingsmanjarovifmvifm_rcvim-367"></a><span class="c">" settings).  By default all unknown files are opened with 'vi[x]cmd'</span>
-<a name="listingsmanjarovifmvifm_rcvim-368"></a><span class="c">" uncommenting one of lines below will result in ignoring 'vi[x]cmd' option</span>
-<a name="listingsmanjarovifmvifm_rcvim-369"></a><span class="c">" for unknown file types.</span>
-<a name="listingsmanjarovifmvifm_rcvim-370"></a><span class="c">" For *nix:</span>
-<a name="listingsmanjarovifmvifm_rcvim-371"></a><span class="c">" filetype * xdg-open</span>
-<a name="listingsmanjarovifmvifm_rcvim-372"></a><span class="c">" For OS X:</span>
-<a name="listingsmanjarovifmvifm_rcvim-373"></a><span class="c">" filetype * open</span>
-<a name="listingsmanjarovifmvifm_rcvim-374"></a><span class="c">" For Windows:</span>
-<a name="listingsmanjarovifmvifm_rcvim-375"></a><span class="c">" filetype * start, explorer</span>
-<a name="listingsmanjarovifmvifm_rcvim-376"></a>
-<a name="listingsmanjarovifmvifm_rcvim-377"></a><span class="c">" ------------------------------------------------------------------------------</span>
-<a name="listingsmanjarovifmvifm_rcvim-378"></a>
-<a name="listingsmanjarovifmvifm_rcvim-379"></a><span class="c">" What should be saved automatically between vifm runs</span>
-<a name="listingsmanjarovifmvifm_rcvim-380"></a><span class="c">" Like in previous versions of vifm</span>
-<a name="listingsmanjarovifmvifm_rcvim-381"></a><span class="c">" set vifminfo=options,filetypes,commands,bookmarks,dhistory,state,cs</span>
-<a name="listingsmanjarovifmvifm_rcvim-382"></a><span class="c">" Like in vi</span>
-<a name="listingsmanjarovifmvifm_rcvim-383"></a><span class="k">set</span> vifminfo<span class="p">=</span>dhistory<span class="p">,</span>savedirs<span class="p">,</span>chistory<span class="p">,</span>state<span class="p">,</span>tui<span class="p">,</span>shistory<span class="p">,</span>
-<a name="listingsmanjarovifmvifm_rcvim-384"></a>    \phistory<span class="p">,</span>fhistory<span class="p">,</span>dirstack<span class="p">,</span><span class="k">registers</span><span class="p">,</span>bookmarks<span class="p">,</span>bmarks
-<a name="listingsmanjarovifmvifm_rcvim-385"></a>
-<a name="listingsmanjarovifmvifm_rcvim-386"></a><span class="c">" ------------------------------------------------------------------------------</span>
-<a name="listingsmanjarovifmvifm_rcvim-387"></a>
-<a name="listingsmanjarovifmvifm_rcvim-388"></a><span class="c">" Examples of configuring both panels</span>
-<a name="listingsmanjarovifmvifm_rcvim-389"></a>
-<a name="listingsmanjarovifmvifm_rcvim-390"></a><span class="c">" Customize view columns a bit (enable ellipsis for truncated file names)</span>
-<a name="listingsmanjarovifmvifm_rcvim-391"></a><span class="c">"</span>
-<a name="listingsmanjarovifmvifm_rcvim-392"></a><span class="k">set</span> viewcolumns<span class="p">=-</span>{name}..<span class="p">,</span><span class="m">6</span>{}.
-<a name="listingsmanjarovifmvifm_rcvim-393"></a>
-<a name="listingsmanjarovifmvifm_rcvim-394"></a><span class="c">" Filter-out build and temporary files</span>
-<a name="listingsmanjarovifmvifm_rcvim-395"></a><span class="c">"</span>
-<a name="listingsmanjarovifmvifm_rcvim-396"></a><span class="c">" filter! /^.*\.(lo|o|d|class|py[co])$|.*~$/</span>
-<a name="listingsmanjarovifmvifm_rcvim-397"></a>
-<a name="listingsmanjarovifmvifm_rcvim-398"></a><span class="c">" ------------------------------------------------------------------------------</span>
-<a name="listingsmanjarovifmvifm_rcvim-399"></a>
-<a name="listingsmanjarovifmvifm_rcvim-400"></a><span class="c">" Sample mappings</span>
-<a name="listingsmanjarovifmvifm_rcvim-401"></a>
-<a name="listingsmanjarovifmvifm_rcvim-402"></a><span class="c">" Start shell in current directory</span>
-<a name="listingsmanjarovifmvifm_rcvim-403"></a><span class="nb">nnoremap</span> s :<span class="k">shell</span><span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
-<a name="listingsmanjarovifmvifm_rcvim-404"></a>
-<a name="listingsmanjarovifmvifm_rcvim-405"></a><span class="c">" Display sorting dialog</span>
-<a name="listingsmanjarovifmvifm_rcvim-406"></a><span class="nb">nnoremap</span> S :<span class="k">sort</span><span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
-<a name="listingsmanjarovifmvifm_rcvim-407"></a>
-<a name="listingsmanjarovifmvifm_rcvim-408"></a><span class="c">" Toggle visibility of preview window</span>
-<a name="listingsmanjarovifmvifm_rcvim-409"></a><span class="nb">nnoremap</span> <span class="k">w</span> :<span class="k">view</span><span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
-<a name="listingsmanjarovifmvifm_rcvim-410"></a><span class="nb">vnoremap</span> <span class="k">w</span> :<span class="k">view</span><span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>gv
-<a name="listingsmanjarovifmvifm_rcvim-411"></a>
-<a name="listingsmanjarovifmvifm_rcvim-412"></a><span class="c">" Open file in existing instance of gvim</span>
-<a name="listingsmanjarovifmvifm_rcvim-413"></a><span class="nb">nnoremap</span> <span class="k">o</span> :<span class="p">!</span><span class="k">gvim</span> <span class="p">--</span>remote<span class="p">-</span><span class="k">tab</span><span class="p">-</span><span class="k">silent</span> %<span class="k">f</span><span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
-<a name="listingsmanjarovifmvifm_rcvim-414"></a><span class="c">" Open file in new instance of gvim</span>
-<a name="listingsmanjarovifmvifm_rcvim-415"></a><span class="nb">nnoremap</span> O :<span class="p">!</span><span class="k">gvim</span> %<span class="k">f</span><span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
-<a name="listingsmanjarovifmvifm_rcvim-416"></a>
-<a name="listingsmanjarovifmvifm_rcvim-417"></a><span class="c">" Open file in the background using its default program</span>
-<a name="listingsmanjarovifmvifm_rcvim-418"></a><span class="nb">nnoremap</span> gb :<span class="k">file</span> &amp;<span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span><span class="k">l</span>
-<a name="listingsmanjarovifmvifm_rcvim-419"></a>
-<a name="listingsmanjarovifmvifm_rcvim-420"></a><span class="c">" Yank current directory path into the clipboard</span>
-<a name="listingsmanjarovifmvifm_rcvim-421"></a><span class="nb">nnoremap</span> yd :<span class="p">!</span>echo %<span class="k">d</span> <span class="p">|</span> xclip %<span class="k">i</span><span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
-<a name="listingsmanjarovifmvifm_rcvim-422"></a>
-<a name="listingsmanjarovifmvifm_rcvim-423"></a><span class="c">" Yank current file path into the clipboard</span>
-<a name="listingsmanjarovifmvifm_rcvim-424"></a><span class="nb">nnoremap</span> yf :<span class="p">!</span>echo %<span class="k">c</span>:<span class="k">p</span> <span class="p">|</span> xclip %<span class="k">i</span><span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
-<a name="listingsmanjarovifmvifm_rcvim-425"></a>
-<a name="listingsmanjarovifmvifm_rcvim-426"></a><span class="c">" Mappings for faster renaming</span>
-<a name="listingsmanjarovifmvifm_rcvim-427"></a><span class="nb">nnoremap</span> I <span class="k">cw</span><span class="p">&lt;</span><span class="k">c</span><span class="p">-</span><span class="k">a</span><span class="p">&gt;</span>
-<a name="listingsmanjarovifmvifm_rcvim-428"></a><span class="nb">nnoremap</span> <span class="k">cc</span> <span class="k">cw</span><span class="p">&lt;</span><span class="k">c</span><span class="p">-</span><span class="k">u</span><span class="p">&gt;</span>
-<a name="listingsmanjarovifmvifm_rcvim-429"></a><span class="nb">nnoremap</span> A <span class="k">cw</span>
-<a name="listingsmanjarovifmvifm_rcvim-430"></a>
-<a name="listingsmanjarovifmvifm_rcvim-431"></a><span class="c">" Open console in current directory</span>
-<a name="listingsmanjarovifmvifm_rcvim-432"></a><span class="nb">nnoremap</span> <span class="p">,</span><span class="k">t</span> :<span class="p">!</span>urxvt &amp;<span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
-<a name="listingsmanjarovifmvifm_rcvim-433"></a>
-<a name="listingsmanjarovifmvifm_rcvim-434"></a><span class="c">" Open editor to edit vifmrc and apply settings after returning to vifm</span>
-<a name="listingsmanjarovifmvifm_rcvim-435"></a><span class="nb">nnoremap</span> <span class="p">,</span><span class="k">c</span> :<span class="nb">write</span> <span class="p">|</span> edit $MYVIFMRC <span class="p">|</span> restart<span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
-<a name="listingsmanjarovifmvifm_rcvim-436"></a><span class="c">" Open gvim to edit vifmrc</span>
-<a name="listingsmanjarovifmvifm_rcvim-437"></a><span class="nb">nnoremap</span> <span class="p">,</span>C :<span class="p">!</span><span class="k">gvim</span> <span class="p">--</span>remote<span class="p">-</span><span class="k">tab</span><span class="p">-</span><span class="k">silent</span> $MYVIFMRC &amp;<span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
-<a name="listingsmanjarovifmvifm_rcvim-438"></a>
-<a name="listingsmanjarovifmvifm_rcvim-439"></a><span class="c">" Toggle wrap setting on ,w key</span>
-<a name="listingsmanjarovifmvifm_rcvim-440"></a><span class="nb">nnoremap</span> <span class="p">,</span><span class="k">w</span> :<span class="k">set</span> <span class="nb">wrap</span><span class="p">!&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
-<a name="listingsmanjarovifmvifm_rcvim-441"></a>
-<a name="listingsmanjarovifmvifm_rcvim-442"></a><span class="c">" Example of standard two-panel file managers mappings</span>
-<a name="listingsmanjarovifmvifm_rcvim-443"></a><span class="nb">nnoremap</span> <span class="p">&lt;</span>f3<span class="p">&gt;</span> :<span class="p">!</span>less %<span class="k">f</span><span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
-<a name="listingsmanjarovifmvifm_rcvim-444"></a><span class="nb">nnoremap</span> <span class="p">&lt;</span>f4<span class="p">&gt;</span> :edit<span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
-<a name="listingsmanjarovifmvifm_rcvim-445"></a><span class="nb">nnoremap</span> <span class="p">&lt;</span>f5<span class="p">&gt;</span> :copy<span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
-<a name="listingsmanjarovifmvifm_rcvim-446"></a><span class="nb">nnoremap</span> <span class="p">&lt;</span>f6<span class="p">&gt;</span> :move<span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
-<a name="listingsmanjarovifmvifm_rcvim-447"></a><span class="nb">nnoremap</span> <span class="p">&lt;</span>f7<span class="p">&gt;</span> :mkdir<span class="p">&lt;</span>space<span class="p">&gt;</span>
-<a name="listingsmanjarovifmvifm_rcvim-448"></a><span class="nb">nnoremap</span> <span class="p">&lt;</span>f8<span class="p">&gt;</span> :delete<span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
-<a name="listingsmanjarovifmvifm_rcvim-449"></a>
-<a name="listingsmanjarovifmvifm_rcvim-450"></a><span class="nb">nnoremap</span> ] :copy<span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
-<a name="listingsmanjarovifmvifm_rcvim-451"></a><span class="nb">nnoremap</span> [ :copy&amp;<span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
-<a name="listingsmanjarovifmvifm_rcvim-452"></a><span class="nb">nnoremap</span> <span class="p">&gt;</span> :move<span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
-<a name="listingsmanjarovifmvifm_rcvim-453"></a><span class="nb">nnoremap</span> <span class="p">&lt;</span> :move&amp;<span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
-<a name="listingsmanjarovifmvifm_rcvim-454"></a>
-<a name="listingsmanjarovifmvifm_rcvim-455"></a><span class="c">" ------------------------------------------------------------------------------</span>
-<a name="listingsmanjarovifmvifm_rcvim-456"></a>
-<a name="listingsmanjarovifmvifm_rcvim-457"></a><span class="c">" Various customization examples</span>
-<a name="listingsmanjarovifmvifm_rcvim-458"></a>
-<a name="listingsmanjarovifmvifm_rcvim-459"></a><span class="c">" Use ag (the silver searcher) instead of grep</span>
-<a name="listingsmanjarovifmvifm_rcvim-460"></a><span class="c">"</span>
-<a name="listingsmanjarovifmvifm_rcvim-461"></a><span class="c">" set grepprg=ag\ --line-numbers\ %i\ %a\ %s</span>
-<a name="listingsmanjarovifmvifm_rcvim-462"></a>
-<a name="listingsmanjarovifmvifm_rcvim-463"></a><span class="c">" Add additional place to look for executables</span>
-<a name="listingsmanjarovifmvifm_rcvim-464"></a><span class="c">"</span>
-<a name="listingsmanjarovifmvifm_rcvim-465"></a><span class="c">" let $PATH=$HOME.'/bin/fuse:'.$PATH</span>
-<a name="listingsmanjarovifmvifm_rcvim-466"></a>
-<a name="listingsmanjarovifmvifm_rcvim-467"></a><span class="c">" Block particular shortcut</span>
-<a name="listingsmanjarovifmvifm_rcvim-468"></a><span class="c">"</span>
-<a name="listingsmanjarovifmvifm_rcvim-469"></a><span class="c">" nnoremap &lt;left&gt; &lt;nop&gt;</span>
-<a name="listingsmanjarovifmvifm_rcvim-470"></a>
-<a name="listingsmanjarovifmvifm_rcvim-471"></a><span class="c">" Add devicons support, you have to install the correct patched font</span>
-<a name="listingsmanjarovifmvifm_rcvim-472"></a><span class="c">" https://github.com/ryanoasis/nerd-fonts</span>
-<a name="listingsmanjarovifmvifm_rcvim-473"></a>
-<a name="listingsmanjarovifmvifm_rcvim-474"></a><span class="c">" file types</span>
-<a name="listingsmanjarovifmvifm_rcvim-475"></a><span class="k">set</span> classify<span class="p">=</span><span class="s1">' :dir:/, :exe:, :reg:, :link:'</span>
-<a name="listingsmanjarovifmvifm_rcvim-476"></a><span class="c">" various file names</span>
-<a name="listingsmanjarovifmvifm_rcvim-477"></a><span class="k">set</span> classify<span class="p">+=</span><span class="s1">' ::../::, ::*.sh,,*.fish,,*.bash,,*.zsh::, ::*.[hc]pp::, ::*.[hc]::, ::/^copying|license$/::, ::.git/,,*.git/::, ::*.epub,,*.fb2,,*.djvu::, ::*.pdf::, ::*.htm,,*.html,,**.[sx]html,,*.xml::'</span>
-<a name="listingsmanjarovifmvifm_rcvim-478"></a><span class="c">" archives</span>
-<a name="listingsmanjarovifmvifm_rcvim-479"></a><span class="k">set</span> classify<span class="p">+=</span><span class="s1">' ::*.7z,,*.ace,,*.arj,,*.bz2,,*.cpio,,*.deb,,*.dz,,*.gz,,*.jar,,*.lzh,,*.lzma,,*.rar,,*.rpm,,*.rz,,*.tar,,*.taz,,*.tb2,,*.tbz,,*.tbz2,,*.tgz,,*.tlz,,*.trz,,*.txz,,*.tz,,*.tz2,,*.xz,,*.z,,*.zip,,*.zoo,,*.iso,,*.img,,*.dmg,,*.pkg::'</span>
-<a name="listingsmanjarovifmvifm_rcvim-480"></a><span class="c">" images</span>
-<a name="listingsmanjarovifmvifm_rcvim-481"></a><span class="k">set</span> classify<span class="p">+=</span><span class="s1">' ::*.bmp,,*.gif,,*.jpeg,,*.jpg,,*.ico,,*.icns,,*.png,,*.ppm,,*.svg,,*.svgz,,*.tga,,*.tif,,*.tiff,,*.xbm,,*.xcf,,*.xpm,,*.xspf,,*.xwd::'</span>
-<a name="listingsmanjarovifmvifm_rcvim-482"></a><span class="k">set</span> classify<span class="p">+=</span><span class="s1">' ::*.ai,,*.psd,,*.psb::'</span>
-<a name="listingsmanjarovifmvifm_rcvim-483"></a><span class="c">" audio</span>
-<a name="listingsmanjarovifmvifm_rcvim-484"></a><span class="k">set</span> classify<span class="p">+=</span><span class="s1">' ::*.aac,,*.anx,,*.asf,,*.au,,*.axa,,*.m2a,,*.m4a,,*.mid,,*.midi,,*.mpc,,*.oga,,*.ogx,,*.ra,,*.ram,,*.rm,,*.spx,,*.ac3::'</span>
-<a name="listingsmanjarovifmvifm_rcvim-485"></a><span class="k">set</span> classify<span class="p">+=</span><span class="s1">' ::*.mp3,,*.flac,,*.wav,,*.ogg,,*.wma::'</span>
-<a name="listingsmanjarovifmvifm_rcvim-486"></a><span class="c">" media</span>
-<a name="listingsmanjarovifmvifm_rcvim-487"></a><span class="k">set</span> classify<span class="p">+=</span><span class="s1">' ::*.ts,,*.axv,,*.divx,,*.m2v,,*.m4p,,*.m4v,,.mka,,*.mp4v,,*.nuv,,*.ogv,,*.pbm,,*.pgm,,*.qt,,*.vob,,*.xvid::'</span>
-<a name="listingsmanjarovifmvifm_rcvim-488"></a><span class="k">set</span> classify<span class="p">+=</span><span class="s1">' ::*.avi,,*.wmv,,*.m[p]eg,,*.rmvb,,*.rm,,*.mkv,,*.flv,,*.mp4,,*.mov,,*.webm::'</span>
-<a name="listingsmanjarovifmvifm_rcvim-489"></a><span class="c">" office files</span>
-<a name="listingsmanjarovifmvifm_rcvim-490"></a><span class="k">set</span> classify<span class="p">+=</span><span class="s1">' ::*.doc,,*.docx::, ::*.xls,,*.xls[mx]::, ::*.pptx,,*.ppt::'</span>
-<a name="listingsmanjarovifmvifm_rcvim-491"></a><span class="c">" devicons</span>
-<a name="listingsmanjarovifmvifm_rcvim-492"></a><span class="k">set</span> classify<span class="p">+=</span><span class="s1">' ::*.txt::,λ ::*.ml,,*.mli::, ::*.styl::, ::*.scss::, ::*.py,,*.pyc,,*.pyd,,*.pyo::, ::*.php::, ::*.markdown,,*.md::, ::*.json::, ::*.js::, ::*.ejs,,*.slim::, ::*.hbs,,*mustache::, ::*.css,,*.less::, ::*.bat,,*.conf,,*.ini,,*.rc,,*.yml::, ::*.rss::, ::*.coffee::, ::*.twig::, ::*.hs,,*.lhs,,*.lua::, ::*.jl::, ::*.go::, ::*.ts::, ::*.db,,*.dump,,*.sql::, ::*.sln,,*.suo::, ::*.diff::, ::*.scala::, ::*.java::, ::*.xul::, ::*.clj,,*.cljc::, ::*.pl,,*.pm,,*.t::, ::*.cljs,,*.edn::, ::*.rb::, ::*.dart::, ::*.f#,,*.fs,,*.fsi,,*.fsscript,,*.fsx::, ::*.rlib,,*.rs::, ::*.d::, ::*.erl,,*.hrl::, ::*.jsx::, ::*.vim,,*.vimrc::, ::*.log::'</span>
+<a name="listingsmanjarovifmvifm_rcvim-112"></a><span class="c">" set statusline="  Hint: %z%= %A %10u:%-7g %15s %20d  "</span>
+<a name="listingsmanjarovifmvifm_rcvim-113"></a><span class="k">set</span> <span class="nb">statusline</span><span class="p">=</span><span class="s2">"  %t%= %A %10u:%-7g %15s %20d  "</span>
+<a name="listingsmanjarovifmvifm_rcvim-114"></a>
+<a name="listingsmanjarovifmvifm_rcvim-115"></a><span class="c">" Show number of entries in the directory, instead of size</span>
+<a name="listingsmanjarovifmvifm_rcvim-116"></a><span class="k">set</span> dirsize<span class="p">=</span>nitems
+<a name="listingsmanjarovifmvifm_rcvim-117"></a>
+<a name="listingsmanjarovifmvifm_rcvim-118"></a><span class="c">" ------------------------------------------------------------------------------</span>
+<a name="listingsmanjarovifmvifm_rcvim-119"></a>
+<a name="listingsmanjarovifmvifm_rcvim-120"></a><span class="c">" :mark mark /full/directory/path [filename]</span>
+<a name="listingsmanjarovifmvifm_rcvim-121"></a>
+<a name="listingsmanjarovifmvifm_rcvim-122"></a>mark <span class="k">b</span> <span class="p">~</span><span class="sr">/bin/</span>
+<a name="listingsmanjarovifmvifm_rcvim-123"></a>mark <span class="k">h</span> <span class="p">~</span>/
+<a name="listingsmanjarovifmvifm_rcvim-124"></a>
+<a name="listingsmanjarovifmvifm_rcvim-125"></a><span class="c">" ------------------------------------------------------------------------------</span>
+<a name="listingsmanjarovifmvifm_rcvim-126"></a>
+<a name="listingsmanjarovifmvifm_rcvim-127"></a><span class="c">" :com[mand][!] command_name action</span>
+<a name="listingsmanjarovifmvifm_rcvim-128"></a><span class="c">" The following macros can be used in a command</span>
+<a name="listingsmanjarovifmvifm_rcvim-129"></a><span class="c">" %a is replaced with the user arguments.</span>
+<a name="listingsmanjarovifmvifm_rcvim-130"></a><span class="c">" %c the current file under the cursor.</span>
+<a name="listingsmanjarovifmvifm_rcvim-131"></a><span class="c">" %C the current file under the cursor in the other directory.</span>
+<a name="listingsmanjarovifmvifm_rcvim-132"></a><span class="c">" %f the current selected file, or files.</span>
+<a name="listingsmanjarovifmvifm_rcvim-133"></a><span class="c">" %F the current selected file, or files in the other directory.</span>
+<a name="listingsmanjarovifmvifm_rcvim-134"></a><span class="c">" %b same as %f %F.</span>
+<a name="listingsmanjarovifmvifm_rcvim-135"></a><span class="c">" %d the current directory name.</span>
+<a name="listingsmanjarovifmvifm_rcvim-136"></a><span class="c">" %D the other window directory name.</span>
+<a name="listingsmanjarovifmvifm_rcvim-137"></a><span class="c">" %m run the command in a menu window</span>
+<a name="listingsmanjarovifmvifm_rcvim-138"></a>
+<a name="listingsmanjarovifmvifm_rcvim-139"></a>command<span class="p">!</span> df df <span class="p">-</span><span class="k">h</span> %<span class="k">m</span> <span class="m">2</span><span class="p">&gt;</span> <span class="sr">/dev/</span>null
+<a name="listingsmanjarovifmvifm_rcvim-140"></a>command<span class="p">!</span> <span class="nb">diff</span> <span class="k">vim</span> <span class="p">-</span><span class="k">d</span> %<span class="k">f</span> %F
+<a name="listingsmanjarovifmvifm_rcvim-141"></a>command<span class="p">!</span> zip zip <span class="p">-</span><span class="k">r</span> %<span class="k">f</span>.zip %<span class="k">f</span>
+<a name="listingsmanjarovifmvifm_rcvim-142"></a>command<span class="p">!</span> run <span class="p">!!</span> ./%<span class="k">f</span>
+<a name="listingsmanjarovifmvifm_rcvim-143"></a>command<span class="p">!</span> <span class="k">make</span> <span class="p">!!</span><span class="k">make</span> %<span class="k">a</span>
+<a name="listingsmanjarovifmvifm_rcvim-144"></a>command<span class="p">!</span> mkcd :mkdir %<span class="k">a</span> <span class="p">|</span> <span class="k">cd</span> %<span class="k">a</span>
+<a name="listingsmanjarovifmvifm_rcvim-145"></a>command<span class="p">!</span> vgrep <span class="k">vim</span> <span class="s2">"+grep %a"</span>
+<a name="listingsmanjarovifmvifm_rcvim-146"></a>command<span class="p">!</span> reload :<span class="nb">write</span> <span class="p">|</span> restart
+<a name="listingsmanjarovifmvifm_rcvim-147"></a>
+<a name="listingsmanjarovifmvifm_rcvim-148"></a><span class="c">" ------------------------------------------------------------------------------</span>
+<a name="listingsmanjarovifmvifm_rcvim-149"></a>
+<a name="listingsmanjarovifmvifm_rcvim-150"></a><span class="c">" The file type is for the default programs to be used with</span>
+<a name="listingsmanjarovifmvifm_rcvim-151"></a><span class="c">" a file extension.</span>
+<a name="listingsmanjarovifmvifm_rcvim-152"></a><span class="c">" :filetype pattern1,pattern2 defaultprogram,program2</span>
+<a name="listingsmanjarovifmvifm_rcvim-153"></a><span class="c">" :fileviewer pattern1,pattern2 consoleviewer</span>
+<a name="listingsmanjarovifmvifm_rcvim-154"></a><span class="c">" The other programs for the file type can be accessed with the :file command</span>
+<a name="listingsmanjarovifmvifm_rcvim-155"></a><span class="c">" The command macros %f, %F, %d, %F may be used in the commands.</span>
+<a name="listingsmanjarovifmvifm_rcvim-156"></a><span class="c">" The %a macro is ignored.  To use a % you must put %%.</span>
+<a name="listingsmanjarovifmvifm_rcvim-157"></a>
+<a name="listingsmanjarovifmvifm_rcvim-158"></a><span class="c">" For automated FUSE mounts, you must register an extension with :file[x]type</span>
+<a name="listingsmanjarovifmvifm_rcvim-159"></a><span class="c">" in one of following formats:</span>
+<a name="listingsmanjarovifmvifm_rcvim-160"></a><span class="c">"</span>
+<a name="listingsmanjarovifmvifm_rcvim-161"></a><span class="c">" :filetype extensions FUSE_MOUNT|some_mount_command using %SOURCE_FILE and %DESTINATION_DIR variables</span>
+<a name="listingsmanjarovifmvifm_rcvim-162"></a><span class="c">" %SOURCE_FILE and %DESTINATION_DIR are filled in by vifm at runtime.</span>
+<a name="listingsmanjarovifmvifm_rcvim-163"></a><span class="c">" A sample line might look like this:</span>
+<a name="listingsmanjarovifmvifm_rcvim-164"></a><span class="c">" :filetype *.zip,*.jar,*.war,*.ear FUSE_MOUNT|fuse-zip %SOURCE_FILE %DESTINATION_DIR</span>
+<a name="listingsmanjarovifmvifm_rcvim-165"></a><span class="c">"</span>
+<a name="listingsmanjarovifmvifm_rcvim-166"></a><span class="c">" :filetype extensions FUSE_MOUNT2|some_mount_command using %PARAM and %DESTINATION_DIR variables</span>
+<a name="listingsmanjarovifmvifm_rcvim-167"></a><span class="c">" %PARAM and %DESTINATION_DIR are filled in by vifm at runtime.</span>
+<a name="listingsmanjarovifmvifm_rcvim-168"></a><span class="c">" A sample line might look like this:</span>
+<a name="listingsmanjarovifmvifm_rcvim-169"></a><span class="c">" :filetype *.ssh FUSE_MOUNT2|sshfs %PARAM %DESTINATION_DIR</span>
+<a name="listingsmanjarovifmvifm_rcvim-170"></a><span class="c">" %PARAM value is filled from the first line of file (whole line).</span>
+<a name="listingsmanjarovifmvifm_rcvim-171"></a><span class="c">" Example first line for SshMount filetype: root@127.0.0.1:/</span>
+<a name="listingsmanjarovifmvifm_rcvim-172"></a><span class="c">"</span>
+<a name="listingsmanjarovifmvifm_rcvim-173"></a><span class="c">" You can also add %CLEAR if you want to clear screen before running FUSE</span>
+<a name="listingsmanjarovifmvifm_rcvim-174"></a><span class="c">" program.</span>
+<a name="listingsmanjarovifmvifm_rcvim-175"></a>
+<a name="listingsmanjarovifmvifm_rcvim-176"></a><span class="c">" Pdf</span>
+<a name="listingsmanjarovifmvifm_rcvim-177"></a>filextype *.pdf zathura %<span class="k">c</span> %<span class="k">i</span> &amp;<span class="p">,</span> apvlv %<span class="k">c</span><span class="p">,</span> xpdf %<span class="k">c</span>
+<a name="listingsmanjarovifmvifm_rcvim-178"></a>fileviewer *.pdf pdftotext <span class="p">-</span>nopgbrk %<span class="k">c</span> <span class="p">-</span>
+<a name="listingsmanjarovifmvifm_rcvim-179"></a>
+<a name="listingsmanjarovifmvifm_rcvim-180"></a><span class="c">" PostScript</span>
+<a name="listingsmanjarovifmvifm_rcvim-181"></a>filextype *.<span class="k">ps</span><span class="p">,</span>*.eps<span class="p">,</span>*.<span class="k">ps</span>.gz
+<a name="listingsmanjarovifmvifm_rcvim-182"></a>        \ {View <span class="k">in</span> zathura}
+<a name="listingsmanjarovifmvifm_rcvim-183"></a>        \ zathura %<span class="k">f</span><span class="p">,</span>
+<a name="listingsmanjarovifmvifm_rcvim-184"></a>        \ {View <span class="k">in</span> gv}
+<a name="listingsmanjarovifmvifm_rcvim-185"></a>        \ gv %<span class="k">c</span> %<span class="k">i</span> &amp;<span class="p">,</span>
+<a name="listingsmanjarovifmvifm_rcvim-186"></a>
+<a name="listingsmanjarovifmvifm_rcvim-187"></a><span class="c">" Djvu</span>
+<a name="listingsmanjarovifmvifm_rcvim-188"></a>filextype *.djvu
+<a name="listingsmanjarovifmvifm_rcvim-189"></a>        \ {View <span class="k">in</span> zathura}
+<a name="listingsmanjarovifmvifm_rcvim-190"></a>        \ zathura %<span class="k">f</span><span class="p">,</span>
+<a name="listingsmanjarovifmvifm_rcvim-191"></a>        \ {View <span class="k">in</span> apvlv}
+<a name="listingsmanjarovifmvifm_rcvim-192"></a>        \ apvlv %<span class="k">f</span><span class="p">,</span>
+<a name="listingsmanjarovifmvifm_rcvim-193"></a>
+<a name="listingsmanjarovifmvifm_rcvim-194"></a><span class="c">" Audio</span>
+<a name="listingsmanjarovifmvifm_rcvim-195"></a><span class="k">filetype</span> *.wav<span class="p">,</span>*.mp3<span class="p">,</span>*.flac<span class="p">,</span>*.m4a<span class="p">,</span>*.wma<span class="p">,</span>*.ape<span class="p">,</span>*.ac3<span class="p">,</span>*.og[agx]<span class="p">,</span>*.spx<span class="p">,</span>*.opus
+<a name="listingsmanjarovifmvifm_rcvim-196"></a>       \ {Play using ffplay}
+<a name="listingsmanjarovifmvifm_rcvim-197"></a>       \ ffplay <span class="p">-</span>nodisp %<span class="k">c</span><span class="p">,</span>
+<a name="listingsmanjarovifmvifm_rcvim-198"></a>       \ {Play using MPlayer}
+<a name="listingsmanjarovifmvifm_rcvim-199"></a>       \ mplayer %<span class="k">f</span><span class="p">,</span>
+<a name="listingsmanjarovifmvifm_rcvim-200"></a>fileviewer *.mp3 mp3info
+<a name="listingsmanjarovifmvifm_rcvim-201"></a>fileviewer *.flac soxi
+<a name="listingsmanjarovifmvifm_rcvim-202"></a>
+<a name="listingsmanjarovifmvifm_rcvim-203"></a><span class="c">" Video</span>
+<a name="listingsmanjarovifmvifm_rcvim-204"></a>filextype *.avi<span class="p">,</span>*.mp4<span class="p">,</span>*.wmv<span class="p">,</span>*.dat<span class="p">,</span>*.<span class="m">3</span>gp<span class="p">,</span>*.ogv<span class="p">,</span>*.<span class="k">mkv</span><span class="p">,</span>*.mpg<span class="p">,</span>*.mpeg<span class="p">,</span>*.vob<span class="p">,</span>
+<a name="listingsmanjarovifmvifm_rcvim-205"></a>         \*.fl[icv]<span class="p">,</span>*.m2v<span class="p">,</span>*.mov<span class="p">,</span>*.webm<span class="p">,</span>*.<span class="k">ts</span><span class="p">,</span>*.mts<span class="p">,</span>*.m4v<span class="p">,</span>*.<span class="k">r</span>[am]<span class="p">,</span>*.qt<span class="p">,</span>*.divx<span class="p">,</span>
+<a name="listingsmanjarovifmvifm_rcvim-206"></a>         \*.<span class="k">as</span>[fx]
+<a name="listingsmanjarovifmvifm_rcvim-207"></a>        \ {View using ffplay}
+<a name="listingsmanjarovifmvifm_rcvim-208"></a>        \ ffplay <span class="p">-</span><span class="nb">fs</span> %<span class="k">f</span><span class="p">,</span>
+<a name="listingsmanjarovifmvifm_rcvim-209"></a>        \ {View using Dragon}
+<a name="listingsmanjarovifmvifm_rcvim-210"></a>        \ dragon %<span class="k">f</span>:<span class="k">p</span><span class="p">,</span>
+<a name="listingsmanjarovifmvifm_rcvim-211"></a>        \ {View using mplayer}
+<a name="listingsmanjarovifmvifm_rcvim-212"></a>        \ mplayer %<span class="k">f</span><span class="p">,</span>
+<a name="listingsmanjarovifmvifm_rcvim-213"></a>fileviewer *.avi<span class="p">,</span>*.mp4<span class="p">,</span>*.wmv<span class="p">,</span>*.dat<span class="p">,</span>*.<span class="m">3</span>gp<span class="p">,</span>*.ogv<span class="p">,</span>*.<span class="k">mkv</span><span class="p">,</span>*.mpg<span class="p">,</span>*.mpeg<span class="p">,</span>*.vob<span class="p">,</span>
+<a name="listingsmanjarovifmvifm_rcvim-214"></a>          \*.fl[icv]<span class="p">,</span>*.m2v<span class="p">,</span>*.mov<span class="p">,</span>*.webm<span class="p">,</span>*.<span class="k">ts</span><span class="p">,</span>*.mts<span class="p">,</span>*.m4v<span class="p">,</span>*.<span class="k">r</span>[am]<span class="p">,</span>*.qt<span class="p">,</span>*.divx<span class="p">,</span>
+<a name="listingsmanjarovifmvifm_rcvim-215"></a>          \*.<span class="k">as</span>[fx]
+<a name="listingsmanjarovifmvifm_rcvim-216"></a>         \ ffprobe <span class="p">-</span>pretty %<span class="k">c</span> <span class="m">2</span><span class="p">&gt;</span>&amp;<span class="m">1</span>
+<a name="listingsmanjarovifmvifm_rcvim-217"></a>
+<a name="listingsmanjarovifmvifm_rcvim-218"></a><span class="c">" Web</span>
+<a name="listingsmanjarovifmvifm_rcvim-219"></a>filextype *.html<span class="p">,</span>*.htm
+<a name="listingsmanjarovifmvifm_rcvim-220"></a>        \ {Open with dwb}
+<a name="listingsmanjarovifmvifm_rcvim-221"></a>        \ dwb %<span class="k">f</span> %<span class="k">i</span> &amp;<span class="p">,</span>
+<a name="listingsmanjarovifmvifm_rcvim-222"></a>        \ {Open with firefox}
+<a name="listingsmanjarovifmvifm_rcvim-223"></a>        \ firefox %<span class="k">f</span> &amp;<span class="p">,</span>
+<a name="listingsmanjarovifmvifm_rcvim-224"></a>        \ {Open with uzbl}
+<a name="listingsmanjarovifmvifm_rcvim-225"></a>        \ uzbl<span class="p">-</span>browser %<span class="k">f</span> %<span class="k">i</span> &amp;<span class="p">,</span>
+<a name="listingsmanjarovifmvifm_rcvim-226"></a><span class="k">filetype</span> *.html<span class="p">,</span>*.htm links<span class="p">,</span> lynx
+<a name="listingsmanjarovifmvifm_rcvim-227"></a>
+<a name="listingsmanjarovifmvifm_rcvim-228"></a><span class="c">" Object</span>
+<a name="listingsmanjarovifmvifm_rcvim-229"></a><span class="k">filetype</span> *.<span class="k">o</span> nm %<span class="k">f</span> <span class="p">|</span> less
+<a name="listingsmanjarovifmvifm_rcvim-230"></a>
+<a name="listingsmanjarovifmvifm_rcvim-231"></a><span class="c">" Man page</span>
+<a name="listingsmanjarovifmvifm_rcvim-232"></a><span class="k">filetype</span> *.[<span class="m">1-8</span>] man ./%<span class="k">c</span>
+<a name="listingsmanjarovifmvifm_rcvim-233"></a>fileviewer *.[<span class="m">1-8</span>] man ./%<span class="k">c</span> <span class="p">|</span> <span class="k">col</span> <span class="p">-</span><span class="k">b</span>
+<a name="listingsmanjarovifmvifm_rcvim-234"></a>
+<a name="listingsmanjarovifmvifm_rcvim-235"></a><span class="c">" Images</span>
+<a name="listingsmanjarovifmvifm_rcvim-236"></a>filextype *.bmp<span class="p">,</span>*.jpg<span class="p">,</span>*.jpeg<span class="p">,</span>*.png<span class="p">,</span>*.gif<span class="p">,</span>*.xpm
+<a name="listingsmanjarovifmvifm_rcvim-237"></a>        \ {View <span class="k">in</span> sxiv}
+<a name="listingsmanjarovifmvifm_rcvim-238"></a>        \ sxiv %<span class="k">f</span><span class="p">,</span>
+<a name="listingsmanjarovifmvifm_rcvim-239"></a>        \ {View <span class="k">in</span> gpicview}
+<a name="listingsmanjarovifmvifm_rcvim-240"></a>        \ gpicview %<span class="k">c</span><span class="p">,</span>
+<a name="listingsmanjarovifmvifm_rcvim-241"></a>        \ {View <span class="k">in</span> shotwell}
+<a name="listingsmanjarovifmvifm_rcvim-242"></a>        \ shotwell<span class="p">,</span>
+<a name="listingsmanjarovifmvifm_rcvim-243"></a>fileviewer *.bmp<span class="p">,</span>*.jpg<span class="p">,</span>*.jpeg<span class="p">,</span>*.png<span class="p">,</span>*.gif<span class="p">,</span>*.xpm
+<a name="listingsmanjarovifmvifm_rcvim-244"></a>         \ convert <span class="p">-</span>identify %<span class="k">f</span> <span class="p">-</span><span class="k">verbose</span> <span class="sr">/dev/</span>null
+<a name="listingsmanjarovifmvifm_rcvim-245"></a>
+<a name="listingsmanjarovifmvifm_rcvim-246"></a><span class="c">" OpenRaster</span>
+<a name="listingsmanjarovifmvifm_rcvim-247"></a>filextype *.ora
+<a name="listingsmanjarovifmvifm_rcvim-248"></a>        \ {Edit <span class="k">in</span> MyPaint}
+<a name="listingsmanjarovifmvifm_rcvim-249"></a>        \ mypaint %<span class="k">f</span><span class="p">,</span>
+<a name="listingsmanjarovifmvifm_rcvim-250"></a>
+<a name="listingsmanjarovifmvifm_rcvim-251"></a><span class="c">" Mindmap</span>
+<a name="listingsmanjarovifmvifm_rcvim-252"></a>filextype *.vym
+<a name="listingsmanjarovifmvifm_rcvim-253"></a>        \ {Open with VYM}
+<a name="listingsmanjarovifmvifm_rcvim-254"></a>        \ vym %<span class="k">f</span> &amp;<span class="p">,</span>
+<a name="listingsmanjarovifmvifm_rcvim-255"></a>
+<a name="listingsmanjarovifmvifm_rcvim-256"></a><span class="c">" MD5</span>
+<a name="listingsmanjarovifmvifm_rcvim-257"></a><span class="k">filetype</span> *.md5
+<a name="listingsmanjarovifmvifm_rcvim-258"></a>       \ {Check MD5 hash sum}
+<a name="listingsmanjarovifmvifm_rcvim-259"></a>       \ md5sum <span class="p">-</span><span class="k">c</span> %<span class="k">f</span> %S<span class="p">,</span>
+<a name="listingsmanjarovifmvifm_rcvim-260"></a>
+<a name="listingsmanjarovifmvifm_rcvim-261"></a><span class="c">" SHA1</span>
+<a name="listingsmanjarovifmvifm_rcvim-262"></a><span class="k">filetype</span> *.sha1
+<a name="listingsmanjarovifmvifm_rcvim-263"></a>       \ {Check SHA1 hash sum}
+<a name="listingsmanjarovifmvifm_rcvim-264"></a>       \ sha1sum <span class="p">-</span><span class="k">c</span> %<span class="k">f</span> %S<span class="p">,</span>
+<a name="listingsmanjarovifmvifm_rcvim-265"></a>
+<a name="listingsmanjarovifmvifm_rcvim-266"></a><span class="c">" SHA256</span>
+<a name="listingsmanjarovifmvifm_rcvim-267"></a><span class="k">filetype</span> *.sha256
+<a name="listingsmanjarovifmvifm_rcvim-268"></a>       \ {Check SHA256 hash sum}
+<a name="listingsmanjarovifmvifm_rcvim-269"></a>       \ sha256sum <span class="p">-</span><span class="k">c</span> %<span class="k">f</span> %S<span class="p">,</span>
+<a name="listingsmanjarovifmvifm_rcvim-270"></a>
+<a name="listingsmanjarovifmvifm_rcvim-271"></a><span class="c">" SHA512</span>
+<a name="listingsmanjarovifmvifm_rcvim-272"></a><span class="k">filetype</span> *.sha512
+<a name="listingsmanjarovifmvifm_rcvim-273"></a>       \ {Check SHA512 hash sum}
+<a name="listingsmanjarovifmvifm_rcvim-274"></a>       \ sha512sum <span class="p">-</span><span class="k">c</span> %<span class="k">f</span> %S<span class="p">,</span>
+<a name="listingsmanjarovifmvifm_rcvim-275"></a>
+<a name="listingsmanjarovifmvifm_rcvim-276"></a><span class="c">" GPG signature</span>
+<a name="listingsmanjarovifmvifm_rcvim-277"></a><span class="k">filetype</span> *.<span class="k">asc</span>
+<a name="listingsmanjarovifmvifm_rcvim-278"></a>       \ {Check signature}
+<a name="listingsmanjarovifmvifm_rcvim-279"></a>       \ <span class="p">!!</span>gpg <span class="p">--</span>verify %<span class="k">c</span><span class="p">,</span>
+<a name="listingsmanjarovifmvifm_rcvim-280"></a>
+<a name="listingsmanjarovifmvifm_rcvim-281"></a><span class="c">" Torrent</span>
+<a name="listingsmanjarovifmvifm_rcvim-282"></a><span class="k">filetype</span> *.torrent ktorrent %<span class="k">f</span> &amp;
+<a name="listingsmanjarovifmvifm_rcvim-283"></a>fileviewer *.torrent dumptorrent <span class="p">-</span><span class="k">v</span> %<span class="k">c</span>
+<a name="listingsmanjarovifmvifm_rcvim-284"></a>
+<a name="listingsmanjarovifmvifm_rcvim-285"></a><span class="c">" FuseZipMount</span>
+<a name="listingsmanjarovifmvifm_rcvim-286"></a><span class="k">filetype</span> *.zip<span class="p">,</span>*.jar<span class="p">,</span>*.war<span class="p">,</span>*.ear<span class="p">,</span>*.oxt<span class="p">,</span>*.apkg
+<a name="listingsmanjarovifmvifm_rcvim-287"></a>       \ {Mount with fuse<span class="p">-</span>zip}
+<a name="listingsmanjarovifmvifm_rcvim-288"></a>       \ FUSE_MOUNT<span class="p">|</span>fuse<span class="p">-</span>zip %SOURCE_FILE %DESTINATION_DIR<span class="p">,</span>
+<a name="listingsmanjarovifmvifm_rcvim-289"></a>       \ {View contents}
+<a name="listingsmanjarovifmvifm_rcvim-290"></a>       \ zip <span class="p">-</span><span class="k">sf</span> %<span class="k">c</span> <span class="p">|</span> less<span class="p">,</span>
+<a name="listingsmanjarovifmvifm_rcvim-291"></a>       \ {Extract here}
+<a name="listingsmanjarovifmvifm_rcvim-292"></a>       \ tar <span class="p">-</span>xf %<span class="k">c</span><span class="p">,</span>
+<a name="listingsmanjarovifmvifm_rcvim-293"></a>fileviewer *.zip<span class="p">,</span>*.jar<span class="p">,</span>*.war<span class="p">,</span>*.ear<span class="p">,</span>*.oxt zip <span class="p">-</span><span class="k">sf</span> %<span class="k">c</span>
+<a name="listingsmanjarovifmvifm_rcvim-294"></a>
+<a name="listingsmanjarovifmvifm_rcvim-295"></a><span class="c">" ArchiveMount</span>
+<a name="listingsmanjarovifmvifm_rcvim-296"></a><span class="k">filetype</span> *.tar<span class="p">,</span>*.tar.bz2<span class="p">,</span>*.tbz2<span class="p">,</span>*.tgz<span class="p">,</span>*.tar.gz<span class="p">,</span>*.tar.xz<span class="p">,</span>*.txz
+<a name="listingsmanjarovifmvifm_rcvim-297"></a>       \ {Mount with archivemount}
+<a name="listingsmanjarovifmvifm_rcvim-298"></a>       \ FUSE_MOUNT<span class="p">|</span>archivemount %SOURCE_FILE %DESTINATION_DIR<span class="p">,</span>
+<a name="listingsmanjarovifmvifm_rcvim-299"></a>fileviewer *.tgz<span class="p">,</span>*.tar.gz tar <span class="p">-</span>tzf %<span class="k">c</span>
+<a name="listingsmanjarovifmvifm_rcvim-300"></a>fileviewer *.tar.bz2<span class="p">,</span>*.tbz2 tar <span class="p">-</span>tjf %<span class="k">c</span>
+<a name="listingsmanjarovifmvifm_rcvim-301"></a>fileviewer *.tar.txz<span class="p">,</span>*.txz xz <span class="p">--</span><span class="nb">list</span> %<span class="k">c</span>
+<a name="listingsmanjarovifmvifm_rcvim-302"></a>fileviewer *.tar tar <span class="p">-</span><span class="k">tf</span> %<span class="k">c</span>
+<a name="listingsmanjarovifmvifm_rcvim-303"></a>
+<a name="listingsmanjarovifmvifm_rcvim-304"></a><span class="c">" Rar2FsMount and rar archives</span>
+<a name="listingsmanjarovifmvifm_rcvim-305"></a><span class="k">filetype</span> *.rar
+<a name="listingsmanjarovifmvifm_rcvim-306"></a>       \ {Mount with rar2fs}
+<a name="listingsmanjarovifmvifm_rcvim-307"></a>       \ FUSE_MOUNT<span class="p">|</span>rar2fs %SOURCE_FILE %DESTINATION_DIR<span class="p">,</span>
+<a name="listingsmanjarovifmvifm_rcvim-308"></a>fileviewer *.rar unrar <span class="k">v</span> %<span class="k">c</span>
+<a name="listingsmanjarovifmvifm_rcvim-309"></a>
+<a name="listingsmanjarovifmvifm_rcvim-310"></a><span class="c">" IsoMount</span>
+<a name="listingsmanjarovifmvifm_rcvim-311"></a><span class="k">filetype</span> *.iso
+<a name="listingsmanjarovifmvifm_rcvim-312"></a>       \ {Mount with fuseiso}
+<a name="listingsmanjarovifmvifm_rcvim-313"></a>       \ FUSE_MOUNT<span class="p">|</span>fuseiso %SOURCE_FILE %DESTINATION_DIR<span class="p">,</span>
+<a name="listingsmanjarovifmvifm_rcvim-314"></a>
+<a name="listingsmanjarovifmvifm_rcvim-315"></a><span class="c">" SshMount</span>
+<a name="listingsmanjarovifmvifm_rcvim-316"></a><span class="k">filetype</span> *.ssh
+<a name="listingsmanjarovifmvifm_rcvim-317"></a>       \ {Mount with sshfs}
+<a name="listingsmanjarovifmvifm_rcvim-318"></a>       \ FUSE_MOUNT2<span class="p">|</span>sshfs %PARAM %DESTINATION_DIR %FOREGROUND<span class="p">,</span>
+<a name="listingsmanjarovifmvifm_rcvim-319"></a>
+<a name="listingsmanjarovifmvifm_rcvim-320"></a><span class="c">" FtpMount</span>
+<a name="listingsmanjarovifmvifm_rcvim-321"></a><span class="k">filetype</span> *.ftp
+<a name="listingsmanjarovifmvifm_rcvim-322"></a>       \ {Mount with curlftpfs}
+<a name="listingsmanjarovifmvifm_rcvim-323"></a>       \ FUSE_MOUNT2<span class="p">|</span>curlftpfs <span class="p">-</span><span class="k">o</span> ftp_port<span class="p">=-,,</span>disable_eprt %PARAM %DESTINATION_DIR %FOREGROUND<span class="p">,</span>
+<a name="listingsmanjarovifmvifm_rcvim-324"></a>
+<a name="listingsmanjarovifmvifm_rcvim-325"></a><span class="c">" Fuse7z and 7z archives</span>
+<a name="listingsmanjarovifmvifm_rcvim-326"></a><span class="k">filetype</span> *.<span class="m">7</span>z
+<a name="listingsmanjarovifmvifm_rcvim-327"></a>       \ {Mount with fuse<span class="m">-7</span>z}
+<a name="listingsmanjarovifmvifm_rcvim-328"></a>       \ FUSE_MOUNT<span class="p">|</span>fuse<span class="m">-7</span>z %SOURCE_FILE %DESTINATION_DIR<span class="p">,</span>
+<a name="listingsmanjarovifmvifm_rcvim-329"></a>fileviewer *.<span class="m">7</span>z <span class="m">7</span>z <span class="k">l</span> %<span class="k">c</span>
+<a name="listingsmanjarovifmvifm_rcvim-330"></a>
+<a name="listingsmanjarovifmvifm_rcvim-331"></a><span class="c">" Office files</span>
+<a name="listingsmanjarovifmvifm_rcvim-332"></a>filextype *.odt<span class="p">,</span>*.doc<span class="p">,</span>*.docx<span class="p">,</span>*.xls<span class="p">,</span>*.xlsx<span class="p">,</span>*.odp<span class="p">,</span>*.pptx libreoffice %<span class="k">f</span> &amp;
+<a name="listingsmanjarovifmvifm_rcvim-333"></a>fileviewer *.doc catdoc %<span class="k">c</span>
+<a name="listingsmanjarovifmvifm_rcvim-334"></a>fileviewer *.docx<span class="p">,</span> docx2txt.pl %<span class="k">f</span> <span class="p">-</span>
+<a name="listingsmanjarovifmvifm_rcvim-335"></a>
+<a name="listingsmanjarovifmvifm_rcvim-336"></a><span class="c">" TuDu files</span>
+<a name="listingsmanjarovifmvifm_rcvim-337"></a><span class="k">filetype</span> *.tudu tudu <span class="p">-</span><span class="k">f</span> %<span class="k">c</span>
+<a name="listingsmanjarovifmvifm_rcvim-338"></a>
+<a name="listingsmanjarovifmvifm_rcvim-339"></a><span class="c">" Qt projects</span>
+<a name="listingsmanjarovifmvifm_rcvim-340"></a>filextype *.<span class="k">pro</span> qtcreator %<span class="k">f</span> &amp;
+<a name="listingsmanjarovifmvifm_rcvim-341"></a>
+<a name="listingsmanjarovifmvifm_rcvim-342"></a><span class="c">" Directories</span>
+<a name="listingsmanjarovifmvifm_rcvim-343"></a>filextype */
+<a name="listingsmanjarovifmvifm_rcvim-344"></a>        \ {View <span class="k">in</span> thunar}
+<a name="listingsmanjarovifmvifm_rcvim-345"></a>        \ Thunar %<span class="k">f</span> &amp;<span class="p">,</span>
+<a name="listingsmanjarovifmvifm_rcvim-346"></a>
+<a name="listingsmanjarovifmvifm_rcvim-347"></a><span class="c">" Syntax highlighting in preview</span>
+<a name="listingsmanjarovifmvifm_rcvim-348"></a><span class="c">"</span>
+<a name="listingsmanjarovifmvifm_rcvim-349"></a><span class="c">" Explicitly set highlight type for some extensions</span>
+<a name="listingsmanjarovifmvifm_rcvim-350"></a><span class="c">"</span>
+<a name="listingsmanjarovifmvifm_rcvim-351"></a><span class="c">" 256-color terminal</span>
+<a name="listingsmanjarovifmvifm_rcvim-352"></a><span class="c">" fileviewer *.[ch],*.[ch]pp highlight -O xterm256 -s dante --syntax c %c</span>
+<a name="listingsmanjarovifmvifm_rcvim-353"></a><span class="c">" fileviewer Makefile,Makefile.* highlight -O xterm256 -s dante --syntax make %c</span>
+<a name="listingsmanjarovifmvifm_rcvim-354"></a><span class="c">"</span>
+<a name="listingsmanjarovifmvifm_rcvim-355"></a><span class="c">" 16-color terminal</span>
+<a name="listingsmanjarovifmvifm_rcvim-356"></a><span class="c">" fileviewer *.c,*.h highlight -O ansi -s dante %c</span>
+<a name="listingsmanjarovifmvifm_rcvim-357"></a><span class="c">"</span>
+<a name="listingsmanjarovifmvifm_rcvim-358"></a><span class="c">" Or leave it for automatic detection</span>
+<a name="listingsmanjarovifmvifm_rcvim-359"></a><span class="c">"</span>
+<a name="listingsmanjarovifmvifm_rcvim-360"></a>fileviewer *[^/] pygmentize <span class="p">-</span>O style<span class="p">=</span>monokai <span class="p">-</span><span class="k">f</span> console256 <span class="p">-</span><span class="k">g</span>
+<a name="listingsmanjarovifmvifm_rcvim-361"></a>
+<a name="listingsmanjarovifmvifm_rcvim-362"></a><span class="c">" Displaying pictures in terminal</span>
+<a name="listingsmanjarovifmvifm_rcvim-363"></a><span class="c">"</span>
+<a name="listingsmanjarovifmvifm_rcvim-364"></a><span class="c">" fileviewer *.jpg,*.png shellpic %c</span>
+<a name="listingsmanjarovifmvifm_rcvim-365"></a>
+<a name="listingsmanjarovifmvifm_rcvim-366"></a><span class="c">" Open all other files with default system programs (you can also remove all</span>
+<a name="listingsmanjarovifmvifm_rcvim-367"></a><span class="c">" :file[x]type commands above to ensure they don't interfere with system-wide</span>
+<a name="listingsmanjarovifmvifm_rcvim-368"></a><span class="c">" settings).  By default all unknown files are opened with 'vi[x]cmd'</span>
+<a name="listingsmanjarovifmvifm_rcvim-369"></a><span class="c">" uncommenting one of lines below will result in ignoring 'vi[x]cmd' option</span>
+<a name="listingsmanjarovifmvifm_rcvim-370"></a><span class="c">" for unknown file types.</span>
+<a name="listingsmanjarovifmvifm_rcvim-371"></a><span class="c">" For *nix:</span>
+<a name="listingsmanjarovifmvifm_rcvim-372"></a><span class="c">" filetype * xdg-open</span>
+<a name="listingsmanjarovifmvifm_rcvim-373"></a><span class="c">" For OS X:</span>
+<a name="listingsmanjarovifmvifm_rcvim-374"></a><span class="c">" filetype * open</span>
+<a name="listingsmanjarovifmvifm_rcvim-375"></a><span class="c">" For Windows:</span>
+<a name="listingsmanjarovifmvifm_rcvim-376"></a><span class="c">" filetype * start, explorer</span>
+<a name="listingsmanjarovifmvifm_rcvim-377"></a>
+<a name="listingsmanjarovifmvifm_rcvim-378"></a><span class="c">" ------------------------------------------------------------------------------</span>
+<a name="listingsmanjarovifmvifm_rcvim-379"></a>
+<a name="listingsmanjarovifmvifm_rcvim-380"></a><span class="c">" What should be saved automatically between vifm runs</span>
+<a name="listingsmanjarovifmvifm_rcvim-381"></a><span class="c">" Like in previous versions of vifm</span>
+<a name="listingsmanjarovifmvifm_rcvim-382"></a><span class="c">" set vifminfo=options,filetypes,commands,bookmarks,dhistory,state,cs</span>
+<a name="listingsmanjarovifmvifm_rcvim-383"></a><span class="c">" Like in vi</span>
+<a name="listingsmanjarovifmvifm_rcvim-384"></a><span class="k">set</span> vifminfo<span class="p">=</span>dhistory<span class="p">,</span>savedirs<span class="p">,</span>chistory<span class="p">,</span>state<span class="p">,</span>tui<span class="p">,</span>shistory<span class="p">,</span>
+<a name="listingsmanjarovifmvifm_rcvim-385"></a>    \phistory<span class="p">,</span>fhistory<span class="p">,</span>dirstack<span class="p">,</span><span class="k">registers</span><span class="p">,</span>bookmarks<span class="p">,</span>bmarks
+<a name="listingsmanjarovifmvifm_rcvim-386"></a>
+<a name="listingsmanjarovifmvifm_rcvim-387"></a><span class="c">" ------------------------------------------------------------------------------</span>
+<a name="listingsmanjarovifmvifm_rcvim-388"></a>
+<a name="listingsmanjarovifmvifm_rcvim-389"></a><span class="c">" Examples of configuring both panels</span>
+<a name="listingsmanjarovifmvifm_rcvim-390"></a>
+<a name="listingsmanjarovifmvifm_rcvim-391"></a><span class="c">" Customize view columns a bit (enable ellipsis for truncated file names)</span>
+<a name="listingsmanjarovifmvifm_rcvim-392"></a><span class="c">"</span>
+<a name="listingsmanjarovifmvifm_rcvim-393"></a><span class="k">set</span> viewcolumns<span class="p">=-</span>{name}..<span class="p">,</span><span class="m">6</span>{}.
+<a name="listingsmanjarovifmvifm_rcvim-394"></a>
+<a name="listingsmanjarovifmvifm_rcvim-395"></a><span class="c">" Filter-out build and temporary files</span>
+<a name="listingsmanjarovifmvifm_rcvim-396"></a><span class="c">"</span>
+<a name="listingsmanjarovifmvifm_rcvim-397"></a><span class="c">" filter! /^.*\.(lo|o|d|class|py[co])$|.*~$/</span>
+<a name="listingsmanjarovifmvifm_rcvim-398"></a>
+<a name="listingsmanjarovifmvifm_rcvim-399"></a><span class="c">" ------------------------------------------------------------------------------</span>
+<a name="listingsmanjarovifmvifm_rcvim-400"></a>
+<a name="listingsmanjarovifmvifm_rcvim-401"></a><span class="c">" Sample mappings</span>
+<a name="listingsmanjarovifmvifm_rcvim-402"></a>
+<a name="listingsmanjarovifmvifm_rcvim-403"></a><span class="c">" Start shell in current directory</span>
+<a name="listingsmanjarovifmvifm_rcvim-404"></a><span class="nb">nnoremap</span> s :<span class="k">shell</span><span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
+<a name="listingsmanjarovifmvifm_rcvim-405"></a>
+<a name="listingsmanjarovifmvifm_rcvim-406"></a><span class="c">" Display sorting dialog</span>
+<a name="listingsmanjarovifmvifm_rcvim-407"></a><span class="nb">nnoremap</span> S :<span class="k">sort</span><span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
+<a name="listingsmanjarovifmvifm_rcvim-408"></a>
+<a name="listingsmanjarovifmvifm_rcvim-409"></a><span class="c">" Toggle visibility of preview window</span>
+<a name="listingsmanjarovifmvifm_rcvim-410"></a><span class="nb">nnoremap</span> <span class="k">w</span> :<span class="k">view</span><span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
+<a name="listingsmanjarovifmvifm_rcvim-411"></a><span class="nb">vnoremap</span> <span class="k">w</span> :<span class="k">view</span><span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>gv
+<a name="listingsmanjarovifmvifm_rcvim-412"></a>
+<a name="listingsmanjarovifmvifm_rcvim-413"></a><span class="c">" Open file in existing instance of gvim</span>
+<a name="listingsmanjarovifmvifm_rcvim-414"></a><span class="nb">nnoremap</span> <span class="k">o</span> :<span class="p">!</span><span class="k">gvim</span> <span class="p">--</span>remote<span class="p">-</span><span class="k">tab</span><span class="p">-</span><span class="k">silent</span> %<span class="k">f</span><span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
+<a name="listingsmanjarovifmvifm_rcvim-415"></a><span class="c">" Open file in new instance of gvim</span>
+<a name="listingsmanjarovifmvifm_rcvim-416"></a><span class="nb">nnoremap</span> O :<span class="p">!</span><span class="k">gvim</span> %<span class="k">f</span><span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
+<a name="listingsmanjarovifmvifm_rcvim-417"></a>
+<a name="listingsmanjarovifmvifm_rcvim-418"></a><span class="c">" Open file in the background using its default program</span>
+<a name="listingsmanjarovifmvifm_rcvim-419"></a><span class="nb">nnoremap</span> gb :<span class="k">file</span> &amp;<span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span><span class="k">l</span>
+<a name="listingsmanjarovifmvifm_rcvim-420"></a>
+<a name="listingsmanjarovifmvifm_rcvim-421"></a><span class="c">" Yank current directory path into the clipboard</span>
+<a name="listingsmanjarovifmvifm_rcvim-422"></a><span class="nb">nnoremap</span> yd :<span class="p">!</span>echo %<span class="k">d</span> <span class="p">|</span> xclip %<span class="k">i</span><span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
+<a name="listingsmanjarovifmvifm_rcvim-423"></a>
+<a name="listingsmanjarovifmvifm_rcvim-424"></a><span class="c">" Yank current file path into the clipboard</span>
+<a name="listingsmanjarovifmvifm_rcvim-425"></a><span class="nb">nnoremap</span> yf :<span class="p">!</span>echo %<span class="k">c</span>:<span class="k">p</span> <span class="p">|</span> xclip %<span class="k">i</span><span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
+<a name="listingsmanjarovifmvifm_rcvim-426"></a>
+<a name="listingsmanjarovifmvifm_rcvim-427"></a><span class="c">" Mappings for faster renaming</span>
+<a name="listingsmanjarovifmvifm_rcvim-428"></a><span class="nb">nnoremap</span> I <span class="k">cw</span><span class="p">&lt;</span><span class="k">c</span><span class="p">-</span><span class="k">a</span><span class="p">&gt;</span>
+<a name="listingsmanjarovifmvifm_rcvim-429"></a><span class="nb">nnoremap</span> <span class="k">cc</span> <span class="k">cw</span><span class="p">&lt;</span><span class="k">c</span><span class="p">-</span><span class="k">u</span><span class="p">&gt;</span>
+<a name="listingsmanjarovifmvifm_rcvim-430"></a><span class="nb">nnoremap</span> A <span class="k">cw</span>
+<a name="listingsmanjarovifmvifm_rcvim-431"></a>
+<a name="listingsmanjarovifmvifm_rcvim-432"></a><span class="c">" Open console in current directory</span>
+<a name="listingsmanjarovifmvifm_rcvim-433"></a><span class="nb">nnoremap</span> <span class="p">,</span><span class="k">t</span> :<span class="p">!</span>urxvt &amp;<span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
+<a name="listingsmanjarovifmvifm_rcvim-434"></a>
+<a name="listingsmanjarovifmvifm_rcvim-435"></a><span class="c">" Open editor to edit vifmrc and apply settings after returning to vifm</span>
+<a name="listingsmanjarovifmvifm_rcvim-436"></a><span class="nb">nnoremap</span> <span class="p">,</span><span class="k">c</span> :<span class="nb">write</span> <span class="p">|</span> edit $MYVIFMRC <span class="p">|</span> restart<span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
+<a name="listingsmanjarovifmvifm_rcvim-437"></a><span class="c">" Open gvim to edit vifmrc</span>
+<a name="listingsmanjarovifmvifm_rcvim-438"></a><span class="nb">nnoremap</span> <span class="p">,</span>C :<span class="p">!</span><span class="k">gvim</span> <span class="p">--</span>remote<span class="p">-</span><span class="k">tab</span><span class="p">-</span><span class="k">silent</span> $MYVIFMRC &amp;<span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
+<a name="listingsmanjarovifmvifm_rcvim-439"></a>
+<a name="listingsmanjarovifmvifm_rcvim-440"></a><span class="c">" Toggle wrap setting on ,w key</span>
+<a name="listingsmanjarovifmvifm_rcvim-441"></a><span class="nb">nnoremap</span> <span class="p">,</span><span class="k">w</span> :<span class="k">set</span> <span class="nb">wrap</span><span class="p">!&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
+<a name="listingsmanjarovifmvifm_rcvim-442"></a>
+<a name="listingsmanjarovifmvifm_rcvim-443"></a><span class="c">" Example of standard two-panel file managers mappings</span>
+<a name="listingsmanjarovifmvifm_rcvim-444"></a><span class="nb">nnoremap</span> <span class="p">&lt;</span>f3<span class="p">&gt;</span> :<span class="p">!</span>less %<span class="k">f</span><span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
+<a name="listingsmanjarovifmvifm_rcvim-445"></a><span class="nb">nnoremap</span> <span class="p">&lt;</span>f4<span class="p">&gt;</span> :edit<span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
+<a name="listingsmanjarovifmvifm_rcvim-446"></a><span class="nb">nnoremap</span> <span class="p">&lt;</span>f5<span class="p">&gt;</span> :copy<span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
+<a name="listingsmanjarovifmvifm_rcvim-447"></a><span class="nb">nnoremap</span> <span class="p">&lt;</span>f6<span class="p">&gt;</span> :move<span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
+<a name="listingsmanjarovifmvifm_rcvim-448"></a><span class="nb">nnoremap</span> <span class="p">&lt;</span>f7<span class="p">&gt;</span> :mkdir<span class="p">&lt;</span>space<span class="p">&gt;</span>
+<a name="listingsmanjarovifmvifm_rcvim-449"></a><span class="nb">nnoremap</span> <span class="p">&lt;</span>f8<span class="p">&gt;</span> :delete<span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
+<a name="listingsmanjarovifmvifm_rcvim-450"></a>
+<a name="listingsmanjarovifmvifm_rcvim-451"></a><span class="nb">nnoremap</span> ] :copy<span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
+<a name="listingsmanjarovifmvifm_rcvim-452"></a><span class="nb">nnoremap</span> [ :copy&amp;<span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
+<a name="listingsmanjarovifmvifm_rcvim-453"></a><span class="nb">nnoremap</span> <span class="p">&gt;</span> :move<span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
+<a name="listingsmanjarovifmvifm_rcvim-454"></a><span class="nb">nnoremap</span> <span class="p">&lt;</span> :move&amp;<span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
+<a name="listingsmanjarovifmvifm_rcvim-455"></a>
+<a name="listingsmanjarovifmvifm_rcvim-456"></a><span class="c">" ------------------------------------------------------------------------------</span>
+<a name="listingsmanjarovifmvifm_rcvim-457"></a>
+<a name="listingsmanjarovifmvifm_rcvim-458"></a><span class="c">" Various customization examples</span>
+<a name="listingsmanjarovifmvifm_rcvim-459"></a>
+<a name="listingsmanjarovifmvifm_rcvim-460"></a><span class="c">" Use ag (the silver searcher) instead of grep</span>
+<a name="listingsmanjarovifmvifm_rcvim-461"></a><span class="c">"</span>
+<a name="listingsmanjarovifmvifm_rcvim-462"></a><span class="c">" set grepprg=ag\ --line-numbers\ %i\ %a\ %s</span>
+<a name="listingsmanjarovifmvifm_rcvim-463"></a>
+<a name="listingsmanjarovifmvifm_rcvim-464"></a><span class="c">" Add additional place to look for executables</span>
+<a name="listingsmanjarovifmvifm_rcvim-465"></a><span class="c">"</span>
+<a name="listingsmanjarovifmvifm_rcvim-466"></a><span class="c">" let $PATH=$HOME.'/bin/fuse:'.$PATH</span>
+<a name="listingsmanjarovifmvifm_rcvim-467"></a>
+<a name="listingsmanjarovifmvifm_rcvim-468"></a><span class="c">" Block particular shortcut</span>
+<a name="listingsmanjarovifmvifm_rcvim-469"></a><span class="c">"</span>
+<a name="listingsmanjarovifmvifm_rcvim-470"></a><span class="c">" nnoremap &lt;left&gt; &lt;nop&gt;</span>
+<a name="listingsmanjarovifmvifm_rcvim-471"></a>
+<a name="listingsmanjarovifmvifm_rcvim-472"></a><span class="c">" Add devicons support, you have to install the correct patched font</span>
+<a name="listingsmanjarovifmvifm_rcvim-473"></a><span class="c">" https://github.com/ryanoasis/nerd-fonts</span>
+<a name="listingsmanjarovifmvifm_rcvim-474"></a>
+<a name="listingsmanjarovifmvifm_rcvim-475"></a><span class="c">" file types</span>
+<a name="listingsmanjarovifmvifm_rcvim-476"></a><span class="k">set</span> classify<span class="p">=</span><span class="s1">' :dir:/, :exe:, :reg:, :link:'</span>
+<a name="listingsmanjarovifmvifm_rcvim-477"></a><span class="c">" various file names</span>
+<a name="listingsmanjarovifmvifm_rcvim-478"></a><span class="k">set</span> classify<span class="p">+=</span><span class="s1">' ::../::, ::*.sh,,*.fish,,*.bash,,*.zsh::, ::*.[hc]pp::, ::*.[hc]::, ::/^copying|license$/::, ::.git/,,*.git/::, ::*.epub,,*.fb2,,*.djvu::, ::*.pdf::, ::*.htm,,*.html,,**.[sx]html,,*.xml::'</span>
+<a name="listingsmanjarovifmvifm_rcvim-479"></a><span class="c">" archives</span>
+<a name="listingsmanjarovifmvifm_rcvim-480"></a><span class="k">set</span> classify<span class="p">+=</span><span class="s1">' ::*.7z,,*.ace,,*.arj,,*.bz2,,*.cpio,,*.deb,,*.dz,,*.gz,,*.jar,,*.lzh,,*.lzma,,*.rar,,*.rpm,,*.rz,,*.tar,,*.taz,,*.tb2,,*.tbz,,*.tbz2,,*.tgz,,*.tlz,,*.trz,,*.txz,,*.tz,,*.tz2,,*.xz,,*.z,,*.zip,,*.zoo,,*.iso,,*.img,,*.dmg,,*.pkg::'</span>
+<a name="listingsmanjarovifmvifm_rcvim-481"></a><span class="c">" images</span>
+<a name="listingsmanjarovifmvifm_rcvim-482"></a><span class="k">set</span> classify<span class="p">+=</span><span class="s1">' ::*.bmp,,*.gif,,*.jpeg,,*.jpg,,*.ico,,*.icns,,*.png,,*.ppm,,*.svg,,*.svgz,,*.tga,,*.tif,,*.tiff,,*.xbm,,*.xcf,,*.xpm,,*.xspf,,*.xwd::'</span>
+<a name="listingsmanjarovifmvifm_rcvim-483"></a><span class="k">set</span> classify<span class="p">+=</span><span class="s1">' ::*.ai,,*.psd,,*.psb::'</span>
+<a name="listingsmanjarovifmvifm_rcvim-484"></a><span class="c">" audio</span>
+<a name="listingsmanjarovifmvifm_rcvim-485"></a><span class="k">set</span> classify<span class="p">+=</span><span class="s1">' ::*.aac,,*.anx,,*.asf,,*.au,,*.axa,,*.m2a,,*.m4a,,*.mid,,*.midi,,*.mpc,,*.oga,,*.ogx,,*.ra,,*.ram,,*.rm,,*.spx,,*.ac3::'</span>
+<a name="listingsmanjarovifmvifm_rcvim-486"></a><span class="k">set</span> classify<span class="p">+=</span><span class="s1">' ::*.mp3,,*.flac,,*.wav,,*.ogg,,*.wma::'</span>
+<a name="listingsmanjarovifmvifm_rcvim-487"></a><span class="c">" media</span>
+<a name="listingsmanjarovifmvifm_rcvim-488"></a><span class="k">set</span> classify<span class="p">+=</span><span class="s1">' ::*.ts,,*.axv,,*.divx,,*.m2v,,*.m4p,,*.m4v,,.mka,,*.mp4v,,*.nuv,,*.ogv,,*.pbm,,*.pgm,,*.qt,,*.vob,,*.xvid::'</span>
+<a name="listingsmanjarovifmvifm_rcvim-489"></a><span class="k">set</span> classify<span class="p">+=</span><span class="s1">' ::*.avi,,*.wmv,,*.m[p]eg,,*.rmvb,,*.rm,,*.mkv,,*.flv,,*.mp4,,*.mov,,*.webm::'</span>
+<a name="listingsmanjarovifmvifm_rcvim-490"></a><span class="c">" office files</span>
+<a name="listingsmanjarovifmvifm_rcvim-491"></a><span class="k">set</span> classify<span class="p">+=</span><span class="s1">' ::*.doc,,*.docx::, ::*.xls,,*.xls[mx]::, ::*.pptx,,*.ppt::'</span>
+<a name="listingsmanjarovifmvifm_rcvim-492"></a><span class="c">" devicons</span>
+<a name="listingsmanjarovifmvifm_rcvim-493"></a><span class="k">set</span> classify<span class="p">+=</span><span class="s1">' ::*.txt::,λ ::*.ml,,*.mli::, ::*.styl::, ::*.scss::, ::*.py,,*.pyc,,*.pyd,,*.pyo::, ::*.php::, ::*.markdown,,*.md::, ::*.json::, ::*.js::, ::*.ejs,,*.slim::, ::*.hbs,,*mustache::, ::*.css,,*.less::, ::*.bat,,*.conf,,*.ini,,*.rc,,*.yml::, ::*.rss::, ::*.coffee::, ::*.twig::, ::*.hs,,*.lhs,,*.lua::, ::*.jl::, ::*.go::, ::*.ts::, ::*.db,,*.dump,,*.sql::, ::*.sln,,*.suo::, ::*.diff::, ::*.scala::, ::*.java::, ::*.xul::, ::*.clj,,*.cljc::, ::*.pl,,*.pm,,*.t::, ::*.cljs,,*.edn::, ::*.rb::, ::*.dart::, ::*.f#,,*.fs,,*.fsi,,*.fsscript,,*.fsx::, ::*.rlib,,*.rs::, ::*.d::, ::*.erl,,*.hrl::, ::*.jsx::, ::*.vim,,*.vimrc::, ::*.log::'</span>
 </pre></td>
 </tr></table>
 </div>
