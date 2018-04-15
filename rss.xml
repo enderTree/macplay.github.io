@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>MacPlay</title><link>https://macplay.github.io/</link><description>Share something interesting about byte ocean</description><atom:link href="https://macplay.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2018 &lt;a href="mailto:ashfinal@sina.cn"&gt;ashfinal&lt;/a&gt; </copyright><lastBuildDate>Fri, 13 Apr 2018 15:36:02 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>电影《大空头》（The Big Short）</title><link>https://macplay.github.io/posts/dian-ying-da-kong-tou-the-big-short/</link><dc:creator>ashfinal</dc:creator><description>&lt;div&gt;&lt;div class="admonition danger"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>MacPlay</title><link>https://macplay.github.io/</link><description>Share something interesting about byte ocean</description><atom:link href="https://macplay.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2018 &lt;a href="mailto:ashfinal@sina.cn"&gt;ashfinal&lt;/a&gt; </copyright><lastBuildDate>Sun, 15 Apr 2018 08:01:23 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Oni 0.32 版本释出</title><link>https://macplay.github.io/posts/oni-032-ban-ben-shi-chu/</link><dc:creator>ashfinal</dc:creator><description>&lt;div&gt;&lt;!-- vim:set et sw=4 ts=4 ft=rst: --&gt;
+&lt;!-- This file interpreters the title of URL in links.ref --&gt;
+&lt;!-- vim:set et sw=4 ts=4 ft=rst: --&gt;
+&lt;p&gt;本来对这次版本更新还有些不以为然：为何不把精力放在完善 &lt;a class="reference external" href="https://langserver.org/"&gt;Language Server Protocol&lt;/a&gt; 支持，而跑去写什么新手教程呢？直到今天尝试了下教程，又看了文字版更新内容，才明白过来：Oni 编辑器正朝着我期待的方向前进！&lt;/p&gt;
+&lt;p&gt;来看看本次更新的两个重要功能：&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://macplay.github.io/posts/oni-032-ban-ben-shi-chu/"&gt;Read more…&lt;/a&gt; (2 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>onivim</category><category>vim</category><category>vimrc</category><guid>https://macplay.github.io/posts/oni-032-ban-ben-shi-chu/</guid><pubDate>Sat, 14 Apr 2018 14:55:50 GMT</pubDate></item><item><title>电影《大空头》（The Big Short）</title><link>https://macplay.github.io/posts/dian-ying-da-kong-tou-the-big-short/</link><dc:creator>ashfinal</dc:creator><description>&lt;div&gt;&lt;div class="admonition danger"&gt;
 &lt;p class="first admonition-title"&gt;!DANGER!&lt;/p&gt;
 &lt;p class="last"&gt;警告！！！本文含有大量关于电影的剧透内容，请谨慎阅读。&lt;/p&gt;
 &lt;/div&gt;
@@ -21,7 +26,7 @@
     Your browser does not support the video tag.
 &lt;/video&gt;&lt;p&gt;文件大小 325 KB。&lt;/p&gt;
 &lt;p&gt;完整命令：&lt;/p&gt;
-&lt;pre class="code console"&gt;&lt;a name="rest_code_9c36a2f2db6c4ebd83718093d07dbec5-1"&gt;&lt;/a&gt;&lt;span class="go"&gt;ffmpeg -y -i mv.mp4 -ss 00:02:24.000 -to 00:02:29.000 -c:v libx264 -an -crf 35 -b:v 100k -r 10 -preset slow out.mp4&lt;/span&gt;
+&lt;pre class="code console"&gt;&lt;a name="rest_code_694cb5a4d712422aa8b1533f4aa2fa67-1"&gt;&lt;/a&gt;&lt;span class="go"&gt;ffmpeg -y -i mv.mp4 -ss 00:02:24.000 -to 00:02:29.000 -c:v libx264 -an -crf 35 -b:v 100k -r 10 -preset slow out.mp4&lt;/span&gt;
 &lt;/pre&gt;&lt;p&gt;如果加上音轨 &lt;cite&gt;-b:a 11k&lt;/cite&gt; ，则体积上升到 350 KB。&lt;/p&gt;
 &lt;p&gt;很理想了。&lt;/p&gt;&lt;/div&gt;</description><category>ffmpeg</category><category>shell</category><category>terminal</category><guid>https://macplay.github.io/posts/ffmpeg-ming-ling-xing-can-shu-diao-you/</guid><pubDate>Sun, 04 Mar 2018 09:44:20 GMT</pubDate></item><item><title>免费辞典 Terminology for macOS</title><link>https://macplay.github.io/posts/mian-fei-zi-dian-terminology-for-macos/</link><dc:creator>ashfinal</dc:creator><description>&lt;div&gt;&lt;p&gt;寻找 &lt;a class="reference external" href="https://www.enlightenment.org/about-terminology"&gt;Terminology 终端&lt;/a&gt; 相关资料时，搜索结果里意外瞥见了 Terminology for OS X Dictionary。点击一看，发现竟然是著名软件 Drafts 作者搞的。根据介绍，Terminology for OS X Dictionary 基于 WordNet 语意索引。WordNet 语意索引估计不少人听说过，理论上应该能提供更多更准确的字词释义。于是不再犹豫，果断下载安装。&lt;/p&gt;
 &lt;p&gt;轻度使用两天，说下大概体验：词汇量确实比系统内置的辞典高出不少，系统辞典里找不到翻译的一些字词在 Terminology 中能找到；更重要的是，Terminology 根据语意把一堆相关的字词都显示出来，把你知道的不知道的单词连成一片，这样方便联想记忆互相理解，在不知不觉中提升词汇量。&lt;/p&gt;
@@ -195,13 +200,4 @@
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;&lt;a href="https://macplay.github.io/posts/shu-ju-ke-shi-hua-seaborn/"&gt;Read more…&lt;/a&gt; (10 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>chart</category><category>jupyter</category><category>matplotlib</category><category>python</category><guid>https://macplay.github.io/posts/shu-ju-ke-shi-hua-seaborn/</guid><pubDate>Fri, 09 Feb 2018 14:25:04 GMT</pubDate></item><item><title>使用 Latexmk 编译 tex 文件</title><link>https://macplay.github.io/posts/shi-yong-latexmk-bian-yi-tex-wen-jian/</link><dc:creator>ashfinal</dc:creator><description>&lt;div&gt;&lt;p&gt;尽管老早以前就听说过 Latexmk，但是一直没有用起来。昨天折腾的心思又蠢蠢欲动，于是翻阅了下 Latexmk 手册，最终将其配置为理想状态，于是便有了这篇分享文章。&lt;/p&gt;
-&lt;p&gt;如果你还不了解 Latexmk 是什么东东，这里简单的介绍一下：LaTeX 要生成最终的 PDF 文档，如果含有交叉引用、BibTeX、术语表等等，通常需要多次编译才行。而使用 Latexmk 则只需运行一次，它会自动帮你做好其它所有事情。通常情况下，你安装的 LaTeX 发行版已经包含了 Latexmk，我们并不需要手动安装它。&lt;a class="footnote-reference" href="https://macplay.github.io/posts/shi-yong-latexmk-bian-yi-tex-wen-jian/#id4" id="id1"&gt;[1]&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;因为之前对 Latexmk 有一定了解，翻阅手册前确定了基本的目标：&lt;/p&gt;
-&lt;ol class="arabic simple"&gt;
-&lt;li&gt;Latexmk 有文件监测的机制。它应该可以做到只需运行一次，然后每次文件保存动作后，自动重新编译。&lt;/li&gt;
-&lt;li&gt;它应该最终生成 PDF 文件并预览。之前折腾 LaTeX 的过程中，我发现有时生成的是 xdv 文件。&lt;/li&gt;
-&lt;li&gt;最好能直接调用 xelatex 引擎。默认调用 pdflatex 太糟糕了，使用万国码是个很常见的需求。&lt;/li&gt;
-&lt;li&gt;修改 Vim 编辑器中的相应配置。个人使用的是 &lt;a class="reference external" href="https://github.com/lervag/vimtex"&gt;vimtex&lt;/a&gt; 插件，记得它是支持 Latexmk 的，但可能需要配置一下。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;a href="https://macplay.github.io/posts/shi-yong-latexmk-bian-yi-tex-wen-jian/"&gt;Read more…&lt;/a&gt; (2 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>latex</category><category>shell</category><guid>https://macplay.github.io/posts/shi-yong-latexmk-bian-yi-tex-wen-jian/</guid><pubDate>Sat, 13 Jan 2018 11:19:48 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;a href="https://macplay.github.io/posts/shu-ju-ke-shi-hua-seaborn/"&gt;Read more…&lt;/a&gt; (10 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>chart</category><category>jupyter</category><category>matplotlib</category><category>python</category><guid>https://macplay.github.io/posts/shu-ju-ke-shi-hua-seaborn/</guid><pubDate>Fri, 09 Feb 2018 14:25:04 GMT</pubDate></item></channel></rss>

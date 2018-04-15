@@ -64,6 +64,49 @@
     <div class="postindex page-body">
     <div class="post-entry post-text">
         <div class="entry-title">
+            <a href="posts/vim-nong-diu-liao-wo-de-shu-ju/">Vim 弄丢了我的数据！</a>
+        </div>
+        <div class="post-meta">
+            <span class="post-meta-item-icon">
+                <i class="user icon"></i>
+            </span>
+            <span class="post-meta-item-text" itemprop="author">
+                <a href="authors/ashfinal/">ashfinal</a>
+            </span>
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+                <i class="calendar icon"></i>
+            </span>
+            <span class="post-meta-item-text">
+                <a href="archive.html">
+                    <time datetime="2017-11-13T19:57:10+08:00" itemprop="datePublished" title="2017-11-13 19:57">2017-11-13 19:57
+                    </time></a>
+            </span>
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                    <i class="tags icon"></i>
+                </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/recovery/">recovery</a>
+                            </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/vim/">vim</a>
+                            </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/vimrc/">vimrc</a>
+                            </span>
+        </div>
+        <div class="post-summary">
+                <div class="section" id="id1">
+<h2>悲剧</h2>
+<p>昨天（啊不， <span class="strike">前天</span> <span class="amend">大前天</span> ）在写 <a class="reference external" href="posts/zai-vim-zhong-shi-yong-undo-branches/">undo branches</a> 那篇文章的时候，<a class="reference external" href="https://github.com/qvacua/vimr">VimR</a> 编辑器突然毫无征兆的崩溃退出，导致花费好半天翻译过来的几段文字全部丢失。颇具有讽刺意味的是，当时写的文章正是关于在 Vim 编辑器中如何使用 undo branches，避免丢失你宝贵的资料。事情发生时笔者从浏览器中复制了一段文字，然后直接按下 <cite>CMD + V</cite> 粘贴，可能是其中含有一些特殊字符……悲剧就这样发生了。</p>
+<p>第一反应是去查看 undo 历史，很不幸那几段文字并没有保存其中。于是悲哀地意识到它们是永远也找不回来了：因为 undo branches 其实是保存文件撤销记录，而不是用来应对这种意外灾难的。<strong>真正的灾难应对机制已经被我关闭。</strong></p>
+<p class="more"><a href="posts/vim-nong-diu-liao-wo-de-shu-ju/">Read more…</a></p>
+</div>
+        </div>
+    </div>
+    <div class="post-entry post-text">
+        <div class="entry-title">
             <a href="posts/zai-vim-zhong-shi-yong-undo-branches/">【译】在 Vim 中使用 undo branches</a>
         </div>
         <div class="post-meta">
@@ -179,22 +222,22 @@
                 <div>
 <p>有时候会有将代码中的数字递增/递减的需求，一直没有找到相对简单优雅的做法。今天通过网络搜索加上幸运值暴增，感觉终于比较完善地解决了这个问题，遂作此文记录一下。</p>
 <p>如果我们想将以下代码块中的所有数字，在原有基础上均递增两次：</p>
-<pre class="code text"><a name="rest_code_0db8bfabcf124072ad8f50060aecea40-1"></a>my_array[1] = 0;
-<a name="rest_code_0db8bfabcf124072ad8f50060aecea40-2"></a>my_array[2] = 0;
-<a name="rest_code_0db8bfabcf124072ad8f50060aecea40-3"></a>my_array[3] = 0;
-<a name="rest_code_0db8bfabcf124072ad8f50060aecea40-4"></a>my_array[4] = 0;
-<a name="rest_code_0db8bfabcf124072ad8f50060aecea40-5"></a>my_array[5] = 0;
-<a name="rest_code_0db8bfabcf124072ad8f50060aecea40-6"></a>my_array[6] = 0;
-<a name="rest_code_0db8bfabcf124072ad8f50060aecea40-7"></a>my_array[7] = 0;
+<pre class="code text"><a name="rest_code_51a7c0164f8a42a5bde8a08dc2dcee36-1"></a>my_array[1] = 0;
+<a name="rest_code_51a7c0164f8a42a5bde8a08dc2dcee36-2"></a>my_array[2] = 0;
+<a name="rest_code_51a7c0164f8a42a5bde8a08dc2dcee36-3"></a>my_array[3] = 0;
+<a name="rest_code_51a7c0164f8a42a5bde8a08dc2dcee36-4"></a>my_array[4] = 0;
+<a name="rest_code_51a7c0164f8a42a5bde8a08dc2dcee36-5"></a>my_array[5] = 0;
+<a name="rest_code_51a7c0164f8a42a5bde8a08dc2dcee36-6"></a>my_array[6] = 0;
+<a name="rest_code_51a7c0164f8a42a5bde8a08dc2dcee36-7"></a>my_array[7] = 0;
 </pre>
 <p>即变成以下这样：</p>
-<pre class="code text"><a name="rest_code_f4d572c04c194e30ba6b9e52b98df460-1"></a>my_array[3] = 2;
-<a name="rest_code_f4d572c04c194e30ba6b9e52b98df460-2"></a>my_array[4] = 2;
-<a name="rest_code_f4d572c04c194e30ba6b9e52b98df460-3"></a>my_array[5] = 2;
-<a name="rest_code_f4d572c04c194e30ba6b9e52b98df460-4"></a>my_array[6] = 2;
-<a name="rest_code_f4d572c04c194e30ba6b9e52b98df460-5"></a>my_array[7] = 2;
-<a name="rest_code_f4d572c04c194e30ba6b9e52b98df460-6"></a>my_array[8] = 2;
-<a name="rest_code_f4d572c04c194e30ba6b9e52b98df460-7"></a>my_array[9] = 2;
+<pre class="code text"><a name="rest_code_507eb4f9593b44ccac9c8b96455114ae-1"></a>my_array[3] = 2;
+<a name="rest_code_507eb4f9593b44ccac9c8b96455114ae-2"></a>my_array[4] = 2;
+<a name="rest_code_507eb4f9593b44ccac9c8b96455114ae-3"></a>my_array[5] = 2;
+<a name="rest_code_507eb4f9593b44ccac9c8b96455114ae-4"></a>my_array[6] = 2;
+<a name="rest_code_507eb4f9593b44ccac9c8b96455114ae-5"></a>my_array[7] = 2;
+<a name="rest_code_507eb4f9593b44ccac9c8b96455114ae-6"></a>my_array[8] = 2;
+<a name="rest_code_507eb4f9593b44ccac9c8b96455114ae-7"></a>my_array[9] = 2;
 </pre>
 <p class="more"><a href="posts/vim-ji-qiao-pi-pei-shu-zi-di-zeng/">Read more…</a></p>
 </div>
@@ -243,52 +286,6 @@
 <p>尽管如此，今天我并不想写“Vi 入门介绍”，我想通过个人常用的技巧——一些在其它编辑器中我梦寐以求的技巧，向你展示 Vi(m) 编辑器的真正威力。我并不会对这些技巧做全面的阐释，但我强烈推荐你反复试验，直到你理解它们是如何工作的。</p>
 <p>如果你喜欢 Vim 并想完全掌握它，你也可以参与由 Linux Training Academy 提供的 Vim 在线课程。</p>
 <p class="more"><a href="posts/8-ge-vim-ji-qiao-rang-ni-cheng-wei-zhuan-jia-ji-yong-hu/">Read more…</a></p>
-</div>
-        </div>
-    </div>
-    <div class="post-entry post-text">
-        <div class="entry-title">
-            <a href="posts/wei-he-wo-huan-zai-shi-yong-vim-bian-ji-qi/">【译】为何我还在使用 Vim 编辑器？</a>
-        </div>
-        <div class="post-meta">
-            <span class="post-meta-item-icon">
-                <i class="user icon"></i>
-            </span>
-            <span class="post-meta-item-text" itemprop="author">
-                <a href="authors/ashfinal/">ashfinal</a>
-            </span>
-            <span class="post-meta-divider">|</span>
-            <span class="post-meta-item-icon">
-                <i class="calendar icon"></i>
-            </span>
-            <span class="post-meta-item-text">
-                <a href="archive.html">
-                    <time datetime="2017-10-31T20:45:28+08:00" itemprop="datePublished" title="2017-10-31 20:45">2017-10-31 20:45
-                    </time></a>
-            </span>
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                    <i class="tags icon"></i>
-                </span>
-                            <span class="post-meta-tag-item">
-                                <a href="categories/benchmark/">benchmark</a>
-                            </span>
-                            <span class="post-meta-tag-item">
-                                <a href="categories/translation/">translation</a>
-                            </span>
-                            <span class="post-meta-tag-item">
-                                <a href="categories/vim/">vim</a>
-                            </span>
-        </div>
-        <div class="post-summary">
-                <div>
-<blockquote>
-哦不，并不是因为我不知道怎么退出它。 <a class="footnote-reference" href="posts/wei-he-wo-huan-zai-shi-yong-vim-bian-ji-qi/#id7" id="id1">[1]</a>
-</blockquote>
-<div class="figure align-center">
-<img alt="/images/vim_skin.jpeg" src="images/vim_skin.jpeg">
-</div>
-<p class="more"><a href="posts/wei-he-wo-huan-zai-shi-yong-vim-bian-ji-qi/">Read more…</a></p>
 </div>
         </div>
     </div>

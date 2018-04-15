@@ -64,6 +64,53 @@
     <div class="postindex page-body">
     <div class="post-entry post-text">
         <div class="entry-title">
+            <a href="posts/zai-macos-shang-shi-yong-re-vim-pei-zhi/">在 macOS 上使用 re-vim 配置</a>
+        </div>
+        <div class="post-meta">
+            <span class="post-meta-item-icon">
+                <i class="user icon"></i>
+            </span>
+            <span class="post-meta-item-text" itemprop="author">
+                <a href="authors/ashfinal/">ashfinal</a>
+            </span>
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+                <i class="calendar icon"></i>
+            </span>
+            <span class="post-meta-item-text">
+                <a href="archive.html">
+                    <time datetime="2016-05-12T21:31:51+08:00" itemprop="datePublished" title="2016-05-12 21:31">2016-05-12 21:31
+                    </time></a>
+            </span>
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                    <i class="tags icon"></i>
+                </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/asciinema/">asciinema</a>
+                            </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/terminal/">terminal</a>
+                            </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/vim/">vim</a>
+                            </span>
+        </div>
+        <div class="post-summary">
+                <div>
+<!-- vim:set et sw=4 ts=4 ft=rst: -->
+<!-- vim:set et sw=4 ts=4 ft=rst: -->
+<p>使用 <a class="reference external" href="categories/asciinema/">asciinema</a> 详细讲解了在 macOS 上如何使用 <a class="reference external" href="https://github.com/ashfinal/vimrc-config">re-vim</a> 配置。</p>
+<p>涉及到 re-vim 30 秒快速部署、使用 brew 编译 vim、个性化定制 re-vim 等。</p>
+<p>录屏过程中展示了 re-vim 的部分功能，以及使用 re-vim 的一些注意事项。</p>
+<p>有点使用 asciinema 展示博客写作过程的感觉？</p>
+<p>可惜 asciinema 对中文支持还是有些小问题，不管怎样这算是一个很好的尝试。:)</p>
+<p class="more"><a href="posts/zai-macos-shang-shi-yong-re-vim-pei-zhi/">Read more…</a></p>
+</div>
+        </div>
+    </div>
+    <div class="post-entry post-text">
+        <div class="entry-title">
             <a href="posts/asciinema-geng-xuan-ku-di-ji-lu-he-fen-xiang-zhong-duan-cao-zuo/">asciinema - 更炫酷地记录和分享终端操作</a>
         </div>
         <div class="post-meta">
@@ -221,54 +268,6 @@
 <h3 id="_1">缘起</h3>
 <p>最近没事就使用 iPhone 上的 iBooks 来阅读点东西，渐渐喜欢上了该应用。相较于波澜不惊的 Mac 版，iPhone 内置的 iBooks 应用翻页效果堪称惊艳，而其它功能如书签、标注、跳转等用户体验也相当不错。无奈书籍资源实在太少，遂产生制作/修改 ePub 格式电子书的念头。作为「原生党」，自然而然就想到使用 Pages 来尝试制作啦。完成以后感觉整体效果还不错，于是把制作过程记录一下，希望于读者朋友们能够有所参考。</p>
 <p class="more"><a href="posts/shi-yong-pages-zhi-zuo-epub-ge-shi-de-dian-zi-shu/">Read more…</a></p>
-</div>
-        </div>
-    </div>
-    <div class="post-entry post-text">
-        <div class="entry-title">
-            <a href="posts/ru-he-jie-ya-macos-xia-de-pkg-wen-jian/">如何解压 macOS 下的 pkg 文件</a>
-        </div>
-        <div class="post-meta">
-            <span class="post-meta-item-icon">
-                <i class="user icon"></i>
-            </span>
-            <span class="post-meta-item-text" itemprop="author">
-                <a href="authors/ashfinal/">ashfinal</a>
-            </span>
-            <span class="post-meta-divider">|</span>
-            <span class="post-meta-item-icon">
-                <i class="calendar icon"></i>
-            </span>
-            <span class="post-meta-item-text">
-                <a href="archive.html">
-                    <time datetime="2015-03-29T09:39:26+08:00" itemprop="datePublished" title="2015-03-29 09:39">2015-03-29 09:39
-                    </time></a>
-            </span>
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                    <i class="tags icon"></i>
-                </span>
-                            <span class="post-meta-tag-item">
-                                <a href="categories/bash/">bash</a>
-                            </span>
-                            <span class="post-meta-tag-item">
-                                <a href="categories/shell/">shell</a>
-                            </span>
-                            <span class="post-meta-tag-item">
-                                <a href="categories/terminal/">terminal</a>
-                            </span>
-        </div>
-        <div class="post-summary">
-                <div>
-<p>有时候我们可能需要解包 pkg 格式的安装文件包，在 macOS 系统下完成该操作并不需要你额外再安装软件，系统内置的命令就可以。步骤也比较简单：</p>
-<pre class="code literal-block"><span></span>xar -xf Setup.pkg
-cat mac-screenshot-gotd.pkg/Payload <span class="p">|</span> cpio -i
-</pre>
-
-
-<p><img alt="extract pkg" src="images/jie_ya_pkg_wen_jian.png" title="extract pkg"></p>
-<p>鉴于截图部分已经很清晰明白，就不多废话了。参考资料来自：<a href="http://www.hoverlees.com/blog/?p=303" title="http://www.hoverlees.com/blog/?p=303">这里</a></p>
-<p>原文讲的是 Linux 系统下解压 PKG 文件，步骤略有不同。有需要请自取。</p>
 </div>
         </div>
     </div>

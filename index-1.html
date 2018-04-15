@@ -64,6 +64,53 @@
     <div class="postindex page-body">
     <div class="post-entry post-text">
         <div class="entry-title">
+            <a href="posts/ffmpeg-ming-ling-xing-can-shu-diao-you/">ffmpeg 命令行参数调优</a>
+        </div>
+        <div class="post-meta">
+            <span class="post-meta-item-icon">
+                <i class="user icon"></i>
+            </span>
+            <span class="post-meta-item-text" itemprop="author">
+                <a href="authors/ashfinal/">ashfinal</a>
+            </span>
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+                <i class="calendar icon"></i>
+            </span>
+            <span class="post-meta-item-text">
+                <a href="archive.html">
+                    <time datetime="2018-03-04T17:44:20+08:00" itemprop="datePublished" title="2018-03-04 17:44">2018-03-04 17:44
+                    </time></a>
+            </span>
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                    <i class="tags icon"></i>
+                </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/ffmpeg/">ffmpeg</a>
+                            </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/shell/">shell</a>
+                            </span>
+                            <span class="post-meta-tag-item">
+                                <a href="categories/terminal/">terminal</a>
+                            </span>
+        </div>
+        <div class="post-summary">
+                <div>
+<video src="videos/time_machine.mp4" loop autoplay>
+    Your browser does not support the video tag.
+</video><p>文件大小 325 KB。</p>
+<p>完整命令：</p>
+<pre class="code console"><a name="rest_code_694cb5a4d712422aa8b1533f4aa2fa67-1"></a><span class="go">ffmpeg -y -i mv.mp4 -ss 00:02:24.000 -to 00:02:29.000 -c:v libx264 -an -crf 35 -b:v 100k -r 10 -preset slow out.mp4</span>
+</pre>
+<p>如果加上音轨 <cite>-b:a 11k</cite> ，则体积上升到 350 KB。</p>
+<p>很理想了。</p>
+</div>
+        </div>
+    </div>
+    <div class="post-entry post-text">
+        <div class="entry-title">
             <a href="posts/mian-fei-zi-dian-terminology-for-macos/">免费辞典 Terminology for macOS</a>
         </div>
         <div class="post-meta">
@@ -403,52 +450,6 @@
 </div>
 </div>
 </div>
-</div>
-        </div>
-    </div>
-    <div class="post-entry post-text">
-        <div class="entry-title">
-            <a href="posts/shi-yong-latexmk-bian-yi-tex-wen-jian/">使用 Latexmk 编译 tex 文件</a>
-        </div>
-        <div class="post-meta">
-            <span class="post-meta-item-icon">
-                <i class="user icon"></i>
-            </span>
-            <span class="post-meta-item-text" itemprop="author">
-                <a href="authors/ashfinal/">ashfinal</a>
-            </span>
-            <span class="post-meta-divider">|</span>
-            <span class="post-meta-item-icon">
-                <i class="calendar icon"></i>
-            </span>
-            <span class="post-meta-item-text">
-                <a href="archive.html">
-                    <time datetime="2018-01-13T19:19:48+08:00" itemprop="datePublished" title="2018-01-13 19:19">2018-01-13 19:19
-                    </time></a>
-            </span>
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                    <i class="tags icon"></i>
-                </span>
-                            <span class="post-meta-tag-item">
-                                <a href="categories/latex/">latex</a>
-                            </span>
-                            <span class="post-meta-tag-item">
-                                <a href="categories/shell/">shell</a>
-                            </span>
-        </div>
-        <div class="post-summary">
-                <div>
-<p>尽管老早以前就听说过 Latexmk，但是一直没有用起来。昨天折腾的心思又蠢蠢欲动，于是翻阅了下 Latexmk 手册，最终将其配置为理想状态，于是便有了这篇分享文章。</p>
-<p>如果你还不了解 Latexmk 是什么东东，这里简单的介绍一下：LaTeX 要生成最终的 PDF 文档，如果含有交叉引用、BibTeX、术语表等等，通常需要多次编译才行。而使用 Latexmk 则只需运行一次，它会自动帮你做好其它所有事情。通常情况下，你安装的 LaTeX 发行版已经包含了 Latexmk，我们并不需要手动安装它。<a class="footnote-reference" href="posts/shi-yong-latexmk-bian-yi-tex-wen-jian/#id4" id="id1">[1]</a></p>
-<p>因为之前对 Latexmk 有一定了解，翻阅手册前确定了基本的目标：</p>
-<ol class="arabic simple">
-<li>Latexmk 有文件监测的机制。它应该可以做到只需运行一次，然后每次文件保存动作后，自动重新编译。</li>
-<li>它应该最终生成 PDF 文件并预览。之前折腾 LaTeX 的过程中，我发现有时生成的是 xdv 文件。</li>
-<li>最好能直接调用 xelatex 引擎。默认调用 pdflatex 太糟糕了，使用万国码是个很常见的需求。</li>
-<li>修改 Vim 编辑器中的相应配置。个人使用的是 <a class="reference external" href="https://github.com/lervag/vimtex">vimtex</a> 插件，记得它是支持 Latexmk 的，但可能需要配置一下。</li>
-</ol>
-<p class="more"><a href="posts/shi-yong-latexmk-bian-yi-tex-wen-jian/">Read more…</a></p>
 </div>
         </div>
     </div>

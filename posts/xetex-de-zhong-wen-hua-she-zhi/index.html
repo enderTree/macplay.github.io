@@ -133,30 +133,30 @@
 <p>看过一些文章得出结论：即使用 XeTeX 编译中文，也需要额外添加 <cite>xeCJK</cite> 包设置下字体。笔者也一直是这么做的。</p>
 <p>刚尝试了下，这一步其实是不必要的。直接用 <cite>fontspec</cite> 设置中文字体，不必引入额外的包：</p>
 <table class="codetable"><tr>
-<td class="linenos"><div class="linenodiv"><pre><a href="#rest_code_58ef92ec26e54281a8c8d38b16618759-1"> 1</a>
-<a href="#rest_code_58ef92ec26e54281a8c8d38b16618759-2"> 2</a>
-<a href="#rest_code_58ef92ec26e54281a8c8d38b16618759-3"> 3</a>
-<a href="#rest_code_58ef92ec26e54281a8c8d38b16618759-4"> 4</a>
-<a href="#rest_code_58ef92ec26e54281a8c8d38b16618759-5"> 5</a>
-<a href="#rest_code_58ef92ec26e54281a8c8d38b16618759-6"> 6</a>
-<a href="#rest_code_58ef92ec26e54281a8c8d38b16618759-7"> 7</a>
-<a href="#rest_code_58ef92ec26e54281a8c8d38b16618759-8"> 8</a>
-<a href="#rest_code_58ef92ec26e54281a8c8d38b16618759-9"> 9</a>
-<a href="#rest_code_58ef92ec26e54281a8c8d38b16618759-10">10</a>
-<a href="#rest_code_58ef92ec26e54281a8c8d38b16618759-11">11</a>
-<a href="#rest_code_58ef92ec26e54281a8c8d38b16618759-12">12</a></pre></div></td>
-<td class="code"><pre class="code latex"><a name="rest_code_58ef92ec26e54281a8c8d38b16618759-1"></a><span class="c">%! TEX program = xelatex</span>
-<a name="rest_code_58ef92ec26e54281a8c8d38b16618759-2"></a>
-<a name="rest_code_58ef92ec26e54281a8c8d38b16618759-3"></a><span class="k">\usepackage</span><span class="nb">{</span>fontspec<span class="nb">}</span>
-<a name="rest_code_58ef92ec26e54281a8c8d38b16618759-4"></a><span class="k">\setmainfont</span><span class="nb">{</span>PingFang SC<span class="nb">}</span>
-<a name="rest_code_58ef92ec26e54281a8c8d38b16618759-5"></a><span class="k">\setsansfont</span><span class="nb">{</span>Hiragino Sans GB<span class="nb">}</span>
-<a name="rest_code_58ef92ec26e54281a8c8d38b16618759-6"></a><span class="k">\setmonofont</span><span class="na">[Scale=0.9]</span><span class="nb">{</span>PingFang SC<span class="nb">}</span>
-<a name="rest_code_58ef92ec26e54281a8c8d38b16618759-7"></a>
-<a name="rest_code_58ef92ec26e54281a8c8d38b16618759-8"></a><span class="k">\usepackage</span><span class="nb">{</span>indentfirst<span class="nb">}</span>
-<a name="rest_code_58ef92ec26e54281a8c8d38b16618759-9"></a><span class="k">\setlength</span><span class="nb">{</span><span class="k">\parindent</span><span class="nb">}{</span>2em<span class="nb">}</span>
-<a name="rest_code_58ef92ec26e54281a8c8d38b16618759-10"></a>
-<a name="rest_code_58ef92ec26e54281a8c8d38b16618759-11"></a><span class="k">\XeTeXlinebreaklocale</span> "zh"
-<a name="rest_code_58ef92ec26e54281a8c8d38b16618759-12"></a><span class="k">\XeTeXlinebreakskip</span> = 0pt plus 1pt minus 0.1pt
+<td class="linenos"><div class="linenodiv"><pre><a href="#rest_code_412b78aae0be41c5a71946c0cb240551-1"> 1</a>
+<a href="#rest_code_412b78aae0be41c5a71946c0cb240551-2"> 2</a>
+<a href="#rest_code_412b78aae0be41c5a71946c0cb240551-3"> 3</a>
+<a href="#rest_code_412b78aae0be41c5a71946c0cb240551-4"> 4</a>
+<a href="#rest_code_412b78aae0be41c5a71946c0cb240551-5"> 5</a>
+<a href="#rest_code_412b78aae0be41c5a71946c0cb240551-6"> 6</a>
+<a href="#rest_code_412b78aae0be41c5a71946c0cb240551-7"> 7</a>
+<a href="#rest_code_412b78aae0be41c5a71946c0cb240551-8"> 8</a>
+<a href="#rest_code_412b78aae0be41c5a71946c0cb240551-9"> 9</a>
+<a href="#rest_code_412b78aae0be41c5a71946c0cb240551-10">10</a>
+<a href="#rest_code_412b78aae0be41c5a71946c0cb240551-11">11</a>
+<a href="#rest_code_412b78aae0be41c5a71946c0cb240551-12">12</a></pre></div></td>
+<td class="code"><pre class="code latex"><a name="rest_code_412b78aae0be41c5a71946c0cb240551-1"></a><span class="c">%! TEX program = xelatex</span>
+<a name="rest_code_412b78aae0be41c5a71946c0cb240551-2"></a>
+<a name="rest_code_412b78aae0be41c5a71946c0cb240551-3"></a><span class="k">\usepackage</span><span class="nb">{</span>fontspec<span class="nb">}</span>
+<a name="rest_code_412b78aae0be41c5a71946c0cb240551-4"></a><span class="k">\setmainfont</span><span class="nb">{</span>PingFang SC<span class="nb">}</span>
+<a name="rest_code_412b78aae0be41c5a71946c0cb240551-5"></a><span class="k">\setsansfont</span><span class="nb">{</span>Hiragino Sans GB<span class="nb">}</span>
+<a name="rest_code_412b78aae0be41c5a71946c0cb240551-6"></a><span class="k">\setmonofont</span><span class="na">[Scale=0.9]</span><span class="nb">{</span>PingFang SC<span class="nb">}</span>
+<a name="rest_code_412b78aae0be41c5a71946c0cb240551-7"></a>
+<a name="rest_code_412b78aae0be41c5a71946c0cb240551-8"></a><span class="k">\usepackage</span><span class="nb">{</span>indentfirst<span class="nb">}</span>
+<a name="rest_code_412b78aae0be41c5a71946c0cb240551-9"></a><span class="k">\setlength</span><span class="nb">{</span><span class="k">\parindent</span><span class="nb">}{</span>2em<span class="nb">}</span>
+<a name="rest_code_412b78aae0be41c5a71946c0cb240551-10"></a>
+<a name="rest_code_412b78aae0be41c5a71946c0cb240551-11"></a><span class="k">\XeTeXlinebreaklocale</span> "zh"
+<a name="rest_code_412b78aae0be41c5a71946c0cb240551-12"></a><span class="k">\XeTeXlinebreakskip</span> = 0pt plus 1pt minus 0.1pt
 </pre></td>
 </tr></table>
 <p>第 1 行指定编译引擎 <cite>xelatex</cite> 。不成文的规范，LaTeX 客户端或编辑器插件不一定会遵守。</p>
