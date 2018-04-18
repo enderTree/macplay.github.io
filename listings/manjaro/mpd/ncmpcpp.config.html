@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="ncmpcpp.config">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="generator" content="Nikola (getnikola.com)">
+<title>ncmpcpp.config - MacPlay</title>
+<link rel="apple-touch-icon" sizes="180x180" href="../../../apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../../favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../../favicon-16x16.png">
+<link rel="mask-icon" href="../../../safari-pinned-tab.svg" color="#5bbad5">
+<link href="../../../assets/css/semantic.min.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link rel="canonical" href="https://macplay.github.io/listings/manjaro/mpd/ncmpcpp.config.html">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../../rss.xml">
+</head>
+<body>
+        <div class="ui grid">
+            <div class="computer only three wide column no-print">
+                <div id="left-side">
+                </div>
+            </div>
+            <div class="ten wide computer sixteen wide tablet sixteen wide mobile column">
+                        <div class="ui inline cookie nag no-print">
+            <span class="title">从现在开始，博客可以支持站点通告了。 O(∩_∩)O~~</span>
+            <i class="close icon"></i>
+        </div>
+    <header id="header" class="no-print"><div class="ui grid">
+        <div class="computer only tablet only sixteen wide column">
+            <div class="ui large secondary stackable menu">
+                <a class="header item brand-logo" href="https://macplay.github.io/">
+                    MacPlay
+                </a>
+                        <a class="item" href="../../../">Posts</a>
+                        <a class="item" href="../../">Code</a>
+                        <a class="item" href="../../../galleries/">Gallery</a>
+                        <a class="item" href="../../../categories/">Tags</a>
+                        <a class="item" href="../../../archive.html">Archive</a>
+                <div class="right menu">
+                    <a class="item" href="../../../rss.xml"><i class="rss icon"></i>RSS</a>
+                </div>
+            </div>
+        </div>
+        <div class="mobile only sixteen wide column">
+            <div class="ui fluid accordion vertical menu">
+                <div class="item">
+                    <a class="title">MacPlay</a>
+                    <div class="content">
+                                <a class="item" href="../../../">Posts</a>
+                                <a class="item" href="../../">Code</a>
+                                <a class="item" href="../../../galleries/">Gallery</a>
+                                <a class="item" href="../../../categories/">Tags</a>
+                                <a class="item" href="../../../archive.html">Archive</a>
+                        <a class="item" href="../../../rss.xml"><i class="rss icon"></i>RSS</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </header><main id="main"><div id="main-content">
+<div class="listingpage page-body" itemscope="itemscope" itemtype="http://schema.org/Article">
+    <div class="list-title">
+                <a href="../../">listings /</a>
+                <a href="../">manjaro /</a>
+                <a href=".">mpd /</a>
+                ncmpcpp.config
+    </div>
+        <p class="downloadlink">
+            <i class="cloud download alternate icon"></i><a href="ncmpcpp.config">Download</a>
+        </p>
+        <table class="codetable"><tr>
+<td class="linenos"><div class="linenodiv"><pre><a href="#listingsmanjarompdncmpcppconfig-1">  1</a>
+<a href="#listingsmanjarompdncmpcppconfig-2">  2</a>
+<a href="#listingsmanjarompdncmpcppconfig-3">  3</a>
+<a href="#listingsmanjarompdncmpcppconfig-4">  4</a>
+<a href="#listingsmanjarompdncmpcppconfig-5">  5</a>
+<a href="#listingsmanjarompdncmpcppconfig-6">  6</a>
+<a href="#listingsmanjarompdncmpcppconfig-7">  7</a>
+<a href="#listingsmanjarompdncmpcppconfig-8">  8</a>
+<a href="#listingsmanjarompdncmpcppconfig-9">  9</a>
+<a href="#listingsmanjarompdncmpcppconfig-10"> 10</a>
+<a href="#listingsmanjarompdncmpcppconfig-11"> 11</a>
+<a href="#listingsmanjarompdncmpcppconfig-12"> 12</a>
+<a href="#listingsmanjarompdncmpcppconfig-13"> 13</a>
+<a href="#listingsmanjarompdncmpcppconfig-14"> 14</a>
+<a href="#listingsmanjarompdncmpcppconfig-15"> 15</a>
+<a href="#listingsmanjarompdncmpcppconfig-16"> 16</a>
+<a href="#listingsmanjarompdncmpcppconfig-17"> 17</a>
+<a href="#listingsmanjarompdncmpcppconfig-18"> 18</a>
+<a href="#listingsmanjarompdncmpcppconfig-19"> 19</a>
+<a href="#listingsmanjarompdncmpcppconfig-20"> 20</a>
+<a href="#listingsmanjarompdncmpcppconfig-21"> 21</a>
+<a href="#listingsmanjarompdncmpcppconfig-22"> 22</a>
+<a href="#listingsmanjarompdncmpcppconfig-23"> 23</a>
+<a href="#listingsmanjarompdncmpcppconfig-24"> 24</a>
+<a href="#listingsmanjarompdncmpcppconfig-25"> 25</a>
+<a href="#listingsmanjarompdncmpcppconfig-26"> 26</a>
+<a href="#listingsmanjarompdncmpcppconfig-27"> 27</a>
+<a href="#listingsmanjarompdncmpcppconfig-28"> 28</a>
+<a href="#listingsmanjarompdncmpcppconfig-29"> 29</a>
+<a href="#listingsmanjarompdncmpcppconfig-30"> 30</a>
+<a href="#listingsmanjarompdncmpcppconfig-31"> 31</a>
+<a href="#listingsmanjarompdncmpcppconfig-32"> 32</a>
+<a href="#listingsmanjarompdncmpcppconfig-33"> 33</a>
+<a href="#listingsmanjarompdncmpcppconfig-34"> 34</a>
+<a href="#listingsmanjarompdncmpcppconfig-35"> 35</a>
+<a href="#listingsmanjarompdncmpcppconfig-36"> 36</a>
+<a href="#listingsmanjarompdncmpcppconfig-37"> 37</a>
+<a href="#listingsmanjarompdncmpcppconfig-38"> 38</a>
+<a href="#listingsmanjarompdncmpcppconfig-39"> 39</a>
+<a href="#listingsmanjarompdncmpcppconfig-40"> 40</a>
+<a href="#listingsmanjarompdncmpcppconfig-41"> 41</a>
+<a href="#listingsmanjarompdncmpcppconfig-42"> 42</a>
+<a href="#listingsmanjarompdncmpcppconfig-43"> 43</a>
+<a href="#listingsmanjarompdncmpcppconfig-44"> 44</a>
+<a href="#listingsmanjarompdncmpcppconfig-45"> 45</a>
+<a href="#listingsmanjarompdncmpcppconfig-46"> 46</a>
+<a href="#listingsmanjarompdncmpcppconfig-47"> 47</a>
+<a href="#listingsmanjarompdncmpcppconfig-48"> 48</a>
+<a href="#listingsmanjarompdncmpcppconfig-49"> 49</a>
+<a href="#listingsmanjarompdncmpcppconfig-50"> 50</a>
+<a href="#listingsmanjarompdncmpcppconfig-51"> 51</a>
+<a href="#listingsmanjarompdncmpcppconfig-52"> 52</a>
+<a href="#listingsmanjarompdncmpcppconfig-53"> 53</a>
+<a href="#listingsmanjarompdncmpcppconfig-54"> 54</a>
+<a href="#listingsmanjarompdncmpcppconfig-55"> 55</a>
+<a href="#listingsmanjarompdncmpcppconfig-56"> 56</a>
+<a href="#listingsmanjarompdncmpcppconfig-57"> 57</a>
+<a href="#listingsmanjarompdncmpcppconfig-58"> 58</a>
+<a href="#listingsmanjarompdncmpcppconfig-59"> 59</a>
+<a href="#listingsmanjarompdncmpcppconfig-60"> 60</a>
+<a href="#listingsmanjarompdncmpcppconfig-61"> 61</a>
+<a href="#listingsmanjarompdncmpcppconfig-62"> 62</a>
+<a href="#listingsmanjarompdncmpcppconfig-63"> 63</a>
+<a href="#listingsmanjarompdncmpcppconfig-64"> 64</a>
+<a href="#listingsmanjarompdncmpcppconfig-65"> 65</a>
+<a href="#listingsmanjarompdncmpcppconfig-66"> 66</a>
+<a href="#listingsmanjarompdncmpcppconfig-67"> 67</a>
+<a href="#listingsmanjarompdncmpcppconfig-68"> 68</a>
+<a href="#listingsmanjarompdncmpcppconfig-69"> 69</a>
+<a href="#listingsmanjarompdncmpcppconfig-70"> 70</a>
+<a href="#listingsmanjarompdncmpcppconfig-71"> 71</a>
+<a href="#listingsmanjarompdncmpcppconfig-72"> 72</a>
+<a href="#listingsmanjarompdncmpcppconfig-73"> 73</a>
+<a href="#listingsmanjarompdncmpcppconfig-74"> 74</a>
+<a href="#listingsmanjarompdncmpcppconfig-75"> 75</a>
+<a href="#listingsmanjarompdncmpcppconfig-76"> 76</a>
+<a href="#listingsmanjarompdncmpcppconfig-77"> 77</a>
+<a href="#listingsmanjarompdncmpcppconfig-78"> 78</a>
+<a href="#listingsmanjarompdncmpcppconfig-79"> 79</a>
+<a href="#listingsmanjarompdncmpcppconfig-80"> 80</a>
+<a href="#listingsmanjarompdncmpcppconfig-81"> 81</a>
+<a href="#listingsmanjarompdncmpcppconfig-82"> 82</a>
+<a href="#listingsmanjarompdncmpcppconfig-83"> 83</a>
+<a href="#listingsmanjarompdncmpcppconfig-84"> 84</a>
+<a href="#listingsmanjarompdncmpcppconfig-85"> 85</a>
+<a href="#listingsmanjarompdncmpcppconfig-86"> 86</a>
+<a href="#listingsmanjarompdncmpcppconfig-87"> 87</a>
+<a href="#listingsmanjarompdncmpcppconfig-88"> 88</a>
+<a href="#listingsmanjarompdncmpcppconfig-89"> 89</a>
+<a href="#listingsmanjarompdncmpcppconfig-90"> 90</a>
+<a href="#listingsmanjarompdncmpcppconfig-91"> 91</a>
+<a href="#listingsmanjarompdncmpcppconfig-92"> 92</a>
+<a href="#listingsmanjarompdncmpcppconfig-93"> 93</a>
+<a href="#listingsmanjarompdncmpcppconfig-94"> 94</a>
+<a href="#listingsmanjarompdncmpcppconfig-95"> 95</a>
+<a href="#listingsmanjarompdncmpcppconfig-96"> 96</a>
+<a href="#listingsmanjarompdncmpcppconfig-97"> 97</a>
+<a href="#listingsmanjarompdncmpcppconfig-98"> 98</a>
+<a href="#listingsmanjarompdncmpcppconfig-99"> 99</a>
+<a href="#listingsmanjarompdncmpcppconfig-100">100</a>
+<a href="#listingsmanjarompdncmpcppconfig-101">101</a>
+<a href="#listingsmanjarompdncmpcppconfig-102">102</a>
+<a href="#listingsmanjarompdncmpcppconfig-103">103</a>
+<a href="#listingsmanjarompdncmpcppconfig-104">104</a>
+<a href="#listingsmanjarompdncmpcppconfig-105">105</a>
+<a href="#listingsmanjarompdncmpcppconfig-106">106</a>
+<a href="#listingsmanjarompdncmpcppconfig-107">107</a>
+<a href="#listingsmanjarompdncmpcppconfig-108">108</a>
+<a href="#listingsmanjarompdncmpcppconfig-109">109</a>
+<a href="#listingsmanjarompdncmpcppconfig-110">110</a>
+<a href="#listingsmanjarompdncmpcppconfig-111">111</a>
+<a href="#listingsmanjarompdncmpcppconfig-112">112</a>
+<a href="#listingsmanjarompdncmpcppconfig-113">113</a>
+<a href="#listingsmanjarompdncmpcppconfig-114">114</a>
+<a href="#listingsmanjarompdncmpcppconfig-115">115</a>
+<a href="#listingsmanjarompdncmpcppconfig-116">116</a>
+<a href="#listingsmanjarompdncmpcppconfig-117">117</a>
+<a href="#listingsmanjarompdncmpcppconfig-118">118</a>
+<a href="#listingsmanjarompdncmpcppconfig-119">119</a>
+<a href="#listingsmanjarompdncmpcppconfig-120">120</a>
+<a href="#listingsmanjarompdncmpcppconfig-121">121</a>
+<a href="#listingsmanjarompdncmpcppconfig-122">122</a>
+<a href="#listingsmanjarompdncmpcppconfig-123">123</a>
+<a href="#listingsmanjarompdncmpcppconfig-124">124</a>
+<a href="#listingsmanjarompdncmpcppconfig-125">125</a>
+<a href="#listingsmanjarompdncmpcppconfig-126">126</a>
+<a href="#listingsmanjarompdncmpcppconfig-127">127</a>
+<a href="#listingsmanjarompdncmpcppconfig-128">128</a>
+<a href="#listingsmanjarompdncmpcppconfig-129">129</a>
+<a href="#listingsmanjarompdncmpcppconfig-130">130</a>
+<a href="#listingsmanjarompdncmpcppconfig-131">131</a>
+<a href="#listingsmanjarompdncmpcppconfig-132">132</a>
+<a href="#listingsmanjarompdncmpcppconfig-133">133</a>
+<a href="#listingsmanjarompdncmpcppconfig-134">134</a>
+<a href="#listingsmanjarompdncmpcppconfig-135">135</a>
+<a href="#listingsmanjarompdncmpcppconfig-136">136</a>
+<a href="#listingsmanjarompdncmpcppconfig-137">137</a>
+<a href="#listingsmanjarompdncmpcppconfig-138">138</a>
+<a href="#listingsmanjarompdncmpcppconfig-139">139</a>
+<a href="#listingsmanjarompdncmpcppconfig-140">140</a>
+<a href="#listingsmanjarompdncmpcppconfig-141">141</a>
+<a href="#listingsmanjarompdncmpcppconfig-142">142</a>
+<a href="#listingsmanjarompdncmpcppconfig-143">143</a>
+<a href="#listingsmanjarompdncmpcppconfig-144">144</a>
+<a href="#listingsmanjarompdncmpcppconfig-145">145</a>
+<a href="#listingsmanjarompdncmpcppconfig-146">146</a>
+<a href="#listingsmanjarompdncmpcppconfig-147">147</a>
+<a href="#listingsmanjarompdncmpcppconfig-148">148</a>
+<a href="#listingsmanjarompdncmpcppconfig-149">149</a>
+<a href="#listingsmanjarompdncmpcppconfig-150">150</a>
+<a href="#listingsmanjarompdncmpcppconfig-151">151</a>
+<a href="#listingsmanjarompdncmpcppconfig-152">152</a>
+<a href="#listingsmanjarompdncmpcppconfig-153">153</a>
+<a href="#listingsmanjarompdncmpcppconfig-154">154</a>
+<a href="#listingsmanjarompdncmpcppconfig-155">155</a>
+<a href="#listingsmanjarompdncmpcppconfig-156">156</a>
+<a href="#listingsmanjarompdncmpcppconfig-157">157</a>
+<a href="#listingsmanjarompdncmpcppconfig-158">158</a>
+<a href="#listingsmanjarompdncmpcppconfig-159">159</a>
+<a href="#listingsmanjarompdncmpcppconfig-160">160</a>
+<a href="#listingsmanjarompdncmpcppconfig-161">161</a>
+<a href="#listingsmanjarompdncmpcppconfig-162">162</a>
+<a href="#listingsmanjarompdncmpcppconfig-163">163</a>
+<a href="#listingsmanjarompdncmpcppconfig-164">164</a>
+<a href="#listingsmanjarompdncmpcppconfig-165">165</a>
+<a href="#listingsmanjarompdncmpcppconfig-166">166</a>
+<a href="#listingsmanjarompdncmpcppconfig-167">167</a>
+<a href="#listingsmanjarompdncmpcppconfig-168">168</a>
+<a href="#listingsmanjarompdncmpcppconfig-169">169</a>
+<a href="#listingsmanjarompdncmpcppconfig-170">170</a>
+<a href="#listingsmanjarompdncmpcppconfig-171">171</a>
+<a href="#listingsmanjarompdncmpcppconfig-172">172</a>
+<a href="#listingsmanjarompdncmpcppconfig-173">173</a>
+<a href="#listingsmanjarompdncmpcppconfig-174">174</a>
+<a href="#listingsmanjarompdncmpcppconfig-175">175</a>
+<a href="#listingsmanjarompdncmpcppconfig-176">176</a>
+<a href="#listingsmanjarompdncmpcppconfig-177">177</a>
+<a href="#listingsmanjarompdncmpcppconfig-178">178</a>
+<a href="#listingsmanjarompdncmpcppconfig-179">179</a>
+<a href="#listingsmanjarompdncmpcppconfig-180">180</a>
+<a href="#listingsmanjarompdncmpcppconfig-181">181</a>
+<a href="#listingsmanjarompdncmpcppconfig-182">182</a>
+<a href="#listingsmanjarompdncmpcppconfig-183">183</a>
+<a href="#listingsmanjarompdncmpcppconfig-184">184</a>
+<a href="#listingsmanjarompdncmpcppconfig-185">185</a>
+<a href="#listingsmanjarompdncmpcppconfig-186">186</a>
+<a href="#listingsmanjarompdncmpcppconfig-187">187</a>
+<a href="#listingsmanjarompdncmpcppconfig-188">188</a>
+<a href="#listingsmanjarompdncmpcppconfig-189">189</a>
+<a href="#listingsmanjarompdncmpcppconfig-190">190</a>
+<a href="#listingsmanjarompdncmpcppconfig-191">191</a>
+<a href="#listingsmanjarompdncmpcppconfig-192">192</a>
+<a href="#listingsmanjarompdncmpcppconfig-193">193</a>
+<a href="#listingsmanjarompdncmpcppconfig-194">194</a>
+<a href="#listingsmanjarompdncmpcppconfig-195">195</a>
+<a href="#listingsmanjarompdncmpcppconfig-196">196</a>
+<a href="#listingsmanjarompdncmpcppconfig-197">197</a>
+<a href="#listingsmanjarompdncmpcppconfig-198">198</a>
+<a href="#listingsmanjarompdncmpcppconfig-199">199</a>
+<a href="#listingsmanjarompdncmpcppconfig-200">200</a>
+<a href="#listingsmanjarompdncmpcppconfig-201">201</a>
+<a href="#listingsmanjarompdncmpcppconfig-202">202</a>
+<a href="#listingsmanjarompdncmpcppconfig-203">203</a>
+<a href="#listingsmanjarompdncmpcppconfig-204">204</a>
+<a href="#listingsmanjarompdncmpcppconfig-205">205</a>
+<a href="#listingsmanjarompdncmpcppconfig-206">206</a>
+<a href="#listingsmanjarompdncmpcppconfig-207">207</a>
+<a href="#listingsmanjarompdncmpcppconfig-208">208</a>
+<a href="#listingsmanjarompdncmpcppconfig-209">209</a>
+<a href="#listingsmanjarompdncmpcppconfig-210">210</a>
+<a href="#listingsmanjarompdncmpcppconfig-211">211</a>
+<a href="#listingsmanjarompdncmpcppconfig-212">212</a>
+<a href="#listingsmanjarompdncmpcppconfig-213">213</a>
+<a href="#listingsmanjarompdncmpcppconfig-214">214</a>
+<a href="#listingsmanjarompdncmpcppconfig-215">215</a>
+<a href="#listingsmanjarompdncmpcppconfig-216">216</a>
+<a href="#listingsmanjarompdncmpcppconfig-217">217</a>
+<a href="#listingsmanjarompdncmpcppconfig-218">218</a>
+<a href="#listingsmanjarompdncmpcppconfig-219">219</a>
+<a href="#listingsmanjarompdncmpcppconfig-220">220</a>
+<a href="#listingsmanjarompdncmpcppconfig-221">221</a>
+<a href="#listingsmanjarompdncmpcppconfig-222">222</a>
+<a href="#listingsmanjarompdncmpcppconfig-223">223</a>
+<a href="#listingsmanjarompdncmpcppconfig-224">224</a>
+<a href="#listingsmanjarompdncmpcppconfig-225">225</a>
+<a href="#listingsmanjarompdncmpcppconfig-226">226</a>
+<a href="#listingsmanjarompdncmpcppconfig-227">227</a>
+<a href="#listingsmanjarompdncmpcppconfig-228">228</a>
+<a href="#listingsmanjarompdncmpcppconfig-229">229</a>
+<a href="#listingsmanjarompdncmpcppconfig-230">230</a>
+<a href="#listingsmanjarompdncmpcppconfig-231">231</a>
+<a href="#listingsmanjarompdncmpcppconfig-232">232</a>
+<a href="#listingsmanjarompdncmpcppconfig-233">233</a>
+<a href="#listingsmanjarompdncmpcppconfig-234">234</a>
+<a href="#listingsmanjarompdncmpcppconfig-235">235</a>
+<a href="#listingsmanjarompdncmpcppconfig-236">236</a>
+<a href="#listingsmanjarompdncmpcppconfig-237">237</a>
+<a href="#listingsmanjarompdncmpcppconfig-238">238</a>
+<a href="#listingsmanjarompdncmpcppconfig-239">239</a>
+<a href="#listingsmanjarompdncmpcppconfig-240">240</a>
+<a href="#listingsmanjarompdncmpcppconfig-241">241</a>
+<a href="#listingsmanjarompdncmpcppconfig-242">242</a>
+<a href="#listingsmanjarompdncmpcppconfig-243">243</a>
+<a href="#listingsmanjarompdncmpcppconfig-244">244</a>
+<a href="#listingsmanjarompdncmpcppconfig-245">245</a>
+<a href="#listingsmanjarompdncmpcppconfig-246">246</a>
+<a href="#listingsmanjarompdncmpcppconfig-247">247</a>
+<a href="#listingsmanjarompdncmpcppconfig-248">248</a>
+<a href="#listingsmanjarompdncmpcppconfig-249">249</a>
+<a href="#listingsmanjarompdncmpcppconfig-250">250</a>
+<a href="#listingsmanjarompdncmpcppconfig-251">251</a>
+<a href="#listingsmanjarompdncmpcppconfig-252">252</a>
+<a href="#listingsmanjarompdncmpcppconfig-253">253</a>
+<a href="#listingsmanjarompdncmpcppconfig-254">254</a>
+<a href="#listingsmanjarompdncmpcppconfig-255">255</a>
+<a href="#listingsmanjarompdncmpcppconfig-256">256</a>
+<a href="#listingsmanjarompdncmpcppconfig-257">257</a>
+<a href="#listingsmanjarompdncmpcppconfig-258">258</a>
+<a href="#listingsmanjarompdncmpcppconfig-259">259</a>
+<a href="#listingsmanjarompdncmpcppconfig-260">260</a>
+<a href="#listingsmanjarompdncmpcppconfig-261">261</a>
+<a href="#listingsmanjarompdncmpcppconfig-262">262</a>
+<a href="#listingsmanjarompdncmpcppconfig-263">263</a>
+<a href="#listingsmanjarompdncmpcppconfig-264">264</a>
+<a href="#listingsmanjarompdncmpcppconfig-265">265</a>
+<a href="#listingsmanjarompdncmpcppconfig-266">266</a>
+<a href="#listingsmanjarompdncmpcppconfig-267">267</a>
+<a href="#listingsmanjarompdncmpcppconfig-268">268</a>
+<a href="#listingsmanjarompdncmpcppconfig-269">269</a>
+<a href="#listingsmanjarompdncmpcppconfig-270">270</a>
+<a href="#listingsmanjarompdncmpcppconfig-271">271</a>
+<a href="#listingsmanjarompdncmpcppconfig-272">272</a>
+<a href="#listingsmanjarompdncmpcppconfig-273">273</a>
+<a href="#listingsmanjarompdncmpcppconfig-274">274</a>
+<a href="#listingsmanjarompdncmpcppconfig-275">275</a>
+<a href="#listingsmanjarompdncmpcppconfig-276">276</a>
+<a href="#listingsmanjarompdncmpcppconfig-277">277</a>
+<a href="#listingsmanjarompdncmpcppconfig-278">278</a>
+<a href="#listingsmanjarompdncmpcppconfig-279">279</a>
+<a href="#listingsmanjarompdncmpcppconfig-280">280</a>
+<a href="#listingsmanjarompdncmpcppconfig-281">281</a>
+<a href="#listingsmanjarompdncmpcppconfig-282">282</a>
+<a href="#listingsmanjarompdncmpcppconfig-283">283</a>
+<a href="#listingsmanjarompdncmpcppconfig-284">284</a>
+<a href="#listingsmanjarompdncmpcppconfig-285">285</a>
+<a href="#listingsmanjarompdncmpcppconfig-286">286</a>
+<a href="#listingsmanjarompdncmpcppconfig-287">287</a>
+<a href="#listingsmanjarompdncmpcppconfig-288">288</a>
+<a href="#listingsmanjarompdncmpcppconfig-289">289</a>
+<a href="#listingsmanjarompdncmpcppconfig-290">290</a>
+<a href="#listingsmanjarompdncmpcppconfig-291">291</a>
+<a href="#listingsmanjarompdncmpcppconfig-292">292</a>
+<a href="#listingsmanjarompdncmpcppconfig-293">293</a>
+<a href="#listingsmanjarompdncmpcppconfig-294">294</a>
+<a href="#listingsmanjarompdncmpcppconfig-295">295</a>
+<a href="#listingsmanjarompdncmpcppconfig-296">296</a>
+<a href="#listingsmanjarompdncmpcppconfig-297">297</a>
+<a href="#listingsmanjarompdncmpcppconfig-298">298</a>
+<a href="#listingsmanjarompdncmpcppconfig-299">299</a>
+<a href="#listingsmanjarompdncmpcppconfig-300">300</a>
+<a href="#listingsmanjarompdncmpcppconfig-301">301</a>
+<a href="#listingsmanjarompdncmpcppconfig-302">302</a>
+<a href="#listingsmanjarompdncmpcppconfig-303">303</a>
+<a href="#listingsmanjarompdncmpcppconfig-304">304</a>
+<a href="#listingsmanjarompdncmpcppconfig-305">305</a>
+<a href="#listingsmanjarompdncmpcppconfig-306">306</a>
+<a href="#listingsmanjarompdncmpcppconfig-307">307</a>
+<a href="#listingsmanjarompdncmpcppconfig-308">308</a>
+<a href="#listingsmanjarompdncmpcppconfig-309">309</a>
+<a href="#listingsmanjarompdncmpcppconfig-310">310</a>
+<a href="#listingsmanjarompdncmpcppconfig-311">311</a>
+<a href="#listingsmanjarompdncmpcppconfig-312">312</a>
+<a href="#listingsmanjarompdncmpcppconfig-313">313</a>
+<a href="#listingsmanjarompdncmpcppconfig-314">314</a>
+<a href="#listingsmanjarompdncmpcppconfig-315">315</a>
+<a href="#listingsmanjarompdncmpcppconfig-316">316</a>
+<a href="#listingsmanjarompdncmpcppconfig-317">317</a>
+<a href="#listingsmanjarompdncmpcppconfig-318">318</a>
+<a href="#listingsmanjarompdncmpcppconfig-319">319</a>
+<a href="#listingsmanjarompdncmpcppconfig-320">320</a>
+<a href="#listingsmanjarompdncmpcppconfig-321">321</a>
+<a href="#listingsmanjarompdncmpcppconfig-322">322</a>
+<a href="#listingsmanjarompdncmpcppconfig-323">323</a>
+<a href="#listingsmanjarompdncmpcppconfig-324">324</a>
+<a href="#listingsmanjarompdncmpcppconfig-325">325</a>
+<a href="#listingsmanjarompdncmpcppconfig-326">326</a>
+<a href="#listingsmanjarompdncmpcppconfig-327">327</a>
+<a href="#listingsmanjarompdncmpcppconfig-328">328</a>
+<a href="#listingsmanjarompdncmpcppconfig-329">329</a>
+<a href="#listingsmanjarompdncmpcppconfig-330">330</a>
+<a href="#listingsmanjarompdncmpcppconfig-331">331</a>
+<a href="#listingsmanjarompdncmpcppconfig-332">332</a>
+<a href="#listingsmanjarompdncmpcppconfig-333">333</a>
+<a href="#listingsmanjarompdncmpcppconfig-334">334</a>
+<a href="#listingsmanjarompdncmpcppconfig-335">335</a>
+<a href="#listingsmanjarompdncmpcppconfig-336">336</a>
+<a href="#listingsmanjarompdncmpcppconfig-337">337</a>
+<a href="#listingsmanjarompdncmpcppconfig-338">338</a>
+<a href="#listingsmanjarompdncmpcppconfig-339">339</a>
+<a href="#listingsmanjarompdncmpcppconfig-340">340</a>
+<a href="#listingsmanjarompdncmpcppconfig-341">341</a>
+<a href="#listingsmanjarompdncmpcppconfig-342">342</a>
+<a href="#listingsmanjarompdncmpcppconfig-343">343</a>
+<a href="#listingsmanjarompdncmpcppconfig-344">344</a>
+<a href="#listingsmanjarompdncmpcppconfig-345">345</a>
+<a href="#listingsmanjarompdncmpcppconfig-346">346</a>
+<a href="#listingsmanjarompdncmpcppconfig-347">347</a>
+<a href="#listingsmanjarompdncmpcppconfig-348">348</a>
+<a href="#listingsmanjarompdncmpcppconfig-349">349</a>
+<a href="#listingsmanjarompdncmpcppconfig-350">350</a>
+<a href="#listingsmanjarompdncmpcppconfig-351">351</a>
+<a href="#listingsmanjarompdncmpcppconfig-352">352</a>
+<a href="#listingsmanjarompdncmpcppconfig-353">353</a>
+<a href="#listingsmanjarompdncmpcppconfig-354">354</a>
+<a href="#listingsmanjarompdncmpcppconfig-355">355</a>
+<a href="#listingsmanjarompdncmpcppconfig-356">356</a>
+<a href="#listingsmanjarompdncmpcppconfig-357">357</a>
+<a href="#listingsmanjarompdncmpcppconfig-358">358</a>
+<a href="#listingsmanjarompdncmpcppconfig-359">359</a>
+<a href="#listingsmanjarompdncmpcppconfig-360">360</a>
+<a href="#listingsmanjarompdncmpcppconfig-361">361</a>
+<a href="#listingsmanjarompdncmpcppconfig-362">362</a>
+<a href="#listingsmanjarompdncmpcppconfig-363">363</a>
+<a href="#listingsmanjarompdncmpcppconfig-364">364</a>
+<a href="#listingsmanjarompdncmpcppconfig-365">365</a>
+<a href="#listingsmanjarompdncmpcppconfig-366">366</a>
+<a href="#listingsmanjarompdncmpcppconfig-367">367</a>
+<a href="#listingsmanjarompdncmpcppconfig-368">368</a>
+<a href="#listingsmanjarompdncmpcppconfig-369">369</a>
+<a href="#listingsmanjarompdncmpcppconfig-370">370</a>
+<a href="#listingsmanjarompdncmpcppconfig-371">371</a>
+<a href="#listingsmanjarompdncmpcppconfig-372">372</a>
+<a href="#listingsmanjarompdncmpcppconfig-373">373</a>
+<a href="#listingsmanjarompdncmpcppconfig-374">374</a>
+<a href="#listingsmanjarompdncmpcppconfig-375">375</a>
+<a href="#listingsmanjarompdncmpcppconfig-376">376</a>
+<a href="#listingsmanjarompdncmpcppconfig-377">377</a>
+<a href="#listingsmanjarompdncmpcppconfig-378">378</a>
+<a href="#listingsmanjarompdncmpcppconfig-379">379</a>
+<a href="#listingsmanjarompdncmpcppconfig-380">380</a>
+<a href="#listingsmanjarompdncmpcppconfig-381">381</a>
+<a href="#listingsmanjarompdncmpcppconfig-382">382</a>
+<a href="#listingsmanjarompdncmpcppconfig-383">383</a>
+<a href="#listingsmanjarompdncmpcppconfig-384">384</a>
+<a href="#listingsmanjarompdncmpcppconfig-385">385</a>
+<a href="#listingsmanjarompdncmpcppconfig-386">386</a>
+<a href="#listingsmanjarompdncmpcppconfig-387">387</a>
+<a href="#listingsmanjarompdncmpcppconfig-388">388</a>
+<a href="#listingsmanjarompdncmpcppconfig-389">389</a>
+<a href="#listingsmanjarompdncmpcppconfig-390">390</a>
+<a href="#listingsmanjarompdncmpcppconfig-391">391</a>
+<a href="#listingsmanjarompdncmpcppconfig-392">392</a>
+<a href="#listingsmanjarompdncmpcppconfig-393">393</a>
+<a href="#listingsmanjarompdncmpcppconfig-394">394</a>
+<a href="#listingsmanjarompdncmpcppconfig-395">395</a>
+<a href="#listingsmanjarompdncmpcppconfig-396">396</a>
+<a href="#listingsmanjarompdncmpcppconfig-397">397</a>
+<a href="#listingsmanjarompdncmpcppconfig-398">398</a>
+<a href="#listingsmanjarompdncmpcppconfig-399">399</a>
+<a href="#listingsmanjarompdncmpcppconfig-400">400</a>
+<a href="#listingsmanjarompdncmpcppconfig-401">401</a>
+<a href="#listingsmanjarompdncmpcppconfig-402">402</a>
+<a href="#listingsmanjarompdncmpcppconfig-403">403</a>
+<a href="#listingsmanjarompdncmpcppconfig-404">404</a>
+<a href="#listingsmanjarompdncmpcppconfig-405">405</a>
+<a href="#listingsmanjarompdncmpcppconfig-406">406</a>
+<a href="#listingsmanjarompdncmpcppconfig-407">407</a>
+<a href="#listingsmanjarompdncmpcppconfig-408">408</a>
+<a href="#listingsmanjarompdncmpcppconfig-409">409</a>
+<a href="#listingsmanjarompdncmpcppconfig-410">410</a>
+<a href="#listingsmanjarompdncmpcppconfig-411">411</a>
+<a href="#listingsmanjarompdncmpcppconfig-412">412</a>
+<a href="#listingsmanjarompdncmpcppconfig-413">413</a>
+<a href="#listingsmanjarompdncmpcppconfig-414">414</a>
+<a href="#listingsmanjarompdncmpcppconfig-415">415</a>
+<a href="#listingsmanjarompdncmpcppconfig-416">416</a>
+<a href="#listingsmanjarompdncmpcppconfig-417">417</a>
+<a href="#listingsmanjarompdncmpcppconfig-418">418</a>
+<a href="#listingsmanjarompdncmpcppconfig-419">419</a>
+<a href="#listingsmanjarompdncmpcppconfig-420">420</a>
+<a href="#listingsmanjarompdncmpcppconfig-421">421</a>
+<a href="#listingsmanjarompdncmpcppconfig-422">422</a>
+<a href="#listingsmanjarompdncmpcppconfig-423">423</a>
+<a href="#listingsmanjarompdncmpcppconfig-424">424</a>
+<a href="#listingsmanjarompdncmpcppconfig-425">425</a>
+<a href="#listingsmanjarompdncmpcppconfig-426">426</a>
+<a href="#listingsmanjarompdncmpcppconfig-427">427</a>
+<a href="#listingsmanjarompdncmpcppconfig-428">428</a>
+<a href="#listingsmanjarompdncmpcppconfig-429">429</a>
+<a href="#listingsmanjarompdncmpcppconfig-430">430</a>
+<a href="#listingsmanjarompdncmpcppconfig-431">431</a>
+<a href="#listingsmanjarompdncmpcppconfig-432">432</a>
+<a href="#listingsmanjarompdncmpcppconfig-433">433</a>
+<a href="#listingsmanjarompdncmpcppconfig-434">434</a>
+<a href="#listingsmanjarompdncmpcppconfig-435">435</a>
+<a href="#listingsmanjarompdncmpcppconfig-436">436</a>
+<a href="#listingsmanjarompdncmpcppconfig-437">437</a>
+<a href="#listingsmanjarompdncmpcppconfig-438">438</a>
+<a href="#listingsmanjarompdncmpcppconfig-439">439</a>
+<a href="#listingsmanjarompdncmpcppconfig-440">440</a>
+<a href="#listingsmanjarompdncmpcppconfig-441">441</a>
+<a href="#listingsmanjarompdncmpcppconfig-442">442</a>
+<a href="#listingsmanjarompdncmpcppconfig-443">443</a>
+<a href="#listingsmanjarompdncmpcppconfig-444">444</a>
+<a href="#listingsmanjarompdncmpcppconfig-445">445</a>
+<a href="#listingsmanjarompdncmpcppconfig-446">446</a>
+<a href="#listingsmanjarompdncmpcppconfig-447">447</a>
+<a href="#listingsmanjarompdncmpcppconfig-448">448</a>
+<a href="#listingsmanjarompdncmpcppconfig-449">449</a>
+<a href="#listingsmanjarompdncmpcppconfig-450">450</a>
+<a href="#listingsmanjarompdncmpcppconfig-451">451</a>
+<a href="#listingsmanjarompdncmpcppconfig-452">452</a>
+<a href="#listingsmanjarompdncmpcppconfig-453">453</a>
+<a href="#listingsmanjarompdncmpcppconfig-454">454</a>
+<a href="#listingsmanjarompdncmpcppconfig-455">455</a>
+<a href="#listingsmanjarompdncmpcppconfig-456">456</a>
+<a href="#listingsmanjarompdncmpcppconfig-457">457</a>
+<a href="#listingsmanjarompdncmpcppconfig-458">458</a>
+<a href="#listingsmanjarompdncmpcppconfig-459">459</a>
+<a href="#listingsmanjarompdncmpcppconfig-460">460</a>
+<a href="#listingsmanjarompdncmpcppconfig-461">461</a>
+<a href="#listingsmanjarompdncmpcppconfig-462">462</a>
+<a href="#listingsmanjarompdncmpcppconfig-463">463</a>
+<a href="#listingsmanjarompdncmpcppconfig-464">464</a>
+<a href="#listingsmanjarompdncmpcppconfig-465">465</a>
+<a href="#listingsmanjarompdncmpcppconfig-466">466</a>
+<a href="#listingsmanjarompdncmpcppconfig-467">467</a>
+<a href="#listingsmanjarompdncmpcppconfig-468">468</a>
+<a href="#listingsmanjarompdncmpcppconfig-469">469</a>
+<a href="#listingsmanjarompdncmpcppconfig-470">470</a>
+<a href="#listingsmanjarompdncmpcppconfig-471">471</a>
+<a href="#listingsmanjarompdncmpcppconfig-472">472</a>
+<a href="#listingsmanjarompdncmpcppconfig-473">473</a>
+<a href="#listingsmanjarompdncmpcppconfig-474">474</a>
+<a href="#listingsmanjarompdncmpcppconfig-475">475</a>
+<a href="#listingsmanjarompdncmpcppconfig-476">476</a>
+<a href="#listingsmanjarompdncmpcppconfig-477">477</a>
+<a href="#listingsmanjarompdncmpcppconfig-478">478</a>
+<a href="#listingsmanjarompdncmpcppconfig-479">479</a>
+<a href="#listingsmanjarompdncmpcppconfig-480">480</a>
+<a href="#listingsmanjarompdncmpcppconfig-481">481</a>
+<a href="#listingsmanjarompdncmpcppconfig-482">482</a>
+<a href="#listingsmanjarompdncmpcppconfig-483">483</a>
+<a href="#listingsmanjarompdncmpcppconfig-484">484</a>
+<a href="#listingsmanjarompdncmpcppconfig-485">485</a>
+<a href="#listingsmanjarompdncmpcppconfig-486">486</a>
+<a href="#listingsmanjarompdncmpcppconfig-487">487</a>
+<a href="#listingsmanjarompdncmpcppconfig-488">488</a>
+<a href="#listingsmanjarompdncmpcppconfig-489">489</a>
+<a href="#listingsmanjarompdncmpcppconfig-490">490</a>
+<a href="#listingsmanjarompdncmpcppconfig-491">491</a>
+<a href="#listingsmanjarompdncmpcppconfig-492">492</a>
+<a href="#listingsmanjarompdncmpcppconfig-493">493</a>
+<a href="#listingsmanjarompdncmpcppconfig-494">494</a>
+<a href="#listingsmanjarompdncmpcppconfig-495">495</a>
+<a href="#listingsmanjarompdncmpcppconfig-496">496</a>
+<a href="#listingsmanjarompdncmpcppconfig-497">497</a>
+<a href="#listingsmanjarompdncmpcppconfig-498">498</a>
+<a href="#listingsmanjarompdncmpcppconfig-499">499</a>
+<a href="#listingsmanjarompdncmpcppconfig-500">500</a>
+<a href="#listingsmanjarompdncmpcppconfig-501">501</a>
+<a href="#listingsmanjarompdncmpcppconfig-502">502</a>
+<a href="#listingsmanjarompdncmpcppconfig-503">503</a>
+<a href="#listingsmanjarompdncmpcppconfig-504">504</a>
+<a href="#listingsmanjarompdncmpcppconfig-505">505</a>
+<a href="#listingsmanjarompdncmpcppconfig-506">506</a>
+<a href="#listingsmanjarompdncmpcppconfig-507">507</a>
+<a href="#listingsmanjarompdncmpcppconfig-508">508</a>
+<a href="#listingsmanjarompdncmpcppconfig-509">509</a>
+<a href="#listingsmanjarompdncmpcppconfig-510">510</a>
+<a href="#listingsmanjarompdncmpcppconfig-511">511</a>
+<a href="#listingsmanjarompdncmpcppconfig-512">512</a>
+<a href="#listingsmanjarompdncmpcppconfig-513">513</a>
+<a href="#listingsmanjarompdncmpcppconfig-514">514</a>
+<a href="#listingsmanjarompdncmpcppconfig-515">515</a>
+<a href="#listingsmanjarompdncmpcppconfig-516">516</a>
+<a href="#listingsmanjarompdncmpcppconfig-517">517</a>
+<a href="#listingsmanjarompdncmpcppconfig-518">518</a>
+<a href="#listingsmanjarompdncmpcppconfig-519">519</a>
+<a href="#listingsmanjarompdncmpcppconfig-520">520</a>
+<a href="#listingsmanjarompdncmpcppconfig-521">521</a>
+<a href="#listingsmanjarompdncmpcppconfig-522">522</a>
+<a href="#listingsmanjarompdncmpcppconfig-523">523</a>
+<a href="#listingsmanjarompdncmpcppconfig-524">524</a>
+<a href="#listingsmanjarompdncmpcppconfig-525">525</a>
+<a href="#listingsmanjarompdncmpcppconfig-526">526</a>
+<a href="#listingsmanjarompdncmpcppconfig-527">527</a>
+<a href="#listingsmanjarompdncmpcppconfig-528">528</a>
+<a href="#listingsmanjarompdncmpcppconfig-529">529</a>
+<a href="#listingsmanjarompdncmpcppconfig-530">530</a>
+<a href="#listingsmanjarompdncmpcppconfig-531">531</a>
+<a href="#listingsmanjarompdncmpcppconfig-532">532</a>
+<a href="#listingsmanjarompdncmpcppconfig-533">533</a>
+<a href="#listingsmanjarompdncmpcppconfig-534">534</a>
+<a href="#listingsmanjarompdncmpcppconfig-535">535</a>
+<a href="#listingsmanjarompdncmpcppconfig-536">536</a>
+<a href="#listingsmanjarompdncmpcppconfig-537">537</a>
+<a href="#listingsmanjarompdncmpcppconfig-538">538</a>
+<a href="#listingsmanjarompdncmpcppconfig-539">539</a>
+<a href="#listingsmanjarompdncmpcppconfig-540">540</a>
+<a href="#listingsmanjarompdncmpcppconfig-541">541</a>
+<a href="#listingsmanjarompdncmpcppconfig-542">542</a>
+<a href="#listingsmanjarompdncmpcppconfig-543">543</a>
+<a href="#listingsmanjarompdncmpcppconfig-544">544</a></pre></div></td>
+<td class="code"><pre class="code literal-block"><a name="listingsmanjarompdncmpcppconfig-1"></a><span class="x">##############################################################################</span>
+<a name="listingsmanjarompdncmpcppconfig-2"></a><span class="x">## This is the example configuration file. Copy it to $HOME/.ncmpcpp/config ##</span>
+<a name="listingsmanjarompdncmpcppconfig-3"></a><span class="x">## or $XDG_CONFIG_HOME/ncmpcpp/config and set up your preferences.          ##</span>
+<a name="listingsmanjarompdncmpcppconfig-4"></a><span class="x">##############################################################################</span>
+<a name="listingsmanjarompdncmpcppconfig-5"></a><span class="x">#</span>
+<a name="listingsmanjarompdncmpcppconfig-6"></a><span class="x">##### directories ######</span>
+<a name="listingsmanjarompdncmpcppconfig-7"></a><span class="x">##</span>
+<a name="listingsmanjarompdncmpcppconfig-8"></a><span class="x">## Directory for storing ncmpcpp related files.  Changing it is useful if you</span>
+<a name="listingsmanjarompdncmpcppconfig-9"></a><span class="x">## want to store everything somewhere else and provide command line setting for</span>
+<a name="listingsmanjarompdncmpcppconfig-10"></a><span class="x">## alternative location to config file which defines that while launching</span>
+<a name="listingsmanjarompdncmpcppconfig-11"></a><span class="x">## ncmpcpp.</span>
+<a name="listingsmanjarompdncmpcppconfig-12"></a><span class="x">##</span>
+<a name="listingsmanjarompdncmpcppconfig-13"></a><span class="x">#</span>
+<a name="listingsmanjarompdncmpcppconfig-14"></a><span class="x">#ncmpcpp_directory = ~/.ncmpcpp</span>
+<a name="listingsmanjarompdncmpcppconfig-15"></a><span class="x">#</span>
+<a name="listingsmanjarompdncmpcppconfig-16"></a><span class="x">##</span>
+<a name="listingsmanjarompdncmpcppconfig-17"></a><span class="x">## Directory for storing downloaded lyrics. It defaults to ~/.lyrics since other</span>
+<a name="listingsmanjarompdncmpcppconfig-18"></a><span class="x">## MPD clients (eg. ncmpc) also use that location.</span>
+<a name="listingsmanjarompdncmpcppconfig-19"></a><span class="x">##</span>
+<a name="listingsmanjarompdncmpcppconfig-20"></a><span class="x">#</span>
+<a name="listingsmanjarompdncmpcppconfig-21"></a><span class="x">#lyrics_directory = ~/.lyrics</span>
+<a name="listingsmanjarompdncmpcppconfig-22"></a><span class="x">#</span>
+<a name="listingsmanjarompdncmpcppconfig-23"></a><span class="x">##### connection settings #####</span>
+<a name="listingsmanjarompdncmpcppconfig-24"></a><span class="x">#</span>
+<a name="listingsmanjarompdncmpcppconfig-25"></a><span class="x">#mpd_host = localhost</span>
+<a name="listingsmanjarompdncmpcppconfig-26"></a><span class="x">#</span>
+<a name="listingsmanjarompdncmpcppconfig-27"></a><span class="x">#mpd_port = 6600</span>
+<a name="listingsmanjarompdncmpcppconfig-28"></a><span class="x">#</span>
+<a name="listingsmanjarompdncmpcppconfig-29"></a><span class="x">#mpd_connection_timeout = 5</span>
+<a name="listingsmanjarompdncmpcppconfig-30"></a><span class="x">#</span>
+<a name="listingsmanjarompdncmpcppconfig-31"></a><span class="x">## Needed for tag editor and file operations to work.</span>
+<a name="listingsmanjarompdncmpcppconfig-32"></a><span class="x">##</span>
+<a name="listingsmanjarompdncmpcppconfig-33"></a><span class="x">mpd_music_dir = ~/Music</span>
+<a name="listingsmanjarompdncmpcppconfig-34"></a><span class="x">#</span>
+<a name="listingsmanjarompdncmpcppconfig-35"></a><span class="x">#mpd_crossfade_time = 5</span>
+<a name="listingsmanjarompdncmpcppconfig-36"></a><span class="x">#</span>
+<a name="listingsmanjarompdncmpcppconfig-37"></a><span class="x">##### music visualizer #####</span>
+<a name="listingsmanjarompdncmpcppconfig-38"></a><span class="x">##</span>
+<a name="listingsmanjarompdncmpcppconfig-39"></a><span class="x">## Note: In order to make music visualizer work you'll need to use mpd fifo</span>
+<a name="listingsmanjarompdncmpcppconfig-40"></a><span class="x">## output, whose format parameter has to be set to 44100:16:1 for mono</span>
+<a name="listingsmanjarompdncmpcppconfig-41"></a><span class="x">## visualization or 44100:16:2 for stereo visualization. Example configuration</span>
+<a name="listingsmanjarompdncmpcppconfig-42"></a><span class="x">## (it has to be put into mpd.conf):</span>
+<a name="listingsmanjarompdncmpcppconfig-43"></a><span class="x">##</span>
+<a name="listingsmanjarompdncmpcppconfig-44"></a><span class="x">## audio_output {</span>
+<a name="listingsmanjarompdncmpcppconfig-45"></a><span class="x">##        type            "fifo"</span>
+<a name="listingsmanjarompdncmpcppconfig-46"></a><span class="x">##        name            "Visualizer feed"</span>
+<a name="listingsmanjarompdncmpcppconfig-47"></a><span class="x">##        path            "/tmp/mpd.fifo"</span>
+<a name="listingsmanjarompdncmpcppconfig-48"></a><span class="x">##        format          "44100:16:2"</span>
+<a name="listingsmanjarompdncmpcppconfig-49"></a><span class="x">## }</span>
+<a name="listingsmanjarompdncmpcppconfig-50"></a><span class="x">##</span>
+<a name="listingsmanjarompdncmpcppconfig-51"></a><span class="x">#</span>
+<a name="listingsmanjarompdncmpcppconfig-52"></a><span class="x">#visualizer_fifo_path = /tmp/mpd.fifo</span>
+<a name="listingsmanjarompdncmpcppconfig-53"></a><span class="x">#</span>
+<a name="listingsmanjarompdncmpcppconfig-54"></a><span class="x">##</span>
+<a name="listingsmanjarompdncmpcppconfig-55"></a><span class="x">## Note: Below parameter is needed for ncmpcpp to determine which output</span>
+<a name="listingsmanjarompdncmpcppconfig-56"></a><span class="x">## provides data for visualizer and thus allow syncing between visualization and</span>
+<a name="listingsmanjarompdncmpcppconfig-57"></a><span class="x">## sound as currently there are some problems with it.</span>
+<a name="listingsmanjarompdncmpcppconfig-58"></a><span class="x">##</span>
+<a name="listingsmanjarompdncmpcppconfig-59"></a><span class="x">#</span>
+<a name="listingsmanjarompdncmpcppconfig-60"></a><span class="x">#visualizer_output_name = Visualizer feed</span>
+<a name="listingsmanjarompdncmpcppconfig-61"></a><span class="x">#</span>
+<a name="listingsmanjarompdncmpcppconfig-62"></a><span class="x">##</span>
+<a name="listingsmanjarompdncmpcppconfig-63"></a><span class="x">## If you set format to 44100:16:2, make it 'yes'.</span>
+<a name="listingsmanjarompdncmpcppconfig-64"></a><span class="x">##</span>
+<a name="listingsmanjarompdncmpcppconfig-65"></a><span class="x">#visualizer_in_stereo = yes</span>
+<a name="listingsmanjarompdncmpcppconfig-66"></a><span class="x">#</span>
+<a name="listingsmanjarompdncmpcppconfig-67"></a><span class="x">##</span>
+<a name="listingsmanjarompdncmpcppconfig-68"></a><span class="x">## Note: Below parameter defines how often ncmpcpp has to "synchronize"</span>
+<a name="listingsmanjarompdncmpcppconfig-69"></a><span class="x">## visualizer and audio outputs.  30 seconds is optimal value, but if you</span>
+<a name="listingsmanjarompdncmpcppconfig-70"></a><span class="x">## experience synchronization problems, set it to lower value.  Keep in mind</span>
+<a name="listingsmanjarompdncmpcppconfig-71"></a><span class="x">## that sane values start with &gt;=10.</span>
+<a name="listingsmanjarompdncmpcppconfig-72"></a><span class="x">##</span>
+<a name="listingsmanjarompdncmpcppconfig-73"></a><span class="x">#</span>
+<a name="listingsmanjarompdncmpcppconfig-74"></a><span class="x">#visualizer_sync_interval = 30</span>
+<a name="listingsmanjarompdncmpcppconfig-75"></a><span class="x">#</span>
+<a name="listingsmanjarompdncmpcppconfig-76"></a><span class="x">##</span>
+<a name="listingsmanjarompdncmpcppconfig-77"></a><span class="x">## Note: To enable spectrum frequency visualization you need to compile ncmpcpp</span>
+<a name="listingsmanjarompdncmpcppconfig-78"></a><span class="x">## with fftw3 support.</span>
+<a name="listingsmanjarompdncmpcppconfig-79"></a><span class="x">##</span>
+<a name="listingsmanjarompdncmpcppconfig-80"></a><span class="x">#</span>
+<a name="listingsmanjarompdncmpcppconfig-81"></a><span class="x">## Available values: spectrum, wave, wave_filled, ellipse.</span>
+<a name="listingsmanjarompdncmpcppconfig-82"></a><span class="x">##</span>
+<a name="listingsmanjarompdncmpcppconfig-83"></a><span class="x">#visualizer_type = wave</span>
+<a name="listingsmanjarompdncmpcppconfig-84"></a><span class="x">#</span>
+<a name="listingsmanjarompdncmpcppconfig-85"></a><span class="x">#visualizer_look = ●▮</span>
+<a name="listingsmanjarompdncmpcppconfig-86"></a><span class="x">#</span>
+<a name="listingsmanjarompdncmpcppconfig-87"></a><span class="x">#visualizer_color = blue, cyan, green, yellow, magenta, red</span>
+<a name="listingsmanjarompdncmpcppconfig-88"></a><span class="x">#</span>
+<a name="listingsmanjarompdncmpcppconfig-89"></a><span class="x">## Alternative subset of 256 colors for terminals that support it.</span>
+<a name="listingsmanjarompdncmpcppconfig-90"></a><span class="x">##</span>
+<a name="listingsmanjarompdncmpcppconfig-91"></a><span class="x">visualizer_color = 41, 83, 119, 155, 185, 215, 209, 203, 197, 161</span>
+<a name="listingsmanjarompdncmpcppconfig-92"></a><span class="x">#</span>
+<a name="listingsmanjarompdncmpcppconfig-93"></a><span class="x">##### system encoding #####</span>
+<a name="listingsmanjarompdncmpcppconfig-94"></a><span class="x">##</span>
+<a name="listingsmanjarompdncmpcppconfig-95"></a><span class="x">## ncmpcpp should detect your charset encoding but if it failed to do so, you</span>
+<a name="listingsmanjarompdncmpcppconfig-96"></a><span class="x">## can specify charset encoding you are using here.</span>
+<a name="listingsmanjarompdncmpcppconfig-97"></a><span class="x">##</span>
+<a name="listingsmanjarompdncmpcppconfig-98"></a><span class="x">## Note: You can see whether your ncmpcpp build supports charset detection by</span>
+<a name="listingsmanjarompdncmpcppconfig-99"></a><span class="x">## checking output of `ncmpcpp --version`.</span>
+<a name="listingsmanjarompdncmpcppconfig-100"></a><span class="x">##</span>
+<a name="listingsmanjarompdncmpcppconfig-101"></a><span class="x">## Note: Since MPD uses UTF-8 by default, setting this option makes sense only</span>
+<a name="listingsmanjarompdncmpcppconfig-102"></a><span class="x">## if your encoding is different.</span>
+<a name="listingsmanjarompdncmpcppconfig-103"></a><span class="x">##</span>
+<a name="listingsmanjarompdncmpcppconfig-104"></a><span class="x">#</span>
+<a name="listingsmanjarompdncmpcppconfig-105"></a><span class="x">#system_encoding = ""</span>
+<a name="listingsmanjarompdncmpcppconfig-106"></a><span class="x">#</span>
+<a name="listingsmanjarompdncmpcppconfig-107"></a><span class="x">##### delays #####</span>
+<a name="listingsmanjarompdncmpcppconfig-108"></a><span class="x">#</span>
+<a name="listingsmanjarompdncmpcppconfig-109"></a><span class="x">## Time of inactivity (in seconds) after playlist highlighting will be disabled</span>
+<a name="listingsmanjarompdncmpcppconfig-110"></a><span class="x">## (0 = always on).</span>
+<a name="listingsmanjarompdncmpcppconfig-111"></a><span class="x">##</span>
+<a name="listingsmanjarompdncmpcppconfig-112"></a><span class="x">#playlist_disable_highlight_delay = 5</span>
+<a name="listingsmanjarompdncmpcppconfig-113"></a><span class="x">#</span>
+<a name="listingsmanjarompdncmpcppconfig-114"></a><span class="x">## Defines how long messages are supposed to be visible.</span>
+<a name="listingsmanjarompdncmpcppconfig-115"></a><span class="x">##</span>
+<a name="listingsmanjarompdncmpcppconfig-116"></a><span class="x">#message_delay_time = 5</span>
+<a name="listingsmanjarompdncmpcppconfig-117"></a><span class="x">#</span>
+<a name="listingsmanjarompdncmpcppconfig-118"></a><span class="x">##### song format #####</span>
+<a name="listingsmanjarompdncmpcppconfig-119"></a><span class="x">##</span>
+<a name="listingsmanjarompdncmpcppconfig-120"></a><span class="x">## For a song format you can use:</span>
+<a name="listingsmanjarompdncmpcppconfig-121"></a><span class="x">##</span>
+<a name="listingsmanjarompdncmpcppconfig-122"></a><span class="x">## %l - length</span>
+<a name="listingsmanjarompdncmpcppconfig-123"></a><span class="x">## %f - filename</span>
+<a name="listingsmanjarompdncmpcppconfig-124"></a><span class="x">## %D - directory</span>
+<a name="listingsmanjarompdncmpcppconfig-125"></a><span class="x">## %a - artist</span>
+<a name="listingsmanjarompdncmpcppconfig-126"></a><span class="x">## %A - album artist</span>
+<a name="listingsmanjarompdncmpcppconfig-127"></a><span class="x">## %t - title</span>
+<a name="listingsmanjarompdncmpcppconfig-128"></a><span class="x">## %b - album</span>
+<a name="listingsmanjarompdncmpcppconfig-129"></a><span class="x">## %y - date</span>
+<a name="listingsmanjarompdncmpcppconfig-130"></a><span class="x">## %n - track number (01/12 -&gt; 01)</span>
+<a name="listingsmanjarompdncmpcppconfig-131"></a><span class="x">## %N - full track info (01/12 -&gt; 01/12)</span>
+<a name="listingsmanjarompdncmpcppconfig-132"></a><span class="x">## %g - genre</span>
+<a name="listingsmanjarompdncmpcppconfig-133"></a><span class="x">## %c - composer</span>
+<a name="listingsmanjarompdncmpcppconfig-134"></a><span class="x">## %p - performer</span>
+<a name="listingsmanjarompdncmpcppconfig-135"></a><span class="x">## %d - disc</span>
+<a name="listingsmanjarompdncmpcppconfig-136"></a><span class="x">## %C - comment</span>
+<a name="listingsmanjarompdncmpcppconfig-137"></a><span class="x">## %P - priority</span>
+<a name="listingsmanjarompdncmpcppconfig-138"></a><span class="x">## $R - begin right alignment</span>
+<a name="listingsmanjarompdncmpcppconfig-139"></a><span class="x">##</span>
+<a name="listingsmanjarompdncmpcppconfig-140"></a><span class="x">## If you want to make sure that a part of the format is displayed only when</span>
+<a name="listingsmanjarompdncmpcppconfig-141"></a><span class="x">## certain tags are present, you can archieve it by grouping them with brackets,</span>
+<a name="listingsmanjarompdncmpcppconfig-142"></a><span class="x">## e.g. '</span><span class="cp">{%</span><span class="k">a</span> <span class="o">-</span> <span class="p">%</span><span class="nv">t</span><span class="o">}</span><span class="s1">' will be evaluated to '</span><span class="nv">ARTIST</span> <span class="o">-</span> <span class="nv">TITLE</span><span class="s1">' if both tags are</span>
+<a name="listingsmanjarompdncmpcppconfig-143"></a><span class="s1">## present or '' otherwise.  It is also possible to define a list of</span>
+<a name="listingsmanjarompdncmpcppconfig-144"></a><span class="s1">## alternatives by providing several groups and separating them with '</span><span class="p">|</span><span class="s1">',</span>
+<a name="listingsmanjarompdncmpcppconfig-145"></a><span class="s1">## e.g. '</span><span class="o">{</span><span class="p">%</span><span class="nv">t</span><span class="o">}</span><span class="p">|</span><span class="o">{</span><span class="p">%</span><span class="nv">f</span><span class="o">}</span><span class="s1">' will be evaluated to '</span><span class="nv">TITLE</span><span class="s1">' or '</span><span class="nv">FILENAME</span><span class="s1">' if the former is</span>
+<a name="listingsmanjarompdncmpcppconfig-146"></a><span class="s1">## not present.</span>
+<a name="listingsmanjarompdncmpcppconfig-147"></a><span class="s1">##</span>
+<a name="listingsmanjarompdncmpcppconfig-148"></a><span class="s1">## Note: If you want to set limit on maximal length of a tag, just put the</span>
+<a name="listingsmanjarompdncmpcppconfig-149"></a><span class="s1">## appropriate number between % and character that defines tag type, e.g. to</span>
+<a name="listingsmanjarompdncmpcppconfig-150"></a><span class="s1">## make album take max. 20 terminal cells, use '</span><span class="p">%</span><span class="m">20</span><span class="nv">b</span><span class="s1">'.</span>
+<a name="listingsmanjarompdncmpcppconfig-151"></a><span class="s1">##</span>
+<a name="listingsmanjarompdncmpcppconfig-152"></a><span class="s1">## In addition, formats support markers used for text attributes.  They are</span>
+<a name="listingsmanjarompdncmpcppconfig-153"></a><span class="s1">## followed by character '</span><span class="p">$</span><span class="s1">'. After that you can put:</span>
+<a name="listingsmanjarompdncmpcppconfig-154"></a><span class="s1">##</span>
+<a name="listingsmanjarompdncmpcppconfig-155"></a><span class="s1">## - 0 - default window color (discards all other colors)</span>
+<a name="listingsmanjarompdncmpcppconfig-156"></a><span class="s1">## - 1 - black</span>
+<a name="listingsmanjarompdncmpcppconfig-157"></a><span class="s1">## - 2 - red</span>
+<a name="listingsmanjarompdncmpcppconfig-158"></a><span class="s1">## - 3 - green</span>
+<a name="listingsmanjarompdncmpcppconfig-159"></a><span class="s1">## - 4 - yellow</span>
+<a name="listingsmanjarompdncmpcppconfig-160"></a><span class="s1">## - 5 - blue</span>
+<a name="listingsmanjarompdncmpcppconfig-161"></a><span class="s1">## - 6 - magenta</span>
+<a name="listingsmanjarompdncmpcppconfig-162"></a><span class="s1">## - 7 - cyan</span>
+<a name="listingsmanjarompdncmpcppconfig-163"></a><span class="s1">## - 8 - white</span>
+<a name="listingsmanjarompdncmpcppconfig-164"></a><span class="s1">## - 9 - end of current color</span>
+<a name="listingsmanjarompdncmpcppconfig-165"></a><span class="s1">## - b - bold text</span>
+<a name="listingsmanjarompdncmpcppconfig-166"></a><span class="s1">## - u - underline text</span>
+<a name="listingsmanjarompdncmpcppconfig-167"></a><span class="s1">## - r - reverse colors</span>
+<a name="listingsmanjarompdncmpcppconfig-168"></a><span class="s1">## - a - use alternative character set</span>
+<a name="listingsmanjarompdncmpcppconfig-169"></a><span class="s1">##</span>
+<a name="listingsmanjarompdncmpcppconfig-170"></a><span class="s1">## If you don'</span><span class="nv">t</span> <span class="nv">want</span> <span class="nv">to</span> <span class="nv">use</span> <span class="nv">a</span> <span class="nv">non-color</span> <span class="nv">attribute</span> <span class="nv">anymore</span><span class="o">,</span> <span class="nv">just</span> <span class="nv">put</span> <span class="nv">it</span> <span class="nv">again</span><span class="o">,</span>
+<a name="listingsmanjarompdncmpcppconfig-171"></a><span class="p">##</span> <span class="nv">but</span> <span class="nv">this</span> <span class="nv">time</span> <span class="nv">insert</span> <span class="nv">character</span> <span class="s1">'/'</span> <span class="nv">between</span> <span class="s1">'$'</span> <span class="k">and</span> <span class="nv">attribute</span> <span class="nv">character</span><span class="o">,</span>
+<a name="listingsmanjarompdncmpcppconfig-172"></a><span class="p">##</span> <span class="nv">e.g</span><span class="p">.</span> <span class="o">{</span><span class="p">$</span><span class="nv">b</span><span class="p">%</span><span class="nv">t</span><span class="p">$</span><span class="o">/</span><span class="nv">b</span><span class="o">}</span><span class="p">|</span><span class="o">{</span><span class="p">$</span><span class="nv">r</span><span class="p">%</span><span class="nv">f</span><span class="p">$</span><span class="o">/</span><span class="nv">r</span><span class="o">}</span> <span class="nv">will</span> <span class="nv">display</span> <span class="nv">bolded</span> <span class="nv">title</span> <span class="nv">tag</span> <span class="k">or</span> <span class="nv">filename</span> <span class="k">with</span>
+<a name="listingsmanjarompdncmpcppconfig-173"></a><span class="p">##</span> <span class="k">reversed</span> <span class="nv">colors</span><span class="p">.</span>
+<a name="listingsmanjarompdncmpcppconfig-174"></a><span class="p">##</span>
+<a name="listingsmanjarompdncmpcppconfig-175"></a><span class="p">##</span> <span class="nv">If</span> <span class="nv">you</span> <span class="nv">want</span> <span class="nv">to</span> <span class="nv">use</span> <span class="m">256</span> <span class="nv">colors</span> <span class="k">and</span><span class="o">/</span><span class="k">or</span> <span class="nv">background</span> <span class="nv">colors</span> <span class="k">in</span> <span class="nv">formats</span> <span class="o">(</span><span class="nv">the</span> <span class="nv">naming</span>
+<a name="listingsmanjarompdncmpcppconfig-176"></a><span class="p">##</span> <span class="nv">scheme</span> <span class="k">is</span> <span class="nf">described</span> <span class="nv">below</span> <span class="k">in</span> <span class="nv">section</span> <span class="nv">about</span> <span class="nv">color</span> <span class="nv">definitions</span><span class="o">),</span> <span class="nv">it</span> <span class="nv">can</span> <span class="nv">be</span> <span class="nv">done</span>
+<a name="listingsmanjarompdncmpcppconfig-177"></a><span class="p">##</span> <span class="k">with</span> <span class="nv">the</span> <span class="nv">syntax</span> <span class="p">$</span><span class="o">(</span><span class="nv">COLOR</span><span class="o">),</span> <span class="nv">e.g</span><span class="p">.</span> <span class="nv">to</span> <span class="nv">set</span> <span class="nv">the</span> <span class="nv">artist</span> <span class="nv">tag</span> <span class="nv">to</span> <span class="nv">one</span> <span class="nv">of</span> <span class="nv">the</span>
+<a name="listingsmanjarompdncmpcppconfig-178"></a><span class="p">##</span> <span class="nv">non-standard</span> <span class="nv">colors</span> <span class="k">and</span> <span class="nv">make</span> <span class="nv">it</span> <span class="nv">have</span> <span class="nv">yellow</span> <span class="nv">background</span><span class="o">,</span> <span class="nv">you</span> <span class="nv">need</span> <span class="nv">to</span> <span class="nv">write</span>
+<a name="listingsmanjarompdncmpcppconfig-179"></a><span class="p">##</span> <span class="p">$</span><span class="o">(</span><span class="m">197</span><span class="nv">_yellow</span><span class="o">)</span><span class="p">%</span><span class="nv">a</span><span class="p">$</span><span class="o">(</span><span class="nv">end</span><span class="o">)</span><span class="p">.</span> <span class="nv">Note</span> <span class="nv">that</span> <span class="nv">for</span> <span class="nv">standard</span> <span class="nv">colors</span> <span class="nv">this</span> <span class="k">is</span> <span class="nf">interchangable</span>
+<a name="listingsmanjarompdncmpcppconfig-180"></a><span class="p">##</span> <span class="k">with</span> <span class="nv">attributes</span> <span class="nv">listed</span> <span class="nv">above</span><span class="p">.</span>
+<a name="listingsmanjarompdncmpcppconfig-181"></a><span class="p">##</span>
+<a name="listingsmanjarompdncmpcppconfig-182"></a><span class="p">##</span> <span class="nv">Note</span><span class="o">:</span> <span class="nv">colors</span> <span class="nv">can</span> <span class="nv">be</span> <span class="nv">nested</span><span class="p">.</span>
+<a name="listingsmanjarompdncmpcppconfig-183"></a><span class="p">##</span>
+<a name="listingsmanjarompdncmpcppconfig-184"></a><span class="p">#</span>
+<a name="listingsmanjarompdncmpcppconfig-185"></a><span class="p">#</span><span class="nv">song_list_format</span> <span class="o">=</span> <span class="o">{</span><span class="p">%</span><span class="nv">a</span> <span class="o">-</span> <span class="o">}{</span><span class="p">%</span><span class="nv">t</span><span class="o">}</span><span class="p">|</span><span class="o">{</span><span class="p">$</span><span class="m">8</span><span class="p">%</span><span class="nv">f</span><span class="p">$</span><span class="m">9</span><span class="o">}</span><span class="p">$</span><span class="nv">R</span><span class="o">{</span><span class="p">$</span><span class="m">3</span><span class="o">(</span><span class="p">%</span><span class="nv">l</span><span class="o">)</span><span class="p">$</span><span class="m">9</span><span class="o">}</span>
+<a name="listingsmanjarompdncmpcppconfig-186"></a><span class="p">#</span>
+<a name="listingsmanjarompdncmpcppconfig-187"></a><span class="p">#</span><span class="nv">song_status_format</span> <span class="o">=</span> <span class="o">{{</span><span class="p">%</span><span class="nv">a</span><span class="o">{</span> <span class="s2">"%b"</span><span class="o">{</span> <span class="o">(</span><span class="p">%</span><span class="nv">y</span><span class="o">)}}</span> <span class="o">-</span> <span class="o">}{</span><span class="p">%</span><span class="nv">t</span><span class="o">}}</span><span class="p">|</span><span class="o">{</span><span class="p">%</span><span class="nv">f</span><span class="o">}</span>
+<a name="listingsmanjarompdncmpcppconfig-188"></a><span class="p">#</span>
+<a name="listingsmanjarompdncmpcppconfig-189"></a><span class="p">#</span><span class="nv">song_library_format</span> <span class="o">=</span> <span class="o">{</span><span class="p">%</span><span class="nv">n</span> <span class="o">-</span> <span class="o">}{</span><span class="p">%</span><span class="nv">t</span><span class="o">}</span><span class="p">|</span><span class="o">{</span><span class="p">%</span><span class="nv">f</span><span class="o">}</span>
+<a name="listingsmanjarompdncmpcppconfig-190"></a><span class="p">#</span>
+<a name="listingsmanjarompdncmpcppconfig-191"></a><span class="p">#</span><span class="nv">alternative_header_first_line_format</span> <span class="o">=</span> <span class="p">$</span><span class="nv">b</span><span class="p">$</span><span class="m">1</span><span class="p">$</span><span class="nv">aqqu</span><span class="p">$</span><span class="o">/</span><span class="nv">a</span><span class="p">$</span><span class="m">9</span> <span class="o">{</span><span class="p">%</span><span class="nv">t</span><span class="o">}</span><span class="p">|</span><span class="o">{</span><span class="p">%</span><span class="nv">f</span><span class="o">}</span> <span class="p">$</span><span class="m">1</span><span class="p">$</span><span class="nv">atqq</span><span class="p">$</span><span class="o">/</span><span class="nv">a</span><span class="p">$</span><span class="m">9</span><span class="p">$</span><span class="o">/</span><span class="nv">b</span>
+<a name="listingsmanjarompdncmpcppconfig-192"></a><span class="p">#</span>
+<a name="listingsmanjarompdncmpcppconfig-193"></a><span class="p">#</span><span class="nv">alternative_header_second_line_format</span> <span class="o">=</span> <span class="o">{{</span><span class="p">$</span><span class="m">4</span><span class="p">$</span><span class="nv">b</span><span class="p">%</span><span class="nv">a</span><span class="p">$</span><span class="o">/</span><span class="nv">b</span><span class="p">$</span><span class="m">9</span><span class="o">}{</span> <span class="o">-</span> <span class="p">$</span><span class="m">7</span><span class="p">%</span><span class="nv">b</span><span class="p">$</span><span class="m">9</span><span class="o">}{</span> <span class="o">(</span><span class="p">$</span><span class="m">4</span><span class="p">%</span><span class="nv">y</span><span class="p">$</span><span class="m">9</span><span class="o">)}}</span><span class="p">|</span><span class="o">{</span><span class="p">%</span><span class="nv">D</span><span class="o">}</span>
+<a name="listingsmanjarompdncmpcppconfig-194"></a><span class="p">#</span>
+<a name="listingsmanjarompdncmpcppconfig-195"></a><span class="p">#</span><span class="nv">current_item_prefix</span> <span class="o">=</span> <span class="p">$</span><span class="o">(</span><span class="nv">yellow</span><span class="o">)</span><span class="p">$</span><span class="nv">r</span>
+<a name="listingsmanjarompdncmpcppconfig-196"></a><span class="p">#</span>
+<a name="listingsmanjarompdncmpcppconfig-197"></a><span class="p">#</span><span class="nv">current_item_suffix</span> <span class="o">=</span> <span class="p">$</span><span class="o">/</span><span class="nv">r</span><span class="p">$</span><span class="o">(</span><span class="nv">end</span><span class="o">)</span>
+<a name="listingsmanjarompdncmpcppconfig-198"></a><span class="p">#</span>
+<a name="listingsmanjarompdncmpcppconfig-199"></a><span class="p">#</span><span class="nv">current_item_inactive_column_prefix</span> <span class="o">=</span> <span class="p">$</span><span class="o">(</span><span class="nv">white</span><span class="o">)</span><span class="p">$</span><span class="nv">r</span>
+<a name="listingsmanjarompdncmpcppconfig-200"></a><span class="p">#</span>
+<a name="listingsmanjarompdncmpcppconfig-201"></a><span class="p">#</span><span class="nv">current_item_inactive_column_suffix</span> <span class="o">=</span> <span class="p">$</span><span class="o">/</span><span class="nv">r</span><span class="p">$</span><span class="o">(</span><span class="nv">end</span><span class="o">)</span>
+<a name="listingsmanjarompdncmpcppconfig-202"></a><span class="p">#</span>
+<a name="listingsmanjarompdncmpcppconfig-203"></a><span class="p">#</span><span class="nv">now_playing_prefix</span> <span class="o">=</span> <span class="p">$</span><span class="nv">b</span>
+<a name="listingsmanjarompdncmpcppconfig-204"></a><span class="p">#</span>
+<a name="listingsmanjarompdncmpcppconfig-205"></a><span class="p">#</span><span class="nv">now_playing_suffix</span> <span class="o">=</span> <span class="p">$</span><span class="o">/</span><span class="nv">b</span>
+<a name="listingsmanjarompdncmpcppconfig-206"></a><span class="p">#</span>
+<a name="listingsmanjarompdncmpcppconfig-207"></a><span class="p">#</span><span class="nv">browser_playlist_prefix</span> <span class="o">=</span> <span class="s2">"$2playlist$9 "</span>
+<a name="listingsmanjarompdncmpcppconfig-208"></a><span class="p">#</span>
+<a name="listingsmanjarompdncmpcppconfig-209"></a><span class="p">#</span><span class="nv">selected_item_prefix</span> <span class="o">=</span> <span class="p">$</span><span class="m">6</span>
+<a name="listingsmanjarompdncmpcppconfig-210"></a><span class="p">#</span>
+<a name="listingsmanjarompdncmpcppconfig-211"></a><span class="p">#</span><span class="nv">selected_item_suffix</span> <span class="o">=</span> <span class="p">$</span><span class="m">9</span>
+<a name="listingsmanjarompdncmpcppconfig-212"></a><span class="p">#</span>
+<a name="listingsmanjarompdncmpcppconfig-213"></a><span class="p">#</span><span class="nv">modified_item_prefix</span> <span class="o">=</span> <span class="p">$</span><span class="m">3</span><span class="o">&gt;</span> <span class="p">$</span><span class="m">9</span>
+<a name="listingsmanjarompdncmpcppconfig-214"></a><span class="p">#</span>
+<a name="listingsmanjarompdncmpcppconfig-215"></a><span class="p">##</span>
+<a name="listingsmanjarompdncmpcppconfig-216"></a><span class="p">##</span> <span class="nv">Note</span><span class="o">:</span> <span class="nv">attributes</span> <span class="nv">are</span> <span class="k">not</span> <span class="nv">supported</span> <span class="nv">for</span> <span class="nv">the</span> <span class="nv">following</span> <span class="nv">variables</span><span class="p">.</span>
+<a name="listingsmanjarompdncmpcppconfig-217"></a><span class="p">##</span>
+<a name="listingsmanjarompdncmpcppconfig-218"></a><span class="p">#</span><span class="nv">song_window_title_format</span> <span class="o">=</span> <span class="o">{</span><span class="p">%</span><span class="nv">a</span> <span class="o">-</span> <span class="o">}{</span><span class="p">%</span><span class="nv">t</span><span class="o">}</span><span class="p">|</span><span class="o">{</span><span class="p">%</span><span class="nv">f</span><span class="o">}</span>
+<a name="listingsmanjarompdncmpcppconfig-219"></a><span class="p">##</span>
+<a name="listingsmanjarompdncmpcppconfig-220"></a><span class="p">##</span> <span class="nv">Note</span><span class="o">:</span> <span class="nv">Below</span> <span class="nv">variables</span> <span class="nv">are</span> <span class="nv">used</span> <span class="nv">for</span> <span class="nv">sorting</span> <span class="nv">songs</span> <span class="k">in</span> <span class="nv">browser</span><span class="p">.</span>  <span class="nv">The</span> <span class="nv">sort</span> <span class="nv">mode</span>
+<a name="listingsmanjarompdncmpcppconfig-221"></a><span class="p">##</span> <span class="nv">determines</span> <span class="nv">how</span> <span class="nv">songs</span> <span class="nv">are</span> <span class="nv">sorted</span><span class="o">,</span> <span class="k">and</span> <span class="nv">can</span> <span class="nv">be</span> <span class="nv">used</span> <span class="k">in</span> <span class="nv">combination</span> <span class="k">with</span> <span class="nv">a</span> <span class="nv">sort</span>
+<a name="listingsmanjarompdncmpcppconfig-222"></a><span class="p">##</span> <span class="nv">format</span> <span class="nv">to</span> <span class="nv">specify</span> <span class="nv">a</span> <span class="nv">custom</span> <span class="nv">sorting</span> <span class="nv">format</span><span class="p">.</span>  <span class="nv">Available</span> <span class="nv">values</span> <span class="nv">for</span>
+<a name="listingsmanjarompdncmpcppconfig-223"></a><span class="p">##</span> <span class="nv">browser_sort_mode</span> <span class="nv">are</span> <span class="s2">"name"</span><span class="o">,</span> <span class="s2">"mtime"</span><span class="o">,</span> <span class="s2">"format"</span> <span class="k">and</span> <span class="s2">"noop"</span><span class="p">.</span>
+<a name="listingsmanjarompdncmpcppconfig-224"></a><span class="p">##</span>
+<a name="listingsmanjarompdncmpcppconfig-225"></a><span class="p">#</span>
+<a name="listingsmanjarompdncmpcppconfig-226"></a><span class="p">#</span><span class="nv">browser_sort_mode</span> <span class="o">=</span> <span class="nv">name</span>
+<a name="listingsmanjarompdncmpcppconfig-227"></a><span class="p">#</span>
+<a name="listingsmanjarompdncmpcppconfig-228"></a><span class="p">#</span><span class="nv">browser_sort_format</span> <span class="o">=</span> <span class="o">{</span><span class="p">%</span><span class="nv">a</span> <span class="o">-</span> <span class="o">}{</span><span class="p">%</span><span class="nv">t</span><span class="o">}</span><span class="p">|</span><span class="o">{</span><span class="p">%</span><span class="nv">f</span><span class="o">}</span> <span class="o">{(</span><span class="p">%</span><span class="nv">l</span><span class="o">)}</span>
+<a name="listingsmanjarompdncmpcppconfig-229"></a><span class="p">#</span>
+<a name="listingsmanjarompdncmpcppconfig-230"></a><span class="p">#####</span> <span class="nv">columns</span> <span class="nv">settings</span> <span class="p">#####</span>
+<a name="listingsmanjarompdncmpcppconfig-231"></a><span class="p">##</span>
+<a name="listingsmanjarompdncmpcppconfig-232"></a><span class="p">##</span> <span class="nv">syntax</span> <span class="nv">of</span> <span class="nv">song</span> <span class="nv">columns</span> <span class="nv">list</span> <span class="nv">format</span> <span class="k">is</span> <span class="s2">"column column etc."</span>
+<a name="listingsmanjarompdncmpcppconfig-233"></a><span class="p">##</span>
+<a name="listingsmanjarompdncmpcppconfig-234"></a><span class="p">##</span> <span class="o">-</span> <span class="nv">syntax</span> <span class="nv">for</span> <span class="nv">each</span> <span class="nv">column</span> <span class="k">is</span><span class="o">:</span>
+<a name="listingsmanjarompdncmpcppconfig-235"></a><span class="p">##</span>
+<a name="listingsmanjarompdncmpcppconfig-236"></a><span class="p">##</span> <span class="o">(</span><span class="nv">width</span> <span class="nv">of</span> <span class="nv">the</span> <span class="nv">column</span><span class="o">)[</span><span class="nv">color</span> <span class="nv">of</span> <span class="nv">the</span> <span class="nv">column</span><span class="o">]{</span><span class="nv">displayed</span> <span class="nv">tag</span><span class="o">}</span>
+<a name="listingsmanjarompdncmpcppconfig-237"></a><span class="p">##</span>
+<a name="listingsmanjarompdncmpcppconfig-238"></a><span class="p">##</span> <span class="nv">Note</span><span class="o">:</span> <span class="nv">Width</span> <span class="k">is</span> <span class="nf">by</span> <span class="nv">default</span> <span class="k">in</span> <span class="p">%</span><span class="o">,</span> <span class="k">if</span> <span class="nv">you</span> <span class="nv">want</span> <span class="nv">a</span> <span class="nv">column</span> <span class="nv">to</span> <span class="nv">have</span> <span class="nv">fixed</span> <span class="nv">size</span><span class="o">,</span> <span class="nv">add</span>
+<a name="listingsmanjarompdncmpcppconfig-239"></a><span class="p">##</span> <span class="s1">'f'</span> <span class="nv">after</span> <span class="nv">the</span> <span class="nv">value</span><span class="o">,</span> <span class="nv">e.g</span><span class="p">.</span> <span class="o">(</span><span class="m">10</span><span class="o">)[</span><span class="nv">white</span><span class="o">]{</span><span class="nv">a</span><span class="o">}</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">the</span> <span class="nv">column</span> <span class="nv">that</span> <span class="nv">take</span> <span class="m">10</span><span class="p">%</span> <span class="nv">of</span>
+<a name="listingsmanjarompdncmpcppconfig-240"></a><span class="p">##</span> <span class="nv">screen</span> <span class="o">(</span><span class="nv">so</span> <span class="nv">the</span> <span class="nv">real</span> <span class="nv">width</span> <span class="nv">will</span> <span class="nv">depend</span> <span class="nv">on</span> <span class="nv">actual</span> <span class="nv">screen</span> <span class="nv">size</span><span class="o">),</span> <span class="nv">whereas</span>
+<a name="listingsmanjarompdncmpcppconfig-241"></a><span class="p">##</span> <span class="o">(</span><span class="m">10f</span><span class="o">)[</span><span class="nv">white</span><span class="o">]{</span><span class="nv">a</span><span class="o">}</span> <span class="nv">will</span> <span class="nv">take</span> <span class="m">10</span> <span class="nv">terminal</span> <span class="nv">cells</span><span class="o">,</span> <span class="nv">no</span> <span class="nv">matter</span> <span class="nv">how</span> <span class="nv">wide</span> <span class="nv">the</span> <span class="nv">screen</span>
+<a name="listingsmanjarompdncmpcppconfig-242"></a><span class="p">##</span> <span class="k">is</span><span class="p">.</span>
+<a name="listingsmanjarompdncmpcppconfig-243"></a><span class="p">##</span>
+<a name="listingsmanjarompdncmpcppconfig-244"></a><span class="p">##</span> <span class="o">-</span> <span class="nv">color</span> <span class="k">is</span> <span class="nf">optional</span> <span class="o">(</span><span class="k">if</span> <span class="nv">you</span> <span class="nv">want</span> <span class="nv">the</span> <span class="nv">default</span> <span class="nv">one</span><span class="o">,</span> <span class="nv">leave</span> <span class="nv">the</span> <span class="nv">field</span> <span class="nv">empty</span><span class="o">)</span><span class="p">.</span>
+<a name="listingsmanjarompdncmpcppconfig-245"></a><span class="p">##</span>
+<a name="listingsmanjarompdncmpcppconfig-246"></a><span class="p">##</span> <span class="nv">Note</span><span class="o">:</span> <span class="nv">You</span> <span class="nv">can</span> <span class="nv">give</span> <span class="nv">a</span> <span class="nv">column</span> <span class="nv">additional</span> <span class="nv">attributes</span> <span class="nv">by</span> <span class="nv">putting</span> <span class="nv">appropriate</span>
+<a name="listingsmanjarompdncmpcppconfig-247"></a><span class="p">##</span> <span class="nv">character</span> <span class="nv">after</span> <span class="nv">displayed</span> <span class="nv">tag</span> <span class="nv">character</span><span class="p">.</span> <span class="nv">Available</span> <span class="nv">attributes</span> <span class="nv">are</span><span class="o">:</span>
+<a name="listingsmanjarompdncmpcppconfig-248"></a><span class="p">##</span>
+<a name="listingsmanjarompdncmpcppconfig-249"></a><span class="p">##</span> <span class="o">-</span> <span class="nv">r</span> <span class="o">-</span> <span class="nv">column</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">right</span> <span class="nv">aligned</span>
+<a name="listingsmanjarompdncmpcppconfig-250"></a><span class="p">##</span> <span class="o">-</span> <span class="nv">E</span> <span class="o">-</span> <span class="k">if</span> <span class="nv">tag</span> <span class="k">is</span> <span class="nf">empty</span><span class="o">,</span> <span class="nv">empty</span> <span class="nv">tag</span> <span class="nv">marker</span> <span class="nv">won</span><span class="s1">'t be displayed</span>
+<a name="listingsmanjarompdncmpcppconfig-251"></a><span class="s1">##</span>
+<a name="listingsmanjarompdncmpcppconfig-252"></a><span class="s1">## You can also:</span>
+<a name="listingsmanjarompdncmpcppconfig-253"></a><span class="s1">##</span>
+<a name="listingsmanjarompdncmpcppconfig-254"></a><span class="s1">## - give a column custom name by putting it after attributes, separated with</span>
+<a name="listingsmanjarompdncmpcppconfig-255"></a><span class="s1">##   character ':', e.g. {lr:Length} gives you right aligned column of lengths</span>
+<a name="listingsmanjarompdncmpcppconfig-256"></a><span class="s1">##   named "Length".</span>
+<a name="listingsmanjarompdncmpcppconfig-257"></a><span class="s1">##</span>
+<a name="listingsmanjarompdncmpcppconfig-258"></a><span class="s1">## - define sequence of tags, that have to be displayed in case predecessor is</span>
+<a name="listingsmanjarompdncmpcppconfig-259"></a><span class="s1">##   empty in a way similar to the one in classic song format, i.e. using '</span><span class="p">|</span><span class="s1">'</span>
+<a name="listingsmanjarompdncmpcppconfig-260"></a><span class="s1">##   character, e.g. {a|c|p:Owner} creates column named "Owner" that tries to</span>
+<a name="listingsmanjarompdncmpcppconfig-261"></a><span class="s1">##   display artist tag and then composer and performer if previous ones are not</span>
+<a name="listingsmanjarompdncmpcppconfig-262"></a><span class="s1">##   available.</span>
+<a name="listingsmanjarompdncmpcppconfig-263"></a><span class="s1">##</span>
+<a name="listingsmanjarompdncmpcppconfig-264"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-265"></a><span class="s1">#song_columns_list_format = (20)[]{a} (6f)[green]{NE} (50)[white]{t|f:Title} (20)[cyan]{b} (7f)[magenta]{l}</span>
+<a name="listingsmanjarompdncmpcppconfig-266"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-267"></a><span class="s1">##### various settings #####</span>
+<a name="listingsmanjarompdncmpcppconfig-268"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-269"></a><span class="s1">##</span>
+<a name="listingsmanjarompdncmpcppconfig-270"></a><span class="s1">## Note: Custom command that will be executed each time song changes. Useful for</span>
+<a name="listingsmanjarompdncmpcppconfig-271"></a><span class="s1">## notifications etc.</span>
+<a name="listingsmanjarompdncmpcppconfig-272"></a><span class="s1">##</span>
+<a name="listingsmanjarompdncmpcppconfig-273"></a><span class="s1">#execute_on_song_change = ""</span>
+<a name="listingsmanjarompdncmpcppconfig-274"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-275"></a><span class="s1">##</span>
+<a name="listingsmanjarompdncmpcppconfig-276"></a><span class="s1">## Note: Custom command that will be executed each time player state</span>
+<a name="listingsmanjarompdncmpcppconfig-277"></a><span class="s1">## changes. The environment variable MPD_PLAYER_STATE is set to the current</span>
+<a name="listingsmanjarompdncmpcppconfig-278"></a><span class="s1">## state (either unknown, play, pause, or stop) for its duration.</span>
+<a name="listingsmanjarompdncmpcppconfig-279"></a><span class="s1">##</span>
+<a name="listingsmanjarompdncmpcppconfig-280"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-281"></a><span class="s1">#execute_on_player_state_change = ""</span>
+<a name="listingsmanjarompdncmpcppconfig-282"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-283"></a><span class="s1">#playlist_show_mpd_host = no</span>
+<a name="listingsmanjarompdncmpcppconfig-284"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-285"></a><span class="s1">#playlist_show_remaining_time = no</span>
+<a name="listingsmanjarompdncmpcppconfig-286"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-287"></a><span class="s1">#playlist_shorten_total_times = no</span>
+<a name="listingsmanjarompdncmpcppconfig-288"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-289"></a><span class="s1">#playlist_separate_albums = no</span>
+<a name="listingsmanjarompdncmpcppconfig-290"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-291"></a><span class="s1">##</span>
+<a name="listingsmanjarompdncmpcppconfig-292"></a><span class="s1">## Note: Possible display modes: classic, columns.</span>
+<a name="listingsmanjarompdncmpcppconfig-293"></a><span class="s1">##</span>
+<a name="listingsmanjarompdncmpcppconfig-294"></a><span class="s1">#playlist_display_mode = columns</span>
+<a name="listingsmanjarompdncmpcppconfig-295"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-296"></a><span class="s1">#browser_display_mode = classic</span>
+<a name="listingsmanjarompdncmpcppconfig-297"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-298"></a><span class="s1">#search_engine_display_mode = classic</span>
+<a name="listingsmanjarompdncmpcppconfig-299"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-300"></a><span class="s1">#playlist_editor_display_mode = classic</span>
+<a name="listingsmanjarompdncmpcppconfig-301"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-302"></a><span class="s1">#discard_colors_if_item_is_selected = yes</span>
+<a name="listingsmanjarompdncmpcppconfig-303"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-304"></a><span class="s1">#show_duplicate_tags = yes</span>
+<a name="listingsmanjarompdncmpcppconfig-305"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-306"></a><span class="s1">#incremental_seeking = yes</span>
+<a name="listingsmanjarompdncmpcppconfig-307"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-308"></a><span class="s1">#seek_time = 1</span>
+<a name="listingsmanjarompdncmpcppconfig-309"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-310"></a><span class="s1">#volume_change_step = 2</span>
+<a name="listingsmanjarompdncmpcppconfig-311"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-312"></a><span class="s1">#autocenter_mode = no</span>
+<a name="listingsmanjarompdncmpcppconfig-313"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-314"></a><span class="s1">#centered_cursor = no</span>
+<a name="listingsmanjarompdncmpcppconfig-315"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-316"></a><span class="s1">##</span>
+<a name="listingsmanjarompdncmpcppconfig-317"></a><span class="s1">## Note: You can specify third character which will be used to build '</span><span class="nv">empty</span><span class="s1">'</span>
+<a name="listingsmanjarompdncmpcppconfig-318"></a><span class="s1">## part of progressbar.</span>
+<a name="listingsmanjarompdncmpcppconfig-319"></a><span class="s1">##</span>
+<a name="listingsmanjarompdncmpcppconfig-320"></a><span class="s1">#progressbar_look = =&gt;</span>
+<a name="listingsmanjarompdncmpcppconfig-321"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-322"></a><span class="s1">## Available values: database, playlist.</span>
+<a name="listingsmanjarompdncmpcppconfig-323"></a><span class="s1">##</span>
+<a name="listingsmanjarompdncmpcppconfig-324"></a><span class="s1">#default_place_to_search_in = database</span>
+<a name="listingsmanjarompdncmpcppconfig-325"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-326"></a><span class="s1">## Available values: classic, alternative.</span>
+<a name="listingsmanjarompdncmpcppconfig-327"></a><span class="s1">##</span>
+<a name="listingsmanjarompdncmpcppconfig-328"></a><span class="s1">#user_interface = classic</span>
+<a name="listingsmanjarompdncmpcppconfig-329"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-330"></a><span class="s1">#data_fetching_delay = yes</span>
+<a name="listingsmanjarompdncmpcppconfig-331"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-332"></a><span class="s1">## Available values: artist, album_artist, date, genre, composer, performer.</span>
+<a name="listingsmanjarompdncmpcppconfig-333"></a><span class="s1">##</span>
+<a name="listingsmanjarompdncmpcppconfig-334"></a><span class="s1">#media_library_primary_tag = artist</span>
+<a name="listingsmanjarompdncmpcppconfig-335"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-336"></a><span class="s1">#media_library_albums_split_by_date = yes</span>
+<a name="listingsmanjarompdncmpcppconfig-337"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-338"></a><span class="s1">## Available values: wrapped, normal.</span>
+<a name="listingsmanjarompdncmpcppconfig-339"></a><span class="s1">##</span>
+<a name="listingsmanjarompdncmpcppconfig-340"></a><span class="s1">#default_find_mode = wrapped</span>
+<a name="listingsmanjarompdncmpcppconfig-341"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-342"></a><span class="s1">#default_tag_editor_pattern = %n - %t</span>
+<a name="listingsmanjarompdncmpcppconfig-343"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-344"></a><span class="s1">#header_visibility = yes</span>
+<a name="listingsmanjarompdncmpcppconfig-345"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-346"></a><span class="s1">#statusbar_visibility = yes</span>
+<a name="listingsmanjarompdncmpcppconfig-347"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-348"></a><span class="s1">#titles_visibility = yes</span>
+<a name="listingsmanjarompdncmpcppconfig-349"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-350"></a><span class="s1">#header_text_scrolling = yes</span>
+<a name="listingsmanjarompdncmpcppconfig-351"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-352"></a><span class="s1">#cyclic_scrolling = no</span>
+<a name="listingsmanjarompdncmpcppconfig-353"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-354"></a><span class="s1">#lines_scrolled = 2</span>
+<a name="listingsmanjarompdncmpcppconfig-355"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-356"></a><span class="s1">#lyrics_fetchers = lyricwiki, azlyrics, genius, sing365, lyricsmania, metrolyrics, justsomelyrics, jahlyrics, plyrics, tekstowo, internet</span>
+<a name="listingsmanjarompdncmpcppconfig-357"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-358"></a><span class="s1">#follow_now_playing_lyrics = no</span>
+<a name="listingsmanjarompdncmpcppconfig-359"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-360"></a><span class="s1">fetch_lyrics_for_current_song_in_background = yes</span>
+<a name="listingsmanjarompdncmpcppconfig-361"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-362"></a><span class="s1">#store_lyrics_in_song_dir = no</span>
+<a name="listingsmanjarompdncmpcppconfig-363"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-364"></a><span class="s1">#generate_win32_compatible_filenames = yes</span>
+<a name="listingsmanjarompdncmpcppconfig-365"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-366"></a><span class="s1">#allow_for_physical_item_deletion = no</span>
+<a name="listingsmanjarompdncmpcppconfig-367"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-368"></a><span class="s1">##</span>
+<a name="listingsmanjarompdncmpcppconfig-369"></a><span class="s1">## Note: If you set this variable, ncmpcpp will try to get info from last.fm in</span>
+<a name="listingsmanjarompdncmpcppconfig-370"></a><span class="s1">## language you set and if it fails, it will fall back to english. Otherwise it</span>
+<a name="listingsmanjarompdncmpcppconfig-371"></a><span class="s1">## will use english the first time.</span>
+<a name="listingsmanjarompdncmpcppconfig-372"></a><span class="s1">##</span>
+<a name="listingsmanjarompdncmpcppconfig-373"></a><span class="s1">## Note: Language has to be expressed as an ISO 639 alpha-2 code.</span>
+<a name="listingsmanjarompdncmpcppconfig-374"></a><span class="s1">##</span>
+<a name="listingsmanjarompdncmpcppconfig-375"></a><span class="s1">#lastfm_preferred_language = en</span>
+<a name="listingsmanjarompdncmpcppconfig-376"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-377"></a><span class="s1">#space_add_mode = add_remove</span>
+<a name="listingsmanjarompdncmpcppconfig-378"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-379"></a><span class="s1">#show_hidden_files_in_local_browser = no</span>
+<a name="listingsmanjarompdncmpcppconfig-380"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-381"></a><span class="s1">##</span>
+<a name="listingsmanjarompdncmpcppconfig-382"></a><span class="s1">## How shall screen switcher work?</span>
+<a name="listingsmanjarompdncmpcppconfig-383"></a><span class="s1">##</span>
+<a name="listingsmanjarompdncmpcppconfig-384"></a><span class="s1">## - "previous" - switch between the current and previous screen.</span>
+<a name="listingsmanjarompdncmpcppconfig-385"></a><span class="s1">## - "screen1,...,screenN" - switch between given sequence of screens.</span>
+<a name="listingsmanjarompdncmpcppconfig-386"></a><span class="s1">##</span>
+<a name="listingsmanjarompdncmpcppconfig-387"></a><span class="s1">## Screens available for use: help, playlist, browser, search_engine,</span>
+<a name="listingsmanjarompdncmpcppconfig-388"></a><span class="s1">## media_library, playlist_editor, tag_editor, outputs, visualizer, clock,</span>
+<a name="listingsmanjarompdncmpcppconfig-389"></a><span class="s1">## lyrics, last_fm.</span>
+<a name="listingsmanjarompdncmpcppconfig-390"></a><span class="s1">##</span>
+<a name="listingsmanjarompdncmpcppconfig-391"></a><span class="s1">#screen_switcher_mode = playlist, browser</span>
+<a name="listingsmanjarompdncmpcppconfig-392"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-393"></a><span class="s1">##</span>
+<a name="listingsmanjarompdncmpcppconfig-394"></a><span class="s1">## Note: You can define startup screen by choosing screen from the list above.</span>
+<a name="listingsmanjarompdncmpcppconfig-395"></a><span class="s1">##</span>
+<a name="listingsmanjarompdncmpcppconfig-396"></a><span class="s1">#startup_screen = playlist</span>
+<a name="listingsmanjarompdncmpcppconfig-397"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-398"></a><span class="s1">##</span>
+<a name="listingsmanjarompdncmpcppconfig-399"></a><span class="s1">## Note: You can define startup slave screen by choosing screen from the list</span>
+<a name="listingsmanjarompdncmpcppconfig-400"></a><span class="s1">## above or an empty value for no slave screen.</span>
+<a name="listingsmanjarompdncmpcppconfig-401"></a><span class="s1">##</span>
+<a name="listingsmanjarompdncmpcppconfig-402"></a><span class="s1">#startup_slave_screen = ""</span>
+<a name="listingsmanjarompdncmpcppconfig-403"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-404"></a><span class="s1">#startup_slave_screen_focus = no</span>
+<a name="listingsmanjarompdncmpcppconfig-405"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-406"></a><span class="s1">##</span>
+<a name="listingsmanjarompdncmpcppconfig-407"></a><span class="s1">## Default width of locked screen (in %).  Acceptable values are from 20 to 80.</span>
+<a name="listingsmanjarompdncmpcppconfig-408"></a><span class="s1">##</span>
+<a name="listingsmanjarompdncmpcppconfig-409"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-410"></a><span class="s1">#locked_screen_width_part = 50</span>
+<a name="listingsmanjarompdncmpcppconfig-411"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-412"></a><span class="s1">#ask_for_locked_screen_width_part = yes</span>
+<a name="listingsmanjarompdncmpcppconfig-413"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-414"></a><span class="s1">#jump_to_now_playing_song_at_start = yes</span>
+<a name="listingsmanjarompdncmpcppconfig-415"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-416"></a><span class="s1">#ask_before_clearing_playlists = yes</span>
+<a name="listingsmanjarompdncmpcppconfig-417"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-418"></a><span class="s1">#clock_display_seconds = no</span>
+<a name="listingsmanjarompdncmpcppconfig-419"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-420"></a><span class="s1">#display_volume_level = yes</span>
+<a name="listingsmanjarompdncmpcppconfig-421"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-422"></a><span class="s1">display_bitrate = yes</span>
+<a name="listingsmanjarompdncmpcppconfig-423"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-424"></a><span class="s1">#display_remaining_time = no</span>
+<a name="listingsmanjarompdncmpcppconfig-425"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-426"></a><span class="s1">## Available values: none, basic, extended, perl.</span>
+<a name="listingsmanjarompdncmpcppconfig-427"></a><span class="s1">##</span>
+<a name="listingsmanjarompdncmpcppconfig-428"></a><span class="s1">#regular_expressions = perl</span>
+<a name="listingsmanjarompdncmpcppconfig-429"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-430"></a><span class="s1">##</span>
+<a name="listingsmanjarompdncmpcppconfig-431"></a><span class="s1">## Note: if below is enabled, ncmpcpp will ignore leading "The" word while</span>
+<a name="listingsmanjarompdncmpcppconfig-432"></a><span class="s1">## sorting items in browser, tags in media library, etc.</span>
+<a name="listingsmanjarompdncmpcppconfig-433"></a><span class="s1">##</span>
+<a name="listingsmanjarompdncmpcppconfig-434"></a><span class="s1">#ignore_leading_the = no</span>
+<a name="listingsmanjarompdncmpcppconfig-435"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-436"></a><span class="s1">##</span>
+<a name="listingsmanjarompdncmpcppconfig-437"></a><span class="s1">## Note: if below is enabled, ncmpcpp will ignore diacritics while searching and</span>
+<a name="listingsmanjarompdncmpcppconfig-438"></a><span class="s1">## filtering lists. This takes an effect only if boost was compiled with ICU</span>
+<a name="listingsmanjarompdncmpcppconfig-439"></a><span class="s1">## support.</span>
+<a name="listingsmanjarompdncmpcppconfig-440"></a><span class="s1">##</span>
+<a name="listingsmanjarompdncmpcppconfig-441"></a><span class="s1">#ignore_diacritics = no</span>
+<a name="listingsmanjarompdncmpcppconfig-442"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-443"></a><span class="s1">#block_search_constraints_change_if_items_found = yes</span>
+<a name="listingsmanjarompdncmpcppconfig-444"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-445"></a><span class="s1">#mouse_support = yes</span>
+<a name="listingsmanjarompdncmpcppconfig-446"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-447"></a><span class="s1">#mouse_list_scroll_whole_page = yes</span>
+<a name="listingsmanjarompdncmpcppconfig-448"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-449"></a><span class="s1">#empty_tag_marker = &lt;empty&gt;</span>
+<a name="listingsmanjarompdncmpcppconfig-450"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-451"></a><span class="s1">#tags_separator = " | "</span>
+<a name="listingsmanjarompdncmpcppconfig-452"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-453"></a><span class="s1">#tag_editor_extended_numeration = no</span>
+<a name="listingsmanjarompdncmpcppconfig-454"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-455"></a><span class="s1">#media_library_sort_by_mtime = no</span>
+<a name="listingsmanjarompdncmpcppconfig-456"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-457"></a><span class="s1">#enable_window_title = yes</span>
+<a name="listingsmanjarompdncmpcppconfig-458"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-459"></a><span class="s1">##</span>
+<a name="listingsmanjarompdncmpcppconfig-460"></a><span class="s1">## Note: You can choose default search mode for search engine. Available modes</span>
+<a name="listingsmanjarompdncmpcppconfig-461"></a><span class="s1">## are:</span>
+<a name="listingsmanjarompdncmpcppconfig-462"></a><span class="s1">##</span>
+<a name="listingsmanjarompdncmpcppconfig-463"></a><span class="s1">## - 1 - use mpd built-in searching (no regexes, pattern matching)</span>
+<a name="listingsmanjarompdncmpcppconfig-464"></a><span class="s1">##</span>
+<a name="listingsmanjarompdncmpcppconfig-465"></a><span class="s1">## - 2 - use ncmpcpp searching (pattern matching with support for regexes, but</span>
+<a name="listingsmanjarompdncmpcppconfig-466"></a><span class="s1">##       if your mpd is on a remote machine, downloading big database to process</span>
+<a name="listingsmanjarompdncmpcppconfig-467"></a><span class="s1">##       it can take a while</span>
+<a name="listingsmanjarompdncmpcppconfig-468"></a><span class="s1">##</span>
+<a name="listingsmanjarompdncmpcppconfig-469"></a><span class="s1">## - 3 - match only exact values (this mode uses mpd function for searching in</span>
+<a name="listingsmanjarompdncmpcppconfig-470"></a><span class="s1">##       database and local one for searching in current playlist)</span>
+<a name="listingsmanjarompdncmpcppconfig-471"></a><span class="s1">##</span>
+<a name="listingsmanjarompdncmpcppconfig-472"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-473"></a><span class="s1">#search_engine_default_search_mode = 1</span>
+<a name="listingsmanjarompdncmpcppconfig-474"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-475"></a><span class="s1">external_editor = nvim</span>
+<a name="listingsmanjarompdncmpcppconfig-476"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-477"></a><span class="s1">## Note: set to yes if external editor is a console application.</span>
+<a name="listingsmanjarompdncmpcppconfig-478"></a><span class="s1">##</span>
+<a name="listingsmanjarompdncmpcppconfig-479"></a><span class="s1">#use_console_editor = yes</span>
+<a name="listingsmanjarompdncmpcppconfig-480"></a><span class="s1">#</span>
+<a name="listingsmanjarompdncmpcppconfig-481"></a><span class="s1">##### colors definitions #####</span>
+<a name="listingsmanjarompdncmpcppconfig-482"></a><span class="s1">##</span>
+<a name="listingsmanjarompdncmpcppconfig-483"></a><span class="s1">## It is possible to set a background color by setting a color value</span>
+<a name="listingsmanjarompdncmpcppconfig-484"></a><span class="s1">## "&lt;foreground&gt;_&lt;background&gt;", e.g. red_black will set foregound color to red</span>
+<a name="listingsmanjarompdncmpcppconfig-485"></a><span class="s1">## and background color to black.</span>
+<a name="listingsmanjarompdncmpcppconfig-486"></a><span class="s1">##</span>
+<a name="listingsmanjarompdncmpcppconfig-487"></a><span class="s1">## In addition, for terminals that support 256 colors it is possible to set one</span>
+<a name="listingsmanjarompdncmpcppconfig-488"></a><span class="s1">## of them by using a number in range [1, 256] instead of color name,</span>
+<a name="listingsmanjarompdncmpcppconfig-489"></a><span class="s1">## e.g. numerical value corresponding to red_black is 2_1. To find out if the</span>
+<a name="listingsmanjarompdncmpcppconfig-490"></a><span class="s1">## terminal supports 256 colors, run ncmpcpp and check out the bottom of the</span>
+<a name="listingsmanjarompdncmpcppconfig-491"></a><span class="s1">## help screen for list of available colors and their numerical values.</span>
+<a name="listingsmanjarompdncmpcppconfig-492"></a><span class="s1">##</span>
+<a name="listingsmanjarompdncmpcppconfig-493"></a><span class="s1">## What is more, there are two special values for the background color:</span>
+<a name="listingsmanjarompdncmpcppconfig-494"></a><span class="s1">## "transparent" and "current". The first one explicitly sets the background to</span>
+<a name="listingsmanjarompdncmpcppconfig-495"></a><span class="s1">## be transparent, while the second one allows you to preserve current</span>
+<a name="listingsmanjarompdncmpcppconfig-496"></a><span class="s1">## background color and change only the foreground one. It'</span><span class="nv">s</span> <span class="nv">used</span> <span class="nv">implicitly</span>
+<a name="listingsmanjarompdncmpcppconfig-497"></a><span class="p">##</span> <span class="nv">when</span> <span class="nv">background</span> <span class="nv">color</span> <span class="k">is</span> <span class="k">not</span> <span class="nf">specified</span><span class="p">.</span>
+<a name="listingsmanjarompdncmpcppconfig-498"></a><span class="p">##</span>
+<a name="listingsmanjarompdncmpcppconfig-499"></a><span class="p">##</span> <span class="nv">Moreover</span><span class="o">,</span> <span class="nv">it</span> <span class="k">is</span> <span class="nf">possible</span> <span class="nv">to</span> <span class="nv">attach</span> <span class="nv">format</span> <span class="nv">information</span> <span class="nv">to</span> <span class="nv">selected</span> <span class="nv">color</span>
+<a name="listingsmanjarompdncmpcppconfig-500"></a><span class="p">##</span> <span class="nv">variables</span> <span class="nv">by</span> <span class="nv">appending</span> <span class="nv">to</span> <span class="nv">their</span> <span class="nv">end</span> <span class="nv">a</span> <span class="nv">colon</span> <span class="nv">followed</span> <span class="nv">by</span> <span class="nv">one</span> <span class="k">or</span> <span class="nv">more</span> <span class="nv">format</span>
+<a name="listingsmanjarompdncmpcppconfig-501"></a><span class="p">##</span> <span class="nv">flags</span><span class="o">,</span> <span class="nv">e.g</span><span class="p">.</span> <span class="nv">black</span><span class="o">:</span><span class="nv">b</span> <span class="k">or</span> <span class="nv">red</span><span class="o">:</span><span class="nv">ur</span><span class="p">.</span> <span class="nv">The</span> <span class="nv">following</span> <span class="nv">variables</span> <span class="nv">support</span> <span class="nv">this</span> <span class="nv">syntax</span><span class="o">:</span>
+<a name="listingsmanjarompdncmpcppconfig-502"></a><span class="p">##</span> <span class="nv">visualizer_color</span><span class="o">,</span> <span class="nv">color1</span><span class="o">,</span> <span class="nv">color2</span><span class="o">,</span> <span class="nv">empty_tag_color</span><span class="o">,</span> <span class="nv">volume_color</span><span class="o">,</span>
+<a name="listingsmanjarompdncmpcppconfig-503"></a><span class="p">##</span> <span class="nv">state_line_color</span><span class="o">,</span> <span class="nv">state_flags_color</span><span class="o">,</span> <span class="nv">progressbar_color</span><span class="o">,</span>
+<a name="listingsmanjarompdncmpcppconfig-504"></a><span class="p">##</span> <span class="nv">progressbar_elapsed_color</span><span class="o">,</span> <span class="nv">player_state_color</span><span class="o">,</span> <span class="nv">statusbar_time_color</span><span class="o">,</span>
+<a name="listingsmanjarompdncmpcppconfig-505"></a><span class="p">##</span> <span class="nv">alternative_ui_separator_color</span><span class="p">.</span>
+<a name="listingsmanjarompdncmpcppconfig-506"></a><span class="p">##</span>
+<a name="listingsmanjarompdncmpcppconfig-507"></a><span class="p">##</span> <span class="nv">Note</span><span class="o">:</span> <span class="nv">due</span> <span class="nv">to</span> <span class="nv">technical</span> <span class="nv">limitations</span> <span class="nv">of</span> <span class="nv">older</span> <span class="nv">ncurses</span> <span class="nv">version</span><span class="o">,</span> <span class="k">if</span> <span class="m">256</span> <span class="nv">colors</span>
+<a name="listingsmanjarompdncmpcppconfig-508"></a><span class="p">##</span> <span class="nv">are</span> <span class="nv">used</span> <span class="nv">there</span> <span class="k">is</span> <span class="nf">a</span> <span class="nv">possibility</span> <span class="nv">that</span> <span class="nv">you</span><span class="p">'</span><span class="nv">ll</span> <span class="nv">be</span> <span class="nv">able</span> <span class="nv">to</span> <span class="nv">use</span> <span class="nv">only</span> <span class="nv">colors</span> <span class="k">with</span>
+<a name="listingsmanjarompdncmpcppconfig-509"></a><span class="p">##</span> <span class="nv">transparent</span> <span class="nv">background</span><span class="p">.</span>
+<a name="listingsmanjarompdncmpcppconfig-510"></a><span class="p">#</span>
+<a name="listingsmanjarompdncmpcppconfig-511"></a><span class="p">#</span> <span class="nv">colors_enabled</span> <span class="o">=</span> <span class="nv">yes</span>
+<a name="listingsmanjarompdncmpcppconfig-512"></a><span class="p">#</span>
+<a name="listingsmanjarompdncmpcppconfig-513"></a><span class="p">#</span><span class="nv">empty_tag_color</span> <span class="o">=</span> <span class="nv">cyan</span>
+<a name="listingsmanjarompdncmpcppconfig-514"></a><span class="p">#</span>
+<a name="listingsmanjarompdncmpcppconfig-515"></a><span class="p">#</span><span class="nv">header_window_color</span> <span class="o">=</span> <span class="nv">default</span>
+<a name="listingsmanjarompdncmpcppconfig-516"></a><span class="p">#</span>
+<a name="listingsmanjarompdncmpcppconfig-517"></a><span class="p">#</span><span class="nv">volume_color</span> <span class="o">=</span> <span class="nv">default</span>
+<a name="listingsmanjarompdncmpcppconfig-518"></a><span class="p">#</span>
+<a name="listingsmanjarompdncmpcppconfig-519"></a><span class="p">#</span><span class="nv">state_line_color</span> <span class="o">=</span> <span class="nv">default</span>
+<a name="listingsmanjarompdncmpcppconfig-520"></a><span class="p">#</span>
+<a name="listingsmanjarompdncmpcppconfig-521"></a><span class="p">#</span><span class="nv">state_flags_color</span> <span class="o">=</span> <span class="nv">default</span><span class="o">:</span><span class="nv">b</span>
+<a name="listingsmanjarompdncmpcppconfig-522"></a><span class="p">#</span>
+<a name="listingsmanjarompdncmpcppconfig-523"></a><span class="p">#</span><span class="nv">main_window_color</span> <span class="o">=</span> <span class="nv">yellow</span>
+<a name="listingsmanjarompdncmpcppconfig-524"></a><span class="p">#</span>
+<a name="listingsmanjarompdncmpcppconfig-525"></a><span class="p">#</span><span class="nv">color1</span> <span class="o">=</span> <span class="nv">white</span>
+<a name="listingsmanjarompdncmpcppconfig-526"></a><span class="p">#</span>
+<a name="listingsmanjarompdncmpcppconfig-527"></a><span class="p">#</span><span class="nv">color2</span> <span class="o">=</span> <span class="nv">green</span>
+<a name="listingsmanjarompdncmpcppconfig-528"></a><span class="p">#</span>
+<a name="listingsmanjarompdncmpcppconfig-529"></a><span class="p">#</span><span class="nv">progressbar_color</span> <span class="o">=</span> <span class="nv">black</span><span class="o">:</span><span class="nv">b</span>
+<a name="listingsmanjarompdncmpcppconfig-530"></a><span class="p">#</span>
+<a name="listingsmanjarompdncmpcppconfig-531"></a><span class="p">#</span><span class="nv">progressbar_elapsed_color</span> <span class="o">=</span> <span class="nv">green</span><span class="o">:</span><span class="nv">b</span>
+<a name="listingsmanjarompdncmpcppconfig-532"></a><span class="p">#</span>
+<a name="listingsmanjarompdncmpcppconfig-533"></a><span class="p">#</span><span class="nv">statusbar_color</span> <span class="o">=</span> <span class="nv">default</span>
+<a name="listingsmanjarompdncmpcppconfig-534"></a><span class="p">#</span>
+<a name="listingsmanjarompdncmpcppconfig-535"></a><span class="p">#</span><span class="nv">statusbar_time_color</span> <span class="o">=</span> <span class="nv">default</span><span class="o">:</span><span class="nv">b</span>
+<a name="listingsmanjarompdncmpcppconfig-536"></a><span class="p">#</span>
+<a name="listingsmanjarompdncmpcppconfig-537"></a><span class="p">#</span><span class="nv">player_state_color</span> <span class="o">=</span> <span class="nv">default</span><span class="o">:</span><span class="nv">b</span>
+<a name="listingsmanjarompdncmpcppconfig-538"></a><span class="p">#</span>
+<a name="listingsmanjarompdncmpcppconfig-539"></a><span class="p">#</span><span class="nv">alternative_ui_separator_color</span> <span class="o">=</span> <span class="nv">black</span><span class="o">:</span><span class="nv">b</span>
+<a name="listingsmanjarompdncmpcppconfig-540"></a><span class="p">#</span>
+<a name="listingsmanjarompdncmpcppconfig-541"></a><span class="p">#</span><span class="nv">window_border_color</span> <span class="o">=</span> <span class="nv">green</span>
+<a name="listingsmanjarompdncmpcppconfig-542"></a><span class="p">#</span>
+<a name="listingsmanjarompdncmpcppconfig-543"></a><span class="p">#</span><span class="nv">active_window_border</span> <span class="o">=</span> <span class="nv">red</span>
+<a name="listingsmanjarompdncmpcppconfig-544"></a><span class="p">#</span>
+</pre></td>
+</tr></table>
+</div>
+                    </div>
+                </main><div class="footer extra-block no-print">
+    <span class="footer_item">
+        <a href="../../../pages/you-qing-lian-jie/">友情链接</a>
+    </span>
+    <span class="footer_item">
+        <a href="../../../pages/liu-yan-ban/">留言板</a>
+    </span>
+    <span class="footer_item">
+        <a href="../../../pages/ge-ren-dong-tai/">碎碎念</a>
+    </span>
+    </div>
+            <div class="footer social-link no-print">
+            <a href="https://github.com/ashfinal" target="_blank"><i class="grey large github icon"></i></a>
+            <a href="http://weibo.com/ashfinal/" target="_blank"><i class="grey large weibo icon"></i></a>
+            <a href="mailto://ashfinal@sina.cn" target="_blank"><i class="grey large mail icon"></i></a>
+            </div>
+        <div class="ui basic center aligned segment no-print">Contents © 2018         <a href="mailto:ashfinal@sina.cn">ashfinal</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </div>
+
+            </div>
+            <div class="computer only three wide column no-print">
+                <div id="right-side">
+                </div>
+            </div>
+        </div>
+
+        <!-- GoStats JavaScript Based Code -->
+        <script type="text/javascript">(function(c,o,m,p,u,t,e){
+        c['GoStatsObject']=u;c[u]=c[u]||function(){(c[u].q=c[u].q||[]).push(arguments)},
+        c[u].l=1*new Date();t=o.createElement(m);t.async=1;t.src=p;
+        e=o.getElementsByTagName(m)[0];e.parentNode.insertBefore(t,e);
+        })(window,document,'script','//www.gostats.org/5.js','go');
+        go('init',100479892,{'img_counter_type':5,'img_image_type':1});go('send');</script><!-- End GoStats JavaScript Based Code --><script type="text/javascript" src="../../../assets/js/jquery-3.2.1.min.js"></script><script type="text/javascript" src="../../../assets/js/semantic.min.js"></script><script type="text/javascript" src="../../../assets/js/jquery.fancybox.min.js"></script><script type="text/javascript" src="../../../assets/js/cookie.min.js"></script><script>
+            $(document).ready(function(){
+                $(".ui.dropdown").dropdown();
+                $('.ui.accordion').accordion();
+                var newstr = $('.cookie.nag').text();
+                $('.cookie.nag').nag({
+                    key: 'globalnotice',
+                    value: newstr
+                  });
+                $('.image-reference').fancybox();
+            });
+        </script>
+</body>
+</html>

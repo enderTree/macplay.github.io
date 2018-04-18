@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Breeze.colorscheme">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="generator" content="Nikola (getnikola.com)">
+<title>Breeze.colorscheme - MacPlay</title>
+<link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+<link rel="mask-icon" href="../../safari-pinned-tab.svg" color="#5bbad5">
+<link href="../../assets/css/semantic.min.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link rel="canonical" href="https://macplay.github.io/listings/bash/Breeze.colorscheme.html">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+</head>
+<body>
+        <div class="ui grid">
+            <div class="computer only three wide column no-print">
+                <div id="left-side">
+                </div>
+            </div>
+            <div class="ten wide computer sixteen wide tablet sixteen wide mobile column">
+                        <div class="ui inline cookie nag no-print">
+            <span class="title">从现在开始，博客可以支持站点通告了。 O(∩_∩)O~~</span>
+            <i class="close icon"></i>
+        </div>
+    <header id="header" class="no-print"><div class="ui grid">
+        <div class="computer only tablet only sixteen wide column">
+            <div class="ui large secondary stackable menu">
+                <a class="header item brand-logo" href="https://macplay.github.io/">
+                    MacPlay
+                </a>
+                        <a class="item" href="../../">Posts</a>
+                        <a class="item" href="../">Code</a>
+                        <a class="item" href="../../galleries/">Gallery</a>
+                        <a class="item" href="../../categories/">Tags</a>
+                        <a class="item" href="../../archive.html">Archive</a>
+                <div class="right menu">
+                    <a class="item" href="../../rss.xml"><i class="rss icon"></i>RSS</a>
+                </div>
+            </div>
+        </div>
+        <div class="mobile only sixteen wide column">
+            <div class="ui fluid accordion vertical menu">
+                <div class="item">
+                    <a class="title">MacPlay</a>
+                    <div class="content">
+                                <a class="item" href="../../">Posts</a>
+                                <a class="item" href="../">Code</a>
+                                <a class="item" href="../../galleries/">Gallery</a>
+                                <a class="item" href="../../categories/">Tags</a>
+                                <a class="item" href="../../archive.html">Archive</a>
+                        <a class="item" href="../../rss.xml"><i class="rss icon"></i>RSS</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </header><main id="main"><div id="main-content">
+<div class="listingpage page-body" itemscope="itemscope" itemtype="http://schema.org/Article">
+    <div class="list-title">
+                <a href="../">listings /</a>
+                <a href=".">bash /</a>
+                Breeze.colorscheme
+    </div>
+        <p class="downloadlink">
+            <i class="cloud download alternate icon"></i><a href="Breeze.colorscheme">Download</a>
+        </p>
+        <table class="codetable"><tr>
+<td class="linenos"><div class="linenodiv"><pre><a href="#listingsbashbreezecolorscheme-1"> 1</a>
+<a href="#listingsbashbreezecolorscheme-2"> 2</a>
+<a href="#listingsbashbreezecolorscheme-3"> 3</a>
+<a href="#listingsbashbreezecolorscheme-4"> 4</a>
+<a href="#listingsbashbreezecolorscheme-5"> 5</a>
+<a href="#listingsbashbreezecolorscheme-6"> 6</a>
+<a href="#listingsbashbreezecolorscheme-7"> 7</a>
+<a href="#listingsbashbreezecolorscheme-8"> 8</a>
+<a href="#listingsbashbreezecolorscheme-9"> 9</a>
+<a href="#listingsbashbreezecolorscheme-10">10</a>
+<a href="#listingsbashbreezecolorscheme-11">11</a>
+<a href="#listingsbashbreezecolorscheme-12">12</a>
+<a href="#listingsbashbreezecolorscheme-13">13</a>
+<a href="#listingsbashbreezecolorscheme-14">14</a>
+<a href="#listingsbashbreezecolorscheme-15">15</a>
+<a href="#listingsbashbreezecolorscheme-16">16</a>
+<a href="#listingsbashbreezecolorscheme-17">17</a>
+<a href="#listingsbashbreezecolorscheme-18">18</a>
+<a href="#listingsbashbreezecolorscheme-19">19</a>
+<a href="#listingsbashbreezecolorscheme-20">20</a>
+<a href="#listingsbashbreezecolorscheme-21">21</a>
+<a href="#listingsbashbreezecolorscheme-22">22</a>
+<a href="#listingsbashbreezecolorscheme-23">23</a>
+<a href="#listingsbashbreezecolorscheme-24">24</a>
+<a href="#listingsbashbreezecolorscheme-25">25</a>
+<a href="#listingsbashbreezecolorscheme-26">26</a>
+<a href="#listingsbashbreezecolorscheme-27">27</a>
+<a href="#listingsbashbreezecolorscheme-28">28</a>
+<a href="#listingsbashbreezecolorscheme-29">29</a>
+<a href="#listingsbashbreezecolorscheme-30">30</a>
+<a href="#listingsbashbreezecolorscheme-31">31</a>
+<a href="#listingsbashbreezecolorscheme-32">32</a>
+<a href="#listingsbashbreezecolorscheme-33">33</a>
+<a href="#listingsbashbreezecolorscheme-34">34</a>
+<a href="#listingsbashbreezecolorscheme-35">35</a>
+<a href="#listingsbashbreezecolorscheme-36">36</a>
+<a href="#listingsbashbreezecolorscheme-37">37</a>
+<a href="#listingsbashbreezecolorscheme-38">38</a>
+<a href="#listingsbashbreezecolorscheme-39">39</a>
+<a href="#listingsbashbreezecolorscheme-40">40</a>
+<a href="#listingsbashbreezecolorscheme-41">41</a>
+<a href="#listingsbashbreezecolorscheme-42">42</a>
+<a href="#listingsbashbreezecolorscheme-43">43</a>
+<a href="#listingsbashbreezecolorscheme-44">44</a>
+<a href="#listingsbashbreezecolorscheme-45">45</a>
+<a href="#listingsbashbreezecolorscheme-46">46</a>
+<a href="#listingsbashbreezecolorscheme-47">47</a>
+<a href="#listingsbashbreezecolorscheme-48">48</a>
+<a href="#listingsbashbreezecolorscheme-49">49</a>
+<a href="#listingsbashbreezecolorscheme-50">50</a>
+<a href="#listingsbashbreezecolorscheme-51">51</a>
+<a href="#listingsbashbreezecolorscheme-52">52</a>
+<a href="#listingsbashbreezecolorscheme-53">53</a>
+<a href="#listingsbashbreezecolorscheme-54">54</a>
+<a href="#listingsbashbreezecolorscheme-55">55</a>
+<a href="#listingsbashbreezecolorscheme-56">56</a>
+<a href="#listingsbashbreezecolorscheme-57">57</a>
+<a href="#listingsbashbreezecolorscheme-58">58</a>
+<a href="#listingsbashbreezecolorscheme-59">59</a>
+<a href="#listingsbashbreezecolorscheme-60">60</a>
+<a href="#listingsbashbreezecolorscheme-61">61</a>
+<a href="#listingsbashbreezecolorscheme-62">62</a>
+<a href="#listingsbashbreezecolorscheme-63">63</a>
+<a href="#listingsbashbreezecolorscheme-64">64</a>
+<a href="#listingsbashbreezecolorscheme-65">65</a>
+<a href="#listingsbashbreezecolorscheme-66">66</a>
+<a href="#listingsbashbreezecolorscheme-67">67</a>
+<a href="#listingsbashbreezecolorscheme-68">68</a>
+<a href="#listingsbashbreezecolorscheme-69">69</a>
+<a href="#listingsbashbreezecolorscheme-70">70</a>
+<a href="#listingsbashbreezecolorscheme-71">71</a>
+<a href="#listingsbashbreezecolorscheme-72">72</a>
+<a href="#listingsbashbreezecolorscheme-73">73</a>
+<a href="#listingsbashbreezecolorscheme-74">74</a>
+<a href="#listingsbashbreezecolorscheme-75">75</a>
+<a href="#listingsbashbreezecolorscheme-76">76</a>
+<a href="#listingsbashbreezecolorscheme-77">77</a>
+<a href="#listingsbashbreezecolorscheme-78">78</a>
+<a href="#listingsbashbreezecolorscheme-79">79</a>
+<a href="#listingsbashbreezecolorscheme-80">80</a>
+<a href="#listingsbashbreezecolorscheme-81">81</a>
+<a href="#listingsbashbreezecolorscheme-82">82</a>
+<a href="#listingsbashbreezecolorscheme-83">83</a>
+<a href="#listingsbashbreezecolorscheme-84">84</a>
+<a href="#listingsbashbreezecolorscheme-85">85</a>
+<a href="#listingsbashbreezecolorscheme-86">86</a>
+<a href="#listingsbashbreezecolorscheme-87">87</a>
+<a href="#listingsbashbreezecolorscheme-88">88</a>
+<a href="#listingsbashbreezecolorscheme-89">89</a>
+<a href="#listingsbashbreezecolorscheme-90">90</a>
+<a href="#listingsbashbreezecolorscheme-91">91</a>
+<a href="#listingsbashbreezecolorscheme-92">92</a>
+<a href="#listingsbashbreezecolorscheme-93">93</a>
+<a href="#listingsbashbreezecolorscheme-94">94</a></pre></div></td>
+<td class="code"><pre class="code literal-block"><a name="listingsbashbreezecolorscheme-1"></a><span class="k">[Background]</span>
+<a name="listingsbashbreezecolorscheme-2"></a><span class="na">Color</span><span class="o">=</span><span class="s">49,54,59</span>
+<a name="listingsbashbreezecolorscheme-3"></a>
+<a name="listingsbashbreezecolorscheme-4"></a><span class="k">[BackgroundFaint]</span>
+<a name="listingsbashbreezecolorscheme-5"></a><span class="na">Color</span><span class="o">=</span><span class="s">49,54,59</span>
+<a name="listingsbashbreezecolorscheme-6"></a>
+<a name="listingsbashbreezecolorscheme-7"></a><span class="k">[BackgroundIntense]</span>
+<a name="listingsbashbreezecolorscheme-8"></a><span class="na">Color</span><span class="o">=</span><span class="s">35,38,41</span>
+<a name="listingsbashbreezecolorscheme-9"></a>
+<a name="listingsbashbreezecolorscheme-10"></a><span class="k">[Color0]</span>
+<a name="listingsbashbreezecolorscheme-11"></a><span class="na">Color</span><span class="o">=</span><span class="s">49,54,59</span>
+<a name="listingsbashbreezecolorscheme-12"></a>
+<a name="listingsbashbreezecolorscheme-13"></a><span class="k">[Color0Faint]</span>
+<a name="listingsbashbreezecolorscheme-14"></a><span class="na">Color</span><span class="o">=</span><span class="s">49,54,59</span>
+<a name="listingsbashbreezecolorscheme-15"></a>
+<a name="listingsbashbreezecolorscheme-16"></a><span class="k">[Color0Intense]</span>
+<a name="listingsbashbreezecolorscheme-17"></a><span class="na">Color</span><span class="o">=</span><span class="s">127,140,141</span>
+<a name="listingsbashbreezecolorscheme-18"></a>
+<a name="listingsbashbreezecolorscheme-19"></a><span class="k">[Color1]</span>
+<a name="listingsbashbreezecolorscheme-20"></a><span class="na">Color</span><span class="o">=</span><span class="s">237,21,21</span>
+<a name="listingsbashbreezecolorscheme-21"></a>
+<a name="listingsbashbreezecolorscheme-22"></a><span class="k">[Color1Faint]</span>
+<a name="listingsbashbreezecolorscheme-23"></a><span class="na">Color</span><span class="o">=</span><span class="s">120,50,40</span>
+<a name="listingsbashbreezecolorscheme-24"></a>
+<a name="listingsbashbreezecolorscheme-25"></a><span class="k">[Color1Intense]</span>
+<a name="listingsbashbreezecolorscheme-26"></a><span class="na">Color</span><span class="o">=</span><span class="s">192,57,43</span>
+<a name="listingsbashbreezecolorscheme-27"></a>
+<a name="listingsbashbreezecolorscheme-28"></a><span class="k">[Color2]</span>
+<a name="listingsbashbreezecolorscheme-29"></a><span class="na">Color</span><span class="o">=</span><span class="s">17,209,22</span>
+<a name="listingsbashbreezecolorscheme-30"></a>
+<a name="listingsbashbreezecolorscheme-31"></a><span class="k">[Color2Faint]</span>
+<a name="listingsbashbreezecolorscheme-32"></a><span class="na">Color</span><span class="o">=</span><span class="s">23,162,98</span>
+<a name="listingsbashbreezecolorscheme-33"></a>
+<a name="listingsbashbreezecolorscheme-34"></a><span class="k">[Color2Intense]</span>
+<a name="listingsbashbreezecolorscheme-35"></a><span class="na">Color</span><span class="o">=</span><span class="s">28,220,154</span>
+<a name="listingsbashbreezecolorscheme-36"></a>
+<a name="listingsbashbreezecolorscheme-37"></a><span class="k">[Color3]</span>
+<a name="listingsbashbreezecolorscheme-38"></a><span class="na">Color</span><span class="o">=</span><span class="s">246,116,0</span>
+<a name="listingsbashbreezecolorscheme-39"></a>
+<a name="listingsbashbreezecolorscheme-40"></a><span class="k">[Color3Faint]</span>
+<a name="listingsbashbreezecolorscheme-41"></a><span class="na">Color</span><span class="o">=</span><span class="s">182,86,25</span>
+<a name="listingsbashbreezecolorscheme-42"></a>
+<a name="listingsbashbreezecolorscheme-43"></a><span class="k">[Color3Intense]</span>
+<a name="listingsbashbreezecolorscheme-44"></a><span class="na">Color</span><span class="o">=</span><span class="s">253,188,75</span>
+<a name="listingsbashbreezecolorscheme-45"></a>
+<a name="listingsbashbreezecolorscheme-46"></a><span class="k">[Color4]</span>
+<a name="listingsbashbreezecolorscheme-47"></a><span class="na">Color</span><span class="o">=</span><span class="s">29,153,243</span>
+<a name="listingsbashbreezecolorscheme-48"></a>
+<a name="listingsbashbreezecolorscheme-49"></a><span class="k">[Color4Faint]</span>
+<a name="listingsbashbreezecolorscheme-50"></a><span class="na">Color</span><span class="o">=</span><span class="s">27,102,143</span>
+<a name="listingsbashbreezecolorscheme-51"></a>
+<a name="listingsbashbreezecolorscheme-52"></a><span class="k">[Color4Intense]</span>
+<a name="listingsbashbreezecolorscheme-53"></a><span class="na">Color</span><span class="o">=</span><span class="s">61,174,233</span>
+<a name="listingsbashbreezecolorscheme-54"></a>
+<a name="listingsbashbreezecolorscheme-55"></a><span class="k">[Color5]</span>
+<a name="listingsbashbreezecolorscheme-56"></a><span class="na">Color</span><span class="o">=</span><span class="s">155,89,182</span>
+<a name="listingsbashbreezecolorscheme-57"></a>
+<a name="listingsbashbreezecolorscheme-58"></a><span class="k">[Color5Faint]</span>
+<a name="listingsbashbreezecolorscheme-59"></a><span class="na">Color</span><span class="o">=</span><span class="s">97,74,115</span>
+<a name="listingsbashbreezecolorscheme-60"></a>
+<a name="listingsbashbreezecolorscheme-61"></a><span class="k">[Color5Intense]</span>
+<a name="listingsbashbreezecolorscheme-62"></a><span class="na">Color</span><span class="o">=</span><span class="s">142,68,173</span>
+<a name="listingsbashbreezecolorscheme-63"></a>
+<a name="listingsbashbreezecolorscheme-64"></a><span class="k">[Color6]</span>
+<a name="listingsbashbreezecolorscheme-65"></a><span class="na">Color</span><span class="o">=</span><span class="s">26,188,156</span>
+<a name="listingsbashbreezecolorscheme-66"></a>
+<a name="listingsbashbreezecolorscheme-67"></a><span class="k">[Color6Faint]</span>
+<a name="listingsbashbreezecolorscheme-68"></a><span class="na">Color</span><span class="o">=</span><span class="s">24,108,96</span>
+<a name="listingsbashbreezecolorscheme-69"></a>
+<a name="listingsbashbreezecolorscheme-70"></a><span class="k">[Color6Intense]</span>
+<a name="listingsbashbreezecolorscheme-71"></a><span class="na">Color</span><span class="o">=</span><span class="s">22,160,133</span>
+<a name="listingsbashbreezecolorscheme-72"></a>
+<a name="listingsbashbreezecolorscheme-73"></a><span class="k">[Color7]</span>
+<a name="listingsbashbreezecolorscheme-74"></a><span class="na">Color</span><span class="o">=</span><span class="s">239,240,241</span>
+<a name="listingsbashbreezecolorscheme-75"></a>
+<a name="listingsbashbreezecolorscheme-76"></a><span class="k">[Color7Faint]</span>
+<a name="listingsbashbreezecolorscheme-77"></a><span class="na">Color</span><span class="o">=</span><span class="s">99,104,109</span>
+<a name="listingsbashbreezecolorscheme-78"></a>
+<a name="listingsbashbreezecolorscheme-79"></a><span class="k">[Color7Intense]</span>
+<a name="listingsbashbreezecolorscheme-80"></a><span class="na">Color</span><span class="o">=</span><span class="s">252,252,252</span>
+<a name="listingsbashbreezecolorscheme-81"></a>
+<a name="listingsbashbreezecolorscheme-82"></a><span class="k">[Foreground]</span>
+<a name="listingsbashbreezecolorscheme-83"></a><span class="na">Color</span><span class="o">=</span><span class="s">239,240,241</span>
+<a name="listingsbashbreezecolorscheme-84"></a>
+<a name="listingsbashbreezecolorscheme-85"></a><span class="k">[ForegroundFaint]</span>
+<a name="listingsbashbreezecolorscheme-86"></a><span class="na">Color</span><span class="o">=</span><span class="s">220,230,231</span>
+<a name="listingsbashbreezecolorscheme-87"></a>
+<a name="listingsbashbreezecolorscheme-88"></a><span class="k">[ForegroundIntense]</span>
+<a name="listingsbashbreezecolorscheme-89"></a><span class="na">Color</span><span class="o">=</span><span class="s">252,252,252</span>
+<a name="listingsbashbreezecolorscheme-90"></a>
+<a name="listingsbashbreezecolorscheme-91"></a><span class="k">[General]</span>
+<a name="listingsbashbreezecolorscheme-92"></a><span class="na">Description</span><span class="o">=</span><span class="s">Breeze</span>
+<a name="listingsbashbreezecolorscheme-93"></a><span class="na">Opacity</span><span class="o">=</span><span class="s">1</span>
+<a name="listingsbashbreezecolorscheme-94"></a><span class="na">Wallpaper</span><span class="o">=</span>
+</pre></td>
+</tr></table>
+</div>
+                    </div>
+                </main><div class="footer extra-block no-print">
+    <span class="footer_item">
+        <a href="../../pages/you-qing-lian-jie/">友情链接</a>
+    </span>
+    <span class="footer_item">
+        <a href="../../pages/liu-yan-ban/">留言板</a>
+    </span>
+    <span class="footer_item">
+        <a href="../../pages/ge-ren-dong-tai/">碎碎念</a>
+    </span>
+    </div>
+            <div class="footer social-link no-print">
+            <a href="https://github.com/ashfinal" target="_blank"><i class="grey large github icon"></i></a>
+            <a href="http://weibo.com/ashfinal/" target="_blank"><i class="grey large weibo icon"></i></a>
+            <a href="mailto://ashfinal@sina.cn" target="_blank"><i class="grey large mail icon"></i></a>
+            </div>
+        <div class="ui basic center aligned segment no-print">Contents © 2018         <a href="mailto:ashfinal@sina.cn">ashfinal</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </div>
+
+            </div>
+            <div class="computer only three wide column no-print">
+                <div id="right-side">
+                </div>
+            </div>
+        </div>
+
+        <!-- GoStats JavaScript Based Code -->
+        <script type="text/javascript">(function(c,o,m,p,u,t,e){
+        c['GoStatsObject']=u;c[u]=c[u]||function(){(c[u].q=c[u].q||[]).push(arguments)},
+        c[u].l=1*new Date();t=o.createElement(m);t.async=1;t.src=p;
+        e=o.getElementsByTagName(m)[0];e.parentNode.insertBefore(t,e);
+        })(window,document,'script','//www.gostats.org/5.js','go');
+        go('init',100479892,{'img_counter_type':5,'img_image_type':1});go('send');</script><!-- End GoStats JavaScript Based Code --><script type="text/javascript" src="../../assets/js/jquery-3.2.1.min.js"></script><script type="text/javascript" src="../../assets/js/semantic.min.js"></script><script type="text/javascript" src="../../assets/js/jquery.fancybox.min.js"></script><script type="text/javascript" src="../../assets/js/cookie.min.js"></script><script>
+            $(document).ready(function(){
+                $(".ui.dropdown").dropdown();
+                $('.ui.accordion').accordion();
+                var newstr = $('.cookie.nag').text();
+                $('.cookie.nag').nag({
+                    key: 'globalnotice',
+                    value: newstr
+                  });
+                $('.image-reference').fancybox();
+            });
+        </script>
+</body>
+</html>

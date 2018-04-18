@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="colors.py">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="generator" content="Nikola (getnikola.com)">
+<title>colors.py - MacPlay</title>
+<link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+<link rel="mask-icon" href="../../safari-pinned-tab.svg" color="#5bbad5">
+<link href="../../assets/css/semantic.min.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link rel="canonical" href="https://macplay.github.io/listings/bash/colors.py.html">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+</head>
+<body>
+        <div class="ui grid">
+            <div class="computer only three wide column no-print">
+                <div id="left-side">
+                </div>
+            </div>
+            <div class="ten wide computer sixteen wide tablet sixteen wide mobile column">
+                        <div class="ui inline cookie nag no-print">
+            <span class="title">从现在开始，博客可以支持站点通告了。 O(∩_∩)O~~</span>
+            <i class="close icon"></i>
+        </div>
+    <header id="header" class="no-print"><div class="ui grid">
+        <div class="computer only tablet only sixteen wide column">
+            <div class="ui large secondary stackable menu">
+                <a class="header item brand-logo" href="https://macplay.github.io/">
+                    MacPlay
+                </a>
+                        <a class="item" href="../../">Posts</a>
+                        <a class="item" href="../">Code</a>
+                        <a class="item" href="../../galleries/">Gallery</a>
+                        <a class="item" href="../../categories/">Tags</a>
+                        <a class="item" href="../../archive.html">Archive</a>
+                <div class="right menu">
+                    <a class="item" href="../../rss.xml"><i class="rss icon"></i>RSS</a>
+                </div>
+            </div>
+        </div>
+        <div class="mobile only sixteen wide column">
+            <div class="ui fluid accordion vertical menu">
+                <div class="item">
+                    <a class="title">MacPlay</a>
+                    <div class="content">
+                                <a class="item" href="../../">Posts</a>
+                                <a class="item" href="../">Code</a>
+                                <a class="item" href="../../galleries/">Gallery</a>
+                                <a class="item" href="../../categories/">Tags</a>
+                                <a class="item" href="../../archive.html">Archive</a>
+                        <a class="item" href="../../rss.xml"><i class="rss icon"></i>RSS</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </header><main id="main"><div id="main-content">
+<div class="listingpage page-body" itemscope="itemscope" itemtype="http://schema.org/Article">
+    <div class="list-title">
+                <a href="../">listings /</a>
+                <a href=".">bash /</a>
+                colors.py
+    </div>
+        <p class="downloadlink">
+            <i class="cloud download alternate icon"></i><a href="colors.py">Download</a>
+        </p>
+        <table class="codetable"><tr>
+<td class="linenos"><div class="linenodiv"><pre><a href="#listingsbashcolorspy-1"> 1</a>
+<a href="#listingsbashcolorspy-2"> 2</a>
+<a href="#listingsbashcolorspy-3"> 3</a>
+<a href="#listingsbashcolorspy-4"> 4</a>
+<a href="#listingsbashcolorspy-5"> 5</a>
+<a href="#listingsbashcolorspy-6"> 6</a>
+<a href="#listingsbashcolorspy-7"> 7</a>
+<a href="#listingsbashcolorspy-8"> 8</a>
+<a href="#listingsbashcolorspy-9"> 9</a>
+<a href="#listingsbashcolorspy-10">10</a>
+<a href="#listingsbashcolorspy-11">11</a>
+<a href="#listingsbashcolorspy-12">12</a>
+<a href="#listingsbashcolorspy-13">13</a>
+<a href="#listingsbashcolorspy-14">14</a>
+<a href="#listingsbashcolorspy-15">15</a>
+<a href="#listingsbashcolorspy-16">16</a>
+<a href="#listingsbashcolorspy-17">17</a>
+<a href="#listingsbashcolorspy-18">18</a>
+<a href="#listingsbashcolorspy-19">19</a>
+<a href="#listingsbashcolorspy-20">20</a>
+<a href="#listingsbashcolorspy-21">21</a>
+<a href="#listingsbashcolorspy-22">22</a>
+<a href="#listingsbashcolorspy-23">23</a>
+<a href="#listingsbashcolorspy-24">24</a>
+<a href="#listingsbashcolorspy-25">25</a>
+<a href="#listingsbashcolorspy-26">26</a>
+<a href="#listingsbashcolorspy-27">27</a>
+<a href="#listingsbashcolorspy-28">28</a>
+<a href="#listingsbashcolorspy-29">29</a>
+<a href="#listingsbashcolorspy-30">30</a>
+<a href="#listingsbashcolorspy-31">31</a>
+<a href="#listingsbashcolorspy-32">32</a>
+<a href="#listingsbashcolorspy-33">33</a>
+<a href="#listingsbashcolorspy-34">34</a>
+<a href="#listingsbashcolorspy-35">35</a>
+<a href="#listingsbashcolorspy-36">36</a>
+<a href="#listingsbashcolorspy-37">37</a>
+<a href="#listingsbashcolorspy-38">38</a>
+<a href="#listingsbashcolorspy-39">39</a>
+<a href="#listingsbashcolorspy-40">40</a>
+<a href="#listingsbashcolorspy-41">41</a>
+<a href="#listingsbashcolorspy-42">42</a>
+<a href="#listingsbashcolorspy-43">43</a>
+<a href="#listingsbashcolorspy-44">44</a>
+<a href="#listingsbashcolorspy-45">45</a>
+<a href="#listingsbashcolorspy-46">46</a>
+<a href="#listingsbashcolorspy-47">47</a>
+<a href="#listingsbashcolorspy-48">48</a>
+<a href="#listingsbashcolorspy-49">49</a>
+<a href="#listingsbashcolorspy-50">50</a>
+<a href="#listingsbashcolorspy-51">51</a>
+<a href="#listingsbashcolorspy-52">52</a>
+<a href="#listingsbashcolorspy-53">53</a>
+<a href="#listingsbashcolorspy-54">54</a>
+<a href="#listingsbashcolorspy-55">55</a>
+<a href="#listingsbashcolorspy-56">56</a>
+<a href="#listingsbashcolorspy-57">57</a>
+<a href="#listingsbashcolorspy-58">58</a>
+<a href="#listingsbashcolorspy-59">59</a>
+<a href="#listingsbashcolorspy-60">60</a>
+<a href="#listingsbashcolorspy-61">61</a>
+<a href="#listingsbashcolorspy-62">62</a>
+<a href="#listingsbashcolorspy-63">63</a>
+<a href="#listingsbashcolorspy-64">64</a>
+<a href="#listingsbashcolorspy-65">65</a>
+<a href="#listingsbashcolorspy-66">66</a>
+<a href="#listingsbashcolorspy-67">67</a>
+<a href="#listingsbashcolorspy-68">68</a>
+<a href="#listingsbashcolorspy-69">69</a></pre></div></td>
+<td class="code"><pre class="code literal-block"><a name="listingsbashcolorspy-1"></a><span class="ch">#!/usr/bin/env python</span>
+<a name="listingsbashcolorspy-2"></a><span class="c1"># -*- coding: UTF-8 -*-</span>
+<a name="listingsbashcolorspy-3"></a><span class="c1"># FILE: "/home/joze/colors.py"</span>
+<a name="listingsbashcolorspy-4"></a><span class="c1"># LAST MODIFICATION: "Di, 21 Mär 2006 17:02:41 CET (joze)"</span>
+<a name="listingsbashcolorspy-5"></a><span class="c1"># Copyright (C) 2006 by Johannes Zellner, &lt;address@hidden&gt;</span>
+<a name="listingsbashcolorspy-6"></a><span class="c1"># $Id:$</span>
+<a name="listingsbashcolorspy-7"></a>
+<a name="listingsbashcolorspy-8"></a><span class="kn">import</span> <span class="nn">sys</span>
+<a name="listingsbashcolorspy-9"></a><span class="kn">import</span> <span class="nn">os</span>
+<a name="listingsbashcolorspy-10"></a>
+<a name="listingsbashcolorspy-11"></a><span class="k">def</span> <span class="nf">echo</span><span class="p">(</span><span class="n">msg</span><span class="p">):</span>
+<a name="listingsbashcolorspy-12"></a>	<span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">'echo -n "'</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span> <span class="o">+</span> <span class="s1">'"'</span><span class="p">)</span>
+<a name="listingsbashcolorspy-13"></a>
+<a name="listingsbashcolorspy-14"></a><span class="k">def</span> <span class="nf">out</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<a name="listingsbashcolorspy-15"></a>	<span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s2">"tput setab "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"; echo -n "</span> <span class="o">+</span> <span class="p">(</span><span class="s2">"</span><span class="se">\"</span><span class="si">% 4d</span><span class="se">\"</span><span class="s2">"</span> <span class="o">%</span> <span class="n">n</span><span class="p">))</span>
+<a name="listingsbashcolorspy-16"></a>	<span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s2">"tput setab 0"</span><span class="p">)</span>
+<a name="listingsbashcolorspy-17"></a>
+<a name="listingsbashcolorspy-18"></a><span class="c1"># normal colors 1 - 16</span>
+<a name="listingsbashcolorspy-19"></a><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">16</span><span class="p">):</span>
+<a name="listingsbashcolorspy-20"></a>	<span class="n">out</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<a name="listingsbashcolorspy-21"></a>
+<a name="listingsbashcolorspy-22"></a><span class="n">echo</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+<a name="listingsbashcolorspy-23"></a><span class="n">echo</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+<a name="listingsbashcolorspy-24"></a>
+<a name="listingsbashcolorspy-25"></a><span class="c1"># first three 6 x 6 color layers</span>
+<a name="listingsbashcolorspy-26"></a><span class="c1">#</span>
+<a name="listingsbashcolorspy-27"></a><span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
+<a name="listingsbashcolorspy-28"></a>
+<a name="listingsbashcolorspy-29"></a>	<span class="k">for</span> <span class="n">z</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+<a name="listingsbashcolorspy-30"></a>
+<a name="listingsbashcolorspy-31"></a>		<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
+<a name="listingsbashcolorspy-32"></a>
+<a name="listingsbashcolorspy-33"></a>			<span class="n">n</span> <span class="o">=</span> <span class="mi">16</span> <span class="o">+</span> <span class="n">z</span> <span class="o">*</span> <span class="mi">36</span> <span class="o">+</span> <span class="n">y</span> <span class="o">*</span> <span class="mi">6</span> <span class="o">+</span> <span class="n">x</span>
+<a name="listingsbashcolorspy-34"></a>			<span class="n">out</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<a name="listingsbashcolorspy-35"></a>
+<a name="listingsbashcolorspy-36"></a>		<span class="n">echo</span><span class="p">(</span><span class="s2">" "</span><span class="p">)</span>
+<a name="listingsbashcolorspy-37"></a>
+<a name="listingsbashcolorspy-38"></a>	<span class="n">echo</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+<a name="listingsbashcolorspy-39"></a>
+<a name="listingsbashcolorspy-40"></a><span class="n">echo</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+<a name="listingsbashcolorspy-41"></a>
+<a name="listingsbashcolorspy-42"></a><span class="c1"># second three 6 x 6 color layers</span>
+<a name="listingsbashcolorspy-43"></a><span class="c1">#</span>
+<a name="listingsbashcolorspy-44"></a><span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
+<a name="listingsbashcolorspy-45"></a>
+<a name="listingsbashcolorspy-46"></a>	<span class="k">for</span> <span class="n">z</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">):</span>
+<a name="listingsbashcolorspy-47"></a>
+<a name="listingsbashcolorspy-48"></a>		<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
+<a name="listingsbashcolorspy-49"></a>
+<a name="listingsbashcolorspy-50"></a>			<span class="n">n</span> <span class="o">=</span> <span class="mi">16</span> <span class="o">+</span> <span class="n">z</span> <span class="o">*</span> <span class="mi">36</span> <span class="o">+</span> <span class="n">y</span> <span class="o">*</span> <span class="mi">6</span> <span class="o">+</span> <span class="n">x</span>
+<a name="listingsbashcolorspy-51"></a>			<span class="n">out</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<a name="listingsbashcolorspy-52"></a>
+<a name="listingsbashcolorspy-53"></a>		<span class="n">echo</span><span class="p">(</span><span class="s2">" "</span><span class="p">)</span>
+<a name="listingsbashcolorspy-54"></a>
+<a name="listingsbashcolorspy-55"></a>	<span class="n">echo</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+<a name="listingsbashcolorspy-56"></a>
+<a name="listingsbashcolorspy-57"></a><span class="n">echo</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+<a name="listingsbashcolorspy-58"></a>
+<a name="listingsbashcolorspy-59"></a><span class="c1"># gray, first line</span>
+<a name="listingsbashcolorspy-60"></a><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">232</span><span class="p">,</span> <span class="mi">244</span><span class="p">):</span>
+<a name="listingsbashcolorspy-61"></a>	<span class="n">out</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<a name="listingsbashcolorspy-62"></a>
+<a name="listingsbashcolorspy-63"></a><span class="n">echo</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+<a name="listingsbashcolorspy-64"></a>
+<a name="listingsbashcolorspy-65"></a><span class="c1"># gray, second line</span>
+<a name="listingsbashcolorspy-66"></a><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">244</span><span class="p">,</span> <span class="mi">256</span><span class="p">):</span>
+<a name="listingsbashcolorspy-67"></a>	<span class="n">out</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<a name="listingsbashcolorspy-68"></a>
+<a name="listingsbashcolorspy-69"></a><span class="n">echo</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+</pre></td>
+</tr></table>
+</div>
+                    </div>
+                </main><div class="footer extra-block no-print">
+    <span class="footer_item">
+        <a href="../../pages/you-qing-lian-jie/">友情链接</a>
+    </span>
+    <span class="footer_item">
+        <a href="../../pages/liu-yan-ban/">留言板</a>
+    </span>
+    <span class="footer_item">
+        <a href="../../pages/ge-ren-dong-tai/">碎碎念</a>
+    </span>
+    </div>
+            <div class="footer social-link no-print">
+            <a href="https://github.com/ashfinal" target="_blank"><i class="grey large github icon"></i></a>
+            <a href="http://weibo.com/ashfinal/" target="_blank"><i class="grey large weibo icon"></i></a>
+            <a href="mailto://ashfinal@sina.cn" target="_blank"><i class="grey large mail icon"></i></a>
+            </div>
+        <div class="ui basic center aligned segment no-print">Contents © 2018         <a href="mailto:ashfinal@sina.cn">ashfinal</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </div>
+
+            </div>
+            <div class="computer only three wide column no-print">
+                <div id="right-side">
+                </div>
+            </div>
+        </div>
+
+        <!-- GoStats JavaScript Based Code -->
+        <script type="text/javascript">(function(c,o,m,p,u,t,e){
+        c['GoStatsObject']=u;c[u]=c[u]||function(){(c[u].q=c[u].q||[]).push(arguments)},
+        c[u].l=1*new Date();t=o.createElement(m);t.async=1;t.src=p;
+        e=o.getElementsByTagName(m)[0];e.parentNode.insertBefore(t,e);
+        })(window,document,'script','//www.gostats.org/5.js','go');
+        go('init',100479892,{'img_counter_type':5,'img_image_type':1});go('send');</script><!-- End GoStats JavaScript Based Code --><script type="text/javascript" src="../../assets/js/jquery-3.2.1.min.js"></script><script type="text/javascript" src="../../assets/js/semantic.min.js"></script><script type="text/javascript" src="../../assets/js/jquery.fancybox.min.js"></script><script type="text/javascript" src="../../assets/js/cookie.min.js"></script><script>
+            $(document).ready(function(){
+                $(".ui.dropdown").dropdown();
+                $('.ui.accordion').accordion();
+                var newstr = $('.cookie.nag').text();
+                $('.cookie.nag').nag({
+                    key: 'globalnotice',
+                    value: newstr
+                  });
+                $('.image-reference').fancybox();
+            });
+        </script>
+</body>
+</html>
