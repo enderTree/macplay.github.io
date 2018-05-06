@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="offlineimaprc.conf">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="generator" content="Nikola (getnikola.com)">
+<title>offlineimaprc.conf - MacPlay</title>
+<link rel="apple-touch-icon" sizes="180x180" href="../../../apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../../favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../../favicon-16x16.png">
+<link rel="mask-icon" href="../../../safari-pinned-tab.svg" color="#5bbad5">
+<link href="../../../assets/css/semantic.min.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link rel="canonical" href="https://macplay.github.io/listings/manjaro/Mail/offlineimaprc.conf.html">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../../rss.xml">
+</head>
+<body>
+        <div class="ui grid">
+            <div class="computer only three wide column no-print">
+                <div id="left-side">
+                </div>
+            </div>
+            <div class="ten wide computer sixteen wide tablet sixteen wide mobile column">
+                        <div class="ui inline cookie nag no-print">
+            <span class="title">从现在开始，博客可以支持站点通告了。 O(∩_∩)O~~</span>
+            <i class="close icon"></i>
+        </div>
+    <header id="header" class="no-print"><div class="ui grid">
+        <div class="computer only tablet only sixteen wide column">
+            <div class="ui large secondary stackable menu">
+                <a class="header item brand-logo" href="https://macplay.github.io/">
+                    MacPlay
+                </a>
+                        <a class="item" href="../../../">Posts</a>
+                        <a class="item" href="../../">Code</a>
+                        <a class="item" href="../../../galleries/">Gallery</a>
+                        <a class="item" href="../../../categories/">Tags</a>
+                        <a class="item" href="../../../archive.html">Archive</a>
+                <div class="right menu">
+                    <a class="item" href="../../../rss.xml"><i class="rss icon"></i>RSS</a>
+                </div>
+            </div>
+        </div>
+        <div class="mobile only sixteen wide column">
+            <div class="ui fluid accordion vertical menu">
+                <div class="item">
+                    <a class="title">MacPlay</a>
+                    <div class="content">
+                                <a class="item" href="../../../">Posts</a>
+                                <a class="item" href="../../">Code</a>
+                                <a class="item" href="../../../galleries/">Gallery</a>
+                                <a class="item" href="../../../categories/">Tags</a>
+                                <a class="item" href="../../../archive.html">Archive</a>
+                        <a class="item" href="../../../rss.xml"><i class="rss icon"></i>RSS</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </header><main id="main"><div id="main-content">
+<div class="listingpage page-body" itemscope="itemscope" itemtype="http://schema.org/Article">
+    <div class="list-title">
+                <a href="../../">listings /</a>
+                <a href="../">manjaro /</a>
+                <a href=".">Mail /</a>
+                offlineimaprc.conf
+    </div>
+        <p class="downloadlink">
+            <i class="cloud download alternate icon"></i><a href="offlineimaprc.conf">Download</a>
+        </p>
+        <table class="codetable"><tr>
+<td class="linenos"><div class="linenodiv"><pre><a href="#listingsmanjaromailofflineimaprcconf-1"> 1</a>
+<a href="#listingsmanjaromailofflineimaprcconf-2"> 2</a>
+<a href="#listingsmanjaromailofflineimaprcconf-3"> 3</a>
+<a href="#listingsmanjaromailofflineimaprcconf-4"> 4</a>
+<a href="#listingsmanjaromailofflineimaprcconf-5"> 5</a>
+<a href="#listingsmanjaromailofflineimaprcconf-6"> 6</a>
+<a href="#listingsmanjaromailofflineimaprcconf-7"> 7</a>
+<a href="#listingsmanjaromailofflineimaprcconf-8"> 8</a>
+<a href="#listingsmanjaromailofflineimaprcconf-9"> 9</a>
+<a href="#listingsmanjaromailofflineimaprcconf-10">10</a>
+<a href="#listingsmanjaromailofflineimaprcconf-11">11</a>
+<a href="#listingsmanjaromailofflineimaprcconf-12">12</a>
+<a href="#listingsmanjaromailofflineimaprcconf-13">13</a>
+<a href="#listingsmanjaromailofflineimaprcconf-14">14</a>
+<a href="#listingsmanjaromailofflineimaprcconf-15">15</a>
+<a href="#listingsmanjaromailofflineimaprcconf-16">16</a>
+<a href="#listingsmanjaromailofflineimaprcconf-17">17</a>
+<a href="#listingsmanjaromailofflineimaprcconf-18">18</a>
+<a href="#listingsmanjaromailofflineimaprcconf-19">19</a>
+<a href="#listingsmanjaromailofflineimaprcconf-20">20</a>
+<a href="#listingsmanjaromailofflineimaprcconf-21">21</a>
+<a href="#listingsmanjaromailofflineimaprcconf-22">22</a>
+<a href="#listingsmanjaromailofflineimaprcconf-23">23</a>
+<a href="#listingsmanjaromailofflineimaprcconf-24">24</a>
+<a href="#listingsmanjaromailofflineimaprcconf-25">25</a>
+<a href="#listingsmanjaromailofflineimaprcconf-26">26</a>
+<a href="#listingsmanjaromailofflineimaprcconf-27">27</a>
+<a href="#listingsmanjaromailofflineimaprcconf-28">28</a>
+<a href="#listingsmanjaromailofflineimaprcconf-29">29</a>
+<a href="#listingsmanjaromailofflineimaprcconf-30">30</a>
+<a href="#listingsmanjaromailofflineimaprcconf-31">31</a>
+<a href="#listingsmanjaromailofflineimaprcconf-32">32</a>
+<a href="#listingsmanjaromailofflineimaprcconf-33">33</a>
+<a href="#listingsmanjaromailofflineimaprcconf-34">34</a>
+<a href="#listingsmanjaromailofflineimaprcconf-35">35</a>
+<a href="#listingsmanjaromailofflineimaprcconf-36">36</a>
+<a href="#listingsmanjaromailofflineimaprcconf-37">37</a>
+<a href="#listingsmanjaromailofflineimaprcconf-38">38</a>
+<a href="#listingsmanjaromailofflineimaprcconf-39">39</a>
+<a href="#listingsmanjaromailofflineimaprcconf-40">40</a>
+<a href="#listingsmanjaromailofflineimaprcconf-41">41</a></pre></div></td>
+<td class="code"><pre class="code literal-block"><a name="listingsmanjaromailofflineimaprcconf-1"></a><span class="k">[general]</span>
+<a name="listingsmanjaromailofflineimaprcconf-2"></a><span class="na">accounts</span> <span class="o">=</span> <span class="s">Personal</span>
+<a name="listingsmanjaromailofflineimaprcconf-3"></a><span class="na">pythonfile</span> <span class="o">=</span> <span class="s">~/.mutt/offlineimap-helper.py</span>
+<a name="listingsmanjaromailofflineimaprcconf-4"></a>
+<a name="listingsmanjaromailofflineimaprcconf-5"></a><span class="k">[Account Personal]</span>
+<a name="listingsmanjaromailofflineimaprcconf-6"></a><span class="na">localrepository</span> <span class="o">=</span> <span class="s">Personal-Local</span>
+<a name="listingsmanjaromailofflineimaprcconf-7"></a><span class="na">remoterepository</span> <span class="o">=</span> <span class="s">Personal-Remote</span>
+<a name="listingsmanjaromailofflineimaprcconf-8"></a><span class="na">maxage</span> <span class="o">=</span> <span class="s">2018-01-01</span>
+<a name="listingsmanjaromailofflineimaprcconf-9"></a><span class="na">maxsize</span> <span class="o">=</span> <span class="s">2000000</span>
+<a name="listingsmanjaromailofflineimaprcconf-10"></a><span class="na">postsynchook</span> <span class="o">=</span> <span class="s">mu index --maildir=~/Mail</span>
+<a name="listingsmanjaromailofflineimaprcconf-11"></a><span class="na">utf8foldernames</span> <span class="o">=</span> <span class="s">yes</span>
+<a name="listingsmanjaromailofflineimaprcconf-12"></a><span class="na">proxy</span> <span class="o">=</span> <span class="s">SOCKS5:127.0.0.1:1086</span>
+<a name="listingsmanjaromailofflineimaprcconf-13"></a>
+<a name="listingsmanjaromailofflineimaprcconf-14"></a><span class="k">[Repository Personal-Local]</span>
+<a name="listingsmanjaromailofflineimaprcconf-15"></a><span class="na">type</span> <span class="o">=</span> <span class="s">Maildir</span>
+<a name="listingsmanjaromailofflineimaprcconf-16"></a><span class="na">localfolders</span> <span class="o">=</span> <span class="s">~/Mail/Personal</span>
+<a name="listingsmanjaromailofflineimaprcconf-17"></a><span class="na">nametrans</span> <span class="o">=</span> <span class="s">lambda foldername: '[Gmail]/' + foldername</span>
+<a name="listingsmanjaromailofflineimaprcconf-18"></a>
+<a name="listingsmanjaromailofflineimaprcconf-19"></a><span class="k">[Repository Personal-Remote]</span>
+<a name="listingsmanjaromailofflineimaprcconf-20"></a><span class="na">type</span> <span class="o">=</span> <span class="s">IMAP</span>
+<a name="listingsmanjaromailofflineimaprcconf-21"></a><span class="na">remotehost</span> <span class="o">=</span> <span class="s">imap.gmail.com</span>
+<a name="listingsmanjaromailofflineimaprcconf-22"></a><span class="na">remoteuser</span> <span class="o">=</span> <span class="s">ashfinal@gmail.com</span>
+<a name="listingsmanjaromailofflineimaprcconf-23"></a><span class="c1"># remoteport = 993</span>
+<a name="listingsmanjaromailofflineimaprcconf-24"></a><span class="c1"># remotepass = xxxxxxxxxx</span>
+<a name="listingsmanjaromailofflineimaprcconf-25"></a><span class="na">remotepassfile</span> <span class="o">=</span> <span class="s">~/.mutt/accounts/Personal.pass</span>
+<a name="listingsmanjaromailofflineimaprcconf-26"></a><span class="c1"># remotepasseval = mailpasswd("")</span>
+<a name="listingsmanjaromailofflineimaprcconf-27"></a><span class="na">sslcacertfile</span> <span class="o">=</span> <span class="s">/usr/local/etc/openssl/cert.pem</span>
+<a name="listingsmanjaromailofflineimaprcconf-28"></a><span class="na">folderfilter</span> <span class="o">=</span> <span class="s">lambda foldername: foldername in [</span>
+<a name="listingsmanjaromailofflineimaprcconf-29"></a><span class="s">    'INBOX', '[Gmail]/Sent Mail', '[Gmail]/Drafts',</span>
+<a name="listingsmanjaromailofflineimaprcconf-30"></a><span class="s">    '[Gmail]/Spam', '[Gmail]/Trash']</span>
+<a name="listingsmanjaromailofflineimaprcconf-31"></a><span class="na">nametrans</span> <span class="o">=</span> <span class="s">lambda foldername: re.sub('\[Gmail\]\/', '', foldername)</span>
+<a name="listingsmanjaromailofflineimaprcconf-32"></a><span class="na">newmail_hook</span> <span class="o">=</span> <span class="s">lambda: os.system('terminal-notifier -message "New message!" -sound default &gt; /dev/null 2&gt;&amp;1')</span>
+<a name="listingsmanjaromailofflineimaprcconf-33"></a>
+<a name="listingsmanjaromailofflineimaprcconf-34"></a><span class="c1">### Personal oauth. Gmail API stuff.</span>
+<a name="listingsmanjaromailofflineimaprcconf-35"></a><span class="c1"># auth_mechanisms = XOAUTH2</span>
+<a name="listingsmanjaromailofflineimaprcconf-36"></a><span class="c1"># oauth2_client_id = YOUR_CLIENT_ID_HERE</span>
+<a name="listingsmanjaromailofflineimaprcconf-37"></a><span class="c1"># oauth2_request_url = https://accounts.google.com/o/oauth2/token</span>
+<a name="listingsmanjaromailofflineimaprcconf-38"></a><span class="c1"># oauth2_refresh_token = YOUR_REFRESH_TOKEN_HERE</span>
+<a name="listingsmanjaromailofflineimaprcconf-39"></a>
+<a name="listingsmanjaromailofflineimaprcconf-40"></a>
+<a name="listingsmanjaromailofflineimaprcconf-41"></a><span class="c1"># vim:set et sw=4 ts=4 ft=conf:</span>
+</pre></td>
+</tr></table>
+</div>
+                    </div>
+                </main><div class="footer extra-block no-print">
+    <span class="footer_item">
+        <a href="../../../pages/you-qing-lian-jie/">友情链接</a>
+    </span>
+    <span class="footer_item">
+        <a href="../../../pages/liu-yan-ban/">留言板</a>
+    </span>
+    <span class="footer_item">
+        <a href="../../../pages/ge-ren-dong-tai/">碎碎念</a>
+    </span>
+    </div>
+            <div class="footer social-link no-print">
+            <a href="https://github.com/ashfinal" target="_blank"><i class="grey large github icon"></i></a>
+            <a href="http://weibo.com/ashfinal/" target="_blank"><i class="grey large weibo icon"></i></a>
+            <a href="mailto://ashfinal@sina.cn" target="_blank"><i class="grey large mail icon"></i></a>
+            </div>
+        <div class="ui basic center aligned segment no-print">Contents © 2018         <a href="mailto:ashfinal@sina.cn">ashfinal</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </div>
+
+            </div>
+            <div class="computer only three wide column no-print">
+                <div id="right-side">
+                </div>
+            </div>
+        </div>
+
+        <!-- GoStats JavaScript Based Code -->
+        <script type="text/javascript">(function(c,o,m,p,u,t,e){
+        c['GoStatsObject']=u;c[u]=c[u]||function(){(c[u].q=c[u].q||[]).push(arguments)},
+        c[u].l=1*new Date();t=o.createElement(m);t.async=1;t.src=p;
+        e=o.getElementsByTagName(m)[0];e.parentNode.insertBefore(t,e);
+        })(window,document,'script','//www.gostats.org/5.js','go');
+        go('init',100479892,{'img_counter_type':5,'img_image_type':1});go('send');</script><!-- End GoStats JavaScript Based Code --><script type="text/javascript" src="../../../assets/js/jquery-3.2.1.min.js"></script><script type="text/javascript" src="../../../assets/js/semantic.min.js"></script><script type="text/javascript" src="../../../assets/js/jquery.fancybox.min.js"></script><script type="text/javascript" src="../../../assets/js/cookie.min.js"></script><script>
+            $(document).ready(function(){
+                $(".ui.dropdown").dropdown();
+                $('.ui.accordion').accordion();
+                var newstr = $('.cookie.nag').text();
+                $('.cookie.nag').nag({
+                    key: 'globalnotice',
+                    value: newstr
+                  });
+                $('.image-reference').fancybox();
+            });
+        </script>
+</body>
+</html>

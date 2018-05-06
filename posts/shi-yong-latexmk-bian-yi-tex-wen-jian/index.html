@@ -139,20 +139,20 @@
 <div class="section" id="latexmk">
 <h2><a class="toc-backref" href="#id5">终端中直接敲 latexmk 命令</a></h2>
 <p>Latexmk 本身是个 perl 命令行脚本，直接在终端中敲 <cite>latexmk</cite> 命令加上参数，即可实现我们以上提到的目标。</p>
-<pre class="code bash"><a name="rest_code_c0cd9bed94b04ff798c3359adaba4bf3-1"></a>latexmk -pvc -xelatex file.tex
+<pre class="code bash"><a name="rest_code_e5eab371d5b5493e87132047c09eace0-1"></a>latexmk -pvc -xelatex file.tex
 </pre>
 <p>这将会使用 xelatex 引擎编译 <cite>file.tex</cite> 文件，并在 PDF 阅读器中打开预览。 <cite>-pvc</cite> 参数的含义是在 PDF 阅读器中进行预览，并持续更新文件。当然，它也会监测文件保存动作，并自动重新编译。</p>
-<pre class="code text"><a name="rest_code_4db08ddcf4514926a437b5662f22e2fd-1"></a>6453 bytes written
-<a name="rest_code_4db08ddcf4514926a437b5662f22e2fd-2"></a>Latexmk: All targets (new.pdf new.xdv) are up-to-date
-<a name="rest_code_4db08ddcf4514926a437b5662f22e2fd-3"></a>Latexmk: I have not found a previewer that is already running.
-<a name="rest_code_4db08ddcf4514926a437b5662f22e2fd-4"></a>   So I will start it for 'new.pdf'
-<a name="rest_code_4db08ddcf4514926a437b5662f22e2fd-5"></a>------------
-<a name="rest_code_4db08ddcf4514926a437b5662f22e2fd-6"></a>For rule 'view', running '&amp;if_source(  )' ...
-<a name="rest_code_4db08ddcf4514926a437b5662f22e2fd-7"></a>------------
-<a name="rest_code_4db08ddcf4514926a437b5662f22e2fd-8"></a>Running 'start open "new.pdf"'
-<a name="rest_code_4db08ddcf4514926a437b5662f22e2fd-9"></a>------------
-<a name="rest_code_4db08ddcf4514926a437b5662f22e2fd-10"></a>
-<a name="rest_code_4db08ddcf4514926a437b5662f22e2fd-11"></a>=== Watching for updated files. Use ctrl/C to stop ...
+<pre class="code text"><a name="rest_code_11170c1e4ab64134834a8a6855b996f9-1"></a>6453 bytes written
+<a name="rest_code_11170c1e4ab64134834a8a6855b996f9-2"></a>Latexmk: All targets (new.pdf new.xdv) are up-to-date
+<a name="rest_code_11170c1e4ab64134834a8a6855b996f9-3"></a>Latexmk: I have not found a previewer that is already running.
+<a name="rest_code_11170c1e4ab64134834a8a6855b996f9-4"></a>   So I will start it for 'new.pdf'
+<a name="rest_code_11170c1e4ab64134834a8a6855b996f9-5"></a>------------
+<a name="rest_code_11170c1e4ab64134834a8a6855b996f9-6"></a>For rule 'view', running '&amp;if_source(  )' ...
+<a name="rest_code_11170c1e4ab64134834a8a6855b996f9-7"></a>------------
+<a name="rest_code_11170c1e4ab64134834a8a6855b996f9-8"></a>Running 'start open "new.pdf"'
+<a name="rest_code_11170c1e4ab64134834a8a6855b996f9-9"></a>------------
+<a name="rest_code_11170c1e4ab64134834a8a6855b996f9-10"></a>
+<a name="rest_code_11170c1e4ab64134834a8a6855b996f9-11"></a>=== Watching for updated files. Use ctrl/C to stop ...
 </pre>
 <p>可以看出 Latexmk 监测文件变动，这样我们只管在编辑器中写 tex 文件，想看预览则直接按下保存按钮，然后到 PDF 阅读器即可查看。至于 PDF 阅读器，macOS 平台下个人推荐使用 <a class="reference external" href="http://skim-app.sourceforge.net">Skim</a> 。它可以监测 PDF 文件变动，并自动重载，记得到设置里开启相关选项即可。</p>
 <div class="figure align-center">
@@ -167,14 +167,14 @@
 <h2><a class="toc-backref" href="#id6">在工程文件夹下添加 .latexmkrc 文件</a></h2>
 <p>前面提到 <cite>.latexmkrc</cite> 这种全局配置文件其实是不必要的——命令行参数即可实现全部目标。但查阅 Latexmk 手册的过程中，笔者发现其实 Latexmk 会检测工程文件夹下是否存在 <cite>.latexmkrc</cite> 文件，并读取里面的配置来编译 PDF 文档。这样的话，如果你有分发 tex 源文件的需求，而且非常为他人着想，希望减轻受众的认知负担。则只需在工程文件夹下添加 <cite>.latexmkrc</cite> 文件，然后告诉他们运行下 <cite>latexmk</cite> 命令，就可以得到最终的 PDF 文件啦！</p>
 <p>我这里整理了个简单的 <cite>.latexmkrc</cite> 配置模版。如果你有进一步定制的需求，可以去翻下 Latexmk 手册的相应部分。</p>
-<pre class="code text"><a name="rest_code_3b5eca2fa4cb453885a7c41c012ece43-1"></a># .latexmkrc starts
-<a name="rest_code_3b5eca2fa4cb453885a7c41c012ece43-2"></a># $pdf_previewer = 'open -a Skim';
-<a name="rest_code_3b5eca2fa4cb453885a7c41c012ece43-3"></a>$pdflatex = "xelatex -synctex=1 -interaction=nonstopmode";
-<a name="rest_code_3b5eca2fa4cb453885a7c41c012ece43-4"></a># @generated_exts = (@generated_exts, 'synctex.gz');
-<a name="rest_code_3b5eca2fa4cb453885a7c41c012ece43-5"></a># $cleanup_mode = 1;
-<a name="rest_code_3b5eca2fa4cb453885a7c41c012ece43-6"></a># $preview_continuous_mode = 1;
-<a name="rest_code_3b5eca2fa4cb453885a7c41c012ece43-7"></a># @default_files = ('main.tex');
-<a name="rest_code_3b5eca2fa4cb453885a7c41c012ece43-8"></a># .latexmkrc ends
+<pre class="code text"><a name="rest_code_82c8adb68c584c11af671f2393e0fef6-1"></a># .latexmkrc starts
+<a name="rest_code_82c8adb68c584c11af671f2393e0fef6-2"></a># $pdf_previewer = 'open -a Skim';
+<a name="rest_code_82c8adb68c584c11af671f2393e0fef6-3"></a>$pdflatex = "xelatex -synctex=1 -interaction=nonstopmode";
+<a name="rest_code_82c8adb68c584c11af671f2393e0fef6-4"></a># @generated_exts = (@generated_exts, 'synctex.gz');
+<a name="rest_code_82c8adb68c584c11af671f2393e0fef6-5"></a># $cleanup_mode = 1;
+<a name="rest_code_82c8adb68c584c11af671f2393e0fef6-6"></a># $preview_continuous_mode = 1;
+<a name="rest_code_82c8adb68c584c11af671f2393e0fef6-7"></a># @default_files = ('main.tex');
+<a name="rest_code_82c8adb68c584c11af671f2393e0fef6-8"></a># .latexmkrc ends
 </pre>
 <p>简单解释下：第 2 行说明使用 Skim 阅读器来预览 PDF；第 3 行指定使用 xelatex 引擎编译文件，并打开同步对照跳转功能；分发给别人的时候，通常只需要编译一次，因此需把持续预览模式关闭（第 6 行）；如果你希望编译完成后清理无关的中间文件，则注意把清理模式打开（第 5 行）。</p>
 <div class="admonition warning">
@@ -185,15 +185,15 @@
 <div class="section" id="vim-vimtex">
 <h2><a class="toc-backref" href="#id7">与 Vim 的 vimtex 插件配合使用</a></h2>
 <p>作为 Vim 编辑器的忠实拥趸，笔者平时的绝大部分文本编辑工作都是在 <a class="reference external" href="https://github.com/qvacua/vimr/">vimr</a> （neovim GUI 前端）中完成的，写 tex 当然也不例外。而 vimtex 可能是 Vim 编辑器下最好的 tex 插件，开始折腾前我已经知道该插件支持 Latexmk，我们只需要找到 vimtex 插件中的设置。经过一番查找和试验之后，只需要在 <cite>.vimrc</cite> 配置中添加以下行即可。</p>
-<pre class="code vim"><a name="rest_code_992a6b1a871b406db9f7515e152e3b34-1"></a><span class="k">let</span> <span class="k">g</span>:vimtex_compiler_latexmk <span class="p">=</span> {
-<a name="rest_code_992a6b1a871b406db9f7515e152e3b34-2"></a>    \ <span class="s1">'options'</span> : [
-<a name="rest_code_992a6b1a871b406db9f7515e152e3b34-3"></a>    \   <span class="s1">'-xelatex'</span><span class="p">,</span>
-<a name="rest_code_992a6b1a871b406db9f7515e152e3b34-4"></a>    \   <span class="s1">'-verbose'</span><span class="p">,</span>
-<a name="rest_code_992a6b1a871b406db9f7515e152e3b34-5"></a>    \   <span class="s1">'-file-line-error'</span><span class="p">,</span>
-<a name="rest_code_992a6b1a871b406db9f7515e152e3b34-6"></a>    \   <span class="s1">'-synctex=1'</span><span class="p">,</span>
-<a name="rest_code_992a6b1a871b406db9f7515e152e3b34-7"></a>    \   <span class="s1">'-interaction=nonstopmode'</span><span class="p">,</span>
-<a name="rest_code_992a6b1a871b406db9f7515e152e3b34-8"></a>    \ ]<span class="p">,</span>
-<a name="rest_code_992a6b1a871b406db9f7515e152e3b34-9"></a>    \}
+<pre class="code vim"><a name="rest_code_b92358c0b38a4bc5aa66cd754303c8b6-1"></a><span class="k">let</span> <span class="k">g</span>:vimtex_compiler_latexmk <span class="p">=</span> {
+<a name="rest_code_b92358c0b38a4bc5aa66cd754303c8b6-2"></a>    \ <span class="s1">'options'</span> : [
+<a name="rest_code_b92358c0b38a4bc5aa66cd754303c8b6-3"></a>    \   <span class="s1">'-xelatex'</span><span class="p">,</span>
+<a name="rest_code_b92358c0b38a4bc5aa66cd754303c8b6-4"></a>    \   <span class="s1">'-verbose'</span><span class="p">,</span>
+<a name="rest_code_b92358c0b38a4bc5aa66cd754303c8b6-5"></a>    \   <span class="s1">'-file-line-error'</span><span class="p">,</span>
+<a name="rest_code_b92358c0b38a4bc5aa66cd754303c8b6-6"></a>    \   <span class="s1">'-synctex=1'</span><span class="p">,</span>
+<a name="rest_code_b92358c0b38a4bc5aa66cd754303c8b6-7"></a>    \   <span class="s1">'-interaction=nonstopmode'</span><span class="p">,</span>
+<a name="rest_code_b92358c0b38a4bc5aa66cd754303c8b6-8"></a>    \ ]<span class="p">,</span>
+<a name="rest_code_b92358c0b38a4bc5aa66cd754303c8b6-9"></a>    \}
 </pre>
 <p>这样我们只需要在 tex 文件 buffer 中运行 <cite>:VimtexCompile</cite> 命令或者按下其默认按键绑定 <cite>&lt;leader&gt;</cite> + <cite>ll</cite> 即可。这将会编译 tex 文件并打开 PDF 预览，并持续监测文件变动。如果文件编译过程中出现错误，则会将错误提示和文件行数显示在 Vim 的 QuickFix 窗口中，在 QuickFix 窗口中按下回车键，即可跳转到文件语法错误处进行快速修复。如果想停止持续编译，则再次运行 <cite>:VimtexCompile</cite> 命令即可。vimtex 插件还有很多其它方面的功能，这里就不再继续介绍了。</p>
 <p>我的 <cite>.vimrc</cite> 配置文件可以在这里找到： <a class="reference external" href="https://github.com/ashfinal/vimrc-config">https://github.com/ashfinal/vimrc-config</a></p>
